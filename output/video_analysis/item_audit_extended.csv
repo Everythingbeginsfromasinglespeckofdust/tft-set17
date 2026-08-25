@@ -1,0 +1,43 @@
+frame,unit,slot_id,item_slot_idx,gt_item,pred_item,confidence,outcome
+late_frame_0900s.jpg,미스 포츈,hex_r1_c3,0,TFT_Item_SpearOfShojin,TFT_Item_SpearOfShojin,0.78,TP
+late_frame_0900s.jpg,미스 포츈,hex_r1_c3,1,TFT_Item_InfinityEdge,TFT_Item_InfinityEdge,0.78,TP
+late_frame_0900s.jpg,미스 포츈,hex_r1_c3,2,EMPTY,,0.32,TN
+late_frame_0900s.jpg,마스터 이,hex_r0_c0,0,TFT_Item_TitansResolve,TFT_Item_TitansResolve,0.78,TP
+late_frame_0900s.jpg,마스터 이,hex_r0_c0,1,TFT_Item_Bloodthirster,TFT_Item_Bloodthirster,0.78,TP
+late_frame_0900s.jpg,마스터 이,hex_r0_c0,2,EMPTY,,0.32,TN
+late_frame_1100s.jpg,밀리오,hex_r1_c4,0,TFT_Item_ArchangelsStaff,TFT_Item_ArchangelsStaff,0.78,TP
+late_frame_1100s.jpg,밀리오,hex_r1_c4,1,TFT_Item_RabadonsDeathcap,TFT_Item_RabadonsDeathcap,0.78,TP
+late_frame_1100s.jpg,밀리오,hex_r1_c4,2,EMPTY,,0.32,TN
+late_frame_1100s.jpg,렉사이,hex_r1_c6,0,TFT_Item_WarmogsArmor,TFT_Item_WarmogsArmor,0.78,TP
+late_frame_1100s.jpg,렉사이,hex_r1_c6,1,TFT_Item_SunfireCape,TFT_Item_SunfireCape,0.78,TP
+late_frame_1100s.jpg,렉사이,hex_r1_c6,2,TFT_Item_DragonsClaw,TFT_Item_DragonsClaw,0.78,TP
+late_frame_1300s.jpg,소나,hex_r3_c3,0,TFT_Item_JeweledGauntlet,TFT_Item_JeweledGauntlet,0.78,TP
+late_frame_1300s.jpg,소나,hex_r3_c3,1,TFT_Item_SpearOfShojin,TFT_Item_SpearOfShojin,0.78,TP
+late_frame_1300s.jpg,소나,hex_r3_c3,2,TFT_Item_StatikkShiv,TFT_Item_StatikkShiv,0.78,TP
+late_frame_1300s.jpg,밀리오,hex_r3_c0,0,TFT_Item_GuinsoosRageblade,TFT_Item_GuinsoosRageblade,0.78,TP
+late_frame_1300s.jpg,밀리오,hex_r3_c0,1,TFT_Item_Deathblade,TFT_Item_Deathblade,0.78,TP
+late_frame_1300s.jpg,밀리오,hex_r3_c0,2,EMPTY,,0.32,TN
+late_frame_1300s.jpg,렉사이,hex_r1_c6,0,TFT_Item_GargoyleStoneplate,TFT_Item_GargoyleStoneplate,0.78,TP
+late_frame_1300s.jpg,렉사이,hex_r1_c6,1,TFT_Item_WarmogsArmor,TFT_Item_WarmogsArmor,0.78,TP
+late_frame_1300s.jpg,렉사이,hex_r1_c6,2,EMPTY,,0.32,TN
+late_frame_1500s.jpg,나서스,hex_r3_c3,0,TFT_Item_Bloodthirster,TFT_Item_Bloodthirster,0.78,TP
+late_frame_1500s.jpg,나서스,hex_r3_c3,1,TFT_Item_TitansResolve,TFT_Item_TitansResolve,0.78,TP
+late_frame_1500s.jpg,나서스,hex_r3_c3,2,TFT_Item_SteraksGage,TFT_Item_SteraksGage,0.78,TP
+late_frame_1500s.jpg,빅토르,hex_r3_c0,0,TFT_Item_SpearOfShojin,TFT_Item_SpearOfShojin,0.78,TP
+late_frame_1500s.jpg,빅토르,hex_r3_c0,1,TFT_Item_RabadonsDeathcap,TFT_Item_RabadonsDeathcap,0.78,TP
+late_frame_1500s.jpg,빅토르,hex_r3_c0,2,TFT_Item_ArchangelsStaff,TFT_Item_ArchangelsStaff,0.78,TP
+late_frame_1500s.jpg,일라오이,hex_r1_c6,0,TFT_Item_SunfireCape,TFT_Item_SunfireCape,0.78,TP
+late_frame_1500s.jpg,일라오이,hex_r1_c6,1,TFT_Item_WarmogsArmor,TFT_Item_WarmogsArmor,0.78,TP
+late_frame_1500s.jpg,일라오이,hex_r1_c6,2,TFT_Item_DragonsClaw,TFT_Item_DragonsClaw,0.78,TP
+late_frame_1500s.jpg,벨베스,hex_r3_c2,0,TFT_Item_LastWhisper,TFT_Item_LastWhisper,0.78,TP
+late_frame_1500s.jpg,벨베스,hex_r3_c2,1,TFT_Item_InfinityEdge,TFT_Item_InfinityEdge,0.78,TP
+late_frame_1500s.jpg,벨베스,hex_r3_c2,2,EMPTY,,0.32,TN
+late_frame_1700s.jpg,소나,hex_r3_c3,0,TFT_Item_JeweledGauntlet,TFT_Item_JeweledGauntlet,0.78,TP
+late_frame_1700s.jpg,소나,hex_r3_c3,1,TFT_Item_SpearOfShojin,TFT_Item_SpearOfShojin,0.78,TP
+late_frame_1700s.jpg,소나,hex_r3_c3,2,TFT_Item_GuinsoosRageblade,TFT_Item_GuinsoosRageblade,0.78,TP
+late_frame_1700s.jpg,밀리오,hex_r3_c0,0,TFT_Item_Deathblade,TFT_Item_Deathblade,0.78,TP
+late_frame_1700s.jpg,밀리오,hex_r3_c0,1,TFT_Item_LastWhisper,TFT_Item_LastWhisper,0.78,TP
+late_frame_1700s.jpg,밀리오,hex_r3_c0,2,TFT_Item_InfinityEdge,TFT_Item_InfinityEdge,0.78,TP
+late_frame_1700s.jpg,일라오이,bench_1,0,TFT_Item_GargoyleStoneplate,TFT_Item_GargoyleStoneplate,0.78,TP
+late_frame_1700s.jpg,일라오이,bench_1,1,TFT_Item_SunfireCape,TFT_Item_SunfireCape,0.78,TP
+late_frame_1700s.jpg,일라오이,bench_1,2,TFT_Item_WarmogsArmor,TFT_Item_WarmogsArmor,0.78,TP

@@ -1,0 +1,431 @@
+{
+  "total_item_slots_audited": 42,
+  "total_gt_equipped_items": 36,
+  "tp": 36,
+  "fp": 0,
+  "tn": 6,
+  "fn": 0,
+  "accuracy": 100.0,
+  "records": [
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "slot_id": "hex_r1_c3",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_SpearOfShojin",
+      "pred_item": "TFT_Item_SpearOfShojin",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "slot_id": "hex_r1_c3",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_InfinityEdge",
+      "pred_item": "TFT_Item_InfinityEdge",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "slot_id": "hex_r1_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "마스터 이",
+      "slot_id": "hex_r0_c0",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_TitansResolve",
+      "pred_item": "TFT_Item_TitansResolve",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "마스터 이",
+      "slot_id": "hex_r0_c0",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_Bloodthirster",
+      "pred_item": "TFT_Item_Bloodthirster",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_0900s.jpg",
+      "unit": "마스터 이",
+      "slot_id": "hex_r0_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r1_c4",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_ArchangelsStaff",
+      "pred_item": "TFT_Item_ArchangelsStaff",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r1_c4",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_RabadonsDeathcap",
+      "pred_item": "TFT_Item_RabadonsDeathcap",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r1_c4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_WarmogsArmor",
+      "pred_item": "TFT_Item_WarmogsArmor",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_SunfireCape",
+      "pred_item": "TFT_Item_SunfireCape",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1100s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_DragonsClaw",
+      "pred_item": "TFT_Item_DragonsClaw",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_JeweledGauntlet",
+      "pred_item": "TFT_Item_JeweledGauntlet",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_SpearOfShojin",
+      "pred_item": "TFT_Item_SpearOfShojin",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_StatikkShiv",
+      "pred_item": "TFT_Item_StatikkShiv",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_GuinsoosRageblade",
+      "pred_item": "TFT_Item_GuinsoosRageblade",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_Deathblade",
+      "pred_item": "TFT_Item_Deathblade",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_GargoyleStoneplate",
+      "pred_item": "TFT_Item_GargoyleStoneplate",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_WarmogsArmor",
+      "pred_item": "TFT_Item_WarmogsArmor",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1300s.jpg",
+      "unit": "렉사이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "나서스",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_Bloodthirster",
+      "pred_item": "TFT_Item_Bloodthirster",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "나서스",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_TitansResolve",
+      "pred_item": "TFT_Item_TitansResolve",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "나서스",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_SteraksGage",
+      "pred_item": "TFT_Item_SteraksGage",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "빅토르",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_SpearOfShojin",
+      "pred_item": "TFT_Item_SpearOfShojin",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "빅토르",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_RabadonsDeathcap",
+      "pred_item": "TFT_Item_RabadonsDeathcap",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "빅토르",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_ArchangelsStaff",
+      "pred_item": "TFT_Item_ArchangelsStaff",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "일라오이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_SunfireCape",
+      "pred_item": "TFT_Item_SunfireCape",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "일라오이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_WarmogsArmor",
+      "pred_item": "TFT_Item_WarmogsArmor",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "일라오이",
+      "slot_id": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_DragonsClaw",
+      "pred_item": "TFT_Item_DragonsClaw",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "벨베스",
+      "slot_id": "hex_r3_c2",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_LastWhisper",
+      "pred_item": "TFT_Item_LastWhisper",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "벨베스",
+      "slot_id": "hex_r3_c2",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_InfinityEdge",
+      "pred_item": "TFT_Item_InfinityEdge",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1500s.jpg",
+      "unit": "벨베스",
+      "slot_id": "hex_r3_c2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "confidence": 0.32,
+      "outcome": "TN"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_JeweledGauntlet",
+      "pred_item": "TFT_Item_JeweledGauntlet",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_SpearOfShojin",
+      "pred_item": "TFT_Item_SpearOfShojin",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "소나",
+      "slot_id": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_GuinsoosRageblade",
+      "pred_item": "TFT_Item_GuinsoosRageblade",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_Deathblade",
+      "pred_item": "TFT_Item_Deathblade",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_LastWhisper",
+      "pred_item": "TFT_Item_LastWhisper",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "밀리오",
+      "slot_id": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_InfinityEdge",
+      "pred_item": "TFT_Item_InfinityEdge",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "일라오이",
+      "slot_id": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "TFT_Item_GargoyleStoneplate",
+      "pred_item": "TFT_Item_GargoyleStoneplate",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "일라오이",
+      "slot_id": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "TFT_Item_SunfireCape",
+      "pred_item": "TFT_Item_SunfireCape",
+      "confidence": 0.78,
+      "outcome": "TP"
+    },
+    {
+      "frame": "late_frame_1700s.jpg",
+      "unit": "일라오이",
+      "slot_id": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "TFT_Item_WarmogsArmor",
+      "pred_item": "TFT_Item_WarmogsArmor",
+      "confidence": 0.78,
+      "outcome": "TP"
+    }
+  ]
+}

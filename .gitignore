@@ -23,3 +23,5 @@ TFT_Spider/
 
 # Video analysis extracted frames
 output/video_analysis/frames_sample/
+
+output/video_analysis/late_frames/
