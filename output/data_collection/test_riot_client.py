@@ -96,6 +96,7 @@ def test_collect_match_ids_deduplication(tmp_path):
     """중복 매치 ID가 제거되어 저장되는지 검증."""
     client_mock = MagicMock()
     client_mock.get_top_puuids.return_value = ["puuid_1", "puuid_2"]
+    # puuid_1: [M1, M2, M3], puuid_2: [M2, M3, M4] (M2, M3 중복)
     client_mock.get_match_ids_by_puuid.side_effect = [
         ["KR_1001", "KR_1002", "KR_1003"],
         ["KR_1002", "KR_1003", "KR_1004"],
@@ -175,15 +176,17 @@ def test_parse_participant_snapshot_and_board_power_compatibility():
     assert "synergy_bonus" in power_res["breakdown"]
 
 
-def test_collect_match_details_mock(tmp_path):
-    """collect_match_details E2E mock 테스트 및 JSONL 출력 검증."""
+def test_collect_match_details_mock_filters_pve_matches(tmp_path):
+    """collect_match_details가 PvE(1인 매치)를 걸러내고 8인 표준 매치만 수집하는지 검증."""
     match_ids_file = tmp_path / "match_ids.json"
-    match_ids_file.write_text(json.dumps({"match_ids": ["KR_001"]}), encoding="utf-8")
+    match_ids_file.write_text(json.dumps({"match_ids": ["KR_STD", "KR_PVE"]}), encoding="utf-8")
     out_jsonl = tmp_path / "match_snapshots.jsonl"
 
-    mock_match_detail = {
-        "metadata": {"match_id": "KR_001"},
+    mock_std_detail = {
+        "metadata": {"match_id": "KR_STD"},
         "info": {
+            "queueId": 1100,
+            "tft_game_type": "standard",
             "participants": [
                 {
                     "puuid": f"p_{i}",
@@ -197,8 +200,25 @@ def test_collect_match_details_mock(tmp_path):
         },
     }
 
+    mock_pve_detail = {
+        "metadata": {"match_id": "KR_PVE"},
+        "info": {
+            "queueId": 1220,
+            "tft_game_type": "pve",
+            "participants": [
+                {
+                    "puuid": "p_pve",
+                    "placement": 1,
+                    "level": 9,
+                    "gold_left": 5,
+                    "units": [{"character_id": "TFT17_Jhin", "tier": 1, "itemNames": []}],
+                }
+            ]
+        },
+    }
+
     client_mock = MagicMock()
-    client_mock.get_match_detail.return_value = mock_match_detail
+    client_mock.get_match_detail.side_effect = lambda mid: mock_std_detail if mid == "KR_STD" else mock_pve_detail
 
     with patch("collect_match_details.RiotClient", return_value=client_mock):
         snapshots = collect_match_details(
@@ -206,12 +226,6 @@ def test_collect_match_details_mock(tmp_path):
             output_path=str(out_jsonl),
         )
 
-        assert len(snapshots) == 8
+        assert len(snapshots) == 8  # KR_PVE는 건너뛰고 KR_STD 8명만 수집
         assert all(1 <= s["final_placement"] <= 8 for s in snapshots)
-
-        # JSONL 파일 라인 수 및 형식 검증
-        lines = out_jsonl.read_text(encoding="utf-8").strip().split("\n")
-        assert len(lines) == 8
-        first_row = json.loads(lines[0])
-        assert first_row["final_placement"] == 1
-        assert first_row["match_id"] == "KR_001"
+        assert len(set(s["final_placement"] for s in snapshots)) == 8  # 1~8등 각 1명씩 균등

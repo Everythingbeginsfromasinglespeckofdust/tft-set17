@@ -4,9 +4,10 @@
 기능:
 1. /output/data/match_ids.json 에서 매치 ID 목록 로드
 2. Riot Match-V1 API로 매치 상세 정보(get_match_detail) 수집
-3. 참가자별 최종 등수(final_placement), 레벨, 남은 골드, 보드 상태(board_power.py 입력 형식) 추출
-4. /output/data/match_snapshots.jsonl 에 JSON Lines 형식으로 저장
-5. Rate limit 및 429 지수 백오프 준수
+3. 8인 PvP 표준 매치 필터링 (PvE/토커의 시험 등 1인/비표준 모드 제외)
+4. 참가자별 최종 등수(final_placement), 레벨, 남은 골드, 보드 상태(board_power.py 입력 형식) 추출
+5. /output/data/match_snapshots.jsonl 에 JSON Lines 형식으로 저장
+6. Rate limit 및 429 지수 백오프 준수
 """
 import json
 import logging
@@ -159,6 +160,7 @@ def collect_match_details(
 
     snapshots = []
     success_count = 0
+    skipped_non_8_count = 0
     fail_count = 0
 
     with open(output_path, "w", encoding="utf-8") as out_f:
@@ -166,10 +168,17 @@ def collect_match_details(
             logger.info(f"[{idx}/{total_matches}] 매치 상세 조회 중: {mid}...")
             try:
                 detail = client.get_match_detail(mid)
-                participants = detail.get("info", {}).get("participants", [])
-                if not participants:
-                    logger.warning(f"  -> 매치 {mid}에 참가자 데이터가 없습니다")
-                    fail_count += 1
+                info = detail.get("info", {})
+                participants = info.get("participants", [])
+                gtype = info.get("tft_game_type")
+                qid = info.get("queueId") or info.get("queue_id")
+
+                # 8인 표준 매치만 필터링 (PvE 1인 모드, 미달 매치 제외)
+                if len(participants) != 8 or gtype == "pve" or qid == 1220:
+                    logger.warning(
+                        f"  -> 비표준 매치 건너뜀 (참가자 {len(participants)}명, queueId={qid}, type={gtype}): {mid}"
+                    )
+                    skipped_non_8_count += 1
                     continue
 
                 for p in participants:
@@ -186,10 +195,11 @@ def collect_match_details(
                 logger.warning(f"  -> 매치 {mid} 수집 실패 건너뜀: {e}")
                 fail_count += 1
 
-    failure_rate = (fail_count / total_matches * 100) if total_matches > 0 else 0
+    total_skipped = skipped_non_8_count + fail_count
     logger.info(
-        f"수집 완료! 성공 매치: {success_count}/{total_matches}, "
-        f"실패: {fail_count} (실패율: {failure_rate:.1f}%), 총 스냅샷: {len(snapshots)}개"
+        f"수집 완료! 8인 표준 성공 매치: {success_count}/{total_matches}, "
+        f"비표준 모드 제외: {skipped_non_8_count}개, 에러 실패: {fail_count}개, "
+        f"총 유효 스냅샷: {len(snapshots)}개"
     )
 
     return snapshots
@@ -204,7 +214,14 @@ if __name__ == "__main__":
     invalid_placements = [s for s in snapshots if not (1 <= s.get("final_placement", 0) <= 8)]
     print(f"등수(1~8) 유효성 검증: {'PASS (이상치 0개)' if not invalid_placements else f'FAIL ({len(invalid_placements)}개 이상치)'}")
 
-    # 2. board_power.py 연동 호환성 검증
+    # 2. 등수별 인원 분포 검증
+    from collections import Counter
+    dist = Counter(s["final_placement"] for s in snapshots)
+    print("등수별 인원 분포:")
+    for rank in sorted(dist.keys()):
+        print(f"  - {rank}등: {dist[rank]}명")
+
+    # 3. board_power.py 연동 호환성 검증
     if snapshots:
         sample = snapshots[0]
         power_res = bp.calculate_board_power(sample["board"])
