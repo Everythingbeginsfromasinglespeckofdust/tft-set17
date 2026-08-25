@@ -20,3 +20,6 @@ output/data/*.tmp
 # 주의: TFT_Spider 데이터는 Set 15 중국어 캐시로 Set 17(17.9)에는 미사용.
 TFT_DDragon/
 TFT_Spider/
+
+# Video analysis extracted frames
+output/video_analysis/frames_sample/
