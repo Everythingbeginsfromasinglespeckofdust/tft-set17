@@ -1,0 +1,100 @@
+{
+  "title": "시나리오 3: 후반(스테이지 7-1) 강한 보드, 레벨업 임박",
+  "stage_round": "7-1",
+  "level": 9,
+  "xp": 52,
+  "gold": 54,
+  "num_turns": 3,
+  "board": {
+    "units": [
+      {
+        "champion": "진",
+        "cost": 5,
+        "star_level": 2,
+        "items": [
+          "무한의 대검",
+          "최후의 속삭임",
+          "거인 학살자"
+        ]
+      },
+      {
+        "champion": "피오라",
+        "cost": 5,
+        "star_level": 2,
+        "items": [
+          "피바라기",
+          "스테락의 도전",
+          "거인의 결의"
+        ]
+      },
+      {
+        "champion": "블리츠크랭크",
+        "cost": 5,
+        "star_level": 2,
+        "items": [
+          "워모그의 갑옷",
+          "용의 발톱",
+          "덤불 조끼"
+        ]
+      },
+      {
+        "champion": "쉔",
+        "cost": 5,
+        "star_level": 2,
+        "items": []
+      },
+      {
+        "champion": "아우렐리온 솔",
+        "cost": 4,
+        "star_level": 2,
+        "items": [
+          "모렐로노미콘"
+        ]
+      },
+      {
+        "champion": "람머스",
+        "cost": 4,
+        "star_level": 2,
+        "items": []
+      },
+      {
+        "champion": "모데카이저",
+        "cost": 2,
+        "star_level": 2,
+        "items": []
+      },
+      {
+        "champion": "뽀삐",
+        "cost": 1,
+        "star_level": 2,
+        "items": []
+      },
+      {
+        "champion": "이즈리얼",
+        "cost": 1,
+        "star_level": 2,
+        "items": []
+      }
+    ]
+  },
+  "strategies": [
+    {
+      "name": "10레벨 달성 올인",
+      "type": "levelup",
+      "target_level": 10
+    },
+    {
+      "name": "진 3성작 리롤 (30G/turn)",
+      "type": "roll",
+      "gold_per_turn": 30,
+      "target_champion": "진",
+      "target_cost": 5,
+      "target_copies_taken": 3,
+      "cost_tier_copies_taken": 15
+    },
+    {
+      "name": "50골드 이자 유지",
+      "type": "save_interest"
+    }
+  ]
+}

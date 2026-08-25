@@ -1,0 +1,52 @@
+{
+  "title": "시나리오 1: 초반(스테이지 2-1) 약한 보드, 골드 여유",
+  "stage_round": "2-1",
+  "level": 4,
+  "xp": 0,
+  "gold": 30,
+  "num_turns": 3,
+  "board": {
+    "units": [
+      {
+        "champion": "나서스",
+        "cost": 1,
+        "star_level": 1,
+        "items": []
+      },
+      {
+        "champion": "레오나",
+        "cost": 1,
+        "star_level": 1,
+        "items": [
+          "쇠사슬 조끼"
+        ]
+      },
+      {
+        "champion": "렉사이",
+        "cost": 1,
+        "star_level": 1,
+        "items": []
+      }
+    ]
+  },
+  "strategies": [
+    {
+      "name": "이자 극대화 (Save Interest)",
+      "type": "save_interest"
+    },
+    {
+      "name": "5레벨 빠른 업 (Fast Level 5)",
+      "type": "levelup",
+      "target_level": 5
+    },
+    {
+      "name": "1코 2성작 리롤 (Roll 10G/turn)",
+      "type": "roll",
+      "gold_per_turn": 10,
+      "target_champion": "나서스",
+      "target_cost": 1,
+      "target_copies_taken": 0,
+      "cost_tier_copies_taken": 0
+    }
+  ]
+}
