@@ -1,0 +1,44 @@
+{
+ "section": "damage",
+ "set": 17,
+ "patch": "17.9",
+ "generated": "tft_guide.py",
+ "caveat": "Data Dragon JSON에 포함되지 않는 TFT 클라이언트 고정 공식. 표준 값이며 세트에 따라 일부 수치가 다를 수 있다.",
+ "base_stats": {
+  "max_hp": {
+   "level1": 700,
+   "per_level": 65
+  },
+  "ad": {
+   "level1": 55,
+   "per_level": 6
+  },
+  "ap": {
+   "level1": 35,
+   "per_level": 2.5
+  },
+  "armor": {
+   "level1": 35,
+   "per_level": 8
+  },
+  "magic_resist": {
+   "level1": 35,
+   "per_level": 8
+  }
+ },
+ "damage_formulas": {
+  "physical": "AD × 100 / (100 + 방어력)",
+  "magic": "AP × 100 / (100 + 마법 저항)",
+  "true": "AD (방어/저항 무시)"
+ },
+ "armor_mr_caps": [
+  "피해 감소는 최대 100%까지 (피해가 0이 될 수 없음)",
+  "방어력 100 → 물리 피해 50%, 방어력 200 → 33.3%",
+  "마법 저항도 동일하게 적용"
+ ],
+ "other": [
+  "크리틱: 기본 피해의 200% (아이템으로 변화)",
+  "흡혈(Lifesteal): 가한 피해의 %만큼 회복",
+  "대형/소형 유닛 크기에 따른 피해 보정, 위치(앞/뒤열) 보정 등 세트 메커니즘이 추가로 적용됨"
+ ]
+}

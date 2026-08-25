@@ -1,0 +1,274 @@
+{
+ "TFT17_Briar": [
+  "TFT17_AnimaSquad",
+  "TFT17_Primordian",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Belveth": [
+  "TFT17_Primordian",
+  "TFT17_ASTrait",
+  "TFT17_MeleeTrait"
+ ],
+ "TFT17_MissFortune": [
+  "TFT17_MissFortuneUniqueTrait"
+ ],
+ "TFT17_Akali": [
+  "TFT17_DRX",
+  "TFT17_MeleeTrait"
+ ],
+ "TFT17_Bard": [
+  "TFT17_Astronaut",
+  "TFT17_ManaTrait"
+ ],
+ "TFT17_Jinx": [
+  "TFT17_AnimaSquad",
+  "TFT17_ASTrait"
+ ],
+ "TFT17_Illaoi": [
+  "TFT17_AnimaSquad",
+  "TFT17_ShieldTank",
+  "TFT17_SummonTrait"
+ ],
+ "TFT17_Aurora": [
+  "TFT17_AnimaSquad",
+  "TFT17_FlexTrait"
+ ],
+ "TFT17_Fiora": [
+  "TFT17_FioraUniqueTrait",
+  "TFT17_AnimaSquad",
+  "TFT17_MeleeTrait"
+ ],
+ "TFT17_Gnar": [
+  "TFT17_Astronaut",
+  "TFT17_HPTank",
+  "TFT17_RangedTrait"
+ ],
+ "TFT17_Fizz": [
+  "TFT17_Astronaut",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Rammus": [
+  "TFT17_Astronaut",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Poppy": [
+  "TFT17_Astronaut",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Corki": [
+  "TFT17_Astronaut",
+  "TFT17_Fateweaver"
+ ],
+ "TFT17_Veigar": [
+  "TFT17_Astronaut",
+  "TFT17_APTrait"
+ ],
+ "TFT17_Aatrox": [
+  "TFT17_DRX",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Caitlyn": [
+  "TFT17_DRX",
+  "TFT17_Fateweaver"
+ ],
+ "TFT17_Maokai": [
+  "TFT17_DRX",
+  "TFT17_HPTank"
+ ],
+ "TFT17_Kindred": [
+  "TFT17_DRX",
+  "TFT17_ASTrait"
+ ],
+ "TFT17_Kaisa": [
+  "TFT17_DarkStar",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Karma": [
+  "TFT17_DarkStar",
+  "TFT17_FlexTrait"
+ ],
+ "TFT17_Jhin": [
+  "TFT17_DarkStar",
+  "TFT17_JhinUniqueTrait",
+  "TFT17_RangedTrait"
+ ],
+ "TFT17_Urgot": [
+  "TFT17_Mecha",
+  "TFT17_HPTank",
+  "TFT17_MeleeTrait"
+ ],
+ "TFT17_AurelionSol": [
+  "TFT17_Mecha",
+  "TFT17_ManaTrait"
+ ],
+ "TFT17_Galio": [
+  "TFT17_Mecha",
+  "TFT17_FlexTrait"
+ ],
+ "TFT17_Viktor": [
+  "TFT17_PsyOps",
+  "TFT17_ManaTrait"
+ ],
+ "TFT17_Pyke": [
+  "TFT17_PsyOps",
+  "TFT17_FlexTrait"
+ ],
+ "TFT17_MasterYi": [
+  "TFT17_PsyOps",
+  "TFT17_MeleeTrait"
+ ],
+ "TFT17_Gragas": [
+  "TFT17_PsyOps",
+  "TFT17_HPTank"
+ ],
+ "TFT17_Teemo": [
+  "TFT17_SpaceGroove",
+  "TFT17_SummonTrait"
+ ],
+ "TFT17_Nasus": [
+  "TFT17_SpaceGroove",
+  "TFT17_ShieldTank"
+ ],
+ "TFT17_Gwen": [
+  "TFT17_SpaceGroove",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Samira": [
+  "TFT17_SpaceGroove",
+  "TFT17_RangedTrait"
+ ],
+ "TFT17_Ornn": [
+  "TFT17_SpaceGroove",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Nami": [
+  "TFT17_SpaceGroove",
+  "TFT17_APTrait"
+ ],
+ "TFT17_Blitzcrank": [
+  "TFT17_BlitzcrankUniqueTrait",
+  "TFT17_SpaceGroove",
+  "TFT17_ShieldTank"
+ ],
+ "TFT17_Sona": [
+  "TFT17_SonaUniqueTrait",
+  "TFT17_PsyOps",
+  "TFT17_SummonTrait"
+ ],
+ "TFT17_TwistedFate": [
+  "TFT17_Stargazer",
+  "TFT17_Fateweaver"
+ ],
+ "TFT17_Talon": [
+  "TFT17_Stargazer",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Jax": [
+  "TFT17_Stargazer",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Lulu": [
+  "TFT17_Stargazer",
+  "TFT17_APTrait"
+ ],
+ "TFT17_Nunu": [
+  "TFT17_Stargazer",
+  "TFT17_ShieldTank"
+ ],
+ "TFT17_Vex": [
+  "TFT17_VexUniqueTrait",
+  "TFT17_Stargazer"
+ ],
+ "TFT17_Riven": [
+  "TFT17_Timebreaker",
+  "TFT17_AssassinTrait"
+ ],
+ "TFT17_Shen": [
+  "TFT17_ShenUniqueTrait",
+  "TFT17_Timebreaker",
+  "TFT17_ResistTank"
+ ],
+ "TFT17_Milio": [
+  "TFT17_Timebreaker",
+  "TFT17_Fateweaver"
+ ],
+ "TFT17_Ezreal": [
+  "TFT17_Timebreaker",
+  "TFT17_RangedTrait"
+ ],
+ "TFT17_Leona": [
+  "TFT17_ADMIN",
+  "TFT17_ShieldTank"
+ ],
+ "TFT17_Zoe": [
+  "TFT17_ADMIN",
+  "TFT17_ManaTrait"
+ ],
+ "TFT17_Diana": [
+  "TFT17_ADMIN",
+  "TFT17_ASTrait"
+ ],
+ "TFT17_Leblanc": [
+  "TFT17_ADMIN",
+  "TFT17_SummonTrait"
+ ],
+ "TFT17_Chogath": [
+  "TFT17_DarkStar",
+  "TFT17_HPTank"
+ ],
+ "TFT17_Lissandra": [
+  "TFT17_DarkStar",
+  "TFT17_SummonTrait",
+  "TFT17_APTrait"
+ ],
+ "TFT17_Zed": [
+  "TFT17_ZedUniqueTrait"
+ ],
+ "TFT17_Summon": [],
+ "TFT17_IvernMinion": [
+  "TFT17_Astronaut",
+  "TFT17_SummonTrait",
+  "TFT17_FlexTrait"
+ ],
+ "TFT17_Mordekaiser": [
+  "TFT17_DarkStar",
+  "TFT17_ManaTrait",
+  "TFT17_ShieldTank"
+ ],
+ "TFT17_Xayah": [
+  "TFT17_Stargazer",
+  "TFT17_RangedTrait"
+ ],
+ "TFT17_Graves": [
+  "TFT17_GravesTrait"
+ ],
+ "TFT17_TahmKench": [
+  "TFT17_TahmKenchUniqueTrait",
+  "TFT17_HPTank"
+ ],
+ "TFT17_Rhaast": [
+  "TFT17_RhaastUniqueTrait"
+ ],
+ "TFT17_TimebreakerCore": [],
+ "TFT17_RekSai": [
+  "TFT17_Primordian",
+  "TFT17_HPTank"
+ ],
+ "TFT17_Pantheon": [
+  "TFT17_Timebreaker",
+  "TFT17_HPTank",
+  "TFT17_APTrait"
+ ],
+ "TFT17_Morgana": [
+  "TFT17_MorganaUniqueTrait",
+  "TFT17_ManaTrait"
+ ],
+ "TFT17_PVE_Minion": [],
+ "TFT17_PVE_Raptor": [],
+ "TFT17_PVE_Krug": [],
+ "TFT17_PVE_Pix": [],
+ "TFT17_PVE_Gromp": [],
+ "TFT17_PVE_ElderDragon": [],
+ "TFT17_DarkStar_FakeUnit": [],
+ "TFT17_Enemy_Aatrox": []
+}

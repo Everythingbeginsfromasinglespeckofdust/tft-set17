@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+# ── 벤더 업스트림 레포 (대용량·재클론 가능 → 이 레포에 커밋하지 않음) ─────────
+# 아래 두 디렉토리는 각각 독립 git 레포(미러)이며, 공개 원격지에서 아래 커밋으로
+# 정확히 재클론할 수 있다. 이 레포는 프로젝트 산출물만 커밋한다.
+#
+# 재소환 (컨테이너 재건 시):
+#   git clone https://github.com/noxelisdev/TFT_DDragon TFT_DDragon
+#   git -C TFT_DDragon checkout v17.9            # = commit 22fb2571 (patch 17.9)
+#   git clone https://github.com/Jack0Chan/TFT_Spider TFT_Spider
+#   git -C TFT_Spider checkout 11fc6ca           # = main HEAD (Set 15 CN 캐시)
+#
+# 주의: TFT_Spider 데이터는 Set 15 중국어 캐시로 Set 17(17.9)에는 미사용.
+TFT_DDragon/
+TFT_Spider/

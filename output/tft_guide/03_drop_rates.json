@@ -1,0 +1,131 @@
+{
+ "section": "drop_rates",
+ "set": 17,
+ "patch": "17.9",
+ "generated": "tft_guide.py",
+ "shop_drop_rates": [
+  {
+   "level": 1,
+   "drop_rate_percent": {
+    "1cost": 100,
+    "2cost": 0,
+    "3cost": 0,
+    "4cost": 0,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 2,
+   "drop_rate_percent": {
+    "1cost": 100,
+    "2cost": 0,
+    "3cost": 0,
+    "4cost": 0,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 3,
+   "drop_rate_percent": {
+    "1cost": 75,
+    "2cost": 25,
+    "3cost": 0,
+    "4cost": 0,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 4,
+   "drop_rate_percent": {
+    "1cost": 55,
+    "2cost": 30,
+    "3cost": 15,
+    "4cost": 0,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 5,
+   "drop_rate_percent": {
+    "1cost": 45,
+    "2cost": 33,
+    "3cost": 20,
+    "4cost": 2,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 6,
+   "drop_rate_percent": {
+    "1cost": 30,
+    "2cost": 40,
+    "3cost": 25,
+    "4cost": 5,
+    "5cost": 0
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 7,
+   "drop_rate_percent": {
+    "1cost": 19,
+    "2cost": 30,
+    "3cost": 40,
+    "4cost": 10,
+    "5cost": 1
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 8,
+   "drop_rate_percent": {
+    "1cost": 15,
+    "2cost": 20,
+    "3cost": 32,
+    "4cost": 30,
+    "5cost": 3
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 9,
+   "drop_rate_percent": {
+    "1cost": 10,
+    "2cost": 17,
+    "3cost": 25,
+    "4cost": 33,
+    "5cost": 15
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 10,
+   "drop_rate_percent": {
+    "1cost": 5,
+    "2cost": 10,
+    "3cost": 20,
+    "4cost": 40,
+    "5cost": 25
+   },
+   "exists_in_game": true
+  },
+  {
+   "level": 11,
+   "drop_rate_percent": {
+    "1cost": 1,
+    "2cost": 2,
+    "3cost": 12,
+    "4cost": 50,
+    "5cost": 35
+   },
+   "exists_in_game": false
+  }
+ ],
+ "note": "레벨 11 행은 Set 14(14.23)에서 파일이 처음 생겼을 때의 잔재 — Set 15~17은 최대 레벨 10",
+ "source": "TFT_DDragon/data/ko_KR/shop-drop-rates-data.json"
+}

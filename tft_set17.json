@@ -1,0 +1,1085 @@
+{
+ "set": 17,
+ "patch": "17.9",
+ "champions": [
+  {
+   "id": "TFT17_Nasus",
+   "name": "나서스",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "우주 그루브",
+    "선봉대"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_ShieldTank"
+   ]
+  },
+  {
+   "id": "TFT17_Leona",
+   "name": "레오나",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "중재자",
+    "선봉대"
+   ],
+   "trait_ids": [
+    "TFT17_ADMIN",
+    "TFT17_ShieldTank"
+   ]
+  },
+  {
+   "id": "TFT17_RekSai",
+   "name": "렉사이",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "태고족",
+    "싸움꾼"
+   ],
+   "trait_ids": [
+    "TFT17_Primordian",
+    "TFT17_HPTank"
+   ]
+  },
+  {
+   "id": "TFT17_Lissandra",
+   "name": "리산드라",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "암흑의 별",
+    "길잡이",
+    "복제자"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_SummonTrait",
+    "TFT17_APTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Veigar",
+   "name": "베이가",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "정령족",
+    "복제자"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_APTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Briar",
+   "name": "브라이어",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "동물특공대",
+    "태고족",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_AnimaSquad",
+    "TFT17_Primordian",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Poppy",
+   "name": "뽀삐",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "정령족",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Aatrox",
+   "name": "아트록스",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "N.O.V.A.",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_DRX",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Ezreal",
+   "name": "이즈리얼",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "시간 균열자",
+    "저격수"
+   ],
+   "trait_ids": [
+    "TFT17_Timebreaker",
+    "TFT17_RangedTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Chogath",
+   "name": "초가스",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "암흑의 별",
+    "싸움꾼"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_HPTank"
+   ]
+  },
+  {
+   "id": "TFT17_Caitlyn",
+   "name": "케이틀린",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "N.O.V.A.",
+    "운명술사"
+   ],
+   "trait_ids": [
+    "TFT17_DRX",
+    "TFT17_Fateweaver"
+   ]
+  },
+  {
+   "id": "TFT17_Talon",
+   "name": "탈론",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "별돌보미",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_TwistedFate",
+   "name": "트위스티드 페이트",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "별돌보미",
+    "운명술사"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_Fateweaver"
+   ]
+  },
+  {
+   "id": "TFT17_Teemo",
+   "name": "티모",
+   "cost": 1,
+   "tier": 1,
+   "traits": [
+    "우주 그루브",
+    "길잡이"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_SummonTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Gragas",
+   "name": "그라가스",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "초능력",
+    "싸움꾼"
+   ],
+   "trait_ids": [
+    "TFT17_PsyOps",
+    "TFT17_HPTank"
+   ]
+  },
+  {
+   "id": "TFT17_Gwen",
+   "name": "그웬",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "우주 그루브",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_IvernMinion",
+   "name": "꼬마 정령",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "정령족",
+    "길잡이",
+    "여행자"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_SummonTrait",
+    "TFT17_FlexTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Gnar",
+   "name": "나르",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "정령족",
+    "싸움꾼",
+    "저격수"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_HPTank",
+    "TFT17_RangedTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Mordekaiser",
+   "name": "모데카이저",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "암흑의 별",
+    "전달자",
+    "선봉대"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_ManaTrait",
+    "TFT17_ShieldTank"
+   ]
+  },
+  {
+   "id": "TFT17_Milio",
+   "name": "밀리오",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "시간 균열자",
+    "운명술사"
+   ],
+   "trait_ids": [
+    "TFT17_Timebreaker",
+    "TFT17_Fateweaver"
+   ]
+  },
+  {
+   "id": "TFT17_Belveth",
+   "name": "벨베스",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "태고족",
+    "도전자",
+    "습격자"
+   ],
+   "trait_ids": [
+    "TFT17_Primordian",
+    "TFT17_ASTrait",
+    "TFT17_MeleeTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Akali",
+   "name": "아칼리",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "N.O.V.A.",
+    "습격자"
+   ],
+   "trait_ids": [
+    "TFT17_DRX",
+    "TFT17_MeleeTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Jax",
+   "name": "잭스",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "별돌보미",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Zoe",
+   "name": "조이",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "중재자",
+    "전달자"
+   ],
+   "trait_ids": [
+    "TFT17_ADMIN",
+    "TFT17_ManaTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Jinx",
+   "name": "징크스",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "동물특공대",
+    "도전자"
+   ],
+   "trait_ids": [
+    "TFT17_AnimaSquad",
+    "TFT17_ASTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Pyke",
+   "name": "파이크",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "초능력",
+    "여행자"
+   ],
+   "trait_ids": [
+    "TFT17_PsyOps",
+    "TFT17_FlexTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Pantheon",
+   "name": "판테온",
+   "cost": 2,
+   "tier": 2,
+   "traits": [
+    "시간 균열자",
+    "싸움꾼",
+    "복제자"
+   ],
+   "trait_ids": [
+    "TFT17_Timebreaker",
+    "TFT17_HPTank",
+    "TFT17_APTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Diana",
+   "name": "다이애나",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "중재자",
+    "도전자"
+   ],
+   "trait_ids": [
+    "TFT17_ADMIN",
+    "TFT17_ASTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Rhaast",
+   "name": "라아스트",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "구원자"
+   ],
+   "trait_ids": [
+    "TFT17_RhaastUniqueTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Lulu",
+   "name": "룰루",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "별돌보미",
+    "복제자"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_APTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Maokai",
+   "name": "마오카이",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "N.O.V.A.",
+    "싸움꾼"
+   ],
+   "trait_ids": [
+    "TFT17_DRX",
+    "TFT17_HPTank"
+   ]
+  },
+  {
+   "id": "TFT17_MissFortune",
+   "name": "미스 포츈",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "기동총격여신"
+   ],
+   "trait_ids": [
+    "TFT17_MissFortuneUniqueTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Viktor",
+   "name": "빅토르",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "초능력",
+    "전달자"
+   ],
+   "trait_ids": [
+    "TFT17_PsyOps",
+    "TFT17_ManaTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Samira",
+   "name": "사미라",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "우주 그루브",
+    "저격수"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_RangedTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Aurora",
+   "name": "오로라",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "동물특공대",
+    "여행자"
+   ],
+   "trait_ids": [
+    "TFT17_AnimaSquad",
+    "TFT17_FlexTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Ornn",
+   "name": "오른",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "우주 그루브",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Urgot",
+   "name": "우르곳",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "메카",
+    "싸움꾼",
+    "습격자"
+   ],
+   "trait_ids": [
+    "TFT17_Mecha",
+    "TFT17_HPTank",
+    "TFT17_MeleeTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Illaoi",
+   "name": "일라오이",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "동물특공대",
+    "선봉대",
+    "길잡이"
+   ],
+   "trait_ids": [
+    "TFT17_AnimaSquad",
+    "TFT17_ShieldTank",
+    "TFT17_SummonTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Kaisa",
+   "name": "카이사",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "암흑의 별",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Fizz",
+   "name": "피즈",
+   "cost": 3,
+   "tier": 3,
+   "traits": [
+    "정령족",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Galio",
+   "name": "거대 메크 로봇",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "메카",
+    "여행자"
+   ],
+   "trait_ids": [
+    "TFT17_Mecha",
+    "TFT17_FlexTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Nami",
+   "name": "나미",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "우주 그루브",
+    "복제자"
+   ],
+   "trait_ids": [
+    "TFT17_SpaceGroove",
+    "TFT17_APTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Nunu",
+   "name": "누누와 윌럼프",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "별돌보미",
+    "선봉대"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_ShieldTank"
+   ]
+  },
+  {
+   "id": "TFT17_Rammus",
+   "name": "람머스",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "정령족",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Leblanc",
+   "name": "르블랑",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "중재자",
+    "길잡이"
+   ],
+   "trait_ids": [
+    "TFT17_ADMIN",
+    "TFT17_SummonTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Riven",
+   "name": "리븐",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "시간 균열자",
+    "불한당"
+   ],
+   "trait_ids": [
+    "TFT17_Timebreaker",
+    "TFT17_AssassinTrait"
+   ]
+  },
+  {
+   "id": "TFT17_MasterYi",
+   "name": "마스터 이",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "초능력",
+    "습격자"
+   ],
+   "trait_ids": [
+    "TFT17_PsyOps",
+    "TFT17_MeleeTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Morgana",
+   "name": "모르가나",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "어둠의 여인",
+    "전달자"
+   ],
+   "trait_ids": [
+    "TFT17_MorganaUniqueTrait",
+    "TFT17_ManaTrait"
+   ]
+  },
+  {
+   "id": "TFT17_AurelionSol",
+   "name": "아우렐리온 솔",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "메카",
+    "전달자"
+   ],
+   "trait_ids": [
+    "TFT17_Mecha",
+    "TFT17_ManaTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Xayah",
+   "name": "자야",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "별돌보미",
+    "저격수"
+   ],
+   "trait_ids": [
+    "TFT17_Stargazer",
+    "TFT17_RangedTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Karma",
+   "name": "카르마",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "암흑의 별",
+    "여행자"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_FlexTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Corki",
+   "name": "코르키",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "정령족",
+    "운명술사"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_Fateweaver"
+   ]
+  },
+  {
+   "id": "TFT17_Kindred",
+   "name": "킨드레드",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "N.O.V.A.",
+    "도전자"
+   ],
+   "trait_ids": [
+    "TFT17_DRX",
+    "TFT17_ASTrait"
+   ]
+  },
+  {
+   "id": "TFT17_TahmKench",
+   "name": "탐 켄치",
+   "cost": 4,
+   "tier": 4,
+   "traits": [
+    "예언자",
+    "싸움꾼"
+   ],
+   "trait_ids": [
+    "TFT17_TahmKenchUniqueTrait",
+    "TFT17_HPTank"
+   ]
+  },
+  {
+   "id": "TFT17_Graves",
+   "name": "그레이브즈",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "최신상"
+   ],
+   "trait_ids": [
+    "TFT17_GravesTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Bard",
+   "name": "바드",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "정령족",
+    "전달자"
+   ],
+   "trait_ids": [
+    "TFT17_Astronaut",
+    "TFT17_ManaTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Vex",
+   "name": "벡스",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "파멸자",
+    "별돌보미"
+   ],
+   "trait_ids": [
+    "TFT17_VexUniqueTrait",
+    "TFT17_Stargazer"
+   ]
+  },
+  {
+   "id": "TFT17_Blitzcrank",
+   "name": "블리츠크랭크",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "파티광",
+    "우주 그루브",
+    "선봉대"
+   ],
+   "trait_ids": [
+    "TFT17_BlitzcrankUniqueTrait",
+    "TFT17_SpaceGroove",
+    "TFT17_ShieldTank"
+   ]
+  },
+  {
+   "id": "TFT17_Sona",
+   "name": "소나",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "지휘관",
+    "초능력",
+    "길잡이"
+   ],
+   "trait_ids": [
+    "TFT17_SonaUniqueTrait",
+    "TFT17_PsyOps",
+    "TFT17_SummonTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Shen",
+   "name": "쉔",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "보루",
+    "시간 균열자",
+    "요새"
+   ],
+   "trait_ids": [
+    "TFT17_ShenUniqueTrait",
+    "TFT17_Timebreaker",
+    "TFT17_ResistTank"
+   ]
+  },
+  {
+   "id": "TFT17_Zed",
+   "name": "제드",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "은하계 사냥꾼"
+   ],
+   "trait_ids": [
+    "TFT17_ZedUniqueTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Jhin",
+   "name": "진",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "암흑의 별",
+    "말살자",
+    "저격수"
+   ],
+   "trait_ids": [
+    "TFT17_DarkStar",
+    "TFT17_JhinUniqueTrait",
+    "TFT17_RangedTrait"
+   ]
+  },
+  {
+   "id": "TFT17_Fiora",
+   "name": "피오라",
+   "cost": 5,
+   "tier": 5,
+   "traits": [
+    "신성 결투가",
+    "동물특공대",
+    "습격자"
+   ],
+   "trait_ids": [
+    "TFT17_FioraUniqueTrait",
+    "TFT17_AnimaSquad",
+    "TFT17_MeleeTrait"
+   ]
+  }
+ ],
+ "traits": [
+  {
+   "id": "TFT17_HPTank",
+   "name": "싸움꾼",
+   "count": 8
+  },
+  {
+   "id": "TFT17_Astronaut",
+   "name": "정령족",
+   "count": 8
+  },
+  {
+   "id": "TFT17_Stargazer",
+   "name": "별돌보미",
+   "count": 7
+  },
+  {
+   "id": "TFT17_SpaceGroove",
+   "name": "우주 그루브",
+   "count": 7
+  },
+  {
+   "id": "TFT17_SummonTrait",
+   "name": "길잡이",
+   "count": 6
+  },
+  {
+   "id": "TFT17_AssassinTrait",
+   "name": "불한당",
+   "count": 6
+  },
+  {
+   "id": "TFT17_ShieldTank",
+   "name": "선봉대",
+   "count": 6
+  },
+  {
+   "id": "TFT17_DarkStar",
+   "name": "암흑의 별",
+   "count": 6
+  },
+  {
+   "id": "TFT17_ResistTank",
+   "name": "요새",
+   "count": 6
+  },
+  {
+   "id": "TFT17_ManaTrait",
+   "name": "전달자",
+   "count": 6
+  },
+  {
+   "id": "TFT17_DRX",
+   "name": "N.O.V.A.",
+   "count": 5
+  },
+  {
+   "id": "TFT17_AnimaSquad",
+   "name": "동물특공대",
+   "count": 5
+  },
+  {
+   "id": "TFT17_APTrait",
+   "name": "복제자",
+   "count": 5
+  },
+  {
+   "id": "TFT17_MeleeTrait",
+   "name": "습격자",
+   "count": 5
+  },
+  {
+   "id": "TFT17_Timebreaker",
+   "name": "시간 균열자",
+   "count": 5
+  },
+  {
+   "id": "TFT17_FlexTrait",
+   "name": "여행자",
+   "count": 5
+  },
+  {
+   "id": "TFT17_RangedTrait",
+   "name": "저격수",
+   "count": 5
+  },
+  {
+   "id": "TFT17_PsyOps",
+   "name": "초능력",
+   "count": 5
+  },
+  {
+   "id": "TFT17_ASTrait",
+   "name": "도전자",
+   "count": 4
+  },
+  {
+   "id": "TFT17_Fateweaver",
+   "name": "운명술사",
+   "count": 4
+  },
+  {
+   "id": "TFT17_ADMIN",
+   "name": "중재자",
+   "count": 4
+  },
+  {
+   "id": "TFT17_Mecha",
+   "name": "메카",
+   "count": 3
+  },
+  {
+   "id": "TFT17_Primordian",
+   "name": "태고족",
+   "count": 3
+  },
+  {
+   "id": "TFT17_RhaastUniqueTrait",
+   "name": "구원자",
+   "count": 1
+  },
+  {
+   "id": "TFT17_MissFortuneUniqueTrait",
+   "name": "기동총격여신",
+   "count": 1
+  },
+  {
+   "id": "TFT17_JhinUniqueTrait",
+   "name": "말살자",
+   "count": 1
+  },
+  {
+   "id": "TFT17_ShenUniqueTrait",
+   "name": "보루",
+   "count": 1
+  },
+  {
+   "id": "TFT17_FioraUniqueTrait",
+   "name": "신성 결투가",
+   "count": 1
+  },
+  {
+   "id": "TFT17_MorganaUniqueTrait",
+   "name": "어둠의 여인",
+   "count": 1
+  },
+  {
+   "id": "TFT17_TahmKenchUniqueTrait",
+   "name": "예언자",
+   "count": 1
+  },
+  {
+   "id": "TFT17_ZedUniqueTrait",
+   "name": "은하계 사냥꾼",
+   "count": 1
+  },
+  {
+   "id": "TFT17_SonaUniqueTrait",
+   "name": "지휘관",
+   "count": 1
+  },
+  {
+   "id": "TFT17_GravesTrait",
+   "name": "최신상",
+   "count": 1
+  },
+  {
+   "id": "TFT17_VexUniqueTrait",
+   "name": "파멸자",
+   "count": 1
+  },
+  {
+   "id": "TFT17_BlitzcrankUniqueTrait",
+   "name": "파티광",
+   "count": 1
+  }
+ ]
+}

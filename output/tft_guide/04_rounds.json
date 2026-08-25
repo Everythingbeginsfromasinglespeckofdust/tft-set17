@@ -1,0 +1,789 @@
+{
+ "section": "rounds",
+ "set": 17,
+ "patch": "17.9",
+ "generated": "tft_guide.py",
+ "rounds": [
+  {
+   "stage": 1,
+   "round": 1,
+   "raw_id": "TFT_Round_Carousel",
+   "label": "증강 카루셀 (증강 선택)"
+  },
+  {
+   "stage": 1,
+   "round": 2,
+   "raw_id": "TFT17_Round_Intro1",
+   "label": "설정 (Intro 1)"
+  },
+  {
+   "stage": 1,
+   "round": 3,
+   "raw_id": "TFT17_Round_Intro2",
+   "label": "설정 (Intro 2)"
+  },
+  {
+   "stage": 1,
+   "round": 4,
+   "raw_id": "TFT17_Round_Intro3",
+   "label": "설정 (Intro 3)"
+  },
+  {
+   "stage": 2,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat_Set6_Standard_AugmentEarly",
+   "label": "전투 + 증강 선택 (초기)"
+  },
+  {
+   "stage": 2,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 2,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 2,
+   "round": 4,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 2,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 2,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 2,
+   "round": 7,
+   "raw_id": "TFT17_Round_Krugs",
+   "label": "크러그 (미니언)"
+  },
+  {
+   "stage": 3,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 3,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat_Set6_Standard_AugmentMid",
+   "label": "전투 + 증강 선택 (중반)"
+  },
+  {
+   "stage": 3,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 3,
+   "round": 4,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 3,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 3,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 3,
+   "round": 7,
+   "raw_id": "TFT17_Round_Wolves",
+   "label": "늑대"
+  },
+  {
+   "stage": 4,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 4,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat_Set6_Standard_AugmentLate",
+   "label": "전투 + 증강 선택 (후반)"
+  },
+  {
+   "stage": 4,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 4,
+   "round": 4,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 4,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 4,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 4,
+   "round": 7,
+   "raw_id": "TFT17_Round_GodBlessing",
+   "label": "신의 축복 (Divine Blessing)"
+  },
+  {
+   "stage": 5,
+   "round": 1,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 5,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 5,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 5,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 5,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 5,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 5,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 6,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 6,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 6,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 6,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 6,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 6,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 6,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 7,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 7,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 7,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 7,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 7,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 7,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 7,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 8,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 8,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 8,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 8,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 8,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 8,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 8,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 9,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 9,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 9,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 9,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 9,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 9,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 9,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 10,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 10,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 10,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 10,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 10,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 10,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 10,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 11,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 11,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 11,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 11,
+   "round": 4,
+   "raw_id": "TFT17_Round_PostBlessingItemArmory",
+   "label": "아이템 단조 (Item Armory)"
+  },
+  {
+   "stage": 11,
+   "round": 5,
+   "raw_id": "TFT17_Round_Combat_PostGodBlessing",
+   "label": "전투 (축복 후)"
+  },
+  {
+   "stage": 11,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 11,
+   "round": 7,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 12,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 12,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 12,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 12,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 12,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 12,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 12,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 13,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 13,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 13,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 13,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 13,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 13,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 13,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 14,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 14,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 14,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 14,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 14,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 14,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 14,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 15,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 15,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 15,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 15,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 15,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 15,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 15,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 16,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 16,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 16,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 16,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 16,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 16,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 16,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 17,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 17,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 17,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 17,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 17,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 17,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 17,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 18,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 18,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 18,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 18,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 18,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 18,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 18,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  },
+  {
+   "stage": 19,
+   "round": 1,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 19,
+   "round": 2,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 19,
+   "round": 3,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 19,
+   "round": 4,
+   "raw_id": "TFT17_Round_Dragon",
+   "label": "드래곤 (보스)"
+  },
+  {
+   "stage": 19,
+   "round": 5,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 19,
+   "round": 6,
+   "raw_id": "TFT_Round_Combat",
+   "label": "전투"
+  },
+  {
+   "stage": 19,
+   "round": 7,
+   "raw_id": "TFT17_Round_CarouselMarket",
+   "label": "마켓 (상점)"
+  }
+ ],
+ "source": "TFT_DDragon/data/ko_KR/stage-round-data.json"
+}

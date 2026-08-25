@@ -1,0 +1,89 @@
+{
+ "section": "xp_gold",
+ "set": 17,
+ "patch": "17.9",
+ "generated": "tft_guide.py",
+ "caveat": "Data Dragon JSON에 포함되지 않는 TFT 클라이언트 고정 상수. 표준(일반/랭크) 값이며 모드(터보/더블업)에 따라 달라질 수 있다.",
+ "max_level": 10,
+ "xp_per_round": 2,
+ "level_up_xp": [
+  {
+   "from_level": 1,
+   "to_level": 2,
+   "xp_required": 2
+  },
+  {
+   "from_level": 2,
+   "to_level": 3,
+   "xp_required": 6
+  },
+  {
+   "from_level": 3,
+   "to_level": 4,
+   "xp_required": 10
+  },
+  {
+   "from_level": 4,
+   "to_level": 5,
+   "xp_required": 20
+  },
+  {
+   "from_level": 5,
+   "to_level": 6,
+   "xp_required": 36
+  },
+  {
+   "from_level": 6,
+   "to_level": 7,
+   "xp_required": 60
+  },
+  {
+   "from_level": 7,
+   "to_level": 8,
+   "xp_required": 68
+  },
+  {
+   "from_level": 8,
+   "to_level": 9,
+   "xp_required": 68
+  },
+  {
+   "from_level": 9,
+   "to_level": 10,
+   "xp_required": 68
+  }
+ ],
+ "gold": {
+  "interest_correction": "// 2026-08-24 수정: 기존 5골드 단위 테이블이 실제 게임 규칙과 불일치하여 10골드 단위로 정정. 출처: TFT Set 17 경제 가이드 다수 교차검증 (mobalytics.gg, tftemblem.com, wiki.leagueoflegends.com)",
+  "max_gold": 50,
+  "interest_table": [
+   {
+    "gold": "0-9",
+    "interest": 0
+   },
+   {
+    "gold": "10-19",
+    "interest": 1
+   },
+   {
+    "gold": "20-29",
+    "interest": 2
+   },
+   {
+    "gold": "30-39",
+    "interest": 3
+   },
+   {
+    "gold": "40-49",
+    "interest": 4
+   },
+   {
+    "gold": "50-99",
+    "interest": 5
+   }
+  ]
+ },
+ "reroll_cost": 2,
+ "reroll_cost_note": "// 2026-08-24 수정: 구간별 유지율 필드(제거됨)는 실제 게임에 없는 메커니즘으로 확인되어 제거. 상점 리롤은 항상 고정 2골드. 출처: tft.ninja 상점 가이드 교차검증",
+ "level11_note": "shop-drop-rates-data.json의 레벨 11 행은 Set 14(14.23)에서 파일이 처음 추가됐을 때(당시 최대 레벨 11, 6코스트 존재)의 잔재가 Set 15~17까지 유지된 것. Set 17은 최대 레벨 10."
+}
