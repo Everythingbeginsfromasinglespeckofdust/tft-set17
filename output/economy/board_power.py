@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
-"""TFT Set 17 보드 가치평가 휴리스틱 v1 (Board Power Evaluator).
+"""TFT Set 17 보드 가치평가 휴리스틱 v2 (Board Power Evaluator).
+
+가중치 개정 이력:
+- v2: PM 타협 결정(2026-08-25), A안(게임스탯)/B안(다변량실측) 평균 채택.
+      근거: star_multiplier_reexamination.md, star_multiplier_source_audit.md
+      - star_multiplier: {1: 1.0, 2: 2.2, 3: 3.6} (기존 1.0/1.8/3.2에서 개정)
+      - item_score: 완성 아이템 +3.0점, 미완성 부품 +0.0점 (기존 +1.0점에서 개정, 실측 근거)
+      - synergy_bonus: (breakpoint_reached)^1.5 * 2.0 (유지)
+      - Source of Truth: output/economy/board_power_weights_v2.json
 
 공식:
     board_power = unit_power_sum + item_score_sum + synergy_bonus_sum
 
 1. 유닛별 기본 파워:
    unit_power = cost * star_multiplier[star_level]
-   star_multiplier = {1: 1.0, 2: 1.8, 3: 3.2}
 
 2. 아이템 점수:
-   유닛이 보유한 완성 아이템 개수 * 3.0 + 미완성 부품 개수 * 1.0
+   유닛이 보유한 완성 아이템 개수 * 3.0 + 미완성 부품 개수 * 0.0
    (01_items.json 기준: basic_components -> 부품, standard_items/set17_special_items -> 완성품)
 
 3. 시너지 보너스:
@@ -19,6 +26,7 @@
    - "별돌보미" 8종 하위 변형은 베이스 ID/시너지명("별돌보미")으로 통합
 
 데이터 출처:
+- 가중치 정의: output/economy/board_power_weights_v2.json
 - 아이템: output/tft_guide/01_items.json
 - 챔피언 및 시너지 매핑: tft_set17.json (또는 07_roster.json / TFT_DDragon)
 """
@@ -36,10 +44,25 @@ _REPO = os.path.join(_OUTPUT, "..")
 
 from roll_probability import _check_int
 
-# 1. 가중치 상수 (PM 확정값 — 임의 수정 금지)
-STAR_MULTIPLIER = {1: 1.0, 2: 1.8, 3: 3.2}
-ITEM_SCORE_COMPONENT = 1.0
-ITEM_SCORE_COMPLETED = 3.0
+_WEIGHTS_FILE = os.path.join(_HERE, "board_power_weights_v2.json")
+
+
+def _load_weights():
+    """board_power_weights_v2.json 에서 가중치 로드 (Source of Truth)."""
+    if os.path.exists(_WEIGHTS_FILE):
+        with open(_WEIGHTS_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            star_raw = data.get("star_multiplier", {"1": 1.0, "2": 2.2, "3": 3.6})
+            star_mult = {int(k): float(v) for k, v in star_raw.items()}
+            item_data = data.get("item_score", {"completed": 3.0, "component": 0.0})
+            item_comp = float(item_data.get("component", 0.0))
+            item_full = float(item_data.get("completed", 3.0))
+            return star_mult, item_comp, item_full
+    return {1: 1.0, 2: 2.2, 3: 3.6}, 0.0, 3.0
+
+
+# 1. 가중치 상수 (board_power_weights_v2.json 로드)
+STAR_MULTIPLIER, ITEM_SCORE_COMPONENT, ITEM_SCORE_COMPLETED = _load_weights()
 
 # 2. Set 17 시너지 브레이크포인트 정의 (35개 전수)
 TRAIT_BREAKPOINTS = {
@@ -88,19 +111,19 @@ def _load_items_db():
     global _ITEMS_CACHE
     if _ITEMS_CACHE is not None:
         return _ITEMS_CACHE
-    
+
     items_path = os.path.join(_OUTPUT, "tft_guide", "01_items.json")
     if not os.path.exists(items_path):
         items_path = os.path.join(_REPO, "tft_guide", "01_items.json")
-    
+
     with open(items_path, encoding="utf-8") as f:
         data = json.load(f)
-    
+
     components = set(data.get("basic_components", []))
     completed = set(it["name"] for it in data.get("standard_items", []))
     for cat_items in data.get("set17_special_items", {}).values():
         completed.update(cat_items)
-    
+
     _ITEMS_CACHE = (components, completed)
     return _ITEMS_CACHE
 
@@ -109,14 +132,14 @@ def _load_champions_db():
     global _CHAMPIONS_CACHE
     if _CHAMPIONS_CACHE is not None:
         return _CHAMPIONS_CACHE
-    
+
     set17_path = os.path.join(_REPO, "tft_set17.json")
     if not os.path.exists(set17_path):
         raise FileNotFoundError(f"tft_set17.json을 찾을 수 없습니다: {set17_path}")
-    
+
     with open(set17_path, encoding="utf-8") as f:
         data = json.load(f)
-    
+
     db = {}
     for c in data.get("champions", []):
         db[c["name"]] = {
@@ -125,7 +148,7 @@ def _load_champions_db():
             "cost": c["cost"],
             "traits": c["traits"],
         }
-    
+
     _CHAMPIONS_CACHE = db
     return _CHAMPIONS_CACHE
 
@@ -174,6 +197,8 @@ def calculate_board_power(board: dict) -> dict:
     if "units" not in board or not isinstance(board["units"], list):
         raise ValueError(f"board['units']는 list여야 합니다: {board.get('units')!r}")
 
+    # 최신 가중치 로드
+    star_multiplier, item_score_component, item_score_completed = _load_weights()
     basic_components, completed_items = _load_items_db()
     champions_db = _load_champions_db()
 
@@ -184,7 +209,7 @@ def calculate_board_power(board: dict) -> dict:
     for idx, u in enumerate(board["units"]):
         if not isinstance(u, dict):
             raise ValueError(f"units[{idx}]는 dict여야 합니다: {u!r}")
-        
+
         cname = u.get("champion")
         if not isinstance(cname, str) or not cname:
             raise ValueError(f"units[{idx}]에 유효한 'champion' 이름이 필요합니다: {cname!r}")
@@ -201,7 +226,7 @@ def calculate_board_power(board: dict) -> dict:
                 )
         else:
             cost = cinfo["cost"]
-        
+
         if cost not in (1, 2, 3, 4, 5):
             raise ValueError(f"코스트는 1~5 사이여야 합니다: {cost}")
 
@@ -213,7 +238,7 @@ def calculate_board_power(board: dict) -> dict:
             raise ValueError(f"star_level은 1, 2, 3 중 하나여야 합니다: {star_level}")
 
         # 유닛 파워 합산
-        unit_power = cost * STAR_MULTIPLIER[star_level]
+        unit_power = cost * star_multiplier[star_level]
         unit_power_sum += unit_power
 
         # 아이템 검증 및 점수 합산
@@ -227,9 +252,9 @@ def calculate_board_power(board: dict) -> dict:
             if not isinstance(it, str):
                 raise ValueError(f"아이템 이름은 문자열이어야 합니다: {it!r}")
             if it in basic_components:
-                item_score_sum += ITEM_SCORE_COMPONENT
+                item_score_sum += item_score_component
             elif it in completed_items:
-                item_score_sum += ITEM_SCORE_COMPLETED
+                item_score_sum += item_score_completed
             else:
                 raise ValueError(f"존재하지 않는 아이템입니다: {it!r}")
 

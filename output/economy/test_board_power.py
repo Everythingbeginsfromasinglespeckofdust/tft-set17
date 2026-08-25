@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""test_board_power.py — 보드 가치평가 휴리스틱 v1 단위 테스트.
+"""test_board_power.py — 보드 가치평가 휴리스틱 v2 단위 테스트.
 
 핵심 검증:
 1. 약한 보드 vs 강한 보드 파워 비교 (완료 기준)
-2. 성급 배수, 아이템 점수, 시너지 브레이크포인트 지수 계산 정확성
+2. 성급 배수 v2 ({1: 1.0, 2: 2.2, 3: 3.6}), 아이템 점수 v2 (완성품 3.0, 부품 0.0), 시너지 브레이크포인트 지수 계산 정확성
 3. 별돌보미(Stargazer) 하위 변형 통합 시너지 처리
 4. 입력 유효성 검증 (F-R2 bool 차단, 1~3성, 최대 3아이템, 미등록 챔프/아이템 예외)
 """
@@ -18,7 +18,7 @@ import board_power as bp
 
 # ---------------------------------------------------------------- 핵심 완료 기준 검증
 def test_weak_vs_strong_board_power_comparison():
-    """완료 기준: 약한 보드(초반 1성) vs 강한 보드(후반 2성 5코 풀템) 비교."""
+    """완료 기준: 약한 보드(초반 1성) vs 강한 보드(후반 2성 5코 풀템) 비교 (v2 가중치 기준)."""
     weak_board = {
         "units": [
             {"champion": "나서스", "cost": 1, "star_level": 1, "items": []},
@@ -41,46 +41,46 @@ def test_weak_vs_strong_board_power_comparison():
     res_weak = bp.calculate_board_power(weak_board)
     res_strong = bp.calculate_board_power(strong_board)
 
-    # 1. 약한 보드 수동 검산 검증:
+    # 1. 약한 보드 v2 수동 검산 검증:
     # unit_power: 1*1.0 + 1*1.0 + 1*1.0 = 3.0
-    # item_score: 1.0 (쇠사슬 조끼 1개)
+    # item_score: 0.0 (쇠사슬 조끼 1개 = 부품 0.0점)
     # synergy_bonus: 선봉대(2 -> 1단계 = 2.0) + 우주 그루브(1 -> 1단계 = 2.0) = 4.0
-    # total = 3.0 + 1.0 + 4.0 = 8.0
-    assert res_weak["total_power"] == pytest.approx(8.0, abs=1e-9)
+    # total = 3.0 + 0.0 + 4.0 = 7.0 (v1: 8.0)
+    assert res_weak["total_power"] == pytest.approx(7.0, abs=1e-9)
     assert res_weak["breakdown"]["unit_power"] == pytest.approx(3.0, abs=1e-9)
-    assert res_weak["breakdown"]["item_score"] == pytest.approx(1.0, abs=1e-9)
+    assert res_weak["breakdown"]["item_score"] == pytest.approx(0.0, abs=1e-9)
     assert res_weak["breakdown"]["synergy_bonus"] == pytest.approx(4.0, abs=1e-9)
 
-    # 2. 강한 보드 수동 검산 검증:
-    # unit_power: 5*1.8*3 (27.0) + 1*1.8*3 (5.4) + 2*1.8 (3.6) = 36.0
+    # 2. 강한 보드 v2 수동 검산 검증:
+    # unit_power: 5*2.2*3 (33.0) + 1*2.2*3 (6.6) + 2*2.2 (4.4) = 44.0 (v1: 36.0)
     # item_score: 9개 완성템 * 3.0 = 27.0
     # synergy_bonus: 암흑의 별 4(2단계 = 2^1.5*2 ≈ 5.65685) + 6개 1단계(12.0) ≈ 17.65685
-    # total ≈ 36.0 + 27.0 + 17.65685 = 80.65685
+    # total ≈ 44.0 + 27.0 + 17.65685 = 88.65685 (v1: 80.65685)
     expected_strong_synergy = (2 ** 1.5 * 2.0) + (1 ** 1.5 * 2.0 * 6)
-    expected_strong_total = 36.0 + 27.0 + expected_strong_synergy
-    assert res_strong["breakdown"]["unit_power"] == pytest.approx(36.0, abs=1e-9)
+    expected_strong_total = 44.0 + 27.0 + expected_strong_synergy
+    assert res_strong["breakdown"]["unit_power"] == pytest.approx(44.0, abs=1e-9)
     assert res_strong["breakdown"]["item_score"] == pytest.approx(27.0, abs=1e-9)
     assert res_strong["breakdown"]["synergy_bonus"] == pytest.approx(expected_strong_synergy, abs=1e-9)
     assert res_strong["total_power"] == pytest.approx(expected_strong_total, abs=1e-9)
 
-    # 강한 보드가 약한 보드보다 10배 가량 높음 확인
-    assert res_strong["total_power"] > res_weak["total_power"] * 9.0
+    # 강한 보드가 약한 보드보다 12배 이상 높음 확인
+    assert res_strong["total_power"] > res_weak["total_power"] * 12.0
 
 
 # ---------------------------------------------------------------- 세부 공식 정확도 검증
 def test_star_multipliers():
-    """성급 배수 {1: 1.0, 2: 1.8, 3: 3.2} 정확성 검증."""
+    """성급 배수 v2 {1: 1.0, 2: 2.2, 3: 3.6} 정확성 검증."""
     b1 = {"units": [{"champion": "진", "cost": 5, "star_level": 1, "items": []}]}
     b2 = {"units": [{"champion": "진", "cost": 5, "star_level": 2, "items": []}]}
     b3 = {"units": [{"champion": "진", "cost": 5, "star_level": 3, "items": []}]}
 
     assert bp.calculate_board_power(b1)["breakdown"]["unit_power"] == pytest.approx(5.0 * 1.0)
-    assert bp.calculate_board_power(b2)["breakdown"]["unit_power"] == pytest.approx(5.0 * 1.8)
-    assert bp.calculate_board_power(b3)["breakdown"]["unit_power"] == pytest.approx(5.0 * 3.2)
+    assert bp.calculate_board_power(b2)["breakdown"]["unit_power"] == pytest.approx(5.0 * 2.2)
+    assert bp.calculate_board_power(b3)["breakdown"]["unit_power"] == pytest.approx(5.0 * 3.6)
 
 
 def test_item_scores_component_and_completed_and_special():
-    """아이템 점수: 부품 1점, 완성품 3점, 특수 아이템(상징/유물 등) 3점."""
+    """아이템 점수 v2: 부품 0.0점, 완성품 3.0점, 특수 아이템(상징/유물 등) 3.0점."""
     board = {
         "units": [
             {
@@ -88,7 +88,7 @@ def test_item_scores_component_and_completed_and_special():
                 "cost": 1,
                 "star_level": 1,
                 "items": [
-                    "B.F. 대검",           # 기본 부품 (1.0)
+                    "B.F. 대검",           # 기본 부품 (0.0)
                     "대천사의 지팡이",      # 표준 완성품 (3.0)
                     "동물특공대 상징",      # Set17 특수 상징 (3.0)
                 ],
@@ -96,7 +96,7 @@ def test_item_scores_component_and_completed_and_special():
         ]
     }
     res = bp.calculate_board_power(board)
-    assert res["breakdown"]["item_score"] == pytest.approx(7.0)
+    assert res["breakdown"]["item_score"] == pytest.approx(6.0)
 
 
 def test_synergy_breakpoint_power_formula():
@@ -133,7 +133,7 @@ def test_duplicate_champions_count_once_for_synergy():
         ]
     }
     res = bp.calculate_board_power(board)
-    assert res["breakdown"]["unit_power"] == pytest.approx(14.0)
+    assert res["breakdown"]["unit_power"] == pytest.approx(5.0 * 2.2 + 5.0 * 1.0)
     darkstar = next((s for s in res["breakdown"]["active_synergies"] if s["trait"] == "암흑의 별"), None)
     assert darkstar is None
     eradicator = next((s for s in res["breakdown"]["active_synergies"] if s["trait"] == "말살자"), None)
