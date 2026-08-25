@@ -1,0 +1,186 @@
+frame,slot_id,slot_type,coordinates,gt_champion,pred_champion,confidence,is_detected,outcome
+frame_0125s.jpg,bench_0,bench,"[510:590,250:315]",EMPTY,카이사,0.5378,False,TN
+frame_0125s.jpg,bench_1,bench,"[510:590,330:395]",밀리오,밀리오,0.5718,False,FN
+frame_0125s.jpg,bench_2,bench,"[510:590,410:475]",EMPTY,조이,0.5472,False,TN
+frame_0125s.jpg,bench_3,bench,"[510:590,490:555]",EMPTY,나서스,0.5554,False,TN
+frame_0125s.jpg,bench_4,bench,"[510:590,570:635]",EMPTY,모르가나,0.5325,False,TN
+frame_0125s.jpg,bench_5,bench,"[510:590,650:715]",EMPTY,나서스,0.4972,False,TN
+frame_0125s.jpg,bench_6,bench,"[510:590,730:795]",조이,조이,0.6144,False,FN
+frame_0125s.jpg,bench_7,bench,"[510:590,810:875]",EMPTY,라아스트,0.3964,False,TN
+frame_0125s.jpg,bench_8,bench,"[510:590,890:955]",EMPTY,미스 포츈,0.4599,False,TN
+frame_0125s.jpg,hex_r0_c0,field,"[220:290,220:330]",EMPTY,바드,0.395,False,TN
+frame_0125s.jpg,hex_r0_c1,field,"[220:290,340:450]",리븐,리븐,0.6208,True,TP
+frame_0125s.jpg,hex_r0_c2,field,"[220:290,460:570]",EMPTY,밀리오,0.6093,False,TN
+frame_0125s.jpg,hex_r0_c3,field,"[220:290,580:690]",EMPTY,킨드레드,0.3561,False,TN
+frame_0125s.jpg,hex_r0_c4,field,"[220:290,700:810]",EMPTY,모르가나,0.5527,False,TN
+frame_0125s.jpg,hex_r0_c5,field,"[220:290,820:930]",EMPTY,미스 포츈,0.444,False,TN
+frame_0125s.jpg,hex_r0_c6,field,"[220:290,940:1050]",EMPTY,미스 포츈,0.4852,False,TN
+frame_0125s.jpg,hex_r1_c0,field,"[290:360,280:390]",EMPTY,렉사이,0.3995,False,TN
+frame_0125s.jpg,hex_r1_c1,field,"[290:360,400:510]",EMPTY,렉사이,0.2897,False,TN
+frame_0125s.jpg,hex_r1_c2,field,"[290:360,520:630]",EMPTY,밀리오,0.4652,False,TN
+frame_0125s.jpg,hex_r1_c3,field,"[290:360,640:750]",EMPTY,미스 포츈,0.6179,False,TN
+frame_0125s.jpg,hex_r1_c4,field,"[290:360,760:870]",EMPTY,미스 포츈,0.4661,False,TN
+frame_0125s.jpg,hex_r1_c5,field,"[290:360,880:990]",EMPTY,미스 포츈,0.353,False,TN
+frame_0125s.jpg,hex_r1_c6,field,"[290:360,1000:1110]",렉사이,렉사이,0.6858,True,TP
+frame_0125s.jpg,hex_r2_c0,field,"[360:430,220:330]",EMPTY,코르키,0.116,False,TN
+frame_0125s.jpg,hex_r2_c1,field,"[360:430,340:450]",EMPTY,렉사이,0.2862,False,TN
+frame_0125s.jpg,hex_r2_c2,field,"[360:430,460:570]",EMPTY,미스 포츈,0.4225,False,TN
+frame_0125s.jpg,hex_r2_c3,field,"[360:430,580:690]",EMPTY,나미,0.3411,False,TN
+frame_0125s.jpg,hex_r2_c4,field,"[360:430,700:810]",EMPTY,벨베스,0.4994,False,TN
+frame_0125s.jpg,hex_r2_c5,field,"[360:430,820:930]",EMPTY,밀리오,0.5789,False,TN
+frame_0125s.jpg,hex_r2_c6,field,"[360:430,940:1050]",EMPTY,벡스,0.3831,False,TN
+frame_0125s.jpg,hex_r3_c0,field,"[430:500,280:390]",밀리오,밀리오,0.6653,True,TP
+frame_0125s.jpg,hex_r3_c1,field,"[430:500,400:510]",EMPTY,제드,0.2657,False,TN
+frame_0125s.jpg,hex_r3_c2,field,"[430:500,520:630]",EMPTY,모데카이저,0.2955,False,TN
+frame_0125s.jpg,hex_r3_c3,field,"[430:500,640:750]",EMPTY,제드,0.4828,False,TN
+frame_0125s.jpg,hex_r3_c4,field,"[430:500,760:870]",EMPTY,미스 포츈,0.3831,False,TN
+frame_0125s.jpg,hex_r3_c5,field,"[430:500,880:990]",EMPTY,렉사이,0.3675,False,TN
+frame_0125s.jpg,hex_r3_c6,field,"[430:500,1000:1110]",EMPTY,판테온,0.5196,False,TN
+frame_0150s.jpg,bench_0,bench,"[510:590,250:315]",EMPTY,카이사,0.5045,False,TN
+frame_0150s.jpg,bench_1,bench,"[510:590,330:395]",밀리오,밀리오,0.5722,False,FN
+frame_0150s.jpg,bench_2,bench,"[510:590,410:475]",조이,조이,0.6216,True,TP
+frame_0150s.jpg,bench_3,bench,"[510:590,490:555]",EMPTY,나서스,0.4956,False,TN
+frame_0150s.jpg,bench_4,bench,"[510:590,570:635]",EMPTY,다이애나,0.3603,False,TN
+frame_0150s.jpg,bench_5,bench,"[510:590,650:715]",EMPTY,나서스,0.4977,False,TN
+frame_0150s.jpg,bench_6,bench,"[510:590,730:795]",밀리오,밀리오,0.7232,True,TP
+frame_0150s.jpg,bench_7,bench,"[510:590,810:875]",EMPTY,다이애나,0.3549,False,TN
+frame_0150s.jpg,bench_8,bench,"[510:590,890:955]",EMPTY,그레이브즈,0.3499,False,TN
+frame_0150s.jpg,hex_r0_c0,field,"[220:290,220:330]",EMPTY,바드,0.3926,False,TN
+frame_0150s.jpg,hex_r0_c1,field,"[220:290,340:450]",리븐,리븐,0.6176,False,FN
+frame_0150s.jpg,hex_r0_c2,field,"[220:290,460:570]",EMPTY,미스 포츈,0.432,False,TN
+frame_0150s.jpg,hex_r0_c3,field,"[220:290,580:690]",EMPTY,미스 포츈,0.3532,False,TN
+frame_0150s.jpg,hex_r0_c4,field,"[220:290,700:810]",EMPTY,모르가나,0.5541,False,TN
+frame_0150s.jpg,hex_r0_c5,field,"[220:290,820:930]",EMPTY,미스 포츈,0.4445,False,TN
+frame_0150s.jpg,hex_r0_c6,field,"[220:290,940:1050]",EMPTY,미스 포츈,0.4854,False,TN
+frame_0150s.jpg,hex_r1_c0,field,"[290:360,280:390]",EMPTY,렉사이,0.3966,False,TN
+frame_0150s.jpg,hex_r1_c1,field,"[290:360,400:510]",EMPTY,렉사이,0.2945,False,TN
+frame_0150s.jpg,hex_r1_c2,field,"[290:360,520:630]",EMPTY,킨드레드,0.4534,False,TN
+frame_0150s.jpg,hex_r1_c3,field,"[290:360,640:750]",EMPTY,미스 포츈,0.6072,False,TN
+frame_0150s.jpg,hex_r1_c4,field,"[290:360,760:870]",EMPTY,미스 포츈,0.4637,False,TN
+frame_0150s.jpg,hex_r1_c5,field,"[290:360,880:990]",EMPTY,미스 포츈,0.3528,False,TN
+frame_0150s.jpg,hex_r1_c6,field,"[290:360,1000:1110]",렉사이,렉사이,0.6757,True,TP
+frame_0150s.jpg,hex_r2_c0,field,"[360:430,220:330]",EMPTY,코르키,0.1161,False,TN
+frame_0150s.jpg,hex_r2_c1,field,"[360:430,340:450]",EMPTY,다이애나,0.2806,False,TN
+frame_0150s.jpg,hex_r2_c2,field,"[360:430,460:570]",EMPTY,마오카이,0.3776,False,TN
+frame_0150s.jpg,hex_r2_c3,field,"[360:430,580:690]",EMPTY,꼬마 정령,0.5501,False,TN
+frame_0150s.jpg,hex_r2_c4,field,"[360:430,700:810]",EMPTY,벨베스,0.5021,False,TN
+frame_0150s.jpg,hex_r2_c5,field,"[360:430,820:930]",EMPTY,밀리오,0.5786,False,TN
+frame_0150s.jpg,hex_r2_c6,field,"[360:430,940:1050]",EMPTY,벡스,0.395,False,TN
+frame_0150s.jpg,hex_r3_c0,field,"[430:500,280:390]",밀리오,밀리오,0.6846,True,TP
+frame_0150s.jpg,hex_r3_c1,field,"[430:500,400:510]",EMPTY,티모,0.2842,False,TN
+frame_0150s.jpg,hex_r3_c2,field,"[430:500,520:630]",EMPTY,사미라,0.2237,False,TN
+frame_0150s.jpg,hex_r3_c3,field,"[430:500,640:750]",EMPTY,소나,0.6305,True,FP
+frame_0150s.jpg,hex_r3_c4,field,"[430:500,760:870]",EMPTY,밀리오,0.392,False,TN
+frame_0150s.jpg,hex_r3_c5,field,"[430:500,880:990]",EMPTY,렉사이,0.3547,False,TN
+frame_0150s.jpg,hex_r3_c6,field,"[430:500,1000:1110]",EMPTY,판테온,0.5245,False,TN
+frame_0215s.jpg,bench_0,bench,"[510:590,250:315]",조이,조이,0.6267,True,TP
+frame_0215s.jpg,bench_1,bench,"[510:590,330:395]",밀리오,밀리오,0.654,True,TP
+frame_0215s.jpg,bench_2,bench,"[510:590,410:475]",밀리오,밀리오,0.6924,True,TP
+frame_0215s.jpg,bench_3,bench,"[510:590,490:555]",EMPTY,나서스,0.4812,False,TN
+frame_0215s.jpg,bench_4,bench,"[510:590,570:635]",EMPTY,자야,0.2584,False,TN
+frame_0215s.jpg,bench_5,bench,"[510:590,650:715]",EMPTY,조이,0.4218,False,TN
+frame_0215s.jpg,bench_6,bench,"[510:590,730:795]",EMPTY,조이,0.5896,False,TN
+frame_0215s.jpg,bench_7,bench,"[510:590,810:875]",밀리오,밀리오,0.6306,True,TP
+frame_0215s.jpg,bench_8,bench,"[510:590,890:955]",EMPTY,그레이브즈,0.3593,False,TN
+frame_0215s.jpg,hex_r0_c0,field,"[220:290,220:330]",EMPTY,바드,0.3803,False,TN
+frame_0215s.jpg,hex_r0_c1,field,"[220:290,340:450]",리븐,리븐,0.6178,False,FN
+frame_0215s.jpg,hex_r0_c2,field,"[220:290,460:570]",EMPTY,미스 포츈,0.3884,False,TN
+frame_0215s.jpg,hex_r0_c3,field,"[220:290,580:690]",EMPTY,미스 포츈,0.3285,False,TN
+frame_0215s.jpg,hex_r0_c4,field,"[220:290,700:810]",EMPTY,모르가나,0.56,False,TN
+frame_0215s.jpg,hex_r0_c5,field,"[220:290,820:930]",EMPTY,미스 포츈,0.4516,False,TN
+frame_0215s.jpg,hex_r0_c6,field,"[220:290,940:1050]",EMPTY,미스 포츈,0.4862,False,TN
+frame_0215s.jpg,hex_r1_c0,field,"[290:360,280:390]",EMPTY,렉사이,0.3644,False,TN
+frame_0215s.jpg,hex_r1_c1,field,"[290:360,400:510]",EMPTY,렉사이,0.2866,False,TN
+frame_0215s.jpg,hex_r1_c2,field,"[290:360,520:630]",EMPTY,킨드레드,0.4423,False,TN
+frame_0215s.jpg,hex_r1_c3,field,"[290:360,640:750]",미스 포츈,미스 포츈,0.6197,False,FN
+frame_0215s.jpg,hex_r1_c4,field,"[290:360,760:870]",EMPTY,미스 포츈,0.4719,False,TN
+frame_0215s.jpg,hex_r1_c5,field,"[290:360,880:990]",EMPTY,나미,0.4197,False,TN
+frame_0215s.jpg,hex_r1_c6,field,"[290:360,1000:1110]",렉사이,렉사이,0.6785,True,TP
+frame_0215s.jpg,hex_r2_c0,field,"[360:430,220:330]",EMPTY,렉사이,0.1648,False,TN
+frame_0215s.jpg,hex_r2_c1,field,"[360:430,340:450]",EMPTY,다이애나,0.2587,False,TN
+frame_0215s.jpg,hex_r2_c2,field,"[360:430,460:570]",EMPTY,빅토르,0.4263,False,TN
+frame_0215s.jpg,hex_r2_c3,field,"[360:430,580:690]",EMPTY,밀리오,0.4787,False,TN
+frame_0215s.jpg,hex_r2_c4,field,"[360:430,700:810]",EMPTY,벨베스,0.4906,False,TN
+frame_0215s.jpg,hex_r2_c5,field,"[360:430,820:930]",EMPTY,밀리오,0.5749,False,TN
+frame_0215s.jpg,hex_r2_c6,field,"[360:430,940:1050]",EMPTY,벡스,0.3778,False,TN
+frame_0215s.jpg,hex_r3_c0,field,"[430:500,280:390]",밀리오,밀리오,0.6671,True,TP
+frame_0215s.jpg,hex_r3_c1,field,"[430:500,400:510]",EMPTY,제드,0.4403,False,TN
+frame_0215s.jpg,hex_r3_c2,field,"[430:500,520:630]",EMPTY,벡스,0.3406,False,TN
+frame_0215s.jpg,hex_r3_c3,field,"[430:500,640:750]",EMPTY,소나,0.3966,False,TN
+frame_0215s.jpg,hex_r3_c4,field,"[430:500,760:870]",EMPTY,나미,0.2804,False,TN
+frame_0215s.jpg,hex_r3_c5,field,"[430:500,880:990]",EMPTY,렉사이,0.3945,False,TN
+frame_0215s.jpg,hex_r3_c6,field,"[430:500,1000:1110]",EMPTY,판테온,0.5224,False,TN
+frame_0245s.jpg,bench_0,bench,"[510:590,250:315]",조이,조이,0.6238,True,TP
+frame_0245s.jpg,bench_1,bench,"[510:590,330:395]",밀리오,밀리오,0.6541,True,TP
+frame_0245s.jpg,bench_2,bench,"[510:590,410:475]",밀리오,밀리오,0.6924,True,TP
+frame_0245s.jpg,bench_3,bench,"[510:590,490:555]",EMPTY,나서스,0.4818,False,TN
+frame_0245s.jpg,bench_4,bench,"[510:590,570:635]",EMPTY,자야,0.2584,False,TN
+frame_0245s.jpg,bench_5,bench,"[510:590,650:715]",EMPTY,조이,0.4198,False,TN
+frame_0245s.jpg,bench_6,bench,"[510:590,730:795]",조이,조이,0.5927,False,FN
+frame_0245s.jpg,bench_7,bench,"[510:590,810:875]",밀리오,밀리오,0.633,True,TP
+frame_0245s.jpg,bench_8,bench,"[510:590,890:955]",EMPTY,그레이브즈,0.3596,False,TN
+frame_0245s.jpg,hex_r0_c0,field,"[220:290,220:330]",EMPTY,바드,0.3744,False,TN
+frame_0245s.jpg,hex_r0_c1,field,"[220:290,340:450]",리븐,리븐,0.6139,False,FN
+frame_0245s.jpg,hex_r0_c2,field,"[220:290,460:570]",EMPTY,미스 포츈,0.4417,False,TN
+frame_0245s.jpg,hex_r0_c3,field,"[220:290,580:690]",EMPTY,미스 포츈,0.4163,False,TN
+frame_0245s.jpg,hex_r0_c4,field,"[220:290,700:810]",EMPTY,모르가나,0.5584,False,TN
+frame_0245s.jpg,hex_r0_c5,field,"[220:290,820:930]",EMPTY,미스 포츈,0.4383,False,TN
+frame_0245s.jpg,hex_r0_c6,field,"[220:290,940:1050]",EMPTY,미스 포츈,0.4839,False,TN
+frame_0245s.jpg,hex_r1_c0,field,"[290:360,280:390]",EMPTY,렉사이,0.3582,False,TN
+frame_0245s.jpg,hex_r1_c1,field,"[290:360,400:510]",EMPTY,렉사이,0.2915,False,TN
+frame_0245s.jpg,hex_r1_c2,field,"[290:360,520:630]",EMPTY,밀리오,0.5813,False,TN
+frame_0245s.jpg,hex_r1_c3,field,"[290:360,640:750]",미스 포츈,미스 포츈,0.623,True,TP
+frame_0245s.jpg,hex_r1_c4,field,"[290:360,760:870]",EMPTY,미스 포츈,0.4766,False,TN
+frame_0245s.jpg,hex_r1_c5,field,"[290:360,880:990]",EMPTY,나미,0.4118,False,TN
+frame_0245s.jpg,hex_r1_c6,field,"[290:360,1000:1110]",렉사이,렉사이,0.675,True,TP
+frame_0245s.jpg,hex_r2_c0,field,"[360:430,220:330]",EMPTY,코르키,0.1383,False,TN
+frame_0245s.jpg,hex_r2_c1,field,"[360:430,340:450]",EMPTY,아트록스,0.2817,False,TN
+frame_0245s.jpg,hex_r2_c2,field,"[360:430,460:570]",EMPTY,마오카이,0.363,False,TN
+frame_0245s.jpg,hex_r2_c3,field,"[360:430,580:690]",EMPTY,코르키,0.2946,False,TN
+frame_0245s.jpg,hex_r2_c4,field,"[360:430,700:810]",EMPTY,벨베스,0.4884,False,TN
+frame_0245s.jpg,hex_r2_c5,field,"[360:430,820:930]",EMPTY,밀리오,0.5734,False,TN
+frame_0245s.jpg,hex_r2_c6,field,"[360:430,940:1050]",EMPTY,벡스,0.3775,False,TN
+frame_0245s.jpg,hex_r3_c0,field,"[430:500,280:390]",밀리오,밀리오,0.6701,True,TP
+frame_0245s.jpg,hex_r3_c1,field,"[430:500,400:510]",EMPTY,제드,0.4523,False,TN
+frame_0245s.jpg,hex_r3_c2,field,"[430:500,520:630]",EMPTY,소나,0.4751,False,TN
+frame_0245s.jpg,hex_r3_c3,field,"[430:500,640:750]",EMPTY,소나,0.5993,False,TN
+frame_0245s.jpg,hex_r3_c4,field,"[430:500,760:870]",EMPTY,미스 포츈,0.3498,False,TN
+frame_0245s.jpg,hex_r3_c5,field,"[430:500,880:990]",EMPTY,렉사이,0.4015,False,TN
+frame_0245s.jpg,hex_r3_c6,field,"[430:500,1000:1110]",EMPTY,판테온,0.5175,False,TN
+frame_0275s.jpg,bench_0,bench,"[510:590,250:315]",EMPTY,밀리오,0.5847,False,TN
+frame_0275s.jpg,bench_1,bench,"[510:590,330:395]",EMPTY,밀리오,0.5577,False,TN
+frame_0275s.jpg,bench_2,bench,"[510:590,410:475]",밀리오,밀리오,0.634,True,TP
+frame_0275s.jpg,bench_3,bench,"[510:590,490:555]",EMPTY,나서스,0.4118,False,TN
+frame_0275s.jpg,bench_4,bench,"[510:590,570:635]",EMPTY,카이사,0.2503,False,TN
+frame_0275s.jpg,bench_5,bench,"[510:590,650:715]",EMPTY,조이,0.4209,False,TN
+frame_0275s.jpg,bench_6,bench,"[510:590,730:795]",밀리오,밀리오,0.6815,True,TP
+frame_0275s.jpg,bench_7,bench,"[510:590,810:875]",밀리오,밀리오,0.6404,True,TP
+frame_0275s.jpg,bench_8,bench,"[510:590,890:955]",EMPTY,그레이브즈,0.358,False,TN
+frame_0275s.jpg,hex_r0_c0,field,"[220:290,220:330]",EMPTY,바드,0.3776,False,TN
+frame_0275s.jpg,hex_r0_c1,field,"[220:290,340:450]",EMPTY,리븐,0.6094,False,TN
+frame_0275s.jpg,hex_r0_c2,field,"[220:290,460:570]",EMPTY,미스 포츈,0.4462,False,TN
+frame_0275s.jpg,hex_r0_c3,field,"[220:290,580:690]",EMPTY,미스 포츈,0.3286,False,TN
+frame_0275s.jpg,hex_r0_c4,field,"[220:290,700:810]",EMPTY,모르가나,0.556,False,TN
+frame_0275s.jpg,hex_r0_c5,field,"[220:290,820:930]",EMPTY,미스 포츈,0.4531,False,TN
+frame_0275s.jpg,hex_r0_c6,field,"[220:290,940:1050]",EMPTY,미스 포츈,0.4846,False,TN
+frame_0275s.jpg,hex_r1_c0,field,"[290:360,280:390]",EMPTY,렉사이,0.3763,False,TN
+frame_0275s.jpg,hex_r1_c1,field,"[290:360,400:510]",EMPTY,제드,0.389,False,TN
+frame_0275s.jpg,hex_r1_c2,field,"[290:360,520:630]",EMPTY,피즈,0.52,False,TN
+frame_0275s.jpg,hex_r1_c3,field,"[290:360,640:750]",미스 포츈,미스 포츈,0.6212,True,TP
+frame_0275s.jpg,hex_r1_c4,field,"[290:360,760:870]",EMPTY,미스 포츈,0.4765,False,TN
+frame_0275s.jpg,hex_r1_c5,field,"[290:360,880:990]",EMPTY,나미,0.4195,False,TN
+frame_0275s.jpg,hex_r1_c6,field,"[290:360,1000:1110]",렉사이,렉사이,0.6217,True,TP
+frame_0275s.jpg,hex_r2_c0,field,"[360:430,220:330]",EMPTY,사미라,0.1224,False,TN
+frame_0275s.jpg,hex_r2_c1,field,"[360:430,340:450]",EMPTY,잭스,0.4269,False,TN
+frame_0275s.jpg,hex_r2_c2,field,"[360:430,460:570]",밀리오,밀리오,0.6905,True,TP
+frame_0275s.jpg,hex_r2_c3,field,"[360:430,580:690]",EMPTY,렉사이,0.2144,False,TN
+frame_0275s.jpg,hex_r2_c4,field,"[360:430,700:810]",EMPTY,벨베스,0.4292,False,TN
+frame_0275s.jpg,hex_r2_c5,field,"[360:430,820:930]",EMPTY,밀리오,0.5756,False,TN
+frame_0275s.jpg,hex_r2_c6,field,"[360:430,940:1050]",EMPTY,벡스,0.3872,False,TN
+frame_0275s.jpg,hex_r3_c0,field,"[430:500,280:390]",밀리오,밀리오,0.6628,True,TP
+frame_0275s.jpg,hex_r3_c1,field,"[430:500,400:510]",EMPTY,빅토르,0.528,False,TN
+frame_0275s.jpg,hex_r3_c2,field,"[430:500,520:630]",EMPTY,진,0.5459,False,TN
+frame_0275s.jpg,hex_r3_c3,field,"[430:500,640:750]",EMPTY,소나,0.5512,False,TN
+frame_0275s.jpg,hex_r3_c4,field,"[430:500,760:870]",EMPTY,나미,0.2706,False,TN
+frame_0275s.jpg,hex_r3_c5,field,"[430:500,880:990]",EMPTY,렉사이,0.3954,False,TN
+frame_0275s.jpg,hex_r3_c6,field,"[430:500,1000:1110]",EMPTY,판테온,0.5169,False,TN
