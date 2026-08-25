@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFT Set 17 대시보드 - 경제 & 보드 파워 통합 분석</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <h1>📊 TFT Set 17 전략 대시보드</h1>
+        <p class="subtitle">경제 시뮬레이션 & 보드 가치평가 v2 통합 분석 도구</p>
+      </div>
+      <div class="scenario-buttons">
+        <span class="scenario-label">⚡ 예시 시나리오:</span>
+        <button id="btn-s1" class="btn btn-outline" onclick="loadScenario(0)">1. 초반(2-1) 여유</button>
+        <button id="btn-s2" class="btn btn-outline" onclick="loadScenario(1)">2. 중반(5-2) 빈곤</button>
+        <button id="btn-s3" class="btn btn-outline" onclick="loadScenario(2)">3. 후반(7-1) 강보드</button>
+      </div>
+    </header>
+
+    <main class="main-layout">
+      <!-- 입력 폼 패널 -->
+      <section class="panel input-panel">
+        <h2 class="panel-title">⚙️ 게임 상태 및 보드 설정</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="stage-input">스테이지-라운드</label>
+            <input type="text" id="stage-input" value="2-1" placeholder="예: 2-1, 5-2">
+          </div>
+          <div class="form-group">
+            <label for="level-input">플레이어 레벨 (Lv)</label>
+            <input type="number" id="level-input" min="1" max="10" value="4">
+          </div>
+          <div class="form-group">
+            <label for="xp-input">현재 진행 XP</label>
+            <input type="number" id="xp-input" min="0" value="0">
+          </div>
+          <div class="form-group">
+            <label for="gold-input">보유 골드 (G)</label>
+            <input type="number" id="gold-input" min="0" value="30">
+          </div>
+        </div>
+
+        <div class="board-header">
+          <h3>♟️ 배치 보드 유닛 (<span id="unit-count">0</span>명)</h3>
+          <button type="button" class="btn btn-sm btn-primary" onclick="addUnitRow()">+ 유닛 추가</button>
+        </div>
+
+        <div id="units-container" class="units-list">
+          <!-- 동적 유닛 행 추가 위치 -->
+        </div>
+
+        <button type="button" id="btn-submit" class="btn btn-block btn-accent" onclick="submitReport()">
+          🚀 종합 리포트 생성 및 분석
+        </button>
+      </section>
+
+      <!-- 분석 결과 리포트 패널 -->
+      <section class="panel report-panel" id="report-section">
+        <div id="report-empty" class="empty-state">
+          <div class="empty-icon">📊</div>
+          <h3>게임 상태를 입력하고 [종합 리포트 생성] 버튼을 누르세요</h3>
+          <p>상단 예시 시나리오 버튼을 클릭하면 즉시 테스트할 수 있습니다.</p>
+        </div>
+
+        <div id="report-content" class="report-content hidden">
+          <!-- [1] 게임 상태 요약 -->
+          <div class="report-card state-card">
+            <div class="card-header">
+              <h3>[1] 🎮 현재 게임 상태</h3>
+              <span id="res-stage-badge" class="badge badge-stage">Stage 2-1</span>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric">
+                <span class="metric-label">레벨</span>
+                <span id="res-level" class="metric-value">4 Lv</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">진행 XP</span>
+                <span id="res-xp" class="metric-value">0 XP</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">보유 골드</span>
+                <span id="res-gold" class="metric-value highlight-gold">30 G</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">보드 기물</span>
+                <span id="res-units-count" class="metric-value">3 명</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- [2] 보드 가치평가 -->
+          <div class="report-card power-card">
+            <div class="card-header">
+              <h3>[2] ⚔️ 보드 가치평가 (v2 가중치)</h3>
+              <div class="total-power-box">
+                <span class="total-power-label">총 파워</span>
+                <span id="res-total-power" class="total-power-val">7.00</span>
+                <span class="total-power-unit">점</span>
+              </div>
+            </div>
+            <div class="power-breakdown">
+              <div class="breakdown-item">
+                <span>기물 파워 (성급 1.0/2.2/3.6)</span>
+                <strong id="res-unit-power">3.00점</strong>
+              </div>
+              <div class="breakdown-item">
+                <span>아이템 점수 (완성 +3.0 / 부품 +0.0)</span>
+                <strong id="res-item-score">0.00점</strong>
+              </div>
+              <div class="breakdown-item">
+                <span>시너지 보너스 (단계<sup>1.5</sup> × 2.0)</span>
+                <strong id="res-synergy-bonus">4.00점</strong>
+              </div>
+            </div>
+            <div class="synergies-wrapper">
+              <h4>활성 시너지:</h4>
+              <div id="res-synergies-list" class="synergies-tags">
+                <!-- 시너지 태그 위치 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- [3] 경제 상태 요약 -->
+          <div class="report-card eco-card">
+            <div class="card-header">
+              <h3>[3] 💰 경제 상태 요약</h3>
+            </div>
+            <div class="eco-grid">
+              <div class="eco-item">
+                <span class="eco-label">다음 턴 예상 기본 이자</span>
+                <span id="res-interest" class="eco-val">+3 G</span>
+              </div>
+              <div class="eco-item">
+                <span id="res-next-level-label" class="eco-label">5레벨 도달 필요 골드</span>
+                <span id="res-gold-needed" class="eco-val">10 G</span>
+                <span id="res-level-status" class="badge badge-success">도달 가능</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- [4] 전략별 시뮬레이션 비교 -->
+          <div class="report-card strat-card" id="strat-card">
+            <div class="card-header">
+              <h3>[4] 📈 전략별 시뮬레이션 비교 (<span id="res-turns">3</span>턴 뒤)</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="strat-table">
+                <thead>
+                  <tr>
+                    <th>전략명</th>
+                    <th>최종 골드</th>
+                    <th>최종 레벨</th>
+                    <th>목표 기물 획득 확률</th>
+                  </tr>
+                </thead>
+                <tbody id="strat-table-body">
+                  <!-- 전략 행 위치 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- [5] 전술적 조언 -->
+          <div class="report-card advice-card">
+            <div class="card-header">
+              <h3>[5] 🎯 전술적 조언 & 가이드</h3>
+            </div>
+            <p id="res-tactical-comment" class="advice-text">
+              💡 [초반 운영] 골드 여유가 있으나 보드가 약합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
