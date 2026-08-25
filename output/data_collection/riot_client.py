@@ -214,3 +214,14 @@ class RiotClient:
         if isinstance(data, list):
             return data
         return []
+
+    def get_match_detail(self, match_id: str) -> dict:
+        """Match-V1 매치 상세 정보를 조회."""
+        if not match_id or not isinstance(match_id, str):
+            raise ValueError(f"유효하지 않은 match_id입니다: {match_id!r}")
+
+        url = f"https://{self.routing}.api.riotgames.com/tft/match/v1/matches/{match_id}"
+        data = self.request(url)
+        if isinstance(data, dict):
+            return data
+        raise RuntimeError(f"매치 상세 데이터 형식 오류: {type(data)}")

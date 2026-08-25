@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""test_riot_client.py — RiotClient 및 매치 수집기 단위 테스트 (보안/Rate Limit/429 검증)."""
+"""test_riot_client.py — RiotClient 및 매치/스냅샷 수집기 단위 테스트 (보안/Rate Limit/429/형식 검증)."""
 import io
 import json
 import os
@@ -9,8 +9,14 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_ECONOMY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "economy")
+if _ECONOMY not in sys.path:
+    sys.path.insert(0, _ECONOMY)
+
 from riot_client import RiotClient
 from collect_match_ids import collect_match_ids
+from collect_match_details import parse_participant_snapshot, collect_match_details
+import board_power as bp
 
 DUMMY_KEY = "RGAPI-12345678-abcd-1234-abcd-1234567890ab"
 
@@ -77,11 +83,19 @@ def test_get_top_puuids_sorted_by_lp():
         assert puuids == ["p1", "p3"]
 
 
+def test_get_match_detail():
+    client = RiotClient(api_key=DUMMY_KEY, min_request_interval=0.01)
+    mock_detail = {"metadata": {"match_id": "KR_12345"}, "info": {"participants": []}}
+    with patch.object(client, "request", return_value=mock_detail):
+        res = client.get_match_detail("KR_12345")
+        assert res["metadata"]["match_id"] == "KR_12345"
+
+
+# ---------------------------------------------------------------- 매치 ID & 스냅샷 수집 검증
 def test_collect_match_ids_deduplication(tmp_path):
     """중복 매치 ID가 제거되어 저장되는지 검증."""
     client_mock = MagicMock()
     client_mock.get_top_puuids.return_value = ["puuid_1", "puuid_2"]
-    # puuid_1: [M1, M2, M3], puuid_2: [M2, M3, M4] (M2, M3 중복)
     client_mock.get_match_ids_by_puuid.side_effect = [
         ["KR_1001", "KR_1002", "KR_1003"],
         ["KR_1002", "KR_1003", "KR_1004"],
@@ -97,3 +111,107 @@ def test_collect_match_ids_deduplication(tmp_path):
         data = json.loads(out_json.read_text(encoding="utf-8"))
         assert data["total_matches"] == 4
         assert data["match_ids"] == ["KR_1001", "KR_1002", "KR_1003", "KR_1004"]
+
+
+def test_parse_participant_snapshot_and_board_power_compatibility():
+    """참가자 데이터가 board_power.py 입력 형식으로 정상 변환되고 에러 없이 파워가 계산되는지 검증."""
+    participant_data = {
+        "puuid": "test_puuid_123",
+        "riotIdGameName": "TFTMaster",
+        "riotIdTagline": "KR1",
+        "placement": 1,
+        "level": 9,
+        "gold_left": 45,
+        "last_round": 36,
+        "time_eliminated": 2100.5,
+        "total_damage_to_players": 140,
+        "units": [
+            {
+                "character_id": "TFT17_Jhin",
+                "tier": 2,
+                "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_LastWhisper", "TFT_Item_GiantSlayer"],
+            },
+            {
+                "character_id": "TFT17_Fiora",
+                "tier": 2,
+                "itemNames": ["TFT_Item_Bloodthirster"],
+            },
+            {
+                # 비상점 기물(타겟 더미 등)은 무시되어야 함
+                "character_id": "TFT_TargetDummy",
+                "tier": 1,
+                "itemNames": [],
+            },
+        ],
+    }
+
+    item_id_to_name = {
+        "TFT_Item_InfinityEdge": "무한의 대검",
+        "TFT_Item_LastWhisper": "최후의 속삭임",
+        "TFT_Item_GiantSlayer": "거인 학살자",
+        "TFT_Item_Bloodthirster": "피바라기",
+    }
+    champ_id_to_info = {
+        "TFT17_Jhin": {"id": "TFT17_Jhin", "name": "진", "cost": 5, "traits": ["암흑의 별", "말살자", "저격수"]},
+        "TFT17_Fiora": {"id": "TFT17_Fiora", "name": "피오라", "cost": 5, "traits": ["신성 결투가", "동물특공대", "습격자"]},
+    }
+    valid_items = {"무한의 대검", "최후의 속삭임", "거인 학살자", "피바라기"}
+
+    snap = parse_participant_snapshot(
+        participant_data, "KR_99999", item_id_to_name, champ_id_to_info, valid_items
+    )
+
+    assert snap["match_id"] == "KR_99999"
+    assert snap["final_placement"] == 1
+    assert snap["level"] == 9
+    assert snap["gold_left"] == 45
+    assert len(snap["board"]["units"]) == 2  # 타겟 더미 제외됨
+
+    # board_power 계산 호환성 직접 호출 검증
+    power_res = bp.calculate_board_power(snap["board"])
+    assert power_res["total_power"] > 0.0
+    assert "unit_power" in power_res["breakdown"]
+    assert "item_score" in power_res["breakdown"]
+    assert "synergy_bonus" in power_res["breakdown"]
+
+
+def test_collect_match_details_mock(tmp_path):
+    """collect_match_details E2E mock 테스트 및 JSONL 출력 검증."""
+    match_ids_file = tmp_path / "match_ids.json"
+    match_ids_file.write_text(json.dumps({"match_ids": ["KR_001"]}), encoding="utf-8")
+    out_jsonl = tmp_path / "match_snapshots.jsonl"
+
+    mock_match_detail = {
+        "metadata": {"match_id": "KR_001"},
+        "info": {
+            "participants": [
+                {
+                    "puuid": f"p_{i}",
+                    "placement": i,
+                    "level": 8,
+                    "gold_left": 10,
+                    "units": [{"character_id": "TFT17_Jhin", "tier": 1, "itemNames": []}],
+                }
+                for i in range(1, 9)
+            ]
+        },
+    }
+
+    client_mock = MagicMock()
+    client_mock.get_match_detail.return_value = mock_match_detail
+
+    with patch("collect_match_details.RiotClient", return_value=client_mock):
+        snapshots = collect_match_details(
+            match_ids_path=str(match_ids_file),
+            output_path=str(out_jsonl),
+        )
+
+        assert len(snapshots) == 8
+        assert all(1 <= s["final_placement"] <= 8 for s in snapshots)
+
+        # JSONL 파일 라인 수 및 형식 검증
+        lines = out_jsonl.read_text(encoding="utf-8").strip().split("\n")
+        assert len(lines) == 8
+        first_row = json.loads(lines[0])
+        assert first_row["final_placement"] == 1
+        assert first_row["match_id"] == "KR_001"
