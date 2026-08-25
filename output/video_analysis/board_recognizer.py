@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""TFT Set 17 보드 및 게임 상태 비전 인식기 (Board & Vision Recognizer).
+"""TFT Set 17 보드 및 게임 상태 비전 인식기 (Board & Vision Recognizer v2).
 
 주요 기능:
-1. 스테이지-라운드 OCR (Tesseract + 정규화)
+1. 스테이지-라운드 OCR (Tesseract + 다중 이진화)
 2. 골드 OCR (HSV 색상 마스킹 H:12~38, S:60~255, V:60~255)
-3. 벤치(9슬롯) 및 필드(헥스 그리드) 챔피언 템플릿 매칭 (OpenCV MatchTemplate)
-4. 성급(1/2/3성) 및 아이템 슬롯 인식
-5. 신뢰도 임계값 미달 시 명시적 'null/unknown' 처리 (임의 추측 금지)
+3. 벤치(9슬롯) 및 필드(28헥스) 챔피언 템플릿 매칭 (OpenCV MatchTemplate)
+4. 유닛별 아이템 슬롯(최대 3개) DDragon 아이템 템플릿 매칭
+5. 성급(1/2/3성) 별 개수 검출
+6. 신뢰도 임계값 미달 시 명시적 'null/unknown' 처리 (임의 추측 금지)
 """
 import json
 import os
@@ -56,54 +57,72 @@ class BoardRecognizer:
     def _load_templates(self):
         """Set 17 챔피언 및 아이템 템플릿 로드."""
         champ_img_dir = os.path.join(self.ddragon_dir, "img", "champion")
-        if not os.path.exists(self.set17_path) or not os.path.exists(champ_img_dir):
-            return
+        item_img_dir = os.path.join(self.ddragon_dir, "img", "item")
 
-        with open(self.set17_path, "r", encoding="utf-8") as f:
-            set17_data = json.load(f)
+        # 1. 챔피언 템플릿 로드
+        if os.path.exists(self.set17_path) and os.path.exists(champ_img_dir):
+            with open(self.set17_path, "r", encoding="utf-8") as f:
+                set17_data = json.load(f)
 
-        avail_imgs = os.listdir(champ_img_dir)
-        avail_lower = {f.lower(): f for f in avail_imgs}
+            avail_imgs = os.listdir(champ_img_dir)
+            avail_lower = {f.lower(): f for f in avail_imgs}
 
-        for c in set17_data.get("champions", []):
-            cid = c["id"]
-            cname = c["name"]
-            base_name = cid.split("_")[-1]
+            for c in set17_data.get("champions", []):
+                cid = c["id"]
+                cname = c["name"]
+                base_name = cid.split("_")[-1]
 
-            target_img = None
-            for cand in [
-                f"{cid}.png",
-                f"{base_name}.png",
-                f"TFT_{base_name}.png",
-                f"TFT15_{base_name}.png",
-                f"TFT16_{base_name}_splash_centered_0.png",
-            ]:
-                if cand.lower() in avail_lower:
-                    target_img = avail_lower[cand.lower()]
-                    break
-
-            if not target_img:
-                for f in avail_imgs:
-                    if base_name.lower() in f.lower():
-                        target_img = f
+                target_img = None
+                for cand in [
+                    f"{cid}.png",
+                    f"{base_name}.png",
+                    f"TFT_{base_name}.png",
+                    f"TFT15_{base_name}.png",
+                    f"TFT16_{base_name}_splash_centered_0.png",
+                ]:
+                    if cand.lower() in avail_lower:
+                        target_img = avail_lower[cand.lower()]
                         break
 
-            if not target_img and cname == "라아스트":
-                target_img = avail_lower.get("tft15_kayn.png") or avail_lower.get("kayn.png")
+                if not target_img:
+                    for f in avail_imgs:
+                        if base_name.lower() in f.lower():
+                            target_img = f
+                            break
 
-            if target_img:
-                tpath = os.path.join(champ_img_dir, target_img)
-                t_bgr = cv2.imread(tpath)
-                if t_bgr is not None:
-                    th, tw, _ = t_bgr.shape
-                    min_dim = min(th, tw)
-                    cy, cx = th // 2, tw // 2
-                    t_square = t_bgr[cy - min_dim // 2 : cy + min_dim // 2, cx - min_dim // 2 : cx + min_dim // 2]
-                    self.champion_templates[cname] = {
-                        "img": t_square,
-                        "cost": c["cost"],
-                        "file": target_img,
-                    }
+                if not target_img and cname == "라아스트":
+                    target_img = avail_lower.get("tft15_kayn.png") or avail_lower.get("kayn.png")
+
+                if target_img:
+                    tpath = os.path.join(champ_img_dir, target_img)
+                    t_bgr = cv2.imread(tpath)
+                    if t_bgr is not None:
+                        th, tw, _ = t_bgr.shape
+                        min_dim = min(th, tw)
+                        cy, cx = th // 2, tw // 2
+                        t_square = t_bgr[cy - min_dim // 2 : cy + min_dim // 2, cx - min_dim // 2 : cx + min_dim // 2]
+                        self.champion_templates[cname] = {
+                            "img": t_square,
+                            "cost": c["cost"],
+                            "file": target_img,
+                        }
+
+        # 2. 주요 아이템 템플릿 로드 (DDragon/img/item)
+        if os.path.exists(item_img_dir):
+            common_items = [
+                "BFSword", "RecurveBow", "NeedlesslyLargeRod", "TearOfTheGoddess",
+                "ChainVest", "NegatronCloak", "GiantsBelt", "SparringGloves", "Spatula",
+                "InfinityEdge", "Deathblade", "RabadonsDeathcap", "ArchangelsStaff",
+                "Bloodthirster", "GuinsoosRageblade", "SunfireCape", "WarmogsArmor",
+                "GargoyleStoneplate", "DragonClaw", "LastWhisper", "HandOfJustice",
+                "JeweledGauntlet", "SpearOfShojin", "StatikkShiv", "TitansResolve"
+            ]
+            for it_file in os.listdir(item_img_dir):
+                if it_file.endswith(".png"):
+                    it_base = os.path.splitext(it_file)[0]
+                    it_img = cv2.imread(os.path.join(item_img_dir, it_file))
+                    if it_img is not None:
+                        self.item_templates[it_base] = it_img
 
     def recognize_stage_round(self, frame: np.ndarray) -> Optional[str]:
         """스테이지-라운드 텍스트 인식 (예: '2-1', '2-5')."""
@@ -115,11 +134,18 @@ class BoardRecognizer:
         # 3배 보간 + 이진화
         resized = cv2.resize(crop, (0, 0), fx=3.0, fy=3.0, interpolation=cv2.INTER_CUBIC)
         gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
-        _, thresh = cv2.threshold(gray, 140, 255, cv2.THRESH_BINARY)
+        
+        # 1. Grayscale direct OCR
+        txt_raw = pytesseract.image_to_string(gray, config="--psm 7 -c tessedit_char_whitelist=0123456789-").strip()
+        matches = re.findall(r"\d-\d", txt_raw)
+        if matches:
+            return matches[0]
 
-        txt = pytesseract.image_to_string(thresh, config="--psm 7 -c tessedit_char_whitelist=0123456789-").strip()
-        matches = re.findall(r"\d-\d", txt)
-        return matches[0] if matches else None
+        # 2. Binary Thresholding OCR
+        _, thresh = cv2.threshold(gray, 140, 255, cv2.THRESH_BINARY)
+        txt_th = pytesseract.image_to_string(thresh, config="--psm 7 -c tessedit_char_whitelist=0123456789-").strip()
+        matches_th = re.findall(r"\d-\d", txt_th)
+        return matches_th[0] if matches_th else None
 
     def recognize_gold(self, frame: np.ndarray) -> Optional[int]:
         """HSV 색상 마스킹(노란색/흰색 분리)을 적용한 골드 수치 판독."""
@@ -170,6 +196,55 @@ class BoardRecognizer:
             return 2
         return 1
 
+    def match_unit_items(self, item_bar_roi: np.ndarray, min_confidence: float = 0.65) -> List[str]:
+        """유닛 하단/체력바 하단 3개 아이템 슬롯 인식.
+        
+        Args:
+            item_bar_roi: 유닛 체력바 하단의 아이템 표시 영역 (약 15x50px)
+            min_confidence: 아이템 매칭 최소 상관계수
+        Returns:
+            인식된 아이템 리스트 (예: ['B.F. 대검', '무한의 대검'])
+        """
+        if item_bar_roi.size == 0 or not self.item_templates:
+            return []
+
+        h, w, _ = item_bar_roi.shape
+        if w < 20 or h < 10:
+            return []
+
+        # 3개 슬롯으로 균등 분할
+        slot_w = w // 3
+        detected_items = []
+        bar_gray = cv2.cvtColor(item_bar_roi, cv2.COLOR_BGR2GRAY)
+
+        for s in range(3):
+            sx1 = s * slot_w
+            sx2 = sx1 + slot_w
+            slot_crop = bar_gray[:, sx1:sx2]
+            if slot_crop.shape[0] < 8 or slot_crop.shape[1] < 8:
+                continue
+
+            # 슬롯 내 분산이 너무 낮으면(단색/빈 슬롯) 스킵
+            if np.std(slot_crop) < 18.0:
+                continue
+
+            best_score = -1.0
+            best_item = None
+
+            for iname, i_img in list(self.item_templates.items())[:50]:  # 주요 아이템 50종 매칭
+                i_gray = cv2.cvtColor(i_img, cv2.COLOR_BGR2GRAY)
+                i_scaled = cv2.resize(i_gray, (slot_crop.shape[1], slot_crop.shape[0]), interpolation=cv2.INTER_AREA)
+                res = cv2.matchTemplate(slot_crop, i_scaled, cv2.TM_CCOEFF_NORMED)
+                _, max_v, _, _ = cv2.minMaxLoc(res)
+                if max_v > best_score:
+                    best_score = max_v
+                    best_item = iname
+
+            if best_score >= min_confidence and best_item:
+                detected_items.append(best_item)
+
+        return detected_items
+
     def match_slot_champion(
         self, slot_img: np.ndarray, min_confidence: float = 0.60
     ) -> Tuple[Optional[str], Optional[int], float]:
@@ -213,7 +288,7 @@ class BoardRecognizer:
 
         return None, None, float(max(0.0, best_score))
 
-    def recognize_board(self, frame: np.ndarray, min_confidence: float = 0.65) -> Dict[str, Any]:
+    def recognize_board(self, frame: np.ndarray, min_confidence: float = 0.62) -> Dict[str, Any]:
         """프레임 전체에서 보드 유닛, 벤치 유닛, 골드, 스테이지-라운드 종합 판독."""
         stage_round = self.recognize_stage_round(frame)
         gold = self.recognize_gold(frame)
@@ -234,6 +309,10 @@ class BoardRecognizer:
             overhead_crop = frame[max(0, bench_y1 - 25) : bench_y1, x1:x2]
             star = self.detect_star_level(overhead_crop) if cname else 1
 
+            # 아이템 바 인식
+            item_bar_crop = frame[bench_y2 - 15 : bench_y2, x1:x2]
+            items = self.match_unit_items(item_bar_crop) if cname else []
+
             if cname:
                 bench_units.append({
                     "slot": slot_idx,
@@ -241,7 +320,7 @@ class BoardRecognizer:
                     "champion": cname,
                     "cost": cost,
                     "star_level": star,
-                    "items": [],
+                    "items": items,
                     "confidence": round(conf, 3),
                 })
 
@@ -267,6 +346,9 @@ class BoardRecognizer:
                 overhead_crop = frame[max(0, ry1 - 25) : ry1, cx1:cx2]
                 star = self.detect_star_level(overhead_crop) if cname else 1
 
+                item_bar_crop = frame[ry2 - 15 : ry2, cx1:cx2]
+                items = self.match_unit_items(item_bar_crop) if cname else []
+
                 if cname:
                     field_units.append({
                         "row": r,
@@ -275,7 +357,7 @@ class BoardRecognizer:
                         "champion": cname,
                         "cost": cost,
                         "star_level": star,
-                        "items": [],
+                        "items": items,
                         "confidence": round(conf, 3),
                     })
 

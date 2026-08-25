@@ -85,11 +85,12 @@ def test_timeline_smoother_batch_step():
 
 
 def test_board_recognizer_templates_loaded():
-    """DDragon 챔피언 템플릿 로딩 검증."""
+    """DDragon 챔피언 및 아이템 템플릿 로딩 검증."""
     recognizer = BoardRecognizer()
     assert len(recognizer.champion_templates) >= 60
     assert "나서스" in recognizer.champion_templates
     assert "진" in recognizer.champion_templates
+    assert len(recognizer.item_templates) > 0
 
 
 def test_match_slot_champion_unknown_for_empty_slot():
@@ -108,3 +109,11 @@ def test_detect_star_level():
     recognizer = BoardRecognizer()
     empty_roi = np.zeros((20, 40, 3), dtype=np.uint8)
     assert recognizer.detect_star_level(empty_roi) == 1
+
+
+def test_match_unit_items():
+    """아이템 슬롯 인식 헬퍼 함수 검증."""
+    recognizer = BoardRecognizer()
+    empty_item_bar = np.zeros((15, 45, 3), dtype=np.uint8)
+    items = recognizer.match_unit_items(empty_item_bar)
+    assert items == []
