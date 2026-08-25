@@ -177,7 +177,7 @@ def test_parse_participant_snapshot_and_board_power_compatibility():
 
 
 def test_collect_match_details_mock_filters_pve_matches(tmp_path):
-    """collect_match_details가 PvE(1인 매치)를 걸러내고 8인 표준 매치만 수집하는지 검증."""
+    """collect_match_details가 PvE/비표준 매치를 걸러내고 8인 표준 랭크(1100) 매치만 수집하는지 검증."""
     match_ids_file = tmp_path / "match_ids.json"
     match_ids_file.write_text(json.dumps({"match_ids": ["KR_STD", "KR_PVE"]}), encoding="utf-8")
     out_jsonl = tmp_path / "match_snapshots.jsonl"
@@ -186,6 +186,7 @@ def test_collect_match_details_mock_filters_pve_matches(tmp_path):
         "metadata": {"match_id": "KR_STD"},
         "info": {
             "queueId": 1100,
+            "tft_set_number": 17,
             "tft_game_type": "standard",
             "participants": [
                 {
@@ -204,6 +205,7 @@ def test_collect_match_details_mock_filters_pve_matches(tmp_path):
         "metadata": {"match_id": "KR_PVE"},
         "info": {
             "queueId": 1220,
+            "tft_set_number": 17,
             "tft_game_type": "pve",
             "participants": [
                 {
@@ -224,6 +226,8 @@ def test_collect_match_details_mock_filters_pve_matches(tmp_path):
         snapshots = collect_match_details(
             match_ids_path=str(match_ids_file),
             output_path=str(out_jsonl),
+            target_queue_id=1100,
+            target_set_number=17,
         )
 
         assert len(snapshots) == 8  # KR_PVE는 건너뛰고 KR_STD 8명만 수집

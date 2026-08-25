@@ -4,7 +4,7 @@
 기능:
 1. /output/data/match_ids.json 에서 매치 ID 목록 로드
 2. Riot Match-V1 API로 매치 상세 정보(get_match_detail) 수집
-3. 8인 PvP 표준 매치 필터링 (PvE/토커의 시험 등 1인/비표준 모드 제외)
+3. 표준 솔로 랭크(queueId == 1100, Set 17, 8인 매치)만 선별 필터링
 4. 참가자별 최종 등수(final_placement), 레벨, 남은 골드, 보드 상태(board_power.py 입력 형식) 추출
 5. /output/data/match_snapshots.jsonl 에 JSON Lines 형식으로 저장
 6. Rate limit 및 429 지수 백오프 준수
@@ -132,9 +132,11 @@ def parse_participant_snapshot(
 def collect_match_details(
     match_ids_path: str = None,
     output_path: str = None,
+    target_queue_id: int = 1100,
+    target_set_number: int = 17,
     limit: int = None,
 ) -> list[dict]:
-    """수집된 매치 ID 목록의 상세 정보를 조회하고 참가자별 스냅샷을 JSONL로 저장."""
+    """수집된 매치 ID 목록의 상세 정보를 조회하고 표준 랭크 참가자 스냅샷을 JSONL로 저장."""
     if match_ids_path is None:
         match_ids_path = os.path.join(_DATA_DIR, "match_ids.json")
     if output_path is None:
@@ -151,7 +153,7 @@ def collect_match_details(
         match_ids = match_ids[:limit]
 
     total_matches = len(match_ids)
-    logger.info(f"총 {total_matches}개 매치의 상세 데이터 수집을 시작합니다...")
+    logger.info(f"총 {total_matches}개 매치의 상세 데이터 수집을 시작합니다 (목표 큐: {target_queue_id}, 시즌: {target_set_number})...")
 
     item_id_to_name, champ_id_to_info, valid_items = _load_mappings()
     client = RiotClient(min_request_interval=1.25)
@@ -160,7 +162,7 @@ def collect_match_details(
 
     snapshots = []
     success_count = 0
-    skipped_non_8_count = 0
+    skipped_non_target_count = 0
     fail_count = 0
 
     with open(output_path, "w", encoding="utf-8") as out_f:
@@ -172,13 +174,18 @@ def collect_match_details(
                 participants = info.get("participants", [])
                 gtype = info.get("tft_game_type")
                 qid = info.get("queueId") or info.get("queue_id")
+                set_num = info.get("tft_set_number")
 
-                # 8인 표준 매치만 필터링 (PvE 1인 모드, 미달 매치 제외)
-                if len(participants) != 8 or gtype == "pve" or qid == 1220:
-                    logger.warning(
-                        f"  -> 비표준 매치 건너뜀 (참가자 {len(participants)}명, queueId={qid}, type={gtype}): {mid}"
+                # 표준 랭크(1100), 목표 시즌(17), 8인 매치 필터링
+                if (
+                    len(participants) != 8
+                    or (target_queue_id is not None and qid != target_queue_id)
+                    or (target_set_number is not None and set_num != target_set_number)
+                ):
+                    logger.info(
+                        f"  -> 비표준/비대상 모드 건너뜀 (참가자 {len(participants)}명, queueId={qid}, set={set_num}, type={gtype}): {mid}"
                     )
-                    skipped_non_8_count += 1
+                    skipped_non_target_count += 1
                     continue
 
                 for p in participants:
@@ -195,10 +202,9 @@ def collect_match_details(
                 logger.warning(f"  -> 매치 {mid} 수집 실패 건너뜀: {e}")
                 fail_count += 1
 
-    total_skipped = skipped_non_8_count + fail_count
     logger.info(
-        f"수집 완료! 8인 표준 성공 매치: {success_count}/{total_matches}, "
-        f"비표준 모드 제외: {skipped_non_8_count}개, 에러 실패: {fail_count}개, "
+        f"수집 완료! 표준 랭크 성공 매치: {success_count}/{total_matches}, "
+        f"비대상 모드 제외: {skipped_non_target_count}개, 에러 실패: {fail_count}개, "
         f"총 유효 스냅샷: {len(snapshots)}개"
     )
 
@@ -208,7 +214,7 @@ def collect_match_details(
 if __name__ == "__main__":
     snapshots = collect_match_details()
     print("\n" + "=" * 60)
-    print(f"총 수집된 스냅샷 레코드 수: {len(snapshots)}")
+    print(f"총 수집된 표준 랭크 스냅샷 레코드 수: {len(snapshots)}")
 
     # 1. 1~8등 전수 검증
     invalid_placements = [s for s in snapshots if not (1 <= s.get("final_placement", 0) <= 8)]
