@@ -2,7 +2,10 @@ __pycache__/
 *.pyc
 .env
 .env.*
-output/data/
+output/data/*.jsonl
+output/data/*.tmp
+!output/data/collection_progress.json
+!output/data/match_ids.json
 
 # ── 벤더 업스트림 레포 (대용량·재클론 가능 → 이 레포에 커밋하지 않음) ─────────
 # 아래 두 디렉토리는 각각 독립 git 레포(미러)이며, 공개 원격지에서 아래 커밋으로

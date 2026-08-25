@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""TFT 최상위권 랭커 기반 매치 ID 수집 스크립트.
+"""TFT 최상위권(챌린저/그랜드마스터/마스터) 랭커 기반 매치 ID 수집 및 병합 스크립트.
 
-작업 흐름:
-1. KR 챌린저/그랜드마스터 리그의 상위 랭커 PUUID 목록 수집 (League-V1)
-2. 각 PUUID별 최근 매치 ID 목록 수집 (Match-V1 by-puuid)
-3. Rate limit 준수 (1.25s 간격 및 429 지수 백오프)
-4. 중복 제거 후 /output/data/match_ids.json 저장 (100개 이상)
+기능:
+1. 챌린저 + 그랜드마스터 + 마스터 리그의 상위 랭커 PUUID 수집
+2. 각 PUUID별 최근 매치 ID 수집 (count=30)
+3. 기존 /output/data/match_ids.json 과 병합(중복 제거 및 증분 저장)
+4. Rate limit 준수 (1.25s 간격 및 429 지수 백오프)
 """
 import json
 import logging
@@ -30,48 +30,68 @@ if not logger.handlers:
 
 
 def collect_match_ids(
-    target_count: int = 100,
+    target_count: int = 750,
     region: str = "kr",
     routing: str = "asia",
+    matches_per_puuid: int = 30,
     output_path: str = None,
 ) -> list[str]:
-    """상위 랭커들의 매치 ID를 수집하여 중복 제거 후 저장.
+    """상위 랭커들의 매치 ID를 수집하여 기존 데이터와 병합/중복 제거 후 저장.
 
     Args:
-        target_count: 목표 고유 매치 ID 수 (기본 100개 이상)
+        target_count: 목표 고유 매치 ID 수 (기본 750개)
         region: 리그 지역 코드 (기본 'kr')
         routing: 매치 라우팅 지역 코드 (기본 'asia')
+        matches_per_puuid: PUUID당 조회할 매치 수
         output_path: 저장할 JSON 파일 경로
 
     Returns:
-        고유 매치 ID 리스트
+        병합된 고유 매치 ID 리스트
     """
     if output_path is None:
         os.makedirs(_DATA_DIR, exist_ok=True)
         output_path = os.path.join(_DATA_DIR, "match_ids.json")
 
-    client = RiotClient(region=region, routing=routing, min_request_interval=1.25)
-
-    # 1. 챌린저 상위 랭커 PUUID 수집
-    puuids = client.get_top_puuids(tier="challenger", limit=30)
-    if len(puuids) < 15:
-        # 보충용 그랜드마스터
-        gm_puuids = client.get_top_puuids(tier="grandmaster", limit=20)
-        puuids.extend(gm_puuids)
-
-    logger.info(f"총 {len(puuids)}명의 상위 랭커로부터 매치 수집을 시작합니다 (목표: {target_count}개)...")
-
+    # 기존 수집된 매치 ID 로드
     unique_match_ids = []
     seen_matches = set()
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+                for mid in existing_data.get("match_ids", []):
+                    if mid not in seen_matches:
+                        seen_matches.add(mid)
+                        unique_match_ids.append(mid)
+            logger.info(f"기존 저장된 매치 ID {len(unique_match_ids)}개를 로드했습니다.")
+        except Exception as e:
+            logger.warning(f"기존 매치 ID 로드 실패, 새로 수집합니다: {e}")
 
-    for idx, puuid in enumerate(puuids, start=1):
+    if len(unique_match_ids) >= target_count:
+        logger.info(f"이미 목표 수치({target_count}개) 이상의 매치 ID({len(unique_match_ids)}개)가 확보되어 있습니다.")
+        return unique_match_ids
+
+    client = RiotClient(region=region, routing=routing, min_request_interval=1.25)
+
+    # 1. 챌린저, 그랜드마스터, 마스터 순차 수집
+    all_puuids = []
+    for tier, limit_count in [("challenger", 50), ("grandmaster", 50), ("master", 50)]:
+        try:
+            t_puuids = client.get_top_puuids(tier=tier, limit=limit_count)
+            all_puuids.extend(t_puuids)
+        except Exception as e:
+            logger.warning(f"[{tier}] 랭커 목록 조회 실패: {e}")
+
+    logger.info(f"총 {len(all_puuids)}명의 상위 랭커 풀을 확보했습니다 (목표 매치: {target_count}개)...")
+
+    for idx, puuid in enumerate(all_puuids, start=1):
         if len(unique_match_ids) >= target_count:
-            logger.info(f"목표 수치({target_count}개) 달성 완료!")
+            logger.info(f"목표 수치({target_count}개) 달성 완료! (현재 누적 {len(unique_match_ids)}개)")
             break
 
-        logger.info(f"[{idx}/{len(puuids)}] PUUID({puuid[:8]}...) 최근 매치 조회 중...")
+        logger.info(f"[{idx}/{len(all_puuids)}] PUUID({puuid[:8]}...) 최근 매치 조회 중...")
         try:
-            m_ids = client.get_match_ids_by_puuid(puuid, count=20)
+            m_ids = client.get_match_ids_by_puuid(puuid, count=matches_per_puuid)
         except Exception as e:
             logger.warning(f"매치 조회 중 오류 건너뜀: {e}")
             continue
@@ -83,11 +103,21 @@ def collect_match_ids(
                 unique_match_ids.append(mid)
                 new_count += 1
 
-        logger.info(f"  -> 신규 매치 {new_count}개 추가 (현재 누적 고유 매치: {len(unique_match_ids)}개)")
+        logger.info(f"  -> 신규 매치 {new_count}개 추가 (누적 고유 매치: {len(unique_match_ids)}개)")
 
-    logger.info(f"총 {len(unique_match_ids)}개의 고유 매치 ID 수집 완료.")
+        # 점진적 저장 (중간 중단 대비)
+        if new_count > 0 and idx % 5 == 0:
+            save_data = {
+                "region": region,
+                "routing": routing,
+                "total_matches": len(unique_match_ids),
+                "collected_at": datetime.now().isoformat(),
+                "match_ids": unique_match_ids,
+            }
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(save_data, f, ensure_ascii=False, indent=2)
 
-    # 저장 데이터 구조화
+    # 최종 저장
     save_data = {
         "region": region,
         "routing": routing,
@@ -95,19 +125,18 @@ def collect_match_ids(
         "collected_at": datetime.now().isoformat(),
         "match_ids": unique_match_ids,
     }
-
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(save_data, f, ensure_ascii=False, indent=2)
 
-    logger.info(f"매치 ID 파일 저장 완료: {output_path}")
+    logger.info(f"매치 ID 파일 저장 완료 (총 {len(unique_match_ids)}개): {output_path}")
     return unique_match_ids
 
 
 if __name__ == "__main__":
-    matches = collect_match_ids(target_count=100)
+    matches = collect_match_ids(target_count=750)
     print("\n" + "=" * 50)
-    print(f"수집된 총 고유 매치 ID 수: {len(matches)}")
+    print(f"수집/병합된 총 고유 매치 ID 수: {len(matches)}")
     print("샘플 매치 ID (최대 5개):")
     for m in matches[:5]:
         print(f"  - {m}")

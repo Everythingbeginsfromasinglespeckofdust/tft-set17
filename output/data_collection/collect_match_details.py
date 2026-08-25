@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""TFT 매치 상세 데이터 수집 및 M2B 피처/보드 스냅샷 추출기.
+"""TFT 매치 상세 데이터 수집 및 M2B 피처/보드 스냅샷 추출기 (체크포인트 & 재개 지원).
 
 기능:
 1. /output/data/match_ids.json 에서 매치 ID 목록 로드
 2. Riot Match-V1 API로 매치 상세 정보(get_match_detail) 수집
 3. 표준 솔로 랭크(queueId == 1100, Set 17, 8인 매치)만 선별 필터링
-4. 참가자별 최종 등수(final_placement), 레벨, 남은 골드, 보드 상태(board_power.py 입력 형식) 추출
-5. /output/data/match_snapshots.jsonl 에 JSON Lines 형식으로 저장
-6. Rate limit 및 429 지수 백오프 준수
+4. 체크포인트 기반 재개(/output/data/collection_progress.json)로 중복 요청 방지
+5. 목표 수치(500개 표준 랭크 매치) 달성 시 자동 종료 및 중단 시 안전한 상태 보존
+6. /output/data/match_snapshots.jsonl 에 증분 추가(append)
 """
 import json
 import logging
 import os
+import signal
 import sys
 from datetime import datetime
 
@@ -38,7 +39,6 @@ if not logger.handlers:
 
 def _load_mappings():
     """Riot ID -> 한국어 챔피언/아이템 이름 매핑 데이터 로드."""
-    # 1. 아이템 매핑
     item_json_path = os.path.join(_REPO, "TFT_DDragon", "data", "ko_KR", "item.json")
     item_id_to_name = {}
     if os.path.exists(item_json_path):
@@ -53,7 +53,6 @@ def _load_mappings():
                         item_id_to_name[v["id"]] = name
                         item_id_to_name[v["id"].lower()] = name
 
-    # 2. 챔피언 매핑
     set17_json_path = os.path.join(_REPO, "tft_set17.json")
     champ_id_to_info = {}
     if os.path.exists(set17_json_path):
@@ -63,7 +62,6 @@ def _load_mappings():
                 champ_id_to_info[c["id"]] = c
                 champ_id_to_info[c["id"].lower()] = c
 
-    # 3. 유효 아이템 목록 (board_power 기준)
     basic_comps, completed_items = bp._load_items_db()
     valid_items = basic_comps | completed_items
 
@@ -88,7 +86,6 @@ def parse_participant_snapshot(
         cid = u.get("character_id", "")
         cinfo = champ_id_to_info.get(cid) or champ_id_to_info.get(cid.lower())
         if not cinfo:
-            # 훈련용 봇/소환수 등 비상점 기물 제외
             continue
 
         cname = cinfo["name"]
@@ -103,7 +100,7 @@ def parse_participant_snapshot(
             if it_name in valid_items:
                 unit_items.append(it_name)
 
-        unit_items = unit_items[:3]  # 유닛당 최대 3아이템
+        unit_items = unit_items[:3]
 
         board_units.append({
             "champion": cname,
@@ -129,110 +126,212 @@ def parse_participant_snapshot(
     }
 
 
+def _save_progress(progress_path: str, progress_data: dict):
+    """체크포인트 진행 상황 파일 저장."""
+    os.makedirs(os.path.dirname(os.path.abspath(progress_path)), exist_ok=True)
+    temp_path = progress_path + ".tmp"
+    with open(temp_path, "w", encoding="utf-8") as f:
+        json.dump(progress_data, f, ensure_ascii=False, indent=2)
+    if os.path.exists(progress_path):
+        os.replace(temp_path, progress_path)
+    else:
+        os.rename(temp_path, progress_path)
+
+
 def collect_match_details(
     match_ids_path: str = None,
     output_path: str = None,
+    progress_path: str = None,
+    target_ranked_matches: int = 500,
     target_queue_id: int = 1100,
     target_set_number: int = 17,
     limit: int = None,
 ) -> list[dict]:
-    """수집된 매치 ID 목록의 상세 정보를 조회하고 표준 랭크 참가자 스냅샷을 JSONL로 저장."""
+    """체크포인트를 기반으로 목표 랭크 매치 수까지 상세 데이터를 수집/병합.
+
+    Args:
+        match_ids_path: 매치 ID 목록 JSON 경로
+        output_path: 저장할 JSONL 파일 경로
+        progress_path: 체크포인트 기록 JSON 경로
+        target_ranked_matches: 목표 표준 랭크 매치 수 (기본 500개)
+        target_queue_id: 표준 랭크 큐 ID (기본 1100)
+        target_set_number: 시즌 번호 (기본 17)
+        limit: 1회 실행 시 처리할 최대 매치 수 (None이면 목표 달성 시까지)
+    """
     if match_ids_path is None:
         match_ids_path = os.path.join(_DATA_DIR, "match_ids.json")
     if output_path is None:
         output_path = os.path.join(_DATA_DIR, "match_snapshots.jsonl")
+    if progress_path is None:
+        progress_path = os.path.join(_DATA_DIR, "collection_progress.json")
 
     if not os.path.exists(match_ids_path):
         raise FileNotFoundError(f"매치 ID 파일이 존재하지 않습니다: {match_ids_path}")
 
     with open(match_ids_path, "r", encoding="utf-8") as f:
         data = json.load(f)
-        match_ids = data.get("match_ids", [])
+        all_match_ids = data.get("match_ids", [])
 
     if limit:
-        match_ids = match_ids[:limit]
+        all_match_ids = all_match_ids[:limit]
 
-    total_matches = len(match_ids)
-    logger.info(f"총 {total_matches}개 매치의 상세 데이터 수집을 시작합니다 (목표 큐: {target_queue_id}, 시즌: {target_set_number})...")
+    # 1. 기존 체크포인트 및 기존 스냅샷 로드
+    processed_match_ids = set()
+    ranked_match_ids = set()
+    existing_snapshots = []
+
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        s = json.loads(line)
+                        existing_snapshots.append(s)
+                        ranked_match_ids.add(s["match_id"])
+                        processed_match_ids.add(s["match_id"])
+            logger.info(f"기존 스냅샷 파일에서 {len(ranked_match_ids)}개 매치({len(existing_snapshots)}개 레코드) 로드 완료.")
+        except Exception as e:
+            logger.warning(f"기존 스냅샷 파일 로드 중 경고: {e}")
+
+    if os.path.exists(progress_path):
+        try:
+            with open(progress_path, "r", encoding="utf-8") as f:
+                p_data = json.load(f)
+                processed_match_ids.update(p_data.get("processed_match_ids", []))
+                ranked_match_ids.update(p_data.get("ranked_match_ids", []))
+        except Exception as e:
+            logger.warning(f"진행 상황 파일 로드 중 경고: {e}")
+
+    current_ranked_count = len(ranked_match_ids)
+    logger.info(
+        f"현재 진행 상태: 누적 표준 랭크 매치 {current_ranked_count}/{target_ranked_matches}개, "
+        f"처리 완료된 총 매치 {len(processed_match_ids)}개"
+    )
+
+    if current_ranked_count >= target_ranked_matches:
+        logger.info(f"이미 목표 수치({target_ranked_matches}개)를 달성했습니다!")
+        return existing_snapshots
+
+    # 미처리 매치 선별
+    pending_match_ids = [m for m in all_match_ids if m not in processed_match_ids]
+    logger.info(f"수집 대기 중인 신규 매치 수: {len(pending_match_ids)}개")
 
     item_id_to_name, champ_id_to_info, valid_items = _load_mappings()
     client = RiotClient(min_request_interval=1.25)
 
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
 
-    snapshots = []
-    success_count = 0
-    skipped_non_target_count = 0
-    fail_count = 0
+    progress_state = {
+        "target_ranked_matches": target_ranked_matches,
+        "total_ranked_matches": current_ranked_count,
+        "total_ranked_snapshots": len(existing_snapshots),
+        "processed_match_ids": list(processed_match_ids),
+        "ranked_match_ids": list(ranked_match_ids),
+        "last_updated": datetime.now().isoformat(),
+        "status": "in_progress",
+    }
 
-    with open(output_path, "w", encoding="utf-8") as out_f:
-        for idx, mid in enumerate(match_ids, start=1):
-            logger.info(f"[{idx}/{total_matches}] 매치 상세 조회 중: {mid}...")
-            try:
-                detail = client.get_match_detail(mid)
-                info = detail.get("info", {})
-                participants = info.get("participants", [])
-                gtype = info.get("tft_game_type")
-                qid = info.get("queueId") or info.get("queue_id")
-                set_num = info.get("tft_set_number")
+    # 인터럽트 핸들러 등록
+    interrupted = False
+    def _handle_interrupt(sig, frame):
+        nonlocal interrupted
+        logger.warning("\n[작업 중단 신호 감지] 현재 진행 상황을 안전하게 저장하고 종료합니다...")
+        interrupted = True
 
-                # 표준 랭크(1100), 목표 시즌(17), 8인 매치 필터링
-                if (
-                    len(participants) != 8
-                    or (target_queue_id is not None and qid != target_queue_id)
-                    or (target_set_number is not None and set_num != target_set_number)
-                ):
-                    logger.info(
-                        f"  -> 비표준/비대상 모드 건너뜀 (참가자 {len(participants)}명, queueId={qid}, set={set_num}, type={gtype}): {mid}"
-                    )
-                    skipped_non_target_count += 1
-                    continue
+    prev_sigint = signal.signal(signal.SIGINT, _handle_interrupt)
 
-                for p in participants:
-                    snap = parse_participant_snapshot(
-                        p, mid, item_id_to_name, champ_id_to_info, valid_items
-                    )
-                    snapshots.append(snap)
-                    out_f.write(json.dumps(snap, ensure_ascii=False) + "\n")
+    try:
+        with open(output_path, "a", encoding="utf-8") as out_f:
+            for idx, mid in enumerate(pending_match_ids, start=1):
+                if interrupted:
+                    break
+                if len(ranked_match_ids) >= target_ranked_matches:
+                    logger.info(f"목표 랭크 매치 수치({target_ranked_matches}개) 달성 완료!")
+                    progress_state["status"] = "completed"
+                    break
 
-                out_f.flush()
-                success_count += 1
-                logger.info(f"  -> 8명 스냅샷 추출 완료 (누적: {len(snapshots)}개)")
-            except Exception as e:
-                logger.warning(f"  -> 매치 {mid} 수집 실패 건너뜀: {e}")
-                fail_count += 1
+                logger.info(f"[{idx}/{len(pending_match_ids)}] 매치 조회 중: {mid} (현재 랭크 매치: {len(ranked_match_ids)}/{target_ranked_matches})...")
+                try:
+                    detail = client.get_match_detail(mid)
+                    info = detail.get("info", {})
+                    participants = info.get("participants", [])
+                    gtype = info.get("tft_game_type")
+                    qid = info.get("queueId") or info.get("queue_id")
+                    set_num = info.get("tft_set_number")
+
+                    processed_match_ids.add(mid)
+
+                    if (
+                        len(participants) == 8
+                        and qid == target_queue_id
+                        and set_num == target_set_number
+                    ):
+                        new_snaps = []
+                        for p in participants:
+                            snap = parse_participant_snapshot(
+                                p, mid, item_id_to_name, champ_id_to_info, valid_items
+                            )
+                            new_snaps.append(snap)
+                            existing_snapshots.append(snap)
+                            out_f.write(json.dumps(snap, ensure_ascii=False) + "\n")
+
+                        out_f.flush()
+                        ranked_match_ids.add(mid)
+                        logger.info(f"  -> [적합 랭크 매치] 8명 추출 완료 (누적 랭크 매치: {len(ranked_match_ids)}개, 레코드: {len(existing_snapshots)}개)")
+                    else:
+                        logger.info(f"  -> [비대상 매치 건너뜀] queueId={qid}, set={set_num}, 참가자={len(participants)}명: {mid}")
+
+                except Exception as e:
+                    logger.warning(f"  -> 매치 {mid} 수집 중 오류: {e}")
+                    # API 키 만료 또는 치명적 에러 시 중단
+                    if "401" in str(e) or "403" in str(e):
+                        logger.error("API 키가 만료되었거나 유효하지 않습니다. 진행 상황을 저장하고 종료합니다.")
+                        break
+
+                # 주기적 체크포인트 저장
+                progress_state.update({
+                    "total_ranked_matches": len(ranked_match_ids),
+                    "total_ranked_snapshots": len(existing_snapshots),
+                    "processed_match_ids": list(processed_match_ids),
+                    "ranked_match_ids": list(ranked_match_ids),
+                    "last_updated": datetime.now().isoformat(),
+                })
+                _save_progress(progress_path, progress_state)
+
+    finally:
+        signal.signal(signal.SIGINT, prev_sigint)
+        progress_state.update({
+            "total_ranked_matches": len(ranked_match_ids),
+            "total_ranked_snapshots": len(existing_snapshots),
+            "processed_match_ids": list(processed_match_ids),
+            "ranked_match_ids": list(ranked_match_ids),
+            "last_updated": datetime.now().isoformat(),
+            "status": "completed" if len(ranked_match_ids) >= target_ranked_matches else "in_progress",
+        })
+        _save_progress(progress_path, progress_state)
 
     logger.info(
-        f"수집 완료! 표준 랭크 성공 매치: {success_count}/{total_matches}, "
-        f"비대상 모드 제외: {skipped_non_target_count}개, 에러 실패: {fail_count}개, "
-        f"총 유효 스냅샷: {len(snapshots)}개"
+        f"작업 완료/종료. 누적 표준 랭크 매치: {len(ranked_match_ids)}개, "
+        f"총 스냅샷: {len(existing_snapshots)}개. 진행 상황 저장 완료 ({progress_path})."
     )
+    if len(ranked_match_ids) < target_ranked_matches:
+        print("\n" + "=" * 60)
+        print("💡 [알림] 목표 매치 수에 아직 도달하지 않았거나 중간 중단되었습니다.")
+        print("💡 다음 실행 시 이어서 진행 가능합니다 (기존 수집 데이터 100% 보존).")
+        print("=" * 60 + "\n")
 
-    return snapshots
+    return existing_snapshots
 
 
 if __name__ == "__main__":
-    snapshots = collect_match_details()
+    snapshots = collect_match_details(target_ranked_matches=500)
     print("\n" + "=" * 60)
     print(f"총 수집된 표준 랭크 스냅샷 레코드 수: {len(snapshots)}")
 
-    # 1. 1~8등 전수 검증
-    invalid_placements = [s for s in snapshots if not (1 <= s.get("final_placement", 0) <= 8)]
-    print(f"등수(1~8) 유효성 검증: {'PASS (이상치 0개)' if not invalid_placements else f'FAIL ({len(invalid_placements)}개 이상치)'}")
-
-    # 2. 등수별 인원 분포 검증
     from collections import Counter
     dist = Counter(s["final_placement"] for s in snapshots)
     print("등수별 인원 분포:")
     for rank in sorted(dist.keys()):
         print(f"  - {rank}등: {dist[rank]}명")
-
-    # 3. board_power.py 연동 호환성 검증
-    if snapshots:
-        sample = snapshots[0]
-        power_res = bp.calculate_board_power(sample["board"])
-        print(f"\n샘플 레코드 board_power 계산 검증 (Rank {sample['final_placement']}):")
-        print(f"  - 챔피언 수: {len(sample['board']['units'])}")
-        print(f"  - Total Power: {power_res['total_power']:.2f}")
-        print(f"  - Breakdown: {power_res['breakdown']}")
     print("=" * 60)

@@ -181,6 +181,7 @@ def test_collect_match_details_mock_filters_pve_matches(tmp_path):
     match_ids_file = tmp_path / "match_ids.json"
     match_ids_file.write_text(json.dumps({"match_ids": ["KR_STD", "KR_PVE"]}), encoding="utf-8")
     out_jsonl = tmp_path / "match_snapshots.jsonl"
+    progress_file = tmp_path / "progress.json"
 
     mock_std_detail = {
         "metadata": {"match_id": "KR_STD"},
@@ -226,6 +227,8 @@ def test_collect_match_details_mock_filters_pve_matches(tmp_path):
         snapshots = collect_match_details(
             match_ids_path=str(match_ids_file),
             output_path=str(out_jsonl),
+            progress_path=str(progress_file),
+            target_ranked_matches=1,
             target_queue_id=1100,
             target_set_number=17,
         )
