@@ -1,0 +1,76 @@
+timestamp_sec,frame,slot_index,coordinates,gt_champion,gt_cost,pred_champion,pred_cost,detected_color_cost,is_cost_consistent,confidence,outcome,cost_correct,crop_file
+120,shop_frame_0120s.jpg,1,"[575:713, 475:587]",뽀삐,1,EMPTY,,,False,0.0,FN,False,card_1_shop_frame_0120s.jpg
+120,shop_frame_0120s.jpg,2,"[575:713, 591:703]",나서스,1,EMPTY,3,3,False,0.0972,FN,False,card_2_shop_frame_0120s.jpg
+120,shop_frame_0120s.jpg,3,"[575:713, 707:819]",리산드라,1,EMPTY,,,False,0.0,FN,False,card_3_shop_frame_0120s.jpg
+120,shop_frame_0120s.jpg,4,"[575:713, 823:935]",밀리오,2,EMPTY,,,False,0.0,FN,False,card_4_shop_frame_0120s.jpg
+120,shop_frame_0120s.jpg,5,"[575:713, 939:1051]",초가스,1,EMPTY,,,False,0.0,FN,False,card_5_shop_frame_0120s.jpg
+180,shop_frame_0180s.jpg,1,"[575:713, 475:587]",렉사이,1,EMPTY,2,2,False,0.4382,FN,False,card_1_shop_frame_0180s.jpg
+180,shop_frame_0180s.jpg,2,"[575:713, 591:703]",밀리오,2,EMPTY,2,2,False,0.4764,FN,True,card_2_shop_frame_0180s.jpg
+180,shop_frame_0180s.jpg,3,"[575:713, 707:819]",조이,2,EMPTY,1,1,False,0.5207,FN,False,card_3_shop_frame_0180s.jpg
+180,shop_frame_0180s.jpg,4,"[575:713, 823:935]",이즈리얼,1,EMPTY,3,3,False,0.235,FN,False,card_4_shop_frame_0180s.jpg
+180,shop_frame_0180s.jpg,5,"[575:713, 939:1051]",뽀삐,1,EMPTY,2,2,False,0.3173,FN,False,card_5_shop_frame_0180s.jpg
+240,shop_frame_0240s.jpg,1,"[575:713, 475:587]",밀리오,2,EMPTY,3,3,False,0.486,FN,False,card_1_shop_frame_0240s.jpg
+240,shop_frame_0240s.jpg,2,"[575:713, 591:703]",조이,2,미스 포츈,3,3,True,0.5933,FP,False,card_2_shop_frame_0240s.jpg
+240,shop_frame_0240s.jpg,3,"[575:713, 707:819]",나르,2,EMPTY,,,False,0.0,FN,False,card_3_shop_frame_0240s.jpg
+240,shop_frame_0240s.jpg,4,"[575:713, 823:935]",미스 포츈,3,나서스,1,2,False,0.588,FP,False,card_4_shop_frame_0240s.jpg
+240,shop_frame_0240s.jpg,5,"[575:713, 939:1051]",렉사이,1,EMPTY,2,2,False,0.2421,FN,False,card_5_shop_frame_0240s.jpg
+300,shop_frame_0300s.jpg,1,"[575:713, 475:587]",사미라,3,EMPTY,1,1,False,0.4185,FN,False,card_1_shop_frame_0300s.jpg
+300,shop_frame_0300s.jpg,2,"[575:713, 591:703]",그라가스,2,EMPTY,1,1,False,0.4475,FN,False,card_2_shop_frame_0300s.jpg
+300,shop_frame_0300s.jpg,3,"[575:713, 707:819]",판테온,2,EMPTY,3,3,False,0.2902,FN,False,card_3_shop_frame_0300s.jpg
+300,shop_frame_0300s.jpg,4,"[575:713, 823:935]",룰루,3,EMPTY,1,1,False,0.3445,FN,False,card_4_shop_frame_0300s.jpg
+300,shop_frame_0300s.jpg,5,"[575:713, 939:1051]",아칼리,2,EMPTY,1,1,False,0.2103,FN,False,card_5_shop_frame_0300s.jpg
+360,shop_frame_0360s.jpg,1,"[575:713, 475:587]",밀리오,2,EMPTY,2,2,False,0.5404,FN,True,card_1_shop_frame_0360s.jpg
+360,shop_frame_0360s.jpg,2,"[575:713, 591:703]",미스 포츈,3,빅토르,3,1,False,0.5586,FP,True,card_2_shop_frame_0360s.jpg
+360,shop_frame_0360s.jpg,3,"[575:713, 707:819]",소나,5,EMPTY,5,5,False,0.4997,FN,True,card_3_shop_frame_0360s.jpg
+360,shop_frame_0360s.jpg,4,"[575:713, 823:935]",카이사,3,일라오이,3,3,True,0.5542,FP,True,card_4_shop_frame_0360s.jpg
+360,shop_frame_0360s.jpg,5,"[575:713, 939:1051]",나르,2,EMPTY,,,False,0.0,FN,False,card_5_shop_frame_0360s.jpg
+450,shop_frame_0450s.jpg,1,"[575:713, 475:587]",벨베스,2,EMPTY,3,3,False,0.4643,FN,False,card_1_shop_frame_0450s.jpg
+450,shop_frame_0450s.jpg,2,"[575:713, 591:703]",마오카이,3,EMPTY,2,2,False,0.5305,FN,False,card_2_shop_frame_0450s.jpg
+450,shop_frame_0450s.jpg,3,"[575:713, 707:819]",리븐,4,EMPTY,2,2,False,0.2304,FN,False,card_3_shop_frame_0450s.jpg
+450,shop_frame_0450s.jpg,4,"[575:713, 823:935]",빅토르,3,EMPTY,2,2,False,0.3469,FN,False,card_4_shop_frame_0450s.jpg
+450,shop_frame_0450s.jpg,5,"[575:713, 939:1051]",잭스,2,EMPTY,3,3,False,0.2143,FN,False,card_5_shop_frame_0450s.jpg
+540,shop_frame_0540s.jpg,1,"[575:713, 475:587]",일라오이,3,EMPTY,2,2,False,0.4346,FN,False,card_1_shop_frame_0540s.jpg
+540,shop_frame_0540s.jpg,2,"[575:713, 591:703]",미스 포츈,3,미스 포츈,3,2,False,0.4633,TP,True,card_2_shop_frame_0540s.jpg
+540,shop_frame_0540s.jpg,3,"[575:713, 707:819]",사미라,3,EMPTY,1,1,False,0.5093,FN,False,card_3_shop_frame_0540s.jpg
+540,shop_frame_0540s.jpg,4,"[575:713, 823:935]",벨베스,2,EMPTY,3,3,False,0.2317,FN,False,card_4_shop_frame_0540s.jpg
+540,shop_frame_0540s.jpg,5,"[575:713, 939:1051]",조이,2,EMPTY,3,3,False,0.3008,FN,False,card_5_shop_frame_0540s.jpg
+600,shop_frame_0600s.jpg,1,"[575:713, 475:587]",미스 포츈,3,EMPTY,2,2,False,0.3465,FN,False,card_1_shop_frame_0600s.jpg
+600,shop_frame_0600s.jpg,2,"[575:713, 591:703]",이즈리얼,1,EMPTY,2,2,False,0.365,FN,False,card_2_shop_frame_0600s.jpg
+600,shop_frame_0600s.jpg,3,"[575:713, 707:819]",벨베스,2,EMPTY,2,2,False,0.3111,FN,True,card_3_shop_frame_0600s.jpg
+600,shop_frame_0600s.jpg,4,"[575:713, 823:935]",리븐,4,EMPTY,2,2,False,0.3581,FN,False,card_4_shop_frame_0600s.jpg
+600,shop_frame_0600s.jpg,5,"[575:713, 939:1051]",브라이어,1,EMPTY,3,3,False,0.3425,FN,False,card_5_shop_frame_0600s.jpg
+720,shop_frame_0720s.jpg,1,"[575:713, 475:587]",카이사,3,EMPTY,3,3,False,0.5262,FN,True,card_1_shop_frame_0720s.jpg
+720,shop_frame_0720s.jpg,2,"[575:713, 591:703]",오른,3,EMPTY,2,2,False,0.3157,FN,False,card_2_shop_frame_0720s.jpg
+720,shop_frame_0720s.jpg,3,"[575:713, 707:819]",피즈,3,EMPTY,2,2,False,0.2999,FN,False,card_3_shop_frame_0720s.jpg
+720,shop_frame_0720s.jpg,4,"[575:713, 823:935]",마스터 이,4,EMPTY,3,3,False,0.314,FN,False,card_4_shop_frame_0720s.jpg
+720,shop_frame_0720s.jpg,5,"[575:713, 939:1051]",벨베스,2,EMPTY,3,3,False,0.3422,FN,False,card_5_shop_frame_0720s.jpg
+840,shop_frame_0840s.jpg,1,"[575:713, 475:587]",리븐,4,EMPTY,1,1,False,0.5989,FN,False,card_1_shop_frame_0840s.jpg
+840,shop_frame_0840s.jpg,2,"[575:713, 591:703]",누누와 윌럼프,4,밀리오,2,1,False,0.4661,FP,False,card_2_shop_frame_0840s.jpg
+840,shop_frame_0840s.jpg,3,"[575:713, 707:819]",나미,4,나서스,1,1,True,0.4878,FP,False,card_3_shop_frame_0840s.jpg
+840,shop_frame_0840s.jpg,4,"[575:713, 823:935]",소나,5,나서스,1,1,True,0.7216,FP,False,card_4_shop_frame_0840s.jpg
+840,shop_frame_0840s.jpg,5,"[575:713, 939:1051]",미스 포츈,3,밀리오,2,2,True,0.5691,FP,False,card_5_shop_frame_0840s.jpg
+900,shop_frame_0900s.jpg,1,"[575:713, 475:587]",벨베스,2,EMPTY,3,3,False,0.4556,FN,False,card_1_shop_frame_0900s.jpg
+900,shop_frame_0900s.jpg,2,"[575:713, 591:703]",밀리오,2,미스 포츈,3,3,True,0.5317,FP,False,card_2_shop_frame_0900s.jpg
+900,shop_frame_0900s.jpg,3,"[575:713, 707:819]",벨베스,2,EMPTY,3,3,False,0.2097,FN,False,card_3_shop_frame_0900s.jpg
+900,shop_frame_0900s.jpg,4,"[575:713, 823:935]",파이크,2,EMPTY,3,3,False,0.4034,FN,False,card_4_shop_frame_0900s.jpg
+900,shop_frame_0900s.jpg,5,"[575:713, 939:1051]",리븐,4,EMPTY,1,1,False,0.5857,FN,False,card_5_shop_frame_0900s.jpg
+1050,shop_frame_1050s.jpg,1,"[575:713, 475:587]",아우렐리온 솔,4,그웬,2,2,True,0.5636,FP,False,card_1_shop_frame_1050s.jpg
+1050,shop_frame_1050s.jpg,2,"[575:713, 591:703]",나미,4,그웬,2,2,True,0.5223,FP,False,card_2_shop_frame_1050s.jpg
+1050,shop_frame_1050s.jpg,3,"[575:713, 707:819]",블리츠크랭크,5,EMPTY,2,2,False,0.4562,FN,False,card_3_shop_frame_1050s.jpg
+1050,shop_frame_1050s.jpg,4,"[575:713, 823:935]",리븐,4,나서스,1,2,False,0.6112,FP,False,card_4_shop_frame_1050s.jpg
+1050,shop_frame_1050s.jpg,5,"[575:713, 939:1051]",마스터 이,4,EMPTY,2,2,False,0.3939,FN,False,card_5_shop_frame_1050s.jpg
+1200,shop_frame_1200s.jpg,1,"[575:713, 475:587]",소나,5,EMPTY,3,3,False,0.2919,FN,False,card_1_shop_frame_1200s.jpg
+1200,shop_frame_1200s.jpg,2,"[575:713, 591:703]",블리츠크랭크,5,EMPTY,2,2,False,0.4063,FN,False,card_2_shop_frame_1200s.jpg
+1200,shop_frame_1200s.jpg,3,"[575:713, 707:819]",빅토르,3,EMPTY,2,2,False,0.2775,FN,False,card_3_shop_frame_1200s.jpg
+1200,shop_frame_1200s.jpg,4,"[575:713, 823:935]",나서스,1,EMPTY,2,2,False,0.3052,FN,False,card_4_shop_frame_1200s.jpg
+1200,shop_frame_1200s.jpg,5,"[575:713, 939:1051]",일라오이,3,EMPTY,2,2,False,0.323,FN,False,card_5_shop_frame_1200s.jpg
+1350,shop_frame_1350s.jpg,1,"[575:713, 475:587]",소나,5,EMPTY,3,3,False,0.3597,FN,False,card_1_shop_frame_1350s.jpg
+1350,shop_frame_1350s.jpg,2,"[575:713, 591:703]",제드,5,EMPTY,2,2,False,0.2576,FN,False,card_2_shop_frame_1350s.jpg
+1350,shop_frame_1350s.jpg,3,"[575:713, 707:819]",진,5,EMPTY,2,2,False,0.2944,FN,False,card_3_shop_frame_1350s.jpg
+1350,shop_frame_1350s.jpg,4,"[575:713, 823:935]",피오라,5,EMPTY,2,2,False,0.3488,FN,False,card_4_shop_frame_1350s.jpg
+1350,shop_frame_1350s.jpg,5,"[575:713, 939:1051]",블리츠크랭크,5,EMPTY,3,3,False,0.3292,FN,False,card_5_shop_frame_1350s.jpg
+1500,shop_frame_1500s.jpg,1,"[575:713, 475:587]",빅토르,3,EMPTY,2,2,False,0.5437,FN,False,card_1_shop_frame_1500s.jpg
+1500,shop_frame_1500s.jpg,2,"[575:713, 591:703]",나서스,1,EMPTY,2,2,False,0.3669,FN,False,card_2_shop_frame_1500s.jpg
+1500,shop_frame_1500s.jpg,3,"[575:713, 707:819]",벨베스,2,EMPTY,2,2,False,0.2857,FN,True,card_3_shop_frame_1500s.jpg
+1500,shop_frame_1500s.jpg,4,"[575:713, 823:935]",일라오이,3,EMPTY,2,2,False,0.2993,FN,False,card_4_shop_frame_1500s.jpg
+1500,shop_frame_1500s.jpg,5,"[575:713, 939:1051]",밀리오,2,EMPTY,2,2,False,0.3152,FN,True,card_5_shop_frame_1500s.jpg
