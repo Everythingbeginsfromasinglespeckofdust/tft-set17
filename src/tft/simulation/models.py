@@ -30,11 +30,27 @@ class SimulationResult:
     expected_gold: float
     expected_hp: float
     expected_board_power: float
-    upgrade_probability: float
-    survival_probability: float
+    
+    # Explicit upgrade probability metrics
+    any_upgrade_probability: float
+    target_upgrade_probabilities: Dict[str, float] = field(default_factory=dict)
+    expected_upgrade_count: float = 0.0
+    
+    # Heuristic survival score (explicitly distinguished from empirical calibrated probability)
+    survival_score: float = 1.0
+    
     estimated_placement: Optional[float] = None
     turn_by_turn: List[TurnDetail] = field(default_factory=list)
     metadata: Dict[str, Any] = field(default_factory=dict)
+
+    # Backwards-compatible aliases
+    @property
+    def upgrade_probability(self) -> float:
+        return self.any_upgrade_probability
+
+    @property
+    def survival_probability(self) -> float:
+        return self.survival_score
 
     @property
     def horizon_turns(self) -> int:
@@ -54,4 +70,4 @@ class SimulationResult:
 
     @property
     def cumulative_hit_prob(self) -> Optional[float]:
-        return self.upgrade_probability
+        return self.any_upgrade_probability

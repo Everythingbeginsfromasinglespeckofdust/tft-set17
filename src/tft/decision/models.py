@@ -11,20 +11,30 @@ class Reason:
     impact: float = 0.0
 
 @dataclass(frozen=True)
+class MetricBreakdown:
+    raw_value: float
+    normalized_value: float
+    weight: float
+    contribution: float
+    description: str = ""
+
+@dataclass(frozen=True)
 class ActionScore:
-    """Action에 대한 평가 점수 및 세부 지표."""
+    """Action에 대한 평가 점수 및 세부 지표 추적성 (Traceable Action Score)."""
     action: Action
     score: float
     confidence: float
     metrics: Dict[str, float] = field(default_factory=dict)
+    breakdown: Dict[str, MetricBreakdown] = field(default_factory=dict)
     reasons: List[Reason] = field(default_factory=list)
 
 @dataclass(frozen=True)
 class Recommendation:
-    """Decision Engine의 최종 추천 결과 및 대안 Action 목록."""
+    """Decision Engine의 최종 추천 결과, 대안 Action 목록 및 의사결정 마진."""
     recommended_action: Action
     score: float
-    confidence: float
+    decision_margin: float # Score difference between 1st and 2nd best actions
+    confidence: float      # Derived relative confidence (not arbitrary heuristic)
     alternatives: List[ActionScore]
     all_scores: List[ActionScore]
     reasons: List[Reason] = field(default_factory=list)

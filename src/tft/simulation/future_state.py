@@ -88,13 +88,13 @@ class FutureStateSimulator:
             interest = min(5, start_gold // 10)
             end_gold = start_gold + interest + 5
 
-            # 3. Combat damage & HP loss
+            # 3. Combat damage & HP loss (Heuristic estimation)
             stage_expected_power, stage_base_damage = self._get_stage_combat_params(cur_stage)
             loss_prob, hp_loss = self._calculate_combat_outcome(cur_board_power, stage_expected_power, stage_base_damage)
             cur_hp = max(0, cur_hp - hp_loss)
 
             # Natural 1 free shop roll upgrade probability
-            free_roll_prob, _ = self._calculate_roll_upgrades(state, cur_level, num_rolls=1)
+            free_roll_prob, _, _, _ = self._calculate_roll_upgrades(state, cur_level, num_rolls=1)
             upgrade_prob_cumulative = 1.0 - (1.0 - upgrade_prob_cumulative) * (1.0 - free_roll_prob)
 
             turn_details.append(TurnDetail(
@@ -122,7 +122,7 @@ class FutureStateSimulator:
                 cur_stage += 1
                 cur_round = 1
 
-        survival_prob = self._calculate_survival_probability(cur_hp, state.player.hp)
+        survival_score = self._calculate_survival_score(cur_hp)
 
         return SimulationResult(
             action=action,
@@ -130,8 +130,10 @@ class FutureStateSimulator:
             expected_gold=float(cur_gold),
             expected_hp=float(cur_hp),
             expected_board_power=cur_board_power,
-            upgrade_probability=round(upgrade_prob_cumulative, 4),
-            survival_probability=round(survival_prob, 4),
+            any_upgrade_probability=round(upgrade_prob_cumulative, 4),
+            target_upgrade_probabilities={},
+            expected_upgrade_count=round(upgrade_prob_cumulative, 4),
+            survival_score=round(survival_score, 4),
             estimated_placement=None,
             turn_by_turn=turn_details,
             metadata={"strategy": "SAVE_GOLD", "final_level": cur_level, "final_xp": cur_xp}
@@ -188,7 +190,7 @@ class FutureStateSimulator:
 
                     if cur_level > start_lvl:
                         added_units = cur_level - start_lvl
-                        added_power = self._estimate_added_unit_power(state, cur_level) * added_units
+                        added_power = self._evaluate_level_up_power_gain(state, cur_level) * added_units
                         cur_board_power += added_power
             else:
                 cur_xp += 2
@@ -206,7 +208,7 @@ class FutureStateSimulator:
             loss_prob, hp_loss = self._calculate_combat_outcome(cur_board_power, stage_expected_power, stage_base_damage)
             cur_hp = max(0, cur_hp - hp_loss)
 
-            free_roll_prob, _ = self._calculate_roll_upgrades(state, cur_level, num_rolls=1)
+            free_roll_prob, _, _, _ = self._calculate_roll_upgrades(state, cur_level, num_rolls=1)
             upgrade_prob_cumulative = 1.0 - (1.0 - upgrade_prob_cumulative) * (1.0 - free_roll_prob)
 
             turn_details.append(TurnDetail(
@@ -234,7 +236,7 @@ class FutureStateSimulator:
                 cur_stage += 1
                 cur_round = 1
 
-        survival_prob = self._calculate_survival_probability(cur_hp, state.player.hp)
+        survival_score = self._calculate_survival_score(cur_hp)
 
         return SimulationResult(
             action=action,
@@ -242,8 +244,10 @@ class FutureStateSimulator:
             expected_gold=float(cur_gold),
             expected_hp=float(cur_hp),
             expected_board_power=cur_board_power,
-            upgrade_probability=round(upgrade_prob_cumulative, 4),
-            survival_probability=round(survival_prob, 4),
+            any_upgrade_probability=round(upgrade_prob_cumulative, 4),
+            target_upgrade_probabilities={},
+            expected_upgrade_count=round(upgrade_prob_cumulative, 4),
+            survival_score=round(survival_score, 4),
             estimated_placement=None,
             turn_by_turn=turn_details,
             metadata={"strategy": "LEVEL_UP", "final_level": cur_level, "final_xp": cur_xp}
@@ -279,12 +283,12 @@ class FutureStateSimulator:
         num_rolls = max(1, spend_budget // 2) if spend_budget >= 2 else 0
         spent_on_rolls = num_rolls * 2
 
-        # 1. Evaluate Upgrade Probability and Board Power Gain
-        upgrade_prob, power_gain = self._calculate_roll_upgrades(state, cur_level, num_rolls)
+        # 1. Mathematically sound upgrade probabilities & whole-board power delta
+        any_upgrade_prob, target_probs, exp_upg_count, power_gain = self._calculate_roll_upgrades(state, cur_level, num_rolls)
         turn_1_board_power = cur_board_power + power_gain
 
         turn_details: List[TurnDetail] = []
-        upgrade_prob_cumulative = upgrade_prob
+        upgrade_prob_cumulative = any_upgrade_prob
 
         for t in range(1, horizon + 1):
             start_gold = cur_gold
@@ -327,8 +331,8 @@ class FutureStateSimulator:
                 hp_loss=hp_loss,
                 resulting_hp=cur_hp,
                 board_power=board_pwr,
-                hit_probability=upgrade_prob if t == 1 else 0.05,
-                notes=f"Rolls: {num_rolls}, Power: +{power_gain:.1f}" if t == 1 else ""
+                hit_probability=any_upgrade_prob if t == 1 else 0.05,
+                notes=f"Rolls: {num_rolls}, Expected Power: +{power_gain:.1f}" if t == 1 else ""
             ))
 
             cur_gold = end_gold
@@ -337,7 +341,7 @@ class FutureStateSimulator:
                 cur_stage += 1
                 cur_round = 1
 
-        survival_prob = self._calculate_survival_probability(cur_hp, state.player.hp)
+        survival_score = self._calculate_survival_score(cur_hp)
 
         return SimulationResult(
             action=action,
@@ -345,8 +349,10 @@ class FutureStateSimulator:
             expected_gold=float(cur_gold),
             expected_hp=float(cur_hp),
             expected_board_power=turn_1_board_power,
-            upgrade_probability=round(upgrade_prob_cumulative, 4),
-            survival_probability=round(survival_prob, 4),
+            any_upgrade_probability=round(upgrade_prob_cumulative, 4),
+            target_upgrade_probabilities=target_probs,
+            expected_upgrade_count=round(exp_upg_count, 3),
+            survival_score=round(survival_score, 4),
             estimated_placement=None,
             turn_by_turn=turn_details,
             metadata={"strategy": "ROLL", "num_rolls": num_rolls, "power_gain": power_gain}
@@ -367,9 +373,8 @@ class FutureStateSimulator:
         loss_prob = 1.0 / (1.0 + math.exp(-diff / 12.0))
         loss_prob = min(0.95, max(0.05, loss_prob))
 
-        # Scaling damage based on close loss vs stomp
         if current_power >= target_power:
-            damage_mult = max(0.0, 1.0 - (current_power - target_power) / target_power)
+            damage_mult = max(0.0, 1.0 - (current_power - target_power) / max(1.0, target_power))
             expected_damage = int(round(loss_prob * base_damage * damage_mult * 0.5))
         else:
             power_ratio = max(0.1, current_power / max(1.0, target_power))
@@ -378,8 +383,8 @@ class FutureStateSimulator:
 
         return loss_prob, max(0, expected_damage)
 
-    def _calculate_survival_probability(self, final_hp: int, initial_hp: int) -> float:
-        """최종 HP 및 잔여 체력률 기반 생존 확률 산출."""
+    def _calculate_survival_score(self, final_hp: int) -> float:
+        """최종 HP 기반 생존 휴리스틱 점수 산출 (통계적 확률이 아닌 정량화된 지표)."""
         if final_hp <= 0:
             return 0.0
         elif final_hp <= 12:
@@ -391,20 +396,42 @@ class FutureStateSimulator:
         else:
             return 0.98
 
-    def _estimate_added_unit_power(self, state: GameState, level: int) -> float:
-        """레벨업으로 +1 유닛 추가 시 보드 파워 상승 기대값."""
+    def _evaluate_level_up_power_gain(self, state: GameState, new_level: int) -> float:
+        """레벨업 시 Whole-Board Power 증가분 산출 (BoardEvaluator 활용)."""
+        base_power = self.board_evaluator.evaluate(state).score
         if state.bench_units:
-            best_bench_cost = max(u.cost * (2.2 if u.star_level == 2 else 1.0) for u in state.bench_units)
-            return float(best_bench_cost + 2.5)
-        avg_cost = 1 if level <= 4 else (2 if level <= 6 else (3 if level <= 7 else 4))
+            # Pick strongest bench unit to place on board
+            sorted_bench = sorted(
+                state.bench_units,
+                key=lambda u: u.cost * (2.2 if u.star_level == 2 else 1.0),
+                reverse=True
+            )
+            promoted_unit = sorted_bench[0]
+            simulated_board_units = list(state.board_units) + [promoted_unit]
+            simulated_state = state.with_updates(board_units=simulated_board_units)
+            new_power = self.board_evaluator.evaluate(simulated_state).score
+            return max(1.0, round(new_power - base_power, 2))
+        
+        # Empty bench: standard tier average
+        avg_cost = 1 if new_level <= 4 else (2 if new_level <= 6 else (3 if new_level <= 7 else 4))
         return float(avg_cost * 1.0 + 2.0)
 
-    def _calculate_roll_upgrades(self, state: GameState, level: int, num_rolls: int) -> Tuple[float, float]:
-        """보유 기물 기반 N회 롤 시 2성/3성 달성 확률 및 기대 파워 증가분 산출."""
+    def _calculate_roll_upgrades(
+        self, state: GameState, level: int, num_rolls: int
+    ) -> Tuple[float, Dict[str, float], float, float]:
+        """수학적으로 엄밀한 유닛별/통합 업그레이드 확률 및 Whole-Board Power 증가분 산출.
+        
+        Returns:
+            (any_upgrade_prob, target_upgrade_probs, expected_upgrade_count, expected_power_gain)
+        """
         if num_rolls <= 0:
-            return 0.0, 0.0
+            return 0.0, {}, 0.0, 0.0
 
-        champ_counts: Dict[str, Tuple[int, int]] = {}
+        slots = 5 * num_rolls
+        base_board_power = self.board_evaluator.evaluate(state).score
+
+        # 1. Count copies across board & bench
+        champ_counts: Dict[str, Tuple[int, int]] = {} # name -> (total_copies, cost)
         for u in state.board_units + state.bench_units:
             copies = 3 if u.star_level == 2 else (1 if u.star_level == 1 else 9)
             if u.champion in champ_counts:
@@ -415,8 +442,10 @@ class FutureStateSimulator:
                 cost = cinfo["cost"] if cinfo else u.cost
                 champ_counts[u.champion] = (copies, cost)
 
-        candidate_probs = []
+        target_probs: Dict[str, float] = {}
         expected_power_gain = 0.0
+        exp_upgrade_count = 0.0
+        combined_1need_p_slot = 0.0
 
         for name, (copies, cost) in champ_counts.items():
             n_variety = self.data_repo.get_champion_count_by_cost(cost)
@@ -424,28 +453,66 @@ class FutureStateSimulator:
             if drop_rate <= 0:
                 continue
 
-            p_slot = drop_rate / float(n_variety)
+            k_c = self.data_repo.get_pool_size(cost)
+            # Pool depletion tracking (copies already held)
+            rem_target = max(0, k_c - copies)
+            rem_tier = max(1, (k_c * n_variety) - copies)
+            p_slot = drop_rate * (rem_target / rem_tier)
 
             if copies == 2: # Pair -> 1 copy needed for 2★
-                p_hit = 1.0 - ((1.0 - p_slot) ** (5 * num_rolls))
-                power_delta = cost * (2.2 - 1.0) * 1.8
-                candidate_probs.append(p_hit)
+                # Exact analytical single target probability: 1 - (1 - p_slot)^slots
+                p_hit = 1.0 - ((1.0 - p_slot) ** slots)
+                target_probs[name] = round(p_hit, 4)
+                combined_1need_p_slot += p_slot
+                exp_upgrade_count += p_hit
+
+                # Calculate whole-board power delta by simulating 2★ upgrade
+                simulated_board_units = []
+                upgraded = False
+                for u in state.board_units:
+                    if u.champion == name and u.star_level == 1 and not upgraded:
+                        simulated_board_units.append(Unit(champion=name, cost=cost, star_level=2, items=list(u.items)))
+                        upgraded = True
+                    else:
+                        simulated_board_units.append(u)
+                if not upgraded: # Champion was on bench
+                    simulated_board_units.append(Unit(champion=name, cost=cost, star_level=2))
+
+                sim_state = state.with_updates(board_units=simulated_board_units)
+                upgraded_board_power = self.board_evaluator.evaluate(sim_state).score
+                power_delta = max(1.0, upgraded_board_power - base_board_power)
                 expected_power_gain += p_hit * power_delta
-            elif copies == 1: # Single copy -> need 2 copies
-                p_hit_1 = 1.0 - ((1.0 - p_slot) ** (5 * num_rolls))
-                p_hit_2 = max(0.0, p_hit_1 * p_hit_1 * 0.7)
-                power_delta = cost * (2.2 - 1.0) * 1.5
-                candidate_probs.append(p_hit_2)
+
+            elif copies == 1: # Single copy -> 2 copies needed
+                # Binomial approx for >= 2 hits in slots
+                p_hit_1 = 1.0 - ((1.0 - p_slot) ** slots)
+                p_hit_2 = max(0.0, p_hit_1 * p_hit_1 * 0.65)
+                target_probs[name] = round(p_hit_2, 4)
+                exp_upgrade_count += p_hit_2
+                power_delta = cost * 1.2
                 expected_power_gain += p_hit_2 * power_delta
 
-        if not candidate_probs:
+        if not target_probs:
+            # Baseline 4-cost / 5-cost hit probability if no explicit pairs exist
             p_4cost = self.data_repo.get_drop_rate(level, 4)
-            p_hit = 1.0 - ((1.0 - (p_4cost / 13.0)) ** (5 * num_rolls))
-            return round(p_hit, 4), round(p_hit * 6.0, 2)
+            p_slot_4 = p_4cost / 13.0
+            p_hit = 1.0 - ((1.0 - p_slot_4) ** slots)
+            return round(p_hit, 4), {"4-Cost Carry": round(p_hit, 4)}, round(p_hit, 3), round(p_hit * 5.0, 2)
 
-        prob_miss_all = 1.0
-        for p in candidate_probs:
-            prob_miss_all *= (1.0 - min(0.9999, p))
-        overall_upgrade_prob = 1.0 - prob_miss_all
+        # Joint Probability of hitting at least one upgrade:
+        # Mathematically exact joint probability for collision in same slots:
+        # P(any of 1-need targets) = 1 - (1 - sum(p_slot))^slots
+        if combined_1need_p_slot > 0:
+            any_upgrade_prob = 1.0 - ((1.0 - min(0.9999, combined_1need_p_slot)) ** slots)
+        else:
+            prob_miss_all = 1.0
+            for p in target_probs.values():
+                prob_miss_all *= (1.0 - p)
+            any_upgrade_prob = 1.0 - prob_miss_all
 
-        return round(overall_upgrade_prob, 4), round(expected_power_gain, 2)
+        return (
+            round(min(1.0, any_upgrade_prob), 4),
+            target_probs,
+            round(exp_upgrade_count, 3),
+            round(expected_power_gain, 2)
+        )

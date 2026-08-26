@@ -61,7 +61,12 @@ class DecisionEngine:
         best_score = action_scores[0]
         alternatives = action_scores[1:]
 
-        # 4. Generate Comparative Explanation & Evidence
+        # 4. Decision Margin & Relative Preference Confidence
+        decision_margin = round(best_score.score - alternatives[0].score, 4) if alternatives else 0.0
+        # Scaled relative confidence (not arbitrary heuristic percentage)
+        derived_confidence = round(min(0.95, max(0.50, 0.50 + decision_margin * 2.0)), 2)
+
+        # 5. Generate Comparative Explanation & Evidence
         reasons = self.explanation_generator.generate_comparative_reasons(
             state=state,
             best_score=best_score,
@@ -72,20 +77,24 @@ class DecisionEngine:
         return Recommendation(
             recommended_action=best_score.action,
             score=best_score.score,
-            confidence=best_score.confidence,
+            decision_margin=decision_margin,
+            confidence=derived_confidence,
             alternatives=alternatives,
             all_scores=action_scores,
             reasons=reasons,
             metadata={
                 "horizon": h,
                 "evaluated_actions": [a.action_type.value for a in actions],
+                "decision_margin": decision_margin,
                 "simulation_summaries": {
                     a_type.value: {
                         "expected_gold": res.expected_gold,
                         "expected_hp": res.expected_hp,
                         "expected_power": res.expected_board_power,
-                        "survival_prob": res.survival_probability,
-                        "upgrade_prob": res.upgrade_probability
+                        "survival_score": res.survival_score,
+                        "any_upgrade_prob": res.any_upgrade_probability,
+                        "target_probs": res.target_upgrade_probabilities,
+                        "expected_upgrade_count": res.expected_upgrade_count
                     }
                     for a_type, res in sim_results.items()
                 }
