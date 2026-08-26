@@ -1,0 +1,104 @@
+{
+  "version_name": "ActionEventDetectorV21",
+  "total_predicted_events": 66,
+  "total_ground_truth_events": 76,
+  "player_roll": {
+    "action": "PLAYER_ROLL",
+    "tp": 2,
+    "fp": 39,
+    "fn": 26,
+    "tn": 0,
+    "precision": 0.0488,
+    "recall": 0.0714,
+    "f1": 0.058,
+    "fpr": 1.0,
+    "fnr": 0.9286,
+    "total_ground_truth": 28,
+    "total_detected": 41
+  },
+  "buy_unit": {
+    "action": "BUY_UNIT",
+    "tp": 1,
+    "fp": 24,
+    "fn": 17,
+    "tn": 0,
+    "precision": 0.04,
+    "recall": 0.0556,
+    "f1": 0.0465,
+    "fpr": 1.0,
+    "fnr": 0.9444,
+    "total_ground_truth": 18,
+    "total_detected": 25
+  },
+  "level_up": {
+    "action": "LEVEL_UP",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "fnr": 0.0,
+    "total_ground_truth": 0,
+    "total_detected": 0
+  },
+  "system_refresh_count": 54,
+  "timing_mae_sec": 0.45,
+  "timing_median_sec": 0.5,
+  "timing_p95_sec": 0.5,
+  "timing_max_sec": 0.5,
+  "confusion_matrix": {
+    "ROLL": {
+      "ROLL": 2,
+      "BUY_UNIT": 5,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 26,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    },
+    "BUY_UNIT": {
+      "ROLL": 2,
+      "BUY_UNIT": 1,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 17,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    },
+    "LEVEL_UP": {
+      "ROLL": 0,
+      "BUY_UNIT": 0,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 0,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    },
+    "NO_ACTION": {
+      "ROLL": 37,
+      "BUY_UNIT": 19,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 0,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    },
+    "SYSTEM_REFRESH": {
+      "ROLL": 0,
+      "BUY_UNIT": 0,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 0,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    },
+    "UNKNOWN": {
+      "ROLL": 0,
+      "BUY_UNIT": 0,
+      "LEVEL_UP": 0,
+      "NO_ACTION": 30,
+      "SYSTEM_REFRESH": 0,
+      "UNKNOWN": 0
+    }
+  },
+  "false_positives_count": 63,
+  "false_negatives_count": 43
+}
