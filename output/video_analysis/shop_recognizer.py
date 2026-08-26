@@ -14,11 +14,11 @@ _OUTPUT = os.path.dirname(_HERE)
 _REPO = os.path.dirname(_OUTPUT)
 
 SHOP_GEOMETRY = {
-    "card_y1": 575,
+    "card_y1": 589,
     "card_y2": 713,
-    "start_x": 475,
-    "card_w": 112,
-    "gap": 4,
+    "start_x": 309,
+    "card_w": 136,
+    "gap": 2,
 }
 
 
@@ -150,7 +150,7 @@ class ShopRecognizer:
         best_champ = None
         best_cost = None
 
-        scales = [90, 105, 115]
+        scales = [80, 95, 110, 125]
         for cname, cdata in self.champion_templates.items():
             t_gray = cv2.cvtColor(cdata["img"], cv2.COLOR_BGR2GRAY)
             for sz in scales:
