@@ -48,6 +48,7 @@ class StaticDataRepository:
     def __init__(self, config: AppConfig = DEFAULT_CONFIG):
         self.config = config
         self._champions: Dict[str, Dict[str, Any]] = {}
+        self._champions_by_cost: Dict[int, List[str]] = {1: [], 2: [], 3: [], 4: [], 5: []}
         self._basic_components: Set[str] = set()
         self._completed_items: Set[str] = set()
         self._drop_rates: Dict[int, Dict[int, float]] = {}
@@ -71,6 +72,9 @@ class StaticDataRepository:
                 data = json.load(f)
                 for c in data.get("champions", []):
                     self._champions[c["name"]] = c
+                    cost = int(c.get("cost", 1))
+                    if cost in self._champions_by_cost:
+                        self._champions_by_cost[cost].append(c["name"])
                     for t in c.get("traits", []):
                         if t not in self._trait_breakpoints:
                             self._trait_breakpoints[t] = [1]
@@ -106,11 +110,18 @@ class StaticDataRepository:
         if os.path.exists(self.config.drop_rates_json):
             with open(self.config.drop_rates_json, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                std_rates = data.get("standard_drop_rates", {})
-                for lvl_str, rates in std_rates.items():
-                    lvl = int(lvl_str)
-                    self._drop_rates[lvl] = {int(c): float(r) for c, r in rates.items()}
-                self._pool_sizes = {int(k): int(v) for k, v in data.get("pool_sizes", {}).items()}
+                rows = data.get("shop_drop_rates", [])
+                for row in rows:
+                    if row.get("exists_in_game", True) is False:
+                        continue
+                    lvl = int(row["level"])
+                    pct = row.get("drop_rate_percent", {})
+                    self._drop_rates[lvl] = {
+                        int(k[:-len("cost")]): pct[k] / 100.0
+                        for k in pct
+                        if k.endswith("cost")
+                    }
+                self._pool_sizes = {int(k): int(v) for k, v in data.get("pool_sizes", {1: 30, 2: 25, 3: 18, 4: 10, 5: 9}).items()}
 
     def _load_xp_gold(self):
         if os.path.exists(self.config.xp_gold_json):
@@ -139,6 +150,9 @@ class StaticDataRepository:
 
     def get_all_champions(self) -> Dict[str, Dict[str, Any]]:
         return dict(self._champions)
+
+    def get_champion_count_by_cost(self, cost: int) -> int:
+        return len(self._champions_by_cost.get(cost, [])) or 13
 
     def is_basic_component(self, name: str) -> bool:
         return name in self._basic_components

@@ -1,4 +1,5 @@
 """TFT Core Domain Contract: GameState."""
+import copy
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 from tft.domain.units import Unit, BoardPosition
@@ -14,6 +15,22 @@ class PlayerState:
     hp: int = 100
     streak: int = 0
 
+    def with_updates(
+        self,
+        gold: Optional[int] = None,
+        level: Optional[int] = None,
+        xp: Optional[int] = None,
+        hp: Optional[int] = None,
+        streak: Optional[int] = None,
+    ) -> "PlayerState":
+        return PlayerState(
+            gold=self.gold if gold is None else gold,
+            level=self.level if level is None else level,
+            xp=self.xp if xp is None else xp,
+            hp=self.hp if hp is None else hp,
+            streak=self.streak if streak is None else streak,
+        )
+
 @dataclass(frozen=True)
 class LobbyState:
     player_id: str
@@ -23,7 +40,7 @@ class LobbyState:
 
 @dataclass(frozen=True)
 class GameState:
-    """TFT 실시간 게임 상태의 단일 중심 모델 (Pure State Contract)."""
+    """TFT 실시간 게임 상태의 단일 중심 모델 (Pure Immutable State Contract)."""
     stage: int
     round: int
     stage_round: str
@@ -34,6 +51,39 @@ class GameState:
     item_bench: List[str] = field(default_factory=list)
     augments: List[str] = field(default_factory=list)
     opponents: List[LobbyState] = field(default_factory=list)
+
+    def with_updates(
+        self,
+        stage: Optional[int] = None,
+        round: Optional[int] = None,
+        stage_round: Optional[str] = None,
+        player: Optional[PlayerState] = None,
+        board_units: Optional[List[Unit]] = None,
+        bench_units: Optional[List[Unit]] = None,
+        shop_units: Optional[List[Optional[str]]] = None,
+        item_bench: Optional[List[str]] = None,
+        augments: Optional[List[str]] = None,
+        opponents: Optional[List[LobbyState]] = None,
+    ) -> "GameState":
+        """안전한 불변 객체 복제 및 업데이트 (Immutable state update)."""
+        new_stage = self.stage if stage is None else stage
+        new_round = self.round if round is None else round
+        new_sr = f"{new_stage}-{new_round}" if stage_round is None else stage_round
+        return GameState(
+            stage=new_stage,
+            round=new_round,
+            stage_round=new_sr,
+            player=self.player if player is None else player,
+            board_units=list(self.board_units) if board_units is None else list(board_units),
+            bench_units=list(self.bench_units) if bench_units is None else list(bench_units),
+            shop_units=list(self.shop_units) if shop_units is None else list(shop_units),
+            item_bench=list(self.item_bench) if item_bench is None else list(item_bench),
+            augments=list(self.augments) if augments is None else list(augments),
+            opponents=list(self.opponents) if opponents is None else list(opponents),
+        )
+
+    def clone(self) -> "GameState":
+        return copy.deepcopy(self)
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "GameState":
