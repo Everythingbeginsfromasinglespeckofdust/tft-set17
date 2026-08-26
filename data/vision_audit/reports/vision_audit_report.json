@@ -1,0 +1,2993 @@
+{
+  "session_id": "SESSION_EDA87AD9_AUDIT",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+  "duration_sec": 900.0,
+  "total_gt_events": 76,
+  "total_cv_events": 84,
+  "total_gt_observations": 40,
+  "action_metrics": {
+    "ROLL": {
+      "action_name": "ROLL",
+      "tp": 8,
+      "fp": 46,
+      "fn": 20,
+      "tn": 0
+    },
+    "BUY_UNIT": {
+      "action_name": "BUY_UNIT",
+      "tp": 5,
+      "fp": 25,
+      "fn": 13,
+      "tn": 0
+    },
+    "LEVEL_UP": {
+      "action_name": "LEVEL_UP",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0
+    }
+  },
+  "save_gold_inference_metrics": {
+    "action_name": "SAVE_GOLD_INFERENCE",
+    "tp": 0,
+    "fp": 0,
+    "fn": 30,
+    "tn": 0
+  },
+  "action_confusion_matrix": {
+    "ROLL": {
+      "ROLL": 8,
+      "BUY_UNIT": 2,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 18,
+      "UNKNOWN": 0
+    },
+    "BUY_UNIT": {
+      "ROLL": 4,
+      "BUY_UNIT": 5,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 9,
+      "UNKNOWN": 0
+    },
+    "LEVEL_UP": {
+      "ROLL": 0,
+      "BUY_UNIT": 0,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 0,
+      "UNKNOWN": 0
+    },
+    "SAVE_GOLD": {
+      "ROLL": 0,
+      "BUY_UNIT": 0,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 0,
+      "UNKNOWN": 0
+    },
+    "NO_ACTION": {
+      "ROLL": 40,
+      "BUY_UNIT": 20,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 0,
+      "UNKNOWN": 0
+    },
+    "UNKNOWN": {
+      "ROLL": 2,
+      "BUY_UNIT": 3,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0,
+      "NO_ACTION": 25,
+      "UNKNOWN": 0
+    }
+  },
+  "timing_metrics": {
+    "errors_sec": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      1.0,
+      0.5,
+      1.0,
+      0.5,
+      0.5,
+      1.0,
+      1.0,
+      0.5,
+      0.0,
+      0.5,
+      1.0,
+      1.0
+    ]
+  },
+  "gold_metrics": {
+    "field_name": "gold",
+    "total_evaluated": 40,
+    "exact_matches": 40,
+    "numerical_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "missing_count": 0
+  },
+  "hp_metrics": {
+    "field_name": "hp",
+    "total_evaluated": 40,
+    "exact_matches": 40,
+    "numerical_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "missing_count": 0
+  },
+  "stage_metrics": {
+    "field_name": "stage_round",
+    "total_evaluated": 40,
+    "exact_matches": 40,
+    "numerical_errors": [],
+    "missing_count": 0
+  },
+  "shop_slot_metrics": {
+    "1": {
+      "field_name": "shop_slot_1",
+      "total_evaluated": 40,
+      "exact_matches": 0,
+      "numerical_errors": [],
+      "missing_count": 0
+    },
+    "2": {
+      "field_name": "shop_slot_2",
+      "total_evaluated": 40,
+      "exact_matches": 3,
+      "numerical_errors": [],
+      "missing_count": 0
+    },
+    "3": {
+      "field_name": "shop_slot_3",
+      "total_evaluated": 40,
+      "exact_matches": 0,
+      "numerical_errors": [],
+      "missing_count": 0
+    },
+    "4": {
+      "field_name": "shop_slot_4",
+      "total_evaluated": 40,
+      "exact_matches": 1,
+      "numerical_errors": [],
+      "missing_count": 0
+    },
+    "5": {
+      "field_name": "shop_slot_5",
+      "total_evaluated": 40,
+      "exact_matches": 3,
+      "numerical_errors": [],
+      "missing_count": 0
+    }
+  },
+  "overall_shop_accuracy": 0.035,
+  "discrepancies": [
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 358.5,
+      "description": "GT is ROLL but CV detected BUY_UNIT",
+      "ground_truth_val": "ROLL",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 358.5,
+      "description": "CV falsely detected BUY_UNIT when GT was ROLL",
+      "ground_truth_val": "ROLL",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 360.0,
+      "description": "GT is ROLL but CV detected BUY_UNIT",
+      "ground_truth_val": "ROLL",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 360.0,
+      "description": "CV falsely detected BUY_UNIT when GT was ROLL",
+      "ground_truth_val": "ROLL",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 362.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 366.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 368.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 370.0,
+      "description": "CV falsely detected ROLL when GT was BUY_UNIT",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 370.0,
+      "description": "GT is BUY_UNIT but CV detected ROLL",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 372.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 410.0,
+      "description": "CV falsely detected BUY_UNIT when GT was NO_OBSERVED_ECONOMIC_ACTION",
+      "ground_truth_val": "NO_OBSERVED_ECONOMIC_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 420.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 421.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 424.0,
+      "description": "CV falsely detected ROLL when GT was BUY_UNIT",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 424.0,
+      "description": "GT is BUY_UNIT but CV detected ROLL",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 425.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 428.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 430.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 431.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 480.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 482.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 483.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 485.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 520.0,
+      "description": "CV falsely detected ROLL when GT was NO_OBSERVED_ECONOMIC_ACTION",
+      "ground_truth_val": "NO_OBSERVED_ECONOMIC_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 541.0,
+      "description": "CV falsely detected ROLL when GT was BUY_UNIT",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 541.0,
+      "description": "GT is BUY_UNIT but CV detected ROLL",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 542.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 590.0,
+      "description": "CV falsely detected ROLL when GT was NO_OBSERVED_ECONOMIC_ACTION",
+      "ground_truth_val": "NO_OBSERVED_ECONOMIC_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 600.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 601.5,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 603.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 604.5,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 606.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 630.0,
+      "description": "CV falsely detected BUY_UNIT when GT was NO_OBSERVED_ECONOMIC_ACTION",
+      "ground_truth_val": "NO_OBSERVED_ECONOMIC_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 660.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 661.0,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 663.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 720.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 721.0,
+      "description": "CV falsely detected ROLL when GT was BUY_UNIT",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "WRONG_ACTION",
+      "timestamp_sec": 721.0,
+      "description": "GT is BUY_UNIT but CV detected ROLL",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 723.5,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 780.0,
+      "description": "CV missed ROLL event",
+      "ground_truth_val": "ROLL",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_NEGATIVE",
+      "timestamp_sec": 781.5,
+      "description": "CV missed BUY_UNIT event",
+      "ground_truth_val": "BUY_UNIT",
+      "detected_val": null,
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 810.0,
+      "description": "CV falsely detected BUY_UNIT when GT was NO_OBSERVED_ECONOMIC_ACTION",
+      "ground_truth_val": "NO_OBSERVED_ECONOMIC_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 360.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 370.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 381.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 382.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 444.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 516.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 521.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 526.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 558.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 563.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 565.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 566.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 568.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 568.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 577.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 578.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 590.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 634.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 636.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 643.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 655.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 658.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 668.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 669.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 669.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 670.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 670.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 671.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 671.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 672.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 728.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 729.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 732.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 734.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 735.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 739.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 740.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 788.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 788.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 789.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 790.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 796.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 798.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 799.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 801.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 813.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 824.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 829.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 830.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 833.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 833.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 834.0,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 837.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 840.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 840.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 841.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 842.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 877.5,
+      "description": "Unmatched CV BUY_UNIT event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "BUY_UNIT",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 896.5,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "FALSE_POSITIVE",
+      "timestamp_sec": 897.0,
+      "description": "Unmatched CV ROLL event (spurious detection)",
+      "ground_truth_val": "NO_ACTION",
+      "detected_val": "ROLL",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 302.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 302.0,
+      "description": "Shop Slot 2 mismatch: GT='우르곳', CV='EMPTY'",
+      "ground_truth_val": "우르곳",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 302.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 302.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 302.0,
+      "description": "Shop Slot 5 mismatch: GT='카이사', CV='렉사이'",
+      "ground_truth_val": "카이사",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 312.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 312.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 312.0,
+      "description": "Shop Slot 5 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 314.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 314.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 314.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 314.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 314.0,
+      "description": "Shop Slot 5 mismatch: GT='빅토르', CV='EMPTY'",
+      "ground_truth_val": "빅토르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 316.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 316.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 316.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 316.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 316.0,
+      "description": "Shop Slot 5 mismatch: GT='빅토르', CV='EMPTY'",
+      "ground_truth_val": "빅토르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 344.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 344.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='마스터 이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "마스터 이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 344.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 344.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 344.0,
+      "description": "Shop Slot 5 mismatch: GT='빅토르', CV='EMPTY'",
+      "ground_truth_val": "빅토르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 346.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 346.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='마스터 이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "마스터 이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 346.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 346.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 346.0,
+      "description": "Shop Slot 5 mismatch: GT='빅토르', CV='EMPTY'",
+      "ground_truth_val": "빅토르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 352.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 352.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='마스터 이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "마스터 이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 352.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 352.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 352.0,
+      "description": "Shop Slot 5 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 356.0,
+      "description": "Shop Slot 1 mismatch: GT='밀리오', CV='EMPTY'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 356.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='소나'",
+      "ground_truth_val": "나서스",
+      "detected_val": "소나",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 356.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='나서스'",
+      "ground_truth_val": "카이사",
+      "detected_val": "나서스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 356.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='제드'",
+      "ground_truth_val": "나서스",
+      "detected_val": "제드",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 356.0,
+      "description": "Shop Slot 5 mismatch: GT='카이사', CV='그웬'",
+      "ground_truth_val": "카이사",
+      "detected_val": "그웬",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 390.0,
+      "description": "Shop Slot 1 mismatch: GT='리븐', CV='EMPTY'",
+      "ground_truth_val": "리븐",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 390.0,
+      "description": "Shop Slot 2 mismatch: GT='누누와 윌럼프', CV='EMPTY'",
+      "ground_truth_val": "누누와 윌럼프",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 390.0,
+      "description": "Shop Slot 3 mismatch: GT='리븐', CV='EMPTY'",
+      "ground_truth_val": "리븐",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 390.0,
+      "description": "Shop Slot 4 mismatch: GT='자야', CV='미스 포츈'",
+      "ground_truth_val": "자야",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 390.0,
+      "description": "Shop Slot 5 mismatch: GT='EMPTY', CV='판테온'",
+      "ground_truth_val": "EMPTY",
+      "detected_val": "판테온",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 426.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 426.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 426.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 426.0,
+      "description": "Shop Slot 4 mismatch: GT='판테온', CV='벨베스'",
+      "ground_truth_val": "판테온",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 426.0,
+      "description": "Shop Slot 5 mismatch: GT='모데카이저', CV='벨베스'",
+      "ground_truth_val": "모데카이저",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 436.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 436.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 436.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 436.0,
+      "description": "Shop Slot 4 mismatch: GT='판테온', CV='벨베스'",
+      "ground_truth_val": "판테온",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 436.0,
+      "description": "Shop Slot 5 mismatch: GT='모데카이저', CV='벨베스'",
+      "ground_truth_val": "모데카이저",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 438.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 438.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 438.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 438.0,
+      "description": "Shop Slot 4 mismatch: GT='판테온', CV='쉔'",
+      "ground_truth_val": "판테온",
+      "detected_val": "쉔",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 438.0,
+      "description": "Shop Slot 5 mismatch: GT='모데카이저', CV='EMPTY'",
+      "ground_truth_val": "모데카이저",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 440.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 440.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 440.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 440.0,
+      "description": "Shop Slot 4 mismatch: GT='판테온', CV='벨베스'",
+      "ground_truth_val": "판테온",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 440.0,
+      "description": "Shop Slot 5 mismatch: GT='모데카이저', CV='벨베스'",
+      "ground_truth_val": "모데카이저",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 444.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 444.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 444.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 444.0,
+      "description": "Shop Slot 4 mismatch: GT='조이', CV='EMPTY'",
+      "ground_truth_val": "조이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 444.0,
+      "description": "Shop Slot 5 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 450.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 450.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 450.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 450.0,
+      "description": "Shop Slot 4 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 450.0,
+      "description": "Shop Slot 5 mismatch: GT='모데카이저', CV='EMPTY'",
+      "ground_truth_val": "모데카이저",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 466.0,
+      "description": "Shop Slot 1 mismatch: GT='우르곳', CV='EMPTY'",
+      "ground_truth_val": "우르곳",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 466.0,
+      "description": "Shop Slot 2 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 466.0,
+      "description": "Shop Slot 3 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 466.0,
+      "description": "Shop Slot 4 mismatch: GT='조이', CV='EMPTY'",
+      "ground_truth_val": "조이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 466.0,
+      "description": "Shop Slot 5 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 468.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 468.0,
+      "description": "Shop Slot 2 mismatch: GT='조이', CV='미스 포츈'",
+      "ground_truth_val": "조이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 468.0,
+      "description": "Shop Slot 3 mismatch: GT='오로라', CV='EMPTY'",
+      "ground_truth_val": "오로라",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 468.0,
+      "description": "Shop Slot 4 mismatch: GT='벨베스', CV='EMPTY'",
+      "ground_truth_val": "벨베스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 468.0,
+      "description": "Shop Slot 5 mismatch: GT='마오카이', CV='EMPTY'",
+      "ground_truth_val": "마오카이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 546.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 546.0,
+      "description": "Shop Slot 2 mismatch: GT='잭스', CV='EMPTY'",
+      "ground_truth_val": "잭스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 546.0,
+      "description": "Shop Slot 3 mismatch: GT='오로라', CV='미스 포츈'",
+      "ground_truth_val": "오로라",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 546.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='렉사이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 546.0,
+      "description": "Shop Slot 5 mismatch: GT='마오카이', CV='미스 포츈'",
+      "ground_truth_val": "마오카이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 548.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 548.0,
+      "description": "Shop Slot 2 mismatch: GT='잭스', CV='EMPTY'",
+      "ground_truth_val": "잭스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 548.0,
+      "description": "Shop Slot 3 mismatch: GT='오로라', CV='미스 포츈'",
+      "ground_truth_val": "오로라",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 548.0,
+      "description": "Shop Slot 4 mismatch: GT='나서스', CV='렉사이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 548.0,
+      "description": "Shop Slot 5 mismatch: GT='마오카이', CV='미스 포츈'",
+      "ground_truth_val": "마오카이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 560.0,
+      "description": "Shop Slot 1 mismatch: GT='마오카이', CV='EMPTY'",
+      "ground_truth_val": "마오카이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 560.0,
+      "description": "Shop Slot 3 mismatch: GT='우르곳', CV='미스 포츈'",
+      "ground_truth_val": "우르곳",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 560.0,
+      "description": "Shop Slot 4 mismatch: GT='우르곳', CV='EMPTY'",
+      "ground_truth_val": "우르곳",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 560.0,
+      "description": "Shop Slot 5 mismatch: GT='피즈', CV='미스 포츈'",
+      "ground_truth_val": "피즈",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 590.0,
+      "description": "Shop Slot 1 mismatch: GT='마오카이', CV='쉔'",
+      "ground_truth_val": "마오카이",
+      "detected_val": "쉔",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 590.0,
+      "description": "Shop Slot 2 mismatch: GT='미스 포츈', CV='EMPTY'",
+      "ground_truth_val": "미스 포츈",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 590.0,
+      "description": "Shop Slot 3 mismatch: GT='우르곳', CV='EMPTY'",
+      "ground_truth_val": "우르곳",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 590.0,
+      "description": "Shop Slot 4 mismatch: GT='사미라', CV='쉔'",
+      "ground_truth_val": "사미라",
+      "detected_val": "쉔",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 590.0,
+      "description": "Shop Slot 5 mismatch: GT='피즈', CV='벨베스'",
+      "ground_truth_val": "피즈",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 610.0,
+      "description": "Shop Slot 1 mismatch: GT='케이틀린', CV='EMPTY'",
+      "ground_truth_val": "케이틀린",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 610.0,
+      "description": "Shop Slot 2 mismatch: GT='소나', CV='EMPTY'",
+      "ground_truth_val": "소나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 610.0,
+      "description": "Shop Slot 3 mismatch: GT='쉔', CV='EMPTY'",
+      "ground_truth_val": "쉔",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 610.0,
+      "description": "Shop Slot 4 mismatch: GT='EMPTY', CV='벨베스'",
+      "ground_truth_val": "EMPTY",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 610.0,
+      "description": "Shop Slot 5 mismatch: GT='쉔', CV='EMPTY'",
+      "ground_truth_val": "쉔",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 618.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 618.0,
+      "description": "Shop Slot 2 mismatch: GT='판테온', CV='EMPTY'",
+      "ground_truth_val": "판테온",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 618.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 618.0,
+      "description": "Shop Slot 4 mismatch: GT='오로라', CV='벨베스'",
+      "ground_truth_val": "오로라",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 618.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='EMPTY'",
+      "ground_truth_val": "나미",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 632.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 632.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='EMPTY'",
+      "ground_truth_val": "나서스",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 632.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 632.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 632.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='EMPTY'",
+      "ground_truth_val": "나미",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 634.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 634.0,
+      "description": "Shop Slot 2 mismatch: GT='EMPTY', CV='밀리오'",
+      "ground_truth_val": "EMPTY",
+      "detected_val": "밀리오",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 634.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 634.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 634.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='EMPTY'",
+      "ground_truth_val": "나미",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 646.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 646.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 646.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 646.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='EMPTY'",
+      "ground_truth_val": "나미",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 664.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 664.0,
+      "description": "Shop Slot 2 mismatch: GT='EMPTY', CV='렉사이'",
+      "ground_truth_val": "EMPTY",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 664.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 664.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 664.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='미스 포츈'",
+      "ground_truth_val": "나미",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 670.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 670.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='렉사이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 670.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 670.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 670.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='미스 포츈'",
+      "ground_truth_val": "나미",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 684.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 684.0,
+      "description": "Shop Slot 2 mismatch: GT='나서스', CV='렉사이'",
+      "ground_truth_val": "나서스",
+      "detected_val": "렉사이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 684.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 684.0,
+      "description": "Shop Slot 4 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 684.0,
+      "description": "Shop Slot 5 mismatch: GT='나미', CV='미스 포츈'",
+      "ground_truth_val": "나미",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 726.0,
+      "description": "Shop Slot 1 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 726.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='미스 포츈'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 726.0,
+      "description": "Shop Slot 3 mismatch: GT='라아스트', CV='미스 포츈'",
+      "ground_truth_val": "라아스트",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 726.0,
+      "description": "Shop Slot 4 mismatch: GT='다이애나', CV='미스 포츈'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 726.0,
+      "description": "Shop Slot 5 mismatch: GT='오로라', CV='나서스'",
+      "ground_truth_val": "오로라",
+      "detected_val": "나서스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 734.0,
+      "description": "Shop Slot 1 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 734.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='미스 포츈'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 734.0,
+      "description": "Shop Slot 3 mismatch: GT='라아스트', CV='EMPTY'",
+      "ground_truth_val": "라아스트",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 734.0,
+      "description": "Shop Slot 4 mismatch: GT='다이애나', CV='미스 포츈'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 734.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='EMPTY'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 744.0,
+      "description": "Shop Slot 1 mismatch: GT='조이', CV='EMPTY'",
+      "ground_truth_val": "조이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 744.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 744.0,
+      "description": "Shop Slot 3 mismatch: GT='라아스트', CV='미스 포츈'",
+      "ground_truth_val": "라아스트",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 744.0,
+      "description": "Shop Slot 4 mismatch: GT='오른', CV='EMPTY'",
+      "ground_truth_val": "오른",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 744.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='미스 포츈'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 746.0,
+      "description": "Shop Slot 1 mismatch: GT='조이', CV='EMPTY'",
+      "ground_truth_val": "조이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 746.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 746.0,
+      "description": "Shop Slot 3 mismatch: GT='오로라', CV='미스 포츈'",
+      "ground_truth_val": "오로라",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 746.0,
+      "description": "Shop Slot 4 mismatch: GT='오른', CV='EMPTY'",
+      "ground_truth_val": "오른",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 746.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='미스 포츈'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 756.0,
+      "description": "Shop Slot 1 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 756.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 756.0,
+      "description": "Shop Slot 3 mismatch: GT='오로라', CV='미스 포츈'",
+      "ground_truth_val": "오로라",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 756.0,
+      "description": "Shop Slot 4 mismatch: GT='오른', CV='EMPTY'",
+      "ground_truth_val": "오른",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 756.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='나서스'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "나서스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 780.0,
+      "description": "Shop Slot 1 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 780.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 780.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 780.0,
+      "description": "Shop Slot 4 mismatch: GT='오른', CV='EMPTY'",
+      "ground_truth_val": "오른",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 780.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='미스 포츈'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 782.0,
+      "description": "Shop Slot 1 mismatch: GT='나르', CV='EMPTY'",
+      "ground_truth_val": "나르",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 782.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 782.0,
+      "description": "Shop Slot 3 mismatch: GT='카이사', CV='미스 포츈'",
+      "ground_truth_val": "카이사",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 782.0,
+      "description": "Shop Slot 4 mismatch: GT='오른', CV='EMPTY'",
+      "ground_truth_val": "오른",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 782.0,
+      "description": "Shop Slot 5 mismatch: GT='일라오이', CV='미스 포츈'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "미스 포츈",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 824.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='EMPTY'",
+      "ground_truth_val": "카이사",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 824.0,
+      "description": "Shop Slot 2 mismatch: GT='일라오이', CV='EMPTY'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 824.0,
+      "description": "Shop Slot 3 mismatch: GT='조이', CV='빅토르'",
+      "ground_truth_val": "조이",
+      "detected_val": "빅토르",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 824.0,
+      "description": "Shop Slot 4 mismatch: GT='조이', CV='EMPTY'",
+      "ground_truth_val": "조이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 840.0,
+      "description": "Shop Slot 1 mismatch: GT='카이사', CV='쉔'",
+      "ground_truth_val": "카이사",
+      "detected_val": "쉔",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 840.0,
+      "description": "Shop Slot 2 mismatch: GT='일라오이', CV='EMPTY'",
+      "ground_truth_val": "일라오이",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 840.0,
+      "description": "Shop Slot 3 mismatch: GT='밀리오', CV='벨베스'",
+      "ground_truth_val": "밀리오",
+      "detected_val": "벨베스",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 840.0,
+      "description": "Shop Slot 4 mismatch: GT='조이', CV='쉔'",
+      "ground_truth_val": "조이",
+      "detected_val": "쉔",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 840.0,
+      "description": "Shop Slot 5 mismatch: GT='EMPTY', CV='마스터 이'",
+      "ground_truth_val": "EMPTY",
+      "detected_val": "마스터 이",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 872.0,
+      "description": "Shop Slot 1 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 872.0,
+      "description": "Shop Slot 2 mismatch: GT='다이애나', CV='EMPTY'",
+      "ground_truth_val": "다이애나",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 872.0,
+      "description": "Shop Slot 3 mismatch: GT='미스 포츈', CV='EMPTY'",
+      "ground_truth_val": "미스 포츈",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 872.0,
+      "description": "Shop Slot 4 mismatch: GT='미스 포츈', CV='EMPTY'",
+      "ground_truth_val": "미스 포츈",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 874.0,
+      "description": "Shop Slot 1 mismatch: GT='리븐', CV='EMPTY'",
+      "ground_truth_val": "리븐",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 874.0,
+      "description": "Shop Slot 2 mismatch: GT='킨드레드', CV='EMPTY'",
+      "ground_truth_val": "킨드레드",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 874.0,
+      "description": "Shop Slot 3 mismatch: GT='누누와 윌럼프', CV='EMPTY'",
+      "ground_truth_val": "누누와 윌럼프",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    },
+    {
+      "error_category": "SHOP_RECOGNITION_ERROR",
+      "timestamp_sec": 874.0,
+      "description": "Shop Slot 4 mismatch: GT='자야', CV='EMPTY'",
+      "ground_truth_val": "자야",
+      "detected_val": "EMPTY",
+      "severity": "MEDIUM",
+      "metadata": {}
+    }
+  ],
+  "discrepancies_by_category": {
+    "WRONG_ACTION": 6,
+    "FALSE_POSITIVE": 71,
+    "FALSE_NEGATIVE": 27,
+    "SHOP_RECOGNITION_ERROR": 193
+  },
+  "human_agreement": {
+    "total_compared": 28,
+    "agreement_count": 27,
+    "matrix": {
+      "ROLL": {
+        "ROLL": 9,
+        "BUY_UNIT": 1,
+        "LEVEL_UP": 0,
+        "NO_OBSERVED_ECONOMIC_ACTION": 0,
+        "UNKNOWN": 0
+      },
+      "BUY_UNIT": {
+        "ROLL": 0,
+        "BUY_UNIT": 8,
+        "LEVEL_UP": 0,
+        "NO_OBSERVED_ECONOMIC_ACTION": 0,
+        "UNKNOWN": 0
+      },
+      "LEVEL_UP": {
+        "ROLL": 0,
+        "BUY_UNIT": 0,
+        "LEVEL_UP": 0,
+        "NO_OBSERVED_ECONOMIC_ACTION": 0,
+        "UNKNOWN": 0
+      },
+      "NO_OBSERVED_ECONOMIC_ACTION": {
+        "ROLL": 0,
+        "BUY_UNIT": 0,
+        "LEVEL_UP": 0,
+        "NO_OBSERVED_ECONOMIC_ACTION": 10,
+        "UNKNOWN": 0
+      },
+      "UNKNOWN": {
+        "ROLL": 0,
+        "BUY_UNIT": 0,
+        "LEVEL_UP": 0,
+        "NO_OBSERVED_ECONOMIC_ACTION": 0,
+        "UNKNOWN": 0
+      }
+    }
+  },
+  "readiness_status": "RED",
+  "green_criteria_met": [
+    "Timing error excellent (MAE=0.38s <= 0.5s)",
+    "Gold OCR error low (MAE=0.0G <= 1.5G)"
+  ],
+  "issues_found": [
+    "ROLL detection fidelity LOW (Precision=14.8%, Recall=28.6%)",
+    "Shop recognition accuracy LOW (3.5%)"
+  ],
+  "metadata": {
+    "session_count": 1,
+    "participant_count": 1,
+    "sample_independence_note": "Evaluated on single 10-minute session. Samples share game context (not 104 independent matches)."
+  }
+}

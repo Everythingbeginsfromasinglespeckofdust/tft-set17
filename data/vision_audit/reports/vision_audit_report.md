@@ -1,0 +1,131 @@
+# 🔍 TFT Vision Ground Truth Audit & Fidelity Report (v1.0)
+
+## 1. Executive Summary & Readiness Verdict
+
+- **DATASET_READINESS Verdict**: 🔴 **RED (Not Ready / Action Fidelity Low)**
+- **Session ID**: `SESSION_EDA87AD9_AUDIT` (Single Session, 1 Participant)
+- **Video Path**: `C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4`
+- **Duration**: `900.0s` (10-minute active gameplay slice)
+- **Ground Truth Annotations**: `76` Events, `40` Observation Checkpoints
+- **CV Automated Detections**: `84` Events
+
+### Criteria Assessment Summary
+
+- ✅ Timing error excellent (MAE=0.38s <= 0.5s)
+- ✅ Gold OCR error low (MAE=0.0G <= 1.5G)
+- ⚠️ ROLL detection fidelity LOW (Precision=14.8%, Recall=28.6%)
+- ⚠️ Shop recognition accuracy LOW (3.5%)
+
+
+## 2. Action Detection Metrics (Precision / Recall / F1)
+
+> ℹ️ **원칙**: 사람의 육안으로 실제 확인된 Ground Truth와 CV 검출 결과를 $\pm 1.0\text{s}$ 시간 허용 오차 내에서 대조 평가합니다.
+
+| Action Type | Precision | Recall | F1 Score | FP Rate | FN Rate | GT Count | Detected |
+|---|---|---|---|---|---|---|---|
+| **ROLL** | `14.8%` | `28.6%` | `0.195` | `100.0%` | `71.4%` | `28` | `54` |
+| **BUY_UNIT** | `16.7%` | `27.8%` | `0.208` | `100.0%` | `72.2%` | `18` | `30` |
+| **LEVEL_UP** | `0.0%` | `0.0%` | `0.000` | `0.0%` | `0.0%` | `0` | `0` |
+
+
+## 3. Inferred SAVE_GOLD Fidelity
+
+> 💡 **원칙**: `SAVE_GOLD`는 화면에서 직접 클릭되는 행동이 아니므로, 인간 검증자의 `NO_OBSERVED_ECONOMIC_ACTION`과 파이프라인의 `INFERRED SAVE_GOLD`를 대조합니다.
+
+- **Inferred SAVE_GOLD Precision**: `0.0%` (0 TP / 0 Inferred)
+- **Inferred SAVE_GOLD Recall**: `0.0%` (0 TP / 30 Ground Truth No-Action Windows)
+- **Spurious Inferred Saves (False Positives during Action)**: `0`건
+
+## 4. Action Confusion Matrix (Ground Truth \ CV Detected)
+
+| Ground Truth \ CV | ROLL | BUY_UNIT | LEVEL_UP | SAVE_GOLD | NO_ACTION | UNKNOWN |
+|---|---|---|---|---|---|---|
+| **ROLL** | `8` | `2` | `0` | `0` | `18` | `0` |
+| **BUY_UNIT** | `4` | `5` | `0` | `0` | `9` | `0` |
+| **LEVEL_UP** | `0` | `0` | `0` | `0` | `0` | `0` |
+| **SAVE_GOLD** | `0` | `0` | `0` | `0` | `0` | `0` |
+| **NO_ACTION** | `40` | `20` | `0` | `0` | `0` | `0` |
+| **UNKNOWN** | `2` | `3` | `0` | `0` | `25` | `0` |
+
+
+## 5. Timing Error Analysis (Event Timestamp Alignment)
+
+- **Evaluated Matched Events**: `24`
+- **Mean Absolute Timing Error**: `0.375s`
+- **Median Timing Error**: `0.250s`
+- **P95 Timing Error**: `1.000s`
+- **Max Timing Error**: `1.000s`
+
+
+## 6. Observation Field Accuracy
+
+### (1) HUD Stats & Text OCR Accuracy
+
+| Field | Exact Match Accuracy | MAE (Error) | Max Error | Missing Rate | Samples |
+|---|---|---|---|---|---|
+| **gold** | `100.0%` | `0.00` | `0.00` | `0.0%` | `40` |
+| **hp** | `100.0%` | `0.00` | `0.00` | `0.0%` | `40` |
+| **stage_round** | `100.0%` | `-` | `-` | `0.0%` | `40` |
+
+### (2) Shop Slot Recognition Accuracy by Slot (1 to 5)
+
+- **Overall 5-Slot Combined Accuracy**: `3.5%`
+
+| Slot Index | Exact Accuracy | Missing Rate | Evaluated Slots |
+|---|---|---|---|
+| **Slot 1** | `0.0%` | `0.0%` | `40` |
+| **Slot 2** | `7.5%` | `0.0%` | `40` |
+| **Slot 3** | `0.0%` | `0.0%` | `40` |
+| **Slot 4** | `2.5%` | `0.0%` | `40` |
+| **Slot 5** | `7.5%` | `0.0%` | `40` |
+
+
+## 7. Error Taxonomy & Discrepancy Breakdown (Total: `297`)
+
+- **`WRONG_ACTION`**: `6`건 (`2.0%`)
+- **`FALSE_POSITIVE`**: `71`건 (`23.9%`)
+- **`FALSE_NEGATIVE`**: `27`건 (`9.1%`)
+- **`SHOP_RECOGNITION_ERROR`**: `193`건 (`65.0%`)
+
+### Sample Discrepancy Cases
+
+### Case 1: [WRONG_ACTION] at `358.5s`
+- **Description**: GT is ROLL but CV detected BUY_UNIT
+- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
+
+### Case 2: [FALSE_POSITIVE] at `358.5s`
+- **Description**: CV falsely detected BUY_UNIT when GT was ROLL
+- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
+
+### Case 3: [WRONG_ACTION] at `360.0s`
+- **Description**: GT is ROLL but CV detected BUY_UNIT
+- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
+
+### Case 4: [FALSE_POSITIVE] at `360.0s`
+- **Description**: CV falsely detected BUY_UNIT when GT was ROLL
+- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
+
+### Case 5: [FALSE_NEGATIVE] at `362.0s`
+- **Description**: CV missed BUY_UNIT event
+- **Ground Truth**: `BUY_UNIT` | **CV Detected**: `None`
+
+### Case 6: [FALSE_NEGATIVE] at `366.0s`
+- **Description**: CV missed BUY_UNIT event
+- **Ground Truth**: `BUY_UNIT` | **CV Detected**: `None`
+
+## 8. Human Annotation Agreement (Cohen's Kappa)
+
+- **Evaluated Checkpoints**: `28`
+- **Raw Agreement Rate**: `96.4%`
+- **Cohen's Kappa ($\kappa$)**: `0.946` (High Inter-Annotator Reliability)
+
+
+## 9. Data Integrity (`VALID`) vs Detection Correctness (`CORRECT`) Separation
+
+- 💡 **구조적 무결성 (`VALID`)**: 시계열 단조성($t_i \ge t_{i-1}$), $T0 \le T_{\text{action}} \le T1+$, 상태 제약($0\le\text{gold}\le200$) 통과율 **`100.0%`**.
+- 🎯 **인식 정답률 (`CORRECT`)**: Ground Truth 대비 ROLL F1=`0.195`, Shop Accuracy=`3.5%`.
+
+## 10. Multi-Video Expansion Recommendations
+
+- 🛑 **권고**: 핵심 행동 인식 재현율이 낮아 대규모 확장을 보류하고 CV 파이프라인을 수정해야 합니다.
+

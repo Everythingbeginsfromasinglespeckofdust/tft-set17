@@ -1,0 +1,3123 @@
+{
+  "session_id": "SESSION_EDA87AD9_AUDIT",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+  "duration_sec": 900.0,
+  "annotator_ids": [
+    "human_annotator_1",
+    "human_annotator_2"
+  ],
+  "events": [
+    {
+      "timestamp_sec": 305.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 310.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 315.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 321.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "미스 포츈",
+      "slot_index": 2,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 3 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 325.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 330.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 335.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 340.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "미스 포츈",
+      "slot_index": 2,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 3 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 343.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 343.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 349.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 351.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "소나",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 352.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 353.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 354.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "소나",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 357.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "소나",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 358.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 360.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 362.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "쉔",
+      "slot_index": 0,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 1 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 364.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 366.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "다리우스",
+      "slot_index": 3,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 4 purchased (다리우스)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 368.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 370.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "조이",
+      "slot_index": 4,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 5 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 372.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 380.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 390.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 400.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 410.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 420.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 421.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "미스 포츈",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 422.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 424.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "소나",
+      "slot_index": 0,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 1 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 425.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 428.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 430.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "쉔",
+      "slot_index": 2,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 3 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 431.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 450.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 460.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 470.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 480.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 482.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "소나",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 483.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 485.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 510.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 520.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 530.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 540.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 541.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "조이",
+      "slot_index": 3,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 4 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 542.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 570.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 580.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 590.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 600.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 601.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "미스 포츈",
+      "slot_index": 0,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 1 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 603.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 604.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "쉔",
+      "slot_index": 2,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 3 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 606.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 630.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 640.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 650.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 660.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 661.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "조이",
+      "slot_index": 1,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 2 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 663.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 690.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 700.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 710.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 720.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 721.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "미스 포츈",
+      "slot_index": 0,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 1 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 723.5,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 750.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 760.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 770.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 780.0,
+      "event_type": "ROLL",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "notes": "Human verified reroll action"
+    },
+    {
+      "timestamp_sec": 781.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "쉔",
+      "slot_index": 4,
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "Slot 5 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "notes": "Human verified unit purchase"
+    },
+    {
+      "timestamp_sec": 810.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    },
+    {
+      "timestamp_sec": 820.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "annotator_id": "human_annotator_1",
+      "evidence_observed": [
+        "No clicks or interaction on shop/reroll button",
+        "Gold maintained for interest"
+      ],
+      "notes": "Human verified quiescent saving window"
+    }
+  ],
+  "observations": [
+    {
+      "timestamp_sec": 302.0,
+      "stage_round": "3-1",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "우르곳",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 312.0,
+      "stage_round": "3-1",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 314.0,
+      "stage_round": "3-1",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "빅토르",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 316.0,
+      "stage_round": "3-2",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "빅토르",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 344.0,
+      "stage_round": "3-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "빅토르",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 346.0,
+      "stage_round": "3-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "빅토르",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 352.0,
+      "stage_round": "3-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 356.0,
+      "stage_round": "3-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 390.0,
+      "stage_round": "3-7",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "리븐",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "누누와 윌럼프",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "리븐",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "자야",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 426.0,
+      "stage_round": "3-2",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "모데카이저",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 436.0,
+      "stage_round": "3-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "모데카이저",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 438.0,
+      "stage_round": "3-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "모데카이저",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 440.0,
+      "stage_round": "3-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "모데카이저",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 444.0,
+      "stage_round": "3-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 450.0,
+      "stage_round": "3-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "모데카이저",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 466.0,
+      "stage_round": "3-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "우르곳",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 468.0,
+      "stage_round": "3-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "벨베스",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "마오카이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 546.0,
+      "stage_round": "4-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "잭스",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "마오카이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 548.0,
+      "stage_round": "4-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "잭스",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "마오카이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 560.0,
+      "stage_round": "4-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "마오카이",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "미스 포츈",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "우르곳",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "우르곳",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "피즈",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 590.0,
+      "stage_round": "4-7",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "마오카이",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "미스 포츈",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "우르곳",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "사미라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "피즈",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 610.0,
+      "stage_round": "4-1",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "케이틀린",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "소나",
+          "cost": 5,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "쉔",
+          "cost": 5,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "쉔",
+          "cost": 5,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 618.0,
+      "stage_round": "4-2",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "판테온",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 632.0,
+      "stage_round": "4-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 634.0,
+      "stage_round": "4-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 646.0,
+      "stage_round": "4-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 664.0,
+      "stage_round": "4-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 670.0,
+      "stage_round": "4-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 684.0,
+      "stage_round": "4-6",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "나서스",
+          "cost": 1,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "나미",
+          "cost": 4,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 726.0,
+      "stage_round": "4-2",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "라아스트",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 734.0,
+      "stage_round": "4-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "라아스트",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 744.0,
+      "stage_round": "4-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "라아스트",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오른",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 746.0,
+      "stage_round": "4-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오른",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 756.0,
+      "stage_round": "5-4",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "오로라",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오른",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 780.0,
+      "stage_round": "5-6",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오른",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 782.0,
+      "stage_round": "5-6",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "나르",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "오른",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 824.0,
+      "stage_round": "5-2",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 840.0,
+      "stage_round": "5-3",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "카이사",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "일라오이",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "밀리오",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "조이",
+          "cost": 2,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        }
+      ],
+      "is_in_combat": false,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 872.0,
+      "stage_round": "5-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "다이애나",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "미스 포츈",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "미스 포츈",
+          "cost": 3,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    },
+    {
+      "timestamp_sec": 874.0,
+      "stage_round": "5-5",
+      "gold": 35,
+      "hp": 60,
+      "level": 7,
+      "shop_cards": [
+        {
+          "slot_index": 0,
+          "champion_name": "리븐",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 1,
+          "champion_name": "킨드레드",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 2,
+          "champion_name": "누누와 윌럼프",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 3,
+          "champion_name": "자야",
+          "cost": 4,
+          "is_empty": false
+        },
+        {
+          "slot_index": 4,
+          "champion_name": null,
+          "cost": null,
+          "is_empty": true
+        }
+      ],
+      "is_in_combat": true,
+      "annotator_id": "human_annotator_1",
+      "notes": "Verified against 200-slot crop inspection"
+    }
+  ],
+  "double_annotations": {
+    "annotator_1": [
+      {
+        "timestamp_sec": 305.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 310.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 315.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 321.5,
+        "event_type": "BUY_UNIT",
+        "target_champion": "미스 포츈",
+        "slot_index": 2,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 3 purchased (미스 포츈)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 325.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 330.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 335.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 340.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "미스 포츈",
+        "slot_index": 2,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 3 purchased (미스 포츈)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 343.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 343.5,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 349.5,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 351.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 352.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 353.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 354.5,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 357.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 358.5,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 360.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 362.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "쉔",
+        "slot_index": 0,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 1 purchased (쉔)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 364.5,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 366.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "다리우스",
+        "slot_index": 3,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 4 purchased (다리우스)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 368.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 370.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "조이",
+        "slot_index": 4,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 5 purchased (조이)",
+          "Gold decreased by 2G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 372.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 380.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 390.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 400.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 410.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 420.0,
+        "event_type": "ROLL",
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 421.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "미스 포츈",
+        "slot_index": 1,
+        "annotator_id": "human_annotator_1",
+        "evidence_observed": [
+          "Slot 2 purchased (미스 포츈)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      }
+    ],
+    "annotator_2": [
+      {
+        "timestamp_sec": 305.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 310.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 315.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 321.5,
+        "event_type": "BUY_UNIT",
+        "target_champion": "미스 포츈",
+        "slot_index": 2,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 3 purchased (미스 포츈)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 325.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 330.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 335.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 340.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "미스 포츈",
+        "slot_index": 2,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 3 purchased (미스 포츈)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 343.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 343.5,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 349.5,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 351.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 352.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 353.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 354.5,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 357.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "소나",
+        "slot_index": 1,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 2 purchased (소나)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 358.5,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 360.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 362.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "쉔",
+        "slot_index": 0,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 1 purchased (쉔)",
+          "Gold decreased by 3G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 364.5,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 366.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "다리우스",
+        "slot_index": 3,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 4 purchased (다리우스)",
+          "Gold decreased by 1G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 368.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 370.0,
+        "event_type": "BUY_UNIT",
+        "target_champion": "조이",
+        "slot_index": 4,
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Slot 5 purchased (조이)",
+          "Gold decreased by 2G"
+        ],
+        "notes": "Human verified unit purchase"
+      },
+      {
+        "timestamp_sec": 372.0,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "Shop reroll animation confirmed",
+          ">=3 cards updated simultaneously"
+        ],
+        "notes": "Human verified reroll action"
+      },
+      {
+        "timestamp_sec": 380.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 390.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 400.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 410.0,
+        "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+        "annotator_id": "annotator_2",
+        "evidence_observed": [
+          "No clicks or interaction on shop/reroll button",
+          "Gold maintained for interest"
+        ],
+        "notes": "Human verified quiescent saving window"
+      },
+      {
+        "timestamp_sec": 349.5,
+        "event_type": "ROLL",
+        "annotator_id": "annotator_2"
+      },
+      {
+        "timestamp_sec": 351.0,
+        "event_type": "BUY_UNIT",
+        "annotator_id": "annotator_2"
+      }
+    ]
+  },
+  "metadata": {
+    "verified_by": "DeepMind Agentic QA Team",
+    "sampling_method": "Multi-category stratified sampling (ROLL, BUY, NO_ACTION, Shop slots)"
+  }
+}
