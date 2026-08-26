@@ -1,0 +1,33 @@
+frame,unit,cost,location,gt_star,pred_star,gt_power,pred_power,abs_error,pct_error
+frame_0125s.jpg,리븐,4,hex_r0_c1,1,1,4.0,4.0,0.0,0.0
+frame_0125s.jpg,렉사이,1,hex_r1_c6,1,1,1.0,1.0,0.0,0.0
+frame_0125s.jpg,밀리오,2,hex_r3_c0,1,1,2.0,2.0,0.0,0.0
+frame_0150s.jpg,렉사이,1,hex_r1_c6,1,1,1.0,1.0,0.0,0.0
+frame_0150s.jpg,밀리오,2,hex_r3_c0,1,1,2.0,2.0,0.0,0.0
+frame_0150s.jpg,소나,5,hex_r3_c3,1,1,5.0,5.0,0.0,0.0
+frame_0150s.jpg,조이,2,bench_2,1,1,2.0,2.0,0.0,0.0
+frame_0150s.jpg,밀리오,2,bench_6,1,1,2.0,2.0,0.0,0.0
+frame_0215s.jpg,렉사이,1,hex_r1_c6,1,1,1.0,1.0,0.0,0.0
+frame_0215s.jpg,밀리오,2,hex_r3_c0,2,2,4.4,4.4,0.0,0.0
+frame_0215s.jpg,조이,2,bench_0,1,1,2.0,2.0,0.0,0.0
+frame_0215s.jpg,밀리오,2,bench_1,1,2,2.0,4.4,2.4,120.0
+frame_0215s.jpg,밀리오,2,bench_2,1,2,2.0,4.4,2.4,120.0
+frame_0215s.jpg,밀리오,2,bench_7,1,2,2.0,4.4,2.4,120.0
+frame_0245s.jpg,미스 포츈,3,hex_r1_c3,1,1,3.0,3.0,0.0,0.0
+frame_0245s.jpg,렉사이,1,hex_r1_c6,1,1,1.0,1.0,0.0,0.0
+frame_0245s.jpg,밀리오,2,hex_r3_c0,2,1,4.4,2.0,2.4,54.55
+frame_0245s.jpg,조이,2,bench_0,1,1,2.0,2.0,0.0,0.0
+frame_0245s.jpg,밀리오,2,bench_1,1,1,2.0,2.0,0.0,0.0
+frame_0245s.jpg,밀리오,2,bench_2,1,1,2.0,2.0,0.0,0.0
+frame_0245s.jpg,밀리오,2,bench_7,1,1,2.0,2.0,0.0,0.0
+frame_0275s.jpg,미스 포츈,3,hex_r1_c3,1,1,3.0,3.0,0.0,0.0
+frame_0275s.jpg,렉사이,1,hex_r1_c6,1,1,1.0,1.0,0.0,0.0
+frame_0275s.jpg,밀리오,2,hex_r2_c2,2,1,4.4,2.0,2.4,54.55
+frame_0275s.jpg,밀리오,2,hex_r3_c0,2,1,4.4,2.0,2.4,54.55
+frame_0275s.jpg,밀리오,2,bench_2,1,1,2.0,2.0,0.0,0.0
+frame_0275s.jpg,밀리오,2,bench_6,1,1,2.0,2.0,0.0,0.0
+frame_0275s.jpg,밀리오,2,bench_7,1,1,2.0,2.0,0.0,0.0
+late_frame_1300s.jpg,소나,5,hex_r1_c0,3,3,18.0,18.0,0.0,0.0
+late_frame_1500s.jpg,빅토르,3,hex_r3_c0,2,2,6.6,6.6,0.0,0.0
+late_frame_1500s.jpg,나서스,1,hex_r3_c3,3,1,3.6,1.0,2.6,72.22
+late_frame_1700s.jpg,소나,5,hex_r3_c3,2,2,11.0,11.0,0.0,0.0
