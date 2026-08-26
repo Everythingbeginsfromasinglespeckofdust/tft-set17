@@ -232,7 +232,7 @@ class ShopRecognizerV2:
         best_cost = max(counts.items(), key=lambda x: x[1])[0]
         return best_cost
 
-    def recognize_slot(self, card_crop: np.ndarray, slot_index: int = 0) -> RecognizedCard:
+    def recognize_slot(self, card_crop: np.ndarray, slot_index: int = 0, fast_mode: bool = False) -> RecognizedCard:
         """단일 카드 슬롯 정밀 인식."""
         if card_crop is None or card_crop.size == 0:
             return RecognizedCard(slot_index=slot_index, status=SlotStatus.NO_DETECTION)
@@ -275,11 +275,15 @@ class ShopRecognizerV2:
                     best_s = max_v
             portrait_scores[cname] = max(0.0, float(best_s))
 
+        max_port = max(portrait_scores.values()) if portrait_scores else 0.0
+
         # 4. 이름 배너 OCR
         text_roi = card_crop[86:118, 10:128]
         ocr_scores = {cname: 0.0 for cname in valid_candidates}
         raw_ocr = ""
-        if text_roi.size > 0 and pytesseract is not None:
+        should_do_ocr = not (fast_mode and max_port >= 0.40)
+
+        if should_do_ocr and text_roi.size > 0 and pytesseract is not None:
             hsv = cv2.cvtColor(text_roi, cv2.COLOR_BGR2HSV)
             mask_white = cv2.inRange(hsv, np.array([0, 0, 170]), np.array([180, 65, 255]))
             mask_gold = cv2.inRange(hsv, np.array([15, 60, 170]), np.array([40, 255, 255]))
@@ -296,6 +300,8 @@ class ShopRecognizerV2:
                         ocr_scores[cname] = float(ratio)
             except Exception:
                 pass
+        elif fast_mode:
+            ocr_scores = {cname: portrait_scores.get(cname, 0.0) for cname in valid_candidates}
 
         # 5. 앙상블 합성 (Candidate Fusion)
         candidate_objs: List[CandidateScore] = []
@@ -339,7 +345,7 @@ class ShopRecognizerV2:
             candidates=candidate_objs
         )
 
-    def recognize_shop(self, frame: np.ndarray) -> List[RecognizedCard]:
+    def recognize_shop(self, frame: np.ndarray, fast_mode: bool = False) -> List[RecognizedCard]:
         """프레임 전체에서 5개 상점 슬롯을 일괄 인식."""
         _, slot_crops = self.get_shop_crop_and_slots(frame)
         results: List[RecognizedCard] = []
