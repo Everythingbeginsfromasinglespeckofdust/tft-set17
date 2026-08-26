@@ -1,0 +1,33 @@
+frame,unit,location,gt_star_level,pred_star_level,is_correct
+frame_0125s.jpg,리븐,hex_r0_c1,1,1,True
+frame_0125s.jpg,렉사이,hex_r1_c6,1,1,True
+frame_0125s.jpg,밀리오,hex_r3_c0,1,1,True
+frame_0150s.jpg,렉사이,hex_r1_c6,1,1,True
+frame_0150s.jpg,밀리오,hex_r3_c0,1,1,True
+frame_0150s.jpg,소나,hex_r3_c3,1,1,True
+frame_0150s.jpg,조이,bench_2,1,1,True
+frame_0150s.jpg,밀리오,bench_6,1,1,True
+frame_0215s.jpg,렉사이,hex_r1_c6,1,1,True
+frame_0215s.jpg,밀리오,hex_r3_c0,2,2,True
+frame_0215s.jpg,조이,bench_0,1,1,True
+frame_0215s.jpg,밀리오,bench_1,1,2,False
+frame_0215s.jpg,밀리오,bench_2,1,2,False
+frame_0215s.jpg,밀리오,bench_7,1,2,False
+frame_0245s.jpg,미스 포츈,hex_r1_c3,1,1,True
+frame_0245s.jpg,렉사이,hex_r1_c6,1,1,True
+frame_0245s.jpg,밀리오,hex_r3_c0,2,1,False
+frame_0245s.jpg,조이,bench_0,1,1,True
+frame_0245s.jpg,밀리오,bench_1,1,1,True
+frame_0245s.jpg,밀리오,bench_2,1,1,True
+frame_0245s.jpg,밀리오,bench_7,1,1,True
+frame_0275s.jpg,미스 포츈,hex_r1_c3,1,1,True
+frame_0275s.jpg,렉사이,hex_r1_c6,1,1,True
+frame_0275s.jpg,밀리오,hex_r2_c2,2,1,False
+frame_0275s.jpg,밀리오,hex_r3_c0,2,1,False
+frame_0275s.jpg,밀리오,bench_2,1,1,True
+frame_0275s.jpg,밀리오,bench_6,1,1,True
+frame_0275s.jpg,밀리오,bench_7,1,1,True
+late_frame_1300s.jpg,소나,hex_r1_c0,3,3,True
+late_frame_1500s.jpg,빅토르,hex_r3_c0,2,2,True
+late_frame_1500s.jpg,나서스,hex_r3_c3,3,1,False
+late_frame_1700s.jpg,소나,hex_r3_c3,2,2,True

@@ -25,3 +25,5 @@ TFT_Spider/
 output/video_analysis/frames_sample/
 
 output/video_analysis/late_frames/
+
+output/video_analysis/full_sampling_frames/

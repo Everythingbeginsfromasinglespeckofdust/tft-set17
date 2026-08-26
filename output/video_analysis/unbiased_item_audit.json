@@ -1,0 +1,2080 @@
+{
+  "total_item_slots_audited": 207,
+  "total_tp": 0,
+  "total_fp": 0,
+  "total_tn": 207,
+  "total_fn": 0,
+  "accuracy": 100.0,
+  "records": [
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r1_c2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r1_c2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r1_c2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "나서스",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "나서스",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "나서스",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 60,
+      "frame": "frame_0060s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "조이",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "조이",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "조이",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 150,
+      "frame": "frame_0150s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r0_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r0_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r0_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 300,
+      "frame": "frame_0300s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r0_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c4",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c4",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "리븐",
+      "location": "hex_r0_c4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "소나",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 450,
+      "frame": "frame_0450s.jpg",
+      "unit": "밀리오",
+      "location": "bench_7",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r1_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r1_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r1_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r2_c5",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r2_c5",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r2_c5",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "리븐",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "리븐",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "리븐",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c4",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c4",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r3_c4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 600,
+      "frame": "frame_0600s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "마스터 이",
+      "location": "hex_r0_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "마스터 이",
+      "location": "hex_r0_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "마스터 이",
+      "location": "hex_r0_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "미스 포츈",
+      "location": "hex_r1_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r2_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r2_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "렉사이",
+      "location": "hex_r2_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "조이",
+      "location": "bench_0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 900,
+      "frame": "frame_0900s.jpg",
+      "unit": "밀리오",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r1_c6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r2_c2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r2_c2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "hex_r2_c2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "hex_r2_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "hex_r3_c0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "벨베스",
+      "location": "hex_r3_c2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "hex_r3_c3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_0",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_1",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_2",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_3",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_4",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "밀리오",
+      "location": "bench_5",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_6",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_6",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "일라오이",
+      "location": "bench_6",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "나서스",
+      "location": "bench_7",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "bench_8",
+      "item_slot_idx": 0,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "bench_8",
+      "item_slot_idx": 1,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    },
+    {
+      "timestamp_sec": 1500,
+      "frame": "frame_1500s.jpg",
+      "unit": "빅토르",
+      "location": "bench_8",
+      "item_slot_idx": 2,
+      "gt_item": "EMPTY",
+      "pred_item": null,
+      "outcome": "TN"
+    }
+  ]
+}
