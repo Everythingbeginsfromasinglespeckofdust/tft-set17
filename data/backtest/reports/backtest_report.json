@@ -1,0 +1,246 @@
+{
+  "total_samples": 584,
+  "total_matches": 64,
+  "total_participants": 501,
+  "data_source_distribution": {
+    "historical_match_snapshot": 500,
+    "historical_video_audit": 84
+  },
+  "recommendation_agreement": {
+    "ROLL": 0.0,
+    "OVERALL": 0.0
+  },
+  "action_confusion_matrix": {
+    "ROLL": {
+      "ROLL": 0,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 84
+    },
+    "LEVEL_UP": {
+      "ROLL": 0,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0
+    },
+    "SAVE_GOLD": {
+      "ROLL": 0,
+      "LEVEL_UP": 0,
+      "SAVE_GOLD": 0
+    }
+  },
+  "unknown_action_rate": 0.8562,
+  "coverage": 0.1438,
+  "baseline_comparisons": {
+    "DecisionEngine_v1.1": {
+      "agreement_rate": 0.0,
+      "pct_roll": 0.2277,
+      "pct_level_up": 0.036,
+      "pct_save_gold": 0.7363
+    },
+    "AlwaysSave": {
+      "agreement_rate": 0.0,
+      "pct_roll": 0.0,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 1.0
+    },
+    "HPThreshold": {
+      "agreement_rate": 0.0,
+      "pct_roll": 0.7483,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 0.2517
+    },
+    "RuleEngine": {
+      "agreement_rate": 0.0,
+      "pct_roll": 0.3219,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 0.6781
+    }
+  },
+  "outcome_summary": {
+    "total_with_placement": 584,
+    "avg_placement": 4.14,
+    "top4_rate": 0.5736
+  },
+  "stratification_by_hp": [
+    {
+      "group_name": "HP 0-20 (Critical)",
+      "sample_count": 437,
+      "avg_placement": 5.0,
+      "top4_rate": 0.4302,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "HP 21-35 (Crisis)",
+      "sample_count": 0,
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "HP 36-50 (Low)",
+      "sample_count": 0,
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "HP 51-65 (Mid)",
+      "sample_count": 84,
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "HP 66+ (Safe)",
+      "sample_count": 63,
+      "avg_placement": 1.0,
+      "top4_rate": 1.0,
+      "agreement_rate": null
+    }
+  ],
+  "stratification_by_gold": [
+    {
+      "group_name": "Gold 0-19 (Poor)",
+      "sample_count": 423,
+      "avg_placement": 4.41,
+      "top4_rate": 0.5154,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "Gold 20-39 (Building)",
+      "sample_count": 130,
+      "avg_placement": 3.02,
+      "top4_rate": 0.8077,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "Gold 40-59 (Econ Target)",
+      "sample_count": 29,
+      "avg_placement": 4.97,
+      "top4_rate": 0.4138,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "Gold 60+ (Rich)",
+      "sample_count": 2,
+      "avg_placement": 7.5,
+      "top4_rate": 0.0,
+      "agreement_rate": null
+    }
+  ],
+  "stratification_by_stage": [
+    {
+      "group_name": "Stage 2-x",
+      "sample_count": 0,
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "Stage 3-x",
+      "sample_count": 24,
+      "avg_placement": 2.5,
+      "top4_rate": 0.9167,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "Stage 4-x",
+      "sample_count": 78,
+      "avg_placement": 4.96,
+      "top4_rate": 0.4872,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "Stage 5-x",
+      "sample_count": 255,
+      "avg_placement": 5.51,
+      "top4_rate": 0.2392,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "Stage 6+",
+      "sample_count": 227,
+      "avg_placement": 2.49,
+      "top4_rate": 0.9427,
+      "agreement_rate": null
+    }
+  ],
+  "stratification_by_level": [
+    {
+      "group_name": "Level 6 & below",
+      "sample_count": 1,
+      "avg_placement": 8.0,
+      "top4_rate": 0.0,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "Level 7",
+      "sample_count": 125,
+      "avg_placement": 3.48,
+      "top4_rate": 0.696,
+      "agreement_rate": 0.0
+    },
+    {
+      "group_name": "Level 8",
+      "sample_count": 172,
+      "avg_placement": 5.42,
+      "top4_rate": 0.3256,
+      "agreement_rate": null
+    },
+    {
+      "group_name": "Level 9+",
+      "sample_count": 286,
+      "avg_placement": 3.64,
+      "top4_rate": 0.6713,
+      "agreement_rate": null
+    }
+  ],
+  "margin_tier_analysis": [
+    {
+      "tier_name": "Tight Margin [0.00, 0.02)",
+      "count": 222,
+      "percentage": 0.3801,
+      "avg_placement": 3.27,
+      "top4_rate": 0.7162,
+      "agreement_rate": 0.0
+    },
+    {
+      "tier_name": "Moderate Margin [0.02, 0.05)",
+      "count": 305,
+      "percentage": 0.5223,
+      "avg_placement": 4.58,
+      "top4_rate": 0.5016,
+      "agreement_rate": null
+    },
+    {
+      "tier_name": "Clear Margin [0.05, 0.10)",
+      "count": 50,
+      "percentage": 0.0856,
+      "avg_placement": 4.98,
+      "top4_rate": 0.44,
+      "agreement_rate": null
+    },
+    {
+      "tier_name": "Decisive Margin [0.10+)",
+      "count": 7,
+      "percentage": 0.012,
+      "avg_placement": 6.57,
+      "top4_rate": 0.1429,
+      "agreement_rate": null
+    }
+  ],
+  "simulation_errors": {
+    "gold_prediction_mae": 18.23,
+    "gold_prediction_rmse": 20.02,
+    "gold_prediction_mean_error": 13.55,
+    "sample_size": 584
+  },
+  "failure_cases_count": 0,
+  "failure_cases_sample": [],
+  "data_limitations": [
+    "Riot Match-V1 API endpoint provides endgame final state (level, gold_left, placement) but does not record tick-by-tick player decisions.",
+    "Intermediate state player actions are marked as UNKNOWN for match snapshots to prevent falsification.",
+    "Video CV audit timeline contains verified real player action detections (REROLL, BUY).",
+    "Survival score is an uncalibrated heuristic metric and should not be interpreted as a statistical empirical probability without real match match-up logs."
+  ],
+  "metadata": {}
+}
