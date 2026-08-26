@@ -1,0 +1,2109 @@
+{
+  "events": [
+    {
+      "timestamp_sec": 321.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 340.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 343.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "소나",
+        "쉔",
+        "제드",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "소나",
+        "나서스",
+        "EMPTY",
+        "그웬"
+      ]
+    },
+    {
+      "timestamp_sec": 343.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "밀리오",
+        "EMPTY",
+        "그웬"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "밀리오",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 350.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 350.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 352.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "소나",
+        "나서스",
+        "EMPTY",
+        "그웬"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "마스터 이",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 352.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "나서스"
+    },
+    {
+      "timestamp_sec": 353.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "마스터 이",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "나서스",
+        "제드",
+        "그웬"
+      ]
+    },
+    {
+      "timestamp_sec": 353.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "그웬"
+    },
+    {
+      "timestamp_sec": 354.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 356.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 358.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 358.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 359.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 360.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "오른"
+    },
+    {
+      "timestamp_sec": 360.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "나서스",
+        "제드",
+        "그웬"
+      ],
+      "new_shop": [
+        "오른",
+        "EMPTY",
+        "나서스",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 360.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "오른"
+    },
+    {
+      "timestamp_sec": 363.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "쉔",
+        "제드",
+        "그웬"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "마스터 이",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 369.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "나서스"
+    },
+    {
+      "timestamp_sec": 369.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "마스터 이",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "쉔",
+        "EMPTY",
+        "그웬"
+      ]
+    },
+    {
+      "timestamp_sec": 370.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "밀리오",
+        "EMPTY",
+        "그웬"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "소나",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 381.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "판테온"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 381.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "판테온"
+      ]
+    },
+    {
+      "timestamp_sec": 409.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "판테온"
+    },
+    {
+      "timestamp_sec": 422.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "벨베스",
+        "벨베스"
+      ],
+      "new_shop": [
+        "빅토르",
+        "EMPTY",
+        "EMPTY",
+        "나서스",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 424.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "빅토르",
+        "EMPTY",
+        "EMPTY",
+        "나서스",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "벨베스",
+        "벨베스"
+      ]
+    },
+    {
+      "timestamp_sec": 443.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 515.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 518.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 519.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 519.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 519.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 520.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 520.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 521.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 521.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 526.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 540.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 541.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "미스 포츈",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 557.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "렉사이",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 560.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 563.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 564.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "사미라"
+    },
+    {
+      "timestamp_sec": 566.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 568.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 568.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 577.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 577.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 585.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "나서스"
+      ]
+    },
+    {
+      "timestamp_sec": 586.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "나서스"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 586.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 586.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 586.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 587.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 587.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 587.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 590.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "벨베스",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "EMPTY",
+        "쉔",
+        "벨베스"
+      ]
+    },
+    {
+      "timestamp_sec": 590.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "EMPTY",
+        "쉔",
+        "벨베스"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "벨베스",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 629.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 633.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 634.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 636.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 642.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 645.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 655.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "벨베스",
+        "판테온"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 657.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 668.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 669.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 669.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 669.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 670.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 670.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 671.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 671.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "렉사이",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 681.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 681.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 721.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "제드",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 728.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 729.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 731.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "빅토르"
+    },
+    {
+      "timestamp_sec": 731.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "쉔"
+    },
+    {
+      "timestamp_sec": 732.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "꼬마 정령"
+    },
+    {
+      "timestamp_sec": 734.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 739.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "나서스"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 739.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "쉔",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 744.4,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 744.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈"
+      ]
+    },
+    {
+      "timestamp_sec": 788.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "밀리오",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "쉔",
+        "EMPTY",
+        "그웬"
+      ]
+    },
+    {
+      "timestamp_sec": 788.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "일라오이",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "모르가나",
+        "쉔",
+        "EMPTY",
+        "그웬"
+      ]
+    },
+    {
+      "timestamp_sec": 789.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "모르가나",
+        "일라오이",
+        "미스 포츈",
+        "그웬"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "나서스",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 792.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 795.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 798.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 799.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 800.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 801.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 809.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 813.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 824.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "쉔",
+        "EMPTY",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "빅토르",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 824.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "그웬"
+    },
+    {
+      "timestamp_sec": 824.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "리산드라"
+    },
+    {
+      "timestamp_sec": 829.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 829.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 830.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 830.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 832.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "꼬마 정령"
+    },
+    {
+      "timestamp_sec": 833.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 836.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "렉사이",
+        "미스 포츈",
+        "미스 포츈"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "미스 포츈",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 839.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 840.0,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 840.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 841.6,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 841.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY",
+        "EMPTY"
+      ]
+    },
+    {
+      "timestamp_sec": 845.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 877.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 896.2,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈",
+        "벨베스"
+      ],
+      "new_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ]
+    },
+    {
+      "timestamp_sec": 896.8,
+      "event": "REROLL_CANDIDATE",
+      "prev_shop": [
+        "쉔",
+        "EMPTY",
+        "벨베스",
+        "쉔",
+        "마스터 이"
+      ],
+      "new_shop": [
+        "EMPTY",
+        "미스 포츈",
+        "EMPTY",
+        "미스 포츈",
+        "벨베스"
+      ]
+    }
+  ],
+  "buy_events": [
+    {
+      "timestamp_sec": 321.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 340.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 350.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 350.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 352.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "나서스"
+    },
+    {
+      "timestamp_sec": 353.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "그웬"
+    },
+    {
+      "timestamp_sec": 354.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 356.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 358.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 358.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 359.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 360.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "오른"
+    },
+    {
+      "timestamp_sec": 360.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "오른"
+    },
+    {
+      "timestamp_sec": 369.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "나서스"
+    },
+    {
+      "timestamp_sec": 409.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "판테온"
+    },
+    {
+      "timestamp_sec": 443.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 515.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 526.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 560.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 564.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "사미라"
+    },
+    {
+      "timestamp_sec": 566.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 629.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "벨베스"
+    },
+    {
+      "timestamp_sec": 633.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 634.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 636.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 642.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 645.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "마스터 이"
+    },
+    {
+      "timestamp_sec": 657.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 681.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 681.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "제드"
+    },
+    {
+      "timestamp_sec": 728.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 729.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 731.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "빅토르"
+    },
+    {
+      "timestamp_sec": 731.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "쉔"
+    },
+    {
+      "timestamp_sec": 732.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "꼬마 정령"
+    },
+    {
+      "timestamp_sec": 734.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 3,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 792.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 795.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 798.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 799.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 800.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 801.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 2,
+      "champion": "소나"
+    },
+    {
+      "timestamp_sec": 809.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 813.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "밀리오"
+    },
+    {
+      "timestamp_sec": 824.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "그웬"
+    },
+    {
+      "timestamp_sec": 824.8,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "리산드라"
+    },
+    {
+      "timestamp_sec": 832.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "꼬마 정령"
+    },
+    {
+      "timestamp_sec": 833.6,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 5,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 839.0,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 4,
+      "champion": "미스 포츈"
+    },
+    {
+      "timestamp_sec": 845.4,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    },
+    {
+      "timestamp_sec": 877.2,
+      "event": "BUY_CANDIDATE",
+      "bought_slot": 1,
+      "champion": "렉사이"
+    }
+  ],
+  "inference": {
+    "total_buy_events": 51,
+    "unique_champions_purchased": 16,
+    "star_completions": [
+      {
+        "champion": "소나",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 356.6,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          350.6,
+          354.4,
+          356.6
+        ]
+      },
+      {
+        "champion": "제드",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 359.8,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          350.8,
+          358.6,
+          359.8
+        ]
+      },
+      {
+        "champion": "미스 포츈",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 560.4,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          321.4,
+          340.0,
+          560.4
+        ]
+      },
+      {
+        "champion": "벨베스",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 629.4,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          443.6,
+          515.8,
+          629.4
+        ]
+      },
+      {
+        "champion": "마스터 이",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 645.0,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          636.2,
+          642.8,
+          645.0
+        ]
+      },
+      {
+        "champion": "렉사이",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 681.4,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          526.2,
+          657.6,
+          681.4
+        ]
+      },
+      {
+        "champion": "미스 포츈",
+        "star_level": 2,
+        "completion_index": 2,
+        "timestamp_sec": 728.2,
+        "trigger_copy": 6,
+        "purchase_timestamps": [
+          321.4,
+          340.0,
+          560.4,
+          566.2,
+          633.6,
+          728.2
+        ]
+      },
+      {
+        "champion": "소나",
+        "star_level": 2,
+        "completion_index": 2,
+        "timestamp_sec": 795.6,
+        "trigger_copy": 6,
+        "purchase_timestamps": [
+          350.6,
+          354.4,
+          356.6,
+          358.0,
+          792.2,
+          795.6
+        ]
+      },
+      {
+        "champion": "소나",
+        "star_level": 3,
+        "completion_index": 1,
+        "timestamp_sec": 800.8,
+        "trigger_copy": 9,
+        "purchase_timestamps": [
+          350.6,
+          354.4,
+          356.6,
+          358.0,
+          792.2,
+          795.6,
+          798.0,
+          799.2,
+          800.8
+        ]
+      },
+      {
+        "champion": "밀리오",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 813.0,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          634.2,
+          809.0,
+          813.0
+        ]
+      },
+      {
+        "champion": "미스 포츈",
+        "star_level": 3,
+        "completion_index": 1,
+        "timestamp_sec": 839.0,
+        "trigger_copy": 9,
+        "purchase_timestamps": [
+          321.4,
+          340.0,
+          560.4,
+          566.2,
+          633.6,
+          728.2,
+          734.0,
+          833.6,
+          839.0
+        ]
+      },
+      {
+        "champion": "렉사이",
+        "star_level": 2,
+        "completion_index": 2,
+        "timestamp_sec": 877.2,
+        "trigger_copy": 6,
+        "purchase_timestamps": [
+          526.2,
+          657.6,
+          681.4,
+          729.2,
+          845.4,
+          877.2
+        ]
+      }
+    ],
+    "final_champion_states": {
+      "미스 포츈": {
+        "total_purchased_copies": 9,
+        "inferred_highest_star": 3,
+        "two_star_count": 3,
+        "three_star_count": 1,
+        "remaining_1star_copies": 0
+      },
+      "소나": {
+        "total_purchased_copies": 10,
+        "inferred_highest_star": 3,
+        "two_star_count": 3,
+        "three_star_count": 1,
+        "remaining_1star_copies": 1
+      },
+      "제드": {
+        "total_purchased_copies": 4,
+        "inferred_highest_star": 2,
+        "two_star_count": 1,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      },
+      "나서스": {
+        "total_purchased_copies": 2,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "그웬": {
+        "total_purchased_copies": 2,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "오른": {
+        "total_purchased_copies": 2,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "판테온": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      },
+      "벨베스": {
+        "total_purchased_copies": 3,
+        "inferred_highest_star": 2,
+        "two_star_count": 1,
+        "three_star_count": 0,
+        "remaining_1star_copies": 0
+      },
+      "렉사이": {
+        "total_purchased_copies": 6,
+        "inferred_highest_star": 2,
+        "two_star_count": 2,
+        "three_star_count": 0,
+        "remaining_1star_copies": 0
+      },
+      "사미라": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      },
+      "밀리오": {
+        "total_purchased_copies": 3,
+        "inferred_highest_star": 2,
+        "two_star_count": 1,
+        "three_star_count": 0,
+        "remaining_1star_copies": 0
+      },
+      "마스터 이": {
+        "total_purchased_copies": 3,
+        "inferred_highest_star": 2,
+        "two_star_count": 1,
+        "three_star_count": 0,
+        "remaining_1star_copies": 0
+      },
+      "빅토르": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      },
+      "쉔": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      },
+      "꼬마 정령": {
+        "total_purchased_copies": 2,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "리산드라": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      }
+    }
+  }
+}

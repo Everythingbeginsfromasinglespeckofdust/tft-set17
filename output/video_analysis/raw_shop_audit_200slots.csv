@@ -1,0 +1,201 @@
+sec,slot,crop_file,gt_champion,gt_cost,pred_champion,pred_cost,detected_color_cost,confidence,outcome,is_empty
+305.2,1,shop_0305.2s_card1.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+305.2,2,shop_0305.2s_card2.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+305.2,3,shop_0305.2s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.4538,FN,False
+305.2,4,shop_0305.2s_card4.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+305.2,5,shop_0305.2s_card5.jpg,렉사이,1,렉사이,1,1,0.5363,TP,False
+320.4,1,shop_0320.4s_card1.jpg,나미,4,EMPTY,2,2,0.3342,FN,False
+320.4,2,shop_0320.4s_card2.jpg,렉사이,1,EMPTY,2,2,0.3377,FN,False
+320.4,3,shop_0320.4s_card3.jpg,미스 포츈,3,EMPTY,3,3,0.4491,FN,False
+320.4,4,shop_0320.4s_card4.jpg,렉사이,1,EMPTY,3,3,0.4023,FN,False
+320.4,5,shop_0320.4s_card5.jpg,렉사이,1,EMPTY,3,3,0.534,FN,False
+321.6,1,shop_0321.6s_card1.jpg,나미,4,EMPTY,2,2,0.334,FN,False
+321.6,2,shop_0321.6s_card2.jpg,마오카이,3,EMPTY,2,2,0.3306,FN,False
+321.6,3,shop_0321.6s_card3.jpg,미스 포츈,3,EMPTY,3,3,0.3899,FN,False
+321.6,4,shop_0321.6s_card4.jpg,렉사이,1,EMPTY,3,3,0.4027,FN,False
+321.6,5,shop_0321.6s_card5.jpg,렉사이,1,EMPTY,3,3,0.5323,FN,False
+324.4,1,shop_0324.4s_card1.jpg,나미,4,EMPTY,2,2,0.335,FN,False
+324.4,2,shop_0324.4s_card2.jpg,렉사이,1,EMPTY,2,2,0.3379,FN,False
+324.4,3,shop_0324.4s_card3.jpg,미스 포츈,3,EMPTY,3,3,0.4492,FN,False
+324.4,4,shop_0324.4s_card4.jpg,제드,5,EMPTY,3,3,0.3609,FN,False
+324.4,5,shop_0324.4s_card5.jpg,렉사이,1,EMPTY,3,3,0.534,FN,False
+326.0,1,shop_0326.0s_card1.jpg,나미,4,EMPTY,2,2,0.3339,FN,False
+326.0,2,shop_0326.0s_card2.jpg,렉사이,1,EMPTY,2,2,0.3377,FN,False
+326.0,3,shop_0326.0s_card3.jpg,미스 포츈,3,EMPTY,3,3,0.4489,FN,False
+326.0,4,shop_0326.0s_card4.jpg,제드,5,EMPTY,3,3,0.3609,FN,False
+326.0,5,shop_0326.0s_card5.jpg,렉사이,1,EMPTY,3,3,0.5348,FN,False
+371.2,1,shop_0371.2s_card1.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+371.2,2,shop_0371.2s_card2.jpg,마스터 이,4,마스터 이,4,3,0.4953,TP,False
+371.2,3,shop_0371.2s_card3.jpg,밀리오,2,EMPTY,3,3,0.5043,FN,False
+371.2,4,shop_0371.2s_card4.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+371.2,5,shop_0371.2s_card5.jpg,소나,5,EMPTY,3,3,0.4471,FN,False
+376.6,1,shop_0376.6s_card1.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+376.6,2,shop_0376.6s_card2.jpg,마스터 이,4,마스터 이,4,3,0.4963,TP,False
+376.6,3,shop_0376.6s_card3.jpg,밀리오,2,EMPTY,3,3,0.5044,FN,False
+376.6,4,shop_0376.6s_card4.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+376.6,5,shop_0376.6s_card5.jpg,리산드라,1,EMPTY,3,3,0.4455,FN,False
+383.8,1,shop_0383.8s_card1.jpg,리산드라,1,EMPTY,3,3,0.4342,FN,False
+383.8,2,shop_0383.8s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.4977,FN,False
+383.8,3,shop_0383.8s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5178,FN,False
+383.8,4,shop_0383.8s_card4.jpg,미스 포츈,3,미스 포츈,3,2,0.4599,TP,False
+383.8,5,shop_0383.8s_card5.jpg,판테온,2,판테온,2,2,0.4509,TP,False
+391.2,1,shop_0391.2s_card1.jpg,리산드라,1,EMPTY,3,3,0.4346,FN,False
+391.2,2,shop_0391.2s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.4974,FN,False
+391.2,3,shop_0391.2s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5176,FN,False
+391.2,4,shop_0391.2s_card4.jpg,미스 포츈,3,미스 포츈,3,2,0.4599,TP,False
+391.2,5,shop_0391.2s_card5.jpg,판테온,2,판테온,2,2,0.4508,TP,False
+414.2,1,shop_0414.2s_card1.jpg,리산드라,1,EMPTY,3,3,0.4343,FN,False
+414.2,2,shop_0414.2s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.4977,FN,False
+414.2,3,shop_0414.2s_card3.jpg,렉사이,1,EMPTY,2,2,0.4621,FN,False
+414.2,4,shop_0414.2s_card4.jpg,벨베스,2,벨베스,2,2,0.6713,TP,False
+414.2,5,shop_0414.2s_card5.jpg,벨베스,2,벨베스,2,2,0.4903,TP,False
+427.2,1,shop_0427.2s_card1.jpg,리산드라,1,EMPTY,3,3,0.4341,FN,False
+427.2,2,shop_0427.2s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.4976,FN,False
+427.2,3,shop_0427.2s_card3.jpg,렉사이,1,EMPTY,2,2,0.4617,FN,False
+427.2,4,shop_0427.2s_card4.jpg,벨베스,2,벨베스,2,2,0.6713,TP,False
+427.2,5,shop_0427.2s_card5.jpg,벨베스,2,벨베스,2,2,0.491,TP,False
+430.6,1,shop_0430.6s_card1.jpg,리산드라,1,EMPTY,3,3,0.4344,FN,False
+430.6,2,shop_0430.6s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.4977,FN,False
+430.6,3,shop_0430.6s_card3.jpg,렉사이,1,EMPTY,2,2,0.4621,FN,False
+430.6,4,shop_0430.6s_card4.jpg,벨베스,2,벨베스,2,2,0.6715,TP,False
+430.6,5,shop_0430.6s_card5.jpg,벨베스,2,벨베스,2,2,0.4893,TP,False
+462.8,1,shop_0462.8s_card1.jpg,렉사이,1,EMPTY,3,3,0.4099,FN,False
+462.8,2,shop_0462.8s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5493,TP,False
+462.8,3,shop_0462.8s_card3.jpg,제드,5,EMPTY,2,2,0.4967,FN,False
+462.8,4,shop_0462.8s_card4.jpg,미스 포츈,3,EMPTY,2,2,0.4281,FN,False
+462.8,5,shop_0462.8s_card5.jpg,렉사이,1,EMPTY,3,3,0.5337,FN,False
+476.2,1,shop_0476.2s_card1.jpg,렉사이,1,EMPTY,3,3,0.4151,FN,False
+476.2,2,shop_0476.2s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5495,TP,False
+476.2,3,shop_0476.2s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.504,FN,False
+476.2,4,shop_0476.2s_card4.jpg,벨베스,2,EMPTY,2,2,0.4348,FN,False
+476.2,5,shop_0476.2s_card5.jpg,렉사이,1,EMPTY,3,3,0.5125,FN,False
+479.0,1,shop_0479.0s_card1.jpg,렉사이,1,EMPTY,3,3,0.4151,FN,False
+479.0,2,shop_0479.0s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5493,TP,False
+479.0,3,shop_0479.0s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5058,FN,False
+479.0,4,shop_0479.0s_card4.jpg,벨베스,2,EMPTY,2,2,0.4478,FN,False
+479.0,5,shop_0479.0s_card5.jpg,렉사이,1,EMPTY,3,3,0.513,FN,False
+480.4,1,shop_0480.4s_card1.jpg,렉사이,1,EMPTY,3,3,0.415,FN,False
+480.4,2,shop_0480.4s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5491,TP,False
+480.4,3,shop_0480.4s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5058,FN,False
+480.4,4,shop_0480.4s_card4.jpg,벨베스,2,EMPTY,2,2,0.4479,FN,False
+480.4,5,shop_0480.4s_card5.jpg,렉사이,1,EMPTY,3,3,0.513,FN,False
+482.8,1,shop_0482.8s_card1.jpg,렉사이,1,EMPTY,3,3,0.4155,FN,False
+482.8,2,shop_0482.8s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5493,TP,False
+482.8,3,shop_0482.8s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5057,FN,False
+482.8,4,shop_0482.8s_card4.jpg,벨베스,2,EMPTY,2,2,0.4484,FN,False
+482.8,5,shop_0482.8s_card5.jpg,렉사이,1,EMPTY,3,3,0.5126,FN,False
+490.4,1,shop_0490.4s_card1.jpg,렉사이,1,EMPTY,3,3,0.4154,FN,False
+490.4,2,shop_0490.4s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.549,TP,False
+490.4,3,shop_0490.4s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5061,FN,False
+490.4,4,shop_0490.4s_card4.jpg,벨베스,2,EMPTY,2,2,0.4482,FN,False
+490.4,5,shop_0490.4s_card5.jpg,렉사이,1,EMPTY,3,3,0.5115,FN,False
+500.6,1,shop_0500.6s_card1.jpg,렉사이,1,EMPTY,3,3,0.4154,FN,False
+500.6,2,shop_0500.6s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.549,TP,False
+500.6,3,shop_0500.6s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.506,FN,False
+500.6,4,shop_0500.6s_card4.jpg,벨베스,2,EMPTY,2,2,0.4482,FN,False
+500.6,5,shop_0500.6s_card5.jpg,렉사이,1,EMPTY,3,3,0.5113,FN,False
+525.2,1,shop_0525.2s_card1.jpg,렉사이,1,EMPTY,3,3,0.5206,FN,False
+525.2,2,shop_0525.2s_card2.jpg,빅토르,3,EMPTY,2,2,0.4987,FN,False
+525.2,3,shop_0525.2s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.56,FN,False
+525.2,4,shop_0525.2s_card4.jpg,렉사이,1,EMPTY,3,3,0.5637,FN,False
+525.2,5,shop_0525.2s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.4562,TP,False
+527.6,1,shop_0527.6s_card1.jpg,렉사이,1,EMPTY,3,3,0.5206,FN,False
+527.6,2,shop_0527.6s_card2.jpg,빅토르,3,EMPTY,2,2,0.4983,FN,False
+527.6,3,shop_0527.6s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5601,FN,False
+527.6,4,shop_0527.6s_card4.jpg,렉사이,1,EMPTY,3,3,0.5636,FN,False
+527.6,5,shop_0527.6s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.4562,TP,False
+527.8,1,shop_0527.8s_card1.jpg,렉사이,1,EMPTY,3,3,0.5213,FN,False
+527.8,2,shop_0527.8s_card2.jpg,빅토르,3,EMPTY,2,2,0.4989,FN,False
+527.8,3,shop_0527.8s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5608,FN,False
+527.8,4,shop_0527.8s_card4.jpg,렉사이,1,EMPTY,3,3,0.564,FN,False
+527.8,5,shop_0527.8s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.4559,TP,False
+575.6,1,shop_0575.6s_card1.jpg,미스 포츈,3,EMPTY,2,2,0.3399,FN,False
+575.6,2,shop_0575.6s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.3949,FN,False
+575.6,3,shop_0575.6s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.47,FN,False
+575.6,4,shop_0575.6s_card4.jpg,미스 포츈,3,EMPTY,2,2,0.342,FN,False
+575.6,5,shop_0575.6s_card5.jpg,판테온,2,EMPTY,3,3,0.4059,FN,False
+578.6,1,shop_0578.6s_card1.jpg,미스 포츈,3,EMPTY,2,2,0.3391,FN,False
+578.6,2,shop_0578.6s_card2.jpg,미스 포츈,3,EMPTY,2,2,0.395,FN,False
+578.6,3,shop_0578.6s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.4699,FN,False
+578.6,4,shop_0578.6s_card4.jpg,미스 포츈,3,EMPTY,2,2,0.3424,FN,False
+578.6,5,shop_0578.6s_card5.jpg,판테온,2,EMPTY,3,3,0.4026,FN,False
+658.8,1,shop_0658.8s_card1.jpg,벨베스,2,EMPTY,5,5,0.4522,FN,False
+658.8,2,shop_0658.8s_card2.jpg,렉사이,1,EMPTY,3,3,0.5544,FN,False
+658.8,3,shop_0658.8s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5115,FN,False
+658.8,4,shop_0658.8s_card4.jpg,리산드라,1,EMPTY,3,3,0.4829,FN,False
+658.8,5,shop_0658.8s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.5467,TP,False
+660.8,1,shop_0660.8s_card1.jpg,쉔,5,EMPTY,5,5,0.4529,FN,False
+660.8,2,shop_0660.8s_card2.jpg,렉사이,1,EMPTY,3,3,0.5545,FN,False
+660.8,3,shop_0660.8s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5116,FN,False
+660.8,4,shop_0660.8s_card4.jpg,리산드라,1,EMPTY,3,3,0.4827,FN,False
+660.8,5,shop_0660.8s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.5466,TP,False
+661.4,1,shop_0661.4s_card1.jpg,벨베스,2,EMPTY,5,5,0.4526,FN,False
+661.4,2,shop_0661.4s_card2.jpg,렉사이,1,EMPTY,3,3,0.5546,FN,False
+661.4,3,shop_0661.4s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5116,FN,False
+661.4,4,shop_0661.4s_card4.jpg,리산드라,1,EMPTY,3,3,0.4827,FN,False
+661.4,5,shop_0661.4s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.5466,TP,False
+683.0,1,shop_0683.0s_card1.jpg,벨베스,2,EMPTY,5,5,0.4627,FN,False
+683.0,2,shop_0683.0s_card2.jpg,렉사이,1,EMPTY,3,3,0.5541,FN,False
+683.0,3,shop_0683.0s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5113,FN,False
+683.0,4,shop_0683.0s_card4.jpg,리산드라,1,EMPTY,3,3,0.4825,FN,False
+683.0,5,shop_0683.0s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.547,TP,False
+729.0,1,shop_0729.0s_card1.jpg,리산드라,1,EMPTY,3,3,0.4343,FN,False
+729.0,2,shop_0729.0s_card2.jpg,미스 포츈,3,미스 포츈,3,3,0.5974,TP,False
+729.0,3,shop_0729.0s_card3.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+729.0,4,shop_0729.0s_card4.jpg,렉사이,1,EMPTY,3,3,0.5922,FN,False
+729.0,5,shop_0729.0s_card5.jpg,나서스,1,나서스,1,3,0.4621,TP,False
+761.6,1,shop_0761.6s_card1.jpg,벨베스,2,EMPTY,5,5,0.4524,FN,False
+761.6,2,shop_0761.6s_card2.jpg,렉사이,1,EMPTY,3,3,0.4947,FN,False
+761.6,3,shop_0761.6s_card3.jpg,미스 포츈,3,미스 포츈,3,3,0.5208,TP,False
+761.6,4,shop_0761.6s_card4.jpg,밀리오,2,EMPTY,2,2,0.31,FN,False
+761.6,5,shop_0761.6s_card5.jpg,나서스,1,EMPTY,3,3,0.5548,FN,False
+761.8,1,shop_0761.8s_card1.jpg,벨베스,2,EMPTY,5,5,0.4524,FN,False
+761.8,2,shop_0761.8s_card2.jpg,렉사이,1,EMPTY,3,3,0.4948,FN,False
+761.8,3,shop_0761.8s_card3.jpg,미스 포츈,3,미스 포츈,3,3,0.5209,TP,False
+761.8,4,shop_0761.8s_card4.jpg,밀리오,2,EMPTY,2,2,0.31,FN,False
+761.8,5,shop_0761.8s_card5.jpg,나서스,1,EMPTY,3,3,0.555,FN,False
+774.8,1,shop_0774.8s_card1.jpg,벨베스,2,EMPTY,5,5,0.4554,FN,False
+774.8,2,shop_0774.8s_card2.jpg,렉사이,1,EMPTY,3,3,0.4948,FN,False
+774.8,3,shop_0774.8s_card3.jpg,미스 포츈,3,미스 포츈,3,3,0.5205,TP,False
+774.8,4,shop_0774.8s_card4.jpg,탐 켄치,4,EMPTY,2,2,0.3101,FN,False
+774.8,5,shop_0774.8s_card5.jpg,미스 포츈,3,미스 포츈,3,3,0.5538,TP,False
+797.8,1,shop_0797.8s_card1.jpg,코르키,4,EMPTY,5,5,0.2994,FN,False
+797.8,2,shop_0797.8s_card2.jpg,소나,5,소나,5,5,0.5521,TP,False
+797.8,3,shop_0797.8s_card3.jpg,나서스,1,나서스,1,4,0.572,TP,False
+797.8,4,shop_0797.8s_card4.jpg,소나,5,EMPTY,2,2,0.4864,FN,False
+797.8,5,shop_0797.8s_card5.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+798.8,1,shop_0798.8s_card1.jpg,코르키,4,EMPTY,5,5,0.3075,FN,False
+798.8,2,shop_0798.8s_card2.jpg,소나,5,소나,5,5,0.5497,TP,False
+798.8,3,shop_0798.8s_card3.jpg,나서스,1,나서스,1,4,0.5764,TP,False
+798.8,4,shop_0798.8s_card4.jpg,소나,5,EMPTY,2,2,0.4862,FN,False
+798.8,5,shop_0798.8s_card5.jpg,EMPTY,,EMPTY,,,0.0,TN,True
+808.2,1,shop_0808.2s_card1.jpg,코르키,4,EMPTY,5,5,0.2962,FN,False
+808.2,2,shop_0808.2s_card2.jpg,모르가나,4,EMPTY,5,5,0.4964,FN,False
+808.2,3,shop_0808.2s_card3.jpg,일라오이,3,일라오이,3,4,0.4857,TP,False
+808.2,4,shop_0808.2s_card4.jpg,소나,5,EMPTY,2,2,0.4881,FN,False
+808.2,5,shop_0808.2s_card5.jpg,밀리오,2,EMPTY,3,3,0.5646,FN,False
+839.0,1,shop_0839.0s_card1.jpg,렉사이,1,EMPTY,3,3,0.5207,FN,False
+839.0,2,shop_0839.0s_card2.jpg,빅토르,3,EMPTY,2,2,0.4983,FN,False
+839.0,3,shop_0839.0s_card3.jpg,케이틀린,1,EMPTY,3,3,0.4051,FN,False
+839.0,4,shop_0839.0s_card4.jpg,미스 포츈,3,EMPTY,3,3,0.3913,FN,False
+839.0,5,shop_0839.0s_card5.jpg,제드,5,EMPTY,3,3,0.3487,FN,False
+847.4,1,shop_0847.4s_card1.jpg,렉사이,1,EMPTY,3,3,0.5205,FN,False
+847.4,2,shop_0847.4s_card2.jpg,빅토르,3,EMPTY,2,2,0.4984,FN,False
+847.4,3,shop_0847.4s_card3.jpg,미스 포츈,3,EMPTY,2,2,0.5283,FN,False
+847.4,4,shop_0847.4s_card4.jpg,판테온,2,EMPTY,3,3,0.3899,FN,False
+847.4,5,shop_0847.4s_card5.jpg,제드,5,EMPTY,3,3,0.3487,FN,False
+869.4,1,shop_0869.4s_card1.jpg,렉사이,1,EMPTY,3,3,0.5201,FN,False
+869.4,2,shop_0869.4s_card2.jpg,빅토르,3,EMPTY,2,2,0.4982,FN,False
+869.4,3,shop_0869.4s_card3.jpg,나서스,1,EMPTY,2,2,0.4479,FN,False
+869.4,4,shop_0869.4s_card4.jpg,벨베스,2,EMPTY,3,3,0.4107,FN,False
+869.4,5,shop_0869.4s_card5.jpg,제드,5,EMPTY,3,3,0.4028,FN,False
+887.0,1,shop_0887.0s_card1.jpg,렉사이,1,EMPTY,3,3,0.5205,FN,False
+887.0,2,shop_0887.0s_card2.jpg,빅토르,3,EMPTY,2,2,0.4983,FN,False
+887.0,3,shop_0887.0s_card3.jpg,나서스,1,EMPTY,2,2,0.4477,FN,False
+887.0,4,shop_0887.0s_card4.jpg,벨베스,2,EMPTY,3,3,0.4069,FN,False
+887.0,5,shop_0887.0s_card5.jpg,제드,5,EMPTY,3,3,0.4023,FN,False
+889.6,1,shop_0889.6s_card1.jpg,렉사이,1,EMPTY,3,3,0.5204,FN,False
+889.6,2,shop_0889.6s_card2.jpg,빅토르,3,EMPTY,2,2,0.4982,FN,False
+889.6,3,shop_0889.6s_card3.jpg,나서스,1,EMPTY,2,2,0.4479,FN,False
+889.6,4,shop_0889.6s_card4.jpg,벨베스,2,EMPTY,3,3,0.4073,FN,False
+889.6,5,shop_0889.6s_card5.jpg,제드,5,EMPTY,3,3,0.4025,FN,False
