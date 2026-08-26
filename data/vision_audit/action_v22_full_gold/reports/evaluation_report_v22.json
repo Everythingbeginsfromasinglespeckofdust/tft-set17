@@ -1,0 +1,57 @@
+{
+  "total_gt_events": 76,
+  "total_predicted_events": 159,
+  "total_matched_events": 14,
+  "total_false_positives": 145,
+  "total_false_negatives": 32,
+  "timing": {
+    "mae_sec": 0.9286,
+    "median_sec": 1.0,
+    "p95_sec": 1.5
+  },
+  "actions": {
+    "ROLL": {
+      "precision": 0.0746,
+      "recall": 0.3571,
+      "f1": 0.1235,
+      "tp": 10,
+      "fp": 124,
+      "fn": 18,
+      "gt_count": 28,
+      "pred_count": 134
+    },
+    "BUY_UNIT": {
+      "precision": 0.16,
+      "recall": 0.2222,
+      "f1": 0.186,
+      "tp": 4,
+      "fp": 21,
+      "fn": 14,
+      "gt_count": 18,
+      "pred_count": 25
+    },
+    "SYSTEM_REFRESH": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "rule_replay_vs_production": {
+    "ROLL": {
+      "rule_replay_tp": 16,
+      "production_tp": 10,
+      "rule_replay_f1": 0.7273,
+      "production_f1": 0.1235
+    },
+    "BUY_UNIT": {
+      "rule_replay_tp": 18,
+      "production_tp": 4,
+      "rule_replay_f1": 1.0,
+      "production_f1": 0.186
+    }
+  },
+  "confusion_matrix_6x6": {}
+}

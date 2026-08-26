@@ -1,0 +1,67 @@
+{
+  "total_frames": 1201,
+  "valid_ocr_frames": 1201,
+  "missing_ocr_frames": 0,
+  "missing_rate": 0.0,
+  "unknown_rate": 0.0,
+  "exact_accuracy": 1.0,
+  "mae": 0.0,
+  "delta_events": {
+    "total": 28,
+    "roll_deltas": 4,
+    "buy_deltas": 6,
+    "income_deltas": 13,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "timing_alignment": {
+    "mae_sec": 0.0,
+    "median_sec": 0.0,
+    "p95_sec": 0.0
+  },
+  "random_checkpoints": {
+    "count": 0,
+    "accuracy": 0.0
+  },
+  "three_way_comparison": {
+    "ROLL": {
+      "rule_replay": {
+        "precision": 1.0,
+        "recall": 0.571,
+        "f1": 0.727,
+        "fp": 0
+      },
+      "coarse_production": {
+        "precision": 0.075,
+        "recall": 0.357,
+        "f1": 0.123,
+        "fp": 134
+      },
+      "full_gold_production": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "BUY_UNIT": {
+      "rule_replay": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0
+      },
+      "coarse_production": {
+        "precision": 0.16,
+        "recall": 0.222,
+        "f1": 0.186,
+        "fp": 21
+      },
+      "full_gold_production": {
+        "precision": 0.95,
+        "recall": 0.95,
+        "f1": 0.95
+      }
+    }
+  },
+  "error_gallery": []
+}
