@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-"""TFT Decision Engine Backtesting CLI Tool.
+"""TFT Decision Engine Backtesting CLI Tool -- v1.1.
 
-사용법:
+Usage:
     python backtest.py --limit 500 --output data/backtest/reports
-    python backtest.py --video --limit 1000
+    python backtest.py --snapshot-type midgame --output data/backtest/reports
 """
 import argparse
 import os
 import sys
 
-# Ensure src is on python path
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _SRC = os.path.join(_HERE, "src")
 if _SRC not in sys.path:
@@ -18,13 +17,15 @@ if _SRC not in sys.path:
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
+from tft.backtest.models import SnapshotType
 from tft.backtest.dataset import BacktestDataset
 from tft.backtest.runner import BacktestRunner
 from tft.backtest.evaluator import BacktestEvaluator
 from tft.backtest.reporting import ReportGenerator
 
+
 def parse_args():
-    parser = argparse.ArgumentParser(description="TFT Decision Engine Backtesting Framework CLI")
+    parser = argparse.ArgumentParser(description="TFT Decision Engine Backtesting Framework CLI (v1.1)")
     parser.add_argument(
         "--input",
         type=str,
@@ -41,7 +42,7 @@ def parse_args():
         "--limit",
         type=int,
         default=500,
-        help="Sample limit for backtesting (0 for full dataset)"
+        help="Sample limit for match snapshots (0 for all)"
     )
     parser.add_argument(
         "--video",
@@ -56,6 +57,13 @@ def parse_args():
         help="Include synthetic validation samples"
     )
     parser.add_argument(
+        "--snapshot-type",
+        type=str,
+        default="all",
+        choices=["all", "midgame", "endgame"],
+        help="Filter evaluation to specific snapshot type"
+    )
+    parser.add_argument(
         "--seed",
         type=int,
         default=42,
@@ -63,45 +71,51 @@ def parse_args():
     )
     return parser.parse_args()
 
+
 def main():
     args = parse_args()
     print("=" * 80)
-    print("🎮 TFT DECISION ENGINE — BACKTESTING & CALIBRATION FRAMEWORK")
+    print("🎮 TFT DECISION ENGINE -- BACKTESTING & STATISTICAL VALIDITY (v1.1)")
     print("=" * 80)
 
     # 1. Load Samples
     samples = []
-    print(f"[*] Loading historical match snapshots from: {args.input}")
     limit_val = args.limit if args.limit > 0 else None
-    
+
     if os.path.exists(args.input):
+        print(f"[*] Loading historical match snapshots from: {args.input}")
         match_samples = BacktestDataset.load_from_match_snapshots(args.input, limit=limit_val)
         samples.extend(match_samples)
-        print(f"    Loaded {len(match_samples):,} match snapshots.")
+        print(f"    Loaded {len(match_samples):,} ENDGAME snapshots.")
 
-    # Load video audit samples
     if args.video:
         video_path = os.path.join(_HERE, "output", "video_analysis", "10min_audit", "shop_timeline.json")
         if os.path.exists(video_path):
             video_samples = BacktestDataset.load_from_video_audit(video_path)
             samples.extend(video_samples)
-            print(f"    Loaded {len(video_samples):,} video audit snapshots (with real observed actions).")
+            print(f"    Loaded {len(video_samples):,} MIDGAME video snapshots (with observed actions).")
 
-    # Load synthetic if requested
     if args.synthetic:
         synth_samples = BacktestDataset.create_synthetic_dataset(num_samples=50, seed=args.seed)
         samples.extend(synth_samples)
         print(f"    Loaded {len(synth_samples):,} synthetic validation samples.")
 
-    print(f"[*] Total Validated Samples for Evaluation: {len(samples):,}")
+    # Filter by snapshot type if requested
+    if args.snapshot_type == "midgame":
+        samples = [s for s in samples if s.snapshot_type == SnapshotType.MIDGAME_DECISION_SNAPSHOT]
+        print(f"[*] Filtered to MIDGAME snapshots only: {len(samples):,} samples")
+    elif args.snapshot_type == "endgame":
+        samples = [s for s in samples if s.snapshot_type == SnapshotType.ENDGAME_SNAPSHOT]
+        print(f"[*] Filtered to ENDGAME snapshots only: {len(samples):,} samples")
 
+    print(f"[*] Total Validated Samples for Evaluation: {len(samples):,}")
     if not samples:
         print("[!] No samples loaded. Exiting.")
         return
 
     # 2. Match-Level Split Check
     train_samples, test_samples = BacktestDataset.split_by_match(samples, train_ratio=0.8, seed=args.seed)
-    print(f"[*] Match-Level Group Split: Train={len(train_samples):,} samples, Test={len(test_samples):,} samples (Zero Match Overlap)")
+    print(f"[*] Match-Level Group Split: Train={len(train_samples):,} samples, Test={len(test_samples):,} samples (Zero Overlap)")
 
     # 3. Execute Runner
     print("\n[*] Running DecisionEngine and Baseline strategies across dataset...")
@@ -110,7 +124,7 @@ def main():
     print(f"    Evaluated {len(engine_decisions):,} decisions across {1 + len(baseline_decisions)} strategies.")
 
     # 4. Evaluate & Compile Metrics
-    print("\n[*] Compiling Backtest Metrics, Stratifications, and Failure Cases...")
+    print("\n[*] Compiling 15-Section Backtest Metrics, Stratifications, and Failure Cases...")
     evaluator = BacktestEvaluator()
     report = evaluator.evaluate(samples, engine_decisions, baseline_decisions)
 
@@ -118,31 +132,35 @@ def main():
     os.makedirs(args.output, exist_ok=True)
     json_path = os.path.join(args.output, "backtest_report.json")
     md_path = os.path.join(args.output, "backtest_report.md")
-    
+
     ReportGenerator.save_json(report, json_path)
     ReportGenerator.save_markdown(report, md_path)
 
     print(f"[*] Saved JSON Report: {json_path}")
     print(f"[*] Saved Markdown Report: {md_path}")
 
-    # 6. Display Summary to Console
+    # 6. Generate Plots (if matplotlib available)
+    try:
+        from generate_plots import generate_all_plots
+        plot_paths = generate_all_plots(samples, engine_decisions, report, args.output)
+        print(f"[*] Generated {len(plot_paths)} visualization plots in {args.output}")
+    except Exception as e:
+        print(f"[*] Note on plots: {e}")
+
+    # 7. Display Summary to Console
     print("\n" + "=" * 80)
-    print("📈 BACKTEST SUMMARY RESULTS")
+    print("📈 BACKTEST v1.1 VALIDITY SUMMARY")
     print("=" * 80)
     print(f"  • Total Samples Evaluated    : {report.total_samples:,}")
-    print(f"  • Unique Matches             : {report.total_matches:,}")
-    print(f"  • Unique Participants        : {report.total_participants:,}")
-    print(f"  • Action Coverage (Known)    : {report.coverage:.1%}")
-    print(f"  • Overall Behavioral Agrmnt  : {report.recommendation_agreement.get('OVERALL', 0.0):.1%}")
-    print("\n  • Baseline Strategy Comparison:")
-    for strat, m in report.baseline_comparisons.items():
-        print(f"      - {strat:<20}: Agreement={m['agreement_rate']:.1%} | ROLL={m['pct_roll']:.1%}, UP={m['pct_level_up']:.1%}, SAVE={m['pct_save_gold']:.1%}")
-
-    print(f"\n  • Outcome Summary (Valid Placements: {report.outcome_summary.get('total_with_placement', 0):,}):")
-    print(f"      - Average Placement      : {report.outcome_summary.get('avg_placement')}")
-    print(f"      - Top 4 Rate             : {report.outcome_summary.get('top4_rate', 0.0):.1%}")
-    print(f"  • Failure Cases Detected     : {report.failure_cases_count}")
+    print(f"      - ENDGAME Snapshots      : {report.endgame_count:,} (Descriptive / Integrity only)")
+    print(f"      - MIDGAME Snapshots      : {report.midgame_count:,} (Strategy Evaluation)")
+    print(f"  • Action Coverage (Known)    : {report.coverage:.1%} ({report.action_observation_coverage.known_action_samples if report.action_observation_coverage else 0} / {report.total_samples})")
+    print(f"  • Behavioral Agreement       : {report.recommendation_agreement.get('OVERALL', 0.0):.1%} (Note: Behavioral imitation, not performance)")
+    print(f"  • Temporal Violations        : {report.temporal_integrity.violations if report.temporal_integrity else 0}")
+    print(f"  • Data Leakage Detected      : {report.leakage_validation.leakage_detected if report.leakage_validation else 0}")
+    print(f"  • Failure Cases Diagnosed    : {report.failure_cases_count}")
     print("=" * 80)
+
 
 if __name__ == "__main__":
     main()

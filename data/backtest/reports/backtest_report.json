@@ -6,6 +6,31 @@
     "historical_match_snapshot": 500,
     "historical_video_audit": 84
   },
+  "snapshot_type_distribution": {
+    "ENDGAME_SNAPSHOT": 500,
+    "MIDGAME_DECISION_SNAPSHOT": 84
+  },
+  "endgame_count": 500,
+  "midgame_count": 84,
+  "action_observation_coverage": {
+    "total_samples": 584,
+    "known_action_samples": 84,
+    "unknown_action_samples": 500,
+    "coverage_rate": 0.1438,
+    "by_snapshot_type": {
+      "ENDGAME_SNAPSHOT": {
+        "total": 500,
+        "known": 0
+      },
+      "MIDGAME_DECISION_SNAPSHOT": {
+        "total": 84,
+        "known": 84
+      }
+    },
+    "by_action_type": {
+      "ROLL": 84
+    }
+  },
   "recommendation_agreement": {
     "ROLL": 0.0,
     "OVERALL": 0.0
@@ -29,218 +54,1196 @@
   },
   "unknown_action_rate": 0.8562,
   "coverage": 0.1438,
-  "baseline_comparisons": {
-    "DecisionEngine_v1.1": {
-      "agreement_rate": 0.0,
-      "pct_roll": 0.2277,
-      "pct_level_up": 0.036,
-      "pct_save_gold": 0.7363
-    },
-    "AlwaysSave": {
-      "agreement_rate": 0.0,
-      "pct_roll": 0.0,
-      "pct_level_up": 0.0,
-      "pct_save_gold": 1.0
-    },
-    "HPThreshold": {
-      "agreement_rate": 0.0,
-      "pct_roll": 0.7483,
-      "pct_level_up": 0.0,
-      "pct_save_gold": 0.2517
-    },
-    "RuleEngine": {
-      "agreement_rate": 0.0,
-      "pct_roll": 0.3219,
-      "pct_level_up": 0.0,
-      "pct_save_gold": 0.6781
-    }
+  "temporal_integrity": {
+    "total_checked": 584,
+    "violations": 0,
+    "unknown_timestamps": 0,
+    "violation_sample_ids": []
   },
-  "outcome_summary": {
-    "total_with_placement": 584,
-    "avg_placement": 4.14,
-    "top4_rate": 0.5736
+  "leakage_validation": {
+    "total_checked": 584,
+    "leakage_detected": 0,
+    "leakage_types": {},
+    "endgame_in_midgame_report": 0,
+    "placement_in_state": 0
   },
-  "stratification_by_hp": [
+  "midgame_statistics": {
+    "label": "MIDGAME",
+    "count": 84,
+    "with_placement": 84,
+    "avg_placement": 2.0,
+    "top4_rate": 1.0,
+    "known_action_count": 84,
+    "unknown_action_count": 0,
+    "denominator_note": "avg_placement and top4_rate denominator = 84 (samples with known placement)"
+  },
+  "midgame_stratification_by_hp": [
     {
       "group_name": "HP 0-20 (Critical)",
-      "sample_count": 437,
-      "avg_placement": 5.0,
-      "top4_rate": 0.4302,
-      "agreement_rate": null
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
     },
     {
       "group_name": "HP 21-35 (Crisis)",
       "sample_count": 0,
+      "snapshot_type_counts": {},
       "avg_placement": null,
       "top4_rate": null,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
     },
     {
       "group_name": "HP 36-50 (Low)",
       "sample_count": 0,
+      "snapshot_type_counts": {},
       "avg_placement": null,
       "top4_rate": null,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
     },
     {
       "group_name": "HP 51-65 (Mid)",
       "sample_count": 84,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
       "avg_placement": 2.0,
       "top4_rate": 1.0,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 84
     },
     {
       "group_name": "HP 66+ (Safe)",
-      "sample_count": 63,
-      "avg_placement": 1.0,
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    }
+  ],
+  "midgame_stratification_by_gold": [
+    {
+      "group_name": "Gold 0-19 (Poor)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "Gold 20-39 (Building)",
+      "sample_count": 84,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
+      "avg_placement": 2.0,
       "top4_rate": 1.0,
-      "agreement_rate": null
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 84
+    },
+    {
+      "group_name": "Gold 40-59 (Econ Target)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "Gold 60+ (Rich)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    }
+  ],
+  "midgame_stratification_by_stage": [
+    {
+      "group_name": "Stage 2-x",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "Stage 3-x",
+      "sample_count": 22,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 22
+      },
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0,
+      "known_action_count": 22,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 22
+    },
+    {
+      "group_name": "Stage 4-x",
+      "sample_count": 38,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 38
+      },
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0,
+      "known_action_count": 38,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 38
+    },
+    {
+      "group_name": "Stage 5-x",
+      "sample_count": 24,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 24
+      },
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0,
+      "known_action_count": 24,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 24
+    },
+    {
+      "group_name": "Stage 6+",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    }
+  ],
+  "midgame_stratification_by_level": [
+    {
+      "group_name": "Level 6 & below",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "Level 7",
+      "sample_count": 84,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 84
+    },
+    {
+      "group_name": "Level 8",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "Level 9+",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    }
+  ],
+  "endgame_statistics": {
+    "label": "ENDGAME",
+    "count": 500,
+    "with_placement": 500,
+    "avg_placement": 4.5,
+    "top4_rate": 0.502,
+    "known_action_count": 0,
+    "unknown_action_count": 500,
+    "denominator_note": "avg_placement and top4_rate denominator = 500 (samples with known placement)"
+  },
+  "endgame_stratification_by_hp": [
+    {
+      "group_name": "HP 0-20 (Critical)",
+      "sample_count": 500,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 500
+      },
+      "avg_placement": 4.5,
+      "top4_rate": 0.502,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0237,
+      "placement_denominator": 500
+    },
+    {
+      "group_name": "HP 21-35 (Crisis)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "HP 36-50 (Low)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "HP 51-65 (Mid)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "HP 66+ (Safe)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    }
+  ],
+  "endgame_stratification_by_gold": [
+    {
+      "group_name": "Gold 0-19 (Poor)",
+      "sample_count": 423,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 423
+      },
+      "avg_placement": 4.41,
+      "top4_rate": 0.5154,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.016,
+      "placement_denominator": 423
+    },
+    {
+      "group_name": "Gold 20-39 (Building)",
+      "sample_count": 46,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 46
+      },
+      "avg_placement": 4.87,
+      "top4_rate": 0.4565,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0591,
+      "placement_denominator": 46
+    },
+    {
+      "group_name": "Gold 40-59 (Econ Target)",
+      "sample_count": 29,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 29
+      },
+      "avg_placement": 4.97,
+      "top4_rate": 0.4138,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0746,
+      "placement_denominator": 29
+    },
+    {
+      "group_name": "Gold 60+ (Rich)",
+      "sample_count": 2,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 2
+      },
+      "avg_placement": 7.5,
+      "top4_rate": 0.0,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.1003,
+      "placement_denominator": 2
+    }
+  ],
+  "stratification_by_hp": [
+    {
+      "group_name": "HP 0-20 (Critical)",
+      "sample_count": 500,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 500
+      },
+      "avg_placement": 4.5,
+      "top4_rate": 0.502,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0237,
+      "placement_denominator": 500
+    },
+    {
+      "group_name": "HP 21-35 (Crisis)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "HP 36-50 (Low)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
+    },
+    {
+      "group_name": "HP 51-65 (Mid)",
+      "sample_count": 84,
+      "snapshot_type_counts": {
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
+      "avg_placement": 2.0,
+      "top4_rate": 1.0,
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0164,
+      "placement_denominator": 84
+    },
+    {
+      "group_name": "HP 66+ (Safe)",
+      "sample_count": 0,
+      "snapshot_type_counts": {},
+      "avg_placement": null,
+      "top4_rate": null,
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
     }
   ],
   "stratification_by_gold": [
     {
       "group_name": "Gold 0-19 (Poor)",
       "sample_count": 423,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 423
+      },
       "avg_placement": 4.41,
       "top4_rate": 0.5154,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.016,
+      "placement_denominator": 423
     },
     {
       "group_name": "Gold 20-39 (Building)",
       "sample_count": 130,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 46,
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
       "avg_placement": 3.02,
       "top4_rate": 0.8077,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0315,
+      "placement_denominator": 130
     },
     {
       "group_name": "Gold 40-59 (Econ Target)",
       "sample_count": 29,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 29
+      },
       "avg_placement": 4.97,
       "top4_rate": 0.4138,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0746,
+      "placement_denominator": 29
     },
     {
       "group_name": "Gold 60+ (Rich)",
       "sample_count": 2,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 2
+      },
       "avg_placement": 7.5,
       "top4_rate": 0.0,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.1003,
+      "placement_denominator": 2
     }
   ],
   "stratification_by_stage": [
     {
       "group_name": "Stage 2-x",
       "sample_count": 0,
+      "snapshot_type_counts": {},
       "avg_placement": null,
       "top4_rate": null,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": null,
+      "placement_denominator": 0
     },
     {
       "group_name": "Stage 3-x",
       "sample_count": 24,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 2,
+        "MIDGAME_DECISION_SNAPSHOT": 22
+      },
       "avg_placement": 2.5,
       "top4_rate": 0.9167,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 22,
+      "mean_score_gap": 0.0265,
+      "placement_denominator": 24
     },
     {
       "group_name": "Stage 4-x",
       "sample_count": 78,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 40,
+        "MIDGAME_DECISION_SNAPSHOT": 38
+      },
       "avg_placement": 4.96,
       "top4_rate": 0.4872,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 38,
+      "mean_score_gap": 0.0244,
+      "placement_denominator": 78
     },
     {
       "group_name": "Stage 5-x",
       "sample_count": 255,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 231,
+        "MIDGAME_DECISION_SNAPSHOT": 24
+      },
       "avg_placement": 5.51,
       "top4_rate": 0.2392,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 24,
+      "mean_score_gap": 0.0228,
+      "placement_denominator": 255
     },
     {
       "group_name": "Stage 6+",
       "sample_count": 227,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 227
+      },
       "avg_placement": 2.49,
       "top4_rate": 0.9427,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0214,
+      "placement_denominator": 227
     }
   ],
   "stratification_by_level": [
     {
       "group_name": "Level 6 & below",
       "sample_count": 1,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 1
+      },
       "avg_placement": 8.0,
       "top4_rate": 0.0,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.1403,
+      "placement_denominator": 1
     },
     {
       "group_name": "Level 7",
       "sample_count": 125,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 41,
+        "MIDGAME_DECISION_SNAPSHOT": 84
+      },
       "avg_placement": 3.48,
       "top4_rate": 0.696,
-      "agreement_rate": 0.0
+      "agreement_rate": 0.0,
+      "known_action_count": 84,
+      "mean_score_gap": 0.0198,
+      "placement_denominator": 125
     },
     {
       "group_name": "Level 8",
       "sample_count": 172,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 172
+      },
       "avg_placement": 5.42,
       "top4_rate": 0.3256,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0286,
+      "placement_denominator": 172
     },
     {
       "group_name": "Level 9+",
       "sample_count": 286,
+      "snapshot_type_counts": {
+        "ENDGAME_SNAPSHOT": 286
+      },
       "avg_placement": 3.64,
       "top4_rate": 0.6713,
-      "agreement_rate": null
+      "agreement_rate": null,
+      "known_action_count": 0,
+      "mean_score_gap": 0.0199,
+      "placement_denominator": 286
     }
   ],
+  "behavioral_agreement": {
+    "OVERALL": 0.0,
+    "denominator": 84,
+    "note": "Behavioral agreement = fraction of known-action samples where engine_recommendation == human_action. This is NOT a performance metric."
+  },
+  "baseline_comparisons": {
+    "DecisionEngine_v1.1": {
+      "behavioral_agreement": 0.0,
+      "agreement_rate": 0.0,
+      "agreement_denominator": 84,
+      "pct_roll": 0.2637,
+      "pct_level_up": 0.0103,
+      "pct_save_gold": 0.726
+    },
+    "AlwaysSave": {
+      "behavioral_agreement": 0.0,
+      "agreement_rate": 0.0,
+      "agreement_denominator": 84,
+      "pct_roll": 0.0,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 1.0
+    },
+    "HPThreshold": {
+      "behavioral_agreement": 0.0,
+      "agreement_rate": 0.0,
+      "agreement_denominator": 84,
+      "pct_roll": 0.8562,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 0.1438
+    },
+    "RuleEngine": {
+      "behavioral_agreement": 0.0,
+      "agreement_rate": 0.0,
+      "agreement_denominator": 84,
+      "pct_roll": 0.4007,
+      "pct_level_up": 0.0,
+      "pct_save_gold": 0.5993
+    }
+  },
+  "score_gap_diagnostics": {
+    "definition": "action_score_gap = score(best_action) - score(second_best_action). This is action score SEPARATION, NOT a calibrated probability of correctness.",
+    "gap_tiers": [
+      {
+        "tier": "Tight Margin [0.00, 0.02)",
+        "count": 214,
+        "endgame_count": 130,
+        "midgame_count": 84,
+        "avg_placement": 3.35,
+        "top4_rate": 0.7056,
+        "placement_denominator": 214
+      },
+      {
+        "tier": "Moderate Margin [0.02, 0.05)",
+        "count": 311,
+        "endgame_count": 311,
+        "midgame_count": 0,
+        "avg_placement": 4.51,
+        "top4_rate": 0.5113,
+        "placement_denominator": 311
+      },
+      {
+        "tier": "Clear Margin [0.05, 0.10)",
+        "count": 52,
+        "endgame_count": 52,
+        "midgame_count": 0,
+        "avg_placement": 4.83,
+        "top4_rate": 0.4615,
+        "placement_denominator": 52
+      },
+      {
+        "tier": "Decisive Margin [0.10+)",
+        "count": 7,
+        "endgame_count": 7,
+        "midgame_count": 0,
+        "avg_placement": 6.57,
+        "top4_rate": 0.1429,
+        "placement_denominator": 7
+      }
+    ],
+    "endgame_mean_gap": 0.0237,
+    "midgame_mean_gap": 0.0164,
+    "gap_by_hp_tier": [
+      {
+        "group": "HP 0-20",
+        "count": 500,
+        "endgame_count": 500,
+        "mean_gap": 0.0237,
+        "avg_placement": 4.5
+      },
+      {
+        "group": "HP 21-35",
+        "count": 0,
+        "endgame_count": 0,
+        "mean_gap": null,
+        "avg_placement": null
+      },
+      {
+        "group": "HP 36-50",
+        "count": 0,
+        "endgame_count": 0,
+        "mean_gap": null,
+        "avg_placement": null
+      },
+      {
+        "group": "HP 51-65",
+        "count": 84,
+        "endgame_count": 0,
+        "mean_gap": 0.0164,
+        "avg_placement": 2.0
+      },
+      {
+        "group": "HP 66+",
+        "count": 0,
+        "endgame_count": 0,
+        "mean_gap": null,
+        "avg_placement": null
+      }
+    ],
+    "gap_by_gold_tier": [
+      {
+        "group": "Gold 0-19",
+        "count": 423,
+        "endgame_count": 423,
+        "mean_gap": 0.016,
+        "avg_placement": 4.41
+      },
+      {
+        "group": "Gold 20-39",
+        "count": 130,
+        "endgame_count": 46,
+        "mean_gap": 0.0315,
+        "avg_placement": 3.02
+      },
+      {
+        "group": "Gold 40-59",
+        "count": 29,
+        "endgame_count": 29,
+        "mean_gap": 0.0746,
+        "avg_placement": 4.97
+      },
+      {
+        "group": "Gold 60+",
+        "count": 2,
+        "endgame_count": 2,
+        "mean_gap": 0.1003,
+        "avg_placement": 7.5
+      }
+    ],
+    "gap_by_stage": [
+      {
+        "group": "Stage 2-x",
+        "count": 0,
+        "endgame_count": 0,
+        "mean_gap": null,
+        "avg_placement": null
+      },
+      {
+        "group": "Stage 3-x",
+        "count": 24,
+        "endgame_count": 2,
+        "mean_gap": 0.0265,
+        "avg_placement": 2.5
+      },
+      {
+        "group": "Stage 4-x",
+        "count": 78,
+        "endgame_count": 40,
+        "mean_gap": 0.0244,
+        "avg_placement": 4.96
+      },
+      {
+        "group": "Stage 5-x",
+        "count": 255,
+        "endgame_count": 231,
+        "mean_gap": 0.0228,
+        "avg_placement": 5.51
+      },
+      {
+        "group": "Stage 6+",
+        "count": 227,
+        "endgame_count": 227,
+        "mean_gap": 0.0214,
+        "avg_placement": 2.49
+      }
+    ],
+    "gap_by_level": [
+      {
+        "group": "Level ≤6",
+        "count": 1,
+        "endgame_count": 1,
+        "mean_gap": 0.1403,
+        "avg_placement": 8.0
+      },
+      {
+        "group": "Level 7",
+        "count": 125,
+        "endgame_count": 41,
+        "mean_gap": 0.0198,
+        "avg_placement": 3.48
+      },
+      {
+        "group": "Level 8",
+        "count": 172,
+        "endgame_count": 172,
+        "mean_gap": 0.0286,
+        "avg_placement": 5.42
+      },
+      {
+        "group": "Level 9+",
+        "count": 286,
+        "endgame_count": 286,
+        "mean_gap": 0.0199,
+        "avg_placement": 3.64
+      }
+    ],
+    "midgame_n": 84,
+    "midgame_pearson_gap_placement": null,
+    "midgame_spearman_gap_placement": null,
+    "correlation_note": "Correlation computed on n=84 MIDGAME samples with known placement."
+  },
   "margin_tier_analysis": [
     {
       "tier_name": "Tight Margin [0.00, 0.02)",
-      "count": 222,
-      "percentage": 0.3801,
-      "avg_placement": 3.27,
-      "top4_rate": 0.7162,
-      "agreement_rate": 0.0
+      "count": 214,
+      "percentage": 0.3664,
+      "avg_placement": 3.35,
+      "top4_rate": 0.7056
     },
     {
       "tier_name": "Moderate Margin [0.02, 0.05)",
-      "count": 305,
-      "percentage": 0.5223,
-      "avg_placement": 4.58,
-      "top4_rate": 0.5016,
-      "agreement_rate": null
+      "count": 311,
+      "percentage": 0.5325,
+      "avg_placement": 4.51,
+      "top4_rate": 0.5113
     },
     {
       "tier_name": "Clear Margin [0.05, 0.10)",
-      "count": 50,
-      "percentage": 0.0856,
-      "avg_placement": 4.98,
-      "top4_rate": 0.44,
-      "agreement_rate": null
+      "count": 52,
+      "percentage": 0.089,
+      "avg_placement": 4.83,
+      "top4_rate": 0.4615
     },
     {
       "tier_name": "Decisive Margin [0.10+)",
       "count": 7,
       "percentage": 0.012,
       "avg_placement": 6.57,
-      "top4_rate": 0.1429,
-      "agreement_rate": null
+      "top4_rate": 0.1429
     }
   ],
-  "simulation_errors": {
-    "gold_prediction_mae": 18.23,
-    "gold_prediction_rmse": 20.02,
-    "gold_prediction_mean_error": 13.55,
-    "sample_size": 584
+  "gold_prediction_analysis": {
+    "note": "Gold prediction error computed ONLY for samples where: (1) horizon_rounds > 0 (not ENDGAME), and (2) actual_action is known. ENDGAME samples excluded: 500. ",
+    "horizon_zero_excluded": 500,
+    "valid_pairs": 84,
+    "by_action": {
+      "ROLL": {
+        "n": 84,
+        "mae": 34.0,
+        "rmse": 34.0,
+        "bias": 34.0
+      }
+    },
+    "overall_mae": 34.0,
+    "overall_rmse": 34.0,
+    "overall_bias": 34.0
   },
-  "failure_cases_count": 0,
-  "failure_cases_sample": [],
-  "data_limitations": [
-    "Riot Match-V1 API endpoint provides endgame final state (level, gold_left, placement) but does not record tick-by-tick player decisions.",
-    "Intermediate state player actions are marked as UNKNOWN for match snapshots to prevent falsification.",
-    "Video CV audit timeline contains verified real player action detections (REROLL, BUY).",
-    "Survival score is an uncalibrated heuristic metric and should not be interpreted as a statistical empirical probability without real match match-up logs."
+  "simulation_errors": {
+    "sample_size": 84,
+    "gold_prediction_mae": 34.0,
+    "gold_prediction_rmse": 34.0,
+    "gold_prediction_mean_error": 34.0
+  },
+  "failure_cases_count": 34,
+  "failure_cases_by_type": {
+    "HIGH_MARGIN_BOTTOM4": 34
+  },
+  "failure_cases_sample": [
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8353055717_K72zLQHU_14",
+      "match_id": "KR_8353055717",
+      "sample_id": "KR_8353055717_K72zLQHU_14",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.076 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "4-5",
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.0758,
+      "decision_margin": 0.0758,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "stage": 4
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338434217_f5Q6imd7_66",
+      "match_id": "KR_8338434217",
+      "sample_id": "KR_8338434217_f5Q6imd7_66",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.091 >= 0.05, but final placement was 7 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "4-6",
+        "gold": 37,
+        "level": 7,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 7,
+      "action_score_gap": 0.0908,
+      "decision_margin": 0.0908,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 37,
+        "level": 7,
+        "hp": 0,
+        "stage": 4
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338402074_Psli-lw0_78",
+      "match_id": "KR_8338402074",
+      "sample_id": "KR_8338402074_Psli-lw0_78",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.068 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "4-5",
+        "gold": 33,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.0681,
+      "decision_margin": 0.0681,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 33,
+        "level": 8,
+        "hp": 0,
+        "stage": 4
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338343065_1e9ELcSf_90",
+      "match_id": "KR_8338343065",
+      "sample_id": "KR_8338343065_1e9ELcSf_90",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.078 >= 0.05, but final placement was 6 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "5-1",
+        "gold": 27,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 6,
+      "action_score_gap": 0.0777,
+      "decision_margin": 0.0777,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 27,
+        "level": 8,
+        "hp": 0,
+        "stage": 5
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338343065_qTMZ0Wzl_95",
+      "match_id": "KR_8338343065",
+      "sample_id": "KR_8338343065_qTMZ0Wzl_95",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.140 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "3-1",
+        "gold": 66,
+        "level": 5,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.1403,
+      "decision_margin": 0.1403,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 66,
+        "level": 5,
+        "hp": 0,
+        "stage": 3
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338311314_okE89n3c_96",
+      "match_id": "KR_8338311314",
+      "sample_id": "KR_8338311314_okE89n3c_96",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.077 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "4-6",
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.0775,
+      "decision_margin": 0.0775,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "stage": 4
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338233343_Psli-lw0_125",
+      "match_id": "KR_8338233343",
+      "sample_id": "KR_8338233343_Psli-lw0_125",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.079 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "4-3",
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.0787,
+      "decision_margin": 0.0787,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 21,
+        "level": 8,
+        "hp": 0,
+        "stage": 4
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8338190111_6Eh3z19T_139",
+      "match_id": "KR_8338190111",
+      "sample_id": "KR_8338190111_6Eh3z19T_139",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.092 >= 0.05, but final placement was 5 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "6-1",
+        "gold": 51,
+        "level": 9,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 5,
+      "action_score_gap": 0.0922,
+      "decision_margin": 0.0922,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 51,
+        "level": 9,
+        "hp": 0,
+        "stage": 6
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8351583742_miaplrfX_147",
+      "match_id": "KR_8351583742",
+      "sample_id": "KR_8351583742_miaplrfX_147",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.054 >= 0.05, but final placement was 8 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "5-2",
+        "gold": 30,
+        "level": 7,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 8,
+      "action_score_gap": 0.054,
+      "decision_margin": 0.054,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 30,
+        "level": 7,
+        "hp": 0,
+        "stage": 5
+      }
+    },
+    {
+      "case_id": "HIGH_MARGIN_BOTTOM4_KR_8340705482_P4g7VOK4_173",
+      "match_id": "KR_8340705482",
+      "sample_id": "KR_8340705482_P4g7VOK4_173",
+      "failure_type": "HIGH_MARGIN_BOTTOM4",
+      "failure_category": "HIGH_MARGIN_BOTTOM4",
+      "description": "score_gap=0.084 >= 0.05, but final placement was 6 (bottom 4). Diagnostic label only. snapshot_type=ENDGAME_SNAPSHOT.",
+      "state_summary": {
+        "stage": "5-5",
+        "gold": 31,
+        "level": 8,
+        "hp": 0,
+        "snapshot_type": "ENDGAME_SNAPSHOT"
+      },
+      "recommended_action": "ROLL",
+      "actual_action": "UNKNOWN",
+      "actual_placement": 6,
+      "action_score_gap": 0.0837,
+      "decision_margin": 0.0837,
+      "snapshot_type": "ENDGAME_SNAPSHOT",
+      "reproducible_state": {
+        "gold": 31,
+        "level": 8,
+        "hp": 0,
+        "stage": 5
+      }
+    }
   ],
+  "data_limitations": [
+    "Riot Match-V1 API provides ONLY elimination-time final state. All 500 match snapshots are ENDGAME_SNAPSHOT and must not be used for Decision Engine strategy evaluation.",
+    "Intermediate round-by-round player actions (ROLL, LEVEL_UP, SAVE_GOLD) are not recorded by Riot Match-V1. actual_action = UNKNOWN for all Riot match samples.",
+    "MIDGAME samples: 84 (from video CV audit only). GameState values (gold, hp, level) in video samples are HEURISTIC ESTIMATES, not precise extractions.",
+    "Known actual_action coverage: 84 / 584 samples (14.4%). All known actions are from the single video audit session.",
+    "survival_score is an uncalibrated heuristic metric. It cannot be interpreted as a statistical probability without empirical calibration data.",
+    "action_score_gap (formerly decision_margin) is score separation between best and second-best action. It is NOT a calibrated probability of correctness.",
+    "The single video session (1 player, 1 game) cannot be generalized to broader player populations."
+  ],
+  "what_can_be_concluded": [
+    "Decision Engine executes successfully on all 584 evaluated GameState samples with 0 runtime errors.",
+    "ENDGAME and MIDGAME snapshot types can be cleanly separated by data_source and snapshot_type fields.",
+    "Match-level group split maintains zero match overlap between train and test sets.",
+    "Temporal integrity (T0 <= T1+) is maintained for samples with known timestamps.",
+    "No final_placement leakage detected in T0 GameState objects.",
+    "The engine produces valid, feasible action recommendations across diverse game states."
+  ],
+  "what_cannot_be_concluded": [
+    "Whether Decision Engine produces better game outcomes than human play. (Requires: MIDGAME states with known actual_action, future outcomes, sufficient sample size.)",
+    "Whether ROLL, LEVEL_UP, or SAVE_GOLD leads to better expected placement in any given situation. (Requires: counterfactual data with both action and outcome for same initial state.)",
+    "Whether action_score_gap (decision_margin) can be used as a probability of correctness. (Requires: empirical calibration against labeled outcomes.)",
+    "Whether the engine's SAVE_GOLD preference is strategically superior to human ROLL behavior. human_policy != engine_policy does not imply either is better.",
+    "Whether survival_score is an accurate predictor of actual survival probability. (Requires: calibration against empirical round-by-round match data.)",
+    "Whether the video audit sample (n=84, single session) generalizes to any broader population.",
+    "Any causal claim about Decision Engine recommendations and game outcomes."
+  ],
+  "next_required_data": [
+    "MIDGAME decision snapshots from multiple game sessions with precise round state extraction (gold, hp, level, board at each round start) -- minimum 500 samples across 50+ sessions.",
+    "Round-by-round actual player actions (ROLL, LEVEL_UP, SAVE_GOLD) paired with resulting game state -- required for action-conditioned analysis.",
+    "For counterfactual evaluation: paired states where player chose action A in one sample and action B in a comparable state, both with known outcomes.",
+    "For gold prediction validation: T0 gold + actual T0 action + T1+ gold n rounds later, with known horizon_rounds.",
+    "For correlation analysis: minimum 100 MIDGAME samples with (state, action, placement) tuples from diverse players and stages.",
+    "Empirical champion pool availability data for the actual game version being analyzed to improve roll probability accuracy."
+  ],
+  "outcome_summary": {
+    "total_with_placement": 584,
+    "avg_placement": 4.14,
+    "top4_rate": 0.5736,
+    "denominator_note": "These are DESCRIPTIVE statistics over ALL samples (endgame + midgame). Do NOT interpret as Decision Engine performance metrics."
+  },
   "metadata": {}
 }

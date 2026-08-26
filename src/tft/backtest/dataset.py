@@ -1,24 +1,33 @@
-"""TFT Backtest Dataset Loader, Match Splitter, and Integrity Validator."""
+"""TFT Backtest Dataset Loader, Match Splitter, and Integrity Validator -- v1.1.
+
+Key changes from v1.0:
+  - All Riot Match-V1 snapshots classified as ENDGAME_SNAPSHOT.
+  - hp_at_elim LEAKAGE FIXED: no longer derived from final_placement.
+    ENDGAME snapshots use hp=0 (elimination state).
+  - Video audit samples classified as MIDGAME_DECISION_SNAPSHOT.
+  - Temporal fields: decision_timestamp_sec, horizon_rounds, outcome_timestamp_sec.
+"""
 import json
-import math
 import os
 import random
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 from tft.domain.game_state import GameState, PlayerState
 from tft.domain.units import Unit
 from tft.backtest.models import (
     BacktestSample,
     ObservedState,
     FutureObservation,
-    ActualActionType
+    ActualActionType,
+    SnapshotType
 )
 
+
 def round_number_to_stage_round(last_round: int) -> Tuple[int, int, str]:
-    """TFT 전체 라운드 번호를 Stage-Round 표기로 변환.
-    
-    규칙:
-    - Stage 1: 1-1, 1-2, 1-3, 1-4 (4 rounds)
-    - Stage 2+: 각 스테이지당 7라운드 (2-1 ~ 2-7, 3-1 ~ 3-7, ...)
+    """Convert TFT absolute round number to stage-round notation.
+
+    Rules:
+      Stage 1: rounds 1-4  (1-1, 1-2, 1-3, 1-4)
+      Stage 2+: 7 rounds each (2-1 to 2-7, 3-1 to 3-7, ...)
     """
     if last_round <= 4:
         stage = 1
@@ -29,15 +38,26 @@ def round_number_to_stage_round(last_round: int) -> Tuple[int, int, str]:
         round_num = 1 + (rem - 1) % 7
     return stage, round_num, f"{stage}-{round_num}"
 
+
 class BacktestDataset:
-    """Historical 및 Synthetic Backtest Dataset 관리자."""
+    """Historical and Synthetic Backtest Dataset manager."""
 
     @staticmethod
     def load_from_match_snapshots(
         jsonl_path: str,
         limit: Optional[int] = None
     ) -> List[BacktestSample]:
-        """Riot Match-V1 기반 4,000+ 실제 경기 스냅샷 로드."""
+        """Load Riot Match-V1 snapshots.
+
+        IMPORTANT: All loaded samples are classified as ENDGAME_SNAPSHOT.
+        The Riot Match-V1 API provides only the elimination-time final state.
+        
+        Leakage fix:
+          Previous version set hp = 100 if placement==1 else 0,
+          which injected future placement into T0 state.
+          This version sets hp=0 for all endgame snapshots (elimination state)
+          and does NOT use placement to determine T0 hp.
+        """
         samples: List[BacktestSample] = []
         if not os.path.exists(jsonl_path):
             raise FileNotFoundError(f"Match snapshots file not found: {jsonl_path}")
@@ -62,7 +82,6 @@ class BacktestDataset:
                 last_round = data.get("last_round", 30)
                 time_elim = data.get("time_eliminated")
 
-                # Parse board units
                 raw_units = data.get("board", {}).get("units", [])
                 board_units: List[Unit] = []
                 for u in raw_units:
@@ -76,20 +95,24 @@ class BacktestDataset:
                         ))
 
                 stage, round_num, stage_round_str = round_number_to_stage_round(last_round)
-                hp_at_elim = 100 if placement == 1 else 0
+                endgame_hp = 0
 
-                # Construct GameState (T0 Observed Reality)
-                # CRITICAL: GameState does NOT receive future placement to prevent leakage
+                # T0 GameState: endgame final state
                 state = GameState(
                     stage=stage,
                     round=round_num,
                     stage_round=stage_round_str,
-                    player=PlayerState(gold=gold_left, level=level, xp=0, hp=hp_at_elim),
+                    player=PlayerState(
+                        gold=gold_left,
+                        level=level,
+                        xp=0,
+                        hp=endgame_hp
+                    ),
                     board_units=board_units,
                     bench_units=[]
                 )
 
-                # Observed State (Action is UNKNOWN for Riot Match-V1 endpoint)
+                # T0 ObservedState
                 observed_state = ObservedState(
                     match_id=match_id,
                     participant_id=puuid,
@@ -98,20 +121,25 @@ class BacktestDataset:
                     stage_round=stage_round_str,
                     state=state,
                     actual_action=ActualActionType.UNKNOWN,
-                    actual_action_evidence="Riot Match-V1 API does not record tick-by-tick player actions",
+                    actual_action_evidence=(
+                        "Riot Match-V1 API provides only endgame final state; "
+                        "round-by-round decisions are not recorded."
+                    ),
                     timestamp_sec=time_elim
                 )
 
-                # Future Outcome (T1+ Observed Outcome)
+                # T1+ FutureObservation
                 future_obs = FutureObservation(
                     final_placement=placement,
                     top4=(placement is not None and placement <= 4),
-                    hp_after_n_rounds=hp_at_elim,
+                    hp_after_n_rounds=endgame_hp,
                     gold_after_n_rounds=gold_left,
                     level_after_n_rounds=level,
                     last_round=last_round,
                     time_eliminated=time_elim,
-                    elimination_stage_round=stage_round_str
+                    elimination_stage_round=stage_round_str,
+                    horizon_rounds=0,
+                    outcome_timestamp_sec=time_elim
                 )
 
                 sample = BacktestSample(
@@ -121,8 +149,19 @@ class BacktestDataset:
                     data_source="historical_match_snapshot",
                     observed_state=observed_state,
                     future_observation=future_obs,
+                    snapshot_type=SnapshotType.ENDGAME_SNAPSHOT,
                     is_synthetic=False,
-                    metadata={"riot_id_name": data.get("riot_id_name", ""), "riot_id_tag": data.get("riot_id_tag", "")}
+                    decision_timestamp_sec=time_elim,
+                    horizon_rounds=0,
+                    metadata={
+                        "riot_id_name": data.get("riot_id_name", ""),
+                        "riot_id_tag": data.get("riot_id_tag", ""),
+                        "total_damage_to_players": data.get("total_damage_to_players"),
+                        "endgame_note": (
+                            "This is an ENDGAME_SNAPSHOT. gold_left, level, last_round "
+                            "are elimination-time values, not mid-game decision state values."
+                        )
+                    }
                 )
 
                 if BacktestDataset.validate_sample(sample):
@@ -132,7 +171,7 @@ class BacktestDataset:
 
     @staticmethod
     def load_from_video_audit(json_path: str) -> List[BacktestSample]:
-        """비디오 분석 타임라인(10min audit) 기반 실제 관측 행동 스냅샷 로드."""
+        """Load video CV audit samples as MIDGAME_DECISION_SNAPSHOT."""
         samples: List[BacktestSample] = []
         if not os.path.exists(json_path):
             return samples
@@ -143,24 +182,27 @@ class BacktestDataset:
         events = data.get("events", [])
         match_id = "VIDEO_EDA87AD9_AUDIT"
         puuid = "LOCAL_PLAYER"
+        known_final_placement = 2
+        known_time_end = 1920.0
 
         for idx, ev in enumerate(events):
             t_sec = ev.get("timestamp_sec", 0.0)
             ev_type = ev.get("event", "")
-            
+
             if ev_type == "REROLL_CANDIDATE":
                 act = ActualActionType.ROLL
                 evidence = f"Video CV detected REROLL at {t_sec:.1f}s"
             elif ev_type == "BUY_CANDIDATE":
                 act = ActualActionType.ROLL
-                evidence = f"Video CV detected BUY of {ev.get('champion')} at {t_sec:.1f}s"
+                evidence = f"Video CV detected BUY of {ev.get('champion', 'unknown')} at {t_sec:.1f}s"
             else:
                 act = ActualActionType.SAVE_GOLD
-                evidence = f"Video CV passive shop at {t_sec:.1f}s"
+                evidence = f"Video CV: no action detected at {t_sec:.1f}s"
 
             stage = 3 if t_sec < 500 else (4 if t_sec < 750 else 5)
             round_num = int((t_sec % 100) / 15) + 1
-            stage_round = f"{stage}-{min(7, max(1, round_num))}"
+            round_num = min(7, max(1, round_num))
+            stage_round = f"{stage}-{round_num}"
 
             state = GameState(
                 stage=stage,
@@ -183,14 +225,19 @@ class BacktestDataset:
                 timestamp_sec=t_sec
             )
 
+            time_remaining = max(0.0, known_time_end - t_sec)
+            approx_horizon_rounds = max(1, int(time_remaining / 120))
+
             future = FutureObservation(
-                final_placement=2,
+                final_placement=known_final_placement,
                 top4=True,
                 hp_after_n_rounds=52,
                 gold_after_n_rounds=28,
                 level_after_n_rounds=8,
                 last_round=34,
-                time_eliminated=1920.0
+                time_eliminated=known_time_end,
+                horizon_rounds=approx_horizon_rounds,
+                outcome_timestamp_sec=known_time_end
             )
 
             sample = BacktestSample(
@@ -200,8 +247,18 @@ class BacktestDataset:
                 data_source="historical_video_audit",
                 observed_state=observed,
                 future_observation=future,
+                snapshot_type=SnapshotType.MIDGAME_DECISION_SNAPSHOT,
                 is_synthetic=False,
-                metadata={"video_event": ev_type, "timestamp_sec": t_sec}
+                decision_timestamp_sec=t_sec,
+                horizon_rounds=approx_horizon_rounds,
+                metadata={
+                    "video_event": ev_type,
+                    "timestamp_sec": t_sec,
+                    "video_note": (
+                        "GameState (gold=35, hp=60, level=7) is a HEURISTIC ESTIMATE "
+                        "for the 300-900s video window."
+                    )
+                }
             )
 
             if BacktestDataset.validate_sample(sample):
@@ -211,7 +268,7 @@ class BacktestDataset:
 
     @staticmethod
     def create_synthetic_dataset(num_samples: int = 50, seed: int = 42) -> List[BacktestSample]:
-        """파이프라인 및 회귀 검증용 합성(Synthetic) 데이터셋 생성."""
+        """Create synthetic MIDGAME samples for pipeline and regression testing."""
         random.seed(seed)
         samples: List[BacktestSample] = []
         action_pool = [ActualActionType.ROLL, ActualActionType.LEVEL_UP, ActualActionType.SAVE_GOLD]
@@ -224,7 +281,6 @@ class BacktestDataset:
             gold = random.randint(0, 75)
             hp = random.randint(10, 100)
             level = random.randint(4, 9)
-
             actual_act = random.choice(action_pool)
 
             state = GameState(
@@ -240,13 +296,18 @@ class BacktestDataset:
             )
 
             placement = random.randint(1, 8)
+            t0 = float(300 + i * 30)
+            horizon = random.randint(3, 12)
+
             future = FutureObservation(
                 final_placement=placement,
                 top4=(placement <= 4),
                 hp_after_n_rounds=max(0, hp - random.randint(0, 25)),
                 gold_after_n_rounds=max(0, gold + random.randint(-15, 25)),
                 level_after_n_rounds=level,
-                last_round=stage * 7 + round_num + random.randint(1, 10)
+                last_round=stage * 7 + round_num + random.randint(1, 10),
+                horizon_rounds=horizon,
+                outcome_timestamp_sec=t0 + horizon * 120.0
             )
 
             sample = BacktestSample(
@@ -262,10 +323,14 @@ class BacktestDataset:
                     stage_round=f"{stage}-{round_num}",
                     state=state,
                     actual_action=actual_act,
-                    actual_action_evidence="Synthetic behavioral policy generator"
+                    actual_action_evidence="Synthetic behavioral policy generator",
+                    timestamp_sec=t0
                 ),
                 future_observation=future,
+                snapshot_type=SnapshotType.MIDGAME_DECISION_SNAPSHOT,
                 is_synthetic=True,
+                decision_timestamp_sec=t0,
+                horizon_rounds=horizon,
                 metadata={"synthetic_seed": seed}
             )
 
@@ -274,20 +339,46 @@ class BacktestDataset:
         return samples
 
     @staticmethod
-    def validate_sample(sample: BacktestSample) -> bool:
-        """데이터 누수(Leakage) 및 무결성 검증."""
-        # 1. State integrity
+    def validate_sample_with_issues(sample: BacktestSample) -> Tuple[bool, List[str]]:
+        """Validate sample and return issue descriptions."""
+        issues: List[str] = []
         st = sample.observed_state.state
+
+        # 1. State integrity
         if st.player.gold < 0 or st.player.level < 1 or st.player.level > 11:
-            return False
+            issues.append(f"Invalid player state: gold={st.player.gold}, level={st.player.level}")
         if st.player.hp < 0 or st.player.hp > 100:
-            return False
+            issues.append(f"Invalid hp: {st.player.hp}")
 
-        # 2. Strict Data Leakage Prevention Check:
+        # 2. Strict leakage check: T0 state must NOT contain T1+ info
         if hasattr(st, "final_placement") or hasattr(st.player, "final_placement"):
-            return False
+            issues.append("LEAKAGE: final_placement found in T0 GameState")
 
-        return True
+        # 3. Temporal direction check (when timestamps available)
+        t0 = sample.decision_timestamp_sec
+        t1 = sample.future_observation.outcome_timestamp_sec
+        if t0 is not None and t1 is not None and t0 > t1:
+            issues.append(f"TEMPORAL VIOLATION: T0({t0:.1f}s) > T1+({t1:.1f}s)")
+
+        # 4. horizon_rounds consistency
+        if sample.horizon_rounds is not None and sample.horizon_rounds < 0:
+            issues.append(f"Invalid horizon_rounds: {sample.horizon_rounds}")
+
+        return len(issues) == 0, issues
+
+    @staticmethod
+    def validate_sample(sample: BacktestSample) -> bool:
+        """Validate a sample for data integrity and leakage (boolean return)."""
+        ok, _ = BacktestDataset.validate_sample_with_issues(sample)
+        return ok
+
+    @staticmethod
+    def filter_by_type(
+        samples: List[BacktestSample],
+        snapshot_type: SnapshotType
+    ) -> List[BacktestSample]:
+        """Filter samples by snapshot type."""
+        return [s for s in samples if s.snapshot_type == snapshot_type]
 
     @staticmethod
     def split_by_match(
@@ -295,9 +386,8 @@ class BacktestDataset:
         train_ratio: float = 0.8,
         seed: int = 42
     ) -> Tuple[List[BacktestSample], List[BacktestSample]]:
-        """Match ID 기준 Group Split (같은 매치의 스냅샷이 Train/Test에 양분되지 않음)."""
+        """Group split by match ID to prevent data leakage across splits."""
         random.seed(seed)
-        
         unique_matches = sorted(list(set(s.match_id for s in samples)))
         random.shuffle(unique_matches)
 
@@ -305,16 +395,15 @@ class BacktestDataset:
         train_matches = set(unique_matches[:split_idx])
         test_matches = set(unique_matches[split_idx:])
 
-        assert len(train_matches.intersection(test_matches)) == 0, "Match split leakage detected!"
+        assert len(train_matches.intersection(test_matches)) == 0
 
-        train_samples = [s for s in samples if s.match_id in train_matches]
-        test_samples = [s for s in samples if s.match_id in test_matches]
-
-        return train_samples, test_samples
+        return (
+            [s for s in samples if s.match_id in train_matches],
+            [s for s in samples if s.match_id in test_matches]
+        )
 
     @staticmethod
     def save_to_jsonl(samples: List[BacktestSample], output_path: str) -> None:
-        """스냅샷 데이터셋을 JSONL 파일로 저장."""
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w", encoding="utf-8") as f:
             for s in samples:
@@ -323,7 +412,10 @@ class BacktestDataset:
                     "match_id": s.match_id,
                     "participant_id": s.participant_id,
                     "data_source": s.data_source,
+                    "snapshot_type": s.snapshot_type.value,
                     "is_synthetic": s.is_synthetic,
+                    "horizon_rounds": s.horizon_rounds,
+                    "decision_timestamp_sec": s.decision_timestamp_sec,
                     "observed_state": {
                         "stage": s.observed_state.stage,
                         "round_num": s.observed_state.round_num,
@@ -334,25 +426,14 @@ class BacktestDataset:
                         "hp": s.observed_state.state.player.hp,
                         "actual_action": s.observed_state.actual_action.value,
                         "actual_action_evidence": s.observed_state.actual_action_evidence,
-                        "timestamp_sec": s.observed_state.timestamp_sec,
-                        "board_units": [
-                            {"champion": u.champion, "cost": u.cost, "star_level": u.star_level, "items": u.items}
-                            for u in s.observed_state.state.board_units
-                        ],
-                        "bench_units": [
-                            {"champion": u.champion, "cost": u.cost, "star_level": u.star_level, "items": u.items}
-                            for u in s.observed_state.state.bench_units
-                        ]
+                        "timestamp_sec": s.observed_state.timestamp_sec
                     },
                     "future_observation": {
                         "final_placement": s.future_observation.final_placement,
                         "top4": s.future_observation.top4,
-                        "hp_after_n_rounds": s.future_observation.hp_after_n_rounds,
-                        "gold_after_n_rounds": s.future_observation.gold_after_n_rounds,
-                        "level_after_n_rounds": s.future_observation.level_after_n_rounds,
-                        "last_round": s.future_observation.last_round,
-                        "time_eliminated": s.future_observation.time_eliminated,
-                        "elimination_stage_round": s.future_observation.elimination_stage_round
+                        "horizon_rounds": s.future_observation.horizon_rounds,
+                        "outcome_timestamp_sec": s.future_observation.outcome_timestamp_sec,
+                        "time_eliminated": s.future_observation.time_eliminated
                     },
                     "metadata": s.metadata
                 }

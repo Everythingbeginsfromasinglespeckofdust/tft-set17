@@ -1,4 +1,4 @@
-"""TFT Backtest Runner."""
+"""TFT Backtest Runner v1.1."""
 from typing import Dict, List, Optional, Tuple, Any
 from tft.domain.game_state import GameState
 from tft.domain.actions import ActionType
@@ -7,7 +7,8 @@ from tft.decision.models import Recommendation
 from tft.backtest.models import (
     BacktestSample,
     BacktestDecision,
-    ActualActionType
+    ActualActionType,
+    SnapshotType
 )
 from tft.backtest.baselines import (
     BaseStrategy,
@@ -16,8 +17,9 @@ from tft.backtest.baselines import (
     RuleEngineBaseline
 )
 
+
 class BacktestRunner:
-    """Backtest 실행기: Decision Engine 및 Baseline 전략 일괄 평가."""
+    """Backtest execution engine: evaluates Decision Engine and Baselines."""
 
     def __init__(
         self,
@@ -35,7 +37,7 @@ class BacktestRunner:
         self,
         sample: BacktestSample
     ) -> Tuple[BacktestDecision, Dict[str, BacktestDecision]]:
-        """단일 스냅샷 샘플에 대해 Decision Engine 및 Baseline 실행."""
+        """Execute Decision Engine and Baselines on a single snapshot sample."""
         state = sample.observed_state.state
         actual_act = sample.observed_state.actual_action
 
@@ -60,6 +62,7 @@ class BacktestRunner:
             sample_id=sample.sample_id,
             strategy_name="DecisionEngine_v1.1",
             recommended_action=engine_act,
+            action_score_gap=rec.decision_margin,
             decision_margin=rec.decision_margin,
             confidence=rec.confidence,
             action_scores={s.action.action_type.value: s.score for s in rec.all_scores},
@@ -67,7 +70,8 @@ class BacktestRunner:
             simulated_expectations=sim_summaries,
             reasons=[r.summary for r in rec.reasons],
             actual_action=actual_act,
-            agreement=agreement
+            agreement=agreement,
+            snapshot_type=sample.snapshot_type
         )
 
         # 2. Run Baselines
@@ -83,6 +87,7 @@ class BacktestRunner:
                 sample_id=sample.sample_id,
                 strategy_name=b_name,
                 recommended_action=b_act,
+                action_score_gap=0.0,
                 decision_margin=0.0,
                 confidence=0.50,
                 action_scores={b_act.value: 1.0},
@@ -90,7 +95,8 @@ class BacktestRunner:
                 simulated_expectations={},
                 reasons=[f"Rule-based policy decision: {b_act.value}"],
                 actual_action=actual_act,
-                agreement=b_agreement
+                agreement=b_agreement,
+                snapshot_type=sample.snapshot_type
             )
 
         return engine_decision, baseline_decisions
@@ -99,7 +105,7 @@ class BacktestRunner:
         self,
         samples: List[BacktestSample]
     ) -> Tuple[List[BacktestDecision], Dict[str, List[BacktestDecision]]]:
-        """데이터셋 전체에 대해 배치 실행."""
+        """Batch execution across entire dataset."""
         engine_decisions: List[BacktestDecision] = []
         baseline_decisions: Dict[str, List[BacktestDecision]] = {
             name: [] for name in self.baselines.keys()
