@@ -1,0 +1,60 @@
+{
+  "video": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+  "total_buy_events": 11,
+  "star_inference": {
+    "total_buy_events": 11,
+    "unique_champions_purchased": 3,
+    "star_completions": [
+      {
+        "champion": "나서스",
+        "star_level": 2,
+        "completion_index": 1,
+        "timestamp_sec": 632.5,
+        "trigger_copy": 3,
+        "purchase_timestamps": [
+          357.5,
+          358.0,
+          632.5
+        ]
+      },
+      {
+        "champion": "나서스",
+        "star_level": 2,
+        "completion_index": 2,
+        "timestamp_sec": 650.5,
+        "trigger_copy": 6,
+        "purchase_timestamps": [
+          357.5,
+          358.0,
+          632.5,
+          635.0,
+          649.5,
+          650.5
+        ]
+      }
+    ],
+    "final_champion_states": {
+      "나서스": {
+        "total_purchased_copies": 8,
+        "inferred_highest_star": 2,
+        "two_star_count": 2,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "나미": {
+        "total_purchased_copies": 2,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 2
+      },
+      "렉사이": {
+        "total_purchased_copies": 1,
+        "inferred_highest_star": 1,
+        "two_star_count": 0,
+        "three_star_count": 0,
+        "remaining_1star_copies": 1
+      }
+    }
+  }
+}
