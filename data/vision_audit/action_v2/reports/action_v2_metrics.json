@@ -1,0 +1,67 @@
+{
+  "version_name": "ActionEventDetectorV2",
+  "total_predicted_events": 132,
+  "total_ground_truth_events": 76,
+  "roll": {
+    "action": "ROLL",
+    "tp": 6,
+    "fp": 89,
+    "fn": 22,
+    "tn": 0,
+    "precision": 0.0632,
+    "recall": 0.2143,
+    "f1": 0.0976,
+    "fpr": 1.0,
+    "fnr": 0.7857,
+    "total_ground_truth": 28,
+    "total_detected": 95
+  },
+  "buy_unit": {
+    "action": "BUY_UNIT",
+    "tp": 1,
+    "fp": 36,
+    "fn": 17,
+    "tn": 0,
+    "precision": 0.027,
+    "recall": 0.0556,
+    "f1": 0.0363,
+    "fpr": 1.0,
+    "fnr": 0.9444,
+    "total_ground_truth": 18,
+    "total_detected": 37
+  },
+  "level_up": {
+    "action": "LEVEL_UP",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "fnr": 0.0,
+    "total_ground_truth": 0,
+    "total_detected": 0
+  },
+  "timing_mae_sec": 0.5,
+  "timing_median_sec": 0.5,
+  "timing_p95_sec": 1.0,
+  "timing_max_sec": 1.0,
+  "status_distribution": {
+    "OBSERVED": 132
+  },
+  "false_positive_types": {
+    "Spurious Detection (No GT action within tolerance)": 116,
+    "Type Mismatch (predicted BUY_UNIT, actual ROLL)": 6,
+    "Type Mismatch (predicted ROLL, actual BUY_UNIT)": 3
+  },
+  "false_negative_types": {
+    "Missed BUY_UNIT Event (미스 포츈)": 5,
+    "Missed ROLL Event": 22,
+    "Missed BUY_UNIT Event (소나)": 4,
+    "Missed BUY_UNIT Event (쉔)": 4,
+    "Missed BUY_UNIT Event (다리우스)": 1,
+    "Missed BUY_UNIT Event (조이)": 3
+  }
+}

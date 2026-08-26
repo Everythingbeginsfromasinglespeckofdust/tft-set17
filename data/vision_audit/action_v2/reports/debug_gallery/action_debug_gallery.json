@@ -1,0 +1,2267 @@
+{
+  "total_debug_cases": 164,
+  "false_positive_count": 125,
+  "false_negative_count": 39,
+  "cases": [
+    {
+      "case_id": "fa_312_1",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 312.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_313_2",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 313.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_358_3",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 358.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 4 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_360_4",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 360.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 1 (다이애나, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_361_5",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 361.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Type Mismatch (predicted ROLL, actual BUY_UNIT)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_364_6",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 364.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 4 (다이애나, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_364_7",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 364.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_366_8",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 366.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Type Mismatch (predicted ROLL, actual BUY_UNIT)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_367_9",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 367.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (일라오이, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_374_10",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 374.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_375_11",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 375.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_376_12",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 376.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_377_13",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 377.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_379_14",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 379.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 4 (다이애나, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_379_15",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 379.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_381_16",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 381.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_381_17",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 381.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_385_18",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 385.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_388_19",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 388.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_391_20",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 391.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_393_21",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 393.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 1 (모르가나, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_395_22",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 395.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_398_23",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 398.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 3 (렉사이, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_398_24",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 398.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_400_25",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 400.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_402_26",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 402.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_402_27",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 402.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_404_28",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 404.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_404_29",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 404.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_405_30",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 405.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_441_31",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 441.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_450_32",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 450.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_462_33",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 462.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_466_34",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 466.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_467_35",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 467.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_471_36",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 471.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_472_37",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 472.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_474_38",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 474.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_474_39",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 474.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_481_40",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 481.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Type Mismatch (predicted ROLL, actual BUY_UNIT)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_485_41",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 485.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_489_42",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 489.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_496_43",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 496.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_496_44",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 496.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_497_45",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 497.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_552_46",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 552.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_553_47",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 553.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_556_48",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 556.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_556_49",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 556.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_557_50",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 557.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_558_51",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 558.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_560_52",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 560.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_565_53",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 565.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_566_54",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 566.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_567_55",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 567.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_587_56",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 587.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_587_57",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 587.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_596_58",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 596.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_604_59",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 604.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 4 (일라오이, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_612_60",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 612.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_614_61",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 614.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_625_62",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 625.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_626_63",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 626.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (이즈리얼, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_626_64",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 626.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_628_65",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 628.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_628_66",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 628.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_629_67",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 629.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_630_68",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 630.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_632_69",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 632.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_634_70",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 634.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_635_71",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 635.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_642_72",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 642.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_649_73",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 649.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_650_74",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 650.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_660_75",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 660.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "ROLL",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Type Mismatch (predicted BUY_UNIT, actual ROLL)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_670_76",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 670.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_680_77",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 680.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_685_78",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 685.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_695_79",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 695.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 2 (우르곳, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_704_80",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 704.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_709_81",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 709.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_718_82",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 718.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 4 (마스터 이, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_724_83",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 724.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_730_84",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 730.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_734_85",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 734.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_763_86",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 763.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_767_87",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 767.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_770_88",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 770.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_786_89",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 786.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_788_90",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 788.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (아칼리, 2C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_788_91",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 788.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_789_92",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 789.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (쉔, 5C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_789_93",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 789.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_789_94",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 789.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_790_95",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 790.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_790_96",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 790.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_794_97",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 794.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_795_98",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 795.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (일라오이, 3C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_795_99",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 795.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_796_100",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 796.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_797_101",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 797.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_797_102",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 797.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_798_103",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 798.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_798_104",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 798.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_798_105",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 798.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_802_106",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 802.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_802_107",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 802.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (쉔, 5C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_802_108",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 802.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_803_109",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 803.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_804_110",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 804.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나서스, 1C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_804_111",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 804.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_858_112",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 858.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_869_113",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 869.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_870_114",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 870.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_874_115",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 874.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_877_116",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 877.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_878_117",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 878.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_881_118",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 881.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 4/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_882_119",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 882.0,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 1 (모르가나, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_883_120",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 883.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_886_121",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 886.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_887_122",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 887.0,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_889_123",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 889.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 3/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_893_124",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 893.5,
+      "predicted_action": "BUY_UNIT",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.85,
+      "evidence": [
+        "Slot 5 (나미, 4C) transitioned from RECOGNIZED to EMPTY"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_897_125",
+      "case_type": "FALSE_POSITIVE",
+      "timestamp_sec": 897.5,
+      "predicted_action": "ROLL",
+      "ground_truth_action": "NO_ACTION",
+      "confidence": 0.925,
+      "evidence": [
+        "Shop refreshed across 5/5 slots simultaneously",
+        "Board and bench remained unchanged during shop refresh"
+      ],
+      "reason": "Spurious Detection (No GT action within tolerance)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_321_126",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 321.5,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 3 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (미스 포츈)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_340_127",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 340.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 3 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (미스 포츈)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_343_128",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 343.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_343_129",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 343.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_349_130",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 349.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_351_131",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 351.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "reason": "Missed BUY_UNIT Event (소나)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_352_132",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 352.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_353_133",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 353.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_354_134",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 354.5,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "reason": "Missed BUY_UNIT Event (소나)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_358_135",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 358.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_362_136",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 362.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 1 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (쉔)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_364_137",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 364.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_366_138",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 366.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 4 purchased (다리우스)",
+        "Gold decreased by 1G"
+      ],
+      "reason": "Missed BUY_UNIT Event (다리우스)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_368_139",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 368.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_370_140",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 370.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 5 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "reason": "Missed BUY_UNIT Event (조이)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_420_141",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 420.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_421_142",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 421.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 2 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (미스 포츈)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_422_143",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 422.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_424_144",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 424.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 1 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "reason": "Missed BUY_UNIT Event (소나)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_425_145",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 425.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_428_146",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 428.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_430_147",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 430.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 3 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (쉔)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_431_148",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 431.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_480_149",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 480.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_482_150",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 482.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 2 purchased (소나)",
+        "Gold decreased by 1G"
+      ],
+      "reason": "Missed BUY_UNIT Event (소나)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_540_151",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 540.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_541_152",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 541.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 4 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "reason": "Missed BUY_UNIT Event (조이)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_542_153",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 542.5,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_600_154",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 600.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_601_155",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 601.5,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 1 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (미스 포츈)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_604_156",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 604.5,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 3 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (쉔)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_606_157",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 606.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_660_158",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 660.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_661_159",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 661.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 2 purchased (조이)",
+        "Gold decreased by 2G"
+      ],
+      "reason": "Missed BUY_UNIT Event (조이)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_663_160",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 663.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_720_161",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 720.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_721_162",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 721.0,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 1 purchased (미스 포츈)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (미스 포츈)",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_780_163",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 780.0,
+      "predicted_action": null,
+      "ground_truth_action": "ROLL",
+      "confidence": null,
+      "evidence": [
+        "Shop reroll animation confirmed",
+        ">=3 cards updated simultaneously"
+      ],
+      "reason": "Missed ROLL Event",
+      "state_diff_summary": {}
+    },
+    {
+      "case_id": "fa_781_164",
+      "case_type": "FALSE_NEGATIVE",
+      "timestamp_sec": 781.5,
+      "predicted_action": null,
+      "ground_truth_action": "BUY_UNIT",
+      "confidence": null,
+      "evidence": [
+        "Slot 5 purchased (쉔)",
+        "Gold decreased by 3G"
+      ],
+      "reason": "Missed BUY_UNIT Event (쉔)",
+      "state_diff_summary": {}
+    }
+  ]
+}
