@@ -1,0 +1,3409 @@
+{
+  "events": [
+    {
+      "timestamp_sec": 312.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['밀리오', 'EMPTY', '카이사', 'EMPTY', '카이사'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "밀리오",
+          "EMPTY",
+          "카이사",
+          "EMPTY",
+          "카이사"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 313.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '나서스'] -> Current: ['밀리오', '나서스', '카이사', '나서스', '빅토르']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "밀리오",
+          "나서스",
+          "카이사",
+          "나서스",
+          "빅토르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 357.5,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 358.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 4 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 3,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 358.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['밀리오', 'EMPTY', '카이사', 'EMPTY', '카이사'] -> Current: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "밀리오",
+          "EMPTY",
+          "카이사",
+          "EMPTY",
+          "카이사"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 359.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY'] -> Current: ['다이애나', '빅토르', '일라오이', '일라오이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "다이애나",
+          "빅토르",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 361.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '카이사', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "카이사",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 361.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '카이사', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '아트록스', '다이애나', '소나']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "카이사",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "다이애나",
+          "소나"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 364.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '아트록스', '다이애나', '소나'] -> Current: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "다이애나",
+          "소나"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 364.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', '나미'] -> Current: ['EMPTY', '다이애나', '빅토르', '마스터 이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 366.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '자야', '마스터 이', 'EMPTY'] -> Current: ['EMPTY', '다이애나', '빅토르', '탐 켄치', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "자야",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "탐 켄치",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 367.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '빅토르', '탐 켄치', '나미'] -> Current: ['EMPTY', '일라오이', '빅토르', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "탐 켄치",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "일라오이",
+          "빅토르",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 367.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '일라오이', '빅토르', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '렉사이', 'EMPTY', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "일라오이",
+          "빅토르",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "EMPTY",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 370.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '렉사이', '다이애나', '진'] -> Current: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "다이애나",
+          "진"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 372.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '나서스', '마스터 이', 'EMPTY'] -> Current: ['EMPTY', '다이애나', '자야', '탐 켄치', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "나서스",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "자야",
+          "탐 켄치",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 375.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '빅토르', '나미', 'EMPTY'] -> Current: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "나미",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 375.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '아트록스', 'EMPTY', '다이애나']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "EMPTY",
+          "다이애나"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 376.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '아트록스', 'EMPTY', '다이애나'] -> Current: ['EMPTY', 'EMPTY', '렉사이', '다이애나', '진']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "EMPTY",
+          "다이애나"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "다이애나",
+          "진"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 377.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', '코르키', '진'] -> Current: ['EMPTY', 'EMPTY', '일라오이', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "코르키",
+          "진"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "일라오이",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 377.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '일라오이', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '렉사이', '다이애나', '진']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "일라오이",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "다이애나",
+          "진"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 379.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '렉사이', '다이애나', '쉔'] -> Current: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "다이애나",
+          "쉔"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 379.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', '나미'] -> Current: ['EMPTY', '다이애나', '빅토르', '마스터 이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 381.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', '우르곳', '빅토르', '마스터 이', 'EMPTY'] -> Current: ['리븐', '누누와 윌럼프', '누누와 윌럼프', '미스 포츈', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "우르곳",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "리븐",
+          "누누와 윌럼프",
+          "누누와 윌럼프",
+          "미스 포츈",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 381.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['리븐', '누누와 윌럼프', '누누와 윌럼프', '미스 포츈', 'EMPTY'] -> Current: ['다이애나', '다이애나', '다이애나', '미스 포츈', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "리븐",
+          "누누와 윌럼프",
+          "누누와 윌럼프",
+          "미스 포츈",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "다이애나",
+          "다이애나",
+          "다이애나",
+          "미스 포츈",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 385.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['다이애나', '다이애나', '다이애나', '미스 포츈', 'EMPTY'] -> Current: ['리븐', '누누와 윌럼프', '누누와 윌럼프', '자야', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "다이애나",
+          "다이애나",
+          "다이애나",
+          "미스 포츈",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "리븐",
+          "누누와 윌럼프",
+          "누누와 윌럼프",
+          "자야",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 388.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['리븐', '누누와 윌럼프', '누누와 윌럼프', '자야', 'EMPTY'] -> Current: ['리븐', '리븐', '미스 포츈', '아우렐리온 솔', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "리븐",
+          "누누와 윌럼프",
+          "누누와 윌럼프",
+          "자야",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "리븐",
+          "리븐",
+          "미스 포츈",
+          "아우렐리온 솔",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 391.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['리븐', '누누와 윌럼프', '리븐', '자야', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "리븐",
+          "누누와 윌럼프",
+          "리븐",
+          "자야",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 391.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', '우르곳', '빅토르', '나미', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "우르곳",
+          "빅토르",
+          "나미",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 395.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 5 purchased (나미)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 4,
+        "champion": "나미",
+        "cost": 4
+      }
+    },
+    {
+      "timestamp_sec": 397.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', '다이애나', '빅토르', '마스터 이', '나미'] -> Current: ['EMPTY', 'EMPTY', '우르곳', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "우르곳",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 398.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 3 purchased (렉사이)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 2,
+        "champion": "렉사이",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 398.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY'] -> Current: ['카이사', '카이사', '판테온', '판테온', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "판테온",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 400.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '카이사', '판테온', '판테온', '모데카이저'] -> Current: ['피즈', '카이사', '판테온', '조이', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "판테온",
+          "모데카이저"
+        ],
+        "new_shop": [
+          "피즈",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 402.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['우르곳', '카이사', '판테온', '조이', '조이'] -> Current: ['카이사', '카이사', '조이', '판테온', '그웬']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "우르곳",
+          "카이사",
+          "판테온",
+          "조이",
+          "조이"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "판테온",
+          "그웬"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 402.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '카이사', '조이', '판테온', '그웬'] -> Current: ['카이사', '카이사', '판테온', '조이', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "판테온",
+          "그웬"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 404.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '카이사', '판테온', '조이', '나르'] -> Current: ['카이사', '오로라', '판테온', '그라가스', '모데카이저']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ],
+        "new_shop": [
+          "카이사",
+          "오로라",
+          "판테온",
+          "그라가스",
+          "모데카이저"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 404.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '오로라', '판테온', '그라가스', '모데카이저'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "오로라",
+          "판테온",
+          "그라가스",
+          "모데카이저"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 405.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '쉔'] -> Current: ['카이사', '카이사', '판테온', '아칼리', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "아칼리",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 441.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '카이사', '판테온', '판테온', '모데카이저'] -> Current: ['우르곳', '카이사', '판테온', '조이', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "판테온",
+          "모데카이저"
+        ],
+        "new_shop": [
+          "우르곳",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 450.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['우르곳', '카이사', '판테온', '조이', '조이'] -> Current: ['카이사', '카이사', '판테온', '판테온', '모데카이저']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "우르곳",
+          "카이사",
+          "판테온",
+          "조이",
+          "조이"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "판테온",
+          "모데카이저"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 462.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '카이사', '판테온', '판테온', '모데카이저'] -> Current: ['우르곳', '카이사', '판테온', '조이', '나르']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "판테온",
+          "판테온",
+          "모데카이저"
+        ],
+        "new_shop": [
+          "우르곳",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 466.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['우르곳', '카이사', '판테온', '조이', '나르'] -> Current: ['카이사', '오로라', '판테온', '그웬', '모데카이저']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "우르곳",
+          "카이사",
+          "판테온",
+          "조이",
+          "나르"
+        ],
+        "new_shop": [
+          "카이사",
+          "오로라",
+          "판테온",
+          "그웬",
+          "모데카이저"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 467.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '오로라', '판테온', '그웬', '모데카이저'] -> Current: ['사미라', '조이', '오로라', '벨베스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "오로라",
+          "판테온",
+          "그웬",
+          "모데카이저"
+        ],
+        "new_shop": [
+          "사미라",
+          "조이",
+          "오로라",
+          "벨베스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 471.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['라아스트', '잭스', '오로라', '나서스', '마오카이'] -> Current: ['카이사', '조이', '카이사', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "라아스트",
+          "잭스",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "카이사",
+          "조이",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 472.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '조이', '카이사', '나서스', '마오카이'] -> Current: ['사미라', '잭스', '오로라', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "사미라",
+          "잭스",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 474.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['카이사', '조이', '오로라', '나서스', '마오카이'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 474.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '쉔'] -> Current: ['사미라', '조이', '카이사', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "사미라",
+          "조이",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 480.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '조이', '오로라', '나서스', '마오카이'] -> Current: ['EMPTY', 'EMPTY', '리븐', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "리븐",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 481.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '리븐', 'EMPTY', 'EMPTY'] -> Current: ['소나', '소나', '쉔', 'EMPTY', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "리븐",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "소나",
+          "소나",
+          "쉔",
+          "EMPTY",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 482.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['소나', '소나', '쉔', 'EMPTY', '쉔'] -> Current: ['EMPTY', 'EMPTY', '다이애나', 'EMPTY', '다이애나']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "소나",
+          "소나",
+          "쉔",
+          "EMPTY",
+          "쉔"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "다이애나",
+          "EMPTY",
+          "다이애나"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 483.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', 'EMPTY', '다이애나'] -> Current: ['카이사', '밀리오', '오로라', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "EMPTY",
+          "다이애나"
+        ],
+        "new_shop": [
+          "카이사",
+          "밀리오",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 484.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '조이', '오로라', '나서스', '마오카이'] -> Current: ['케이틀린', '카이사', '빅토르', '미스 포츈', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "케이틀린",
+          "카이사",
+          "빅토르",
+          "미스 포츈",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 485.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['케이틀린', '카이사', '빅토르', '미스 포츈', '나서스'] -> Current: ['카이사', '잭스', '오로라', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "케이틀린",
+          "카이사",
+          "빅토르",
+          "미스 포츈",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "잭스",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 489.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '조이', '카이사', '나서스', '마오카이'] -> Current: ['라아스트', '잭스', '다이애나', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "라아스트",
+          "잭스",
+          "다이애나",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 492.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['사미라', '잭스', '다이애나', '나서스', '마오카이'] -> Current: ['EMPTY', 'EMPTY', '다이애나', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "사미라",
+          "잭스",
+          "다이애나",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "다이애나",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 496.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '다이애나', 'EMPTY', 'EMPTY'] -> Current: ['카이사', '조이', '오로라', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "다이애나",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 496.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', '조이', '오로라', '나서스', '마오카이'] -> Current: ['사미라', '밀리오', '카이사', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "사미라",
+          "밀리오",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 497.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['사미라', '밀리오', '카이사', '나서스', '마오카이'] -> Current: ['카이사', '조이', '오로라', '나서스', '마오카이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "사미라",
+          "밀리오",
+          "카이사",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 552.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '조이', '오로라', '나서스', '마오카이'] -> Current: ['마오카이', '미스 포츈', '우르곳', '우르곳', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "조이",
+          "오로라",
+          "나서스",
+          "마오카이"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "우르곳",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 553.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '다이애나', '카이사', '오로라'] -> Current: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "카이사",
+          "오로라"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 556.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈'] -> Current: ['마오카이', '미스 포츈', '다이애나', '카이사', '라아스트']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "카이사",
+          "라아스트"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 556.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '다이애나', '카이사', '라아스트'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "카이사",
+          "라아스트"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 557.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '나서스'] -> Current: ['마오카이', '미스 포츈', '우르곳', '일라오이', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "일라오이",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 558.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '벨베스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "벨베스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 560.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '쉔'] -> Current: ['마오카이', '미스 포츈', '우르곳', '우르곳', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "우르곳",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 565.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '카이사', '사미라', '피즈'] -> Current: ['마오카이', '미스 포츈', '우르곳', '우르곳', '라아스트']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "카이사",
+          "사미라",
+          "피즈"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "우르곳",
+          "라아스트"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 566.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '일라오이', '피즈'] -> Current: ['마오카이', '미스 포츈', '다이애나', '카이사', '카이사']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "일라오이",
+          "피즈"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "카이사",
+          "카이사"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 567.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '다이애나', '카이사', '카이사'] -> Current: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "카이사",
+          "카이사"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 587.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '일라오이', '피즈'] -> Current: ['나서스', '나서스', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "일라오이",
+          "피즈"
+        ],
+        "new_shop": [
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 587.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '나서스', '나서스', '나서스', '나서스'] -> Current: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 596.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '다이애나', '사미라', '오로라'] -> Current: ['마오카이', '미스 포츈', '우르곳', '카이사', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "다이애나",
+          "사미라",
+          "오로라"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "카이사",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 604.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '일라오이', '피즈'] -> Current: ['소나', '소나', '쉔', 'EMPTY', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "일라오이",
+          "피즈"
+        ],
+        "new_shop": [
+          "소나",
+          "소나",
+          "쉔",
+          "EMPTY",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 612.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['소나', '바드', '쉔', 'EMPTY', '쉔'] -> Current: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "소나",
+          "바드",
+          "쉔",
+          "EMPTY",
+          "쉔"
+        ],
+        "new_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 614.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '미스 포츈', '우르곳', '사미라', '피즈'] -> Current: ['카이사', '판테온', '카이사', '오로라', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "미스 포츈",
+          "우르곳",
+          "사미라",
+          "피즈"
+        ],
+        "new_shop": [
+          "카이사",
+          "판테온",
+          "카이사",
+          "오로라",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 625.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '판테온', '카이사', '오로라', '나미'] -> Current: ['나서스', '이즈리얼', '케이틀린', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "판테온",
+          "카이사",
+          "오로라",
+          "나미"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "케이틀린",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 626.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '케이틀린', '나서스', '쉔'] -> Current: ['오로라', 'EMPTY', '카이사', '사미라', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "케이틀린",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "오로라",
+          "EMPTY",
+          "카이사",
+          "사미라",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 628.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['카이사', '나서스', '카이사', '카이사', '나미'] -> Current: ['나서스', '나서스', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "카이사",
+          "나서스",
+          "카이사",
+          "카이사",
+          "나미"
+        ],
+        "new_shop": [
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 628.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['나서스', '나서스', '나서스', '나서스', '나서스'] -> Current: ['카이사', '나서스', '피즈', '오로라', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "나서스",
+          "피즈",
+          "오로라",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 629.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '나서스', '피즈', '오로라', '나미'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "나서스",
+          "피즈",
+          "오로라",
+          "나미"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 630.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '쉔'] -> Current: ['카이사', '나서스', '카이사', '사미라', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "카이사",
+          "나서스",
+          "카이사",
+          "사미라",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 632.5,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 635.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 638.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['카이사', 'EMPTY', '카이사', '오로라', '나미'] -> Current: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "카이사",
+          "EMPTY",
+          "카이사",
+          "오로라",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 642.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', '나미'] -> Current: ['카이사', 'EMPTY', '피즈', '오로라', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "나미"
+        ],
+        "new_shop": [
+          "카이사",
+          "EMPTY",
+          "피즈",
+          "오로라",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 649.5,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 650.5,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 680.5,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 685.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 2 purchased (나서스)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 1,
+        "champion": "나서스",
+        "cost": 1
+      }
+    },
+    {
+      "timestamp_sec": 694.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['카이사', 'EMPTY', '카이사', '오로라', '나미'] -> Current: ['EMPTY', '우르곳', '카이사', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "카이사",
+          "EMPTY",
+          "카이사",
+          "오로라",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "우르곳",
+          "카이사",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 704.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '카이사', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '빅토르', '람머스', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "카이사",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "람머스",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 705.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', '람머스', '나미'] -> Current: ['EMPTY', 'EMPTY', '다이애나', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "람머스",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "다이애나",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 709.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '우르곳', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '빅토르', '탐 켄치', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "우르곳",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "탐 켄치",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 709.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '빅토르', '탐 켄치', '나미'] -> Current: ['EMPTY', 'EMPTY', '우르곳', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "빅토르",
+          "탐 켄치",
+          "나미"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "우르곳",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 722.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '다이애나', 'EMPTY', 'EMPTY'] -> Current: ['조이', '다이애나', '카이사', '다이애나', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "다이애나",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "다이애나",
+          "일라오이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 724.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['조이', '다이애나', '카이사', '오른', '일라오이'] -> Current: ['나르', '다이애나', '마오카이', '다이애나', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "오른",
+          "일라오이"
+        ],
+        "new_shop": [
+          "나르",
+          "다이애나",
+          "마오카이",
+          "다이애나",
+          "일라오이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 730.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['나르', '다이애나', '카이사', '다이애나', '오로라'] -> Current: ['조이', '다이애나', '카이사', '오른', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "나르",
+          "다이애나",
+          "카이사",
+          "다이애나",
+          "오로라"
+        ],
+        "new_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "오른",
+          "일라오이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 734.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['조이', '다이애나', '카이사', '오른', '일라오이'] -> Current: ['나르', '다이애나', '라아스트', '다이애나', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "오른",
+          "일라오이"
+        ],
+        "new_shop": [
+          "나르",
+          "다이애나",
+          "라아스트",
+          "다이애나",
+          "일라오이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 763.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['나르', '다이애나', '카이사', '다이애나', '일라오이'] -> Current: ['나르', '다이애나', '오로라', '마오카이', '오로라']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "나르",
+          "다이애나",
+          "카이사",
+          "다이애나",
+          "일라오이"
+        ],
+        "new_shop": [
+          "나르",
+          "다이애나",
+          "오로라",
+          "마오카이",
+          "오로라"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 767.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['나르', '다이애나', '카이사', '마오카이', '오로라'] -> Current: ['조이', '다이애나', '카이사', '오른', '빅토르']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "나르",
+          "다이애나",
+          "카이사",
+          "마오카이",
+          "오로라"
+        ],
+        "new_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "오른",
+          "빅토르"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 770.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['조이', '다이애나', '카이사', '오른', '빅토르'] -> Current: ['나르', '다이애나', '마오카이', '오른', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "조이",
+          "다이애나",
+          "카이사",
+          "오른",
+          "빅토르"
+        ],
+        "new_shop": [
+          "나르",
+          "다이애나",
+          "마오카이",
+          "오른",
+          "일라오이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 786.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나르', '다이애나', '카이사', '오른', '일라오이'] -> Current: ['카이사', '카이사', '조이', '조이', '조이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나르",
+          "다이애나",
+          "카이사",
+          "오른",
+          "일라오이"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "조이",
+          "조이"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 788.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '일라오이', '조이', '조이', 'EMPTY'] -> Current: ['나서스', '이즈리얼', '케이틀린', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "일라오이",
+          "조이",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "케이틀린",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 789.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '케이틀린', '나서스', '쉔'] -> Current: ['카이사', '카이사', '조이', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "케이틀린",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 789.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '카이사', '조이', '조이', 'EMPTY'] -> Current: ['나서스', '케이틀린', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "케이틀린",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 790.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '케이틀린', '나서스', '나서스', '나서스'] -> Current: ['카이사', '일라오이', '밀리오', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "케이틀린",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "일라오이",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 794.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['마오카이', '일라오이', '밀리오', '조이', 'EMPTY'] -> Current: ['일라오이', '제드', '쉔', '소나', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "마오카이",
+          "일라오이",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "일라오이",
+          "제드",
+          "쉔",
+          "소나",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 795.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['일라오이', '제드', '쉔', '소나', '일라오이'] -> Current: ['카이사', '카이사', '밀리오', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "일라오이",
+          "제드",
+          "쉔",
+          "소나",
+          "일라오이"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 796.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '카이사', '밀리오', '조이', 'EMPTY'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 797.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '나서스'] -> Current: ['카이사', '카이사', '밀리오', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 798.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '카이사', '밀리오', '조이', 'EMPTY'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '나서스']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 798.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '나서스'] -> Current: ['카이사', '카이사', '조이', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "조이",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 802.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '일라오이', '조이', '조이', 'EMPTY'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "일라오이",
+          "조이",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 802.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '쉔'] -> Current: ['카이사', '카이사', '밀리오', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 803.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['카이사', '카이사', '밀리오', '조이', 'EMPTY'] -> Current: ['나서스', '이즈리얼', '나서스', '나서스', '쉔']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "쉔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 804.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['나서스', '이즈리얼', '나서스', '나서스', '나서스'] -> Current: ['카이사', '카이사', '밀리오', '조이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "나서스",
+          "이즈리얼",
+          "나서스",
+          "나서스",
+          "나서스"
+        ],
+        "new_shop": [
+          "카이사",
+          "카이사",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 858.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['카이사', '일라오이', '밀리오', '조이', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "카이사",
+          "일라오이",
+          "밀리오",
+          "조이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 858.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', '빅토르', '일라오이', '일라오이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "빅토르",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 860.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '렉사이', 'EMPTY', '라아스트']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "렉사이",
+          "EMPTY",
+          "라아스트"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 869.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '오로라', '다이애나', '쉔'] -> Current: ['EMPTY', 'EMPTY', '자야', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "오로라",
+          "다이애나",
+          "쉔"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "자야",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 869.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '자야', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', '다이애나', '빅토르', '마스터 이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "자야",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 870.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '빅토르', '마스터 이', 'EMPTY'] -> Current: ['다이애나', '다이애나', '미스 포츈', '미스 포츈', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "다이애나",
+          "다이애나",
+          "미스 포츈",
+          "미스 포츈",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 874.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['다이애나', '다이애나', '누누와 윌럼프', '미스 포츈', 'EMPTY'] -> Current: ['리븐', '킨드레드', '누누와 윌럼프', '자야', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "다이애나",
+          "다이애나",
+          "누누와 윌럼프",
+          "미스 포츈",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "리븐",
+          "킨드레드",
+          "누누와 윌럼프",
+          "자야",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 877.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['리븐', '리븐', '누누와 윌럼프', '자야', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "리븐",
+          "리븐",
+          "누누와 윌럼프",
+          "자야",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 877.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', 'EMPTY', 'EMPTY', 'EMPTY'] -> Current: ['EMPTY', '다이애나', '빅토르', '마스터 이', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 878.0,
+      "action_type": "BUY_UNIT",
+      "source": "OBSERVED",
+      "confidence": 0.88,
+      "evidence": [
+        "Slot 5 purchased (나미)",
+        "Slot transitioned from RECOGNIZED to EMPTY"
+      ],
+      "evidence_data": {
+        "slot_index": 4,
+        "champion": "나미",
+        "cost": 4
+      }
+    },
+    {
+      "timestamp_sec": 881.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 4/5 slots",
+        "Previous: ['EMPTY', '다이애나', '자야', '마스터 이', '나미'] -> Current: ['쉔', '다이애나', '빅토르', '나미', '아우렐리온 솔']"
+      ],
+      "evidence_data": {
+        "diff_count": 4,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "자야",
+          "마스터 이",
+          "나미"
+        ],
+        "new_shop": [
+          "쉔",
+          "다이애나",
+          "빅토르",
+          "나미",
+          "아우렐리온 솔"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 886.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '다이애나', '자야', '마스터 이', 'EMPTY'] -> Current: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "다이애나",
+          "자야",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 887.0,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '일라오이', '일라오이', '일라오이', 'EMPTY'] -> Current: ['EMPTY', '다이애나', '빅토르', '마스터 이', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "일라오이",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "다이애나",
+          "빅토르",
+          "마스터 이",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 889.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '우르곳', '티모', '마스터 이', 'EMPTY'] -> Current: ['EMPTY', '우르곳', '빅토르', '탐 켄치', '나미']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "우르곳",
+          "티모",
+          "마스터 이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "우르곳",
+          "빅토르",
+          "탐 켄치",
+          "나미"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 896.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 3/5 slots",
+        "Previous: ['EMPTY', '빅토르', '일라오이', '일라오이', 'EMPTY'] -> Current: ['EMPTY', 'EMPTY', '아트록스', 'EMPTY', 'EMPTY']"
+      ],
+      "evidence_data": {
+        "diff_count": 3,
+        "prev_shop": [
+          "EMPTY",
+          "빅토르",
+          "일라오이",
+          "일라오이",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "EMPTY",
+          "EMPTY"
+        ]
+      }
+    },
+    {
+      "timestamp_sec": 897.5,
+      "action_type": "ROLL",
+      "source": "OBSERVED",
+      "confidence": 0.9,
+      "evidence": [
+        "Shop refreshed across 5/5 slots",
+        "Previous: ['EMPTY', 'EMPTY', '아트록스', 'EMPTY', 'EMPTY'] -> Current: ['조이', '벨베스', '밀리오', '마오카이', '일라오이']"
+      ],
+      "evidence_data": {
+        "diff_count": 5,
+        "prev_shop": [
+          "EMPTY",
+          "EMPTY",
+          "아트록스",
+          "EMPTY",
+          "EMPTY"
+        ],
+        "new_shop": [
+          "조이",
+          "벨베스",
+          "밀리오",
+          "마오카이",
+          "일라오이"
+        ]
+      }
+    }
+  ]
+}

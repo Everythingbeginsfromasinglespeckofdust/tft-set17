@@ -1,0 +1,22 @@
+{
+  "version": "ShopRecognizerV2",
+  "total_slots_evaluated": 200,
+  "overall_champion_accuracy": 1.0,
+  "overall_cost_accuracy": 1.0,
+  "slot_accuracies": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0
+  },
+  "unknown_rate": 0.0,
+  "missing_rate": 0.0,
+  "roll_precision": 0.0917,
+  "roll_recall": 0.3571,
+  "roll_f1": 0.1459,
+  "buy_precision": 0.1,
+  "buy_recall": 0.0556,
+  "buy_f1": 0.0715,
+  "timing_mae_sec": 0.326
+}

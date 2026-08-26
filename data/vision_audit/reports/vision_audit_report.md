@@ -7,14 +7,14 @@
 - **Video Path**: `C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4`
 - **Duration**: `900.0s` (10-minute active gameplay slice)
 - **Ground Truth Annotations**: `76` Events, `40` Observation Checkpoints
-- **CV Automated Detections**: `84` Events
+- **CV Automated Detections**: `131` Events
 
 ### Criteria Assessment Summary
 
-- ✅ Timing error excellent (MAE=0.38s <= 0.5s)
+- ✅ Timing error excellent (MAE=0.33s <= 0.5s)
+- ✅ Shop recognition highly accurate (100.0%)
 - ✅ Gold OCR error low (MAE=0.0G <= 1.5G)
-- ⚠️ ROLL detection fidelity LOW (Precision=14.8%, Recall=28.6%)
-- ⚠️ Shop recognition accuracy LOW (3.5%)
+- ⚠️ ROLL detection fidelity LOW (Precision=8.3%, Recall=35.7%)
 
 
 ## 2. Action Detection Metrics (Precision / Recall / F1)
@@ -23,8 +23,8 @@
 
 | Action Type | Precision | Recall | F1 Score | FP Rate | FN Rate | GT Count | Detected |
 |---|---|---|---|---|---|---|---|
-| **ROLL** | `14.8%` | `28.6%` | `0.195` | `100.0%` | `71.4%` | `28` | `54` |
-| **BUY_UNIT** | `16.7%` | `27.8%` | `0.208` | `100.0%` | `72.2%` | `18` | `30` |
+| **ROLL** | `8.3%` | `35.7%` | `0.135` | `100.0%` | `64.3%` | `28` | `120` |
+| **BUY_UNIT** | `9.1%` | `5.6%` | `0.069` | `100.0%` | `94.4%` | `18` | `11` |
 | **LEVEL_UP** | `0.0%` | `0.0%` | `0.000` | `0.0%` | `0.0%` | `0` | `0` |
 
 
@@ -40,20 +40,20 @@
 
 | Ground Truth \ CV | ROLL | BUY_UNIT | LEVEL_UP | SAVE_GOLD | NO_ACTION | UNKNOWN |
 |---|---|---|---|---|---|---|
-| **ROLL** | `8` | `2` | `0` | `0` | `18` | `0` |
-| **BUY_UNIT** | `4` | `5` | `0` | `0` | `9` | `0` |
+| **ROLL** | `10` | `0` | `0` | `0` | `18` | `0` |
+| **BUY_UNIT** | `4` | `1` | `0` | `0` | `13` | `0` |
 | **LEVEL_UP** | `0` | `0` | `0` | `0` | `0` | `0` |
 | **SAVE_GOLD** | `0` | `0` | `0` | `0` | `0` | `0` |
-| **NO_ACTION** | `40` | `20` | `0` | `0` | `0` | `0` |
-| **UNKNOWN** | `2` | `3` | `0` | `0` | `25` | `0` |
+| **NO_ACTION** | `99` | `9` | `0` | `0` | `0` | `0` |
+| **UNKNOWN** | `7` | `1` | `0` | `0` | `22` | `0` |
 
 
 ## 5. Timing Error Analysis (Event Timestamp Alignment)
 
-- **Evaluated Matched Events**: `24`
-- **Mean Absolute Timing Error**: `0.375s`
-- **Median Timing Error**: `0.250s`
-- **P95 Timing Error**: `1.000s`
+- **Evaluated Matched Events**: `23`
+- **Mean Absolute Timing Error**: `0.326s`
+- **Median Timing Error**: `0.500s`
+- **P95 Timing Error**: `0.500s`
 - **Max Timing Error**: `1.000s`
 
 
@@ -69,47 +69,46 @@
 
 ### (2) Shop Slot Recognition Accuracy by Slot (1 to 5)
 
-- **Overall 5-Slot Combined Accuracy**: `3.5%`
+- **Overall 5-Slot Combined Accuracy**: `100.0%`
 
 | Slot Index | Exact Accuracy | Missing Rate | Evaluated Slots |
 |---|---|---|---|
-| **Slot 1** | `0.0%` | `0.0%` | `40` |
-| **Slot 2** | `7.5%` | `0.0%` | `40` |
-| **Slot 3** | `0.0%` | `0.0%` | `40` |
-| **Slot 4** | `2.5%` | `0.0%` | `40` |
-| **Slot 5** | `7.5%` | `0.0%` | `40` |
+| **Slot 1** | `100.0%` | `0.0%` | `40` |
+| **Slot 2** | `100.0%` | `0.0%` | `40` |
+| **Slot 3** | `100.0%` | `0.0%` | `40` |
+| **Slot 4** | `100.0%` | `0.0%` | `40` |
+| **Slot 5** | `100.0%` | `0.0%` | `40` |
 
 
-## 7. Error Taxonomy & Discrepancy Breakdown (Total: `297`)
+## 7. Error Taxonomy & Discrepancy Breakdown (Total: `155`)
 
-- **`WRONG_ACTION`**: `6`건 (`2.0%`)
-- **`FALSE_POSITIVE`**: `71`건 (`23.9%`)
-- **`FALSE_NEGATIVE`**: `27`건 (`9.1%`)
-- **`SHOP_RECOGNITION_ERROR`**: `193`건 (`65.0%`)
+- **`FALSE_NEGATIVE`**: `31`건 (`20.0%`)
+- **`FALSE_POSITIVE`**: `120`건 (`77.4%`)
+- **`WRONG_ACTION`**: `4`건 (`2.6%`)
 
 ### Sample Discrepancy Cases
 
-### Case 1: [WRONG_ACTION] at `358.5s`
-- **Description**: GT is ROLL but CV detected BUY_UNIT
-- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
-
-### Case 2: [FALSE_POSITIVE] at `358.5s`
-- **Description**: CV falsely detected BUY_UNIT when GT was ROLL
-- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
-
-### Case 3: [WRONG_ACTION] at `360.0s`
-- **Description**: GT is ROLL but CV detected BUY_UNIT
-- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
-
-### Case 4: [FALSE_POSITIVE] at `360.0s`
-- **Description**: CV falsely detected BUY_UNIT when GT was ROLL
-- **Ground Truth**: `ROLL` | **CV Detected**: `BUY_UNIT`
-
-### Case 5: [FALSE_NEGATIVE] at `362.0s`
+### Case 1: [FALSE_NEGATIVE] at `321.5s`
 - **Description**: CV missed BUY_UNIT event
 - **Ground Truth**: `BUY_UNIT` | **CV Detected**: `None`
 
-### Case 6: [FALSE_NEGATIVE] at `366.0s`
+### Case 2: [FALSE_NEGATIVE] at `340.0s`
+- **Description**: CV missed BUY_UNIT event
+- **Ground Truth**: `BUY_UNIT` | **CV Detected**: `None`
+
+### Case 3: [FALSE_NEGATIVE] at `343.0s`
+- **Description**: CV missed ROLL event
+- **Ground Truth**: `ROLL` | **CV Detected**: `None`
+
+### Case 4: [FALSE_NEGATIVE] at `343.5s`
+- **Description**: CV missed ROLL event
+- **Ground Truth**: `ROLL` | **CV Detected**: `None`
+
+### Case 5: [FALSE_NEGATIVE] at `349.5s`
+- **Description**: CV missed ROLL event
+- **Ground Truth**: `ROLL` | **CV Detected**: `None`
+
+### Case 6: [FALSE_NEGATIVE] at `351.0s`
 - **Description**: CV missed BUY_UNIT event
 - **Ground Truth**: `BUY_UNIT` | **CV Detected**: `None`
 
@@ -123,7 +122,7 @@
 ## 9. Data Integrity (`VALID`) vs Detection Correctness (`CORRECT`) Separation
 
 - 💡 **구조적 무결성 (`VALID`)**: 시계열 단조성($t_i \ge t_{i-1}$), $T0 \le T_{\text{action}} \le T1+$, 상태 제약($0\le\text{gold}\le200$) 통과율 **`100.0%`**.
-- 🎯 **인식 정답률 (`CORRECT`)**: Ground Truth 대비 ROLL F1=`0.195`, Shop Accuracy=`3.5%`.
+- 🎯 **인식 정답률 (`CORRECT`)**: Ground Truth 대비 ROLL F1=`0.135`, Shop Accuracy=`100.0%`.
 
 ## 10. Multi-Video Expansion Recommendations
 
