@@ -1,0 +1,11 @@
+{
+  "session_id": "SESSION_B",
+  "total_frames_sampled": 600,
+  "processing_time_sec": 42.5,
+  "effective_fps": 14.1,
+  "total_detected_events": 6,
+  "roll_events": 2,
+  "buy_events": 4,
+  "system_refresh_events": 0,
+  "gold_deltas": 6
+}

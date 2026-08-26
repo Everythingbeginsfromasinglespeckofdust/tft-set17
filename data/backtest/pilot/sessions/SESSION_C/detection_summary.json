@@ -1,0 +1,11 @@
+{
+  "session_id": "SESSION_C",
+  "total_frames_sampled": 600,
+  "processing_time_sec": 38.2,
+  "effective_fps": 15.7,
+  "total_detected_events": 7,
+  "roll_events": 4,
+  "buy_events": 3,
+  "system_refresh_events": 0,
+  "gold_deltas": 7
+}

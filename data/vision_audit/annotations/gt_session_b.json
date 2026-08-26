@@ -1,0 +1,147 @@
+{
+  "session_id": "SESSION_B",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\3d739316-3c52-441a-81a2-2b585097e67c-2026-08-16-02-22-55.mp4",
+  "duration_sec": 600.0,
+  "annotator_ids": [
+    "human_annotator_1",
+    "human_annotator_2"
+  ],
+  "events": [
+    {
+      "timestamp_sec": 305.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 310.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 315.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 320.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "말자하",
+      "slot_index": 1,
+      "evidence_observed": [
+        "Slot 2 purchased",
+        "Gold -3G"
+      ]
+    },
+    {
+      "timestamp_sec": 325.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 330.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 335.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 340.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "스웨인",
+      "slot_index": 3,
+      "evidence_observed": [
+        "Slot 4 purchased",
+        "Gold -3G"
+      ]
+    },
+    {
+      "timestamp_sec": 345.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 355.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "조이",
+      "slot_index": 0,
+      "evidence_observed": [
+        "Slot 1 purchased",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 360.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 375.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 390.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Gold saving towards 50G interest breakpoint"
+      ],
+      "notes": "Fast levelup saving phase"
+    },
+    {
+      "timestamp_sec": 412.0,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 414.0,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 415.5,
+      "event_type": "BUY_UNIT",
+      "target_champion": "다이애나",
+      "slot_index": 2,
+      "evidence_observed": [
+        "Slot 3 purchased",
+        "Gold -4G"
+      ]
+    }
+  ]
+}

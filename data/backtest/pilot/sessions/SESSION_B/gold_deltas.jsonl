@@ -1,0 +1,6 @@
+{"timestamp_sec": 320.0, "before_gold": 38, "after_gold": 35, "delta": -3, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": false, "is_round_income": false, "confidence": 0.95}
+{"timestamp_sec": 340.0, "before_gold": 45, "after_gold": 42, "delta": -3, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": false, "is_round_income": false, "confidence": 0.95}
+{"timestamp_sec": 355.0, "before_gold": 50, "after_gold": 48, "delta": -2, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": true, "is_round_income": false, "confidence": 0.95}
+{"timestamp_sec": 412.0, "before_gold": 54, "after_gold": 52, "delta": -2, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": true, "is_round_income": false, "confidence": 0.95}
+{"timestamp_sec": 414.0, "before_gold": 52, "after_gold": 50, "delta": -2, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": true, "is_round_income": false, "confidence": 0.95}
+{"timestamp_sec": 415.5, "before_gold": 50, "after_gold": 46, "delta": -4, "event_type": "GOLD_DECREASE", "is_buy_delta": true, "is_roll_delta": false, "is_round_income": false, "confidence": 0.95}

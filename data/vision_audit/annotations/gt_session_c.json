@@ -1,0 +1,137 @@
+{
+  "session_id": "SESSION_C",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\6e831624-4c47-4e94-9176-92e7063b7a75-2026-08-16-00-24-31.mp4",
+  "duration_sec": 600.0,
+  "annotator_ids": [
+    "human_annotator_1",
+    "human_annotator_2"
+  ],
+  "events": [
+    {
+      "timestamp_sec": 305.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 310.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 315.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 320.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 325.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "아칼리",
+      "slot_index": 0,
+      "evidence_observed": [
+        "Slot 1 purchased",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 330.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 335.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 340.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    },
+    {
+      "timestamp_sec": 348.0,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 349.5,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 350.5,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 352.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "카타리나",
+      "slot_index": 3,
+      "evidence_observed": [
+        "Slot 4 purchased",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 353.5,
+      "event_type": "ROLL",
+      "evidence_observed": [
+        "Reroll button clicked",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 355.0,
+      "event_type": "BUY_UNIT",
+      "target_champion": "아칼리",
+      "slot_index": 1,
+      "evidence_observed": [
+        "Slot 2 purchased",
+        "Gold -2G"
+      ]
+    },
+    {
+      "timestamp_sec": 360.0,
+      "event_type": "NO_OBSERVED_ECONOMIC_ACTION",
+      "evidence_observed": [
+        "Quiescent gold accumulation"
+      ],
+      "notes": "Pre-roll saving phase"
+    }
+  ]
+}

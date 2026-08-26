@@ -1,0 +1,64 @@
+{
+  "session_id": "SESSION_C",
+  "duration_sec": 600.0,
+  "total_frames_sampled": 600,
+  "shop": {
+    "champion_accuracy": 1.0,
+    "cost_accuracy": 1.0,
+    "slot_localization_accuracy": 1.0,
+    "unknown_rate": 0.0,
+    "no_detection_rate": 0.0
+  },
+  "gold": {
+    "raw_ocr_valid_rate": 0.25,
+    "raw_ocr_exact_accuracy": 0.98,
+    "carried_forward_rate": 0.75,
+    "stabilized_accuracy": 0.985,
+    "unknown_rate": 0.0,
+    "missing_rate": 0.0,
+    "delta_count": 7,
+    "delta_precision": 0.0,
+    "delta_recall": 0.0
+  },
+  "actions": {
+    "ROLL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "BUY_UNIT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "SYSTEM_REFRESH": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "counts": {
+    "gt_roll": 4,
+    "gt_buy": 3,
+    "gt_no_action": 8,
+    "gt_system_refresh": 0,
+    "detected_roll": 4,
+    "detected_buy": 3,
+    "total_fp": 0,
+    "total_fn": 0
+  },
+  "production_gap": {
+    "rule_replay_roll_f1": 1.0,
+    "production_roll_f1": 1.0,
+    "gap_roll": 0.0,
+    "rule_replay_buy_f1": 1.0,
+    "production_buy_f1": 1.0,
+    "gap_buy": 0.0
+  },
+  "leakage_violations": 0,
+  "timing_mae_sec": 0.0,
+  "performance": {
+    "processing_time_sec": 38.2,
+    "effective_fps": 15.7
+  }
+}

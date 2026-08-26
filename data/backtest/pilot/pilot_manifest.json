@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "description": "TFT Multi-Session Pilot Registry",
+  "total_sessions": 3,
+  "sessions": [
+    {
+      "session_id": "SESSION_A",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+      "duration": 1931.4,
+      "resolution": "1280x720",
+      "source_fps": 60.0,
+      "match_id": "MATCH_EDA87AD9",
+      "participant_id": "PLAYER_1",
+      "identity_verified": true,
+      "final_placement": 2,
+      "economic_archetype": "BALANCED_STANDARD",
+      "metadata": {
+        "registered_by": "pilot_v1_initializer"
+      }
+    },
+    {
+      "session_id": "SESSION_B",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\3d739316-3c52-441a-81a2-2b585097e67c-2026-08-16-02-22-55.mp4",
+      "duration": 2368.78,
+      "resolution": "1280x720",
+      "source_fps": 60.0,
+      "match_id": "MATCH_3D739316",
+      "participant_id": "PLAYER_2",
+      "identity_verified": true,
+      "final_placement": 1,
+      "economic_archetype": "FAST_LEVELUP",
+      "metadata": {
+        "registered_by": "pilot_v1_initializer"
+      }
+    },
+    {
+      "session_id": "SESSION_C",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\6e831624-4c47-4e94-9176-92e7063b7a75-2026-08-16-00-24-31.mp4",
+      "duration": 2032.07,
+      "resolution": "1280x720",
+      "source_fps": 60.0,
+      "match_id": "MATCH_6E831624",
+      "participant_id": "PLAYER_3",
+      "identity_verified": true,
+      "final_placement": 4,
+      "economic_archetype": "REROLL_HEAVY",
+      "metadata": {
+        "registered_by": "pilot_v1_initializer"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "session_count": 3,
+  "gate_verdict": "RED",
+  "sessions_evaluated": [
+    "SESSION_A",
+    "SESSION_B",
+    "SESSION_C"
+  ],
+  "pooled": {
+    "roll_f1": 0.6955,
+    "buy_f1": 0.6977,
+    "total_fp": 150
+  },
+  "roll_f1_stats": {
+    "mean": 0.6955,
+    "median": 1.0,
+    "min": 0.0864,
+    "max": 1.0,
+    "std": 0.4307
+  },
+  "buy_f1_stats": {
+    "mean": 0.6977,
+    "median": 1.0,
+    "min": 0.093,
+    "max": 1.0,
+    "std": 0.4276
+  },
+  "gold_stats": {
+    "raw_ocr_valid_mean": 0.2427,
+    "stabilized_acc_mean": 0.9849
+  },
+  "total_leakage_violations": 0
+}
