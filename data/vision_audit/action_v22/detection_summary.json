@@ -1,0 +1,8 @@
+{
+  "total_observations": 1201,
+  "total_predicted_events": 159,
+  "events_by_type": {
+    "ROLL": 134,
+    "BUY_UNIT": 25
+  }
+}
