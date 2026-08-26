@@ -1,0 +1,19 @@
+{
+  "total_samples": 104,
+  "video_duration_sec": 900.0,
+  "observations_count": 1201,
+  "events_count": 104,
+  "quality_flags": {
+    "VALID": 104
+  },
+  "action_coverage_by_source": {
+    "SAVE_GOLD": {
+      "INFERRED": 20
+    },
+    "ROLL": {
+      "OBSERVED": 84
+    }
+  },
+  "temporal_violations_count": 0,
+  "identity_link_status": "VERIFIED"
+}

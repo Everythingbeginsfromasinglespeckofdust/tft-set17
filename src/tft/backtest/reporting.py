@@ -87,8 +87,9 @@ class ReportGenerator:
         md.append(f"## 6. Midgame Descriptive Statistics (n={report.midgame_count})\n")
         if report.midgame_count > 0:
             ms = report.midgame_statistics
+            top4_str = f"{ms.get('top4_rate', 0.0):.1%}" if ms.get('top4_rate') is not None else "-"
             md.append(f"- **Evaluated Samples**: `{ms.get('count')}`")
-            md.append(f"- **Samples with Final Placement**: `{ms.get('with_placement')}` (Avg Placement: `#{ms.get('avg_placement')}`, Top4: `{ms.get('top4_rate', 0.0):.1%}`)")
+            md.append(f"- **Samples with Final Placement**: `{ms.get('with_placement')}` (Avg Placement: `#{ms.get('avg_placement')}`, Top4: `{top4_str}`)")
             md.append(f"- **Known Action Count**: `{ms.get('known_action_count')}`\n")
             
             md.append("### (1) By Stage (Midgame Only)\n")
@@ -109,9 +110,10 @@ class ReportGenerator:
         md.append("> ⚠️ **알림**: 아래 수치는 탈락 시점의 기술통계(Descriptive)이며, Decision Engine의 성능 지표가 아닙니다.\n")
         if report.endgame_count > 0:
             es = report.endgame_statistics
+            top4_es_str = f"{es.get('top4_rate', 0.0):.1%}" if es.get('top4_rate') is not None else "-"
             md.append(f"- **Total Endgame Snapshots**: `{es.get('count')}`")
             md.append(f"- **Average Final Placement**: `#{es.get('avg_placement')}`")
-            md.append(f"- **Top 4 Rate**: `{es.get('top4_rate', 0.0):.1%}` (분모: `{es.get('with_placement')}`)\n")
+            md.append(f"- **Top 4 Rate**: `{top4_es_str}` (분모: `{es.get('with_placement')}`)\n")
             
             md.append("### (1) By Gold at Elimination\n")
             md.append("| Gold Tier | Samples | Avg Placement | Top 4 Rate | Mean Score Gap |")
