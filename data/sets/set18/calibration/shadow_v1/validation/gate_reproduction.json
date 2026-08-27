@@ -1,0 +1,8 @@
+{
+  "gate_samples_count": 120,
+  "shadow_samples_count": 120,
+  "gate_flips_count": 14,
+  "shadow_flips_count": 14,
+  "reproduction_exact_match": true,
+  "verdict": "PERFECT_100_PERCENT_REPRODUCTION"
+}

@@ -1,0 +1,23 @@
+{
+  "experiment_id": "SHADOW_VALIDATION_V1_20260827",
+  "experiment_version": "1.0.0",
+  "retrieved_at": "2026-08-27T05:11:08Z",
+  "patch": "18.1",
+  "calibration_candidate": "CALIB_C",
+  "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+  "production_engine_hash_verified": true,
+  "sampling_rate": 1.0,
+  "metrics": {
+    "total_states_evaluated": 120,
+    "flips_count": 14,
+    "flip_rate": 0.1167,
+    "flip_directions": {
+      "SAVE_GOLD->ROLL": 14
+    },
+    "mean_latency_ms": 0.15,
+    "p95_latency_ms": 0.22,
+    "max_latency_ms": 0.24,
+    "gate_reproduction_match": true
+  },
+  "final_gate_verdict": "SHADOW_VALIDATED"
+}

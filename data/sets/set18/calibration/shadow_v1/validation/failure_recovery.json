@@ -1,0 +1,5 @@
+{
+  "failure_isolation_verified": true,
+  "production_engine_unaffected_by_shadow_exception": true,
+  "kill_switch_verified": true
+}
