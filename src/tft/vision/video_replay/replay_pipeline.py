@@ -111,17 +111,20 @@ class VideoReplayPipeline:
                 "is_empty": is_empty,
             })
 
-        # 3. Create Observation
+        # Dynamic level estimate from stage (e.g. Stage 2 -> L4, Stage 3 -> L5/6, Stage 4 -> L7)
+        st_num = int(stage_round_hint.split("-")[0]) if "-" in stage_round_hint else 2
+        dynamic_level = min(9, max(1, st_num + 2))
+
         obs = Observation(
             timestamp_sec=timestamp_sec,
             frame_index=frame_idx,
             stage_text=stage_round_hint,
-            gold_val=g_obs.parsed_gold if g_obs.is_valid else 30,
-            hp_val=60,
-            level_val=7,
+            gold_val=g_obs.parsed_gold if g_obs.is_valid else 0,
+            hp_val=100,
+            level_val=dynamic_level,
             shop_cards=card_obs_list,
             sources={"shop": "ShopRecognizerV2", "gold": "GoldRecognizer"},
-            confidences={"shop": 0.90, "gold": g_obs.confidence},
+            confidences={"shop": 0.90, "gold": g_obs.confidence if g_obs.is_valid else 0.0},
             overall_confidence=0.85
         )
 

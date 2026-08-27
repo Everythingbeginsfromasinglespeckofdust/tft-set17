@@ -87,25 +87,32 @@ class DecisionAnalysisManager:
         # 2. Reconstruct GameState at T0
         t_g0 = time.time()
         obs = v_state.observed
-        current_gold = obs.gold if (obs and obs.gold is not None) else 35
-        current_hp = obs.hp if (obs and obs.hp is not None) else 60
-        current_level = obs.level if (obs and obs.level is not None) else 7
-        current_stage = obs.stage_round if (obs and obs.stage_round) else "3-2"
+        current_gold = obs.gold if (obs and obs.gold is not None) else 0
+        current_hp = obs.hp if (obs and obs.hp is not None) else 100
+        current_level = obs.level if (obs and obs.level is not None) else 1
+        current_stage = obs.stage_round if (obs and obs.stage_round) else "2-1"
 
         # Shop units
         shop_units = []
         if obs and obs.shop_slots:
             for card in obs.shop_slots:
-                if card.champion and card.champion != "EMPTY":
+                if card.champion and card.champion != "EMPTY" and card.champion != "UNK":
                     shop_units.append(Unit(champion=card.champion, cost=card.cost or 1, star_level=1))
 
+        # Board units extracted from vision observation
+        board_units = []
+        if obs and getattr(obs, "board_units", None):
+            for bu in obs.board_units:
+                if hasattr(bu, "champion") and bu.champion:
+                    board_units.append(Unit(champion=bu.champion, cost=getattr(bu, "cost", 1), star_level=getattr(bu, "star_level", 1)))
+
         game_state = GameState(
-            stage=int(current_stage.split("-")[0]) if "-" in current_stage else 3,
-            round=int(current_stage.split("-")[1]) if "-" in current_stage else 2,
+            stage=int(current_stage.split("-")[0]) if "-" in current_stage else 2,
+            round=int(current_stage.split("-")[1]) if "-" in current_stage else 1,
             stage_round=current_stage,
-            player=PlayerState(gold=current_gold, level=current_level, xp=12, hp=current_hp),
-            board_units=[Unit(champion="Miss Fortune", cost=3, star_level=2)],
-            bench_units=[Unit(champion="Miss Fortune", cost=3, star_level=1)],
+            player=PlayerState(gold=current_gold, level=current_level, xp=0, hp=current_hp),
+            board_units=board_units,
+            bench_units=[],
             shop_units=shop_units
         )
         self.state.observed_state = game_state
