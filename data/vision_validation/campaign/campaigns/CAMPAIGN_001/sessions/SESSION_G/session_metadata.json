@@ -1,0 +1,16 @@
+{
+  "session_id": "SESSION_G",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\6e78f07b-2b34-4659-84be-90150c707973_part2-2026-08-26-17-02-10.mp4",
+  "match_id": "MATCH_6E78F07B_2",
+  "player_id": "PLAYER_G",
+  "final_placement": 1,
+  "economic_archetype": "FAST_LEVELUP",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 60.0,
+  "duration_sec": 2158.2,
+  "total_frames": 129492,
+  "registered_at": "2026-08-27T10:20:14.720239"
+}

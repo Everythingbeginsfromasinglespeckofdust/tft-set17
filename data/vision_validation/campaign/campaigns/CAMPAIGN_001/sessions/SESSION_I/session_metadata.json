@@ -1,0 +1,16 @@
+{
+  "session_id": "SESSION_I",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\adedde76-7119-400e-b65e-9b7f58a795b7_part2-2026-08-26-21-04-56.mp4",
+  "match_id": "MATCH_ADEDDE76_2",
+  "player_id": "PLAYER_I",
+  "final_placement": 6,
+  "economic_archetype": "REROLL_HEAVY",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 60.0,
+  "duration_sec": 2468.6,
+  "total_frames": 148114,
+  "registered_at": "2026-08-27T10:20:14.796095"
+}

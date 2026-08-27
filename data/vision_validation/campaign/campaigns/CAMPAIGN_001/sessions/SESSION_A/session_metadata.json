@@ -1,0 +1,16 @@
+{
+  "session_id": "SESSION_A",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+  "match_id": "MATCH_EDA87AD9",
+  "player_id": "PLAYER_A",
+  "final_placement": 2,
+  "economic_archetype": "BALANCED_STANDARD",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 60.0,
+  "duration_sec": 600.0,
+  "total_frames": 36000,
+  "registered_at": "2026-08-27T10:20:14.488510"
+}

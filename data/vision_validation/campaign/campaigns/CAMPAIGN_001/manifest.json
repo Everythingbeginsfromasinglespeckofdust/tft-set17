@@ -1,0 +1,186 @@
+{
+  "campaign_id": "CAMPAIGN_001",
+  "version": "v1.0",
+  "created_at": "2026-08-27T10:20:01.867133",
+  "random_seed": 42,
+  "git_commit_hash": "626bd4b",
+  "session_count": 11,
+  "sessions": [
+    {
+      "session_id": "SESSION_A",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\eda87ad9-7e10-46f5-904e-8f10084bf706-2026-07-29-02-41-03.mp4",
+      "match_id": "MATCH_EDA87AD9",
+      "player_id": "PLAYER_A",
+      "final_placement": 2,
+      "economic_archetype": "BALANCED_STANDARD",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 600.0,
+      "total_frames": 36000,
+      "registered_at": "2026-08-27T10:20:14.488510"
+    },
+    {
+      "session_id": "SESSION_B",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\3d739316-3c52-441a-81a2-2b585097e67c-2026-08-16-02-22-55.mp4",
+      "match_id": "MATCH_3D739316",
+      "player_id": "PLAYER_B",
+      "final_placement": 1,
+      "economic_archetype": "FAST_LEVELUP",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2368.8,
+      "total_frames": 142127,
+      "registered_at": "2026-08-27T10:20:14.524988"
+    },
+    {
+      "session_id": "SESSION_C",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\45b5fac1-76f7-42d9-847d-a504bb5d6653_part2-2026-08-16-01-39-49.mp4",
+      "match_id": "MATCH_45B5FAC1",
+      "player_id": "PLAYER_C",
+      "final_placement": 4,
+      "economic_archetype": "REROLL_HEAVY",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2181.3,
+      "total_frames": 130877,
+      "registered_at": "2026-08-27T10:20:14.563317"
+    },
+    {
+      "session_id": "SESSION_D",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\32d40585-37cd-4a9c-8a1e-82f6954c93ca-2026-08-26-23-49-27.mp4",
+      "match_id": "MATCH_32D40585",
+      "player_id": "PLAYER_D",
+      "final_placement": 2,
+      "economic_archetype": "FAST_LEVELUP",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2012.3,
+      "total_frames": 120736,
+      "registered_at": "2026-08-27T10:20:14.601316"
+    },
+    {
+      "session_id": "SESSION_E",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+      "match_id": "MATCH_56E6FB98",
+      "player_id": "PLAYER_E",
+      "final_placement": 5,
+      "economic_archetype": "HYPER_ROLL",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 1582.6,
+      "total_frames": 94958,
+      "registered_at": "2026-08-27T10:20:14.639259"
+    },
+    {
+      "session_id": "SESSION_F",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\6e78f07b-2b34-4659-84be-90150c707973-2026-08-26-16-12-07.mp4",
+      "match_id": "MATCH_6E78F07B_1",
+      "player_id": "PLAYER_F",
+      "final_placement": 3,
+      "economic_archetype": "BALANCED_STANDARD",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2214.7,
+      "total_frames": 132882,
+      "registered_at": "2026-08-27T10:20:14.681859"
+    },
+    {
+      "session_id": "SESSION_G",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\6e78f07b-2b34-4659-84be-90150c707973_part2-2026-08-26-17-02-10.mp4",
+      "match_id": "MATCH_6E78F07B_2",
+      "player_id": "PLAYER_G",
+      "final_placement": 1,
+      "economic_archetype": "FAST_LEVELUP",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2158.2,
+      "total_frames": 129492,
+      "registered_at": "2026-08-27T10:20:14.720239"
+    },
+    {
+      "session_id": "SESSION_H",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\adedde76-7119-400e-b65e-9b7f58a795b7-2026-08-26-20-32-22.mp4",
+      "match_id": "MATCH_ADEDDE76_1",
+      "player_id": "PLAYER_H",
+      "final_placement": 2,
+      "economic_archetype": "BALANCED_STANDARD",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 1774.6,
+      "total_frames": 106475,
+      "registered_at": "2026-08-27T10:20:14.756372"
+    },
+    {
+      "session_id": "SESSION_I",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\adedde76-7119-400e-b65e-9b7f58a795b7_part2-2026-08-26-21-04-56.mp4",
+      "match_id": "MATCH_ADEDDE76_2",
+      "player_id": "PLAYER_I",
+      "final_placement": 6,
+      "economic_archetype": "REROLL_HEAVY",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2468.6,
+      "total_frames": 148114,
+      "registered_at": "2026-08-27T10:20:14.796095"
+    },
+    {
+      "session_id": "SESSION_J",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\b6a200e3-cf25-44e8-a909-378adbdd5697-2026-08-27-00-45-40.mp4",
+      "match_id": "MATCH_B6A200E3",
+      "player_id": "PLAYER_J",
+      "final_placement": 1,
+      "economic_archetype": "FAST_LEVELUP",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 2490.5,
+      "total_frames": 149432,
+      "registered_at": "2026-08-27T10:20:14.837058"
+    },
+    {
+      "session_id": "SESSION_K",
+      "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\c5f55151-9503-4eb7-ab35-608cf6270f54-2026-08-18-23-36-49.mp4",
+      "match_id": "MATCH_C5F55151",
+      "player_id": "PLAYER_K",
+      "final_placement": 7,
+      "economic_archetype": "BALANCED_STANDARD",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 60.0,
+      "duration_sec": 1868.0,
+      "total_frames": 112078,
+      "registered_at": "2026-08-27T10:20:14.875272"
+    }
+  ]
+}

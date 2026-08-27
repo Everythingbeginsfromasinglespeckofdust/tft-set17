@@ -1,0 +1,18 @@
+{
+  "session_id": "SESSION_A",
+  "timestamp_sec": 315.0,
+  "error_reason": "OTHER",
+  "current_observation": {
+    "stage": "3-2",
+    "gold": 35,
+    "hp": 60
+  },
+  "state_diff": {
+    "gold_delta": -2,
+    "shop_changed": 4
+  },
+  "action_event": {
+    "action_type": "ROLL",
+    "timestamp_sec": 315.0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "campaign_id": "CAMPAIGN_001",
+  "total_matches": 11,
+  "total_sessions": 11,
+  "total_participants": 11,
+  "total_duration_sec": 21719.6,
+  "total_duration_hours": 6.03,
+  "sampling": {
+    "total_reviewed": 329,
+    "event_driven_samples": 109,
+    "random_spot_checks": 220,
+    "total_correct": 328,
+    "total_wrong": 1,
+    "total_unknown": 0,
+    "total_skipped": 0,
+    "overall_accuracy": 0.997
+  },
+  "action_metrics": {
+    "roll": {
+      "tp": 58,
+      "fp": 1,
+      "fn": 0,
+      "support": 58,
+      "precision": 0.9831,
+      "recall": 1.0,
+      "f1": 0.9915
+    },
+    "buy": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0,
+      "support": 37,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "system_refresh": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "support": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "state_metrics": {
+    "shop_accuracy": 1.0,
+    "gold_raw_ocr_accuracy": 0.985,
+    "gold_stabilized_accuracy": 1.0,
+    "gold_delta_accuracy": 1.0
+  },
+  "inter_annotator_agreement": {
+    "dual_reviewer_overlap_samples": 30,
+    "raw_agreement": 0.9667,
+    "cohens_kappa": 0.9421,
+    "interpretation": "Almost Perfect Agreement"
+  },
+  "worst_sessions": {
+    "worst_roll_session": "SESSION_A",
+    "worst_buy_session": "SESSION_A",
+    "worst_accuracy_session": "SESSION_A"
+  },
+  "failure_taxonomy": {
+    "COARSE_SAMPLING_MERGE": 1,
+    "GOLD_OCR_ERROR": 0,
+    "GOLD_DELTA_ERROR": 0,
+    "SHOP_RECOGNITION_ERROR": 0,
+    "BOARD_RECOGNITION_ERROR": 0,
+    "BENCH_RECOGNITION_ERROR": 0,
+    "ACTION_EVENT_ERROR": 0,
+    "SYSTEM_REFRESH_ERROR": 0,
+    "SHOP_ANIMATION_ERROR": 0,
+    "TIMING_ERROR": 0,
+    "UI_ALIGNMENT_ERROR": 0,
+    "OTHER": 0
+  },
+  "final_gate_verdict": "GREEN"
+}
