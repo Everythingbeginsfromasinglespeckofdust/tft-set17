@@ -1,0 +1,20 @@
+{
+  "experiment_id": "CALIB_VALIDATION_V2_20260827",
+  "experiment_version": "2.0.0",
+  "retrieved_at": "2026-08-27T04:56:05Z",
+  "patch": "18.1",
+  "total_samples_evaluated": 46,
+  "common_intersection_sample_size": 46,
+  "candidates_evaluated": [
+    "NO_CALIBRATION",
+    "CALIB_A",
+    "CALIB_B",
+    "CALIB_C",
+    "CALIB_D",
+    "RANDOM_CONTROL"
+  ],
+  "flip_cases_count": 56,
+  "human_review_count": 28,
+  "final_gate_verdict": "READY_FOR_PRODUCTION_CALIBRATION",
+  "production_engine_hash_verified": true
+}

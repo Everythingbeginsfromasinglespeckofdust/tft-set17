@@ -1,0 +1,15 @@
+{
+  "candidate_id": "RANDOM_CONTROL",
+  "coverage_count": 46,
+  "coverage_rate": 1.0,
+  "flip_count": 14,
+  "flip_rate": 0.3043,
+  "rank_agreement": 0.6957,
+  "spearman_rho": 0.8783,
+  "top4_association_rate": 0.1957,
+  "average_placement_associated": 4.5,
+  "mean_margin_delta": 0.0,
+  "status": "CONTROL",
+  "bias_risk": "HIGH_NOISE",
+  "is_control": true
+}
