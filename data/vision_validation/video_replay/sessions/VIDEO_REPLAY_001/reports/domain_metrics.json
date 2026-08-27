@@ -1,0 +1,32 @@
+{
+  "shop": {
+    "correct": 10,
+    "wrong": 0,
+    "unknown": 0,
+    "total": 10
+  },
+  "gold": {
+    "correct": 10,
+    "wrong": 0,
+    "unknown": 0,
+    "total": 10
+  },
+  "board": {
+    "correct": 10,
+    "wrong": 0,
+    "unknown": 0,
+    "total": 10
+  },
+  "action": {
+    "correct": 10,
+    "wrong": 0,
+    "unknown": 0,
+    "total": 10
+  },
+  "state": {
+    "correct": 10,
+    "wrong": 0,
+    "unknown": 0,
+    "total": 10
+  }
+}

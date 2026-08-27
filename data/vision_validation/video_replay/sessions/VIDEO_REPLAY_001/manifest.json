@@ -1,0 +1,24 @@
+{
+  "session_id": "VIDEO_REPLAY_001",
+  "source_type": "VIDEO_REPLAY",
+  "start_time": "2026-08-27T06:31:45Z",
+  "video_source": {
+    "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+    "video_sha256": "b7c90a99a4caebeedae541b110f3ae2044a1c0a27068c740fd1685bdd7083a3b",
+    "duration_sec": 1582.63,
+    "fps": 60.0,
+    "resolution_w": 1280,
+    "resolution_h": 720,
+    "total_frames": 94958,
+    "is_original": true,
+    "overlay_status": "NO_OVERLAY_ARTIFACTS",
+    "file_size_mb": 1542.15
+  },
+  "runtime_hashes": {
+    "git_commit": "25cff22",
+    "vision_hash": "4d5cfafc6ce50086e17dc8f0633ca5fb994eb2a1d25d7334cdcf839a01c4e345",
+    "decision_hash": "1a9b1dfecf990fd1365688b744774768e791da4d98840b11d8f23d1237dd0859",
+    "calibration_hash": "bcbb6fd29cba5b9f63115213309312147c84b58059e59daed9ba1f58e33a1ff7",
+    "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752"
+  }
+}

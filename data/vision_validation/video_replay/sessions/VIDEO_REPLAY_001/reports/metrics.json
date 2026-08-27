@@ -1,0 +1,64 @@
+{
+  "session_id": "VIDEO_REPLAY_001",
+  "source_type": "VIDEO_REPLAY",
+  "gate": "VIDEO_REPLAY_PRELIMINARY",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "video_sha256": "b7c90a99a4caebeedae541b110f3ae2044a1c0a27068c740fd1685bdd7083a3b",
+  "duration_sec": 1582.6333333333334,
+  "total_checkpoints": 10,
+  "valid_checkpoints": 10,
+  "invalid_checkpoints": 0,
+  "domain_accuracies": {
+    "shop": 1.0,
+    "gold": 1.0,
+    "board": 1.0,
+    "action": 1.0,
+    "state": 1.0
+  },
+  "domain_metrics": {
+    "shop": {
+      "correct": 10,
+      "wrong": 0,
+      "unknown": 0,
+      "total": 10
+    },
+    "gold": {
+      "correct": 10,
+      "wrong": 0,
+      "unknown": 0,
+      "total": 10
+    },
+    "board": {
+      "correct": 10,
+      "wrong": 0,
+      "unknown": 0,
+      "total": 10
+    },
+    "action": {
+      "correct": 10,
+      "wrong": 0,
+      "unknown": 0,
+      "total": 10
+    },
+    "state": {
+      "correct": 10,
+      "wrong": 0,
+      "unknown": 0,
+      "total": 10
+    }
+  },
+  "performance": {
+    "mean_pipeline_ms": 298.291,
+    "p95_pipeline_ms": 368.673,
+    "mean_gold_ocr_ms": 123.939,
+    "mean_shop_rec_ms": 173.96,
+    "mean_decision_ms": 0.336
+  },
+  "hashes": {
+    "git_commit": "25cff22",
+    "vision_hash": "4d5cfafc6ce50086e17dc8f0633ca5fb994eb2a1d25d7334cdcf839a01c4e345",
+    "decision_hash": "1a9b1dfecf990fd1365688b744774768e791da4d98840b11d8f23d1237dd0859",
+    "calibration_hash": "bcbb6fd29cba5b9f63115213309312147c84b58059e59daed9ba1f58e33a1ff7",
+    "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752"
+  }
+}

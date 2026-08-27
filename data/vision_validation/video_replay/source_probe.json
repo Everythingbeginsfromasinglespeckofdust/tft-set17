@@ -1,0 +1,43 @@
+{
+  "probe_version": "1.0.0",
+  "probed_at": "2026-08-27T06:31:41Z",
+  "file_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "file_name": "56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "file_sha256": "b7c90a99a4caebeedae541b110f3ae2044a1c0a27068c740fd1685bdd7083a3b",
+  "file_size_mb": 1542.15,
+  "duration_sec": 1582.63,
+  "duration_min": 26.38,
+  "fps": 60.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 94958,
+  "source_status": "ORIGINAL_SOURCE",
+  "overlay_artifact_status": "NO_OVERLAY_ARTIFACTS",
+  "set_status": "SET18_CANDIDATE",
+  "probe_frames": [
+    {
+      "label": "source_probe_000",
+      "timestamp_sec": 5.0,
+      "frame_index": 300,
+      "frame_path": "C:\\Users\\mrjdh\\.gemini\\antigravity\\scratch\\tft-set17\\data\\vision_validation\\video_replay\\source\\source_probe_000.png",
+      "frame_sha256": "9489566a2522cf8e6eed891d56bf3cfe00228dfde2b8bea8036caf6d62e0b79e",
+      "overlay_check": "NO_OVERLAY_ARTIFACTS"
+    },
+    {
+      "label": "source_probe_mid",
+      "timestamp_sec": 791.32,
+      "frame_index": 47479,
+      "frame_path": "C:\\Users\\mrjdh\\.gemini\\antigravity\\scratch\\tft-set17\\data\\vision_validation\\video_replay\\source\\source_probe_mid.png",
+      "frame_sha256": "15d40e73f8f193bf2442e50bd3b00f3d8f96df90a1d7142b02c731175bdae7c1",
+      "overlay_check": "NO_OVERLAY_ARTIFACTS"
+    },
+    {
+      "label": "source_probe_end",
+      "timestamp_sec": 1577.63,
+      "frame_index": 94658,
+      "frame_path": "C:\\Users\\mrjdh\\.gemini\\antigravity\\scratch\\tft-set17\\data\\vision_validation\\video_replay\\source\\source_probe_end.png",
+      "frame_sha256": "cbb321bfd76eda49921c7385c9602ceed2e4ad95074c4d264648ee2c26908258",
+      "overlay_check": "NO_OVERLAY_ARTIFACTS"
+    }
+  ]
+}

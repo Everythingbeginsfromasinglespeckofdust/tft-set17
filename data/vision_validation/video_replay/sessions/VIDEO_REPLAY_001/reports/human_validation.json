@@ -1,0 +1,112 @@
+[
+  {
+    "checkpoint_id": "VCHK_0000_5DBEF4",
+    "video_timestamp_sec": 60.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0001_509BE2",
+    "video_timestamp_sec": 180.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0002_8D78A2",
+    "video_timestamp_sec": 300.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0003_3C358A",
+    "video_timestamp_sec": 420.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0004_F27A1C",
+    "video_timestamp_sec": 540.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0005_9E7E16",
+    "video_timestamp_sec": 660.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0006_D87004",
+    "video_timestamp_sec": 780.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0007_E7B886",
+    "video_timestamp_sec": 900.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0008_59D574",
+    "video_timestamp_sec": 1020.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  },
+  {
+    "checkpoint_id": "VCHK_0009_B94FB1",
+    "video_timestamp_sec": 1140.0,
+    "key_pressed": "C",
+    "shop_verdict": "CORRECT",
+    "gold_verdict": "CORRECT",
+    "board_verdict": "CORRECT",
+    "decision_quality": "REASONABLE",
+    "final_action": "SAVE_GOLD",
+    "is_calibration_flip": false
+  }
+]

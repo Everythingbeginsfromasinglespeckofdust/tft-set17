@@ -1,0 +1,7 @@
+{
+  "mean_pipeline_ms": 298.291,
+  "p95_pipeline_ms": 368.673,
+  "mean_gold_ocr_ms": 123.939,
+  "mean_shop_rec_ms": 173.96,
+  "mean_decision_ms": 0.336
+}
