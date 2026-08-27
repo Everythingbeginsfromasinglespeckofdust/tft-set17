@@ -1,0 +1,37 @@
+{
+  "checkpoint_id": "CHK_088",
+  "stage_round": "5-5",
+  "gold": 41,
+  "hp": 12,
+  "error_type": "ACTION_DETECTION_ERROR",
+  "state_hash": "610a8838ded8e562a213d8eaa179d9e1969df578fc9d031fdfc8ae4d824bfd1c",
+  "decision": {
+    "action": "ROLL",
+    "scores": {
+      "ROLL": 0.808,
+      "SAVE_GOLD": 0.0291,
+      "LEVEL_UP": 0.163
+    },
+    "margin": 0.645,
+    "base_action": "ROLL",
+    "base_scores": {
+      "ROLL": 0.1029,
+      "SAVE_GOLD": 0.0296,
+      "LEVEL_UP": 0.0258
+    },
+    "base_margin": 0.0733,
+    "calibration_mode": "ON",
+    "calibration_applied": false,
+    "applied_status": "CALIBRATION_SKIPPED",
+    "is_flip": false,
+    "flip_direction": "NO_FLIP",
+    "candidate_version": "CALIB_C_PROD_V1",
+    "source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+    "calibration_value": 0.025,
+    "latency_ms": 0.132,
+    "state_hash": "610a8838ded8e562a213d8eaa179d9e1969df578fc9d031fdfc8ae4d824bfd1c",
+    "metadata": {
+      "calibration_evidence": "None"
+    }
+  }
+}

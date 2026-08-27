@@ -1,0 +1,37 @@
+{
+  "checkpoint_id": "CHK_042",
+  "stage_round": "3-1",
+  "gold": 50,
+  "hp": 58,
+  "error_type": "SHOP_RECOGNITION_ERROR",
+  "state_hash": "f8ef5557cb8fcb6174d7a096619902432ce1841f675ebe0028aa95e88e270b84",
+  "decision": {
+    "action": "ROLL",
+    "scores": {
+      "SAVE_GOLD": 0.3551,
+      "ROLL": 0.3666,
+      "LEVEL_UP": 0.2783
+    },
+    "margin": 0.0115,
+    "base_action": "SAVE_GOLD",
+    "base_scores": {
+      "SAVE_GOLD": 0.5384,
+      "ROLL": 0.53,
+      "LEVEL_UP": 0.3774
+    },
+    "base_margin": 0.0084,
+    "calibration_mode": "ON",
+    "calibration_applied": true,
+    "applied_status": "CALIBRATION_APPLIED",
+    "is_flip": true,
+    "flip_direction": "SAVE_GOLD->ROLL",
+    "candidate_version": "CALIB_C_PROD_V1",
+    "source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+    "calibration_value": 0.025,
+    "latency_ms": 0.109,
+    "state_hash": "f8ef5557cb8fcb6174d7a096619902432ce1841f675ebe0028aa95e88e270b84",
+    "metadata": {
+      "calibration_evidence": "Stage survival percentile risk threshold exceeded"
+    }
+  }
+}
