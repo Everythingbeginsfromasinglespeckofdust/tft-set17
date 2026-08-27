@@ -1,0 +1,37 @@
+{
+  "audit_version": "FINAL_REALITY_AUDIT_V1",
+  "executed_at": "2026-08-27T05:27:00Z",
+  "final_gate_verdict": "REALITY_PARTIALLY_CONFIRMED",
+  "pytest_result": "538/538 PASS",
+  "git_diff_decision": "0 lines changed",
+  "git_diff_simulation": "0 lines changed",
+  "git_diff_evaluation": "0 lines changed",
+  "git_diff_domain": "0 lines changed",
+  "critical_findings": [
+    "REAL_LIVE_CLAIM_CONTRADICTED: 105 checkpoints are synthetic batch generation (single timestamp)",
+    "HUMAN_VALIDATION_CONTRADICTED: is_wrong = (i==42 or i==88), no keyboard/UI input",
+    "LABEL_CONTAMINATION: human_preferred_action = dec_res.action (auto-copied)",
+    "DOMAIN_ACCURACY_NOT_INDEPENDENT: shop/gold/board/action share 1 binary flag",
+    "SHOP_RECOGNITION_NOT_REAL: hardcoded 5-champ pool, ShopRecognizerV2 not invoked",
+    "GOLD_OCR_NOT_REAL: formula (20+(i*7)%35), GoldRecognizer not invoked",
+    "BOARD_FALSE_POSITIVE_CLAIM_UNVERIFIABLE: no real board detection ran",
+    "FRAME_EVIDENCE_ZERO: 0/105 frame files exist"
+  ],
+  "verified_claims": [
+    "CALIB_C flip count=14 (SAVE_GOLD->ROLL), 11.7%: VERIFIED from on.jsonl",
+    "Calibration source SHA256: VERIFIED (matches percentiles.json)",
+    "Production engine files unchanged: VERIFIED (git diff = 0)",
+    "Decision latency P95=0.161ms (actual Python timing): VERIFIED",
+    "PII: NONE FOUND",
+    "Set17 contamination: NONE (set17 only in filesystem path string)",
+    "Test suite 538/538: VERIFIED"
+  ],
+  "real_runtime_ready_status": "NOT_YET_CONFIRMED",
+  "required_for_reconfirmation": [
+    "Real mss-based TFT client capture",
+    "Real ShopRecognizerV2/GoldRecognizer inference on captured frames",
+    "Real human keyboard input (C=Correct, W=Wrong)",
+    "Frame files saved per checkpoint",
+    "Independent per-domain accuracy computation"
+  ]
+}

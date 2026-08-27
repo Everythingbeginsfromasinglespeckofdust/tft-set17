@@ -1,0 +1,25 @@
+Metric,Reported,Recomputed,Difference,Source,Evidence_Available,Status
+Checkpoint Count,105,105,0.0,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,VERIFIED
+Real Live Count,79,79,0.0,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,VERIFIED
+Video Replay Count,26,26,0.0,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,VERIFIED
+Unique Timestamps,105 (implied),1,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,CONTRADICTED
+Shop Accuracy,0.981,0.9809523809523809,4.7619047619074095e-05,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,PARTIALLY_VERIFIED
+Gold Accuracy,0.981,0.9809523809523809,4.7619047619074095e-05,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,PARTIALLY_VERIFIED
+Board Accuracy,0.981,0.9809523809523809,4.7619047619074095e-05,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,PARTIALLY_VERIFIED
+Action Accuracy,0.981,0.9809523809523809,4.7619047619074095e-05,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,PARTIALLY_VERIFIED
+Overall Accuracy,0.981,0.9809523809523809,4.7619047619074095e-05,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,VERIFIED
+Human Label Independence,INDEPENDENT,LABEL_CONTAMINATION,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,True,CONTRADICTED
+Blind Validation,Implemented,Not implemented (no interactive input),N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,True,CONTRADICTED
+Real TFT Client Execution,Yes (REAL_LIVE),No (batch synthetic generation),N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,False,CONTRADICTED
+Shop Real Recognition,ShopRecognizerV2 on real frames,Hardcoded pool,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,False,UNVERIFIABLE
+Gold OCR Real,GoldRecognizer on real frames,Hardcoded formula,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,False,UNVERIFIABLE
+Board Empty Hex FP=0,Verified on real frames,UNVERIFIABLE (no real detection),N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\src\tft\vision\live_runtime\runtime_evaluator.py,False,UNVERIFIABLE
+Decision P95 Latency,0.172,0.161,0.010999999999999982,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,VERIFIED
+Overlay P95 Latency,1.372,1.361,0.01100000000000012,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,True,PARTIALLY_VERIFIED
+Calibration Flip Count,14,14,0.0,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data/sets/set18/calibration/production_v1/replay/on.jsonl,True,VERIFIED
+Flip Rate,11.7%,11.7%,0.0,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data/sets/set18/calibration/production_v1/replay/on.jsonl,True,VERIFIED
+Calibration Source Hash,4d701959947b022a...,4d701959947b022a...,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data/sets/set18/stats/metatft/percentiles.json,True,VERIFIED
+PII Audit,No PII,No PII found,N/A,vision_validation/,True,VERIFIED
+Set 17 Contamination,None,None found,N/A,data/sets/set18/,True,VERIFIED
+Frame Evidence (20 random samples),20/20 frame-traceable,0/20 frame-traceable,N/A,C:\Users\mrjdh\.gemini\antigravity\scratch\tft-set17\data\vision_validation\live_runtime\runtime_checkpoints.jsonl,False,UNVERIFIABLE
+Production Core Drift,No drift,Not verifiable without baseline snapshot,N/A,git log,True,PARTIALLY_VERIFIED

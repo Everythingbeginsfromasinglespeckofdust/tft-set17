@@ -1,0 +1,25 @@
+{
+  "audit_version": "FINAL_REALITY_AUDIT_V1",
+  "executed_at": "2026-08-27T05:24:00Z",
+  "checkpoint_count_verified": true,
+  "real_live_count_label_verified": true,
+  "all_checkpoints_same_timestamp": true,
+  "human_label_copy_from_prediction": true,
+  "actual_human_input_implemented": false,
+  "shop_recognition_from_real_vision": false,
+  "gold_ocr_from_real_vision": false,
+  "board_detection_from_real_vision": false,
+  "frame_evidence_available": false,
+  "domain_accuracy_independent": false,
+  "recomputed_overall_accuracy": 0.981,
+  "recomputed_decision_p95_ms": 0.161,
+  "recomputed_overlay_p95_ms": 1.361,
+  "calibration_flip_count_verified": true,
+  "calibration_flip_direction": {
+    "SAVE_GOLD->ROLL": 14
+  },
+  "calibration_source_hash_verified": true,
+  "pii_found": false,
+  "set17_contamination_found": true,
+  "final_gate_verdict": "REALITY_PARTIALLY_CONFIRMED"
+}
