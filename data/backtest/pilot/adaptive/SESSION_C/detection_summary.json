@@ -1,0 +1,15 @@
+{
+  "session_id": "SESSION_C",
+  "coarse_frames": 1201,
+  "candidate_count": 10,
+  "merged_window_count": 7,
+  "refined_frames": 280,
+  "total_merged_frames": 1481,
+  "refinement_ratio": 0.055,
+  "processing_time_sec": 4.8,
+  "effective_fps": 308.5,
+  "total_detected_events": 7,
+  "roll_events": 4,
+  "buy_events": 3,
+  "system_refresh_events": 0
+}

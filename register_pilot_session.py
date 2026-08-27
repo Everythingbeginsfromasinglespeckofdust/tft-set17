@@ -74,12 +74,12 @@ def main():
             ),
             (
                 "SESSION_C",
-                r"C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings\6e831624-4c47-4e94-9176-92e7063b7a75-2026-08-16-00-24-31.mp4",
-                "MATCH_6E831624",
+                r"C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings\45b5fac1-76f7-42d9-847d-a504bb5d6653-2026-08-16-01-35-19.mp4",
+                "MATCH_45B5FAC1",
                 "PLAYER_3",
                 4,
                 EconomicArchetype.REROLL_HEAVY
-            )
+            ),
         ]
 
         for sid, vpath, mid, pid, place, arch in default_sessions:

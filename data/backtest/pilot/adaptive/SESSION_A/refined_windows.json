@@ -1,0 +1,885 @@
+[
+  {
+    "window_id": "MERGED_000_311",
+    "start_sec": 311.0,
+    "end_sec": 316.0,
+    "duration_sec": 5.0,
+    "trigger_time_sec": 312.75,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION",
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_001_324",
+    "start_sec": 324.0,
+    "end_sec": 326.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 325.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_002_328",
+    "start_sec": 328.0,
+    "end_sec": 331.0,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 329.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_003_344",
+    "start_sec": 344.0,
+    "end_sec": 346.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 345.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_004_356",
+    "start_sec": 356.5,
+    "end_sec": 382.5,
+    "duration_sec": 26.0,
+    "trigger_time_sec": 370.5,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION",
+      "SHOP_SLOT_EMPTIED",
+      "GOLD_DELTA",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 29
+    }
+  },
+  {
+    "window_id": "MERGED_005_384",
+    "start_sec": 384.0,
+    "end_sec": 409.0,
+    "duration_sec": 25.0,
+    "trigger_time_sec": 397.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 23
+    }
+  },
+  {
+    "window_id": "MERGED_006_414",
+    "start_sec": 414.0,
+    "end_sec": 416.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 415.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_007_419",
+    "start_sec": 419.5,
+    "end_sec": 421.5,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 420.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_008_424",
+    "start_sec": 424.0,
+    "end_sec": 426.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 425.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_009_429",
+    "start_sec": 429.0,
+    "end_sec": 431.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 430.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_010_440",
+    "start_sec": 440.5,
+    "end_sec": 442.5,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 441.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_011_444",
+    "start_sec": 444.0,
+    "end_sec": 448.0,
+    "duration_sec": 4.0,
+    "trigger_time_sec": 445.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_012_449",
+    "start_sec": 449.0,
+    "end_sec": 451.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 450.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_013_459",
+    "start_sec": 459.0,
+    "end_sec": 463.5,
+    "duration_sec": 4.5,
+    "trigger_time_sec": 461.25,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_014_465",
+    "start_sec": 465.5,
+    "end_sec": 486.0,
+    "duration_sec": 20.5,
+    "trigger_time_sec": 474.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 21
+    }
+  },
+  {
+    "window_id": "MERGED_015_487",
+    "start_sec": 487.0,
+    "end_sec": 501.0,
+    "duration_sec": 14.0,
+    "trigger_time_sec": 493.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 13
+    }
+  },
+  {
+    "window_id": "MERGED_016_503",
+    "start_sec": 503.5,
+    "end_sec": 505.5,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 504.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_017_511",
+    "start_sec": 511.5,
+    "end_sec": 518.0,
+    "duration_sec": 6.5,
+    "trigger_time_sec": 515.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_018_524",
+    "start_sec": 524.0,
+    "end_sec": 526.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 525.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_019_529",
+    "start_sec": 529.0,
+    "end_sec": 531.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 530.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_020_544",
+    "start_sec": 544.0,
+    "end_sec": 546.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 545.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_021_551",
+    "start_sec": 551.0,
+    "end_sec": 568.0,
+    "duration_sec": 17.0,
+    "trigger_time_sec": 560.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 17
+    }
+  },
+  {
+    "window_id": "MERGED_022_569",
+    "start_sec": 569.0,
+    "end_sec": 571.5,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 570.25,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_023_573",
+    "start_sec": 573.5,
+    "end_sec": 576.0,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 574.75,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_024_578",
+    "start_sec": 578.5,
+    "end_sec": 581.0,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 579.75,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_025_583",
+    "start_sec": 583.5,
+    "end_sec": 598.0,
+    "duration_sec": 14.5,
+    "trigger_time_sec": 590.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 13
+    }
+  },
+  {
+    "window_id": "MERGED_026_599",
+    "start_sec": 599.0,
+    "end_sec": 605.0,
+    "duration_sec": 6.0,
+    "trigger_time_sec": 601.5,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 5
+    }
+  },
+  {
+    "window_id": "MERGED_027_611",
+    "start_sec": 611.0,
+    "end_sec": 621.0,
+    "duration_sec": 10.0,
+    "trigger_time_sec": 616.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 9
+    }
+  },
+  {
+    "window_id": "MERGED_028_624",
+    "start_sec": 624.0,
+    "end_sec": 636.0,
+    "duration_sec": 12.0,
+    "trigger_time_sec": 628.75,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 14
+    }
+  },
+  {
+    "window_id": "MERGED_029_637",
+    "start_sec": 637.0,
+    "end_sec": 639.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 638.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "GOLD_DELTA"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_030_641",
+    "start_sec": 641.5,
+    "end_sec": 646.0,
+    "duration_sec": 4.5,
+    "trigger_time_sec": 643.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_031_648",
+    "start_sec": 648.5,
+    "end_sec": 651.5,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 650.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_032_657",
+    "start_sec": 657.5,
+    "end_sec": 661.5,
+    "duration_sec": 4.0,
+    "trigger_time_sec": 660.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_033_669",
+    "start_sec": 669.5,
+    "end_sec": 671.5,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 670.5,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_034_674",
+    "start_sec": 674.0,
+    "end_sec": 676.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 675.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_035_677",
+    "start_sec": 677.5,
+    "end_sec": 681.5,
+    "duration_sec": 4.0,
+    "trigger_time_sec": 679.0,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_036_683",
+    "start_sec": 683.0,
+    "end_sec": 686.0,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 684.5,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_037_689",
+    "start_sec": 689.0,
+    "end_sec": 691.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 690.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_038_693",
+    "start_sec": 693.0,
+    "end_sec": 701.0,
+    "duration_sec": 8.0,
+    "trigger_time_sec": 696.5,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_039_703",
+    "start_sec": 703.5,
+    "end_sec": 706.0,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 704.75,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_040_708",
+    "start_sec": 708.0,
+    "end_sec": 710.5,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 709.25,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_041_711",
+    "start_sec": 711.5,
+    "end_sec": 719.0,
+    "duration_sec": 7.5,
+    "trigger_time_sec": 716.25,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_042_721",
+    "start_sec": 721.5,
+    "end_sec": 725.5,
+    "duration_sec": 4.0,
+    "trigger_time_sec": 723.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_043_729",
+    "start_sec": 729.0,
+    "end_sec": 731.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 730.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_044_733",
+    "start_sec": 733.0,
+    "end_sec": 739.0,
+    "duration_sec": 6.0,
+    "trigger_time_sec": 735.25,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_045_744",
+    "start_sec": 744.0,
+    "end_sec": 746.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 745.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_046_749",
+    "start_sec": 749.0,
+    "end_sec": 751.5,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 750.25,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_047_758",
+    "start_sec": 758.0,
+    "end_sec": 761.0,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 759.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_048_762",
+    "start_sec": 762.0,
+    "end_sec": 764.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 763.0,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_049_766",
+    "start_sec": 766.5,
+    "end_sec": 772.5,
+    "duration_sec": 6.0,
+    "trigger_time_sec": 770.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 4
+    }
+  },
+  {
+    "window_id": "MERGED_050_774",
+    "start_sec": 774.0,
+    "end_sec": 776.5,
+    "duration_sec": 2.5,
+    "trigger_time_sec": 775.25,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_051_785",
+    "start_sec": 785.5,
+    "end_sec": 792.5,
+    "duration_sec": 7.0,
+    "trigger_time_sec": 788.75,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 10
+    }
+  },
+  {
+    "window_id": "MERGED_052_793",
+    "start_sec": 793.5,
+    "end_sec": 805.5,
+    "duration_sec": 12.0,
+    "trigger_time_sec": 799.25,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 12
+    }
+  },
+  {
+    "window_id": "MERGED_053_814",
+    "start_sec": 814.0,
+    "end_sec": 817.0,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 815.5,
+    "trigger_reasons": [
+      "SHOP_SLOTS_CHANGED",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 2
+    }
+  },
+  {
+    "window_id": "MERGED_054_829",
+    "start_sec": 829.0,
+    "end_sec": 831.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 830.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_055_844",
+    "start_sec": 844.0,
+    "end_sec": 846.0,
+    "duration_sec": 2.0,
+    "trigger_time_sec": 845.0,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 1
+    }
+  },
+  {
+    "window_id": "MERGED_056_857",
+    "start_sec": 857.0,
+    "end_sec": 863.0,
+    "duration_sec": 6.0,
+    "trigger_time_sec": 860.25,
+    "trigger_reasons": [
+      "STAGE_ROUND_TRANSITION",
+      "SHOP_SLOT_EMPTIED",
+      "GOLD_DELTA",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 6
+    }
+  },
+  {
+    "window_id": "MERGED_057_868",
+    "start_sec": 868.0,
+    "end_sec": 871.0,
+    "duration_sec": 3.0,
+    "trigger_time_sec": 869.5,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 3
+    }
+  },
+  {
+    "window_id": "MERGED_058_873",
+    "start_sec": 873.0,
+    "end_sec": 901.0,
+    "duration_sec": 28.0,
+    "trigger_time_sec": 888.25,
+    "trigger_reasons": [
+      "SHOP_SLOT_EMPTIED",
+      "SHOP_SLOTS_CHANGED",
+      "GOLD_DELTA",
+      "STAGE_ROUND_TRANSITION"
+    ],
+    "confidence": 1.0,
+    "metadata": {
+      "sub_window_count": 26
+    }
+  }
+]

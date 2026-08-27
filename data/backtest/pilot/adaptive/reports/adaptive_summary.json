@@ -1,0 +1,155 @@
+{
+  "gate_verdict": "GREEN",
+  "session_count": 3,
+  "pooled": {
+    "adaptive_roll_f1": 0.9091,
+    "adaptive_buy_f1": 1.0,
+    "total_fp": 0,
+    "mean_refinement_ratio": 0.055,
+    "total_fp_reduction": 150,
+    "overall_failure_recovery_rate": 0.9333
+  },
+  "sessions": [
+    {
+      "session_id": "SESSION_A",
+      "coarse_baseline": {
+        "roll": {
+          "precision": 0.0522,
+          "recall": 0.25,
+          "f1": 0.0864
+        },
+        "buy": {
+          "precision": 0.08,
+          "recall": 0.1111,
+          "f1": 0.093
+        },
+        "fp": 150,
+        "fn": 37
+      },
+      "adaptive_production": {
+        "roll": {
+          "precision": 1.0,
+          "recall": 0.5714,
+          "f1": 0.7273
+        },
+        "buy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fp": 0,
+        "fn": 12
+      },
+      "improvement": {
+        "delta_roll_f1": 0.6409,
+        "delta_buy_f1": 0.907,
+        "fp_reduction": 150,
+        "fn_reduction": 25
+      },
+      "failure_recovery": {
+        "initial": 30,
+        "recovered": 24,
+        "recovery_rate": 0.8
+      },
+      "efficiency": {
+        "refinement_ratio": 0.062,
+        "processing_time_sec": 14.8,
+        "effective_fps": 131.4
+      }
+    },
+    {
+      "session_id": "SESSION_B",
+      "coarse_baseline": {
+        "roll": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "buy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fp": 0,
+        "fn": 0
+      },
+      "adaptive_production": {
+        "roll": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "buy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fp": 0,
+        "fn": 0
+      },
+      "improvement": {
+        "delta_roll_f1": 0.0,
+        "delta_buy_f1": 0.0,
+        "fp_reduction": 0,
+        "fn_reduction": 0
+      },
+      "failure_recovery": {
+        "initial": 0,
+        "recovered": 0,
+        "recovery_rate": 1.0
+      },
+      "efficiency": {
+        "refinement_ratio": 0.048,
+        "processing_time_sec": 4.2,
+        "effective_fps": 343.1
+      }
+    },
+    {
+      "session_id": "SESSION_C",
+      "coarse_baseline": {
+        "roll": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "buy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fp": 0,
+        "fn": 0
+      },
+      "adaptive_production": {
+        "roll": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "buy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fp": 0,
+        "fn": 0
+      },
+      "improvement": {
+        "delta_roll_f1": 0.0,
+        "delta_buy_f1": 0.0,
+        "fp_reduction": 0,
+        "fn_reduction": 0
+      },
+      "failure_recovery": {
+        "initial": 0,
+        "recovered": 0,
+        "recovery_rate": 1.0
+      },
+      "efficiency": {
+        "refinement_ratio": 0.055,
+        "processing_time_sec": 4.8,
+        "effective_fps": 308.5
+      }
+    }
+  ]
+}

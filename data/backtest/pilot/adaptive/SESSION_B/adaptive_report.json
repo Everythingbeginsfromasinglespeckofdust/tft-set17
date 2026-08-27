@@ -1,0 +1,47 @@
+{
+  "session_id": "SESSION_B",
+  "coarse_baseline": {
+    "roll": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "buy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "fp": 0,
+    "fn": 0
+  },
+  "adaptive_production": {
+    "roll": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "buy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "fp": 0,
+    "fn": 0
+  },
+  "improvement": {
+    "delta_roll_f1": 0.0,
+    "delta_buy_f1": 0.0,
+    "fp_reduction": 0,
+    "fn_reduction": 0
+  },
+  "failure_recovery": {
+    "initial": 0,
+    "recovered": 0,
+    "recovery_rate": 1.0
+  },
+  "efficiency": {
+    "refinement_ratio": 0.048,
+    "processing_time_sec": 4.2,
+    "effective_fps": 343.1
+  }
+}
