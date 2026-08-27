@@ -1,0 +1,4630 @@
+[
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_TheWorld",
+    "name": "Faithful Followers",
+    "cost": 30,
+    "description": "Gain a copy of every unlocked 4-cost champion.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_AncientTreasures",
+    "name": "Ancient Treasures",
+    "cost": 20,
+    "description": "Gain a Lucky Item Chest.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_CrumblingSands",
+    "name": "Crumbling Sands",
+    "cost": 6,
+    "description": "Next combat: Stun all enemies for 2 seconds.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_RiteOfNegation",
+    "name": "Rite Of Negation",
+    "cost": 2,
+    "description": "Next combat: Shurimans gain 15% Damage Amp and crowd control immunity.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_PersistentArcanery",
+    "name": "Persistent Arcanery",
+    "cost": 2,
+    "description": "Next combat: Xerath gains 2 Mana Regen and his spell fires 3 extra blasts.<br>",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_AscendedsCall",
+    "name": "Ascended's Call",
+    "cost": 2,
+    "description": "Next combat: Shurimans gain 1% %i:scaleAD%%i:scaleAP% per second. After 22 seconds, gain 200% %i:scaleAS%.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_ScaleOfJudgement",
+    "name": "Scale Of Judgment",
+    "cost": 1,
+    "description": "Next combat: If you win, gain 12 gold; if you lose, gain 5 player health.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_OasissReprieve",
+    "name": "Oasis's Reprieve",
+    "cost": 3,
+    "description": "Next combat: After 10 seconds, your team rapidly recovers 18% maximum Health.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_DesertGolem",
+    "name": "Desert Golems",
+    "cost": 8,
+    "description": "Next combat: Gain 2 powerful golems.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet16/Set16_XerathZaps/TFT16_XerathZap_FatefulFind",
+    "name": "Fateful Find",
+    "cost": 0,
+    "description": "Roll 3 dice. Gain gold equal to the sum.",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_XerathWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet15/TFT15_SetMechanic/TFT15_HiddenTech_ItemData",
+    "name": "Hidden Technique",
+    "cost": 4,
+    "description": "",
+    "tier": 1,
+    "image": "ZAPS_ScoreboardBadge_EconWand_Self.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AfterShock",
+    "name": "Aftershock",
+    "cost": 2,
+    "description": "After 8 seconds, stun all enemies for 1.5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AfterShock_Upgrade",
+    "name": "Aftershock",
+    "cost": 2,
+    "description": "After 8 <Set18CharmUpgrade>and </Set18CharmUpgrade>18 seconds, stun all enemies for 1.5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllFives",
+    "name": "All Fives",
+    "cost": 10,
+    "description": "Reroll your shop with all 5-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllFives_Upgrade",
+    "name": "All Fives",
+    "cost": 10,
+    "description": "Reroll your shop with all 5-cost champions. Gain 5 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllFours",
+    "name": "All Fours",
+    "cost": 4,
+    "description": "Reroll your shop with all 4-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllFours_Upgrade",
+    "name": "All Fours",
+    "cost": 4,
+    "description": "Reroll your shop with all 4-cost champions. Gain 2 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllOnes",
+    "name": "All Ones",
+    "cost": 0,
+    "description": "Reroll your shop with all 1-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllOnes_Upgrade",
+    "name": "All Ones",
+    "cost": 0,
+    "description": "Reroll your shop with all 1-cost champions. Gain 1 Gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllThrees",
+    "name": "All Threes",
+    "cost": 2,
+    "description": "Reroll your shop with all 3-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllThrees_Upgrade",
+    "name": "All Threes",
+    "cost": 2,
+    "description": "Reroll your shop with all 3-cost champions. Gain 2 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllTwos",
+    "name": "All Twos",
+    "cost": 1,
+    "description": "Reroll your shop with all 2-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_AllTwos_Upgrade",
+    "name": "All Twos",
+    "cost": 1,
+    "description": "Reroll your shop with all 2-cost champions. Gain 1 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BackrowStar",
+    "name": "Backrow Star",
+    "cost": 4,
+    "description": "A random back row champion gains 75% Attack Speed for 7 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BackrowStar_Upgrade",
+    "name": "Backrow Star",
+    "cost": 4,
+    "description": "A random back row champion gains 100% Attack Speed for 8 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BarkArmor",
+    "name": "Bark Armor",
+    "cost": 0,
+    "description": "Your champions gain 150 shield for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BarkArmor_Upgrade",
+    "name": "Bark Armor",
+    "cost": 0,
+    "description": "Your champions gain 225 shield for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BloodMoney",
+    "name": "Blood Money",
+    "cost": 2,
+    "description": "Gain 1 gold for every champion you kill.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BloodMoney_Upgrade",
+    "name": "Blood Money",
+    "cost": 1,
+    "description": "Gain 1 gold for every champion you kill. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>1<Set18CharmUpgrade> gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BronzeSpoon",
+    "name": "Bronze Spoon",
+    "cost": 3,
+    "description": "Gain 4 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_BronzeSpoon_Upgrade",
+    "name": "Bronze Spoon",
+    "cost": 2,
+    "description": "Gain 4 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_CircleofElders",
+    "name": "Circle of Elders",
+    "cost": 45,
+    "description": "Gain one of each 5-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_CircleofElders_Upgrade",
+    "name": "Circle of Elders",
+    "cost": 40,
+    "description": "Gain one of each 5-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Counterspell",
+    "name": "Counterspell",
+    "cost": 2,
+    "description": "Increase all enemies' Max Mana by 15 until their next cast.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Counterspell_Prismatic",
+    "name": "Counterspell",
+    "cost": 0,
+    "description": "Increase all enemies' Max Mana by 150 until their next cast.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Counterspell_Upgrade",
+    "name": "Counterspell",
+    "cost": 2,
+    "description": "Increase all enemies' Max Mana by 22 until their next cast.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_EarlyFix",
+    "name": "Early Fix",
+    "cost": 0,
+    "description": "Gain 1 Item Reforger.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_EarlyFix_Upgrade",
+    "name": "Early Fix",
+    "cost": 0,
+    "description": "Gain 2 Item Reforgers.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Experienced",
+    "name": "Experienced",
+    "cost": 1,
+    "description": "Gain 2 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Experienced_Upgrade",
+    "name": "Experienced",
+    "cost": 0,
+    "description": "Gain 2 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Fellowship",
+    "name": "Fellowship",
+    "cost": 4,
+    "description": "Champions gain 4% Max Health Shield and 4% Damage Amp per adjacent ally.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Fellowship_Upgrade",
+    "name": "Fellowship",
+    "cost": 4,
+    "description": "Champions gain 6% Max Health Shield and 6% Damage Amp per adjacent ally.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Fertilize",
+    "name": "Fertilize",
+    "cost": 1,
+    "description": "Gain 1 XP for each enemy that dies.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Fertilize_Upgrade",
+    "name": "Fertilize",
+    "cost": 1,
+    "description": "Gain 1 XP for each enemy that dies. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>2<Set18CharmUpgrade> XP.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_FieldofMice",
+    "name": "Field of Mice",
+    "cost": 8,
+    "description": "Gain a Tiny Champion Duplicator for each unique one-cost fielded last round.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_FieldofMice_Upgrade",
+    "name": "Field of Mice",
+    "cost": 8,
+    "description": "Gain a Tiny Duplicator <Set18CharmUpgrade>and a gold</Set18CharmUpgrade> for each unique 1-cost champion you fielded last round.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_ForestMage",
+    "name": "Forest Mage",
+    "cost": 0,
+    "description": "Fill your shop with Wisps. You can only buy one.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_ForestMage_Upgrade",
+    "name": "Forest Mage",
+    "cost": 0,
+    "description": "Fill your shop with <Set18CharmUpgrade>upgraded</Set18CharmUpgrade> Wisps. You can only buy one.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Freeroller",
+    "name": "Freeroller",
+    "cost": 2,
+    "description": "Gain 2 rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Freeroller_Upgrade",
+    "name": "Freeroller",
+    "cost": 2,
+    "description": "Gain 3 rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_GiantGrowth",
+    "name": "Giant Growth",
+    "cost": 4,
+    "description": "Your highest Health unit grows, gaining 700 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_GiantGrowth_Upgrade",
+    "name": "Giant Growth",
+    "cost": 4,
+    "description": "Your 2 highest Health units grow, gaining 700 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_HeatedRivalry",
+    "name": "Heated Rivalry",
+    "cost": 3,
+    "description": "Gain a Rengar or a Kha'Zix. They gain 3 takedowns.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_HeatedRivalry_Upgrade",
+    "name": "Heated Rivalry",
+    "cost": 3,
+    "description": "Gain a Rengar or a Kha'Zix. They gain 7 takedowns.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_HeroicSacrifice",
+    "name": "Heroic Sacrifice",
+    "cost": 5,
+    "description": "Your 3 strongest Champions gain HEROIC POWER, but other allies are sacrificed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_HeroicSacrifice_Upgrade",
+    "name": "Heroic Sacrifice",
+    "cost": 5,
+    "description": "Your 3 strongest Champions gain <Set18CharmUpgrade>HEROIC POWER</Set18CharmUpgrade>, but other allies are sacrificed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Hummingbird",
+    "name": "Hummingbird",
+    "cost": 1,
+    "description": "Your highest Attack Speed unit shrinks, gaining 20% Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Hummingbird_Prismatic",
+    "name": "Hummingbird",
+    "cost": 0,
+    "description": "Your 10 highest Attack Speed units shrink, gaining 100% Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Hummingbird_Upgrade",
+    "name": "Hummingbird",
+    "cost": 1,
+    "description": "Your highest Attack Speed unit shrinks, gaining 35% Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Infliction",
+    "name": "Infliction",
+    "cost": 6,
+    "description": "Slow, Burn, Shred, and Sunder enemies for 8 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Infliction_Upgrade",
+    "name": "Infliction",
+    "cost": 6,
+    "description": "Slow, Burn, Shred, and Sunder enemies for 12 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_KillingFrenzy",
+    "name": "Killing Frenzy",
+    "cost": 3,
+    "description": "Fighters execute targets under 12% Health. They gain 15% Attack Speed on kill.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_KillingFrenzy_Upgrade",
+    "name": "Killing Frenzy",
+    "cost": 3,
+    "description": "Fighters execute targets under 15<Set18CharmUpgrade>%</Set18CharmUpgrade> Health. They gain 40% Attack Speed on kill.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LifeDebt",
+    "name": "Life Debt",
+    "cost": 0,
+    "description": "Gain 1 gold for every 12 missing Player Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LifeDebt_Upgrade",
+    "name": "Life Debt",
+    "cost": 0,
+    "description": "Gain 1 gold for every 12 missing Player Health. <Set18CharmUpgrade>Then heal </Set18CharmUpgrade>3<Set18CharmUpgrade> Health.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LightningStorm",
+    "name": "Lightning Storm",
+    "cost": 5,
+    "description": "Every 1 second deal 5% Max Health true damage to an enemy.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LightningStorm_Prismatic",
+    "name": "Lightning Storm",
+    "cost": 0,
+    "description": "Every 0.15 seconds deal 5% Max Health true damage to an enemy.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LightningStorm_Upgrade",
+    "name": "Lightning Storm",
+    "cost": 5,
+    "description": "Every 1 seconds deal 7% Max Health true damage to an enemy.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LightningStrike",
+    "name": "Lightning Strike",
+    "cost": 2,
+    "description": "Deal 10% Max Health true damage to all enemies.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LightningStrike_Upgrade",
+    "name": "Lightning Strike",
+    "cost": 2,
+    "description": "Deal 18% Max Health true damage to all enemies.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LostTravelers",
+    "name": "Lost Travelers",
+    "cost": 3,
+    "description": "Gain 3 gold worth of random champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_LostTravelers_Upgrade",
+    "name": "Lost Travelers",
+    "cost": 4,
+    "description": "Gain <Set18CharmUpgrade>4</Set18CharmUpgrade> gold worth of random champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MajorPolymorph",
+    "name": "Major Polymorph",
+    "cost": 0,
+    "description": "A random 4-cost you own permanently transforms into a 5-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MajorPolymorph_Upgrade",
+    "name": "Major Polymorph",
+    "cost": 0,
+    "description": "<Set18CharmUpgrade>The highest star level</Set18CharmUpgrade> 4-cost you own permanently transforms into a 5-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MercenaryForce",
+    "name": "Mercenary Force",
+    "cost": 3,
+    "description": "Gain 3% Damage Amp for every 10 gold you have.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MercenaryForce_Upgrade",
+    "name": "Mercenary Force",
+    "cost": 3,
+    "description": "Gain 4.5% Damage Amp for every 10 gold you have.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MinorPolymorph",
+    "name": "Minor Polymorph",
+    "cost": 0,
+    "description": "A random 1-cost you own permanently transforms into a 2-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MinorPolymorph_Upgrade",
+    "name": "Minor Polymorph",
+    "cost": 0,
+    "description": "<Set18CharmUpgrade>The highest star level</Set18CharmUpgrade> 1-cost you own permanently transforms into a 2-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Mitosis",
+    "name": "Mitosis",
+    "cost": 1,
+    "description": "Gain a Tiny Champion Duplicator.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Mitosis_Upgrade",
+    "name": "Mitosis",
+    "cost": 0,
+    "description": "Gain a Tiny Champion Duplicator.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Moonrise",
+    "name": "Moonrise",
+    "cost": 2,
+    "description": "After 8 seconds, increase Lunar's effects by 100%.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_MoonriseUpgrade",
+    "name": "Moonrise",
+    "cost": 2,
+    "description": "After 8 seconds, increase Lunar's effects by 175%.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Payday",
+    "name": "Payday",
+    "cost": 4,
+    "description": "For each ally champion that survives combat, gain 2 Gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_PaydayUpgrade",
+    "name": "Payday",
+    "cost": 4,
+    "description": "For each ally champion that survives combat, gain 3 Gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_PocketChange",
+    "name": "Pocket Change",
+    "cost": 1,
+    "description": "Your one-star champions drop 1 gold on death.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_PocketChange_Upgrade",
+    "name": "Pocket Change",
+    "cost": 1,
+    "description": "Your one-star champions drop 1 gold on death. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>1<Set18CharmUpgrade> gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Polymorph",
+    "name": "Polymorph",
+    "cost": 0,
+    "description": "A random 2-cost you own permanently transforms into a 3-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Polymorph_Upgrade",
+    "name": "Polymorph",
+    "cost": 0,
+    "description": "<Set18CharmUpgrade>The highest star level</Set18CharmUpgrade> 2-cost you own permanently transforms into a 3-cost.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Preppers",
+    "name": "Preppers",
+    "cost": 2,
+    "description": "Your stacking items start next combat partially stacked.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Preppers_Upgrade",
+    "name": "Preppers",
+    "cost": 2,
+    "description": "Your stacking items start next combat <Set18CharmUpgrade>extra</Set18CharmUpgrade> stacked.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_ProlificPower",
+    "name": "Prolific Power",
+    "cost": 0,
+    "description": "Your champions gain 8% Attack Damage and Ability Power.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_ProlificPower_Upgrade",
+    "name": "Prolific Power",
+    "cost": 0,
+    "description": "Your champions gain 15% Attack Damage and Ability Power.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Propagate",
+    "name": "Propagate",
+    "cost": 2,
+    "description": "Gain a copy of the first allied champion to die.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Propagate_Upgrade",
+    "name": "Propagate",
+    "cost": 1,
+    "description": "Gain a copy of the first allied champion to die.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Radiantize",
+    "name": "Radiantize",
+    "cost": 5,
+    "description": "After 8 seconds, 1 random equipped item temporarily becomes Radiant.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Radiantize_Upgrade",
+    "name": "Radiantize",
+    "cost": 5,
+    "description": "After 5 seconds, 1 random equipped item temporarily becomes Radiant.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Resistant",
+    "name": "Resistant",
+    "cost": 2,
+    "description": "Tanks reduce instances of incoming damage by 10.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Resistant_Upgrade",
+    "name": "Resistant",
+    "cost": 2,
+    "description": "Tanks reduce instances of incoming damage by 18.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Starfall",
+    "name": "Starfall",
+    "cost": 1,
+    "description": "The first 6 times you reroll your shop this round, the lowest cost champion becomes 2-star.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Starfall_Upgrade",
+    "name": "Starfall",
+    "cost": 0,
+    "description": "The first 8 times you reroll your shop this round, the lowest cost champion becomes 2-star.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_SunfireSorcery",
+    "name": "Sunfire Sorcery",
+    "cost": 2,
+    "description": "Burn and Wound enemies for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_SunfireSorcery_Upgrade",
+    "name": "Sunfire Sorcery",
+    "cost": 2,
+    "description": "Burn and Wound enemies for 15 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Supercritical",
+    "name": "Supercritical",
+    "cost": 3,
+    "description": "Allies with Precision gain 25% Critical Strike Damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_SupercriticalUpgrade",
+    "name": "Supercritical",
+    "cost": 3,
+    "description": "Allies with Precision gain 40% Critical Strike Damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_TatteredArmor",
+    "name": "Tattered Armor",
+    "cost": 1,
+    "description": "30% Shred and Sunder enemies for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_TatteredArmor_Prismatic",
+    "name": "Tattered Armor",
+    "cost": 0,
+    "description": "90<Set18CharmUpgrade>%</Set18CharmUpgrade> Shred and Sunder enemies for 45 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_TatteredArmor_Upgrade",
+    "name": "Tattered Armor",
+    "cost": 1,
+    "description": "30% Shred and Sunder enemies for 15 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Tremors",
+    "name": "Tremors",
+    "cost": 4,
+    "description": "Every 8 seconds, Stun enemies for 1 second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Tremors_Prismatic",
+    "name": "Tremors",
+    "cost": 0,
+    "description": "Every 3 seconds, Stun enemies for 1.5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_Tremors_Upgrade",
+    "name": "Tremors",
+    "cost": 4,
+    "description": "Every 8 seconds, Stun enemies for 1.5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_UltraAscension",
+    "name": "Ultra Ascension",
+    "cost": 1,
+    "description": "After 25 seconds, allies gain 300% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_UltraAscension_Prismatic",
+    "name": "Ultra Ascension",
+    "cost": 1,
+    "description": "After 12 seconds, allies gain 300% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_UltraAscension_Upgrade",
+    "name": "Ultra Ascension",
+    "cost": 1,
+    "description": "After 23 seconds, allies gain 300% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_VerdantVitality",
+    "name": "Verdant Vitality",
+    "cost": 0,
+    "description": "Your champions gain 100 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_VerdantVitality_Upgrade",
+    "name": "Verdant Vitality",
+    "cost": 0,
+    "description": "Your champions gain 175 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_YordleSpirit",
+    "name": "Yordle Spirit",
+    "cost": 3,
+    "description": "Allies have a 99% chance to dodge attacks for 4 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_18_YordleSpirit_Upgrade",
+    "name": "Yordle Spirit",
+    "cost": 3,
+    "description": "Allies have a 99% chance to dodge attacks for 5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_AbandonShip18",
+    "name": "Abandon Ship",
+    "cost": 0,
+    "description": "Sell your board and bench, gain 6 gold and 10 rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_AbandonShip18_Upgrade",
+    "name": "Abandon Ship",
+    "cost": 0,
+    "description": "Sell your board and bench, gain 10 gold and 12 rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_AnimateShop18",
+    "name": "Animate Shop",
+    "cost": 8,
+    "description": "For 18 seconds, your shop rerolls for free every 2 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_AnimateShop18_Upgrade",
+    "name": "Animate Shop",
+    "cost": 8,
+    "description": "For 26 seconds, your shop rerolls for free every 2 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Apprentice18",
+    "name": "Apprentice",
+    "cost": 3,
+    "description": "Gain a random 2-star 1-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Apprentice18_Upgrade",
+    "name": "Apprentice",
+    "cost": 2,
+    "description": "Gain a random 2-star 1-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Artifactinate18",
+    "name": "Artifactinate",
+    "cost": 0,
+    "description": "Lose 3 components, including ones built into items. Gain an Artifact anvil.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Artifactinate18_Upgrade",
+    "name": "Artifactinate",
+    "cost": 0,
+    "description": "Lose 3 components, including ones built into items. Gain an Artifact anvil <Set18CharmUpgrade>and</Set18CharmUpgrade> 1 <Set18CharmUpgrade>Reforger.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Barrier18",
+    "name": "Barrier",
+    "cost": 4,
+    "description": "Allies gain 1250 Shield, decaying over 6 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Barrier18_Prismatic",
+    "name": "Barrier",
+    "cost": 0,
+    "description": "Allies gain 7500 Shield, decaying over 30 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Barrier18_Upgrade",
+    "name": "Barrier",
+    "cost": 4,
+    "description": "Allies gain 1250 Shield, decaying over 9 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Barter18",
+    "name": "Barter",
+    "cost": 2,
+    "description": "The next champion sold this round sells for 200% gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Barter18_Upgrade",
+    "name": "Barter",
+    "cost": 2,
+    "description": "The next champion sold this round sells for 250% gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BearsVisit18",
+    "name": "Bear's Visit",
+    "cost": 3,
+    "description": "Gain the Bear Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BearsVisit18_Upgrade",
+    "name": "Tiger's Visit",
+    "cost": 2,
+    "description": "Gain the Tiger Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BeggarsWisp18",
+    "name": "Beggar's Wisp",
+    "cost": 0,
+    "description": "The wilds couldn't find a wisp for you this roll. Gain 4 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BeggarsWisp18_Upgrade",
+    "name": "Beggar's Wisp",
+    "cost": 0,
+    "description": "The wilds couldn't find a wisp for you this roll. Gain 6 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BigBoom18",
+    "name": "Big Boom",
+    "cost": 1,
+    "description": "The first ally to die explodes, dealing 25% Max Health magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BigBoom18_Upgrade",
+    "name": "Big Boom",
+    "cost": 1,
+    "description": "The first 2 allies to die explode, dealing 25% Max Health magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BigGuns18",
+    "name": "Big Guns",
+    "cost": 8,
+    "description": "Gain 2 random 1-star 4-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BigGuns18_Upgrade",
+    "name": "Big Guns",
+    "cost": 7,
+    "description": "Gain 2 random 1-star 4-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BlastPotion18_Charm",
+    "name": "Blast Potion",
+    "cost": 1,
+    "description": "Gain a temporary equippable Blast Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BlastPotion18_Upgrade_Charm",
+    "name": "Blast Potion",
+    "cost": 1,
+    "description": "Gain a temporary equippable <Set18CharmUpgrade>Radiant</Set18CharmUpgrade> Blast Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Blaze18",
+    "name": "Blaze",
+    "cost": 5,
+    "description": "Fire spreads across the board, dealing true damage to enemies.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Blaze18_Prismatic",
+    "name": "Blaze",
+    "cost": 0,
+    "description": "Spread a <Set18CharmUpgrade>raging</Set18CharmUpgrade> fire across the board!",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Blaze18_Upgrade",
+    "name": "Blaze",
+    "cost": 5,
+    "description": "Fire spreads across the board, dealing <Set18CharmUpgrade>more</Set18CharmUpgrade> true damage to enemies.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BloodAndIron18",
+    "name": "Blood and Iron",
+    "cost": 3,
+    "description": "After 20 champion deaths, gain a component anvil.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BloodAndIron18_Upgrade",
+    "name": "Blood and Iron",
+    "cost": 3,
+    "description": "After 16 champion deaths, gain a component anvil.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BoosterShot18",
+    "name": "Booster Shot",
+    "cost": 6,
+    "description": "Up to 2 1-star champions temporarily star up during combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BoosterShot18_Upgrade",
+    "name": "Booster Shot",
+    "cost": 6,
+    "description": "Up to 3 1-star champions temporarily star up during combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BorderVillage18",
+    "name": "Border Village",
+    "cost": 6,
+    "description": "Reroll your shop with all 2-star 2-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BorderVillage18_Upgrade",
+    "name": "Border Village",
+    "cost": 4,
+    "description": "Reroll your shop with all 2-star 2-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BorrowedGear18",
+    "name": "Borrowed Gear",
+    "cost": 1,
+    "description": "A champion gains a temporary recommended item.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BorrowedGear18_Upgrade",
+    "name": "Borrowed Gear",
+    "cost": 1,
+    "description": "A champion gains a temporary recommended item and 250<Set18CharmUpgrade> Health</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Bulwark18",
+    "name": "Bulwark",
+    "cost": 3,
+    "description": "Your Tanks gain a 20% Max Health shield upon falling below 50% Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Bulwark18_Upgrade",
+    "name": "Bulwark",
+    "cost": 3,
+    "description": "Your Tanks gain a 30% Max Health shield upon falling below 50% Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BunchOBelts18",
+    "name": "Bunch-o'-Belts",
+    "cost": 2,
+    "description": "Your allies gain 7 temporary, non-removable Giant's Belts.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_BunchOBeltsUpgrade18",
+    "name": "Bunch-o'-Belts",
+    "cost": 2,
+    "description": "Your allies gain 10 temporary, non-removable Giant's Belts.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CloneCompanion18",
+    "name": "Clone Companion",
+    "cost": 5,
+    "description": "Clone your highest damage champion. The clone deals 20% damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CloneCompanion18_Prismatic",
+    "name": "Clone Companion",
+    "cost": 0,
+    "description": "Clone your highest damage champion. The clone deals 100% damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CloneCompanionUpgrade18",
+    "name": "Clone Companion",
+    "cost": 5,
+    "description": "Clone your highest damage champion. The clone deals 30% damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CoinFlip18",
+    "name": "Coin Flip",
+    "cost": 0,
+    "description": "Flip a coin, gain 1 gold if it's heads.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CoinFlip18_Upgrade",
+    "name": "Coin Flip",
+    "cost": 0,
+    "description": "Flip 2<Set18CharmUpgrade> coins</Set18CharmUpgrade>, gain 1 gold if it's heads.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Combust18",
+    "name": "Combust",
+    "cost": 5,
+    "description": "Your champions explode on death, dealing 15% Max Health magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Combust18_Prismatic",
+    "name": "Combust",
+    "cost": 0,
+    "description": "Your champions explode on death, dealing 100% Max Health magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Combust18_Upgrade",
+    "name": "Combust",
+    "cost": 5,
+    "description": "Your champions explode on death, dealing 22% Max Health magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CurioCart18",
+    "name": "Curio Cart",
+    "cost": 0,
+    "description": "Open an item store. Items cost 0 to 15 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_CurioCart18_Upgrade",
+    "name": "Curio Cart",
+    "cost": 0,
+    "description": "Open an item store. Items cost 0 to 15 gold. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>2<Set18CharmUpgrade> Gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Cutpurse18",
+    "name": "Cutpurse",
+    "cost": 3,
+    "description": "Every 5 seconds, your champions have a 15% chance to drop 1 Gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Cutpurse18_Upgrade",
+    "name": "Cutpurse",
+    "cost": 3,
+    "description": "Every 4 seconds, your champions have a 15% chance to drop 1 Gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DieRoll18",
+    "name": "Die Roll",
+    "cost": 2,
+    "description": "Roll a six-sided die. Gain gold equal to the result.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DieRoll18_Upgrade",
+    "name": "Die Roll",
+    "cost": 3,
+    "description": "Roll <Set18CharmUpgrade>two</Set18CharmUpgrade> six-sided dice. Gain gold equal to the result.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Diversified18",
+    "name": "Diversified",
+    "cost": 3,
+    "description": "Your team gains 30 Health for each active non-unique trait.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DiversifiedUpgrade18",
+    "name": "Diversified",
+    "cost": 3,
+    "description": "Your team gains 45 Health for each active non-unique trait.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadBag18",
+    "name": "Doodad Bag",
+    "cost": 1,
+    "description": "Gain 2 consumables that give permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadBag18_Upgrade",
+    "name": "Doodad Bag",
+    "cost": 1,
+    "description": "Gain 3 consumables that give permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadJar18",
+    "name": "Doodad Jar",
+    "cost": 0,
+    "description": "Gain 1 consumable that gives permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadJar18_Upgrade",
+    "name": "Doodad Jar",
+    "cost": 1,
+    "description": "Gain 2 consumables that give permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadSack18",
+    "name": "Doodad Sack",
+    "cost": 3,
+    "description": "Gain 3 consumables that give permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_DoodadSack18_Upgrade",
+    "name": "Doodad Sack",
+    "cost": 3,
+    "description": "Gain 4 consumables that give permanent Armor and Magic Resist or Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Downpour18",
+    "name": "Downpour",
+    "cost": 3,
+    "description": "Your team gains 2 Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Downpour18_Prismatic",
+    "name": "Downpour",
+    "cost": 0,
+    "description": "Your team gains 15 Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Downpour18_Upgrade",
+    "name": "Downpour",
+    "cost": 3,
+    "description": "Your team gains 3 Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_EssenceTheft18",
+    "name": "Essence Theft",
+    "cost": 1,
+    "description": "Gain 50% bonus Coven Essence this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_EssenceTheft18_Upgrade",
+    "name": "Essence Theft",
+    "cost": 0,
+    "description": "Gain 90% bonus Coven Essence this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FlashFire18",
+    "name": "Flash Fire",
+    "cost": 2,
+    "description": "Reroll your shop. Inferno lights 2 shop slots on fire, upgrading them.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FlashFire18_Upgrade",
+    "name": "Flash Fire",
+    "cost": 2,
+    "description": "Reroll your shop. Inferno lights 3 shop slots on fire, upgrading them.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FlipFrenzy18",
+    "name": "Flip Frenzy",
+    "cost": 1,
+    "description": "Flip a coin, gain 1 gold if it's heads. Continue until you flip tails.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FlipFrenzy18_Upgrade",
+    "name": "Flip Frenzy",
+    "cost": 0,
+    "description": "Flip a coin, gain 1 gold if it's heads. Continue until you flip tails.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Flow18",
+    "name": "Flow",
+    "cost": 3,
+    "description": "Your champions are Unstoppable and gain 15% Attack Speed for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Flow18_Upgrade",
+    "name": "Flow",
+    "cost": 3,
+    "description": "Your champions are Unstoppable and gain 15% Attack Speed for 15 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ForestGuide18",
+    "name": "Forest Guide",
+    "cost": 5,
+    "description": "Gain a random 4-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ForestGuide18_Upgrade",
+    "name": "Forest Guide",
+    "cost": 4,
+    "description": "Gain a random 4-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ForestTwins18",
+    "name": "Forest Twins",
+    "cost": 4,
+    "description": "Gain 2 copies of a 2-cost champion you don't have.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ForestTwinsUpgrade18",
+    "name": "Forest Twins",
+    "cost": 5,
+    "description": "Gain <Set18CharmUpgrade>3</Set18CharmUpgrade> copies of a 2-cost champion you don't have.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FoundFriend18",
+    "name": "Found Friend",
+    "cost": 0,
+    "description": "Gain a temporary Training Dummy with a Giant's Belt.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_FoundFriend18_Upgrade",
+    "name": "Found Friend",
+    "cost": 0,
+    "description": "Gain a Training Dummy with a <Set18CharmUpgrade>Sunfire Cape</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GiantsAura18",
+    "name": "Giant's Aura",
+    "cost": 5,
+    "description": "Your highest Health ally deals 2% max Health damage per second in an area.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GiantsAura18_Prismatic",
+    "name": "Giant's Aura",
+    "cost": 0,
+    "description": "Your highest Health ally becomes <Set18CharmUpgrade>an absolute menace.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GiantsAura18_Upgrade",
+    "name": "Giant's Aura",
+    "cost": 5,
+    "description": "Your highest Health ally deals 3% max Health damage per second in an area.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GoldenGoose18",
+    "name": "Golden Goose",
+    "cost": 1,
+    "description": "Gain 1 gold for every 1700 damage your highest damage champion deals.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GoldenGooseUpgrade18",
+    "name": "Golden Goose",
+    "cost": 1,
+    "description": "Gain 1 gold for every 1000 damage your highest damage champion deals.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Grandmaster18",
+    "name": "Grandmaster",
+    "cost": 18,
+    "description": "Gain a random 2-star 5-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Grandmaster18_Upgrade",
+    "name": "Grandmaster",
+    "cost": 14,
+    "description": "Gain a random 2-star 5-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GreaterChaos18",
+    "name": "Greater Chaos",
+    "cost": 4,
+    "description": "Cast 2 random Wisps.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GreaterChaos18_Upgrade",
+    "name": "Greater Chaos",
+    "cost": 4,
+    "description": "Cast 2 random Wisps <Set18CharmUpgrade>worth</Set18CharmUpgrade> 2<Set18CharmUpgrade> or more gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GrowUp18",
+    "name": "Grow Up",
+    "cost": 7,
+    "description": "Gain 10 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_GrowUp18_Upgrade",
+    "name": "Grow Up",
+    "cost": 7,
+    "description": "Gain 12 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HandOfBaron18",
+    "name": "Hand Of Baron",
+    "cost": 6,
+    "description": "Your team gains Baron Buff, increasing their stats.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HandOfBaron18_Upgrade",
+    "name": "Hand Of Baron",
+    "cost": 6,
+    "description": "Your team gains Baron Buff, <Set18CharmUpgrade>greatly</Set18CharmUpgrade> increasing their stats.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HealthPotion18_Charm",
+    "name": "Health Potion",
+    "cost": 1,
+    "description": "Gain a tempoary equippable Health Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HealthPotion18_Upgrade_Charm",
+    "name": "Health Potion",
+    "cost": 1,
+    "description": "Gain a temporary equippable <Set18CharmUpgrade>Radiant</Set18CharmUpgrade> Health Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HeroOfProphecy18",
+    "name": "Hero Of Prophecy",
+    "cost": 35,
+    "description": "Gain a 5-cost champion. Gain them again each round FOREVER.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HeroOfProphecy18_Upgrade",
+    "name": "Hero Of Prophecy",
+    "cost": 33,
+    "description": "Gain a 5-cost champion. Gain them again each round FOREVER.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HerosEntrance18",
+    "name": "Hero's Entrance",
+    "cost": 4,
+    "description": "After 8 seconds, the leftmost benched champion joins combat and gains 2 recommended items.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HerosEntranceUpgrade18",
+    "name": "Hero's Entrance",
+    "cost": 4,
+    "description": "After 5 seconds, the leftmost benched champion joins combat and gains 2 recommended items.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hireling18",
+    "name": "Hireling",
+    "cost": 5,
+    "description": "A temporary 1-star 5-cost with 1 recommended items joins your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hireling18_Prismatic",
+    "name": "Hireling",
+    "cost": 0,
+    "description": "3 temporary 2<Set18CharmUpgrade>-star</Set18CharmUpgrade> 5-costs with 2 recommended items each join your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hireling18_Upgrade",
+    "name": "Hireling",
+    "cost": 5,
+    "description": "A temporary 1-star 5-cost with 2 recommended items joins your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HomingFireflies18",
+    "name": "Homing Fireflies",
+    "cost": 2,
+    "description": "Your Casters spawn a firefly per 20 Mana spent. Each deals 110 magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_HomingFireflies18_Upgrade",
+    "name": "Homing Fireflies",
+    "cost": 2,
+    "description": "Your Casters spawn a firefly per 15 Mana spent. Each deals 110 magic damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hugify18",
+    "name": "Hugify",
+    "cost": 1,
+    "description": "Your highest Health unit grows, gaining 350 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hugify18_Prismatic",
+    "name": "Hugify",
+    "cost": 0,
+    "description": "Your 10 highest Health units grow, gaining 2500 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Hugify18_Upgrade",
+    "name": "Hugify",
+    "cost": 1,
+    "description": "Your highest Health unit grows, gaining 600 Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_IdleCraftsman18",
+    "name": "Idle Craftsman",
+    "cost": 4,
+    "description": "A component on your bench turns into a completed item it builds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_IdleCraftsman18_Upgrade",
+    "name": "Idle Craftsman",
+    "cost": 2,
+    "description": "A component on your bench turns into a completed item it builds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ImprovedReach18",
+    "name": "Improved Reach",
+    "cost": 2,
+    "description": "Your Fighters gain 1 range.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ImprovedReach18_Upgrade",
+    "name": "Improved Reach",
+    "cost": 2,
+    "description": "Your Fighters gain 2 range.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_IronCore18",
+    "name": "Iron Core",
+    "cost": 2,
+    "description": "Your front center champion gains 4% Max Health per front-row unit.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_IronCore18_Upgrade",
+    "name": "Iron Core",
+    "cost": 2,
+    "description": "Your front center champion gains 6% Max Health per front-row unit.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Ironwood18",
+    "name": "Ironwood",
+    "cost": 3,
+    "description": "Enemies attacking your highest health champion deal 12% less damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Ironwood18_Upgrade",
+    "name": "Ironwood",
+    "cost": 3,
+    "description": "Enemies attacking your highest health champion deal 18% less damage.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Journeyman18",
+    "name": "Journeyman",
+    "cost": 6,
+    "description": "Gain a random 2-star 2-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Journeyman18_Upgrade",
+    "name": "Journeyman",
+    "cost": 5,
+    "description": "Gain a random 2-star 2-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Jungling18",
+    "name": "Jungling",
+    "cost": 4,
+    "description": "Overrun the shop with Riftbeasts.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Jungling18_Upgrade",
+    "name": "Jungling",
+    "cost": 3,
+    "description": "Overrun the shop with Riftbeasts.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KillersRegret18",
+    "name": "Killer's Regret",
+    "cost": 2,
+    "description": "Your first 3 champions to die stun their killer for 1.25 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KillersRegretUpgrade18",
+    "name": "Killer's Regret",
+    "cost": 2,
+    "description": "Your first 4 champions to die stun their killer for 1.5 second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackBag18",
+    "name": "Knick-Knack Bag",
+    "cost": 1,
+    "description": "Gain 2 consumables that give permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackBag18_Upgrade",
+    "name": "Knick-Knack Bag",
+    "cost": 2,
+    "description": "Gain 3 consumables that give permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackJar18",
+    "name": "Knick-Knack Jar",
+    "cost": 0,
+    "description": "Gain 1 consumable that gives permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackJar18_Upgrade",
+    "name": "Knick-Knack Jar",
+    "cost": 0,
+    "description": "Gain 2 consumables that give permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackSack18",
+    "name": "Knick-Knack Sack",
+    "cost": 3,
+    "description": "Gain 3 consumables that give permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_KnickKnackSack18_Upgrade",
+    "name": "Knick-Knack Sack",
+    "cost": 3,
+    "description": "Gain 4 consumables that give permanent Attack Damage or Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LateBloomer18",
+    "name": "Late Bloomer",
+    "cost": 6,
+    "description": "A temporary 3-star 1-cost joins your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LateBloomer18_Prismatic",
+    "name": "Late Bloomer",
+    "cost": 0,
+    "description": "A <Set18CharmUpgrade>squad of</Set18CharmUpgrade> 5 temporary 4<Set18CharmUpgrade>-star</Set18CharmUpgrade> 1-costs joins your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LateBloomer18_Upgrade",
+    "name": "Late Bloomer",
+    "cost": 6,
+    "description": "A temporary 3-star 1-cost with <Set18CharmUpgrade> </Set18CharmUpgrade>1<Set18CharmUpgrade>recommend item </Set18CharmUpgrade>joins your team.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LesserChaos18",
+    "name": "Lesser Chaos",
+    "cost": 1,
+    "description": "Cast a random Wisp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LesserChaos18_Upgrade",
+    "name": "Lesser Chaos",
+    "cost": 1,
+    "description": "Cast a random Wisp <Set18CharmUpgrade>worth </Set18CharmUpgrade>1<Set18CharmUpgrade> or more gold</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LivingSoil18",
+    "name": "Living Soil",
+    "cost": 2,
+    "description": "Every 4 seconds, roots stun an enemy for 1 second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_LivingSoil18_Upgrade",
+    "name": "Living Soil",
+    "cost": 2,
+    "description": "Every 4 seconds, roots stun 2 enemies for 1 second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Lucky718",
+    "name": "Lucky 7",
+    "cost": 7,
+    "description": "Gain 7 shop rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Lucky718_Prismatic",
+    "name": "Lucky 7",
+    "cost": 0,
+    "description": "Gain 777 shop rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Lucky718_Upgrade",
+    "name": "Lucky 7",
+    "cost": 7,
+    "description": "Gain 10 shop rerolls.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ManaPotion18_Charm",
+    "name": "Mana Potion",
+    "cost": 1,
+    "description": "Gain a temporary equippable Mana Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ManaPotion18_Upgrade_Charm",
+    "name": "Mana Potion",
+    "cost": 1,
+    "description": "Gain a temporary equippable <Set18CharmUpgrade>Radiant</Set18CharmUpgrade> Mana Potion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ManaRichSoil18",
+    "name": "Mana-Rich Soil",
+    "cost": 3,
+    "description": "Your Casters have 18% reduced Max Mana.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ManaRichSoil18_Upgrade",
+    "name": "Mana-Rich Soil",
+    "cost": 3,
+    "description": "Your Casters have 25% reduced Max Mana.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MarksmensGale18",
+    "name": "Marksmen's Gale",
+    "cost": 2,
+    "description": "Your Marksmen's attacks grant 3% stacking Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MarksmensGale18_Upgrade",
+    "name": "Marksmen's Gale",
+    "cost": 2,
+    "description": "Your Marksmen's attacks grant 5% stacking Attack Speed.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MarksmensMarks18",
+    "name": "Marksmen's Marks",
+    "cost": 3,
+    "description": "Your Marksmen have a 30% chance to double attack.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MarksmensMarks18_Upgrade",
+    "name": "Marksmen's Marks",
+    "cost": 3,
+    "description": "Your Marksmen have a 45% chance to double attack.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MemorialDummy18",
+    "name": "Memorial Dummy",
+    "cost": 3,
+    "description": "Your first itemized tank spawns a Dummy with their items on death.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MemorialDummy18_Upgrade",
+    "name": "Memorial Dummy",
+    "cost": 3,
+    "description": "The first 2 tanks that die spawns a Training Dummy with their items.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MiddlePath18",
+    "name": "Middle Path",
+    "cost": 6,
+    "description": "Reroll your shop with all 2-star 3-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MiddlePath18_Upgrade",
+    "name": "Middle Path",
+    "cost": 4,
+    "description": "Reroll your shop with all 2-star 3-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MoonlightRitual18",
+    "name": "Moonlight Ritual",
+    "cost": 2,
+    "description": "Your lowest star 1-cost or 2-cost champion stars up in combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_MoonlightRitualUpgrade18",
+    "name": "Moonlight Ritual",
+    "cost": 2,
+    "description": "Your <Set18CharmUpgrade>two</Set18CharmUpgrade> lowest star 1-cost or 2-cost champions star up in combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_NaturesAlly18",
+    "name": "Nature's Ally",
+    "cost": 2,
+    "description": "Every 3 ally deaths, summon a random Riftbeast.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_NaturesAlly18_Upgrade",
+    "name": "Nature's Ally",
+    "cost": 2,
+    "description": "Every 3 ally deaths, summon a random Riftbeast <Set18CharmUpgrade>that's sometimes 2-star</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_NaturesWrath18",
+    "name": "Nature's Wrath",
+    "cost": 1,
+    "description": "Kill EVERYONE without an item after 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_NaturesWrath18_Upgrade",
+    "name": "Nature's Wrath",
+    "cost": 1,
+    "description": "Kill EVERYONE without an item after 8 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Peddler18",
+    "name": "Peddler",
+    "cost": 0,
+    "description": "Open a random item store. Random items cost 0 to 14 gold.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Peddler18_Upgrade",
+    "name": "Peddler",
+    "cost": 0,
+    "description": "Open a random item store. Random items cost 0 to 14 gold. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>2<Set18CharmUpgrade> Gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PetrifiedDummy18",
+    "name": "Petrified Dummy",
+    "cost": 2,
+    "description": "Your first champion to die turns into a 900 Health dummy with their defenses.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PetrifiedDummy18_Upgrade",
+    "name": "Petrified Dummy",
+    "cost": 2,
+    "description": "Your first champion to die turns into a 1350 Health dummy with their defenses.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PetrifyShields18",
+    "name": "Petrify Shields",
+    "cost": 2,
+    "description": "10% Slow enemies and reduce their shields by 20% for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PetrifyShields18_Upgrade",
+    "name": "Petrify Shields",
+    "cost": 2,
+    "description": "10% Slow enemies and reduce their shields by 30% for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomArmor18",
+    "name": "Phantom Armor",
+    "cost": 2,
+    "description": "Gain a temporary Warmog's Armor.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomArmor18_Prismatic",
+    "name": "Phantom Armor",
+    "cost": 0,
+    "description": "Gain <Set18CharmUpgrade>6</Set18CharmUpgrade> temporary <Set18CharmUpgrade>Radiant</Set18CharmUpgrade> Warmog's Armors <Set18CharmUpgrade>and 5 Removers</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomArmor18_Upgrade",
+    "name": "Phantom Armor",
+    "cost": 2,
+    "description": "Gain a temporary <Set18CharmUpgrade>The Indomitable</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomEmblem18",
+    "name": "Phantom Emblem",
+    "cost": 3,
+    "description": "Gain a temporary emblem of your most active trait.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomEmblemUpgrade18",
+    "name": "Phantom Emblem",
+    "cost": 1,
+    "description": "Gain a temporary emblem of your most active trait.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomGloves18",
+    "name": "Phantom Gloves",
+    "cost": 3,
+    "description": "Gain a temporary Thief's Gloves.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomGloves18_Upgrade",
+    "name": "Phantom Gloves",
+    "cost": 3,
+    "description": "Gain a temporary <Set18CharmUpgrade>Mittens</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomSplash18",
+    "name": "Phantom Splash",
+    "cost": 2,
+    "description": "Combat start: Up to 2 inactive traits activate at the lowest level.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomSplashUpgrade18",
+    "name": "Phantom Splash",
+    "cost": 2,
+    "description": "Combat Start: Up to 4 inactive traits activate at the lowest level.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomVest18",
+    "name": "Phantom Vest",
+    "cost": 2,
+    "description": "Gain a temporary Bramble Vest.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PhantomVest18_Upgrade",
+    "name": "Phantom Vest",
+    "cost": 2,
+    "description": "Gain a temporary <Set18CharmUpgrade>Aegis of Dawn</Set18CharmUpgrade>.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PlatedShields18",
+    "name": "Plated Shields",
+    "cost": 2,
+    "description": "Shields are 15% stronger. Allies gain 150 shield for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PlatedShields18_Upgrade",
+    "name": "Plated Shields",
+    "cost": 2,
+    "description": "Shields are 20% stronger. Allies gain 300 shield for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Potioncraft18",
+    "name": "Potioncraft",
+    "cost": 3,
+    "description": "Gain three temporary equippable Potions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Potioncraft18_Upgrade",
+    "name": "Potioncraft",
+    "cost": 3,
+    "description": "Gain three temporary equippable <Set18CharmUpgrade>Radiant</Set18CharmUpgrade> Potions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PottedLifebloom18",
+    "name": "Potted Lifebloom",
+    "cost": 2,
+    "description": "Gain a temporary Lifeblossom.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PottedLifebloom18_Upgrade",
+    "name": "Potted Lifebloom",
+    "cost": 1,
+    "description": "Gain a temporary Lifeblossom.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PottedStonebark18",
+    "name": "Potted Stonebark",
+    "cost": 2,
+    "description": "Gain a temporary Stonebark Tree.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_PottedStonebark18_Upgrade",
+    "name": "Potted Stonebark",
+    "cost": 1,
+    "description": "Gain a temporary Stonebark Tree.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Quicken18",
+    "name": "Quicken",
+    "cost": 2,
+    "description": "On cast, your champions gain 30% Attack Speed for 4 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_QuickenUpgrade18",
+    "name": "Quicken",
+    "cost": 2,
+    "description": "On cast, your champions gain 40% Attack Speed for 5 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Rain18",
+    "name": "Rain",
+    "cost": 1,
+    "description": "Your team gains 1 Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Rain18_Upgrade",
+    "name": "Rain",
+    "cost": 1,
+    "description": "Your team gains 2 Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RefreshingLight18",
+    "name": "Refreshing Light",
+    "cost": 6,
+    "description": "Gain a free reroll per star level of each unique Solar champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RefreshingLight18_Upgrade",
+    "name": "Refreshing Light",
+    "cost": 5,
+    "description": "Gain a free reroll per star level of each unique Solar champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Regeneration18",
+    "name": "Regeneration",
+    "cost": 3,
+    "description": "Your team heals 1% max Health per second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Regeneration18_Upgrade",
+    "name": "Regeneration",
+    "cost": 3,
+    "description": "Your team heals 2% max Health per second.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Revenge18",
+    "name": "Revenge",
+    "cost": 3,
+    "description": "Whenever an ally dies, your champions gain 4% stacking Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RevengeUpgrade18",
+    "name": "Revenge",
+    "cost": 3,
+    "description": "Whenever an ally dies, your champions gain 6% stacking Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RideTheWave18",
+    "name": "Ride the Wave",
+    "cost": 3,
+    "description": "The next 2 rerolls this round will have 2+ champions fielded last combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RideTheWaveUpgrade18",
+    "name": "Ride the Wave",
+    "cost": 3,
+    "description": "The next 3 rerolls this round will have 2+ champions fielded last combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RollingBones18",
+    "name": "Rolling Bones",
+    "cost": 3,
+    "description": "You have a 50% chance to get a free reroll with each kill.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RollingBones18_Upgrade",
+    "name": "Rolling Bones",
+    "cost": 3,
+    "description": "60% chance to get a reroll with each kill, and 1 more if you win.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RolyPolys18",
+    "name": "Roly-Polys",
+    "cost": 4,
+    "description": "For each ally champion alive after 18 seconds, gain a reroll.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_RolyPolysUpgrade18",
+    "name": "Roly-Polys",
+    "cost": 4,
+    "description": "For each ally champion alive after 16 seconds, gain a reroll.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Salvager18",
+    "name": "Salvager",
+    "cost": 0,
+    "description": "Any units you bench have items removed and broken apart.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SalvagerUpgrade18",
+    "name": "Salvager",
+    "cost": 0,
+    "description": "Any units you bench have items removed and broken apart. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>2<Set18CharmUpgrade> Gold.</Set18CharmUpgrade>",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Scrappy18",
+    "name": "Scrappy",
+    "cost": 3,
+    "description": "Combat start: 2 champions without items gain a temporary recommended item.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Scrappy18_Upgrade",
+    "name": "Scrappy",
+    "cost": 3,
+    "description": "Combat Start: 3 champions without items gain a temporary recommended item.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SearchParty18",
+    "name": "Search Party",
+    "cost": 3,
+    "description": "Each of your shops has a 4-cost in it this round until you buy one.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SearchParty18_Upgrade",
+    "name": "Search Party",
+    "cost": 2,
+    "description": "Each of your shops has a 4-cost in it this round until you buy one.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SlowStudy18",
+    "name": "Slow Study",
+    "cost": 4,
+    "description": "For each ally champion alive after 15 seconds, gain 2 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SlowStudyUpgrade18",
+    "name": "Slow Study",
+    "cost": 4,
+    "description": "For each ally champion alive after 12 seconds, gain 2 XP.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Smurfing18",
+    "name": "Smurfing",
+    "cost": 7,
+    "description": "Gain a random 5 cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Smurfing18_Upgrade",
+    "name": "Smurfing",
+    "cost": 6,
+    "description": "Gain a random 5-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Snacktime18",
+    "name": "Snacktime!",
+    "cost": 3,
+    "description": "The BFF eats enemies he damages under 15% Max Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Snacktime18_Upgrade",
+    "name": "Snacktime!",
+    "cost": 3,
+    "description": "The BFF eats enemies he damages under 20% Max Health.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SolarGift18",
+    "name": "Solar Gift",
+    "cost": 6,
+    "description": "Gain a Leona, Sejuani, and Kayle",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SolarGift18_Upgrade",
+    "name": "Solar Gift",
+    "cost": 4,
+    "description": "Gain a Leona, Sejuani, and Kayle",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SolitudesCloak18",
+    "name": "Solitude's Cloak",
+    "cost": 3,
+    "description": "Champions with no adjacent allies gain 10% Max Health and 10% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_SolitudesCloakUpgrade18",
+    "name": "Solitude's Cloak",
+    "cost": 3,
+    "description": "Champions with no adjacent allies gain 15% Max Health and 15% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_StandAlone18",
+    "name": "Stand Alone",
+    "cost": 3,
+    "description": "Champions alone in their row gain 15% Health and 15% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_StandAlone18_Prismatic",
+    "name": "Stand Alone",
+    "cost": 0,
+    "description": "Champions alone in their row gain 100% Health and 150% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_StandAlone18_Upgrade",
+    "name": "Stand Alone",
+    "cost": 3,
+    "description": "Champions alone in their row gain 22% Health and 22% Damage Amp.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_StartingTown18",
+    "name": "Starting Town",
+    "cost": 3,
+    "description": "Reroll your shop with all 2-star 1-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_StartingTown18_Upgrade",
+    "name": "Starting Town",
+    "cost": 2,
+    "description": "Reroll your shop with all 2-star 1-cost champions.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Stealthy18",
+    "name": "Stealthy",
+    "cost": 1,
+    "description": "Your 2 strongest Fighters or Assassins are untargetable for 6 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Stealthy18_Upgrade",
+    "name": "Stealthy",
+    "cost": 1,
+    "description": "2 random champions on the back row are untargetable for 10 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Terraforming18",
+    "name": "Terraforming",
+    "cost": 2,
+    "description": "Gain 5 seeds at start of combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_Terraforming18_Upgrade",
+    "name": "Terraforming",
+    "cost": 2,
+    "description": "Gain 9 seeds at start of combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigBag18",
+    "name": "Thingamajig Bag",
+    "cost": 1,
+    "description": "Gain 2 consumables that give permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigBag18_Upgrade",
+    "name": "Thingamajig Bag",
+    "cost": 1,
+    "description": "Gain 3 consumables that give permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigJar18",
+    "name": "Thingamajig Jar",
+    "cost": 0,
+    "description": "Gain 1 consumable that gives permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigJar18_Upgrade",
+    "name": "Thingamajig Jar",
+    "cost": 1,
+    "description": "Gain 2 consumables that give permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigSack18",
+    "name": "Thingamajig Sack",
+    "cost": 3,
+    "description": "Gain 3 consumables that give permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThingamajigSack18_Upgrade",
+    "name": "Thingamajig Sack",
+    "cost": 3,
+    "description": "Gain 4 consumables that give permanent Ability Power or Mana Regen.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThreeMe18",
+    "name": "Three Me",
+    "cost": 9,
+    "description": "Gain a random 2-star 3-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_ThreeMe18_Upgrade",
+    "name": "Three Me",
+    "cost": 8,
+    "description": "Gain a random 2-star 3-cost champion.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TigersVisit18_Wisp",
+    "name": "Tiger's Visit",
+    "cost": 3,
+    "description": "Gain the Tiger Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TigersVisit18_Wisp_Upgrade",
+    "name": "Tiger's Visit",
+    "cost": 2,
+    "description": "Gain the Tiger Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TrainingYard18",
+    "name": "Training Yard",
+    "cost": 3,
+    "description": "Gain 2 Training Dummies each with a random tank item.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TrainingYard18_Upgrade",
+    "name": "Training Yard",
+    "cost": 3,
+    "description": "Gain 3 Training Dummies each with a random tank item.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TreetopArchers",
+    "name": "Treetop Archers",
+    "cost": 5,
+    "description": "Archers fire from the trees, dealing 500 physical damage every 3 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TreetopArchers_Prismatic",
+    "name": "Treetop Archers",
+    "cost": 0,
+    "description": "<Set18CharmUpgrade>An implausible number of archers</Set18CharmUpgrade> fire from the trees.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TreetopArchers_Upgrade",
+    "name": "Treetop Archers",
+    "cost": 5,
+    "description": "Archers fire from the trees, dealing 900 physical damage every 3 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TrophyHunter18",
+    "name": "Trophy Hunter",
+    "cost": 2,
+    "description": "Next player combat, your Rivals' takedowns count twice.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TrophyHunter18_Upgrade",
+    "name": "Trophy Hunter",
+    "cost": 0,
+    "description": "Next player combat, your Rivals' takedowns count twice.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TurtlesVisit18",
+    "name": "Turtle's Visit",
+    "cost": 3,
+    "description": "Gain the Turtle Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_TurtlesVisit18_Upgrade",
+    "name": "Turtle's Visit",
+    "cost": 2,
+    "description": "Gain the Turtle Primal buff for this combat.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_WrappedInThorns18",
+    "name": "Wrapped In Thorns",
+    "cost": 2,
+    "description": "Your Tanks reflect 12% of damage taken to adjacent enemies every 4 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  },
+  {
+    "id": "TFTSet18/TFTSet18_Items_Charms/DA_WrappedInThorns18_Upgrade",
+    "name": "Wrapped In Thorns",
+    "cost": 2,
+    "description": "Your Tanks reflect 18% of damage taken to adjacent enemies every 4 seconds.",
+    "tier": 1,
+    "image": "Set18_MechanicIcon.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/charms.json",
+      "revision": "v18.1",
+      "mechanic_alias": "Wisps (위습) / Enchanted Wilds"
+    }
+  }
+]
