@@ -95,7 +95,7 @@ class RecognizedCard:
 
 
 class ShopRecognizerV2:
-    """TFT Set 17 상점 5개 카드 슬롯 인식기 v2."""
+    """TFT Set 18 상점 5개 카드 슬롯 인식기 v2 (Set 18 전용 비전 인식 엔진)."""
 
     BASE_RESOLUTION = (1280, 720)
     SHOP_GEOMETRY_720P = {
@@ -109,13 +109,23 @@ class ShopRecognizerV2:
     def __init__(
         self,
         ddragon_dir: Optional[str] = None,
-        set17_path: Optional[str] = None,
+        champions_path: Optional[str] = None,
+        set17_path: Optional[str] = None,  # Backward compatibility
         portrait_weight: float = 0.60,
         ocr_weight: float = 0.40,
         min_confidence_threshold: float = 0.10
     ):
         self.ddragon_dir = ddragon_dir or os.path.join(_REPO, "TFT_DDragon")
-        self.set17_path = set17_path or os.path.join(_REPO, "tft_set17.json")
+        
+        # Primary: Set 18 Normalized Database
+        default_set18_path = os.path.join(_REPO, "data", "sets", "set18", "normalized", "champions.json")
+        if champions_path:
+            self.champions_path = champions_path
+        elif os.path.exists(default_set18_path):
+            self.champions_path = default_set18_path
+        else:
+            self.champions_path = set17_path or os.path.join(_REPO, "tft_set17.json")
+
         self.portrait_weight = portrait_weight
         self.ocr_weight = ocr_weight
         self.min_confidence_threshold = min_confidence_threshold
@@ -126,33 +136,38 @@ class ShopRecognizerV2:
         self._load_templates_and_roster()
 
     def _load_templates_and_roster(self):
-        """Set 17 챔피언 데이터 및 템플릿 이미지 로드 (Center Square Crop 적용)."""
+        """Set 18 챔피언 데이터 및 템플릿 이미지 로드 (Center Square Crop 적용)."""
         champ_img_dir = os.path.join(self.ddragon_dir, "img", "champion")
-        if not os.path.exists(self.set17_path) or not os.path.exists(champ_img_dir):
+        if not os.path.exists(self.champions_path) or not os.path.exists(champ_img_dir):
             return
 
-        with open(self.set17_path, "r", encoding="utf-8") as f:
-            set17_data = json.load(f)
+        with open(self.champions_path, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
 
+        champions_list = raw_data if isinstance(raw_data, list) else raw_data.get("champions", [])
         avail_imgs = os.listdir(champ_img_dir)
 
-        for c in set17_data.get("champions", []):
-            cid = c["id"]
-            cname = c["name"]
-            cost = c["cost"]
+        for c in champions_list:
+            cid = c.get("id") or c.get("character_id", "")
+            cname = c.get("name", "")
+            cost = c.get("cost", 1)
+            splash_art = c.get("splash_art", "")
+            
+            if not cname:
+                continue
+
             self.champ_cost_map[cname] = cost
-            self.champions_by_cost[cost].append(cname)
+            if cost in self.champions_by_cost:
+                self.champions_by_cost[cost].append(cname)
 
-            base_name = cid.split("_")[-1].lower()
+            # Match exact Set 18 splash art or prefix search
             target_img = None
-            for f_name in avail_imgs:
-                if f_name.lower().startswith(f"tft17_{base_name}"):
-                    target_img = f_name
-                    break
-
-            if not target_img and (cname == "라아스트" or base_name == "rhaast"):
+            if splash_art and splash_art in avail_imgs:
+                target_img = splash_art
+            else:
+                c_clean = cname.lower().replace(" ", "").replace("'", "")
                 for f_name in avail_imgs:
-                    if f_name.lower().startswith("tft17_kayn"):
+                    if f_name.lower().startswith(f"tft18_{c_clean}") or f_name.lower().startswith(f"tft17_{c_clean}"):
                         target_img = f_name
                         break
 
