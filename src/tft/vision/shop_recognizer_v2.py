@@ -332,6 +332,17 @@ class ShopRecognizerV2:
         best_cand = candidate_objs[0]
         confidence = best_cand.combined_score
 
+        # Minimum Confidence Threshold to prevent false positive matches on non-shop/desktop frames
+        if best_cand.template_score < 0.28 and best_cand.ocr_score < 0.25:
+            return RecognizedCard(
+                slot_index=slot_index,
+                status=SlotStatus.NO_DETECTION,
+                confidence=0.0,
+                detected_color_cost=detected_cost,
+                raw_ocr=raw_ocr,
+                candidates=candidate_objs
+            )
+
         return RecognizedCard(
             slot_index=slot_index,
             champion=best_cand.champion,

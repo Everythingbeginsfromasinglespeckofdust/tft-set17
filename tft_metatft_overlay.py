@@ -1,18 +1,18 @@
 """MetaTFT-Style In-Game Transparent Overlay for TFT Set 18.
-100% Data-Driven HUD floating directly on top of your video or game screen:
-1. Left Comp Tracker & BiS Item Panel (dynamically loaded from Set 18 normalized stats)
-2. Bottom 5-Slot Shop Recommendation Badges (directly floating over shop slots)
-3. Bottom-Left Gold & Interest Tier HUD
-4. Top Stage & Real-Time AI Decision Engine Recommendation Pill
+100% Real-time Vision & Decision Overlay floating directly over your screen:
+- 100% Transparent See-Through Canvas (no black video frame)
+- Top Center: Real-Time AI Decision Engine Recommendation Pill
+- Bottom Center: 5-Slot Floating Shop Badges (Only shows when real TFT shop is visible)
+- Bottom Left: Real-Time Gold & Interest HUD
+- Left Sidebar: Live Engine Telemetry & Decision Reasons ([Tab] to toggle)
 """
 from __future__ import annotations
 import argparse
-import json
 import os
 import sys
 import threading
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 import cv2
 import mss
@@ -57,24 +57,6 @@ COST_COLORS = {
 }
 
 
-def load_set18_meta_database() -> Tuple[Dict[str, Dict[str, Any]], List[Dict[str, Any]]]:
-    """Dynamically load Set 18 champions and meta tiers from data/sets/set18/."""
-    champs_path = os.path.join(_HERE, "data", "sets", "set18", "normalized", "champions.json")
-    champs_dict: Dict[str, Dict[str, Any]] = {}
-    champs_list: List[Dict[str, Any]] = []
-
-    if os.path.exists(champs_path):
-        with open(champs_path, "r", encoding="utf-8") as f:
-            raw_champs = json.load(f)
-            for c in raw_champs:
-                name = c.get("name", "")
-                if name:
-                    champs_dict[name.lower()] = c
-                    champs_list.append(c)
-
-    return champs_dict, champs_list
-
-
 class ScreenVisionWorker:
     """Continuously grabs active monitor screen and runs vision + decision engine."""
 
@@ -87,17 +69,16 @@ class ScreenVisionWorker:
         self.state_builder = ObservationToGameStateBuilder()
         self.adapter = DecisionCalibrationAdapter(config=CalibrationConfig(enabled=True, mode=CalibrationMode.ON))
 
-        self.champs_dict, self.champs_list = load_set18_meta_database()
-
         # Shared state for GUI
         self.gold: Optional[int] = None
         self.cards: List[Dict[str, Any]] = [
-            {"slot": i, "name": "Waiting...", "cost": 1, "status": "UNK"} for i in range(5)
+            {"slot": i, "name": None, "cost": None, "status": "NO_DETECTION"} for i in range(5)
         ]
-        self.recommended_action: str = "SAVE_GOLD"
+        self.recommended_action: str = "WAITING"
         self.confidence: float = 0.0
         self.is_flip: bool = False
-        self.stage: str = "2-1"
+        self.reasons: List[str] = ["Waiting for TFT screen..."]
+        self.scores: Dict[str, float] = {}
         self.fps: float = 0.0
         self.frame_count = 0
 
@@ -133,52 +114,59 @@ class ScreenVisionWorker:
                     conf_list = []
 
                     for c in shop_cards:
-                        if c.status == SlotStatus.RECOGNIZED:
-                            parsed_cards.append({"slot": c.slot_index, "name": c.champion, "cost": c.cost, "status": "REC"})
+                        if c.status == SlotStatus.RECOGNIZED and c.champion:
+                            parsed_cards.append({"slot": c.slot_index, "name": c.champion, "cost": c.cost, "status": "REC", "conf": c.confidence})
                             card_obs_list.append(CardObservation(c.slot_index, c.champion, c.cost, c.confidence, False, "ShopRecognizerV2"))
                             conf_list.append(c.confidence)
                         elif c.status == SlotStatus.EMPTY:
-                            parsed_cards.append({"slot": c.slot_index, "name": "EMPTY", "cost": 0, "status": "EMP"})
+                            parsed_cards.append({"slot": c.slot_index, "name": "EMPTY", "cost": 0, "status": "EMP", "conf": 1.0})
                             card_obs_list.append(CardObservation(c.slot_index, "EMPTY", None, 0.95, True, "ShopRecognizerV2"))
                             conf_list.append(0.95)
                         else:
-                            parsed_cards.append({"slot": c.slot_index, "name": "-", "cost": 1, "status": "UNK"})
+                            parsed_cards.append({"slot": c.slot_index, "name": None, "cost": None, "status": "NO_DETECTION", "conf": 0.0})
                             card_obs_list.append(CardObservation(c.slot_index, None, None, 0.0, False, "ShopRecognizerV2"))
                             conf_list.append(0.0)
 
-                    if any(c["status"] == "REC" for c in parsed_cards):
-                        self.cards = parsed_cards
+                    self.cards = parsed_cards
 
                     # 2. Gold Recognition
                     g_obs = self.gold_recognizer.recognize_gold(f_720, t0 - t_start, self.frame_count)
                     if g_obs.is_valid and g_obs.parsed_gold is not None:
                         self.gold = g_obs.parsed_gold
+                    else:
+                        self.gold = None
 
                     # Dynamic Confidences
                     shop_conf = float(np.mean(conf_list)) if conf_list else 0.0
                     gold_conf = float(g_obs.confidence) if g_obs.is_valid else 0.0
-                    overall_conf = float(np.mean([shop_conf, gold_conf])) if (shop_conf > 0 or gold_conf > 0) else 0.5
+                    overall_conf = float(np.mean([shop_conf, gold_conf])) if (shop_conf > 0 or gold_conf > 0) else 0.0
 
                     # 3. Decision Engine + CALIB_C
-                    obs = Observation(
-                        timestamp_sec=t0 - t_start,
-                        frame_index=self.frame_count,
-                        stage_text=self.stage,
-                        gold_val=self.gold if self.gold is not None else 0,
-                        hp_val=None,
-                        level_val=None,
-                        shop_cards=card_obs_list,
-                        sources={"shop": "ShopRecognizerV2", "gold": "GoldRecognizer"},
-                        confidences={"shop": round(shop_conf, 3), "gold": round(gold_conf, 3)},
-                        overall_confidence=round(overall_conf, 3)
-                    )
-                    gs = self.state_builder.build(obs)
-                    dec_res = self.adapter.decide(gs)
+                    if self.gold is not None or any(c["status"] == "REC" for c in parsed_cards):
+                        obs = Observation(
+                            timestamp_sec=t0 - t_start,
+                            frame_index=self.frame_count,
+                            stage_text="2-1",
+                            gold_val=self.gold if self.gold is not None else 0,
+                            hp_val=None,
+                            level_val=None,
+                            shop_cards=card_obs_list,
+                            sources={"shop": "ShopRecognizerV2", "gold": "GoldRecognizer"},
+                            confidences={"shop": round(shop_conf, 3), "gold": round(gold_conf, 3)},
+                            overall_confidence=round(overall_conf, 3)
+                        )
+                        gs = self.state_builder.build(obs)
+                        dec_res = self.adapter.decide(gs)
 
-                    self.recommended_action = dec_res.action
-                    self.is_flip = dec_res.is_flip
-                    scores = dec_res.scores or {}
-                    self.confidence = scores.get(dec_res.action, 0.85)
+                        self.recommended_action = dec_res.action
+                        self.is_flip = dec_res.is_flip
+                        self.scores = dec_res.scores or {}
+                        self.confidence = self.scores.get(dec_res.action, 0.0)
+                        self.reasons = dec_res.reasons or ["Evaluated by DecisionEngine"]
+                    else:
+                        self.recommended_action = "SEARCHING"
+                        self.reasons = ["Waiting for TFT Shop / Gold HUD on screen..."]
+                        self.scores = {}
 
                 except Exception:
                     pass
@@ -225,48 +213,53 @@ class MetaTFTTransparentOverlay:
     def _build_hud_elements(self):
         # ── 1. Top Center: AI Decision Engine Pill ────────────────────────────
         self.top_pill = tk.Frame(self.root, bg=PANEL_BG, bd=1, relief="solid", highlightbackground=PANEL_BORDER, highlightthickness=1)
-        self.top_pill.place(relx=0.5, y=25, anchor="n", width=440, height=52)
+        self.top_pill.place(relx=0.5, y=25, anchor="n", width=460, height=54)
 
-        pill_title = tk.Label(self.top_pill, text="⚡ TFT DECISION ENGINE", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold"))
+        pill_title = tk.Label(self.top_pill, text="⚡ TFT REAL-TIME DECISION ENGINE", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold"))
         pill_title.pack(anchor="w", padx=12, pady=(3, 0))
 
-        self.action_lbl = tk.Label(self.top_pill, text="🟢 RECOMMENDATION: SAVE GOLD", bg=PANEL_BG, fg=ACCENT_GREEN, font=("Segoe UI", 12, "bold"))
+        self.action_lbl = tk.Label(self.top_pill, text="⚪ SCANNING SCREEN...", bg=PANEL_BG, fg=TEXT_WHITE, font=("Segoe UI", 12, "bold"))
         self.action_lbl.pack(side="left", padx=12)
 
         self.calib_badge = tk.Label(self.top_pill, text="[CALIB_C ON]", bg="#1e293b", fg=TEXT_GOLD, font=("Segoe UI", 8, "bold"), padx=6, pady=2)
         self.calib_badge.pack(side="right", padx=12)
 
-        # ── 2. Left Sidebar: Meta Comp & Guide (MetaTFT Style) ─────────────────
+        # ── 2. Left Sidebar: Live Telemetry & Insights ────────────────────────
         self.sidebar = tk.Frame(self.root, bg=PANEL_BG, bd=1, relief="solid", highlightbackground=PANEL_BORDER, highlightthickness=1)
-        self.sidebar.place(x=20, y=100, width=280, height=480)
+        self.sidebar.place(x=20, y=100, width=280, height=380)
 
         sb_header = tk.Frame(self.sidebar, bg="#162030", height=32)
         sb_header.pack(fill="x")
-        sb_title = tk.Label(sb_header, text="🏆 SET 18 META ADVISOR", bg="#162030", fg=ACCENT_CYAN, font=("Segoe UI", 9, "bold"))
+        sb_title = tk.Label(sb_header, text="📊 ENGINE TELEMETRY", bg="#162030", fg=ACCENT_CYAN, font=("Segoe UI", 9, "bold"))
         sb_title.pack(side="left", padx=10, pady=6)
 
         self.fps_lbl = tk.Label(sb_header, text="M2 | 0.0 FPS", bg="#162030", fg=TEXT_MUTED, font=("Segoe UI", 8))
         self.fps_lbl.pack(side="right", padx=10)
 
-        # Dynamic Meta Units List (from Set 18 Normalized Database)
-        comp_frame = tk.Frame(self.sidebar, bg=PANEL_BG)
-        comp_frame.pack(fill="x", padx=10, pady=8)
+        # Status block
+        status_frame = tk.Frame(self.sidebar, bg=PANEL_BG)
+        status_frame.pack(fill="x", padx=10, pady=8)
 
-        tk.Label(comp_frame, text="DATABASE STATUS:", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8)).pack(anchor="w")
-        tk.Label(comp_frame, text=f"Set 18 ({len(self.worker.champs_list)} Champions Active)", bg=PANEL_BG, fg=TEXT_WHITE, font=("Segoe UI", 10, "bold")).pack(anchor="w", pady=(2, 4))
+        tk.Label(status_frame, text="VISION STATUS:", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold")).pack(anchor="w")
+        self.vision_status_lbl = tk.Label(status_frame, text="Waiting for TFT HUD...", bg=PANEL_BG, fg=TEXT_GOLD, font=("Segoe UI", 9))
+        self.vision_status_lbl.pack(anchor="w", pady=(2, 6))
 
-        tk.Label(self.sidebar, text="★ SET 18 CHAMPIONS IN DATABASE:", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold")).pack(anchor="w", padx=10, pady=(6, 2))
-        
-        # Display first top 5 champions from Set 18 database dynamically
-        self.top_units = self.worker.champs_list[:5]
-        for c in self.top_units:
-            name = c.get("name", "Unit")
-            cost = c.get("cost", 1)
-            c_box = tk.Frame(self.sidebar, bg="#131c2a", bd=1, relief="ridge")
-            c_box.pack(fill="x", padx=10, pady=2)
-            c_col = COST_COLORS.get(cost, "#fff")
-            tk.Label(c_box, text=f"{name} ({cost}G)", bg="#131c2a", fg=c_col, font=("Segoe UI", 9, "bold"), width=12, anchor="w").pack(side="left", padx=6, pady=3)
-            tk.Label(c_box, text=f"Cost {cost} Tier unit", bg="#131c2a", fg=TEXT_MUTED, font=("Segoe UI", 8)).pack(side="left", padx=2)
+        # Score Breakdown
+        tk.Label(self.sidebar, text="ACTION SCORES:", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold")).pack(anchor="w", padx=10, pady=(4, 2))
+        self.score_box = tk.Frame(self.sidebar, bg="#131c2a", bd=1, relief="ridge")
+        self.score_box.pack(fill="x", padx=10, pady=2)
+
+        self.score_save_lbl = tk.Label(self.score_box, text="SAVE_GOLD : --", bg="#131c2a", fg=ACCENT_GREEN, font=("Segoe UI", 9))
+        self.score_save_lbl.pack(anchor="w", padx=8, pady=2)
+        self.score_roll_lbl = tk.Label(self.score_box, text="ROLL      : --", bg="#131c2a", fg=ACCENT_PURPLE, font=("Segoe UI", 9))
+        self.score_roll_lbl.pack(anchor="w", padx=8, pady=2)
+        self.score_lvl_lbl = tk.Label(self.score_box, text="LEVEL_UP  : --", bg="#131c2a", fg=ACCENT_CYAN, font=("Segoe UI", 9))
+        self.score_lvl_lbl.pack(anchor="w", padx=8, pady=2)
+
+        # Rationale
+        tk.Label(self.sidebar, text="DECISION RATIONALE:", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 8, "bold")).pack(anchor="w", padx=10, pady=(8, 2))
+        self.reason_lbl = tk.Label(self.sidebar, text="Waiting for active frame...", bg=PANEL_BG, fg=TEXT_WHITE, font=("Segoe UI", 8), wraplength=250, justify="left")
+        self.reason_lbl.pack(anchor="w", padx=10, pady=2)
 
         # Bottom shortcut hint
         hint = tk.Label(self.sidebar, text="[Tab] Hide/Show | [M] Monitor | [Esc] Exit", bg=PANEL_BG, fg="#475569", font=("Segoe UI", 8))
@@ -278,7 +271,7 @@ class MetaTFTTransparentOverlay:
 
         shop_header = tk.Frame(self.shop_bar, bg="#162030", height=18)
         shop_header.pack(fill="x", side="top")
-        tk.Label(shop_header, text="🛒 RECOGNIZED SHOP & SMART BUY RECOMMENDATIONS", bg="#162030", fg=TEXT_MUTED, font=("Segoe UI", 7, "bold")).pack(side="left", padx=8)
+        tk.Label(shop_header, text="🛒 RECOGNIZED SHOP SLOTS (REAL-TIME VISION)", bg="#162030", fg=TEXT_MUTED, font=("Segoe UI", 7, "bold")).pack(side="left", padx=8)
 
         self.shop_slots_frame = tk.Frame(self.shop_bar, bg=PANEL_BG)
         self.shop_slots_frame.pack(fill="both", expand=True, padx=4, pady=2)
@@ -288,10 +281,10 @@ class MetaTFTTransparentOverlay:
             slot_box = tk.Frame(self.shop_slots_frame, bg="#161f2e", bd=1, relief="ridge")
             slot_box.pack(side="left", fill="both", expand=True, padx=3, pady=2)
 
-            name_lbl = tk.Label(slot_box, text="Scanning...", bg="#161f2e", fg=TEXT_WHITE, font=("Segoe UI", 9, "bold"))
+            name_lbl = tk.Label(slot_box, text="-", bg="#161f2e", fg=TEXT_MUTED, font=("Segoe UI", 9, "bold"))
             name_lbl.pack(pady=(2, 0))
 
-            tag_lbl = tk.Label(slot_box, text="-", bg="#161f2e", fg=TEXT_MUTED, font=("Segoe UI", 7))
+            tag_lbl = tk.Label(slot_box, text="Searching...", bg="#161f2e", fg=TEXT_MUTED, font=("Segoe UI", 7))
             tag_lbl.pack(pady=(0, 2))
 
             self.slot_widgets.append((slot_box, name_lbl, tag_lbl))
@@ -303,7 +296,7 @@ class MetaTFTTransparentOverlay:
         self.gold_val_lbl = tk.Label(self.gold_badge, text="💰 Gold: -- G", bg=PANEL_BG, fg=TEXT_GOLD, font=("Segoe UI", 12, "bold"))
         self.gold_val_lbl.pack(anchor="w", padx=10, pady=(6, 0))
 
-        self.interest_lbl = tk.Label(self.gold_badge, text="Interest: +0G (Next: +1G at 10G)", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 7))
+        self.interest_lbl = tk.Label(self.gold_badge, text="Searching Gold HUD...", bg=PANEL_BG, fg=TEXT_MUTED, font=("Segoe UI", 7))
         self.interest_lbl.pack(anchor="w", padx=10, pady=(0, 4))
 
     def toggle_sidebar(self):
@@ -311,7 +304,7 @@ class MetaTFTTransparentOverlay:
             self.sidebar.place_forget()
             self.panel_visible = False
         else:
-            self.sidebar.place(x=20, y=100, width=280, height=480)
+            self.sidebar.place(x=20, y=100, width=280, height=380)
             self.panel_visible = True
 
     def toggle_monitor(self):
@@ -327,11 +320,14 @@ class MetaTFTTransparentOverlay:
             act_text = "🟢 ACTION: SAVE GOLD (Hold for Interest)"
             act_color = ACCENT_GREEN
         elif act == "ROLL":
-            act_text = "🟣 ACTION: ROLL (Upgrade Board & Hit 3-Star)"
+            act_text = "🟣 ACTION: ROLL (Upgrade Board & Hit Units)"
             act_color = ACCENT_PURPLE
         elif act == "LEVEL_UP":
             act_text = "🟡 ACTION: LEVEL UP (Push Tempo & Win Streak)"
             act_color = ACCENT_CYAN
+        elif act == "SEARCHING":
+            act_text = "⚪ SEARCHING TFT SCREEN..."
+            act_color = TEXT_MUTED
         else:
             act_text = f"⚪ ACTION: {act}"
             act_color = TEXT_WHITE
@@ -343,7 +339,27 @@ class MetaTFTTransparentOverlay:
             bg=ACCENT_RED if flip else "#1e293b"
         )
 
-        # 2. Update Gold Badge & Interest
+        # 2. Update Sidebar Telemetry
+        recognized_count = sum(1 for c in self.worker.cards if c.get("status") == "REC")
+        if self.worker.gold is not None or recognized_count > 0:
+            self.vision_status_lbl.config(text=f"TFT Active (Shop: {recognized_count}/5)", fg=ACCENT_GREEN)
+        else:
+            self.vision_status_lbl.config(text="Searching for TFT HUD...", fg=TEXT_GOLD)
+
+        scores = self.worker.scores
+        if scores:
+            self.score_save_lbl.config(text=f"SAVE_GOLD : {scores.get('SAVE_GOLD', 0.0):.3f}")
+            self.score_roll_lbl.config(text=f"ROLL      : {scores.get('ROLL', 0.0):.3f}")
+            self.score_lvl_lbl.config(text=f"LEVEL_UP  : {scores.get('LEVEL_UP', 0.0):.3f}")
+        else:
+            self.score_save_lbl.config(text="SAVE_GOLD : --")
+            self.score_roll_lbl.config(text="ROLL      : --")
+            self.score_lvl_lbl.config(text="LEVEL_UP  : --")
+
+        if self.worker.reasons:
+            self.reason_lbl.config(text=self.worker.reasons[0])
+
+        # 3. Update Gold Badge & Interest
         g = self.worker.gold
         if g is not None:
             self.gold_val_lbl.config(text=f"💰 Gold: {g} G")
@@ -353,34 +369,34 @@ class MetaTFTTransparentOverlay:
             if diff > 0:
                 self.interest_lbl.config(text=f"Interest: +{interest}G (Need {diff}G for +{interest+1}G)")
             else:
-                self.interest_lbl.config(text=f"Interest: +{interest}G (Max Interest Reached)")
+                self.interest_lbl.config(text=f"Interest: +{interest}G (Max Interest)")
         else:
             self.gold_val_lbl.config(text="💰 Gold: -- G")
-            self.interest_lbl.config(text="Scanning Gold HUD...")
+            self.interest_lbl.config(text="Searching Gold HUD...")
 
-        # 3. Update Shop Slot Badges
+        # 4. Update Shop Slot Badges (Only show champions if real shop recognized!)
         for idx, card in enumerate(self.worker.cards[:5]):
             if idx < len(self.slot_widgets):
                 box, name_l, tag_l = self.slot_widgets[idx]
-                name = card.get("name", "-")
-                cost = card.get("cost", 1)
-                status = card.get("status", "UNK")
+                name = card.get("name")
+                cost = card.get("cost")
+                status = card.get("status", "NO_DETECTION")
 
                 if status == "EMP":
                     name_l.config(text="[EMPTY]", fg=TEXT_MUTED)
                     tag_l.config(text="Purchased", fg=TEXT_MUTED)
                     box.config(bg="#0b1017")
-                elif status == "REC":
+                elif status == "REC" and name:
                     cost_col = COST_COLORS.get(cost, TEXT_WHITE)
                     name_l.config(text=f"{name} ({cost}G)", fg=cost_col)
-                    tag_l.config(text="Available", fg=TEXT_MUTED)
-                    box.config(bg="#161f2e")
+                    tag_l.config(text=f"Conf: {card.get('conf', 0.0):.2f}", fg=ACCENT_CYAN)
+                    box.config(bg="#112238")
                 else:
                     name_l.config(text="-", fg=TEXT_MUTED)
                     tag_l.config(text="No Shop", fg=TEXT_MUTED)
                     box.config(bg="#161f2e")
 
-        # 4. Update FPS
+        # 5. Update FPS
         self.fps_lbl.config(text=f"M{self.worker.monitor_idx} | {self.worker.fps:.1f} FPS")
 
         # Re-schedule update
