@@ -5,7 +5,7 @@
 ## 1. Source Provenance
 - **Primary Source A**: `TFT_DDragon` (noxelisdev/TFT_DDragon @ `v18.1`, commit `b6398b1ff6cb5f36a724ded61638b74067b45301`)
 - **Primary Source B**: `CommunityDragon` (`raw.communitydragon.org/latest/cdragon/tft/`)
-- **Acquired At**: `2026-08-27T02:42:33Z`
+- **Acquired At**: `2026-08-27T02:50:33Z`
 
 ## 2. Core Entity Counts
 - **Set 18 Champions**: `64` (Cost 1: 12, Cost 2: 10, Cost 3: 12, Cost 4: 12, Cost 5: 18)
