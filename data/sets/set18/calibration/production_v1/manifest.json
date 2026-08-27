@@ -1,0 +1,35 @@
+{
+  "experiment_id": "PROD_CALIBRATION_INTEGRATION_V1_20260827",
+  "integration_version": "1.0.0",
+  "candidate_version": "CALIB_C_PROD_V1",
+  "default_mode": "OFF",
+  "supported_modes": [
+    "OFF",
+    "SHADOW",
+    "ON"
+  ],
+  "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+  "production_engine_hash_verified": true,
+  "metrics": {
+    "total_samples": 120,
+    "off_mode_flips": 0,
+    "shadow_mode_visible_flips": 0,
+    "on_mode_flips": 14,
+    "on_mode_flip_rate": 0.1167,
+    "recommendation_matrix": {
+      "SAVE_GOLD->SAVE_GOLD": 70,
+      "SAVE_GOLD->ROLL": 14,
+      "SAVE_GOLD->LEVEL_UP": 0,
+      "ROLL->ROLL": 34,
+      "ROLL->SAVE_GOLD": 0,
+      "ROLL->LEVEL_UP": 0,
+      "LEVEL_UP->LEVEL_UP": 2,
+      "LEVEL_UP->SAVE_GOLD": 0,
+      "LEVEL_UP->ROLL": 0
+    },
+    "mean_latency_ms": 0.155,
+    "p95_latency_ms": 0.202,
+    "gate_reproduction_100_percent": true
+  },
+  "final_gate_verdict": "PRODUCTION_CALIBRATION_READY"
+}

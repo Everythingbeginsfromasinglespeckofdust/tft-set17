@@ -1,0 +1,5 @@
+{
+  "rollback_on_source_mismatch_verified": true,
+  "rollback_on_exception_verified": true,
+  "production_continuity_guaranteed": true
+}

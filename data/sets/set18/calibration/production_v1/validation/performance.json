@@ -1,0 +1,5 @@
+{
+  "mean_latency_ms": 0.155,
+  "p95_latency_ms": 0.202,
+  "latency_goal_passed": true
+}

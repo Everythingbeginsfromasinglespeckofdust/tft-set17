@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "mode": "OFF",
+  "candidate_name": "CALIB_C",
+  "candidate_version": "CALIB_C_PROD_V1",
+  "source_dataset": "percentiles.json",
+  "source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+  "safety_guards": {
+    "min_vision_confidence": 0.8,
+    "auto_rollback_on_error": true
+  }
+}
