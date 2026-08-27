@@ -1,0 +1,57 @@
+{
+  "verdict": "RUNTIME_MISMATCH_FOUND",
+  "audit_timestamp": "2026-08-27T11:28:01",
+  "total_cases_audited": 5,
+  "execution_pipeline_audit": {
+    "entrypoint": "decision_overlay.py -> DecisionAnalysisManager",
+    "frame_source": "VideoFileFrameSource",
+    "shop_recognizer_invocations": "ACTIVE (ShopRecognizerV2 called on each analysis tick)",
+    "gold_recognizer_invocations": "ACTIVE (GoldRecognizer called on each analysis tick)",
+    "board_recognizer_invocations": "INACTIVE (Not integrated in DecisionAnalysisManager)",
+    "hp_level_recognizer_invocations": "INACTIVE (Default fallback used: HP=60, Level=7)"
+  },
+  "root_cause_analysis": {
+    "issue_1_empty_hex_bounding_boxes": {
+      "observed_phenomenon": "Bounding boxes appear on empty hexes with no units",
+      "root_cause_a": "overlay_verification_eda87ad9_300s_360s.mp4 was pre-rendered by output/video_analysis/render_overlay_video.py where board_recognizer.py used min_confidence=0.52 template matching, producing false-positive detections on arena floor textures. These boxes were burned directly into video pixels.",
+      "root_cause_b": "src/tft/vision/overlay_renderer.py has static ROI_COORDS['board'] bounding box (280, 180, 720, 320) which draws a large bounding box over the entire board area when ROI debug is enabled."
+    },
+    "issue_2_shop_recognition_discrepancy": {
+      "observed_phenomenon": "Shop recognition results look questionable or different from expected champions",
+      "root_cause": "ShopRecognizerV2 has min_confidence_threshold=0.10, so very low template scores (0.15~0.25) on small splash crops get labeled as RECOGNIZED instead of LOW_CONFIDENCE/UNKNOWN. Furthermore, OCR on 720p Korean font produces garbled text strings which fuzzy matcher picks up."
+    },
+    "issue_3_hardcoded_board_bench_fallback": {
+      "observed_phenomenon": "Decision Engine always receives Miss Fortune 2* on Board and Miss Fortune 1* on Bench",
+      "root_cause": "In src/tft/decision/analysis_manager.py line 107-108, board_units and bench_units are hardcoded placeholders because BoardRecognizer was not piped into DecisionAnalysisManager."
+    }
+  },
+  "evidence_classification": {
+    "Shop 100% metric": "FIXTURE_TEST (Computed on clean static cropped card fixtures, NOT on live 60fps video frames)",
+    "Board 100% metric": "FIXTURE_TEST (Computed on static board mock fixtures)",
+    "Gold Timeline": "REAL_FRAME_REPLAY (Verified with forward-carry on video OCR)",
+    "Action Rule Replay": "REAL_FRAME_REPLAY (Verified on recorded timestamp transitions)",
+    "Live Overlay Runtime": "RUNTIME_MISMATCH_FOUND (Pre-baked video artifact + hardcoded board units)"
+  },
+  "remediation_priorities": [
+    {
+      "priority": "P0",
+      "task": "Document all root causes and file locations clearly without obfuscation"
+    },
+    {
+      "priority": "P0",
+      "task": "Acknowledge RUNTIME_MISMATCH_FOUND verdict honestly in final report"
+    },
+    {
+      "priority": "P1",
+      "task": "Use clean raw video without pre-burned bounding boxes for video overlay"
+    },
+    {
+      "priority": "P1",
+      "task": "Connect real BoardRecognizer to DecisionAnalysisManager instead of hardcoded Miss Fortune fallback"
+    },
+    {
+      "priority": "P2",
+      "task": "Raise ShopRecognizerV2 confidence threshold (min_confidence >= 0.45) so low-confidence matches stay UNKNOWN instead of wrong champion names"
+    }
+  ]
+}
