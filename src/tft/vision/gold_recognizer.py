@@ -107,11 +107,16 @@ class GoldRecognizer:
         self,
         frame: np.ndarray,
         timestamp_sec: float = 0.0,
-        frame_index: int = 0
+        frame_index: int = 0,
+        gold_region: Optional[Any] = None
     ) -> GoldObservation:
-        """단일 프레임에서 골드 영역을 추출하고 OCR 및 도메인 검증 수행."""
-        crop = frame[self.roi["y1"]:self.roi["y2"], self.roi["x1"]:self.roi["x2"]]
-        if crop.size == 0:
+        """단일 프레임에서 골드 영역을 추출하고 OCR 및 도메인 검증 수행 (Adaptive Geometry 지원)."""
+        if gold_region is not None and hasattr(gold_region, "crop"):
+            crop = gold_region.crop(frame)
+        else:
+            crop = frame[self.roi["y1"]:self.roi["y2"], self.roi["x1"]:self.roi["x2"]]
+
+        if crop is None or crop.size == 0:
             return GoldObservation(
                 timestamp_sec=timestamp_sec,
                 frame_index=frame_index,

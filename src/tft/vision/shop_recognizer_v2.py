@@ -371,13 +371,33 @@ class ShopRecognizerV2:
             candidates=candidate_objs
         )
 
-    def recognize_shop(self, frame: np.ndarray, fast_mode: bool = False) -> List[RecognizedCard]:
-        """프레임 전체에서 5개 상점 슬롯을 일괄 인식."""
+    def recognize_shop(
+        self,
+        frame: np.ndarray,
+        fast_mode: bool = False,
+        slot_geometries: Optional[List[Any]] = None
+    ) -> List[RecognizedCard]:
+        """프레임 전체에서 5개 상점 슬롯을 일괄 인식 (Adaptive UI Geometry 지원)."""
+        if slot_geometries is not None and len(slot_geometries) > 0:
+            results: List[RecognizedCard] = []
+            for slot_geom in slot_geometries:
+                s_idx = getattr(slot_geom, "slot_index", len(results))
+                if getattr(slot_geom, "is_empty", False):
+                    results.append(RecognizedCard(slot_index=s_idx, status=SlotStatus.EMPTY, confidence=0.95))
+                    continue
+                crop = slot_geom.crop(frame) if hasattr(slot_geom, "crop") else None
+                if crop is None or crop.size == 0:
+                    results.append(RecognizedCard(slot_index=s_idx, status=SlotStatus.NO_DETECTION, confidence=0.0))
+                    continue
+                card_res = self.recognize_slot(crop, slot_index=s_idx, fast_mode=fast_mode)
+                results.append(card_res)
+            return results
+
         _, slot_crops = self.get_shop_crop_and_slots(frame)
         results: List[RecognizedCard] = []
 
         for i, crop in enumerate(slot_crops):
-            card_res = self.recognize_slot(crop, slot_index=i)
+            card_res = self.recognize_slot(crop, slot_index=i, fast_mode=fast_mode)
             results.append(card_res)
 
         return results

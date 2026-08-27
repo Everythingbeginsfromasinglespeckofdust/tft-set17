@@ -55,4 +55,12 @@ class Observation:
     sources: Dict[str, str] = field(default_factory=dict)
     confidences: Dict[str, float] = field(default_factory=dict)
     overall_confidence: float = 1.0
+    geometry_source: Optional[str] = None
+    geometry_confidence: Optional[float] = None
+    game_region: Optional[Dict[str, Any]] = None
+    shop_region: Optional[Dict[str, Any]] = None
+    shop_slot_regions: List[Dict[str, Any]] = field(default_factory=list)
+    gold_region: Optional[Dict[str, Any]] = None
+    board_region: Optional[Dict[str, Any]] = None
+    stage_region: Optional[Dict[str, Any]] = None
     metadata: Dict[str, Any] = field(default_factory=dict)

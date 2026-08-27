@@ -1,0 +1,10 @@
+{
+  "session_id": "GEOMETRY_REPLAY_001",
+  "source_type": "VIDEO_REPLAY",
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "video_sha256": "f31633b4747f13cf9d5ae9a929c9ff08b234d8b179209daa679f4ee7a279bbf6",
+  "total_checkpoints": 10,
+  "valid_geometries": 10,
+  "start_time_iso": "2026-08-27T08:03:48Z",
+  "end_time_iso": "2026-08-27T08:03:49Z"
+}

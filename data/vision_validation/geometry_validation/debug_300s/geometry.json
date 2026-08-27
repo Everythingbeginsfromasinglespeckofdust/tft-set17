@@ -1,0 +1,124 @@
+{
+  "status": "VALID",
+  "is_valid": true,
+  "confidence": 0.914,
+  "geometry_hash": "86b38388833cabc39a6f12383be42fd03ca581b78901333a51f0549e48d87531",
+  "game_region": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 720,
+    "confidence": 0.8,
+    "source": "GAME_REGION_DETECTOR",
+    "coord_space": "FRAME"
+  },
+  "shop_region": {
+    "x": 309,
+    "y": 589,
+    "width": 688,
+    "height": 124,
+    "confidence": 0.95,
+    "source": "SHOP_GEOMETRY_DETECTOR",
+    "coord_space": "CANONICAL"
+  },
+  "shop_slots": [
+    {
+      "x": 309,
+      "y": 589,
+      "width": 136,
+      "height": 124,
+      "confidence": 0.95,
+      "source": "SHOP_SLOT_DETECTOR",
+      "coord_space": "CANONICAL",
+      "slot_index": 0,
+      "is_empty": false,
+      "status": "OCCUPIED"
+    },
+    {
+      "x": 447,
+      "y": 589,
+      "width": 136,
+      "height": 124,
+      "confidence": 0.95,
+      "source": "SHOP_SLOT_DETECTOR",
+      "coord_space": "CANONICAL",
+      "slot_index": 1,
+      "is_empty": true,
+      "status": "EMPTY"
+    },
+    {
+      "x": 585,
+      "y": 589,
+      "width": 136,
+      "height": 124,
+      "confidence": 0.95,
+      "source": "SHOP_SLOT_DETECTOR",
+      "coord_space": "CANONICAL",
+      "slot_index": 2,
+      "is_empty": false,
+      "status": "OCCUPIED"
+    },
+    {
+      "x": 723,
+      "y": 589,
+      "width": 136,
+      "height": 124,
+      "confidence": 0.95,
+      "source": "SHOP_SLOT_DETECTOR",
+      "coord_space": "CANONICAL",
+      "slot_index": 3,
+      "is_empty": false,
+      "status": "OCCUPIED"
+    },
+    {
+      "x": 861,
+      "y": 589,
+      "width": 136,
+      "height": 124,
+      "confidence": 0.95,
+      "source": "SHOP_SLOT_DETECTOR",
+      "coord_space": "CANONICAL",
+      "slot_index": 4,
+      "is_empty": false,
+      "status": "OCCUPIED"
+    }
+  ],
+  "gold_region": {
+    "x": 450,
+    "y": 680,
+    "width": 70,
+    "height": 40,
+    "confidence": 0.95,
+    "source": "GOLD_GEOMETRY_DETECTOR",
+    "coord_space": "CANONICAL"
+  },
+  "stage_region": {
+    "x": 560,
+    "y": 10,
+    "width": 160,
+    "height": 40,
+    "confidence": 0.95,
+    "source": "STAGE_GEOMETRY_DETECTOR",
+    "coord_space": "CANONICAL"
+  },
+  "board_region": {
+    "x": 280,
+    "y": 180,
+    "width": 720,
+    "height": 360,
+    "confidence": 0.92,
+    "source": "BOARD_GEOMETRY_DETECTOR",
+    "coord_space": "CANONICAL"
+  },
+  "hex_grid_count": 28,
+  "empty_hex_count": 24,
+  "occupied_hex_count": 4,
+  "signals_detected": {
+    "aspect_ratio": 1.0,
+    "shop_structure": 1.0,
+    "gold_hud": 0.0
+  },
+  "fallback_used": false,
+  "source_type": "VIDEO_REPLAY",
+  "timestamp_sec": 300.0
+}
