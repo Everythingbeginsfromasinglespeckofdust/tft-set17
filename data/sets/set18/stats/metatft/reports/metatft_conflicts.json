@@ -1,0 +1,327 @@
+[
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Ahri",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Akali_AD",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Alistar",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Alune",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Amumu18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Aphelios",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Ashe",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Azir",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Brambleback18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Caitlyn",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Camille",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Cassiopeia",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Cinderling18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "CrimsonRaptor18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Diana",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Draven18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "ElderDragon",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Elise",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Ezreal",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Fiddlesticks18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "GnarSmall",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Gromp18_AP",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Hecarim",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Ivern",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Karma18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Kayle",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Kennen",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "KhaZix",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Kobuko",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "KogMaw18_AD",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Krug18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "LeBlanc",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Leona",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Lillia",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Lux18_Base",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Malphite",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Maokai",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "MasterYi_AD",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Morgana",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Murkwolf18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Nidalee18_AP",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Ornn",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Rakan",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Rammus",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "RekSai",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Rengar",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Scuttlecrab18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Sejuani",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Sentinel18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Sentry",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Sett",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Shen",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Sivir",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Soraka",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Taric18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Teemo",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Tristana",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Varus",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Veigar",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Vi18",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Warwick",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Xayah",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Yorick",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Yunara",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  },
+  {
+    "type": "CHAMPION_KEY_MISMATCH",
+    "metatft_unit": "Zyra",
+    "note": "MetaTFT unit key format variance (e.g. DA_18 prefix vs project key)"
+  }
+]

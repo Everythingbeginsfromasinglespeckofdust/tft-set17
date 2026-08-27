@@ -1,0 +1,54 @@
+{
+  "metrics": [
+    {
+      "name": "avg / avg_placement",
+      "type": "FLOAT",
+      "unit": "Placement (1.0 to 8.0)",
+      "denominator": "Games where entity was observed in final board state",
+      "population": "Global Ranked TFT match pool (Queue 1100)",
+      "interpretation": "OBSERVATIONAL_ASSOCIATION: Mean final placement achieved by players holding this unit/item/comp at game end",
+      "reliability_class": "B (Conditioning on game stage/star level not fully controlled)",
+      "causal_guard": "NOT a causal treatment effect. Does NOT prove the item causes placement improvement."
+    },
+    {
+      "name": "count / games",
+      "type": "INTEGER",
+      "unit": "Matches / Observed Instances",
+      "denominator": "Total match occurrences",
+      "population": "Tracked MetaTFT matches in current sampling window",
+      "interpretation": "Sample size (N) of the observed condition",
+      "reliability_class": "A (Clear integer frequency count)",
+      "causal_guard": "Frequency reflects meta popularity and ease of hitting, not standalone strength."
+    },
+    {
+      "name": "place_change",
+      "type": "FLOAT",
+      "unit": "Placement Delta (-4.0 to +4.0)",
+      "denominator": "Baseline cluster placement vs itemized cluster placement",
+      "population": "Specific comp cluster build variations",
+      "interpretation": "MetaTFT internal delta between base comp average placement and itemized variant average placement",
+      "reliability_class": "B (Specific to comp cluster context)",
+      "causal_guard": "Confounded by player economy and surviving rounds needed to craft 3 items."
+    },
+    {
+      "name": "score / adjusted_score",
+      "type": "FLOAT",
+      "unit": "MetaTFT Proprietary Utility Score",
+      "denominator": "Internal MetaTFT evaluation formula",
+      "population": "Comp build variants",
+      "interpretation": "MetaTFT internal heuristic ranking score for recommended builds",
+      "reliability_class": "C (Proprietary algorithm with undisclosed exact weights)",
+      "causal_guard": "DO NOT use as an empirical probability in DecisionEngine."
+    },
+    {
+      "name": "percentile",
+      "type": "FLOAT",
+      "unit": "Percentile Rank (0.0 to 100.0%)",
+      "denominator": "Player distribution across ranks / stages",
+      "population": "Ranked TFT ladder players",
+      "interpretation": "Relative positioning benchmarks per round/stage",
+      "reliability_class": "A (Standard statistical distribution)",
+      "causal_guard": "Benchmark descriptive metric for evaluating player standing."
+    }
+  ]
+}

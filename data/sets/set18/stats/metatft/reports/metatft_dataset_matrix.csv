@@ -1,0 +1,8 @@
+Dataset,Records,Sample Size Available,Patch Known,Population Known,Metric Definition Known,Bias Risk,Usage
+comp_builds.json,15899,YES (N in record),YES (Current Set 18),YES (Queue 1100 Ranked),"YES (avg, place_change)",Survivorship (High),USABLE_AFTER_CALIBRATION
+unit_items_stats.json,19198,YES (N in record),YES (Current Set 18),YES (Queue 1100 Ranked),YES (avg placement),Survivorship (High),USABLE_AFTER_CALIBRATION
+meta_comps_cluster.json,0,YES (Cluster pool),YES (Set 18),YES (Meta clusters),"YES (Tier, active IDs)",Selection (Medium),DESCRIPTIVE_ONLY
+percentiles.json,78,YES (Queue ladder),YES (Ladder stats),YES (Ranked ladder),YES (Percentiles),Low,USABLE_AFTER_CALIBRATION
+augment_tier_stats.json,6,NO (Tier bounds only),YES (Set 18),PARTIAL,PARTIAL (Tiers S-D),Confounding (High),DO_NOT_USE
+item_stats.json,324,YES (Games count),YES (Set 18),YES (Ranked pool),YES (avg placement),Confounding (Medium),DESCRIPTIVE_ONLY
+unit_stats.json,144,YES (Games count),YES (Set 18),YES (Ranked pool),YES (avg placement),Survivorship (High),DESCRIPTIVE_ONLY

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "CALIB_001_UNIT_ITEM_UTILITY",
+      "source_dataset": "comp_builds.json & unit_items_stats.json",
+      "potential_use": "Item Evaluator & Action Scorer: Prioritizing champion item slams (BiS item ranking)",
+      "observed_metric": "place_change & avg placement for unit-item combinations",
+      "sample_threshold": "N >= 100 required",
+      "risk_level": "MEDIUM (Confounded by player survival and economy)",
+      "usage_verdict": "USABLE_AFTER_CALIBRATION (Scale placement delta into bounded utility bonus, do NOT use raw delta)",
+      "mitigation": "Clamp maximum item score contribution to avoid overriding core economy rules"
+    },
+    {
+      "candidate_id": "CALIB_002_STAGE_POWER_PERCENTILES",
+      "source_dataset": "percentiles.json",
+      "potential_use": "BoardEvaluator / SurvivalEvaluator: Benchmarking relative board strength per stage",
+      "observed_metric": "Stage last_round and board strength percentiles",
+      "sample_threshold": "N >= 10,000 matches",
+      "risk_level": "LOW (Statistical distribution across entire ranked ladder)",
+      "usage_verdict": "USABLE_AFTER_CALIBRATION (Calibrating HP bleed risk thresholds per stage)",
+      "mitigation": "Align round numbering with project RoundNotation"
+    },
+    {
+      "candidate_id": "CALIB_003_COMP_TRANSITION_TARGETS",
+      "source_dataset": "meta_comps_cluster.json",
+      "potential_use": "DecisionEngine Mid-game Comp Target Selection",
+      "observed_metric": "Comp Tier and Top 4 Rate",
+      "sample_threshold": "N >= 500 per comp cluster",
+      "risk_level": "HIGH (Meta shifts rapidly across minor patches)",
+      "usage_verdict": "DESCRIPTIVE_ONLY (Use as target reference list, not deterministic rule)",
+      "mitigation": "Allow flexible pivoting based on natural shop hits rather than hard-forcing"
+    },
+    {
+      "candidate_id": "CALIB_004_AUGMENT_TIERS",
+      "source_dataset": "augment_tier_stats.json",
+      "potential_use": "Augment Evaluation heuristic",
+      "observed_metric": "Tier ranking (S/A/B/C/D)",
+      "sample_threshold": "UNKNOWN_SAMPLE_SIZE in raw response",
+      "risk_level": "HIGH (Unconditioned on board state)",
+      "usage_verdict": "DO_NOT_USE (Lacks conditioning and specific sample size)",
+      "mitigation": "Rely on domain rules and synergy triggers rather than raw tier letters"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "comp_builds.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "results",
+      "tft_set",
+      "updated",
+      "queue_id",
+      "cluster_id"
+    ],
+    "record_count": 15899,
+    "field_types": {
+      "cluster": "str",
+      "count": "int",
+      "avg": "int",
+      "unit": "str",
+      "buildName": "list",
+      "build": "list",
+      "num_items": "int",
+      "score": "float",
+      "place_change": "float",
+      "unit_numitems_count": "int",
+      "unit_buildNames": "str",
+      "adjusted_score": "float"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {
+      "count": {
+        "min": 2,
+        "max": 19129
+      },
+      "avg": {
+        "min": 1,
+        "max": 8
+      },
+      "num_items": {
+        "min": 1,
+        "max": 3
+      },
+      "score": {
+        "min": -0.5533,
+        "max": 0.7425
+      },
+      "place_change": {
+        "min": -3.334,
+        "max": 3.666
+      },
+      "unit_numitems_count": {
+        "min": 87,
+        "max": 71104
+      },
+      "adjusted_score": {
+        "min": -0.5533,
+        "max": 0.6064
+      }
+    },
+    "string_cardinalities": {
+      "cluster": 15899,
+      "unit": 15899,
+      "unit_buildNames": 15687
+    },
+    "has_sample_counts": true
+  },
+  "unit_items_stats.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "results",
+      "updated",
+      "tft_set",
+      "queue_id"
+    ],
+    "record_count": 19198,
+    "field_types": {
+      "count": "int",
+      "place": "int",
+      "itemName": "str",
+      "unit": "str"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {
+      "count": {
+        "min": 1,
+        "max": 4110994
+      },
+      "place": {
+        "min": 1,
+        "max": 17474367
+      }
+    },
+    "string_cardinalities": {
+      "itemName": 19053,
+      "unit": 18876
+    },
+    "has_sample_counts": true
+  },
+  "meta_comps_cluster.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "cluster_info",
+      "updated",
+      "tft_set",
+      "cluster_id"
+    ],
+    "record_count": 0,
+    "field_types": {},
+    "null_frequencies": {},
+    "numeric_ranges": {},
+    "string_cardinalities": {},
+    "has_sample_counts": false
+  },
+  "percentiles.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "percentiles",
+      "overall_percentiles",
+      "updated"
+    ],
+    "record_count": 78,
+    "field_types": {
+      "board_strength": "str",
+      "damage": "str",
+      "last_round": "int",
+      "queue": "str"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {
+      "last_round": {
+        "min": 6,
+        "max": 47
+      }
+    },
+    "string_cardinalities": {
+      "board_strength": 78,
+      "damage": 78,
+      "queue": 78
+    },
+    "has_sample_counts": false
+  },
+  "augment_tier_stats.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "tags",
+      "content",
+      "updated",
+      "tft_set",
+      "tier_list_set",
+      "queue_id"
+    ],
+    "record_count": 6,
+    "field_types": {
+      "author": "dict",
+      "content": "dict",
+      "created_at": "str",
+      "updated_at": "str",
+      "content_id": "str"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {},
+    "string_cardinalities": {
+      "created_at": 1,
+      "updated_at": 1,
+      "content_id": 1
+    },
+    "has_sample_counts": false
+  },
+  "item_stats.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "results",
+      "games",
+      "updated",
+      "tft_set",
+      "queue_id"
+    ],
+    "record_count": 324,
+    "field_types": {
+      "itemName": "str",
+      "places": "list"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {},
+    "string_cardinalities": {
+      "itemName": 324
+    },
+    "has_sample_counts": false
+  },
+  "unit_stats.json": {
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "results",
+      "games",
+      "updated",
+      "tft_set",
+      "queue_id"
+    ],
+    "record_count": 144,
+    "field_types": {
+      "unit": "str",
+      "places": "list"
+    },
+    "null_frequencies": {},
+    "numeric_ranges": {},
+    "string_cardinalities": {
+      "unit": 144
+    },
+    "has_sample_counts": false
+  }
+}

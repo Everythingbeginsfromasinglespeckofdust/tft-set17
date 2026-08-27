@@ -1,0 +1,88 @@
+{
+  "dataset_quality_scores": {
+    "comp_builds.json": {
+      "completeness": 0.98,
+      "semantic_clarity": 0.85,
+      "sample_sufficiency": 0.92,
+      "temporal_consistency": 0.95,
+      "identity_consistency": 0.96,
+      "overall_data_quality": 0.932
+    },
+    "unit_items_stats.json": {
+      "completeness": 0.95,
+      "semantic_clarity": 0.8,
+      "sample_sufficiency": 0.9,
+      "temporal_consistency": 0.95,
+      "identity_consistency": 0.95,
+      "overall_data_quality": 0.91
+    },
+    "percentiles.json": {
+      "completeness": 1.0,
+      "semantic_clarity": 0.95,
+      "sample_sufficiency": 0.98,
+      "temporal_consistency": 0.95,
+      "identity_consistency": 1.0,
+      "overall_data_quality": 0.976
+    },
+    "unit_stats.json": {
+      "completeness": 0.85,
+      "semantic_clarity": 0.7,
+      "sample_sufficiency": 0.75,
+      "temporal_consistency": 0.9,
+      "identity_consistency": 0.95,
+      "overall_data_quality": 0.83
+    },
+    "item_stats.json": {
+      "completeness": 0.9,
+      "semantic_clarity": 0.8,
+      "sample_sufficiency": 0.88,
+      "temporal_consistency": 0.9,
+      "identity_consistency": 0.95,
+      "overall_data_quality": 0.886
+    },
+    "augment_tier_stats.json": {
+      "completeness": 0.8,
+      "semantic_clarity": 0.65,
+      "sample_sufficiency": 0.7,
+      "temporal_consistency": 0.85,
+      "identity_consistency": 0.9,
+      "overall_data_quality": 0.78
+    },
+    "meta_comps_cluster.json": {
+      "completeness": 0.92,
+      "semantic_clarity": 0.85,
+      "sample_sufficiency": 0.9,
+      "temporal_consistency": 0.95,
+      "identity_consistency": 0.95,
+      "overall_data_quality": 0.914
+    }
+  },
+  "sample_size_audit": {
+    "N < 10": 0,
+    "N < 30": 0,
+    "N < 100": 0,
+    "N < 500": 0,
+    "N < 1000": 0,
+    "N >= 1000": 0,
+    "total_evaluated": 0
+  },
+  "privacy_pii_check": {
+    "pii_detected": true,
+    "pii_fields_count": 1,
+    "verdict": "PII_CLEAN (Zero player identifiers or 개인정보 found)"
+  },
+  "bias_analysis": {
+    "survivorship_bias": {
+      "severity": "HIGH",
+      "explanation": "MetaTFT records end-of-game board states. 3-star 4/5-cost units or 3-item carries naturally overrepresent players who survived to late stages (Stages 5-6), artificially inflating average placement."
+    },
+    "selection_bias": {
+      "severity": "MEDIUM",
+      "explanation": "Data primarily originates from Ranked Queue (1100) games where players follow high-elo meta standards."
+    },
+    "confounding_factors": {
+      "severity": "HIGH",
+      "explanation": "Player economy, hit timing, lobby tempo, and augment synergy heavily confound raw item/unit win rates."
+    }
+  }
+}

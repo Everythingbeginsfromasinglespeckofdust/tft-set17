@@ -1,0 +1,71 @@
+{
+  "retrieved_at": "2026-08-27T04:33:37Z",
+  "base_domains": [
+    "https://api-hc.metatft.com",
+    "https://data.metatft.com"
+  ],
+  "client_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Origin": "https://www.metatft.com",
+    "Referer": "https://www.metatft.com/"
+  },
+  "endpoints": {
+    "comp_builds.json": {
+      "url": "https://api-hc.metatft.com/tft-comps-api/comp_builds",
+      "default_query_params": {
+        "queue": "1100 (Ranked TFT)",
+        "patch": "current",
+        "region": "global_aggregate"
+      },
+      "description": "Cluster comp builds with 1/2/3 item combinations, place_change and scores",
+      "set_identifier": "DA_18_ units present (Set 18)",
+      "aggregation_level": "PRE_AGGREGATED_CLUSTER_BUILDS"
+    },
+    "unit_items_stats.json": {
+      "url": "https://api-hc.metatft.com/tft-comps-api/unit_items",
+      "default_query_params": {
+        "queue": "1100",
+        "patch": "current"
+      },
+      "description": "Champion item synergy combinations, sample count, and average placement",
+      "set_identifier": "DA_18_ units present (Set 18)",
+      "aggregation_level": "PRE_AGGREGATED_CHAMPION_ITEM_PAIRS"
+    },
+    "meta_comps_cluster.json": {
+      "url": "https://api-hc.metatft.com/tft-comps-api/latest_cluster_info",
+      "default_query_params": {},
+      "description": "Top tier comps cluster info and active cluster IDs",
+      "set_identifier": "Set 18 cluster info",
+      "aggregation_level": "PRE_AGGREGATED_COMP_TIERS"
+    },
+    "percentiles.json": {
+      "url": "https://api-hc.metatft.com/tft-stat-api/percentiles",
+      "default_query_params": {},
+      "description": "Queue placement & stage last_round percentiles",
+      "set_identifier": "Queue 1100/1090/1110/1130 distributions",
+      "aggregation_level": "PRE_AGGREGATED_PERCENTILES"
+    },
+    "augment_tier_stats.json": {
+      "url": "https://api-hc.metatft.com/tft-stat-api/augments_tiers",
+      "default_query_params": {},
+      "description": "Augment tier categorizations and statistical bounds",
+      "set_identifier": "Set 18 Augments and Global Augments",
+      "aggregation_level": "PRE_AGGREGATED_AUGMENT_TIERS"
+    },
+    "item_stats.json": {
+      "url": "https://api-hc.metatft.com/tft-stat-api/items",
+      "default_query_params": {},
+      "description": "Item global win rates, average placement, and frequencies",
+      "set_identifier": "Set 18 items & standard item pool",
+      "aggregation_level": "PRE_AGGREGATED_ITEM_STATS"
+    },
+    "unit_stats.json": {
+      "url": "https://api-hc.metatft.com/tft-stat-api/units",
+      "default_query_params": {},
+      "description": "Unit global win rates, average placement, and 144 unit evaluations",
+      "set_identifier": "DA_18_ unit IDs (Set 18)",
+      "aggregation_level": "PRE_AGGREGATED_UNIT_STATS"
+    }
+  },
+  "collection_completeness": "PARTIAL_STATISTICS_COLLECTION (7 primary endpoints out of 24 discovered backend endpoints)"
+}
