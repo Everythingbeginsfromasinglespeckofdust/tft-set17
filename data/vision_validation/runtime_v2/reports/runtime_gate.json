@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "framework": "Evidence-First Runtime Validation v2",
+  "status": "REAL_RUNTIME_UNVERIFIABLE",
+  "status_reason": "No active TFT client window detected. Synthetic fallback blocked by architecture.",
+  "pytest_results": "591/591 PASSED",
+  "unit_tests_added": 53,
+  "protected_core_diff": "0 lines changed",
+  "architecture_guarantees": [
+    "No raw frame -> Checkpoint INVALID",
+    "No human key event -> Checkpoint INVALID",
+    "Human label derived exclusively from keyboard events (no prediction copy)",
+    "Independent domain denominators (Shop, Gold, Board, Action, State)",
+    "Zero synthetic fallback in REAL_LIVE mode"
+  ]
+}
