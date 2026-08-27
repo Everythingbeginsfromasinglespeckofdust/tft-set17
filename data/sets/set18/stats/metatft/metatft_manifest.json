@@ -1,0 +1,56 @@
+{
+  "source": "MetaTFT (api-hc.metatft.com)",
+  "set_id": 18,
+  "retrieved_at": "2026-08-27T04:33:37Z",
+  "datasets": {
+    "meta_comps_cluster": {
+      "filename": "meta_comps_cluster.json",
+      "description": "메타 덱 클러스터 및 티어 정보",
+      "url": "https://api-hc.metatft.com/tft-comps-api/latest_cluster_info",
+      "size_bytes": 331887,
+      "sha256": "7e67793c5a12d12051fc118ff5aff061d4a2c35e145a5d889c88bfaae6dde0aa"
+    },
+    "comp_builds": {
+      "filename": "comp_builds.json",
+      "description": "덱별 추천 아이템 빌드 및 배치 통계",
+      "url": "https://api-hc.metatft.com/tft-comps-api/comp_builds",
+      "size_bytes": 4403114,
+      "sha256": "8e730e8c761e414780c8e134787162cb05743754b2ab6d03cca3b15216c75dc8"
+    },
+    "unit_items_stats": {
+      "filename": "unit_items_stats.json",
+      "description": "챔피언별 아이템 장착 시너지 및 등수 변동 통계",
+      "url": "https://api-hc.metatft.com/tft-comps-api/unit_items",
+      "size_bytes": 1659998,
+      "sha256": "8da94d9ac600c0822f0f4b3cd46931609684af2ec9a08c9d6437e22c4620b025"
+    },
+    "unit_stats": {
+      "filename": "unit_stats.json",
+      "description": "챔피언별 평균 등수, 승률, 픽률 통계",
+      "url": "https://api-hc.metatft.com/tft-stat-api/units",
+      "size_bytes": 12305,
+      "sha256": "e8fd5a35cc8cd6c4dde40a09a9a16699c0cdd251fbc7b22dc8344b841861bf9f"
+    },
+    "item_stats": {
+      "filename": "item_stats.json",
+      "description": "아이템별 평균 등수, 승률, 픽률 통계",
+      "url": "https://api-hc.metatft.com/tft-stat-api/items",
+      "size_bytes": 31271,
+      "sha256": "b2e3cd33fe56bcc4b224f7cfeaab768b504949350a70b4ba84ec2e550d7dc404"
+    },
+    "augment_tier_stats": {
+      "filename": "augment_tier_stats.json",
+      "description": "증강체 티어 및 평균 등수 통계",
+      "url": "https://api-hc.metatft.com/tft-stat-api/augments_tiers",
+      "size_bytes": 60407,
+      "sha256": "fc128f60cef838605393e69f325584c5f0acd4c9c6df027d6fa1f9d02fb512ee"
+    },
+    "percentiles": {
+      "filename": "percentiles.json",
+      "description": "티어별 MMR 및 순위 백분위 분포",
+      "url": "https://api-hc.metatft.com/tft-stat-api/percentiles",
+      "size_bytes": 91454,
+      "sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752"
+    }
+  }
+}
