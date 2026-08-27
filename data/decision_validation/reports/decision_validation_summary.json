@@ -1,0 +1,56 @@
+{
+  "total_decision_records": 20,
+  "total_human_reviews": 20,
+  "blind_reviews_count": 10,
+  "behavioral_agreement": {
+    "overall_agreement_rate": 0.95,
+    "matches": 19,
+    "total": 20,
+    "by_action": {
+      "ROLL": {
+        "total": 0,
+        "matches": 0,
+        "agreement_rate": 0.0
+      },
+      "LEVEL_UP": {
+        "total": 0,
+        "matches": 0,
+        "agreement_rate": 0.0
+      },
+      "SAVE_GOLD": {
+        "total": 20,
+        "matches": 19,
+        "agreement_rate": 0.95
+      }
+    }
+  },
+  "human_preference_agreement": {
+    "overall_agreement_rate": 0.7,
+    "matches": 7,
+    "total_blind_reviews": 10
+  },
+  "human_judgments": {
+    "REASONABLE": 16,
+    "QUESTIONABLE": 4,
+    "WRONG": 0,
+    "UNKNOWN": 0
+  },
+  "failure_taxonomy": {
+    "BAD_STATE": 0,
+    "BAD_ECONOMIC_EVALUATION": 0,
+    "BAD_BOARD_EVALUATION": 0,
+    "BAD_UPGRADE_EVALUATION": 0,
+    "FEASIBILITY_ERROR": 0,
+    "SIMULATION_ERROR": 0,
+    "WEIGHTING_QUESTION": 0,
+    "EXPLANATION_ERROR": 0,
+    "UNKNOWN": 0
+  },
+  "outcome_association": {
+    "note": "Descriptive non-causal associations between recommendation and subsequent rounds",
+    "avg_hp_change_3_rounds": -12.4,
+    "avg_gold_change_3_rounds": 8.2,
+    "avg_final_placement": 2.8
+  },
+  "final_gate_verdict": "DECISION_VALIDATION_READY"
+}
