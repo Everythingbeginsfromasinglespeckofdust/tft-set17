@@ -1,0 +1,21 @@
+{
+  "session_id": "SESSION_A_SMOKE",
+  "timestamp_sec": 315.0,
+  "error_reason": "ACTION_ERROR",
+  "current_observation": {
+    "gold": 38,
+    "hp": 60,
+    "shop": [
+      "Zoe",
+      "Zac"
+    ]
+  },
+  "state_diff": {
+    "gold_delta": 0,
+    "shop_slots_changed": 2
+  },
+  "action_event": {
+    "action_type": "ROLL",
+    "confidence": 0.9
+  }
+}

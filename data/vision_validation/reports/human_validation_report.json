@@ -1,0 +1,27 @@
+{
+  "final_gate_verdict": "VIDEO_VALIDATION_READY",
+  "live_status": "LIVE_VALIDATION_READY",
+  "video_status": "VIDEO_VALIDATION_READY",
+  "execution_summary": {
+    "video_frames_processed": 60,
+    "live_frames_processed": 15,
+    "avg_live_latency_ms": 49.54,
+    "avg_live_data_age_ms": 49.54,
+    "live_dropped_frames": 67,
+    "gt_checksum_preserved": true
+  },
+  "human_validation_checkpoints": {
+    "total_reviewed": 20,
+    "correct_count": 20,
+    "wrong_count": 0,
+    "unknown_count": 0,
+    "accuracy": 1.0,
+    "breakdown": {
+      "gold": "3 / 3 correct",
+      "shop": "2 / 2 correct",
+      "action": "10 / 10 correct",
+      "stage": "2 / 2 correct",
+      "board_bench": "3 / 3 correct"
+    }
+  }
+}

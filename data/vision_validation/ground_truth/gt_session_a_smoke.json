@@ -1,0 +1,20 @@
+{
+  "session_id": "SESSION_A_SMOKE",
+  "total_verified_samples": 2,
+  "events": [
+    {
+      "timestamp_sec": 312.5,
+      "target_type": "ACTION",
+      "verified_value": "ROLL",
+      "human_verdict": "CORRECT",
+      "notes": null
+    },
+    {
+      "timestamp_sec": 320.0,
+      "target_type": "SHOP_SLOT",
+      "verified_value": "Zac",
+      "human_verdict": "EDITED",
+      "notes": null
+    }
+  ]
+}
