@@ -1,0 +1,898 @@
+[
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Akali_AD",
+    "character_id": "DA_18_Akali_AD",
+    "name": "Akali",
+    "name_ko": "아칼리",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Akali_splash_centered_2.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Akali_AD"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Camille",
+    "character_id": "DA_18_Camille",
+    "name": "Camille",
+    "name_ko": "카밀",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Camille_splash_centered_2.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Camille"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Karma18",
+    "character_id": "DA_Karma18",
+    "name": "Karma",
+    "name_ko": "카르마",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Karma_splash_centered_70.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Karma18"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kobuko",
+    "character_id": "DA_18_Kobuko",
+    "name": "Kobuko",
+    "name_ko": "코부코",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Kobuko_splash_centered_2.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kobuko"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Leona",
+    "character_id": "DA_18_Leona",
+    "name": "Leona",
+    "name_ko": "레오나",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Leona_splash_centered_10.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Leona"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ornn",
+    "character_id": "DA_18_Ornn",
+    "name": "Ornn",
+    "name_ko": "오른",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Ornn_splash_centered_2.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ornn"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rakan",
+    "character_id": "DA_18_Rakan",
+    "name": "Rakan",
+    "name_ko": "라칸",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Rakan_splash_centered_9.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rakan"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_RekSai",
+    "character_id": "DA_18_RekSai",
+    "name": "Rek'Sai",
+    "name_ko": "렉사이",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_RekSai_splash_centered_17.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_RekSai"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Varus",
+    "character_id": "DA_18_Varus",
+    "name": "Varus",
+    "name_ko": "바루스",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Varus_splash_centered_9.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Varus"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Veigar",
+    "character_id": "DA_18_Veigar",
+    "name": "Veigar",
+    "name_ko": "베이가",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Veigar_splash_centered_13.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Veigar"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Xayah",
+    "character_id": "DA_18_Xayah",
+    "name": "Xayah",
+    "name_ko": "자야",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Xayah_splash_centered_8.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Xayah"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Yorick",
+    "character_id": "DA_18_Yorick",
+    "name": "Yorick",
+    "name_ko": "요릭",
+    "cost": 1,
+    "traits": [],
+    "splash_art": "TFT18_Yorick_splash_centered_30.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Yorick"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Alistar",
+    "character_id": "DA_18_Alistar",
+    "name": "Alistar",
+    "name_ko": "알리스타",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Alistar_splash_centered_40.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Alistar"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Caitlyn",
+    "character_id": "DA_18_Caitlyn",
+    "name": "Caitlyn",
+    "name_ko": "케이틀린",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Caitlyn_splash_centered_30.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Caitlyn"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Elise",
+    "character_id": "DA_18_Elise",
+    "name": "Elise",
+    "name_ko": "엘리스",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Elise_splash_centered_24.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Elise"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kayle",
+    "character_id": "DA_18_Kayle",
+    "name": "Kayle",
+    "name_ko": "케일",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Kayle_splash_centered_42.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kayle"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_LeBlanc",
+    "character_id": "DA_18_LeBlanc",
+    "name": "LeBlanc",
+    "name_ko": "르블랑",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Leblanc_splash_centered_5.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_LeBlanc"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sejuani",
+    "character_id": "DA_18_Sejuani",
+    "name": "Sejuani",
+    "name_ko": "세주아니",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Sejuani_splash_centered_26.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sejuani"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Shen",
+    "character_id": "DA_18_Shen",
+    "name": "Shen",
+    "name_ko": "쉔",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Shen_splash_centered_16.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Shen"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Teemo",
+    "character_id": "DA_18_Teemo",
+    "name": "Teemo",
+    "name_ko": "티모",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Teemo_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Teemo"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Warwick",
+    "character_id": "DA_18_Warwick",
+    "name": "Warwick",
+    "name_ko": "워윅",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Warwick_splash_centered_35.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Warwick"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Yunara",
+    "character_id": "DA_18_Yunara",
+    "name": "Yunara",
+    "name_ko": "유나라",
+    "cost": 2,
+    "traits": [],
+    "splash_art": "TFT18_Yunara_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Yunara"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Azir",
+    "character_id": "DA_18_Azir",
+    "name": "Azir",
+    "name_ko": "아지르",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Azir_splash_centered_5.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Azir"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Cassiopeia",
+    "character_id": "DA_18_Cassiopeia",
+    "name": "Cassiopeia",
+    "name_ko": "카시오페아",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Cassiopeia_splash_centered_18.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Cassiopeia"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Diana",
+    "character_id": "DA_18_Diana",
+    "name": "Diana",
+    "name_ko": "다이애나",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Diana_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Diana"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Fiddlesticks18",
+    "character_id": "DA_Fiddlesticks18",
+    "name": "Fiddlesticks",
+    "name_ko": "피들스틱",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Fiddlesticks_splash_centered_46.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Fiddlesticks18"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Hecarim",
+    "character_id": "DA_18_Hecarim",
+    "name": "Hecarim",
+    "name_ko": "헤카림",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Hecarim_splash_centered_5.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Hecarim"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_KhaZix",
+    "character_id": "DA_18_KhaZix",
+    "name": "Kha'Zix",
+    "name_ko": "카직스",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_KhaZix_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_KhaZix"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_KogMaw18_AD",
+    "character_id": "DA_KogMaw18_AD",
+    "name": "Kog'Maw",
+    "name_ko": "코그모",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_KogMaw_splash_centered_3.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_KogMaw18_AD"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_MasterYi_AD",
+    "character_id": "DA_18_MasterYi_AD",
+    "name": "Master Yi",
+    "name_ko": "마스터 이",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_MasterYi_splash_centered_52.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_MasterYi_AD"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rammus",
+    "character_id": "DA_18_Rammus",
+    "name": "Rammus",
+    "name_ko": "람머스",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Rammus_splash_centered_26.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rammus"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rengar",
+    "character_id": "DA_18_Rengar",
+    "name": "Rengar",
+    "name_ko": "렝가",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Rengar_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Rengar"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Tristana",
+    "character_id": "DA_18_Tristana",
+    "name": "Tristana",
+    "name_ko": "트리스타나",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Tristana_splash_centered_61.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Tristana"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Vi18",
+    "character_id": "DA_Vi18",
+    "name": "Vi",
+    "name_ko": "바이",
+    "cost": 3,
+    "traits": [],
+    "splash_art": "TFT18_Vi_splash_centered_39.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Vi18"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ahri",
+    "character_id": "DA_18_Ahri",
+    "name": "Ahri",
+    "name_ko": "아리",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Ahri_splash_centered_27.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ahri"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Amumu18",
+    "character_id": "DA_Amumu18",
+    "name": "Amumu",
+    "name_ko": "아무무",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Amumu_splash_centered_17.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Amumu18"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Aphelios",
+    "character_id": "DA_18_Aphelios",
+    "name": "Aphelios",
+    "name_ko": "아펠리오스",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Aphelios_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Aphelios"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ezreal",
+    "character_id": "DA_18_Ezreal",
+    "name": "Ezreal",
+    "name_ko": "이즈리얼",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Ezreal_splash_centered_1.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ezreal"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lillia",
+    "character_id": "DA_18_Lillia",
+    "name": "Lillia",
+    "name_ko": "릴리아",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Lillia_splash_centered_28.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lillia"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Malphite",
+    "character_id": "DA_18_Malphite",
+    "name": "Malphite",
+    "name_ko": "말파이트",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Malphite_splash_centered_27.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Malphite"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Morgana",
+    "character_id": "DA_18_Morgana",
+    "name": "Morgana",
+    "name_ko": "모르가나",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Morgana_splash_centered_26.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Morgana"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Nidalee18_AP",
+    "character_id": "DA_Nidalee18_AP",
+    "name": "Nidalee",
+    "name_ko": "니달리",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Nidalee_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Nidalee18_AP"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sett",
+    "character_id": "DA_18_Sett",
+    "name": "Sett",
+    "name_ko": "세트",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Sett_splash_centered_38.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sett"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sivir",
+    "character_id": "DA_18_Sivir",
+    "name": "Sivir",
+    "name_ko": "시비르",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Sivir_splash_centered_61.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Sivir"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Soraka",
+    "character_id": "DA_18_Soraka",
+    "name": "Soraka",
+    "name_ko": "소라카",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Soraka_splash_centered_53.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Soraka"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Zyra",
+    "character_id": "DA_18_Zyra",
+    "name": "Zyra",
+    "name_ko": "자이라",
+    "cost": 4,
+    "traits": [],
+    "splash_art": "TFT18_Zyra_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Zyra"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Alune",
+    "character_id": "DA_18_Alune",
+    "name": "Alune",
+    "name_ko": "알룬",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Alune_splash_centered_15.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Alune"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ashe",
+    "character_id": "DA_18_Ashe",
+    "name": "Ashe",
+    "name_ko": "애쉬",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Ashe_splash_centered_76.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ashe"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Draven18",
+    "character_id": "DA_Draven18",
+    "name": "Draven",
+    "name_ko": "드레이븐",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Draven_splash_centered_5.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Draven18"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_GnarSmall",
+    "character_id": "DA_18_GnarSmall",
+    "name": "Gnar",
+    "name_ko": "나르",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Gnar_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_GnarSmall"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ivern",
+    "character_id": "DA_18_Ivern",
+    "name": "Ivern",
+    "name_ko": "아이번",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Ivern_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Ivern"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kennen",
+    "character_id": "DA_18_Kennen",
+    "name": "Kennen",
+    "name_ko": "케넨",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Kennen_splash_centered_8.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Kennen"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Base",
+    "character_id": "DA_Lux18_Base",
+    "name": "Lux",
+    "name_ko": "럭스",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Base"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Blackthorn",
+    "character_id": "DA_Lux18_Blackthorn",
+    "name": "Lux (Blackthorn)",
+    "name_ko": "럭스 (검은 가시)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Blackthorn"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Blossom",
+    "character_id": "DA_Lux18_Blossom",
+    "name": "Lux (Blossom)",
+    "name_ko": "럭스 (개화)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Lux18_Blossom"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Coven",
+    "character_id": "DA_18_Lux_Coven",
+    "name": "Lux (Coven)",
+    "name_ko": "럭스 (악의 여단)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Coven"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Elderwood",
+    "character_id": "DA_18_Lux_Elderwood",
+    "name": "Lux (Elderwood)",
+    "name_ko": "럭스 (나무정령)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Elderwood"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Fae",
+    "character_id": "DA_18_Lux_Fae",
+    "name": "Lux (Fae)",
+    "name_ko": "럭스 (요정)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Fae"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Inferno",
+    "character_id": "DA_18_Lux_Inferno",
+    "name": "Lux (Inferno)",
+    "name_ko": "럭스 (지옥불)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Inferno"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Moonbeam",
+    "character_id": "DA_18_Lux_Moonbeam",
+    "name": "Lux (Lunar)",
+    "name_ko": "럭스 (달빛)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Moonbeam"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Primal",
+    "character_id": "DA_18_Lux_Primal",
+    "name": "Lux (Primal)",
+    "name_ko": "럭스 (원시)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Primal"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Sunbeam",
+    "character_id": "DA_18_Lux_Sunbeam",
+    "name": "Lux (Solar)",
+    "name_ko": "럭스 (햇빛)",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Lux_splash_centered_7.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Lux_Sunbeam"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Maokai",
+    "character_id": "DA_18_Maokai",
+    "name": "Maokai",
+    "name_ko": "마오카이",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Maokai_splash_centered_0.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_18_Maokai"
+    }
+  },
+  {
+    "id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Taric18",
+    "character_id": "DA_Taric18",
+    "name": "Taric",
+    "name_ko": "타릭",
+    "cost": 5,
+    "traits": [],
+    "splash_art": "TFT18_Taric_splash_centered_1.TFT_Set18.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/champion.json",
+      "revision": "v18.1",
+      "raw_id": "Maps/Shipping/Map22/Sets/TFTSet18/Shop/DA_Taric18"
+    }
+  }
+]

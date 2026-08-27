@@ -1,0 +1,17 @@
+{
+  "total_champions": 64,
+  "duplicate_champion_ids": 0,
+  "missing_champion_costs": 0,
+  "missing_champion_names": 0,
+  "total_traits": 36,
+  "duplicate_trait_ids": 0,
+  "total_items": 1189,
+  "duplicate_item_ids": 0,
+  "broken_recipe_references": 0,
+  "source_conflicts_count": 0,
+  "economy_gap_status": {
+    "xp_leveling_curve": "NOT_AVAILABLE (Needs live game/client extraction)",
+    "pool_sizes": "NOT_AVAILABLE (Needs official patch notes reconciliation)",
+    "player_damage_formula": "NOT_AVAILABLE (Needs official ruleset reconciliation)"
+  }
+}

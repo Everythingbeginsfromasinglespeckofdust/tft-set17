@@ -1,0 +1,506 @@
+[
+  {
+    "id": "DA_18_Adaptor",
+    "key": "DA_18_Adaptor",
+    "name": "Adaptor",
+    "name_ko": "적응가",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Adaptor"
+    }
+  },
+  {
+    "id": "DA_18_ApexPredator",
+    "key": "DA_18_ApexPredator",
+    "name": "Apex Predator",
+    "name_ko": "최상위 포식자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_ApexPredator"
+    }
+  },
+  {
+    "id": "DA_AluneUniqueTrait18",
+    "key": "DA_AluneUniqueTrait18",
+    "name": "Attuned",
+    "name_ko": "조율",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_AluneUniqueTrait18"
+    }
+  },
+  {
+    "id": "DA_18_LuxUniqueTrait",
+    "key": "DA_18_LuxUniqueTrait",
+    "name": "Avatar",
+    "name_ko": "화신",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_LuxUniqueTrait"
+    }
+  },
+  {
+    "id": "DA_18_Blackthorn",
+    "key": "DA_18_Blackthorn",
+    "name": "Blackthorn",
+    "name_ko": "검은 가시",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Blackthorn"
+    }
+  },
+  {
+    "id": "DA_18_Blossom",
+    "key": "DA_18_Blossom",
+    "name": "Blossom",
+    "name_ko": "개화",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Blossom"
+    }
+  },
+  {
+    "id": "DA_DravenUniqueTrait18",
+    "key": "DA_DravenUniqueTrait18",
+    "name": "Bounty Seeker",
+    "name_ko": "현상금 추적자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_DravenUniqueTrait18"
+    }
+  },
+  {
+    "id": "DA_18_Brawler",
+    "key": "DA_18_Brawler",
+    "name": "Brawler",
+    "name_ko": "싸움꾼",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Brawler"
+    }
+  },
+  {
+    "id": "DA_18_Caustic",
+    "key": "DA_18_Caustic",
+    "name": "Caustic",
+    "name_ko": "부식",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Caustic"
+    }
+  },
+  {
+    "id": "DA_18_Coven",
+    "key": "DA_18_Coven",
+    "name": "Coven",
+    "name_ko": "악의 여단",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Coven"
+    }
+  },
+  {
+    "id": "DA_18_Defender",
+    "key": "DA_18_Defender",
+    "name": "Defender",
+    "name_ko": "엄호대",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Defender"
+    }
+  },
+  {
+    "id": "DA_18_Eclipse",
+    "key": "DA_18_Eclipse",
+    "name": "Eclipse",
+    "name_ko": "일월식",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Eclipse"
+    }
+  },
+  {
+    "id": "DA_18_Elderwood",
+    "key": "DA_18_Elderwood",
+    "name": "Elderwood",
+    "name_ko": "나무정령",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Elderwood"
+    }
+  },
+  {
+    "id": "DA_Emerald18",
+    "key": "DA_Emerald18",
+    "name": "Emerald Aspect",
+    "name_ko": "에메랄드 성위",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_Emerald18"
+    }
+  },
+  {
+    "id": "DA_18_Executioner",
+    "key": "DA_18_Executioner",
+    "name": "Executioner",
+    "name_ko": "처형자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Executioner"
+    }
+  },
+  {
+    "id": "DA_18_Fae",
+    "key": "DA_18_Fae",
+    "name": "Fae",
+    "name_ko": "요정",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Fae"
+    }
+  },
+  {
+    "id": "DA_FloraFatalis18",
+    "key": "DA_FloraFatalis18",
+    "name": "Flora Fatalis",
+    "name_ko": "치명적인 꽃",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_FloraFatalis18"
+    }
+  },
+  {
+    "id": "DA_18_Greenfather",
+    "key": "DA_18_Greenfather",
+    "name": "Greenfather",
+    "name_ko": "자연의 아버지",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Greenfather"
+    }
+  },
+  {
+    "id": "DA_18_Hunter",
+    "key": "DA_18_Hunter",
+    "name": "Hunter",
+    "name_ko": "사냥꾼",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Hunter"
+    }
+  },
+  {
+    "id": "DA_18_Inferno",
+    "key": "DA_18_Inferno",
+    "name": "Inferno",
+    "name_ko": "지옥불",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Inferno"
+    }
+  },
+  {
+    "id": "DA_18_Invoker",
+    "key": "DA_18_Invoker",
+    "name": "Invoker",
+    "name_ko": "기원자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Invoker"
+    }
+  },
+  {
+    "id": "DA_Juggernaut18",
+    "key": "DA_Juggernaut18",
+    "name": "Juggernaut",
+    "name_ko": "전쟁기계",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_Juggernaut18"
+    }
+  },
+  {
+    "id": "DA_18_Lunar",
+    "key": "DA_18_Lunar",
+    "name": "Lunar",
+    "name_ko": "달빛",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Lunar"
+    }
+  },
+  {
+    "id": "DA_18_Battlemage",
+    "key": "DA_18_Battlemage",
+    "name": "Monolith",
+    "name_ko": "거석",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Battlemage"
+    }
+  },
+  {
+    "id": "DA_18_Maokai_UniqueTrait",
+    "key": "DA_18_Maokai_UniqueTrait",
+    "name": "Old Growth",
+    "name_ko": "고목",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Maokai_UniqueTrait"
+    }
+  },
+  {
+    "id": "DA_Primal18",
+    "key": "DA_Primal18",
+    "name": "Primal",
+    "name_ko": "원시",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_Primal18"
+    }
+  },
+  {
+    "id": "DA_18_Rapidfire",
+    "key": "DA_18_Rapidfire",
+    "name": "Rapidfire",
+    "name_ko": "속사포",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Rapidfire"
+    }
+  },
+  {
+    "id": "DA_18_Slayer",
+    "key": "DA_18_Slayer",
+    "name": "Ravager",
+    "name_ko": "약탈자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Slayer"
+    }
+  },
+  {
+    "id": "DA_Riftbeast18",
+    "key": "DA_Riftbeast18",
+    "name": "Riftbeast",
+    "name_ko": "협곡야수",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_Riftbeast18"
+    }
+  },
+  {
+    "id": "DA_18_Rival",
+    "key": "DA_18_Rival",
+    "name": "Rival",
+    "name_ko": "경쟁자",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Rival"
+    }
+  },
+  {
+    "id": "DA_18_Solar",
+    "key": "DA_18_Solar",
+    "name": "Solar",
+    "name_ko": "햇빛",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Solar"
+    }
+  },
+  {
+    "id": "DA_18_Spellweaver",
+    "key": "DA_18_Spellweaver",
+    "name": "Spellweaver",
+    "name_ko": "주문술사",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Spellweaver"
+    }
+  },
+  {
+    "id": "DA_18_Sprykin",
+    "key": "DA_18_Sprykin",
+    "name": "Sprykin",
+    "name_ko": "날렵이",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Sprykin"
+    }
+  },
+  {
+    "id": "DA_18_Summoner",
+    "key": "DA_18_Summoner",
+    "name": "Summoner",
+    "name_ko": "소환사",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Summoner"
+    }
+  },
+  {
+    "id": "DA_18_ZyraUniqueTrait",
+    "key": "DA_18_ZyraUniqueTrait",
+    "name": "Thornmaiden",
+    "name_ko": "가시의 여인",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_ZyraUniqueTrait"
+    }
+  },
+  {
+    "id": "DA_18_Vanguard",
+    "key": "DA_18_Vanguard",
+    "name": "Vanguard",
+    "name_ko": "선봉대",
+    "description": "",
+    "breakpoints": [],
+    "effects": [],
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/trait.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_Vanguard"
+    }
+  }
+]

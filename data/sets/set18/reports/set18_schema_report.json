@@ -1,0 +1,41 @@
+{
+  "set_id": 18,
+  "champions_schema": [
+    "id",
+    "character_id",
+    "name",
+    "name_ko",
+    "cost",
+    "traits",
+    "splash_art",
+    "_lineage"
+  ],
+  "traits_schema": [
+    "id",
+    "key",
+    "name",
+    "name_ko",
+    "description",
+    "breakpoints",
+    "effects",
+    "_lineage"
+  ],
+  "items_schema": [
+    "id",
+    "name",
+    "name_ko",
+    "description",
+    "is_component",
+    "is_unique",
+    "components",
+    "image",
+    "_lineage"
+  ],
+  "comparison_with_set17": {
+    "total_champions_set17": 63,
+    "total_champions_set18": 64,
+    "new_champions_count": 64,
+    "traits_count_set18": 36,
+    "schema_compatibility": "FULLY_COMPATIBLE"
+  }
+}
