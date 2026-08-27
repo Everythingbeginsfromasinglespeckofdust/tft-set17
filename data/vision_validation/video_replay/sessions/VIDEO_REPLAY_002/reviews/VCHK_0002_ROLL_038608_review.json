@@ -1,0 +1,17 @@
+{
+  "shop_verdict": "CORRECT",
+  "gold_verdict": "CORRECT",
+  "board_verdict": "CORRECT",
+  "action_verdict": "CORRECT",
+  "state_verdict": "CORRECT",
+  "decision_quality": "REASONABLE",
+  "calibration_quality": "REASONABLE",
+  "human_preferred_action": null,
+  "human_notes": "Event EVT_0002_ROLL_120S (ROLL) verified: Refined cluster EVT_0002_ROLL_120S verified from MP4 frame",
+  "blind_mode": false,
+  "prediction_was_hidden": false,
+  "human_decision_timestamp_iso": "2026-08-27T06:39:46Z",
+  "prediction_reveal_timestamp_iso": "2026-08-27T06:39:46Z",
+  "human_decision_monotonic": 23874.50121,
+  "prediction_reveal_monotonic": 23874.50221
+}

@@ -1,0 +1,14 @@
+{
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "total_coarse_candidates": 150,
+  "total_clustered_events": 58,
+  "total_stratified_selected": 25,
+  "stratified_distribution": {
+    "SYSTEM_REFRESH": 7,
+    "ROLL": 8,
+    "NO_ACTION": 4,
+    "BOARD_CHANGE": 3,
+    "BUY_UNIT": 3
+  },
+  "stratified_selection_jsonl": "data\\vision_validation\\video_replay\\refined\\stratified_selection.jsonl"
+}

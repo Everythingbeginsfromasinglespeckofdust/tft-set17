@@ -1,0 +1,27 @@
+{
+  "stage_distribution": {
+    "2-3": 2,
+    "2-4": 4,
+    "2-5": 4,
+    "3-1": 3,
+    "3-2": 3,
+    "3-4": 3,
+    "3-5": 1,
+    "3-6": 2,
+    "4-1": 1,
+    "4-2": 1,
+    "4-3": 1
+  },
+  "temporal_distribution": {
+    "early (Stage 2)": 10,
+    "mid (Stage 3-4)": 15,
+    "late (Stage 5+)": 0
+  },
+  "event_distribution": {
+    "SYSTEM_REFRESH": 7,
+    "ROLL": 8,
+    "NO_ACTION": 4,
+    "BOARD_CHANGE": 3,
+    "BUY_UNIT": 3
+  }
+}

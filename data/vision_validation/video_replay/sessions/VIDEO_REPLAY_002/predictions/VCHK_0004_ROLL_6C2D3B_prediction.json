@@ -1,0 +1,77 @@
+{
+  "prediction_id": "VPRED_4617D75244C3",
+  "prediction_timestamp_iso": "2026-08-27T06:39:46Z",
+  "prediction_monotonic": 23875.2117751,
+  "video_timestamp_sec": 136.0,
+  "frame_index": 8160,
+  "git_commit": "3688761",
+  "vision_hash": "4d5cfafc6ce50086e17dc8f0633ca5fb994eb2a1d25d7334cdcf839a01c4e345",
+  "decision_hash": "1a9b1dfecf990fd1365688b744774768e791da4d98840b11d8f23d1237dd0859",
+  "calibration_hash": "bcbb6fd29cba5b9f63115213309312147c84b58059e59daed9ba1f58e33a1ff7",
+  "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+  "recognized_gold": 1,
+  "gold_raw_text": "1 1",
+  "gold_confidence": 0.95,
+  "recognized_hp": 60,
+  "recognized_level": 7,
+  "recognized_stage": "2-4",
+  "recognized_shop": [
+    {
+      "slot_index": 0,
+      "champion": "카이사",
+      "cost": 3,
+      "status": "RECOGNIZED",
+      "confidence": 0.401,
+      "is_empty": false
+    },
+    {
+      "slot_index": 1,
+      "champion": "다이애나",
+      "cost": 3,
+      "status": "RECOGNIZED",
+      "confidence": 0.255,
+      "is_empty": false
+    },
+    {
+      "slot_index": 2,
+      "champion": "그라가스",
+      "cost": 2,
+      "status": "RECOGNIZED",
+      "confidence": 0.145,
+      "is_empty": false
+    },
+    {
+      "slot_index": 3,
+      "champion": "카이사",
+      "cost": 3,
+      "status": "RECOGNIZED",
+      "confidence": 0.272,
+      "is_empty": false
+    },
+    {
+      "slot_index": 4,
+      "champion": "미스 포츈",
+      "cost": 3,
+      "status": "RECOGNIZED",
+      "confidence": 0.263,
+      "is_empty": false
+    }
+  ],
+  "recognized_board_units": [],
+  "recognized_board_count": 0,
+  "recognized_action": "ROLL",
+  "action_confidence": 0.0,
+  "base_action": "SAVE_GOLD",
+  "calibrated_action": "SAVE_GOLD",
+  "final_action": "SAVE_GOLD",
+  "is_calibration_flip": false,
+  "calibration_delta": 0.0,
+  "calibration_evidence": "CALIBRATION_SKIPPED",
+  "state_hash": "8fd3409213005fb121f6547540f11e44ae70a1e09995ba26f8af1f0ca02fe730",
+  "decision_scores": {
+    "SAVE_GOLD": 0.3519,
+    "LEVEL_UP": 0.3322,
+    "ROLL": 0.316
+  },
+  "vision_source": "VIDEO_FRAME"
+}

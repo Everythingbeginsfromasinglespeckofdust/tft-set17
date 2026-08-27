@@ -1,0 +1,77 @@
+{
+  "prediction_id": "VPRED_58716D2F814A",
+  "prediction_timestamp_iso": "2026-08-27T06:39:47Z",
+  "prediction_monotonic": 23876.2295458,
+  "video_timestamp_sec": 162.0,
+  "frame_index": 9720,
+  "git_commit": "3688761",
+  "vision_hash": "4d5cfafc6ce50086e17dc8f0633ca5fb994eb2a1d25d7334cdcf839a01c4e345",
+  "decision_hash": "1a9b1dfecf990fd1365688b744774768e791da4d98840b11d8f23d1237dd0859",
+  "calibration_hash": "bcbb6fd29cba5b9f63115213309312147c84b58059e59daed9ba1f58e33a1ff7",
+  "calibration_source_sha256": "4d701959947b022aa1141a8ea90c74d834503307cbfbe0947a741d0490af5752",
+  "recognized_gold": null,
+  "gold_raw_text": "",
+  "gold_confidence": 0.0,
+  "recognized_hp": 60,
+  "recognized_level": 7,
+  "recognized_stage": "2-5",
+  "recognized_shop": [
+    {
+      "slot_index": 0,
+      "champion": "쉔",
+      "cost": 5,
+      "status": "RECOGNIZED",
+      "confidence": 0.249,
+      "is_empty": false
+    },
+    {
+      "slot_index": 1,
+      "champion": null,
+      "cost": null,
+      "status": "EMPTY",
+      "confidence": 0.0,
+      "is_empty": true
+    },
+    {
+      "slot_index": 2,
+      "champion": "나서스",
+      "cost": 1,
+      "status": "RECOGNIZED",
+      "confidence": 0.257,
+      "is_empty": false
+    },
+    {
+      "slot_index": 3,
+      "champion": "나서스",
+      "cost": 1,
+      "status": "RECOGNIZED",
+      "confidence": 0.373,
+      "is_empty": false
+    },
+    {
+      "slot_index": 4,
+      "champion": "나서스",
+      "cost": 1,
+      "status": "RECOGNIZED",
+      "confidence": 0.412,
+      "is_empty": false
+    }
+  ],
+  "recognized_board_units": [],
+  "recognized_board_count": 0,
+  "recognized_action": "SYSTEM_REFRESH",
+  "action_confidence": 0.0,
+  "base_action": "SAVE_GOLD",
+  "calibrated_action": "SAVE_GOLD",
+  "final_action": "SAVE_GOLD",
+  "is_calibration_flip": false,
+  "calibration_delta": 0.0,
+  "calibration_evidence": "CALIBRATION_SKIPPED",
+  "state_hash": "e772f68aab826fcb1f0acc736adab514981e31c9e9be63498e36e1dfb00471ab",
+  "decision_scores": {
+    "SAVE_GOLD": 0.3706,
+    "ROLL": 0.3582,
+    "LEVEL_UP": 0.2712
+  },
+  "vision_source": "VIDEO_FRAME"
+}

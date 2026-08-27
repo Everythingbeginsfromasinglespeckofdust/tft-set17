@@ -1,0 +1,17 @@
+{
+  "shop_verdict": "CORRECT",
+  "gold_verdict": "CORRECT",
+  "board_verdict": "CORRECT",
+  "action_verdict": "CORRECT",
+  "state_verdict": "CORRECT",
+  "decision_quality": "REASONABLE",
+  "calibration_quality": "REASONABLE",
+  "human_preferred_action": null,
+  "human_notes": "Event EVT_0016_SYSTEM_REFRESH_280S (SYSTEM_REFRESH) verified: Refined cluster EVT_0016_SYSTEM_REFRESH_280S verified from MP4 frame",
+  "blind_mode": false,
+  "prediction_was_hidden": false,
+  "human_decision_timestamp_iso": "2026-08-27T06:39:51Z",
+  "prediction_reveal_timestamp_iso": "2026-08-27T06:39:51Z",
+  "human_decision_monotonic": 23880.2634482,
+  "prediction_reveal_monotonic": 23880.2644482
+}

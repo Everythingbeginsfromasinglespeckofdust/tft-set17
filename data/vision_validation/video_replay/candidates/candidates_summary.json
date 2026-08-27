@@ -1,0 +1,16 @@
+{
+  "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\56e6fb98-3716-4124-b4f1-8718629b533c-2026-08-26-23-20-20.mp4",
+  "video_duration_sec": 1582.6333333333334,
+  "total_scanned_sec": 1512.6,
+  "total_candidates": 150,
+  "type_counts": {
+    "SYSTEM_REFRESH": 71,
+    "SHOP_CHANGE": 115,
+    "ROLL": 37,
+    "BOARD_CHANGE": 64,
+    "NO_ACTION": 12,
+    "BUY_UNIT": 7
+  },
+  "scan_elapsed_sec": 103.06,
+  "candidates_jsonl": "data\\vision_validation\\video_replay\\candidates\\candidates.jsonl"
+}

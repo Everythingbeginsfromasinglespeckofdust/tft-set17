@@ -1,0 +1,7 @@
+{
+  "SYSTEM_REFRESH": 7,
+  "ROLL": 8,
+  "NO_ACTION": 4,
+  "BOARD_CHANGE": 3,
+  "BUY_UNIT": 3
+}
