@@ -115,6 +115,10 @@ class VideoReplayPipeline:
         st_num = int(stage_round_hint.split("-")[0]) if "-" in stage_round_hint else 2
         dynamic_level = min(9, max(1, st_num + 2))
 
+        shop_conf = float(np.mean([c.confidence for c in shop_cards])) if shop_cards else 0.0
+        gold_conf = float(g_obs.confidence) if g_obs.is_valid else 0.0
+        overall_conf = float(np.mean([shop_conf, gold_conf])) if (shop_conf > 0 or gold_conf > 0) else 0.5
+
         obs = Observation(
             timestamp_sec=timestamp_sec,
             frame_index=frame_idx,
@@ -124,8 +128,8 @@ class VideoReplayPipeline:
             level_val=dynamic_level,
             shop_cards=card_obs_list,
             sources={"shop": "ShopRecognizerV2", "gold": "GoldRecognizer"},
-            confidences={"shop": 0.90, "gold": g_obs.confidence if g_obs.is_valid else 0.0},
-            overall_confidence=0.85
+            confidences={"shop": round(shop_conf, 3), "gold": round(gold_conf, 3)},
+            overall_confidence=round(overall_conf, 3)
         )
 
         # 4. Build GameState

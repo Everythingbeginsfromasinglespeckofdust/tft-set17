@@ -144,17 +144,21 @@ class VisionAnalysisManager:
             ))
 
         # 3. Create Current Observation
+        shop_conf = float(np.mean([c.confidence for c in shop_cards])) if shop_cards else 0.0
+        gold_conf = float(g_obs.confidence) if g_obs.is_valid else 0.0
+        overall_conf = float(np.mean([shop_conf, gold_conf])) if (shop_conf > 0 or gold_conf > 0) else 0.0
+
         curr_obs = Observation(
             timestamp_sec=t_sec,
             frame_index=frame_idx,
-            stage_text=self.state.observed.stage_round or "3-2",
+            stage_text=self.state.observed.stage_round or "2-1",
             gold_val=g_obs.parsed_gold,
-            hp_val=60,
-            level_val=7,
+            hp_val=self.state.observed.hp,
+            level_val=self.state.observed.level,
             shop_cards=card_obs_list,
             sources={"shop": "ShopRecognizerV2", "gold": "GoldRecognizer"},
-            confidences={"shop": 0.95, "gold": g_obs.confidence},
-            overall_confidence=0.90
+            confidences={"shop": round(shop_conf, 3), "gold": round(gold_conf, 3)},
+            overall_confidence=round(overall_conf, 3)
         )
 
         # 4. Layer A (Observed State) Update

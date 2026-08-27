@@ -89,14 +89,14 @@ class AdaptiveActionPipeline:
             obs = Observation(
                 timestamp_sec=curr_t,
                 frame_index=f_idx,
-                stage_text="3-2",
+                stage_text="2-1",
                 gold_val=g_obs.parsed_gold,
-                hp_val=60,
-                level_val=7,
+                hp_val=None,
+                level_val=None,
                 shop_cards=card_obs,
                 sources={"shop": "ShopRecognizerV2_Refined", "gold": "GoldRecognizer_Refined", "resolution": ResolutionSource.REFINED.value},
-                confidences={"shop": 0.95, "gold": g_obs.confidence},
-                overall_confidence=0.90
+                confidences={"shop": round(float(np.mean([c.confidence for c in card_obs])) if card_obs else 0.0, 3), "gold": round(float(g_obs.confidence if g_obs.is_valid else 0.0), 3)},
+                overall_confidence=round(float(g_obs.confidence if g_obs.is_valid else 0.5), 3)
             )
             refined_obs_list.append(obs)
             curr_t += dt
@@ -105,7 +105,7 @@ class AdaptiveActionPipeline:
 
         # Online Causal Gold Stabilization on refined sub-sequence
         stabilized_obs_list: List[Observation] = []
-        last_val = 35
+        last_val: Optional[int] = None
         for obs in refined_obs_list:
             if obs.gold_val is not None:
                 last_val = obs.gold_val
@@ -247,8 +247,8 @@ class AdaptiveActionPipeline:
                             level_val=base_obs.level_val,
                             shop_cards=cards_to_use,
                             sources={"shop": "ShopRecognizerV2_Refined", "gold": "GoldRecognizer_Refined", "resolution": ResolutionSource.REFINED.value},
-                            confidences={"shop": 0.95, "gold": 0.95},
-                            overall_confidence=0.95
+                            confidences={"shop": round(float(np.mean([c.confidence for c in cards_to_use])) if cards_to_use else 0.0, 3), "gold": 0.90},
+                            overall_confidence=round(float(np.mean([c.confidence for c in cards_to_use])) if cards_to_use else 0.85, 3)
                         )
                         all_refined_obs.append(refined_obs)
                     curr_t += dt
