@@ -115,7 +115,7 @@ class VideoReplayPipeline:
         st_num = int(stage_round_hint.split("-")[0]) if "-" in stage_round_hint else 2
         dynamic_level = min(9, max(1, st_num + 2))
 
-        shop_conf = float(np.mean([c.confidence for c in shop_cards])) if shop_cards else 0.0
+        shop_conf = float(np.mean([c.confidence for c in cards_rec])) if cards_rec else 0.0
         gold_conf = float(g_obs.confidence) if g_obs.is_valid else 0.0
         overall_conf = float(np.mean([shop_conf, gold_conf])) if (shop_conf > 0 or gold_conf > 0) else 0.5
 
