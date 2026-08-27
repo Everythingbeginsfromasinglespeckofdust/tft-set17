@@ -1,0 +1,74 @@
+{
+  "HIST_SESSION_00": {
+    "val_samples_count": 10,
+    "val_flips_count": 0,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "HIST_SESSION_01": {
+    "val_samples_count": 10,
+    "val_flips_count": 1,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "HIST_SESSION_02": {
+    "val_samples_count": 10,
+    "val_flips_count": 1,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "HIST_SESSION_03": {
+    "val_samples_count": 10,
+    "val_flips_count": 0,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "HIST_SESSION_04": {
+    "val_samples_count": 10,
+    "val_flips_count": 1,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_A": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_B": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_C": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_D": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_E": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_F": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  },
+  "SESSION_G": {
+    "val_samples_count": 10,
+    "val_flips_count": 3,
+    "stability_rho": 0.965,
+    "generalization_verdict": "STABLE"
+  }
+}

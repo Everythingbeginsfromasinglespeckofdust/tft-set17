@@ -1,0 +1,14 @@
+{
+  "experiment_id": "PROD_GATE_V1_20260827",
+  "experiment_version": "1.0.0",
+  "retrieved_at": "2026-08-27T05:01:45Z",
+  "patch": "18.1",
+  "real_matches_count": 57,
+  "real_eligible_samples_count": 120,
+  "excluded_synthetic_count": 15,
+  "flip_cases_count": 14,
+  "human_review_count": 0,
+  "final_gate_verdict": "READY_FOR_PRODUCTION_INTEGRATION",
+  "production_engine_hash_verified": true,
+  "bootstrap_95_ci": "[-0.298, -0.142]"
+}

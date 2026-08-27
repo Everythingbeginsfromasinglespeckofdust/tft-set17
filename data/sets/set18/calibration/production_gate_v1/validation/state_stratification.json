@@ -1,0 +1,14 @@
+{
+  "crisis_hp_lte_30": {
+    "sample_count": 46,
+    "flip_rate": 0.42,
+    "dominant_action_calib": "ROLL",
+    "top4_rate": 0.45
+  },
+  "normal_hp_gt_30": {
+    "sample_count": 74,
+    "flip_rate": 0.02,
+    "dominant_action_calib": "SAVE_GOLD",
+    "top4_rate": 0.68
+  }
+}

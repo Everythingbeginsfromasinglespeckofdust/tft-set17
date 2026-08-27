@@ -1,0 +1,9 @@
+{
+  "iterations": 500,
+  "grouping_key": "match_id",
+  "unique_matches_count": 14,
+  "mean_placement_delta": -0.218,
+  "ci_95_lower": -0.287,
+  "ci_95_upper": -0.131,
+  "interpretation": "CALIB_C observational placement association 95% CI: [-0.287, -0.131]"
+}
