@@ -1,11 +1,12 @@
-"""Integrity Validator for TFT Real Match Decision Dataset Collection v1.
+"""Integrity Validator for TFT Real Match Decision Dataset Collection v1.1.
 
 Provides:
-- Fake data detection (repeated timestamps, identical states, auto-copy detection)
+- Fake data detection (repeated timestamps, identical states, auto-copy detection, synthetic patterns)
 - Outlier detection (impossible HP/gold, invalid stars, duplicate units)
-- Future leakage validation (T0 must not contain T1/final placement)
-- State diversity & balance metrics
-- Match-level independence check
+- Future leakage validation (T0 must not contain T1/T2/T3/final placement)
+- State diversity & action balance metrics
+- Dual reviewer reliability (Cohen's Kappa & Raw Agreement)
+- Frame evidence completeness validation
 - Calibration readiness gate verdict
 """
 from __future__ import annotations
@@ -18,19 +19,17 @@ from tft.dataset_collection.models import (
     SessionManifest,
     QualityFlagEnum
 )
+from tft.dataset_collection.dual_reviewer import DualReviewManager
 
 
 class IntegrityValidator:
     """Validates dataset integrity, detects fake data, and computes calibration readiness."""
 
     def __init__(self):
-        pass
+        self.dual_mgr = DualReviewManager()
 
     def validate_row(self, row: DatasetRow) -> Tuple[str, List[str]]:
-        """Validates a single dataset row for schema compliance and outliers.
-
-        Returns: (quality_flag, issues_list)
-        """
+        """Validates a single dataset row for schema compliance and outliers."""
         issues = []
         raw = row.raw_state
 
@@ -49,15 +48,22 @@ class IntegrityValidator:
         if not re.match(r"^[1-8]-[1-7]$", str(stage_round)):
             issues.append(f"INVALID_STAGE_ROUND: '{stage_round}' does not match stage-round format")
 
-        # 2. Strict Future Leakage Check: raw_state must NEVER contain final_placement
+        # 2. Strict Future Leakage Check: raw_state must NEVER contain final_placement or T1 outcome
         if "final_placement" in raw or "placement" in raw:
             issues.append("LEAKAGE_T0: final_placement found in raw_state")
+        if "t1_hp" in raw or "hp_delta" in raw:
+            issues.append("LEAKAGE_T0: t1_outcome found in raw_state")
 
         # 3. Units validation
         for u in raw.get("board_units", []) + raw.get("bench_units", []):
             star = u.get("star", 1)
             if star not in (1, 2, 3):
                 issues.append(f"INVALID_STAR: unit {u.get('name')} has invalid star={star}")
+
+        # 4. Frame Evidence validation
+        fe = row.frame_evidence
+        if not fe or not fe.get("frame_sha256"):
+            issues.append("MISSING_FRAME_EVIDENCE: frame_evidence or frame_sha256 missing")
 
         # Determine flag
         if any("LEAKAGE" in i or "OUTLIER" in i for i in issues):
@@ -114,14 +120,11 @@ class IntegrityValidator:
                     suspicious_rows.append(nxt.checkpoint_id)
 
         # 3. Check for auto-copied human labels from model prediction
-        rec_pref_matches = 0
-        known_reviews = 0
         for r in rows:
             rec = r.engine_prediction.get("recommended_action")
             pref = r.human_review.get("human_preferred_action")
             src = r.human_review.get("source")
             if pref and pref != "UNKNOWN":
-                known_reviews += 1
                 if rec and rec == pref and src == "AUTO_COPIED":
                     findings.append({
                         "session_id": r.session_id,
@@ -131,12 +134,50 @@ class IntegrityValidator:
                     })
                     suspicious_rows.append(r.checkpoint_id)
 
+        # 4. Check for synthetic / perfectly spaced timestamp sequences without real video
+        for s_id, t_list in timestamps_by_session.items():
+            if len(t_list) >= 5:
+                diffs = [round(t_list[i+1][1] - t_list[i][1], 2) for i in range(len(t_list) - 1)]
+                if len(set(diffs)) == 1 and diffs[0] in [10.0, 30.0, 60.0]:
+                    findings.append({
+                        "session_id": s_id,
+                        "type": "SYNTHETIC_TIMESTAMP_SEQUENCE",
+                        "detail": f"Perfect constant delta of {diffs[0]}s detected across all checkpoints"
+                    })
+
         return {
             "total_suspicious_checkpoints": len(set(suspicious_rows)),
             "findings_count": len(findings),
             "findings": findings,
             "verdict": "CLEAN" if len(findings) == 0 else "ANOMALIES_DETECTED"
         }
+
+    def compute_dual_review_metrics(self, rows: List[DatasetRow]) -> Dict[str, Any]:
+        """Calculates inter-rater agreement and Cohen's Kappa for dual-reviewed checkpoints."""
+        primary_prefs = []
+        secondary_prefs = []
+        dual_reviewed_cps = 0
+
+        for r in rows:
+            if r.dual_reviews:
+                prim = r.human_review.get("human_preferred_action")
+                sec = r.dual_reviews[0].get("human_preferred_action")
+                if prim and sec and prim != "UNKNOWN" and sec != "UNKNOWN":
+                    primary_prefs.append(prim)
+                    secondary_prefs.append(sec)
+                    dual_reviewed_cps += 1
+
+        if dual_reviewed_cps == 0:
+            return {
+                "total_dual_reviewed": 0,
+                "raw_agreement_rate": 0.0,
+                "cohens_kappa": 0.0,
+                "interpretation": "NO_DUAL_REVIEWS_RECORDED"
+            }
+
+        res = self.dual_mgr.calculate_cohens_kappa(primary_prefs, secondary_prefs)
+        res["total_dual_reviewed"] = dual_reviewed_cps
+        return res
 
     def compute_state_diversity(self, rows: List[DatasetRow]) -> Dict[str, Any]:
         """Calculates histograms and diversity metrics across all checkpoints."""
@@ -147,6 +188,7 @@ class IntegrityValidator:
         action_dist = defaultdict(int)
         pref_dist = defaultdict(int)
         judgment_dist = defaultdict(int)
+        rationale_dist = defaultdict(int)
 
         for r in rows:
             raw = r.raw_state
@@ -190,7 +232,9 @@ class IntegrityValidator:
             jdg = r.human_review.get("human_judgment", "UNKNOWN")
             judgment_dist[jdg] += 1
 
-        # Check action imbalance
+            rat = r.human_review.get("rationale_category", "UNKNOWN")
+            rationale_dist[rat] += 1
+
         total_actions = sum(action_dist.values())
         max_action_share = max((cnt / max(1, total_actions) for cnt in action_dist.values()), default=0.0)
         imbalance_warning = max_action_share > 0.85
@@ -204,6 +248,7 @@ class IntegrityValidator:
             "actual_action_distribution": dict(action_dist),
             "human_preference_distribution": dict(pref_dist),
             "human_judgment_distribution": dict(judgment_dist),
+            "rationale_distribution": dict(rationale_dist),
             "imbalance_warning": imbalance_warning
         }
 
@@ -212,17 +257,12 @@ class IntegrityValidator:
         match_ids = [m.match_id for m in manifests]
         session_ids = [m.session_id for m in manifests]
         unique_matches = set(match_ids)
-        unique_sessions = set(session_ids)
 
         return {
             "total_sessions": len(manifests),
             "unique_matches": len(unique_matches),
             "unique_match_ids": sorted(list(unique_matches)),
-            "is_independent": len(manifests) == len(unique_matches),
-            "note": (
-                f"Dataset contains {len(unique_matches)} independent match(es). "
-                "Each match forms a discrete GroupKFold partition."
-            )
+            "is_independent": len(manifests) == len(unique_matches)
         }
 
     def evaluate_calibration_gate(
@@ -234,6 +274,7 @@ class IntegrityValidator:
         match_info = self.check_match_independence(manifests)
         fake_info = self.detect_fake_data(rows)
         diversity = self.compute_state_diversity(rows)
+        dual_info = self.compute_dual_review_metrics(rows)
 
         n_matches = match_info["unique_matches"]
         n_rows = len(rows)
@@ -252,8 +293,7 @@ class IntegrityValidator:
 
         pass_cps_per_match = bool(cps_by_match and all(cnt >= 15 for cnt in cps_by_match.values()))
 
-        # 3. Early / Mid / Late coverage
-        # Early: stage 2, Mid: stage 3-4, Late: stage 5+
+        # 3. Stage coverage: Early (1-2), Mid (3-4), Late (5+)
         pass_stage_coverage = bool(stages_by_match and all(
             any(s in ("1", "2") for s in st_set) and
             any(s in ("3", "4") for s in st_set) and
@@ -261,25 +301,29 @@ class IntegrityValidator:
             for st_set in stages_by_match.values()
         ))
 
-        # 4. Actual action coverage: >= 80% known
+        # 4. Actual action coverage: >= 80%
         known_actions = sum(1 for r in rows if r.actual_action.get("actual_player_action", "UNKNOWN") != "UNKNOWN")
         act_coverage = round(known_actions / max(1, n_rows), 4)
         pass_act_coverage = act_coverage >= 0.80
 
-        # 5. Human preference coverage: >= 80% known
+        # 5. Human preference coverage: >= 80%
         known_prefs = sum(1 for r in rows if r.human_review.get("human_preferred_action", "UNKNOWN") != "UNKNOWN")
         pref_coverage = round(known_prefs / max(1, n_rows), 4)
         pass_pref_coverage = pref_coverage >= 0.80
 
-        # 6. T1 outcomes coverage: >= 80% linked
+        # 6. T1 outcomes coverage: >= 70%
         linked_outcomes = sum(1 for r in rows if r.t1_outcome.get("t1_checkpoint_id") is not None)
         outcome_coverage = round(linked_outcomes / max(1, n_rows), 4)
-        pass_outcome_coverage = outcome_coverage >= 0.70  # Last CP of game has no T1, so 70%+ is standard
+        pass_outcome_coverage = outcome_coverage >= 0.70
 
-        # 7. Zero fake data
+        # 7. Frame evidence completeness: >= 95%
+        valid_frames = sum(1 for r in rows if r.frame_evidence.get("frame_sha256"))
+        frame_coverage = round(valid_frames / max(1, n_rows), 4)
+        pass_frame_coverage = frame_coverage >= 0.95
+
+        # 8. Zero fake data
         pass_no_fake = fake_info["total_suspicious_checkpoints"] == 0
 
-        # Final verdict determination
         checklist = {
             "matches_ge_5": pass_matches,
             "checkpoints_per_match_ge_15": pass_cps_per_match,
@@ -287,6 +331,7 @@ class IntegrityValidator:
             "actual_action_coverage_ge_80pct": pass_act_coverage,
             "human_preference_coverage_ge_80pct": pass_pref_coverage,
             "t1_outcome_linked_ge_70pct": pass_outcome_coverage,
+            "frame_evidence_ge_95pct": pass_frame_coverage,
             "no_fake_data_or_leakage": pass_no_fake
         }
 
@@ -301,12 +346,15 @@ class IntegrityValidator:
 
         return {
             "final_gate_verdict": verdict,
+            "schema_version": "DECISION_DATASET_V1_1",
             "total_matches": n_matches,
             "total_sessions": len(manifests),
             "total_checkpoints": n_rows,
             "actual_action_coverage": act_coverage,
             "human_preference_coverage": pref_coverage,
             "t1_outcome_coverage": outcome_coverage,
+            "frame_evidence_coverage": frame_coverage,
+            "dual_review_metrics": dual_info,
             "checklist": checklist,
             "fake_data_summary": fake_info,
             "diversity_summary": diversity,

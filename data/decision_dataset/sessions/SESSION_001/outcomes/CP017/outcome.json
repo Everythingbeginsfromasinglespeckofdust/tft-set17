@@ -5,10 +5,14 @@
   "t1_hp": 45,
   "t1_gold": 40,
   "t1_board_power": 25.0,
+  "t1_action": "SAVE_GOLD",
   "hp_delta": 0,
   "gold_delta": 10,
   "t2_checkpoint_id": "CP019",
   "t2_hp": 8,
   "t2_hp_delta": -37,
+  "t3_checkpoint_id": "CP020",
+  "t3_hp": 8,
+  "t3_hp_delta": -37,
   "horizon_rounds": 1
 }

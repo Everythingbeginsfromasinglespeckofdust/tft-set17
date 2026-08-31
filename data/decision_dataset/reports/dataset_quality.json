@@ -1,11 +1,19 @@
 {
   "final_gate_verdict": "DATA_COLLECTION_IN_PROGRESS",
+  "schema_version": "DECISION_DATASET_V1_1",
   "total_matches": 1,
   "total_sessions": 1,
   "total_checkpoints": 20,
   "actual_action_coverage": 1.0,
   "human_preference_coverage": 1.0,
   "t1_outcome_coverage": 0.95,
+  "frame_evidence_coverage": 1.0,
+  "dual_review_metrics": {
+    "total_dual_reviewed": 0,
+    "raw_agreement_rate": 0.0,
+    "cohens_kappa": 0.0,
+    "interpretation": "NO_DUAL_REVIEWS_RECORDED"
+  },
   "checklist": {
     "matches_ge_5": false,
     "checkpoints_per_match_ge_15": true,
@@ -13,6 +21,7 @@
     "actual_action_coverage_ge_80pct": true,
     "human_preference_coverage_ge_80pct": true,
     "t1_outcome_linked_ge_70pct": true,
+    "frame_evidence_ge_95pct": true,
     "no_fake_data_or_leakage": true
   },
   "fake_data_summary": {
@@ -66,6 +75,9 @@
     "human_judgment_distribution": {
       "GOOD": 19,
       "QUESTIONABLE": 1
+    },
+    "rationale_distribution": {
+      "UNKNOWN": 20
     },
     "imbalance_warning": false
   },

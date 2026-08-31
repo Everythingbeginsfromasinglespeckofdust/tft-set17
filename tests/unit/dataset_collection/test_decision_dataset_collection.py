@@ -71,7 +71,7 @@ def test_checkpoint_schema(loaded_rows):
     """2. Verify checkpoint schema matches DECISION_DATASET_V1."""
     assert len(loaded_rows) >= 20
     for row in loaded_rows:
-        assert row.schema_version == "DECISION_DATASET_V1"
+        assert row.schema_version.startswith("DECISION_DATASET_V1")
         assert row.session_id != ""
         assert row.match_id != ""
         assert row.checkpoint_id.startswith("CP")

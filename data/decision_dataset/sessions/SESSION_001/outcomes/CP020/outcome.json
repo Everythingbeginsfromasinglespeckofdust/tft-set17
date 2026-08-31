@@ -5,10 +5,14 @@
   "t1_hp": null,
   "t1_gold": null,
   "t1_board_power": null,
+  "t1_action": null,
   "hp_delta": null,
   "gold_delta": null,
   "t2_checkpoint_id": null,
   "t2_hp": null,
   "t2_hp_delta": null,
+  "t3_checkpoint_id": null,
+  "t3_hp": null,
+  "t3_hp_delta": null,
   "horizon_rounds": 0
 }

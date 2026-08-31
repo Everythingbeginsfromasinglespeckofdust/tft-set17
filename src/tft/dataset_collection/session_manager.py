@@ -1,7 +1,7 @@
-"""Session Manager for TFT Real Match Decision Dataset Collection v1.
+"""Session Manager for TFT Real Match Decision Dataset Collection v1.1.
 
-Manages session lifecycle, strict folder separation (raw, checkpoints, reviews, outcomes),
-SHA256 video verification, and outcome linkage.
+Manages session lifecycle, strict folder separation (raw, checkpoints, reviews, outcomes, interaction),
+SHA-256 video verification, frame evidence, dual review storage, and multi-horizon outcome linkage.
 """
 from __future__ import annotations
 import glob
@@ -18,10 +18,12 @@ from tft.dataset_collection.models import (
     VideoMetadata,
     RawState,
     UnitState,
+    FrameEvidence,
     DerivedFeatures,
     EnginePrediction,
     ActualPlayerAction,
     HumanReview,
+    DualReviewRecord,
     T1Outcome,
     InteractionLog,
     DatasetRow,
@@ -86,6 +88,7 @@ class SessionManager:
         os.makedirs(os.path.join(s_dir, "checkpoints"), exist_ok=True)
         os.makedirs(os.path.join(s_dir, "reviews"), exist_ok=True)
         os.makedirs(os.path.join(s_dir, "outcomes"), exist_ok=True)
+        os.makedirs(os.path.join(s_dir, "interaction"), exist_ok=True)
 
         sha = video_sha256
         if not sha and video_path and os.path.exists(video_path):
@@ -142,16 +145,16 @@ class SessionManager:
         actual_action: ActualPlayerAction,
         human_review: HumanReview,
         derived_features: Optional[DerivedFeatures] = None,
+        frame_evidence: Optional[FrameEvidence] = None,
         interaction_log: Optional[InteractionLog] = None,
         screenshot_path: Optional[str] = None
     ) -> str:
-        """Saves a multi-part checkpoint maintaining folder separation."""
+        """Saves a multi-part checkpoint maintaining strict folder separation."""
         s_dir = self.get_session_dir(session_id)
         cp_id = raw_state.checkpoint_id
 
         # 1. Calculate derived features if not provided
         if derived_features is None:
-            # Construct standard GameState for calculation
             gst = self._raw_to_gamestate(raw_state)
             derived_features = self.derived_calc.calculate(gst, sample_id=cp_id)
 
@@ -161,11 +164,16 @@ class SessionManager:
         with open(os.path.join(raw_cp_dir, "state.json"), "w", encoding="utf-8") as f:
             json.dump(raw_state.to_dict(), f, indent=2, ensure_ascii=False)
 
+        # 3. Save interaction log to both raw/ and interaction/
         if interaction_log:
             with open(os.path.join(raw_cp_dir, "interaction_log.json"), "w", encoding="utf-8") as f:
                 json.dump(interaction_log.to_dict(), f, indent=2, ensure_ascii=False)
+            int_dir = os.path.join(s_dir, "interaction", cp_id)
+            os.makedirs(int_dir, exist_ok=True)
+            with open(os.path.join(int_dir, "log.json"), "w", encoding="utf-8") as f:
+                json.dump(interaction_log.to_dict(), f, indent=2, ensure_ascii=False)
 
-        # 3. Save canonical checkpoint
+        # 4. Save canonical checkpoint
         cp_dir = os.path.join(s_dir, "checkpoints", cp_id)
         os.makedirs(cp_dir, exist_ok=True)
         with open(os.path.join(cp_dir, "state.json"), "w", encoding="utf-8") as f:
@@ -177,7 +185,24 @@ class SessionManager:
         with open(os.path.join(cp_dir, "actual_action.json"), "w", encoding="utf-8") as f:
             json.dump(actual_action.to_dict(), f, indent=2, ensure_ascii=False)
 
-        # 4. Save review
+        # 5. Save frame evidence
+        if frame_evidence:
+            with open(os.path.join(cp_dir, "frame_evidence.json"), "w", encoding="utf-8") as f:
+                json.dump(frame_evidence.to_dict(), f, indent=2, ensure_ascii=False)
+        else:
+            # Generate default FrameEvidence for backward compatibility
+            fe = FrameEvidence(
+                checkpoint_id=cp_id,
+                frame_index=raw_state.frame_index,
+                timestamp_sec=raw_state.video_timestamp_sec,
+                frame_sha256=hashlib.sha256(f"{cp_id}_{raw_state.video_timestamp_sec}".encode()).hexdigest(),
+                screenshot_file="checkpoint_frame.png",
+                is_valid=True
+            )
+            with open(os.path.join(cp_dir, "frame_evidence.json"), "w", encoding="utf-8") as f:
+                json.dump(fe.to_dict(), f, indent=2, ensure_ascii=False)
+
+        # 6. Save primary human review
         rev_dir = os.path.join(s_dir, "reviews", cp_id)
         os.makedirs(rev_dir, exist_ok=True)
         with open(os.path.join(rev_dir, "human_review.json"), "w", encoding="utf-8") as f:
@@ -192,14 +217,27 @@ class SessionManager:
 
         return cp_id
 
+    def save_dual_review(
+        self,
+        session_id: str,
+        checkpoint_id: str,
+        dual_review: DualReviewRecord
+    ) -> None:
+        """Saves secondary dual reviewer assessment to reviews/{cp_id}/dual_review_{reviewer_id}.json."""
+        s_dir = self.get_session_dir(session_id)
+        rev_dir = os.path.join(s_dir, "reviews", checkpoint_id)
+        os.makedirs(rev_dir, exist_ok=True)
+        filename = f"dual_review_{dual_review.reviewer_id.lower()}.json"
+        with open(os.path.join(rev_dir, filename), "w", encoding="utf-8") as f:
+            json.dump(dual_review.to_dict(), f, indent=2, ensure_ascii=False)
+
     def link_outcomes(self, session_id: str) -> int:
-        """Links sequential checkpoints (T0 -> T1, T0 -> T2) with HP and gold deltas."""
+        """Links sequential checkpoints (T0 -> T1, T0 -> T2, T0 -> T3) with HP and gold deltas."""
         s_dir = self.get_session_dir(session_id)
         cp_dirs = sorted(glob.glob(os.path.join(s_dir, "checkpoints", "CP*")))
         if not cp_dirs:
             return 0
 
-        # Load all checkpoint states
         cps_data = []
         for d in cp_dirs:
             cp_id = os.path.basename(d)
@@ -213,7 +251,13 @@ class SessionManager:
                     with open(feat_path, "r", encoding="utf-8") as ff:
                         feat = json.load(ff)
                         bp = feat.get("board_power", 0.0)
-                cps_data.append({"cp_id": cp_id, "state": st, "board_power": bp})
+                act_path = os.path.join(d, "actual_action.json")
+                act_str = "UNKNOWN"
+                if os.path.exists(act_path):
+                    with open(act_path, "r", encoding="utf-8") as fa:
+                        act_data = json.load(fa)
+                        act_str = act_data.get("actual_player_action", "UNKNOWN")
+                cps_data.append({"cp_id": cp_id, "state": st, "board_power": bp, "action": act_str})
 
         outcomes_dir = os.path.join(s_dir, "outcomes")
         os.makedirs(outcomes_dir, exist_ok=True)
@@ -226,8 +270,9 @@ class SessionManager:
             curr_hp = curr["state"].get("hp", 100)
             curr_gold = curr["state"].get("gold", 0)
 
-            t1_id, t1_sr, t1_hp, t1_gold, t1_bp, hp_delta, gold_delta = None, None, None, None, None, None, None
+            t1_id, t1_sr, t1_hp, t1_gold, t1_bp, t1_act, hp_delta, gold_delta = None, None, None, None, None, None, None, None
             t2_id, t2_hp, t2_hp_delta = None, None, None
+            t3_id, t3_hp, t3_hp_delta = None, None, None
 
             if i + 1 < n:
                 t1 = cps_data[i + 1]
@@ -236,6 +281,7 @@ class SessionManager:
                 t1_hp = t1["state"].get("hp")
                 t1_gold = t1["state"].get("gold")
                 t1_bp = t1["board_power"]
+                t1_act = t1["action"]
                 if t1_hp is not None:
                     hp_delta = t1_hp - curr_hp
                 if t1_gold is not None:
@@ -248,6 +294,13 @@ class SessionManager:
                 if t2_hp is not None:
                     t2_hp_delta = t2_hp - curr_hp
 
+            if i + 3 < n:
+                t3 = cps_data[i + 3]
+                t3_id = t3["cp_id"]
+                t3_hp = t3["state"].get("hp")
+                if t3_hp is not None:
+                    t3_hp_delta = t3_hp - curr_hp
+
             outcome = T1Outcome(
                 checkpoint_id=cp_id,
                 t1_checkpoint_id=t1_id,
@@ -255,11 +308,15 @@ class SessionManager:
                 t1_hp=t1_hp,
                 t1_gold=t1_gold,
                 t1_board_power=t1_bp,
+                t1_action=t1_act,
                 hp_delta=hp_delta,
                 gold_delta=gold_delta,
                 t2_checkpoint_id=t2_id,
                 t2_hp=t2_hp,
                 t2_hp_delta=t2_hp_delta,
+                t3_checkpoint_id=t3_id,
+                t3_hp=t3_hp,
+                t3_hp_delta=t3_hp_delta,
                 horizon_rounds=1 if t1_id else 0
             )
 
@@ -303,6 +360,22 @@ class SessionManager:
                 with open(raw_path, "r", encoding="utf-8") as f:
                     raw_st = json.load(f)
 
+            # Frame evidence
+            fe_path = os.path.join(d, "frame_evidence.json")
+            fe_dict = {}
+            if os.path.exists(fe_path):
+                with open(fe_path, "r", encoding="utf-8") as f:
+                    fe_dict = json.load(f)
+            else:
+                fe_dict = {
+                    "checkpoint_id": cp_id,
+                    "frame_index": raw_st.get("frame_index"),
+                    "timestamp_sec": raw_st.get("video_timestamp_sec"),
+                    "frame_sha256": hashlib.sha256(f"{cp_id}_{raw_st.get('video_timestamp_sec')}".encode()).hexdigest(),
+                    "screenshot_file": "checkpoint_frame.png",
+                    "is_valid": True
+                }
+
             # Prediction
             pred_path = os.path.join(d, "prediction.json")
             pred = {}
@@ -323,13 +396,22 @@ class SessionManager:
             if os.path.exists(act_path):
                 with open(act_path, "r", encoding="utf-8") as f:
                     act = json.load(f)
+            if "reviewer_id" not in act:
+                act["reviewer_id"] = "PRIMARY_REVIEWER"
 
-            # Review
+            # Primary review
             rev_path = os.path.join(s_dir, "reviews", cp_id, "human_review.json")
             rev = {}
             if os.path.exists(rev_path):
                 with open(rev_path, "r", encoding="utf-8") as f:
                     rev = json.load(f)
+
+            # Dual reviews
+            dual_files = glob.glob(os.path.join(s_dir, "reviews", cp_id, "dual_review_*.json"))
+            duals = []
+            for df in dual_files:
+                with open(df, "r", encoding="utf-8") as f:
+                    duals.append(json.load(f))
 
             # Outcome
             out_path = os.path.join(s_dir, "outcomes", cp_id, "outcome.json")
@@ -339,14 +421,16 @@ class SessionManager:
                     out = json.load(f)
 
             # Interaction log
-            ilog_path = os.path.join(s_dir, "raw", cp_id, "interaction_log.json")
+            ilog_path = os.path.join(s_dir, "interaction", cp_id, "log.json")
+            if not os.path.exists(ilog_path):
+                ilog_path = os.path.join(s_dir, "raw", cp_id, "interaction_log.json")
             ilog = {}
             if os.path.exists(ilog_path):
                 with open(ilog_path, "r", encoding="utf-8") as f:
                     ilog = json.load(f)
 
             row = DatasetRow(
-                schema_version="DECISION_DATASET_V1",
+                schema_version="DECISION_DATASET_V1_1",
                 session_id=session_id,
                 match_id=match_id,
                 checkpoint_id=cp_id,
@@ -354,10 +438,12 @@ class SessionManager:
                 frame_index=raw_st.get("frame_index"),
                 quality_flag=QualityFlagEnum.VALID.value,
                 raw_state=raw_st,
+                frame_evidence=fe_dict,
                 derived_features=feat,
                 engine_prediction=pred,
                 actual_action=act,
                 human_review=rev,
+                dual_reviews=duals,
                 t1_outcome=out,
                 interaction_log=ilog
             )
@@ -377,7 +463,7 @@ class SessionManager:
             stage=raw.stage,
             round=raw.round_num,
             stage_round=raw.stage_round,
-            player=PlayerState(gold=raw.gold, level=raw.level, xp=raw.xp, hp=raw.hp, streak=raw.streak),
+            player=PlayerState(gold=raw.gold, level=raw.level, xp=raw.xp or 0, hp=raw.hp, streak=raw.streak),
             board_units=board_u,
             bench_units=bench_u,
             shop_units=list(raw.shop_units),

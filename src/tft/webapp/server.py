@@ -1,6 +1,7 @@
 """TFT Decision Assistant FastAPI Web Server v1.1.
 
-Provides REST API endpoints and static file serving for Human Input Turn-by-Turn Decision Assistant.
+Provides REST API endpoints and static file serving for Human Input Turn-by-Turn Decision Assistant
+and Data Collection Mode (/collection).
 """
 from __future__ import annotations
 import glob
@@ -44,12 +45,16 @@ from tft.dataset_collection.models import (
     EnginePrediction,
     ActualPlayerAction,
     HumanReview,
+    DualReviewRecord,
+    FrameEvidence,
     InteractionLog
 )
 from tft.dataset_collection.session_manager import SessionManager
 from tft.dataset_collection.exporter import DatasetExporter
 from tft.dataset_collection.analyzer import DatasetAnalyzer
 from tft.dataset_collection.integrity_validator import IntegrityValidator
+from tft.dataset_collection.collection_controller import CollectionController
+from tft.dataset_collection.evidence_capture import VideoSourceValidator
 
 # Paths
 _DATA_DIR = os.path.join(_REPO, "data", "decision_assistant")
@@ -62,15 +67,19 @@ _DDRAGON_CHAMPS_DIR = os.path.join(_REPO, "data", "sets", "set18", "raw", "ddrag
 os.makedirs(_SESSIONS_DIR, exist_ok=True)
 os.makedirs(_DATASET_DIR, exist_ok=True)
 
+_engine = DecisionEngine(config=DEFAULT_DECISION_CONFIG)
+_calib_adapter = DecisionCalibrationAdapter(engine=_engine)
 _dataset_mgr = SessionManager()
 _dataset_exporter = DatasetExporter()
 _dataset_analyzer = DatasetAnalyzer()
 _integrity_validator = IntegrityValidator()
+_collection_controller = CollectionController(session_manager=_dataset_mgr)
+_video_source_validator = VideoSourceValidator(recordings_dir=_RECORDINGS_DIR)
 
 # FastAPI App
 app = FastAPI(
-    title="TFT Decision Assistant API",
-    description="Human Input GameState Decision Assistant for TFT Set 18",
+    title="TFT Decision Assistant & Dataset Collection API",
+    description="Human Input GameState Decision Assistant & Dataset Collection v1.1 for TFT Set 18",
     version="1.1.0"
 )
 
@@ -82,10 +91,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Engine & Adapter Singletons (Frozen Core)
-_engine = DecisionEngine(config=DEFAULT_DECISION_CONFIG)
-_calib_adapter = DecisionCalibrationAdapter(engine=_engine)
 
 
 # ==============================================================================
@@ -153,7 +158,6 @@ def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Invalid payload format: {str(e)}")
 
-    # Domain Validation
     is_valid, errors = GameStateBuilder.validate_input(dto)
     if not is_valid:
         raise HTTPException(
@@ -161,10 +165,8 @@ def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
             detail={"message": "GameState validation failed", "errors": errors}
         )
 
-    # Build GameState
     state = GameStateBuilder.build_game_state(dto)
 
-    # Calibration Mode
     calib_mode_str = dto.calibration_mode.upper()
     calib_mode = CalibrationMode.OFF
     if calib_mode_str == "ON":
@@ -172,11 +174,9 @@ def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
     elif calib_mode_str == "SHADOW":
         calib_mode = CalibrationMode.SHADOW
 
-    # Execute Frozen Core
     base_rec = _engine.decide(state)
     calib_res = _calib_adapter.decide(state, override_mode=calib_mode)
 
-    # Format Presentation Response
     response = DecisionPresenter.format_decision_response(
         state=state,
         rec=base_rec,
@@ -244,7 +244,6 @@ def stream_video(video_filename: str, request: Request):
             headers={"Content-Length": str(file_size), "Accept-Ranges": "bytes"}
         )
 
-    # Parse Range: bytes=START-END
     range_match = range_header.replace("bytes=", "").split("-")
     start = int(range_match[0]) if range_match[0] else 0
     end = int(range_match[1]) if len(range_match) > 1 and range_match[1] else file_size - 1
@@ -273,7 +272,7 @@ def stream_video(video_filename: str, request: Request):
 
 
 # ==============================================================================
-# 4. Session Persistence & Checkpoints
+# 4. Session Persistence & Checkpoints (Assistant Mode)
 # ==============================================================================
 
 def get_session_dir(session_id: str) -> str:
@@ -301,7 +300,6 @@ def load_session(session_id: str) -> Dict[str, Any]:
     with open(manifest_path, "r", encoding="utf-8") as f:
         manifest = json.load(f)
 
-    # Load individual turns
     turns = []
     turns_path = os.path.join(s_dir, "turns.jsonl")
     if os.path.exists(turns_path):
@@ -332,7 +330,6 @@ def save_turn(session_id: str, turn_data: Dict[str, Any]) -> Dict[str, Any]:
     with open(turns_path, "a", encoding="utf-8") as f:
         f.write(json.dumps(turn_data, ensure_ascii=False) + "\n")
 
-    # Update manifest
     manifest = {
         "session_id": session_id,
         "last_updated": time.time(),
@@ -376,7 +373,7 @@ def export_dataset(session_id: Optional[str] = None) -> List[Dict[str, Any]]:
 
 
 # ==============================================================================
-# 5. Dataset Collection REST Endpoints (DECISION_DATASET_V1)
+# 5. Dataset Collection REST Endpoints (DECISION_DATASET_V1_1)
 # ==============================================================================
 
 @app.post("/api/dataset/sessions")
@@ -455,7 +452,7 @@ def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[st
         hp=raw_dict.get("hp", 100),
         gold=raw_dict.get("gold", 0),
         level=raw_dict.get("level", 1),
-        xp=raw_dict.get("xp", 0),
+        xp=raw_dict.get("xp"),
         streak=raw_dict.get("streak", 0),
         board_units=b_units,
         bench_units=bench_u,
@@ -465,6 +462,18 @@ def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[st
         video_timestamp_sec=raw_dict.get("video_timestamp_sec"),
         frame_index=raw_dict.get("frame_index")
     )
+
+    fe_dict = payload.get("frame_evidence")
+    fe = None
+    if fe_dict:
+        fe = FrameEvidence(
+            checkpoint_id=cp_id,
+            frame_index=fe_dict.get("frame_index"),
+            timestamp_sec=fe_dict.get("timestamp_sec"),
+            frame_sha256=fe_dict.get("frame_sha256", ""),
+            screenshot_file=fe_dict.get("screenshot_file", "checkpoint_frame.png"),
+            is_valid=fe_dict.get("is_valid", True)
+        )
 
     pred_dict = payload.get("engine_prediction", {})
     prediction = EnginePrediction(
@@ -482,7 +491,9 @@ def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[st
         checkpoint_id=cp_id,
         actual_player_action=act_dict.get("actual_player_action", "UNKNOWN"),
         source=act_dict.get("source", "HUMAN_VIDEO_REVIEW"),
-        timestamp_sec=act_dict.get("timestamp_sec") or raw_dict.get("video_timestamp_sec")
+        reviewer_id=act_dict.get("reviewer_id", "PRIMARY_REVIEWER"),
+        label_timestamp_sec=act_dict.get("label_timestamp_sec") or time.time(),
+        source_frame=act_dict.get("source_frame")
     )
 
     rev_dict = payload.get("human_review", {})
@@ -490,9 +501,12 @@ def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[st
         checkpoint_id=cp_id,
         human_preferred_action=rev_dict.get("human_preferred_action", "UNKNOWN"),
         human_confidence=rev_dict.get("human_confidence", "UNKNOWN"),
-        blind_review=bool(rev_dict.get("blind_review", False)),
+        blind_review=bool(rev_dict.get("blind_review", True)),
         human_judgment=rev_dict.get("human_judgment", "UNKNOWN"),
+        rationale_category=rev_dict.get("rationale_category", "UNKNOWN"),
         notes=rev_dict.get("notes", ""),
+        reviewer_id=rev_dict.get("reviewer_id", "REVIEWER_A"),
+        review_timestamp_sec=rev_dict.get("review_timestamp_sec") or time.time(),
         source="HUMAN_INPUT"
     )
 
@@ -513,9 +527,46 @@ def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[st
         prediction=prediction,
         actual_action=actual_action,
         human_review=human_review,
+        frame_evidence=fe,
         interaction_log=ilog
     )
+
+    # Optional dual review in payload
+    if "dual_review" in payload and payload["dual_review"]:
+        dr = payload["dual_review"]
+        dual_record = DualReviewRecord(
+            checkpoint_id=cp_id,
+            reviewer_id=dr.get("reviewer_id", "REVIEWER_B"),
+            human_preferred_action=dr.get("human_preferred_action", "UNKNOWN"),
+            human_confidence=dr.get("human_confidence", "UNKNOWN"),
+            human_judgment=dr.get("human_judgment", "UNKNOWN"),
+            rationale_category=dr.get("rationale_category", "UNKNOWN"),
+            notes=dr.get("notes", ""),
+            review_timestamp_sec=dr.get("review_timestamp_sec") or time.time()
+        )
+        _dataset_mgr.save_dual_review(session_id, cp_id, dual_record)
+
     return {"status": "success", "checkpoint_id": saved_cp}
+
+
+@app.post("/api/dataset/sessions/{session_id}/dual-review")
+def submit_dual_review(session_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Submit secondary reviewer assessment for dual review tracking."""
+    cp_id = payload.get("checkpoint_id")
+    if not cp_id:
+        raise HTTPException(status_code=400, detail="checkpoint_id is required")
+    dual_record = DualReviewRecord(
+        checkpoint_id=cp_id,
+        reviewer_id=payload.get("reviewer_id", "REVIEWER_B"),
+        human_preferred_action=payload.get("human_preferred_action", "UNKNOWN"),
+        human_confidence=payload.get("human_confidence", "UNKNOWN"),
+        human_judgment=payload.get("human_judgment", "UNKNOWN"),
+        rationale_category=payload.get("rationale_category", "UNKNOWN"),
+        notes=payload.get("notes", ""),
+        review_timestamp_sec=payload.get("review_timestamp_sec") or time.time()
+    )
+    _dataset_mgr.save_dual_review(session_id, cp_id, dual_record)
+    return {"status": "success", "checkpoint_id": cp_id, "reviewer_id": dual_record.reviewer_id}
 
 
 @app.post("/api/dataset/sessions/{session_id}/finalize")
@@ -529,7 +580,6 @@ def finalize_dataset_session(session_id: str, payload: Dict[str, Any]) -> Dict[s
         final_placement=int(placement),
         notes=payload.get("notes", "")
     )
-    # Auto re-export and re-analyze
     _dataset_exporter.export_all()
     _dataset_analyzer.analyze_and_report()
     return m.to_dict()
@@ -546,9 +596,15 @@ def audit_dataset() -> Dict[str, Any]:
     return _integrity_validator.evaluate_calibration_gate(manifests, rows)
 
 
+@app.get("/api/dataset/progress")
+def get_collection_progress() -> Dict[str, Any]:
+    """Get live collection progress dashboard."""
+    return _collection_controller.get_progress_dashboard()
+
+
 @app.get("/api/dataset/export")
 def export_dataset_files() -> Dict[str, Any]:
-    """Compile and export DECISION_DATASET_V1 JSONL and CSV."""
+    """Compile and export DECISION_DATASET_V1_1 JSONL and CSV."""
     exp = _dataset_exporter.export_all()
     _dataset_analyzer.analyze_and_report()
     return exp
@@ -568,3 +624,6 @@ if os.path.exists(_FRONTEND_DIR):
     def serve_frontend_index():
         return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))
 
+    @app.get("/collection")
+    def serve_collection_index():
+        return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))

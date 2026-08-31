@@ -1,7 +1,9 @@
-"""Data Models for TFT Real Match Decision Dataset Collection v1.
+"""Data Models for TFT Real Match Decision Dataset Collection v1.1.
 
-Schema Version: DECISION_DATASET_V1
-Strict Invariant: Zero leakage of future outcomes into T0 GameState.
+Schema Version: DECISION_DATASET_V1_1
+Strict Invariants:
+- Zero leakage of future outcomes into T0 GameState.
+- Candidate and Baseline recommendations strictly hidden before human preference is registered.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field, asdict
@@ -33,6 +35,17 @@ class HumanJudgmentEnum(str, Enum):
     UNKNOWN = "UNKNOWN"
 
 
+class RationaleCategoryEnum(str, Enum):
+    BAD_STATE = "BAD_STATE"
+    BAD_ECONOMY = "BAD_ECONOMY"
+    BAD_BOARD = "BAD_BOARD"
+    BAD_UPGRADE = "BAD_UPGRADE"
+    BAD_SURVIVAL = "BAD_SURVIVAL"
+    BAD_TIMING = "BAD_TIMING"
+    OTHER = "OTHER"
+    UNKNOWN = "UNKNOWN"
+
+
 class QualityFlagEnum(str, Enum):
     VALID = "VALID"
     INCOMPLETE = "INCOMPLETE"
@@ -49,6 +62,8 @@ class VideoMetadata:
     fps: float = 60.0
     total_frames: Optional[int] = None
     duration_sec: Optional[float] = None
+    is_original_source: bool = True
+    burn_in_overlay: bool = False
 
 
 @dataclass
@@ -77,7 +92,9 @@ class SessionManifest:
             resolution=v_data.get("resolution", "1920x1080"),
             fps=float(v_data.get("fps", 60.0)),
             total_frames=v_data.get("total_frames"),
-            duration_sec=v_data.get("duration_sec")
+            duration_sec=v_data.get("duration_sec"),
+            is_original_source=v_data.get("is_original_source", True),
+            burn_in_overlay=v_data.get("burn_in_overlay", False)
         )
         return cls(
             session_id=data["session_id"],
@@ -113,7 +130,7 @@ class RawState:
     hp: int
     gold: int
     level: int
-    xp: int
+    xp: Optional[int] = None  # None/UNKNOWN allowed if not visible in video
     streak: int = 0
     board_units: List[UnitState] = field(default_factory=list)
     bench_units: List[UnitState] = field(default_factory=list)
@@ -122,6 +139,19 @@ class RawState:
     augments: List[str] = field(default_factory=list)
     video_timestamp_sec: Optional[float] = None
     frame_index: Optional[int] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class FrameEvidence:
+    checkpoint_id: str
+    frame_index: Optional[int] = None
+    timestamp_sec: Optional[float] = None
+    frame_sha256: str = ""
+    screenshot_file: str = "checkpoint_frame.png"
+    is_valid: bool = True
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -163,7 +193,9 @@ class ActualPlayerAction:
     checkpoint_id: str
     actual_player_action: str = ActionTypeEnum.UNKNOWN.value
     source: str = "HUMAN_VIDEO_REVIEW"
-    timestamp_sec: Optional[float] = None
+    reviewer_id: str = "PRIMARY_REVIEWER"
+    label_timestamp_sec: Optional[float] = None
+    source_frame: Optional[int] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -174,10 +206,29 @@ class HumanReview:
     checkpoint_id: str
     human_preferred_action: str = ActionTypeEnum.UNKNOWN.value
     human_confidence: str = HumanConfidenceEnum.UNKNOWN.value
-    blind_review: bool = False
+    blind_review: bool = True
     human_judgment: str = HumanJudgmentEnum.UNKNOWN.value
+    rationale_category: str = RationaleCategoryEnum.UNKNOWN.value
     notes: str = ""
+    reviewer_id: str = "REVIEWER_A"
+    review_timestamp_sec: Optional[float] = None
     source: str = "HUMAN_INPUT"
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class DualReviewRecord:
+    checkpoint_id: str
+    reviewer_id: str = "REVIEWER_B"
+    human_preferred_action: str = ActionTypeEnum.UNKNOWN.value
+    human_confidence: str = HumanConfidenceEnum.UNKNOWN.value
+    human_judgment: str = HumanJudgmentEnum.UNKNOWN.value
+    rationale_category: str = RationaleCategoryEnum.UNKNOWN.value
+    notes: str = ""
+    review_timestamp_sec: Optional[float] = None
+    agreement_with_primary: Optional[bool] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -191,11 +242,15 @@ class T1Outcome:
     t1_hp: Optional[int] = None
     t1_gold: Optional[int] = None
     t1_board_power: Optional[float] = None
+    t1_action: Optional[str] = None
     hp_delta: Optional[int] = None
     gold_delta: Optional[int] = None
     t2_checkpoint_id: Optional[str] = None
     t2_hp: Optional[int] = None
     t2_hp_delta: Optional[int] = None
+    t3_checkpoint_id: Optional[str] = None
+    t3_hp: Optional[int] = None
+    t3_hp_delta: Optional[int] = None
     horizon_rounds: int = 1
 
     def to_dict(self) -> Dict[str, Any]:
@@ -209,6 +264,7 @@ class InteractionLog:
     manual_inputs_count: int = 0
     time_spent_sec: float = 0.0
     events: List[Dict[str, Any]] = field(default_factory=list)
+    reviewer_id: str = "REVIEWER_A"
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -216,7 +272,7 @@ class InteractionLog:
 
 @dataclass
 class DatasetRow:
-    schema_version: str = "DECISION_DATASET_V1"
+    schema_version: str = "DECISION_DATASET_V1_1"
     session_id: str = ""
     match_id: str = ""
     checkpoint_id: str = ""
@@ -224,10 +280,12 @@ class DatasetRow:
     frame_index: Optional[int] = None
     quality_flag: str = QualityFlagEnum.VALID.value
     raw_state: Dict[str, Any] = field(default_factory=dict)
+    frame_evidence: Dict[str, Any] = field(default_factory=dict)
     derived_features: Dict[str, Any] = field(default_factory=dict)
     engine_prediction: Dict[str, Any] = field(default_factory=dict)
     actual_action: Dict[str, Any] = field(default_factory=dict)
     human_review: Dict[str, Any] = field(default_factory=dict)
+    dual_reviews: List[Dict[str, Any]] = field(default_factory=list)
     t1_outcome: Dict[str, Any] = field(default_factory=dict)
     interaction_log: Dict[str, Any] = field(default_factory=dict)
 

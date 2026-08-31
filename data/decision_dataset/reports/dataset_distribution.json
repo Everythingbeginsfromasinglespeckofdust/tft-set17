@@ -44,5 +44,8 @@
     "GOOD": 19,
     "QUESTIONABLE": 1
   },
+  "rationale_distribution": {
+    "UNKNOWN": 20
+  },
   "imbalance_warning": false
 }
