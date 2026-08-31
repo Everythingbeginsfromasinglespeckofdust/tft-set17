@@ -1,8 +1,8 @@
-"""TFT Decision Assistant Human Input Adapter & GameState Builder v1.
+"""TFT Decision Assistant Human Input Adapter & GameState Builder v1.1.
 
 Provides:
 - HumanInputDTO & validation rules against Set 18 domain.
-- GameStateBuilder: constructs canonical GameState from human input.
+- GameStateBuilder: constructs canonical GameState from human input, with completeness calculation.
 - DecisionPresenter: formats Frozen DecisionEngine outputs, score breakdowns, explanations, and structured Direction.
 - TurnDiffCalculator: computes differences between consecutive game turns.
 """
@@ -39,7 +39,6 @@ def load_set18_champions_roster() -> Dict[str, Dict[str, Any]]:
         name = c.get("name", "")
         if name:
             roster[name] = c
-            # Also allow lowercase / clean lookup
             roster[name.lower()] = c
     return roster
 
@@ -77,7 +76,7 @@ class UnitInputDTO:
 
 @dataclass
 class HumanInputDTO:
-    """Turn-by-turn human game state input DTO."""
+    """Turn-by-turn human game state input DTO v1.1."""
     stage_round: str = "2-1"
     hp: int = 100
     gold: int = 0
@@ -93,38 +92,50 @@ class HumanInputDTO:
     video_timestamp_sec: Optional[float] = None
     actual_player_action: Optional[str] = "UNKNOWN"
     human_preferred_action: Optional[str] = "UNKNOWN"
+    human_feedback: Optional[str] = "UNKNOWN"
+    human_judgment: Optional[str] = "UNKNOWN"
     notes: str = ""
+
+    def __post_init__(self):
+        if self.human_feedback != "UNKNOWN" and self.human_judgment == "UNKNOWN":
+            self.human_judgment = self.human_feedback
+        elif self.human_judgment != "UNKNOWN" and self.human_feedback == "UNKNOWN":
+            self.human_feedback = self.human_judgment
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "HumanInputDTO":
         board_raw = data.get("board_units", [])
         bench_raw = data.get("bench_units", [])
 
-        b_units = [
-            UnitInputDTO(
-                champion=u.get("champion", ""),
-                cost=u.get("cost"),
-                star_level=int(u.get("star_level", 1)),
-                items=list(u.get("items", [])),
-                position_row=u.get("position_row"),
-                position_col=u.get("position_col"),
-                slot_index=u.get("slot_index"),
-                is_bench=False
-            )
-            for u in board_raw if u.get("champion")
-        ]
+        b_units = []
+        for u in board_raw:
+            if isinstance(u, dict) and u.get("champion"):
+                b_units.append(UnitInputDTO(
+                    champion=str(u["champion"]).strip(),
+                    cost=u.get("cost"),
+                    star_level=int(u.get("star_level", 1)),
+                    items=list(u.get("items", [])),
+                    position_row=u.get("position_row"),
+                    position_col=u.get("position_col"),
+                    slot_index=u.get("slot_index"),
+                    is_bench=False
+                ))
+            elif isinstance(u, UnitInputDTO):
+                b_units.append(u)
 
-        bench_units = [
-            UnitInputDTO(
-                champion=u.get("champion", ""),
-                cost=u.get("cost"),
-                star_level=int(u.get("star_level", 1)),
-                items=list(u.get("items", [])),
-                slot_index=u.get("slot_index"),
-                is_bench=True
-            )
-            for u in bench_raw if u.get("champion")
-        ]
+        bench_units = []
+        for u in bench_raw:
+            if isinstance(u, dict) and u.get("champion"):
+                bench_units.append(UnitInputDTO(
+                    champion=str(u["champion"]).strip(),
+                    cost=u.get("cost"),
+                    star_level=int(u.get("star_level", 1)),
+                    items=list(u.get("items", [])),
+                    slot_index=u.get("slot_index"),
+                    is_bench=True
+                ))
+            elif isinstance(u, UnitInputDTO):
+                bench_units.append(u)
 
         shop_raw = data.get("shop_units", [None] * 5)
         cleaned_shop = []
@@ -135,6 +146,8 @@ class HumanInputDTO:
                 cleaned_shop.append(None)
         while len(cleaned_shop) < 5:
             cleaned_shop.append(None)
+
+        fb = data.get("human_feedback") or data.get("human_judgment") or "UNKNOWN"
 
         return cls(
             stage_round=str(data.get("stage_round", "2-1")).strip(),
@@ -152,6 +165,8 @@ class HumanInputDTO:
             video_timestamp_sec=float(data["video_timestamp_sec"]) if data.get("video_timestamp_sec") is not None else None,
             actual_player_action=data.get("actual_player_action", "UNKNOWN"),
             human_preferred_action=data.get("human_preferred_action", "UNKNOWN"),
+            human_feedback=fb,
+            human_judgment=fb,
             notes=str(data.get("notes", ""))
         )
 
@@ -184,21 +199,46 @@ class GameStateBuilder:
 
         # 4. Champion validation against Set 18
         for u in dto.board_units + dto.bench_units:
-            champ_key = u.champion.strip()
-            if champ_key not in SET18_CHAMPIONS and champ_key.lower() not in SET18_CHAMPIONS:
-                errors.append(f"Champion '{u.champion}' is not in Set 18 roster.")
-            if u.star_level not in (1, 2, 3):
-                errors.append(f"Invalid star level {u.star_level} for {u.champion} (must be 1, 2, or 3).")
-            if len(u.items) > 3:
-                errors.append(f"Champion {u.champion} has {len(u.items)} items (max 3 allowed).")
+            champ_name = u.champion.strip() if hasattr(u, "champion") else u.get("champion", "").strip()
+            if champ_name not in SET18_CHAMPIONS and champ_name.lower() not in SET18_CHAMPIONS:
+                errors.append(f"Champion '{champ_name}' is not in Set 18 roster.")
+            star = u.star_level if hasattr(u, "star_level") else u.get("star_level", 1)
+            if star not in (1, 2, 3):
+                errors.append(f"Invalid star level {star} for {champ_name} (must be 1, 2, or 3).")
+            items = u.items if hasattr(u, "items") else u.get("items", [])
+            if len(items) > 3:
+                errors.append(f"Champion {champ_name} has {len(items)} items (max 3 allowed).")
 
         # 5. Shop validation
         for s in dto.shop_units:
-            if s is not None and s.strip():
-                if s.strip() not in SET18_CHAMPIONS and s.strip().lower() not in SET18_CHAMPIONS:
-                    errors.append(f"Shop champion '{s}' is not in Set 18 roster.")
+            if s is not None and str(s).strip() and str(s).upper() != "EMPTY":
+                s_name = str(s).strip()
+                if s_name not in SET18_CHAMPIONS and s_name.lower() not in SET18_CHAMPIONS:
+                    errors.append(f"Shop champion '{s_name}' is not in Set 18 roster.")
 
         return len(errors) == 0, errors
+
+    @staticmethod
+    def calculate_completeness(dto: HumanInputDTO) -> Dict[str, Any]:
+        """Calculates state entry completeness metrics."""
+        checklist = {
+            "stage": bool(dto.stage_round and re.match(r"^[1-8]-[1-7]$", dto.stage_round)),
+            "hp": dto.hp > 0,
+            "gold": dto.gold >= 0,
+            "level": dto.level >= 1,
+            "xp": dto.xp >= 0,
+            "board": len(dto.board_units) > 0,
+            "bench": True, # Bench can be empty
+            "shop": len(dto.shop_units) == 5
+        }
+        score = sum(1 for v in checklist.values() if v)
+        total = len(checklist)
+        return {
+            "score": score,
+            "total": total,
+            "percentage": round((score / total) * 100, 1),
+            "checklist": checklist
+        }
 
     @staticmethod
     def build_game_state(dto: HumanInputDTO) -> GameState:
@@ -217,38 +257,45 @@ class GameStateBuilder:
 
         board_units: List[Unit] = []
         for u in dto.board_units:
-            c_meta = SET18_CHAMPIONS.get(u.champion) or SET18_CHAMPIONS.get(u.champion.lower(), {})
-            cost = u.cost or c_meta.get("cost", 1)
+            name = u.champion if hasattr(u, "champion") else u.get("champion", "")
+            c_meta = SET18_CHAMPIONS.get(name) or SET18_CHAMPIONS.get(name.lower(), {})
+            cost = getattr(u, "cost", None) or c_meta.get("cost", 1)
+            star = getattr(u, "star_level", 1)
+            items = list(getattr(u, "items", []))
             pos = None
-            if u.position_row is not None and u.position_col is not None:
-                pos = BoardPosition(row=u.position_row, col=u.position_col)
+            if hasattr(u, "position_row") and u.position_row is not None:
+                pos = BoardPosition(row=u.position_row, col=u.position_col or 0)
             board_units.append(Unit(
-                champion=c_meta.get("name", u.champion),
+                champion=c_meta.get("name", name),
                 cost=cost,
-                star_level=u.star_level,
-                items=list(u.items),
+                star_level=star,
+                items=items,
                 position=pos,
                 is_bench=False
             ))
 
         bench_units: List[Unit] = []
         for u in dto.bench_units:
-            c_meta = SET18_CHAMPIONS.get(u.champion) or SET18_CHAMPIONS.get(u.champion.lower(), {})
-            cost = u.cost or c_meta.get("cost", 1)
+            name = u.champion if hasattr(u, "champion") else u.get("champion", "")
+            c_meta = SET18_CHAMPIONS.get(name) or SET18_CHAMPIONS.get(name.lower(), {})
+            cost = getattr(u, "cost", None) or c_meta.get("cost", 1)
+            star = getattr(u, "star_level", 1)
+            items = list(getattr(u, "items", []))
             bench_units.append(Unit(
-                champion=c_meta.get("name", u.champion),
+                champion=c_meta.get("name", name),
                 cost=cost,
-                star_level=u.star_level,
-                items=list(u.items),
-                slot_index=u.slot_index,
+                star_level=star,
+                items=items,
+                slot_index=getattr(u, "slot_index", None),
                 is_bench=True
             ))
 
         shop_units: List[Optional[str]] = []
         for s in dto.shop_units[:5]:
-            if s:
-                c_meta = SET18_CHAMPIONS.get(s) or SET18_CHAMPIONS.get(s.lower(), {})
-                shop_units.append(c_meta.get("name", s))
+            if s and str(s).strip() and str(s).upper() != "EMPTY":
+                s_clean = str(s).strip()
+                c_meta = SET18_CHAMPIONS.get(s_clean) or SET18_CHAMPIONS.get(s_clean.lower(), {})
+                shop_units.append(c_meta.get("name", s_clean))
             else:
                 shop_units.append(None)
         while len(shop_units) < 5:

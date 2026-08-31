@@ -10,6 +10,12 @@ _SRC = os.path.join(_HERE, "src")
 if _SRC not in sys.path:
     sys.path.insert(0, _SRC)
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 def main():
     parser = argparse.ArgumentParser(description="TFT Decision Assistant Web Application")
@@ -20,7 +26,7 @@ def main():
 
     url = f"http://{args.host}:{args.port}"
     print("=" * 80)
-    print(f"🚀 TFT Decision Assistant Web v1 running at: {url}")
+    print(f"[*] TFT Decision Assistant Web v1 running at: {url}")
     print("=" * 80)
 
     if not args.no_browser:

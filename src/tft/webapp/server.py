@@ -1,4 +1,4 @@
-"""TFT Decision Assistant FastAPI Web Server v1.
+"""TFT Decision Assistant FastAPI Web Server v1.1.
 
 Provides REST API endpoints and static file serving for Human Input Turn-by-Turn Decision Assistant.
 """
@@ -43,14 +43,15 @@ _DATA_DIR = os.path.join(_REPO, "data", "decision_assistant")
 _SESSIONS_DIR = os.path.join(_DATA_DIR, "sessions")
 _RECORDINGS_DIR = r"C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings"
 _FRONTEND_DIR = os.path.join(_HERE, "frontend")
+_DDRAGON_IMG_DIR = os.path.join(_REPO, "TFT_DDragon", "img")
 
 os.makedirs(_SESSIONS_DIR, exist_ok=True)
 os.makedirs(_FRONTEND_DIR, exist_ok=True)
 
 app = FastAPI(
-    title="TFT Decision Assistant API",
+    title="TFT Decision Assistant API v1.1",
     description="Human Input -> GameState -> Frozen DecisionEngine Assistant",
-    version="1.0.0"
+    version="1.1.0"
 )
 
 # CORS
@@ -107,6 +108,19 @@ def get_augments() -> List[Dict[str, Any]]:
 # 2. Decision Engine Analysis Endpoint
 # ==============================================================================
 
+@app.post("/api/validate")
+def validate_draft_state(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Real-time validation & completeness calculation on draft state."""
+    dto = HumanInputDTO.from_dict(payload)
+    is_valid, errors = GameStateBuilder.validate_input(dto)
+    completeness = GameStateBuilder.calculate_completeness(dto)
+    return {
+        "is_valid": is_valid,
+        "errors": errors,
+        "completeness": completeness
+    }
+
+
 @app.post("/api/decide")
 def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
     """Validate Human Input DTO, build GameState, execute DecisionEngine and return Recommendation."""
@@ -149,9 +163,15 @@ def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
     # Include input metadata
     response["input_metadata"] = {
         "stage_round": dto.stage_round,
+        "hp": dto.hp,
+        "gold": dto.gold,
+        "level": dto.level,
+        "xp": dto.xp,
         "video_timestamp_sec": dto.video_timestamp_sec,
         "actual_player_action": dto.actual_player_action,
         "human_preferred_action": dto.human_preferred_action,
+        "human_feedback": dto.human_feedback,
+        "human_judgment": dto.human_judgment,
         "notes": dto.notes
     }
 
@@ -205,7 +225,6 @@ def stream_video(filename: str, request: Request):
     range_header = request.headers.get("range")
 
     if range_header:
-        # Example: "bytes=1000-2000"
         byte_range = range_header.replace("bytes=", "").split("-")
         start = int(byte_range[0])
         end = int(byte_range[1]) if byte_range[1] else file_size - 1
@@ -288,7 +307,8 @@ def save_session(payload: Dict[str, Any]) -> Dict[str, Any]:
                 "stage_round": t.get("stage_round"),
                 "actual_player_action": t.get("actual_player_action", "UNKNOWN"),
                 "human_preferred_action": t.get("human_preferred_action", "UNKNOWN"),
-                "human_feedback": t.get("human_feedback", "UNKNOWN"),
+                "human_feedback": t.get("human_feedback") or t.get("human_judgment") or "UNKNOWN",
+                "human_judgment": t.get("human_judgment") or t.get("human_feedback") or "UNKNOWN",
                 "notes": t.get("notes", ""),
                 "reviewed_at_iso": t.get("reviewed_at_iso", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
             }
@@ -359,6 +379,7 @@ def export_dataset() -> Dict[str, Any]:
                         if not line.strip():
                             continue
                         t_data = json.loads(line.strip())
+                        fb = t_data.get("human_feedback") or t_data.get("human_judgment") or "UNKNOWN"
                         export_row = {
                             "session_id": os.path.basename(s_dir),
                             "turn_id": t_data.get("turn_id"),
@@ -370,7 +391,7 @@ def export_dataset() -> Dict[str, Any]:
                             "engine_recommendation": t_data.get("decision", {}).get("recommended_action"),
                             "action_score_gap": t_data.get("decision", {}).get("action_score_gap"),
                             "score_breakdown": t_data.get("decision", {}).get("all_scores"),
-                            "human_judgment": t_data.get("human_feedback", "UNKNOWN"),
+                            "human_judgment": fb,
                             "notes": t_data.get("notes", "")
                         }
                         out.write(json.dumps(export_row, ensure_ascii=False) + "\n")
@@ -384,8 +405,11 @@ def export_dataset() -> Dict[str, Any]:
 
 
 # ==============================================================================
-# 6. Static Frontend Mount
+# 6. Static Mounts
 # ==============================================================================
+
+if os.path.exists(_DDRAGON_IMG_DIR):
+    app.mount("/img", StaticFiles(directory=_DDRAGON_IMG_DIR), name="img")
 
 if os.path.exists(_FRONTEND_DIR):
     app.mount("/static", StaticFiles(directory=_FRONTEND_DIR), name="static")
@@ -395,4 +419,4 @@ def serve_index():
     idx_path = os.path.join(_FRONTEND_DIR, "index.html")
     if os.path.exists(idx_path):
         return FileResponse(idx_path)
-    return {"message": "TFT Decision Assistant API is active. Frontend index.html not yet generated."}
+    return {"message": "TFT Decision Assistant API is active."}

@@ -3,156 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TFT Decision Assistant Web v1</title>
+  <title>TFT Decision Assistant Web v1.1 - Fast Manual Input</title>
   <link rel="stylesheet" href="/static/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
-  <!-- Top App Navigation -->
-  <header class="app-header">
-    <div class="header-left">
-      <div class="brand">
-        <span class="brand-icon">⚡</span>
-        <span class="brand-name">TFT Decision Assistant</span>
-        <span class="brand-badge">Set 18 Frozen</span>
+  <!-- Pinned Top Status Bar -->
+  <header class="top-status-bar" id="top-status-bar">
+    <div class="status-brand">
+      <span class="status-logo">⚡</span>
+      <span class="status-app-title">TFT ASSISTANT</span>
+      <span class="status-badge">Set 18 Frozen</span>
+    </div>
+
+    <!-- Live Synced Status Indicators -->
+    <div class="status-indicators">
+      <div class="status-chip status-stage">
+        <span class="chip-label">STAGE</span>
+        <span class="chip-val" id="top-bar-stage">2-1</span>
       </div>
-      <div class="session-info">
-        <span class="session-label">Session:</span>
-        <input type="text" id="session-id-input" class="session-input" value="SESSION_LIVE_001">
-        <button class="btn btn-sm btn-ghost" id="btn-save-session" title="Save Session">💾 Save Session</button>
-        <button class="btn btn-sm btn-ghost" id="btn-load-session-modal" title="Load Session">📂 Load</button>
-        <button class="btn btn-sm btn-ghost" id="btn-export-dataset" title="Export Dataset">📊 Export Dataset</button>
+      <div class="status-chip status-hp">
+        <span class="chip-label">HP</span>
+        <span class="chip-val" id="top-bar-hp">100</span>
+      </div>
+      <div class="status-chip status-gold">
+        <span class="chip-label">GOLD</span>
+        <span class="chip-val" id="top-bar-gold">30</span>
+      </div>
+      <div class="status-chip status-lvl">
+        <span class="chip-label">LVL</span>
+        <span class="chip-val" id="top-bar-level">4</span>
+      </div>
+      <div class="status-chip status-xp">
+        <span class="chip-label">XP</span>
+        <span class="chip-val" id="top-bar-xp">0</span>
+      </div>
+      <div class="status-chip status-comp">
+        <span class="chip-label">COMPLETE</span>
+        <span class="chip-val" id="top-bar-completeness">7/8 ✓</span>
       </div>
     </div>
-    <div class="header-right">
-      <div class="calib-toggle">
-        <span class="calib-label">Calibration:</span>
-        <select id="calib-mode-select" class="form-select-sm">
-          <option value="OFF" selected>OFF (Base Frozen)</option>
-          <option value="SHADOW">SHADOW (Logged)</option>
-          <option value="ON">ON (CALIB_C Active)</option>
-        </select>
+
+    <!-- Top Action Controls -->
+    <div class="status-actions">
+      <div class="session-ctrl">
+        <input type="text" id="session-id-input" class="session-input" value="SESSION_LIVE_001" title="Session ID">
+        <button class="btn btn-xs btn-ghost" id="btn-save-session" title="Save Session">💾 Save</button>
       </div>
-      <button class="btn btn-sm btn-outline" id="btn-toggle-video" title="Open Video Assistant">🎬 Video Assistant</button>
-      <button class="btn btn-sm btn-ghost" id="btn-shortcuts-modal" title="View Shortcuts">⌨️ [?]</button>
+      <select id="calib-mode-select" class="form-select-xs" title="Calibration Mode">
+        <option value="OFF" selected>Calib: OFF</option>
+        <option value="SHADOW">Calib: SHADOW</option>
+        <option value="ON">Calib: ON</option>
+      </select>
+      <button class="btn btn-xs btn-outline" id="btn-toggle-video" title="Open Video Replay Assistant">🎬 Video</button>
+      <button class="btn btn-xs btn-ghost" id="btn-shortcuts-modal" title="View Shortcuts">⌨️</button>
     </div>
   </header>
 
-  <!-- Main Container: 2-Column Responsive Workspace -->
-  <main class="workspace-container">
+  <!-- Main 2-Column Responsive Workspace -->
+  <main class="app-workspace">
     
-    <!-- LEFT COLUMN: Human Input & State Editor -->
-    <section class="panel input-column">
-      <div class="panel-header">
-        <h2>🎮 Current Game State</h2>
-        <div class="panel-actions">
-          <button class="btn btn-xs btn-outline" id="btn-copy-prev" title="Copy Previous Turn (P)">📋 Copy Prev [P]</button>
-          <button class="btn btn-xs btn-ghost" id="btn-new-turn" title="Reset to New Turn (N)">➕ New [N]</button>
+    <!-- LEFT PANEL: SET 18 CHAMPION POOL (Always Visible) -->
+    <aside class="panel champion-pool-panel">
+      <div class="pool-header">
+        <div class="pool-title-row">
+          <h3>♟️ SET 18 CHAMPIONS</h3>
+          <span class="target-indicator-badge" id="active-target-badge">TARGET: BOARD</span>
         </div>
-      </div>
+        
+        <!-- Target Selection Tabs -->
+        <div class="target-selector-row">
+          <span class="target-label">ADD TO:</span>
+          <button class="target-tab active" data-target="board" id="tab-target-board">BOARD ✓</button>
+          <button class="target-tab" data-target="bench" id="tab-target-bench">BENCH</button>
+          <button class="target-tab" data-target="shop" id="tab-target-shop">SHOP</button>
+        </div>
 
-      <!-- State Steppers (HP, Gold, Level, XP, Stage) -->
-      <div class="steppers-grid">
-        <!-- Stage / Round -->
-        <div class="stepper-card">
-          <span class="stepper-label">Stage</span>
-          <div class="stepper-row">
-            <button class="step-btn" id="btn-stage-prev">◀</button>
-            <input type="text" id="input-stage" class="stepper-value stage-val" value="2-1">
-            <button class="step-btn" id="btn-stage-next">▶</button>
+        <!-- Quick Cost Filters & Search -->
+        <div class="pool-filter-row">
+          <div class="cost-filter-group">
+            <button class="filter-pill active" data-cost="all">ALL</button>
+            <button class="filter-pill cost-1" data-cost="1">1G</button>
+            <button class="filter-pill cost-2" data-cost="2">2G</button>
+            <button class="filter-pill cost-3" data-cost="3">3G</button>
+            <button class="filter-pill cost-4" data-cost="4">4G</button>
+            <button class="filter-pill cost-5" data-cost="5">5G</button>
           </div>
+          <input type="text" id="champ-quick-search" class="search-mini" placeholder="Quick filter...">
         </div>
 
-        <!-- HP -->
-        <div class="stepper-card">
-          <span class="stepper-label">HP</span>
-          <div class="stepper-row">
-            <button class="step-btn" id="btn-hp-m10">-10</button>
-            <button class="step-btn" id="btn-hp-m1">-1</button>
-            <input type="number" id="input-hp" class="stepper-value hp-val" value="100" min="0" max="150">
-            <button class="step-btn" id="btn-hp-p1">+1</button>
-            <button class="step-btn" id="btn-hp-p10">+10</button>
-          </div>
-        </div>
-
-        <!-- Gold -->
-        <div class="stepper-card">
-          <span class="stepper-label">Gold</span>
-          <div class="stepper-row">
-            <button class="step-btn" id="btn-gold-m10">-10</button>
-            <button class="step-btn" id="btn-gold-m5">-5</button>
-            <input type="number" id="input-gold" class="stepper-value gold-val" value="30" min="0" max="250">
-            <button class="step-btn" id="btn-gold-p5">+5</button>
-            <button class="step-btn" id="btn-gold-p10">+10</button>
-          </div>
-        </div>
-
-        <!-- Level & XP -->
-        <div class="stepper-card">
-          <span class="stepper-label">Level / XP</span>
-          <div class="stepper-row">
-            <button class="step-btn" id="btn-lvl-m1">-1</button>
-            <input type="number" id="input-level" class="stepper-value lvl-val" value="4" min="1" max="11" title="Level">
-            <button class="step-btn" id="btn-lvl-p1">+1</button>
-            <span class="divider">/</span>
-            <input type="number" id="input-xp" class="stepper-value xp-val" value="0" min="0" max="200" title="XP">
-            <button class="step-btn" id="btn-xp-p4">+4</button>
+        <!-- Recent Champions Bar -->
+        <div class="recent-champs-row" id="recent-champs-container">
+          <span class="recent-label">RECENTS:</span>
+          <div class="recent-chips" id="recent-chips-list">
+            <span class="no-recents">None yet</span>
           </div>
         </div>
       </div>
 
-      <!-- Shop Section (5 Slots) -->
-      <div class="section-card shop-section">
-        <div class="section-title-row">
-          <h3>🛒 Shop Slots (5 Cards)</h3>
-          <button class="btn btn-xs btn-ghost" id="btn-clear-shop">Clear Shop</button>
-        </div>
-        <div class="shop-slots-grid" id="shop-slots-container">
-          <!-- 5 Dynamic Shop Slots -->
-        </div>
+      <!-- Full Champion Roster Grid (64 Champions) -->
+      <div class="champion-grid-scroll" id="champion-pool-grid">
+        <!-- Dynamic Champion Cards -->
       </div>
+    </aside>
 
-      <!-- Board Units Section -->
-      <div class="section-card board-section">
-        <div class="section-title-row">
-          <h3>♟️ Board Units (<span id="board-count">0</span> / <span id="board-max">4</span>)</h3>
-          <button class="btn btn-xs btn-primary" id="btn-add-board-unit">+ Add Board Unit</button>
-        </div>
-        <div class="units-list" id="board-units-list">
-          <div class="empty-units-notice">No units on board. Click [+ Add Board Unit]</div>
-        </div>
-      </div>
-
-      <!-- Bench Units Section -->
-      <div class="section-card bench-section">
-        <div class="section-title-row">
-          <h3>🪑 Bench Units (<span id="bench-count">0</span> / 9)</h3>
-          <button class="btn btn-xs btn-outline" id="btn-add-bench-unit">+ Add Bench Unit</button>
-        </div>
-        <div class="units-list" id="bench-units-list">
-          <div class="empty-units-notice">Bench empty</div>
-        </div>
-      </div>
-
-      <!-- Optional Items & Augments (Expandable) -->
-      <details class="section-card optional-section">
-        <summary>🎒 Item Bench & Augments (Optional)</summary>
-        <div class="optional-content">
-          <div class="form-group">
-            <label>Item Bench (comma separated or search):</label>
-            <input type="text" id="input-item-bench" class="form-input" placeholder="e.g. B.F. Sword, Needlessly Large Rod">
-          </div>
-          <div class="form-group">
-            <label>Augments:</label>
-            <input type="text" id="input-augments" class="form-input" placeholder="e.g. Rich Get Richer, Clear Mind">
+    <!-- RIGHT PANEL: CURRENT STATE & DECISION ASSISTANT -->
+    <section class="panel state-decision-panel">
+      
+      <!-- Quick State Controls -->
+      <div class="state-controls-card">
+        <div class="state-controls-header">
+          <h2>⚙️ Turn State Input</h2>
+          <div class="state-quick-actions">
+            <button class="btn btn-xs btn-outline" id="btn-undo-draft" title="Undo Last Draft Change">↩️ Undo</button>
+            <button class="btn btn-xs btn-outline" id="btn-copy-prev" title="Copy Previous Turn (P)">📋 Copy Prev [P]</button>
+            <button class="btn btn-xs btn-ghost" id="btn-new-turn" title="Reset Current Turn (N)">➕ Reset [N]</button>
           </div>
         </div>
-      </details>
 
-      <!-- Main Action Controls -->
-      <div class="main-actions-bar">
+        <!-- Steppers Grid -->
+        <div class="steppers-bar">
+          <!-- Stage -->
+          <div class="stepper-box">
+            <span class="stepper-title">STAGE</span>
+            <div class="stepper-inputs">
+              <button class="step-btn" id="btn-stage-prev">◀</button>
+              <input type="text" id="input-stage" class="stepper-num stage-num" value="2-1">
+              <button class="step-btn" id="btn-stage-next">▶</button>
+            </div>
+          </div>
+
+          <!-- HP -->
+          <div class="stepper-box">
+            <span class="stepper-title">HP (0-100)</span>
+            <div class="stepper-inputs">
+              <button class="step-btn" id="btn-hp-m10">-10</button>
+              <button class="step-btn" id="btn-hp-m1">-1</button>
+              <input type="number" id="input-hp" class="stepper-num hp-num" value="100" min="0" max="100">
+              <button class="step-btn" id="btn-hp-p1">+1</button>
+              <button class="step-btn" id="btn-hp-p10">+10</button>
+            </div>
+          </div>
+
+          <!-- Gold -->
+          <div class="stepper-box">
+            <span class="stepper-title">GOLD</span>
+            <div class="stepper-inputs">
+              <button class="step-btn" id="btn-gold-m10">-10</button>
+              <button class="step-btn" id="btn-gold-m5">-5</button>
+              <input type="number" id="input-gold" class="stepper-num gold-num" value="30" min="0" max="250">
+              <button class="step-btn" id="btn-gold-p5">+5</button>
+              <button class="step-btn" id="btn-gold-p10">+10</button>
+            </div>
+          </div>
+
+          <!-- Level & XP -->
+          <div class="stepper-box">
+            <span class="stepper-title">LVL / XP</span>
+            <div class="stepper-inputs">
+              <button class="step-btn" id="btn-lvl-m1">-1</button>
+              <input type="number" id="input-level" class="stepper-num lvl-num" value="4" min="1" max="11">
+              <button class="step-btn" id="btn-lvl-p1">+1</button>
+              <span class="sep">/</span>
+              <input type="number" id="input-xp" class="stepper-num xp-num" value="0" min="0" max="200">
+              <button class="step-btn" id="btn-xp-p4">+4</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Board, Bench & Shop Quick Editor Rows -->
+      <div class="units-editor-grid">
+        
+        <!-- Board Units -->
+        <div class="unit-zone-card">
+          <div class="zone-header">
+            <span class="zone-title">♟️ BOARD (<span id="board-count">0</span> / <span id="board-max">4</span>)</span>
+            <button class="btn btn-xs btn-primary" id="btn-select-target-board">+ Add To Board</button>
+          </div>
+          <div class="units-chip-container" id="board-units-chips">
+            <span class="empty-hint">Click champions in the pool on left to add to Board</span>
+          </div>
+        </div>
+
+        <!-- Bench Units -->
+        <div class="unit-zone-card">
+          <div class="zone-header">
+            <span class="zone-title">🪑 BENCH (<span id="bench-count">0</span> / 9)</span>
+            <button class="btn btn-xs btn-outline" id="btn-select-target-bench">+ Add To Bench</button>
+          </div>
+          <div class="units-chip-container" id="bench-units-chips">
+            <span class="empty-hint">Bench empty</span>
+          </div>
+        </div>
+
+        <!-- Shop (5 Slots) -->
+        <div class="unit-zone-card shop-zone-card">
+          <div class="zone-header">
+            <span class="zone-title">🛒 SHOP (5 Slots)</span>
+            <button class="btn btn-xs btn-ghost" id="btn-clear-shop">Clear Shop</button>
+          </div>
+          <div class="shop-slots-row" id="shop-slots-container">
+            <!-- 5 Slots -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action & Analyze Button -->
+      <div class="analyze-action-bar">
         <button class="btn btn-lg btn-accent" id="btn-analyze">
           🚀 ANALYZE TURN <span class="kbd-hint">[Enter]</span>
         </button>
@@ -161,16 +222,12 @@
         </button>
       </div>
 
-      <!-- Validation Errors Box -->
+      <!-- Validation Error Box -->
       <div class="error-banner hidden" id="validation-error-box">
         <div class="error-title">⚠️ Validation Error</div>
         <ul id="validation-errors-list"></ul>
       </div>
-    </section>
 
-    <!-- RIGHT COLUMN: Decision Engine Output & Direction -->
-    <section class="panel output-column">
-      
       <!-- Blind Mode Obscurity Card -->
       <div class="blind-card hidden" id="blind-mode-banner">
         <div class="blind-header">
@@ -193,27 +250,27 @@
         </div>
       </div>
 
-      <!-- Recommendation View -->
+      <!-- Decision Engine Results View -->
       <div class="decision-container" id="decision-results-view">
         <div class="empty-state-card" id="decision-empty-state">
           <span class="empty-state-icon">💡</span>
           <h3>Ready for Analysis</h3>
-          <p>Enter current turn state and click <strong>[ANALYZE TURN]</strong> (or press <code>Enter</code>).</p>
+          <p>Click <strong>[ANALYZE TURN]</strong> or press <kbd>Enter</kbd> to execute Frozen DecisionEngine.</p>
         </div>
 
         <div class="decision-content hidden" id="decision-active-content">
           
-          <!-- Top Recommendation Banner -->
+          <!-- Recommendation Banner -->
           <div class="rec-banner" id="rec-banner">
             <div class="rec-header">
               <span class="rec-tag">RECOMMENDED ACTION</span>
-              <span class="rec-margin-badge" id="rec-gap-badge">Gap: +0.000</span>
+              <span class="rec-margin-badge" id="rec-gap-badge">Gap: +0.0000</span>
             </div>
             <div class="rec-action-display" id="rec-action-name">SAVE_GOLD</div>
             <div class="rec-sub-row">
-              <span class="rec-score">Score: <strong id="rec-score-val">0.000</strong></span>
+              <span class="rec-score">Score: <strong id="rec-score-val">0.0000</strong></span>
               <span class="rec-conf">Confidence: <strong id="rec-conf-val">0.50</strong></span>
-              <span class="rec-engine-tag" id="rec-engine-tag">Base Engine</span>
+              <span class="rec-engine-tag" id="rec-engine-tag">Frozen Base Engine</span>
             </div>
           </div>
 
@@ -226,7 +283,7 @@
             <div class="direction-body">
               <div class="dir-block dir-now">
                 <span class="dir-label">NOW:</span>
-                <span class="dir-text" id="dir-now-text">Execute recommended action.</span>
+                <span class="dir-text" id="dir-now-text">Execute action.</span>
               </div>
               <div class="dir-block dir-watch">
                 <span class="dir-label">WATCH:</span>
@@ -241,12 +298,10 @@
             </div>
           </div>
 
-          <!-- Comparative Reasons ("Why?") -->
+          <!-- Decision Rationale ("Why?") -->
           <div class="reasons-card">
             <div class="card-title">🔍 Decision Rationale ("Why?")</div>
-            <div class="reasons-list" id="reasons-container">
-              <!-- Dynamic reasons -->
-            </div>
+            <div class="reasons-list" id="reasons-container"></div>
           </div>
 
           <!-- Action Scores Breakdown Table -->
@@ -264,27 +319,21 @@
                     <th>Upgrade (15%)</th>
                   </tr>
                 </thead>
-                <tbody id="scores-table-body">
-                  <!-- Dynamic rows -->
-                </tbody>
+                <tbody id="scores-table-body"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Turn Diff Comparison (vs Previous Turn) -->
+          <!-- Turn Diff Card -->
           <div class="diff-card hidden" id="turn-diff-card">
             <div class="card-title">📈 Turn Comparison (<span id="diff-stage-label">4-1 → 4-2</span>)</div>
-            <div class="diff-grid" id="diff-grid-content">
-              <!-- Dynamic Diff Metrics -->
-            </div>
+            <div class="diff-grid" id="diff-grid-content"></div>
           </div>
 
-          <!-- Human Feedback & 3-Way Action Alignment -->
+          <!-- Human Review & Alignment Card -->
           <div class="feedback-card">
             <div class="card-title">📝 Human Review & Alignment</div>
-            
             <div class="alignment-grid">
-              <!-- Actual Action -->
               <div class="align-col">
                 <span class="align-title">ACTUAL ACTION</span>
                 <select id="select-actual-action" class="form-select-sm">
@@ -295,8 +344,6 @@
                   <option value="SAVE_GOLD">SAVE_GOLD</option>
                 </select>
               </div>
-
-              <!-- Human Preference -->
               <div class="align-col">
                 <span class="align-title">HUMAN PREFERENCE</span>
                 <select id="select-human-pref" class="form-select-sm">
@@ -306,8 +353,6 @@
                   <option value="SAVE_GOLD">SAVE_GOLD</option>
                 </select>
               </div>
-
-              <!-- Human Feedback Judgment -->
               <div class="align-col">
                 <span class="align-title">JUDGMENT</span>
                 <div class="fb-buttons-row">
@@ -317,10 +362,8 @@
                 </div>
               </div>
             </div>
-
-            <!-- Notes & Save Turn Button -->
             <div class="feedback-notes-row">
-              <input type="text" id="input-turn-notes" class="form-input" placeholder="Add turn review notes or reasoning...">
+              <input type="text" id="input-turn-notes" class="form-input" placeholder="Add turn review notes...">
               <button class="btn btn-md btn-success" id="btn-save-turn">
                 💾 Save Turn <span class="kbd-hint">[Ctrl+S]</span>
               </button>
@@ -337,35 +380,12 @@
           <button class="btn btn-xs btn-ghost" id="btn-clear-history">Clear History</button>
         </div>
         <div class="history-list" id="history-timeline">
-          <div class="empty-history">No turns recorded yet in this session.</div>
+          <div class="empty-history">No turns recorded yet.</div>
         </div>
       </div>
+
     </section>
   </main>
-
-  <!-- Champion Search & Picker Modal -->
-  <div class="modal-overlay hidden" id="champ-picker-modal">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3>Select Champion (Set 18)</h3>
-        <button class="btn-close" id="btn-close-champ-picker">✕</button>
-      </div>
-      <div class="modal-body">
-        <input type="text" id="champ-search-input" class="form-input search-input" placeholder="Type champion name (e.g. Diana, Akali, Lux)..." autofocus>
-        <div class="cost-filter-row">
-          <button class="cost-pill active" data-cost="all">All</button>
-          <button class="cost-pill cost-1" data-cost="1">1 Cost</button>
-          <button class="cost-pill cost-2" data-cost="2">2 Cost</button>
-          <button class="cost-pill cost-3" data-cost="3">3 Cost</button>
-          <button class="cost-pill cost-4" data-cost="4">4 Cost</button>
-          <button class="cost-pill cost-5" data-cost="5">5 Cost</button>
-        </div>
-        <div class="champ-grid" id="champ-grid-container">
-          <!-- Dynamic Champion Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Video Assistant Modal -->
   <div class="modal-overlay hidden" id="video-assistant-modal">
@@ -380,11 +400,9 @@
           <select id="video-select" class="form-select"></select>
           <button class="btn btn-sm btn-primary" id="btn-load-video">Load Video</button>
         </div>
-        
         <div class="video-player-wrapper">
           <video id="replay-video" controls preload="metadata" class="video-element"></video>
         </div>
-
         <div class="video-controls-row">
           <div class="video-time-display">
             Timestamp: <strong id="video-time-str">00:00.00</strong> (<span id="video-time-sec">0.0</span>s)
@@ -421,7 +439,7 @@
           <tr><td><kbd>Enter</kbd></td><td>Analyze Current Turn</td></tr>
           <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Save Turn to Session</td></tr>
           <tr><td><kbd>P</kbd></td><td>Copy Previous Turn</td></tr>
-          <tr><td><kbd>N</kbd></td><td>New / Clear Turn</td></tr>
+          <tr><td><kbd>N</kbd></td><td>Reset Current Turn</td></tr>
           <tr><td><kbd>B</kbd></td><td>Toggle Blind Review Mode</td></tr>
           <tr><td><kbd>1</kbd></td><td>Select Preference: ROLL</td></tr>
           <tr><td><kbd>2</kbd></td><td>Select Preference: LEVEL_UP</td></tr>
