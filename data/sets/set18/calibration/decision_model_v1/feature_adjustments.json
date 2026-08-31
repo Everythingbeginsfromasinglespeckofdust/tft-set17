@@ -1,0 +1,44 @@
+{
+  "adjustments": [
+    {
+      "feature_id": "ESTIMATED_ROUNDS_TO_ELIM",
+      "target_action": "ROLL",
+      "formula": "max(0, (2.0 - rounds_left) / 2.0) * 0.08",
+      "coefficient": 0.08,
+      "evidence_tier": "B_COMPUTED_FROM_OBSERVED",
+      "justification": "Stabilizes health when lethal loss is within 2 rounds."
+    },
+    {
+      "feature_id": "PAIR_COUNT",
+      "target_action": "ROLL",
+      "formula": "min(1.0, pair_count / 3.0) * 0.04",
+      "coefficient": 0.04,
+      "evidence_tier": "B_COMPUTED_FROM_OBSERVED",
+      "justification": "Boosts roll value when holding 2 or more pairs."
+    },
+    {
+      "feature_id": "IMMEDIATE_SHOP_UPGRADE",
+      "target_action": "ROLL",
+      "formula": "min(1.0, count) * 0.06",
+      "coefficient": 0.06,
+      "evidence_tier": "B_COMPUTED_FROM_OBSERVED",
+      "justification": "Captures instant star completion opportunities in current shop."
+    },
+    {
+      "feature_id": "GOLD_TO_NEXT_LEVEL",
+      "target_action": "LEVEL_UP",
+      "formula": "0.06 when gold_to_level <= 8 and remaining_gold >= 20",
+      "coefficient": 0.06,
+      "evidence_tier": "B_COMPUTED_FROM_OBSERVED",
+      "justification": "Captures cheap 1~2 click tempo pushes preserving interest."
+    },
+    {
+      "feature_id": "SPENDABLE_ROLL_BUDGET",
+      "target_action": "SAVE_GOLD",
+      "formula": "0.05 when HP >= 70 and board >= 1.05 and interest < 5",
+      "coefficient": 0.05,
+      "evidence_tier": "B_COMPUTED_FROM_OBSERVED",
+      "justification": "Maximizes 50G compound interest when safe."
+    }
+  ]
+}

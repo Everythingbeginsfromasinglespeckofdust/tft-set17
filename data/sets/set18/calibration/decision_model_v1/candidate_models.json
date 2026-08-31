@@ -1,0 +1,38 @@
+{
+  "models": [
+    {
+      "model_id": "CANDIDATE_V1_SURVIVAL",
+      "active_features": [
+        "ESTIMATED_ROUNDS_TO_ELIM"
+      ],
+      "focus": "Lethal horizon survival stabilization"
+    },
+    {
+      "model_id": "CANDIDATE_V2_UPGRADE",
+      "active_features": [
+        "PAIR_COUNT",
+        "IMMEDIATE_SHOP_UPGRADE"
+      ],
+      "focus": "Upgrade concentration and shop hit exploitation"
+    },
+    {
+      "model_id": "CANDIDATE_V3_ECONOMY",
+      "active_features": [
+        "GOLD_TO_NEXT_LEVEL",
+        "SPENDABLE_ROLL_BUDGET"
+      ],
+      "focus": "Discrete interest preservation and tempo level-up"
+    },
+    {
+      "model_id": "CANDIDATE_V4_COMBINED",
+      "active_features": [
+        "ESTIMATED_ROUNDS_TO_ELIM",
+        "PAIR_COUNT",
+        "IMMEDIATE_SHOP_UPGRADE",
+        "GOLD_TO_NEXT_LEVEL",
+        "SPENDABLE_ROLL_BUDGET"
+      ],
+      "focus": "Multidimensional calibrated combination"
+    }
+  ]
+}

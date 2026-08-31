@@ -1,0 +1,11 @@
+{
+  "total_checkpoints": 20,
+  "candidate_roll_checkpoints": 4,
+  "candidate_level_checkpoints": 0,
+  "candidate_save_checkpoints": 16,
+  "observed_outcome_distribution": {
+    "stabilization_success_rate": 1.0,
+    "flips_with_positive_survival": 10,
+    "note": "Descriptive statistical distribution of historical trajectories following candidate recommendation."
+  }
+}

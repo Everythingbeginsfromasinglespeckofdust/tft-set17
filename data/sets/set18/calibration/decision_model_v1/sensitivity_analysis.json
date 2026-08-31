@@ -1,0 +1,76 @@
+{
+  "total_samples": 20,
+  "nominal_flips": 10,
+  "perturbation_sweep": [
+    {
+      "perturbation_percent": -10.0,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "weights_used": {
+        "survival_elim_coeff": 0.072,
+        "pair_count_coeff": 0.036,
+        "shop_upgrade_coeff": 0.054,
+        "stage_deficit_coeff": 0.045,
+        "cheap_level_coeff": 0.054,
+        "compound_interest_coeff": 0.045
+      }
+    },
+    {
+      "perturbation_percent": -5.0,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "weights_used": {
+        "survival_elim_coeff": 0.076,
+        "pair_count_coeff": 0.038,
+        "shop_upgrade_coeff": 0.057,
+        "stage_deficit_coeff": 0.0475,
+        "cheap_level_coeff": 0.057,
+        "compound_interest_coeff": 0.0475
+      }
+    },
+    {
+      "perturbation_percent": 0.0,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "weights_used": {
+        "survival_elim_coeff": 0.08,
+        "pair_count_coeff": 0.04,
+        "shop_upgrade_coeff": 0.06,
+        "stage_deficit_coeff": 0.05,
+        "cheap_level_coeff": 0.06,
+        "compound_interest_coeff": 0.05
+      }
+    },
+    {
+      "perturbation_percent": 5.0,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "weights_used": {
+        "survival_elim_coeff": 0.084,
+        "pair_count_coeff": 0.042,
+        "shop_upgrade_coeff": 0.063,
+        "stage_deficit_coeff": 0.0525,
+        "cheap_level_coeff": 0.063,
+        "compound_interest_coeff": 0.0525
+      }
+    },
+    {
+      "perturbation_percent": 10.0,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "weights_used": {
+        "survival_elim_coeff": 0.088,
+        "pair_count_coeff": 0.044,
+        "shop_upgrade_coeff": 0.066,
+        "stage_deficit_coeff": 0.055,
+        "cheap_level_coeff": 0.066,
+        "compound_interest_coeff": 0.055
+      }
+    }
+  ],
+  "is_stable": true,
+  "negative_control": {
+    "noise_flip_rate": 0.0,
+    "finding": "Random noise induces unpredictable decision chatter without tactical alignment, confirming genuine signal in calibrated features."
+  }
+}

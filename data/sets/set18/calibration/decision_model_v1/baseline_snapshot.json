@@ -1,0 +1,742 @@
+[
+  {
+    "sample_id": "CP001",
+    "stage_round": "2-1",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.4271,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.4271
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 100): 3턴 후 29G(+19G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.074 우세",
+        "impact": 0.074
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.108 우세",
+        "impact": 0.108
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP002",
+    "stage_round": "2-3",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.3799,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.3799
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "UPGRADE_ROLL_OPPORTUNITY",
+        "summary": "기물 2성/3성 업그레이드 기대치 높음 (달성 확률 0.0%, 파워 +0.0)",
+        "impact": 0.75
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.000 우세",
+        "impact": 0.0
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.102 우세",
+        "impact": 0.102
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP003",
+    "stage_round": "2-5",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.4574,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.4574
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "UPGRADE_ROLL_OPPORTUNITY",
+        "summary": "기물 2성/3성 업그레이드 기대치 높음 (달성 확률 0.0%, 파워 +0.0)",
+        "impact": 0.75
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.000 우세",
+        "impact": 0.0
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.083 우세",
+        "impact": 0.083
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP004",
+    "stage_round": "2-7",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.5363,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.5363
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 82): 3턴 후 65G(+27G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.005 우세",
+        "impact": 0.005
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.259 우세",
+        "impact": 0.259
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP005",
+    "stage_round": "3-1",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.5683,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.5683
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 82): 3턴 후 77G(+29G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.005 우세",
+        "impact": 0.005
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.184 우세",
+        "impact": 0.184
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP006",
+    "stage_round": "3-2",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.5512,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.5512
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 74): 3턴 후 82G(+30G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.007 우세",
+        "impact": 0.007
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.309 우세",
+        "impact": 0.309
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP007",
+    "stage_round": "3-5",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.5512,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.5512
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 68): 3턴 후 84G(+30G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.003 우세",
+        "impact": 0.003
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.241 우세",
+        "impact": 0.241
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP008",
+    "stage_round": "4-1",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.4841,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.4841
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "UPGRADE_ROLL_OPPORTUNITY",
+        "summary": "기물 2성/3성 업그레이드 기대치 높음 (달성 확률 10.9%, 파워 +0.5)",
+        "impact": 0.75
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.002 우세",
+        "impact": 0.002
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.195 우세",
+        "impact": 0.195
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP009",
+    "stage_round": "4-2",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.3597,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.3597
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 48): 3턴 후 73G(+29G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.016 우세",
+        "impact": 0.016
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.193 우세",
+        "impact": 0.193
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP010",
+    "stage_round": "4-3",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.3597,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.3597
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 38): 3턴 후 77G(+29G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.016 우세",
+        "impact": 0.016
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.183 우세",
+        "impact": 0.183
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP011",
+    "stage_round": "4-5",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1012,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1012
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 32): 즉시 리롤로 2성 기물 완성(확률 46.1%) 및 보드 파워 +2.3 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.057 우세",
+        "impact": 0.057
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.060 우세",
+        "impact": 0.06
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP012",
+    "stage_round": "4-6",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1141,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1141
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 32): 즉시 리롤로 2성 기물 완성(확률 53.8%) 및 보드 파워 +2.7 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.042 우세",
+        "impact": 0.042
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.069 우세",
+        "impact": 0.069
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP013",
+    "stage_round": "5-1",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1483,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1483
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 32): 즉시 리롤로 2성 기물 완성(확률 72.3%) 및 보드 파워 +3.6 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.074 우세",
+        "impact": 0.074
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.076 우세",
+        "impact": 0.076
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP014",
+    "stage_round": "5-2",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1619,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1619
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 24): 즉시 리롤로 2성 기물 완성(확률 80.5%) 및 보드 파워 +4.0 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.087 우세",
+        "impact": 0.087
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.090 우세",
+        "impact": 0.09
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP015",
+    "stage_round": "5-3",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1289,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1289
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 24): 즉시 리롤로 2성 기물 완성(확률 60.7%) 및 보드 파워 +3.0 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.055 우세",
+        "impact": 0.055
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.057 우세",
+        "impact": 0.057
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP016",
+    "stage_round": "5-5",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1579,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1579
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 16): 즉시 리롤로 2성 기물 완성(확률 78.1%) 및 보드 파워 +3.9 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.083 우세",
+        "impact": 0.083
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.086 우세",
+        "impact": 0.086
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP017",
+    "stage_round": "5-7",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.2674,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.2674
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 45): 3턴 후 55G(+25G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.044 우세",
+        "impact": 0.044
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.132 우세",
+        "impact": 0.132
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP018",
+    "stage_round": "6-1",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.3139,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.3139
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 45): 3턴 후 68G(+28G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.044 우세",
+        "impact": 0.044
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.165 우세",
+        "impact": 0.165
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP019",
+    "stage_round": "6-2",
+    "recommended_action": "ROLL",
+    "recommended_score": 0.1117,
+    "score_gap": 0.0,
+    "action_scores": {
+      "ROLL": 0.1117
+    },
+    "action_ranking": [
+      "ROLL"
+    ],
+    "reasons": [
+      {
+        "code": "CRISIS_ROLL_DEFENSE",
+        "summary": "체력 위기(HP 8): 즉시 리롤로 2성 기물 완성(확률 50.4%) 및 보드 파워 +2.5 확보로 탈락 방어",
+        "impact": 0.95
+      },
+      {
+        "code": "COMPARE_VS_SAVE_GOLD",
+        "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.038 우세",
+        "impact": 0.038
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.040 우세",
+        "impact": 0.04
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  },
+  {
+    "sample_id": "CP020",
+    "stage_round": "6-3",
+    "recommended_action": "SAVE_GOLD",
+    "recommended_score": 0.0724,
+    "score_gap": 0.0,
+    "action_scores": {
+      "SAVE_GOLD": 0.0724
+    },
+    "action_ranking": [
+      "SAVE_GOLD"
+    ],
+    "reasons": [
+      {
+        "code": "ECONOMIC_COMPOUNDING",
+        "summary": "체력 안전권(HP 8): 3턴 후 20G(+16G) 복리 이자 극대화 추천",
+        "impact": 0.85
+      },
+      {
+        "code": "COMPARE_VS_LEVEL_UP",
+        "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.000 우세",
+        "impact": 0.0
+      },
+      {
+        "code": "COMPARE_VS_ROLL",
+        "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.010 우세",
+        "impact": 0.01
+      }
+    ],
+    "horizon": 3,
+    "config_weights": {
+      "base_survival": 0.35,
+      "base_economy": 0.25,
+      "base_board_power": 0.25,
+      "base_upgrade": 0.15
+    }
+  }
+]

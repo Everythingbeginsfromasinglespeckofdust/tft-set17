@@ -1,0 +1,772 @@
+{
+  "total_samples_evaluated": 20,
+  "ablation_configurations": {
+    "BASELINE": {
+      "config_name": "BASELINE",
+      "total_samples": 20,
+      "flips_count": 0,
+      "flip_rate": 0.0,
+      "agreement_with_baseline": 1.0,
+      "action_distribution": {
+        "ROLL": 10,
+        "LEVEL_UP": 0,
+        "SAVE_GOLD": 10
+      },
+      "checkpoint_records": [
+        {
+          "sample_id": "CP001",
+          "action": "SAVE_GOLD",
+          "score": 0.4271,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP002",
+          "action": "ROLL",
+          "score": 0.3799,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP003",
+          "action": "ROLL",
+          "score": 0.4574,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP004",
+          "action": "SAVE_GOLD",
+          "score": 0.5363,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP005",
+          "action": "SAVE_GOLD",
+          "score": 0.5683,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP006",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP007",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP008",
+          "action": "ROLL",
+          "score": 0.4841,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP009",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP010",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP011",
+          "action": "ROLL",
+          "score": 0.1012,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP012",
+          "action": "ROLL",
+          "score": 0.1141,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP013",
+          "action": "ROLL",
+          "score": 0.1483,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP014",
+          "action": "ROLL",
+          "score": 0.1619,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP015",
+          "action": "ROLL",
+          "score": 0.1289,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP016",
+          "action": "ROLL",
+          "score": 0.1579,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP017",
+          "action": "SAVE_GOLD",
+          "score": 0.2674,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP018",
+          "action": "SAVE_GOLD",
+          "score": 0.3139,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP019",
+          "action": "ROLL",
+          "score": 0.1117,
+          "is_flipped": false
+        },
+        {
+          "sample_id": "CP020",
+          "action": "SAVE_GOLD",
+          "score": 0.0724,
+          "is_flipped": false
+        }
+      ]
+    },
+    "ABLATION_SURVIVAL_ONLY": {
+      "config_name": "ABLATION_SURVIVAL_ONLY",
+      "total_samples": 20,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "agreement_with_baseline": 0.5,
+      "action_distribution": {
+        "ROLL": 4,
+        "LEVEL_UP": 0,
+        "SAVE_GOLD": 16
+      },
+      "checkpoint_records": [
+        {
+          "sample_id": "CP001",
+          "action": "SAVE_GOLD",
+          "score": 0.4271,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP002",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP003",
+          "action": "ROLL",
+          "score": 0.4574,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP004",
+          "action": "SAVE_GOLD",
+          "score": 0.5363,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP005",
+          "action": "SAVE_GOLD",
+          "score": 0.5683,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP006",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP007",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP008",
+          "action": "ROLL",
+          "score": 0.4841,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP009",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP010",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP011",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP012",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP013",
+          "action": "SAVE_GOLD",
+          "score": 0.3872,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP014",
+          "action": "SAVE_GOLD",
+          "score": 0.3704,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP015",
+          "action": "SAVE_GOLD",
+          "score": 0.3704,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP016",
+          "action": "SAVE_GOLD",
+          "score": 0.3536,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP017",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP018",
+          "action": "SAVE_GOLD",
+          "score": 0.3091,
+          "is_flipped": false,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP019",
+          "action": "SAVE_GOLD",
+          "score": 0.3332,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP020",
+          "action": "ROLL",
+          "score": 0.3668,
+          "is_flipped": true,
+          "contributions_count": 1
+        }
+      ]
+    },
+    "ABLATION_UPGRADE_ONLY": {
+      "config_name": "ABLATION_UPGRADE_ONLY",
+      "total_samples": 20,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "agreement_with_baseline": 0.5,
+      "action_distribution": {
+        "ROLL": 4,
+        "LEVEL_UP": 0,
+        "SAVE_GOLD": 16
+      },
+      "checkpoint_records": [
+        {
+          "sample_id": "CP001",
+          "action": "SAVE_GOLD",
+          "score": 0.4271,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP002",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP003",
+          "action": "ROLL",
+          "score": 0.4574,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP004",
+          "action": "SAVE_GOLD",
+          "score": 0.5363,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP005",
+          "action": "SAVE_GOLD",
+          "score": 0.5683,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP006",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP007",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP008",
+          "action": "ROLL",
+          "score": 0.4841,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP009",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP010",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP011",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP012",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP013",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP014",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP015",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP016",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP017",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP018",
+          "action": "SAVE_GOLD",
+          "score": 0.3139,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP019",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP020",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        }
+      ]
+    },
+    "ABLATION_ECONOMY_ONLY": {
+      "config_name": "ABLATION_ECONOMY_ONLY",
+      "total_samples": 20,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "agreement_with_baseline": 0.5,
+      "action_distribution": {
+        "ROLL": 4,
+        "LEVEL_UP": 0,
+        "SAVE_GOLD": 16
+      },
+      "checkpoint_records": [
+        {
+          "sample_id": "CP001",
+          "action": "SAVE_GOLD",
+          "score": 0.4271,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP002",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP003",
+          "action": "ROLL",
+          "score": 0.4574,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP004",
+          "action": "SAVE_GOLD",
+          "score": 0.5363,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP005",
+          "action": "SAVE_GOLD",
+          "score": 0.5683,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP006",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP007",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP008",
+          "action": "ROLL",
+          "score": 0.4841,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP009",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP010",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP011",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP012",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP013",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP014",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP015",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP016",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP017",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP018",
+          "action": "SAVE_GOLD",
+          "score": 0.3139,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP019",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP020",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        }
+      ]
+    },
+    "COMBINED_V4": {
+      "config_name": "COMBINED_V4",
+      "total_samples": 20,
+      "flips_count": 10,
+      "flip_rate": 0.5,
+      "agreement_with_baseline": 0.5,
+      "action_distribution": {
+        "ROLL": 4,
+        "LEVEL_UP": 0,
+        "SAVE_GOLD": 16
+      },
+      "checkpoint_records": [
+        {
+          "sample_id": "CP001",
+          "action": "SAVE_GOLD",
+          "score": 0.4271,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP002",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP003",
+          "action": "ROLL",
+          "score": 0.4574,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP004",
+          "action": "SAVE_GOLD",
+          "score": 0.5363,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP005",
+          "action": "SAVE_GOLD",
+          "score": 0.5683,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP006",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP007",
+          "action": "SAVE_GOLD",
+          "score": 0.5512,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP008",
+          "action": "ROLL",
+          "score": 0.4841,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP009",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP010",
+          "action": "SAVE_GOLD",
+          "score": 0.3597,
+          "is_flipped": false,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP011",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP012",
+          "action": "SAVE_GOLD",
+          "score": 0.4,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP013",
+          "action": "SAVE_GOLD",
+          "score": 0.3872,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP014",
+          "action": "SAVE_GOLD",
+          "score": 0.3704,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP015",
+          "action": "SAVE_GOLD",
+          "score": 0.3704,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP016",
+          "action": "SAVE_GOLD",
+          "score": 0.3536,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP017",
+          "action": "ROLL",
+          "score": 0.3,
+          "is_flipped": true,
+          "contributions_count": 0
+        },
+        {
+          "sample_id": "CP018",
+          "action": "SAVE_GOLD",
+          "score": 0.3091,
+          "is_flipped": false,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP019",
+          "action": "SAVE_GOLD",
+          "score": 0.3332,
+          "is_flipped": true,
+          "contributions_count": 1
+        },
+        {
+          "sample_id": "CP020",
+          "action": "ROLL",
+          "score": 0.3668,
+          "is_flipped": true,
+          "contributions_count": 1
+        }
+      ]
+    }
+  },
+  "interaction_effects": [
+    {
+      "interaction_pair": "HP_Risk x Pair_Count",
+      "finding": "When rounds_to_elim <= 2.0 AND pair_count >= 1, ROLL preference increases by +0.12, converting passive SAVE into emergency stabilization.",
+      "relevance": "CRITICAL_P0"
+    },
+    {
+      "interaction_pair": "HP_Risk x Board_Strength",
+      "finding": "When HP is safe (>=70) AND board power is above stage benchmark (>1.05), SAVE_GOLD score increases by +0.05 to preserve compound interest.",
+      "relevance": "HIGH_P1"
+    },
+    {
+      "interaction_pair": "Level_Up_Cost x Carry_Odds",
+      "finding": "When gold_to_level <= 8G (2 clicks) AND level jump provides >10% 4/5-cost carry odds, LEVEL_UP dominates SAVE_GOLD.",
+      "relevance": "HIGH_P1"
+    }
+  ]
+}
