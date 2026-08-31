@@ -1,0 +1,28 @@
+{
+  "relationships": [
+    {
+      "primary_feature": "estimated_rounds_to_elimination",
+      "target_action": "ROLL",
+      "relationship_type": "INVERSE_STRONG",
+      "description": "As rounds to elimination drops below 2.0, ROLL preference surges from 15% to 85% to prevent elimination."
+    },
+    {
+      "primary_feature": "pair_count",
+      "target_action": "ROLL",
+      "relationship_type": "POSITIVE_MODERATE",
+      "description": "2 or more pairs creates high upgrade concentration, doubling expected power gain per roll."
+    },
+    {
+      "primary_feature": "gold_to_next_level",
+      "target_action": "LEVEL_UP",
+      "relationship_type": "INVERSE_STEP_FUNCTION",
+      "description": "When gold_to_level <= 8G (2 clicks) and high cost odds increase by >10%, LEVEL_UP dominates SAVE_GOLD."
+    },
+    {
+      "primary_feature": "stage_benchmark_ratio",
+      "target_action": "SAVE_GOLD",
+      "relationship_type": "POSITIVE_STRONG",
+      "description": "When board power exceeds stage benchmark (>1.05), saving gold and preserving compound interest is safe."
+    }
+  ]
+}

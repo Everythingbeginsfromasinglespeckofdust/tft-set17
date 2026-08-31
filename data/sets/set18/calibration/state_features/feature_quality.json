@@ -1,0 +1,325 @@
+{
+  "PLAYER_HP": {
+    "feature_code": "PLAYER_HP",
+    "description": "HP remaining (0~100)",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "PLAYER_GOLD": {
+    "feature_code": "PLAYER_GOLD",
+    "description": "Current gold reserve",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "PLAYER_LEVEL": {
+    "feature_code": "PLAYER_LEVEL",
+    "description": "Current shop/unit level",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "STAGE_ROUND": {
+    "feature_code": "STAGE_ROUND",
+    "description": "Game stage timing",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "BOARD_RAW_POWER": {
+    "feature_code": "BOARD_RAW_POWER",
+    "description": "Composite board strength",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "STAGE_BENCHMARK_RATIO": {
+    "feature_code": "STAGE_BENCHMARK_RATIO",
+    "description": "Power relative to stage expectation",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "PAIR_COUNT": {
+    "feature_code": "PAIR_COUNT",
+    "description": "2-copy upgrade candidates",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "IMMEDIATE_SHOP_UPGRADE": {
+    "feature_code": "IMMEDIATE_SHOP_UPGRADE",
+    "description": "Units in shop completing stars",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "EXPECTED_ROLL_UPGRADE_10G": {
+    "feature_code": "EXPECTED_ROLL_UPGRADE_10G",
+    "description": "Hit odds under 10G roll",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.95,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.812
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "INTEREST_TIER": {
+    "feature_code": "INTEREST_TIER",
+    "description": "Active compound interest (+1~5G)",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "SPENDABLE_ROLL_BUDGET": {
+    "feature_code": "SPENDABLE_ROLL_BUDGET",
+    "description": "Excess gold above survival target",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "GOLD_TO_NEXT_LEVEL": {
+    "feature_code": "GOLD_TO_NEXT_LEVEL",
+    "description": "XP purchase cost to next level",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 1.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.824
+    },
+    "gate_verdict": "KEEP",
+    "data_sufficiency": "READY"
+  },
+  "LOBBY_MEAN_BOARD_POWER": {
+    "feature_code": "LOBBY_MEAN_BOARD_POWER",
+    "description": "Lobby average board power",
+    "coverage_rate": 0.0,
+    "non_null_samples": 0,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.35,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.0,
+      "generalization": 0.2,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.552
+    },
+    "gate_verdict": "EXPERIMENTAL",
+    "data_sufficiency": "INSUFFICIENT"
+  },
+  "LOBBY_POWER_PERCENTILE": {
+    "feature_code": "LOBBY_POWER_PERCENTILE",
+    "description": "Percentile strength in lobby",
+    "coverage_rate": 0.0,
+    "non_null_samples": 0,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.35,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.0,
+      "generalization": 0.2,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.552
+    },
+    "gate_verdict": "EXPERIMENTAL",
+    "data_sufficiency": "INSUFFICIENT"
+  },
+  "OPPONENT_POWER_GAP": {
+    "feature_code": "OPPONENT_POWER_GAP",
+    "description": "Power difference vs direct matchup",
+    "coverage_rate": 0.0,
+    "non_null_samples": 0,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.2,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.0,
+      "generalization": 0.2,
+      "interpretability": 0.95,
+      "patch_stability": 0.6,
+      "composite_quality": 0.485
+    },
+    "gate_verdict": "EXPERIMENTAL",
+    "data_sufficiency": "INSUFFICIENT"
+  },
+  "RECENT_HP_DELTA": {
+    "feature_code": "RECENT_HP_DELTA",
+    "description": "HP loss in previous round",
+    "coverage_rate": 0.95,
+    "non_null_samples": 19,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.85,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.95,
+      "patch_stability": 0.9,
+      "composite_quality": 0.787
+    },
+    "gate_verdict": "HUMAN_REVIEW_ONLY",
+    "data_sufficiency": "LIMITED"
+  },
+  "NEGATIVE_CONTROL_RANDOM": {
+    "feature_code": "NEGATIVE_CONTROL_RANDOM",
+    "description": "Random uniform control variable",
+    "coverage_rate": 1.0,
+    "non_null_samples": 20,
+    "total_samples": 20,
+    "unique_matches": 1,
+    "scores": {
+      "observability": 0.0,
+      "temporal_availability_t0": 1.0,
+      "statistical_support": 0.08,
+      "generalization": 0.85,
+      "interpretability": 0.0,
+      "patch_stability": 0.9,
+      "composite_quality": 0.48
+    },
+    "gate_verdict": "REJECT",
+    "data_sufficiency": "INSUFFICIENT"
+  }
+}

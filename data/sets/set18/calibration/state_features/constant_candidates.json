@@ -1,0 +1,57 @@
+[
+  {
+    "candidate_name": "SURVIVAL_LETHAL_ROUNDS_THRESHOLD",
+    "proposed_value": 2.0,
+    "current_value": "Static HP 35",
+    "data_source": "REAL_GAMEPLAY_SESSION_001 & Match Validation",
+    "sample_size": 20,
+    "confidence": "HIGH (0.88)",
+    "patch": "Set 18 (14.x / 18.1)",
+    "bias_risk": "Low; directly tied to stage-specific loss damage",
+    "status": "PRODUCTION_CANDIDATE"
+  },
+  {
+    "candidate_name": "ECONOMY_DISCRETE_INTEREST_MARGIN",
+    "proposed_value": 2,
+    "current_value": "Continuous gold / 70.0",
+    "data_source": "TFT Game Rules & Human Review Log",
+    "sample_size": 20,
+    "confidence": "VERY HIGH (0.95)",
+    "patch": "Universal",
+    "bias_risk": "Zero; exact mathematical interest step function",
+    "status": "PRODUCTION_CANDIDATE"
+  },
+  {
+    "candidate_name": "UPGRADE_PAIR_SURPLUS_TRIGGER",
+    "proposed_value": 2,
+    "current_value": "None (Any upgrade prob only)",
+    "data_source": "Real Gameplay Checkpoints (CP007, CP012)",
+    "sample_size": 20,
+    "confidence": "MODERATE (0.75)",
+    "patch": "Set 18",
+    "bias_risk": "Contention on contested 4-costs can lower hit odds",
+    "status": "EXPERIMENTAL"
+  },
+  {
+    "candidate_name": "STAGE_BENCHMARK_CRISIS_RATIO",
+    "proposed_value": 0.8,
+    "current_value": "None (Absolute power only)",
+    "data_source": "MetaTFT Aggregate & Match Trajectories",
+    "sample_size": 64,
+    "confidence": "HIGH (0.82)",
+    "patch": "Set 18",
+    "bias_risk": "Tempo lobbies may inflate benchmark earlier",
+    "status": "PRODUCTION_CANDIDATE"
+  },
+  {
+    "candidate_name": "LEVEL_UP_CHEAP_XP_BREAKPOINT",
+    "proposed_value": 8,
+    "current_value": "XP buy clicks without budget constraint",
+    "data_source": "Human Expert Review Log",
+    "sample_size": 20,
+    "confidence": "HIGH (0.85)",
+    "patch": "Universal",
+    "bias_risk": "Low; standard 2-click XP tempo push",
+    "status": "PRODUCTION_CANDIDATE"
+  }
+]

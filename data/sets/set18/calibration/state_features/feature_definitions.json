@@ -1,0 +1,37 @@
+{
+  "PLAYER_STATE": {
+    "hp": "Current player health (0~100). Available at T0.",
+    "gold": "Current liquid gold reserve (0~250G). Available at T0.",
+    "level": "Player level (1~11). Governs board size and shop roll odds. Available at T0.",
+    "xp": "Current experience points towards next level. Available at T0."
+  },
+  "ECONOMY_STATE": {
+    "interest_tier": "floor(gold / 10), capped at 5 (+1G ~ +5G per round). Available at T0.",
+    "gold_to_next_interest": "Marginal gold to next 10G breakpoint. Available at T0.",
+    "gold_to_next_level": "Total gold required in 4G XP chunks to level up. Available at T0.",
+    "spendable_roll_budget": "Gold strictly above the dynamic reserve target (50G/30G/0G). Available at T0."
+  },
+  "BOARD_STATE": {
+    "raw_board_power": "Composite sum: unit_cost * star_mult + item_weights + synergy_bonuses. Available at T0.",
+    "star_distribution": "Count of 1★, 2★, 3★ units on board. Available at T0.",
+    "frontline_power_ratio": "Proportion of board power allocated to tank/brawler frontline. Available at T0."
+  },
+  "UPGRADE_STATE": {
+    "pair_count": "Number of unique champions with exactly 2 copies owned (1 copy away from 2★). Available at T0.",
+    "immediate_shop_upgrades": "Number of champions in current 5-slot shop that complete a star upgrade right now. Available at T0.",
+    "expected_roll_upgrade_count_10g": "Expected hit probability across 5 rolls using exact Set 18 tier roll odds. Available at T0."
+  },
+  "OPPONENT_STATE": {
+    "lobby_mean_board_power": "Average board power of all active opponents. Available at T0 when lobby vision is enabled; else null.",
+    "current_opponent_power_gap": "my_power - opponent_power. Available at T0 when direct matchup is observed; else null."
+  },
+  "TEMPORAL_STATE": {
+    "stage_numeric": "stage + round/10.0. Continuous temporal progress coordinate. Available at T0.",
+    "recent_hp_delta": "HP delta from previous round. Captures loss severity. Available at T0.",
+    "estimated_rounds_to_elimination": "hp / expected_stage_loss_damage. Continuous survival horizon. Available at T0."
+  },
+  "RELATIVE_STATE": {
+    "stage_benchmark_ratio": "my_board_power / stage_benchmark_power. >1.0 = strong, <0.8 = crisis. Available at T0.",
+    "board_power_percentile": "Percentile ranking of my board within lobby [0.0, 1.0]. Available at T0 when lobby observed."
+  }
+}
