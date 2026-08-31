@@ -1,0 +1,317 @@
+{
+  "total_occurrences": 43,
+  "unique_values": [
+    "0.40",
+    "0.30",
+    "0.08",
+    "0.05",
+    "0.06",
+    "0.50",
+    "2.0",
+    "0.04",
+    "1.05"
+  ],
+  "findings": [
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 79,
+      "value": "0.08",
+      "context": "\"survival_elim_coeff\": 0.08,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 80,
+      "value": "0.04",
+      "context": "\"pair_count_coeff\": 0.04,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 81,
+      "value": "0.06",
+      "context": "\"shop_upgrade_coeff\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 82,
+      "value": "0.05",
+      "context": "\"stage_deficit_coeff\": 0.05,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 83,
+      "value": "0.06",
+      "context": "\"cheap_level_coeff\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 84,
+      "value": "0.05",
+      "context": "\"compound_interest_coeff\": 0.05",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 91,
+      "value": "0.30",
+      "context": "\"ROLL\": base_scores.get(\"ROLL\", 0.30),",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 92,
+      "value": "0.30",
+      "context": "\"LEVEL_UP\": base_scores.get(\"LEVEL_UP\", 0.30),",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 93,
+      "value": "0.40",
+      "context": "\"SAVE_GOLD\": base_scores.get(\"SAVE_GOLD\", 0.40)",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 101,
+      "value": "2.0",
+      "context": "if rounds_left <= 2.0:",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 102,
+      "value": "2.0",
+      "context": "norm_val = round(max(0.0, (2.0 - rounds_left) / 2.0), 3)",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 102,
+      "value": "2.0",
+      "context": "norm_val = round(max(0.0, (2.0 - rounds_left) / 2.0), 3)",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 113,
+      "value": "2.0",
+      "context": "justification=f\"Survival horizon is {rounds_left:.1f} rounds (<=2.0 lethal threshold). Priority roll",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 155,
+      "value": "0.50",
+      "context": "if gold_to_lvl <= 8 and rem_gold >= 20 and vec.upgrade.shop_tier_match_score > 0.50:",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/candidate_models.py",
+      "line": 170,
+      "value": "1.05",
+      "context": "if vec.player.hp >= 70 and vec.relative.stage_benchmark_ratio >= 1.05 and vec.economy.interest_tier ",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/ablation_study.py",
+      "line": 85,
+      "value": "2.0",
+      "context": "\"finding\": \"When rounds_to_elim <= 2.0 AND pair_count >= 1, ROLL preference increases by +0.12, conv",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/ablation_study.py",
+      "line": 90,
+      "value": "1.05",
+      "context": "\"finding\": \"When HP is safe (>=70) AND board power is above stage benchmark (>1.05), SAVE_GOLD score",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/ablation_study.py",
+      "line": 90,
+      "value": "0.05",
+      "context": "\"finding\": \"When HP is safe (>=70) AND board power is above stage benchmark (>1.05), SAVE_GOLD score",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 24,
+      "value": "0.05",
+      "context": "perturbation_levels = [-0.10, -0.05, 0.0, 0.05, 0.10]",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 24,
+      "value": "0.05",
+      "context": "perturbation_levels = [-0.10, -0.05, 0.0, 0.05, 0.10]",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 26,
+      "value": "0.08",
+      "context": "\"survival_elim_coeff\": 0.08,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 27,
+      "value": "0.04",
+      "context": "\"pair_count_coeff\": 0.04,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 28,
+      "value": "0.06",
+      "context": "\"shop_upgrade_coeff\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 29,
+      "value": "0.05",
+      "context": "\"stage_deficit_coeff\": 0.05,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 30,
+      "value": "0.06",
+      "context": "\"cheap_level_coeff\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/sensitivity_analyzer.py",
+      "line": 31,
+      "value": "0.05",
+      "context": "\"compound_interest_coeff\": 0.05",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 119,
+      "value": "2.0",
+      "context": "\"formula\": \"max(0, (2.0 - rounds_left) / 2.0) * 0.08\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 119,
+      "value": "2.0",
+      "context": "\"formula\": \"max(0, (2.0 - rounds_left) / 2.0) * 0.08\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 119,
+      "value": "0.08",
+      "context": "\"formula\": \"max(0, (2.0 - rounds_left) / 2.0) * 0.08\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 120,
+      "value": "0.08",
+      "context": "\"coefficient\": 0.08,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 127,
+      "value": "0.04",
+      "context": "\"formula\": \"min(1.0, pair_count / 3.0) * 0.04\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 128,
+      "value": "0.04",
+      "context": "\"coefficient\": 0.04,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 135,
+      "value": "0.06",
+      "context": "\"formula\": \"min(1.0, count) * 0.06\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 136,
+      "value": "0.06",
+      "context": "\"coefficient\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 143,
+      "value": "0.06",
+      "context": "\"formula\": \"0.06 when gold_to_level <= 8 and remaining_gold >= 20\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 144,
+      "value": "0.06",
+      "context": "\"coefficient\": 0.06,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 151,
+      "value": "0.05",
+      "context": "\"formula\": \"0.05 when HP >= 70 and board >= 1.05 and interest < 5\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 151,
+      "value": "1.05",
+      "context": "\"formula\": \"0.05 when HP >= 70 and board >= 1.05 and interest < 5\",",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 152,
+      "value": "0.05",
+      "context": "\"coefficient\": 0.05,",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 328,
+      "value": "2.0",
+      "context": "1. **`HP Risk x Pair Count`**: When survival horizon is <= 2.0 rounds and player holds >= 1 pairs, R",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 329,
+      "value": "1.05",
+      "context": "2. **`HP Risk x Board Strength`**: When HP is safe (>= 70) and board power exceeds stage benchmark (",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 329,
+      "value": "0.05",
+      "context": "2. **`HP Risk x Board Strength`**: When HP is safe (>= 70) and board power exceeds stage benchmark (",
+      "classification": "MAGIC_NUMBER"
+    },
+    {
+      "file": "candidate_engine/runner.py",
+      "line": 389,
+      "value": "2.0",
+      "context": "### Situation A: Lethal Danger (HP <= 28 or Horizon <= 2.0 rounds)",
+      "classification": "MAGIC_NUMBER"
+    }
+  ]
+}

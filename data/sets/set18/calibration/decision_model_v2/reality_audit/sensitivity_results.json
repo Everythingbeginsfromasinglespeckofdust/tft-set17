@@ -1,0 +1,55 @@
+{
+  "target": "survival_elim_coeff",
+  "nominal": 0.08,
+  "nominal_flips": 10,
+  "sweep": [
+    {
+      "perturbation_pct": -50.0,
+      "coeff": 0.04,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": -25.0,
+      "coeff": 0.06,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": -10.0,
+      "coeff": 0.072,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": -5.0,
+      "coeff": 0.076,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": 0.0,
+      "coeff": 0.08,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": 5.0,
+      "coeff": 0.084,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": 10.0,
+      "coeff": 0.088,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": 25.0,
+      "coeff": 0.1,
+      "flips": 10
+    },
+    {
+      "perturbation_pct": 50.0,
+      "coeff": 0.12,
+      "flips": 11
+    }
+  ],
+  "flip_range": 1,
+  "stability": "STABLE",
+  "note": "All results IN_SAMPLE. Stability cannot be confirmed without OOS data."
+}

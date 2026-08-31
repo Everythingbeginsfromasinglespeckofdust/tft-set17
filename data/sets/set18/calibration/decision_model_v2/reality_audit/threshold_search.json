@@ -1,0 +1,41 @@
+{
+  "scope": "IN_SAMPLE_ONLY",
+  "data_warning": "Thresholds searched on the SAME 20 checkpoints used to design them.",
+  "threshold_results": [
+    {
+      "threshold": 0.5,
+      "in_sample_flips": 1,
+      "flip_rate": 0.05
+    },
+    {
+      "threshold": 1.0,
+      "in_sample_flips": 1,
+      "flip_rate": 0.05
+    },
+    {
+      "threshold": 1.5,
+      "in_sample_flips": 1,
+      "flip_rate": 0.05
+    },
+    {
+      "threshold": 2.0,
+      "in_sample_flips": 2,
+      "flip_rate": 0.1
+    },
+    {
+      "threshold": 2.5,
+      "in_sample_flips": 3,
+      "flip_rate": 0.15
+    },
+    {
+      "threshold": 3.0,
+      "in_sample_flips": 4,
+      "flip_rate": 0.2
+    }
+  ],
+  "selected_threshold": 2.0,
+  "selection_basis": "DESIGN_ASSUMPTION (not data-selected)",
+  "flip_count_range": 3,
+  "stability_verdict": "THRESHOLD_RANGE_SENSITIVE",
+  "audit_note": "Flip counts vary from 1 to 4 across thresholds. Status: THRESHOLD_RANGE_SENSITIVE. Cannot confirm stability without OOS data."
+}

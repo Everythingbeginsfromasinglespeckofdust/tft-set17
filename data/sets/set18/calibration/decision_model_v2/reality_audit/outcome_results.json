@@ -1,0 +1,21 @@
+{
+  "description": "T0 HP distribution by candidate recommendation group. NO T1 data.",
+  "groups": {
+    "ROLL": {
+      "n": 4,
+      "mean_t0_hp": 49.75,
+      "t1_outcome": "NOT_AVAILABLE"
+    },
+    "LEVEL_UP": {
+      "n": 0,
+      "mean_t0_hp": 0.0,
+      "t1_outcome": "NOT_AVAILABLE"
+    },
+    "SAVE_GOLD": {
+      "n": 16,
+      "mean_t0_hp": 50.06,
+      "t1_outcome": "NOT_AVAILABLE"
+    }
+  },
+  "causal_claim": "NONE"
+}

@@ -1,0 +1,11 @@
+{
+  "formal_t1_leakage_count": 0,
+  "leakage_findings": [],
+  "implicit_bias": {
+    "type": "IMPLICIT_IN_SAMPLE_BIAS",
+    "description": "All coefficients/thresholds were chosen after the designer reviewed the 20 real checkpoint states and their baseline recommendations. No T1 outcome (HP change, placement) was used, but the designer's intuition was informed by observing which checkpoints had wrong-seeming SAVE_GOLD outputs. This is implicit in-sample bias, not formal T1 leakage.",
+    "formal_leakage": false,
+    "implicit_bias": true
+  },
+  "overall_verdict": "NO_FORMAL_T1_LEAKAGE_BUT_IMPLICIT_IN_SAMPLE_BIAS"
+}

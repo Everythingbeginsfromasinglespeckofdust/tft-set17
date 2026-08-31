@@ -1,0 +1,143 @@
+{
+  "total_constants_audited": 12,
+  "design_assumption_count": 10,
+  "game_rule_informed_count": 2,
+  "empirically_derived_count": 0,
+  "dead_code_constants": [
+    "stage_deficit_coeff"
+  ],
+  "constants": [
+    {
+      "constant_name": "survival_elim_coeff",
+      "value": 0.08,
+      "file": "candidate_models.py",
+      "line": 79,
+      "semantic_meaning": "ROLL score delta when rounds_to_elim <= 2.0",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Chosen to 'be large enough to flip SAVE_GOLD->ROLL in crisis'. No grid search."
+    },
+    {
+      "constant_name": "pair_count_coeff",
+      "value": 0.04,
+      "file": "candidate_models.py",
+      "line": 80,
+      "semantic_meaning": "ROLL score delta per normalized pair count",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Half of survival_elim_coeff by symmetry. No empirical basis."
+    },
+    {
+      "constant_name": "shop_upgrade_coeff",
+      "value": 0.06,
+      "file": "candidate_models.py",
+      "line": 81,
+      "semantic_meaning": "ROLL score delta for immediate shop upgrade",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Between pair and survival coeff. No empirical basis."
+    },
+    {
+      "constant_name": "stage_deficit_coeff",
+      "value": 0.05,
+      "file": "candidate_models.py",
+      "line": 82,
+      "semantic_meaning": "Defined but never referenced in any conditional block",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": true,
+      "audit_note": "DEAD_CODE: defined in weights dict but never applied."
+    },
+    {
+      "constant_name": "cheap_level_coeff",
+      "value": 0.06,
+      "file": "candidate_models.py",
+      "line": 83,
+      "semantic_meaning": "LEVEL_UP score delta when gold_to_next_level <= 8",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Symmetric with shop_upgrade_coeff. No regression."
+    },
+    {
+      "constant_name": "compound_interest_coeff",
+      "value": 0.05,
+      "file": "candidate_models.py",
+      "line": 84,
+      "semantic_meaning": "SAVE_GOLD delta when HP>=70, board>=1.05, interest<5",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Symmetric with stage_deficit_coeff. No empirical basis."
+    },
+    {
+      "constant_name": "survival_threshold",
+      "value": 2.0,
+      "file": "candidate_models.py",
+      "line": 101,
+      "semantic_meaning": "rounds_to_elim threshold below which ROLL adjust activates",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Chosen intuitively as 'within 2 losses of lethal'. No threshold search."
+    },
+    {
+      "constant_name": "pair_count_threshold",
+      "value": 2,
+      "file": "candidate_models.py",
+      "line": 121,
+      "semantic_meaning": "Min pair count to activate PAIR_COUNT adjustment",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Threshold of 2 chosen intuitively. pair_count>=1 untested."
+    },
+    {
+      "constant_name": "spendable_budget_threshold",
+      "value": 10,
+      "file": "candidate_models.py",
+      "line": 121,
+      "semantic_meaning": "Min spendable gold for pair adjustment (2 re-rolls minimum)",
+      "source": "GAME_RULE_INFORMED_ASSUMPTION",
+      "empirical_derivation": "2 re-rolls = 8G; rounded to 10G as buffer",
+      "dead_code": false,
+      "audit_note": "Game rule informs direction; exact value (8/10/12G) untested."
+    },
+    {
+      "constant_name": "safe_hp_threshold",
+      "value": 70,
+      "file": "candidate_models.py",
+      "line": 170,
+      "semantic_meaning": "HP floor for compound interest preservation",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "Arbitrary 70HP. Not derived from stage damage or survival probability."
+    },
+    {
+      "constant_name": "board_ratio_threshold",
+      "value": 1.05,
+      "file": "candidate_models.py",
+      "line": 170,
+      "semantic_meaning": "Stage benchmark ratio above which board is 'safe'",
+      "source": "DESIGN_ASSUMPTION",
+      "empirical_derivation": null,
+      "dead_code": false,
+      "audit_note": "5% above benchmark. No empirical derivation."
+    },
+    {
+      "constant_name": "cheap_level_xp_cost",
+      "value": 8,
+      "file": "candidate_models.py",
+      "line": 155,
+      "semantic_meaning": "Max gold cost for level-up to activate cheap_level adjust",
+      "source": "GAME_RULE_INFORMED_ASSUMPTION",
+      "empirical_derivation": "2 XP-buy clicks = 8G. Exact cutoff (4/8/12G) untested.",
+      "dead_code": false,
+      "audit_note": "Game rule informs direction; exact cutoff untested."
+    }
+  ]
+}

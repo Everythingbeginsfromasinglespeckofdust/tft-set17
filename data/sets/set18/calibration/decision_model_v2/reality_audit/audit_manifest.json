@@ -1,0 +1,18 @@
+{
+  "audit_version": "1.0.0",
+  "target": "Candidate Engine V1-V4",
+  "total_checkpoints": 20,
+  "total_real_matches": 1,
+  "design_assumption_constants": 10,
+  "empirically_derived_constants": 0,
+  "oos_split_possible": false,
+  "formal_leakage": false,
+  "implicit_in_sample_bias": true,
+  "hidden_overrides": false,
+  "human_reviews_completed": 0,
+  "guide_mismatches": 2,
+  "dead_code_constants": [
+    "stage_deficit_coeff"
+  ],
+  "final_gate_verdict": "CANDIDATE_IN_SAMPLE_ONLY"
+}

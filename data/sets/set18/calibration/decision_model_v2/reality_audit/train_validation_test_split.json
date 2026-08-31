@@ -1,0 +1,14 @@
+{
+  "total_real_matches": 1,
+  "total_checkpoints": 20,
+  "split_status": "INSUFFICIENT_MATCHES_FOR_OOS_SPLIT",
+  "group_kfold_possible": false,
+  "train_matches": [
+    "REAL_GAMEPLAY_SESSION_001"
+  ],
+  "validation_matches": [],
+  "test_matches": [],
+  "minimum_matches_required": 5,
+  "recommended_additional_matches": 10,
+  "audit_note": "Only 1 real match exists. All 20 checkpoints belong to the same match. Any evaluation on these checkpoints is IN_SAMPLE by definition. CANDIDATE_IN_SAMPLE_ONLY until >= 5 additional matches are collected."
+}

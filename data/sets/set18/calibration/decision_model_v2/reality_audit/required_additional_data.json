@@ -1,0 +1,41 @@
+{
+  "current_dataset": {
+    "matches": 1,
+    "checkpoints": 20,
+    "human_reviews": 0
+  },
+  "minimum_for_oos": {
+    "matches": 5,
+    "checkpoints": 75,
+    "human_reviews": 50
+  },
+  "recommended_for_production": {
+    "matches": 20,
+    "checkpoints": 400,
+    "human_reviews": 200
+  },
+  "missing_features": [
+    {
+      "feature": "OPPONENT_POWER_GAP",
+      "needed": "Lobby scout snapshots per round",
+      "status": "UNOBSERVED"
+    },
+    {
+      "feature": "ACTUAL_PLAYER_ACTION",
+      "needed": "Manual label or video action detection",
+      "status": "UNKNOWN"
+    },
+    {
+      "feature": "T1_OUTCOME (next_round_hp)",
+      "needed": "Sequential checkpoint linking",
+      "status": "NOT_LINKED"
+    }
+  ],
+  "acquisition_priority": [
+    "P0: Collect 5+ additional real match checkpoint sequences",
+    "P1: Complete human blind review of all existing flip cases",
+    "P2: Link actual_player_action to each checkpoint",
+    "P3: Link T1 outcome (next_round_hp) to each checkpoint",
+    "P4: Expand to 20+ matches for coefficient calibration"
+  ]
+}

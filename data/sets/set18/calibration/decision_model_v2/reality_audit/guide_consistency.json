@@ -1,0 +1,26 @@
+{
+  "guide_exists": true,
+  "checks": [
+    {
+      "claim": "Guide: Situation A trigger = 'HP <= 28 or Horizon <= 2.0 rounds'",
+      "code": "candidate_models.py L101: rounds_left <= 2.0 (HP not directly checked)",
+      "status": "MINOR_MISMATCH",
+      "detail": "Guide prose says 'HP <= 28' but code uses rounds_to_elim <= 2.0. At Stage 5 (14dmg), these are equivalent. At Stage 4 (10dmg), rounds_to_elim=2.0 maps to HP=20, not 28. Guide oversimplifies."
+    },
+    {
+      "claim": "Guide: Situation B trigger = 'Board >= 100% Benchmark'",
+      "code": "candidate_models.py L170: stage_benchmark_ratio >= 1.05",
+      "status": "MINOR_MISMATCH",
+      "detail": "Guide says 100% (1.0) but code uses 1.05. Gap at ratio in [1.0, 1.05)."
+    },
+    {
+      "claim": "Guide: '50G compound interest' preservation",
+      "code": "candidate_models.py L170: interest_tier < 5",
+      "status": "CONSISTENT",
+      "detail": "interest_tier < 5 correctly proxies 'not yet at 50G interest max'."
+    }
+  ],
+  "mismatches_count": 2,
+  "verdict": "MINOR_MISMATCHES_ONLY",
+  "note": "No critical DOCUMENT_CODE_MISMATCH. Minor guide simplifications exist."
+}

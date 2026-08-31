@@ -1,0 +1,47 @@
+{
+  "rankings": {
+    "CANDIDATE_V1_SURVIVAL": {
+      "in_sample_flips": 10,
+      "flip_rate": 0.5,
+      "oos_human_agreement": "N/A",
+      "oos_player_agreement": "N/A",
+      "outcome_association": "N/A",
+      "explainability": "HIGH",
+      "complexity": "LOW",
+      "data_support": "DESIGN_ASSUMPTION"
+    },
+    "CANDIDATE_V2_UPGRADE": {
+      "in_sample_flips": 10,
+      "flip_rate": 0.5,
+      "oos_human_agreement": "N/A",
+      "oos_player_agreement": "N/A",
+      "outcome_association": "N/A",
+      "explainability": "HIGH",
+      "complexity": "LOW",
+      "data_support": "DESIGN_ASSUMPTION"
+    },
+    "CANDIDATE_V3_ECONOMY": {
+      "in_sample_flips": 10,
+      "flip_rate": 0.5,
+      "oos_human_agreement": "N/A",
+      "oos_player_agreement": "N/A",
+      "outcome_association": "N/A",
+      "explainability": "MEDIUM",
+      "complexity": "MEDIUM",
+      "data_support": "DESIGN_ASSUMPTION"
+    },
+    "CANDIDATE_V4_COMBINED": {
+      "in_sample_flips": 10,
+      "flip_rate": 0.5,
+      "oos_human_agreement": "N/A",
+      "oos_player_agreement": "N/A",
+      "outcome_association": "N/A",
+      "explainability": "MEDIUM",
+      "complexity": "HIGH",
+      "data_support": "DESIGN_ASSUMPTION"
+    }
+  },
+  "simplicity_analysis": "SIMPLICITY_PREFERRED: V1_SURVIVAL == V4_COMBINED flips in-sample. V4 complexity unjustified.",
+  "recommended": "CANDIDATE_V1_SURVIVAL (lowest complexity, same in-sample result)",
+  "caveat": "IN_SAMPLE recommendation only. Requires OOS validation."
+}

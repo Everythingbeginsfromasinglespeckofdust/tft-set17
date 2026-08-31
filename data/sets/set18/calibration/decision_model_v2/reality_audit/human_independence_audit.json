@@ -1,0 +1,69 @@
+{
+  "total_review_records": 10,
+  "pending_review_count": 10,
+  "auto_copy_detected": 0,
+  "status": "ALL_PENDING_NO_HUMAN_LABELS_YET",
+  "records": [
+    {
+      "case_id": "CASE_001",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_002",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_003",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_004",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_005",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_006",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_007",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_008",
+      "candidate_action": "ROLL",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_009",
+      "candidate_action": "SAVE_GOLD",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    },
+    {
+      "case_id": "CASE_010",
+      "candidate_action": "ROLL",
+      "human_verdict": "PENDING_REVIEW",
+      "status": "PENDING"
+    }
+  ],
+  "audit_note": "All human_verdict fields are PENDING_REVIEW. No human has reviewed flip cases yet. Human blind review is a prerequisite for advancing to CANDIDATE_OOS_VALIDATED."
+}

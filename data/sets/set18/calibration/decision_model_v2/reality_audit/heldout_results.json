@@ -1,0 +1,6 @@
+{
+  "status": "IMPOSSIBLE",
+  "reason": "Only 1 real match. No held-out match data available.",
+  "in_sample_agreement_rate": 0.5,
+  "in_sample_flip_rate": 0.5
+}
