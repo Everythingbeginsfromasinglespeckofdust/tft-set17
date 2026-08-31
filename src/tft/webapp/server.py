@@ -34,6 +34,7 @@ from tft.webapp.adapter import (
     TurnDiffCalculator,
     SET18_CHAMPIONS,
     SET18_ITEMS,
+    _KO_NAME_MAP,
     _SET18_CHAMPIONS_PATH,
     _SET18_ITEMS_PATH
 )
@@ -43,14 +44,14 @@ _DATA_DIR = os.path.join(_REPO, "data", "decision_assistant")
 _SESSIONS_DIR = os.path.join(_DATA_DIR, "sessions")
 _RECORDINGS_DIR = r"C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings"
 _FRONTEND_DIR = os.path.join(_HERE, "frontend")
-_DDRAGON_IMG_DIR = os.path.join(_REPO, "TFT_DDragon", "img")
+_DDRAGON_CHAMPS_DIR = os.path.join(_REPO, "data", "sets", "set18", "raw", "ddragon", "champions")
 
 os.makedirs(_SESSIONS_DIR, exist_ok=True)
-os.makedirs(_FRONTEND_DIR, exist_ok=True)
 
+# FastAPI App
 app = FastAPI(
-    title="TFT Decision Assistant API v1.1",
-    description="Human Input -> GameState -> Frozen DecisionEngine Assistant",
+    title="TFT Decision Assistant API",
+    description="Human Input GameState Decision Assistant for TFT Set 18",
     version="1.1.0"
 )
 
@@ -74,12 +75,16 @@ _calib_adapter = DecisionCalibrationAdapter(engine=_engine)
 
 @app.get("/api/data/champions")
 def get_champions() -> List[Dict[str, Any]]:
-    """Return all 64 Set 18 normalized champions sorted by cost then name."""
+    """Return all 64 Set 18 normalized champions sorted by cost then Korean name."""
     if not os.path.exists(_SET18_CHAMPIONS_PATH):
         return []
     with open(_SET18_CHAMPIONS_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
-    data.sort(key=lambda c: (c.get("cost", 1), c.get("name", "")))
+    for c in data:
+        name = c.get("name", "")
+        char_id = c.get("character_id", "").lower()
+        c["name_ko"] = _KO_NAME_MAP.get(char_id) or _KO_NAME_MAP.get(name.lower()) or name
+    data.sort(key=lambda c: (c.get("cost", 1), c.get("name_ko", c.get("name", ""))))
     return data
 
 
@@ -159,264 +164,208 @@ def analyze_and_decide(payload: Dict[str, Any]) -> Dict[str, Any]:
         calib_res=calib_res,
         calib_mode=calib_mode_str
     )
-
-    # Include input metadata
-    response["input_metadata"] = {
-        "stage_round": dto.stage_round,
-        "hp": dto.hp,
-        "gold": dto.gold,
-        "level": dto.level,
-        "xp": dto.xp,
-        "video_timestamp_sec": dto.video_timestamp_sec,
-        "actual_player_action": dto.actual_player_action,
-        "human_preferred_action": dto.human_preferred_action,
-        "human_feedback": dto.human_feedback,
-        "human_judgment": dto.human_judgment,
-        "notes": dto.notes
-    }
-
     return response
 
 
 @app.post("/api/diff")
 def compute_turn_diff(payload: Dict[str, Any]) -> Dict[str, Any]:
     """Compute state delta between previous and current turn."""
-    prev_raw = payload.get("prev")
-    curr_raw = payload.get("curr")
-    if not prev_raw or not curr_raw:
-        raise HTTPException(status_code=400, detail="Must provide 'prev' and 'curr' turn objects")
-
+    prev_raw = payload.get("previous_state", {})
+    curr_raw = payload.get("current_state", {})
     prev_dto = HumanInputDTO.from_dict(prev_raw)
     curr_dto = HumanInputDTO.from_dict(curr_raw)
-    return TurnDiffCalculator.compute_turn_diff(prev_dto, curr_dto)
+    diff = TurnDiffCalculator.compute_turn_diff(prev_dto, curr_dto)
+    return diff
 
 
 # ==============================================================================
-# 3. Video Replay & Recording Stream Endpoints
+# 3. Local Video Files Streaming & Linking
 # ==============================================================================
 
 @app.get("/api/videos")
-def list_recordings() -> List[Dict[str, Any]]:
-    """List local MP4 match recordings from TFTAcademy directory."""
+def list_local_videos() -> List[Dict[str, Any]]:
+    """List MP4 recording files available in the user's recordings directory."""
     if not os.path.exists(_RECORDINGS_DIR):
         return []
 
-    files = [f for f in os.listdir(_RECORDINGS_DIR) if f.endswith(".mp4")]
-    recordings = []
-    for f in sorted(files):
-        fp = os.path.join(_RECORDINGS_DIR, f)
-        sz = os.path.getsize(fp)
-        recordings.append({
-            "filename": f,
-            "size_mb": round(sz / (1024 * 1024), 1),
-            "video_url": f"/api/videos/stream/{f}"
+    files = glob.glob(os.path.join(_RECORDINGS_DIR, "*.mp4"))
+    videos = []
+    for fp in files:
+        fname = os.path.basename(fp)
+        sz_bytes = os.path.getsize(fp)
+        videos.append({
+            "filename": fname,
+            "path": fp,
+            "size_bytes": sz_bytes,
+            "size_mb": round(sz_bytes / (1024 * 1024), 1)
         })
-    return recordings
+    videos.sort(key=lambda x: x["filename"], reverse=True)
+    return videos
 
 
-@app.get("/api/videos/stream/{filename}")
-def stream_video(filename: str, request: Request):
-    """Stream MP4 video with HTTP Range header support for fast seeking."""
-    filepath = os.path.join(_RECORDINGS_DIR, filename)
-    if not os.path.exists(filepath):
+@app.get("/api/videos/{video_filename}/stream")
+def stream_video(video_filename: str, request: Request):
+    """Stream MP4 video with HTTP Range header support for seeking in HTML5 player."""
+    video_path = os.path.join(_RECORDINGS_DIR, video_filename)
+    if not os.path.exists(video_path):
         raise HTTPException(status_code=404, detail="Video file not found")
 
-    file_size = os.path.getsize(filepath)
-    range_header = request.headers.get("range")
+    file_size = os.path.getsize(video_path)
+    range_header = request.headers.get("Range")
 
-    if range_header:
-        byte_range = range_header.replace("bytes=", "").split("-")
-        start = int(byte_range[0])
-        end = int(byte_range[1]) if byte_range[1] else file_size - 1
-        chunk_size = (end - start) + 1
+    if not range_header:
+        def iterfile():
+            with open(video_path, "rb") as f:
+                while chunk := f.read(65536 * 16):
+                    yield chunk
+        return StreamingResponse(
+            iterfile(),
+            status_code=200,
+            media_type="video/mp4",
+            headers={"Content-Length": str(file_size), "Accept-Ranges": "bytes"}
+        )
 
-        def range_generator():
-            with open(filepath, "rb") as f:
-                f.seek(start)
-                bytes_left = chunk_size
-                while bytes_left > 0:
-                    read_len = min(65536, bytes_left)
-                    data = f.read(read_len)
-                    if not data:
-                        break
-                    bytes_left -= len(data)
-                    yield data
+    # Parse Range: bytes=START-END
+    range_match = range_header.replace("bytes=", "").split("-")
+    start = int(range_match[0]) if range_match[0] else 0
+    end = int(range_match[1]) if len(range_match) > 1 and range_match[1] else file_size - 1
+    end = min(end, file_size - 1)
+    chunk_size = end - start + 1
 
-        headers = {
-            "Content-Range": f"bytes {start}-{end}/{file_size}",
-            "Accept-Ranges": "bytes",
-            "Content-Length": str(chunk_size),
-            "Content-Type": "video/mp4",
-        }
-        return StreamingResponse(range_generator(), status_code=206, headers=headers)
+    def iterfile_range():
+        with open(video_path, "rb") as f:
+            f.seek(start)
+            bytes_left = chunk_size
+            while bytes_left > 0:
+                read_size = min(65536 * 16, bytes_left)
+                data = f.read(read_size)
+                if not data:
+                    break
+                bytes_left -= len(data)
+                yield data
 
-    return FileResponse(filepath, media_type="video/mp4")
-
-
-# ==============================================================================
-# 4. Session Persistence & Feedback Storage
-# ==============================================================================
-
-@app.post("/api/sessions/save")
-def save_session(payload: Dict[str, Any]) -> Dict[str, Any]:
-    """Save full session with turns, predictions, and human reviews."""
-    session_id = payload.get("session_id") or f"SESSION_{time.strftime('%Y%m%d_%H%M%S')}"
-    session_dir = os.path.join(_SESSIONS_DIR, session_id)
-    os.makedirs(session_dir, exist_ok=True)
-
-    turns = payload.get("turns", [])
-    manifest = {
-        "session_id": session_id,
-        "title": payload.get("title", f"Session {session_id}"),
-        "created_at_iso": payload.get("created_at_iso", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())),
-        "updated_at_iso": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "total_turns": len(turns),
-        "video_filename": payload.get("video_filename", "")
+    headers = {
+        "Content-Range": f"bytes {start}-{end}/{file_size}",
+        "Accept-Ranges": "bytes",
+        "Content-Length": str(chunk_size),
+        "Content-Type": "video/mp4"
     }
-
-    # 1. Manifest
-    with open(os.path.join(session_dir, "manifest.json"), "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2, ensure_ascii=False)
-
-    # 2. Turns JSONL
-    with open(os.path.join(session_dir, "turns.jsonl"), "w", encoding="utf-8") as f:
-        for t in turns:
-            f.write(json.dumps(t, ensure_ascii=False) + "\n")
-
-    # 3. Predictions JSONL (Immutable Engine Output)
-    with open(os.path.join(session_dir, "predictions.jsonl"), "w", encoding="utf-8") as f:
-        for t in turns:
-            pred = t.get("decision", {})
-            pred_record = {
-                "turn_id": t.get("turn_id"),
-                "stage_round": t.get("stage_round"),
-                "recommended_action": pred.get("recommended_action"),
-                "score": pred.get("score"),
-                "action_score_gap": pred.get("action_score_gap"),
-                "all_scores": pred.get("all_scores"),
-                "reasons": pred.get("reasons"),
-                "current_direction": pred.get("current_direction")
-            }
-            f.write(json.dumps(pred_record, ensure_ascii=False) + "\n")
-
-    # 4. Reviews JSONL (Human Feedback separated)
-    with open(os.path.join(session_dir, "reviews.jsonl"), "w", encoding="utf-8") as f:
-        for t in turns:
-            rev_record = {
-                "turn_id": t.get("turn_id"),
-                "stage_round": t.get("stage_round"),
-                "actual_player_action": t.get("actual_player_action", "UNKNOWN"),
-                "human_preferred_action": t.get("human_preferred_action", "UNKNOWN"),
-                "human_feedback": t.get("human_feedback") or t.get("human_judgment") or "UNKNOWN",
-                "human_judgment": t.get("human_judgment") or t.get("human_feedback") or "UNKNOWN",
-                "notes": t.get("notes", ""),
-                "reviewed_at_iso": t.get("reviewed_at_iso", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
-            }
-            f.write(json.dumps(rev_record, ensure_ascii=False) + "\n")
-
-    return {"status": "SUCCESS", "session_id": session_id, "turns_saved": len(turns)}
+    return StreamingResponse(iterfile_range(), status_code=206, headers=headers)
 
 
-@app.get("/api/sessions/list")
-def list_sessions() -> List[Dict[str, Any]]:
+# ==============================================================================
+# 4. Session Persistence & Checkpoints
+# ==============================================================================
+
+def get_session_dir(session_id: str) -> str:
+    s_dir = os.path.join(_SESSIONS_DIR, session_id)
+    os.makedirs(s_dir, exist_ok=True)
+    return s_dir
+
+
+@app.get("/api/sessions")
+def list_sessions() -> List[str]:
     """List all saved sessions."""
-    sessions = []
     if not os.path.exists(_SESSIONS_DIR):
         return []
-
-    for d in sorted(os.listdir(_SESSIONS_DIR), reverse=True):
-        m_path = os.path.join(_SESSIONS_DIR, d, "manifest.json")
-        if os.path.exists(m_path):
-            try:
-                with open(m_path, "r", encoding="utf-8") as f:
-                    sessions.append(json.load(f))
-            except Exception:
-                pass
-    return sessions
+    return [d for d in os.listdir(_SESSIONS_DIR) if os.path.isdir(os.path.join(_SESSIONS_DIR, d))]
 
 
 @app.get("/api/sessions/{session_id}")
-def get_session(session_id: str) -> Dict[str, Any]:
-    """Load session manifest, turns, predictions, and reviews."""
-    s_dir = os.path.join(_SESSIONS_DIR, session_id)
-    if not os.path.exists(s_dir):
-        raise HTTPException(status_code=404, detail=f"Session {session_id} not found")
+def load_session(session_id: str) -> Dict[str, Any]:
+    """Load session data and turns history."""
+    s_dir = get_session_dir(session_id)
+    manifest_path = os.path.join(s_dir, "manifest.json")
+    if not os.path.exists(manifest_path):
+        return {"session_id": session_id, "turns": []}
 
-    m_path = os.path.join(s_dir, "manifest.json")
-    t_path = os.path.join(s_dir, "turns.jsonl")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
 
-    manifest = {}
-    if os.path.exists(m_path):
-        with open(m_path, "r", encoding="utf-8") as f:
-            manifest = json.load(f)
-
+    # Load individual turns
     turns = []
-    if os.path.exists(t_path):
-        with open(t_path, "r", encoding="utf-8") as f:
+    turns_path = os.path.join(s_dir, "turns.jsonl")
+    if os.path.exists(turns_path):
+        with open(turns_path, "r", encoding="utf-8") as f:
             for line in f:
                 if line.strip():
-                    turns.append(json.loads(line.strip()))
+                    turns.append(json.loads(line))
 
-    return {"manifest": manifest, "turns": turns}
+    manifest["turns"] = turns
+    return manifest
 
 
-# ==============================================================================
-# 5. Dataset Export
-# ==============================================================================
+@app.post("/api/sessions/{session_id}/turns")
+def save_turn(session_id: str, turn_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Append a turn checkpoint to session."""
+    s_dir = get_session_dir(session_id)
+    turns_path = os.path.join(s_dir, "turns.jsonl")
+    manifest_path = os.path.join(s_dir, "manifest.json")
 
-@app.post("/api/export/dataset")
-def export_dataset() -> Dict[str, Any]:
-    """Export all sessions into a single dataset for backtesting and calibration."""
-    export_file = os.path.join(_DATA_DIR, "exported_dataset.jsonl")
-    records_count = 0
+    turn_idx = 0
+    if os.path.exists(turns_path):
+        with open(turns_path, "r", encoding="utf-8") as f:
+            turn_idx = sum(1 for l in f if l.strip())
 
-    with open(export_file, "w", encoding="utf-8") as out:
-        for s_dir in glob.glob(os.path.join(_SESSIONS_DIR, "*")):
-            t_path = os.path.join(s_dir, "turns.jsonl")
-            if os.path.exists(t_path):
-                with open(t_path, "r", encoding="utf-8") as tf:
-                    for line in tf:
-                        if not line.strip():
-                            continue
-                        t_data = json.loads(line.strip())
-                        fb = t_data.get("human_feedback") or t_data.get("human_judgment") or "UNKNOWN"
-                        export_row = {
-                            "session_id": os.path.basename(s_dir),
-                            "turn_id": t_data.get("turn_id"),
-                            "stage_round": t_data.get("stage_round"),
-                            "video_timestamp_sec": t_data.get("video_timestamp_sec"),
-                            "state": t_data.get("state"),
-                            "actual_action": t_data.get("actual_player_action", "UNKNOWN"),
-                            "human_preference": t_data.get("human_preferred_action", "UNKNOWN"),
-                            "engine_recommendation": t_data.get("decision", {}).get("recommended_action"),
-                            "action_score_gap": t_data.get("decision", {}).get("action_score_gap"),
-                            "score_breakdown": t_data.get("decision", {}).get("all_scores"),
-                            "human_judgment": fb,
-                            "notes": t_data.get("notes", "")
-                        }
-                        out.write(json.dumps(export_row, ensure_ascii=False) + "\n")
-                        records_count += 1
+    turn_data["turn_index"] = turn_idx
+    turn_data["timestamp_saved"] = time.time()
 
-    return {
-        "status": "SUCCESS",
-        "exported_records": records_count,
-        "export_path": os.path.abspath(export_file)
+    with open(turns_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(turn_data, ensure_ascii=False) + "\n")
+
+    # Update manifest
+    manifest = {
+        "session_id": session_id,
+        "last_updated": time.time(),
+        "total_turns": turn_idx + 1
     }
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+
+    return {"status": "success", "turn_index": turn_idx}
+
+
+@app.get("/api/export/dataset")
+def export_dataset(session_id: Optional[str] = None) -> List[Dict[str, Any]]:
+    """Export turns dataset across sessions in backtest JSONL format."""
+    dataset = []
+    sessions_to_scan = [session_id] if session_id else list_sessions()
+
+    for s_id in sessions_to_scan:
+        s_dir = os.path.join(_SESSIONS_DIR, s_id)
+        turns_path = os.path.join(s_dir, "turns.jsonl")
+        if os.path.exists(turns_path):
+            with open(turns_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        t_data = json.loads(line)
+                        dataset.append({
+                            "session_id": s_id,
+                            "turn_index": t_data.get("turn_index"),
+                            "stage_round": t_data.get("state", {}).get("stage_round"),
+                            "video_timestamp_sec": t_data.get("state", {}).get("video_timestamp_sec"),
+                            "recommended_action": t_data.get("decision", {}).get("recommended_action"),
+                            "action_score_gap": t_data.get("decision", {}).get("action_score_gap"),
+                            "actual_player_action": t_data.get("actual_player_action"),
+                            "human_preferred_action": t_data.get("human_preferred_action"),
+                            "human_feedback": t_data.get("human_feedback"),
+                            "human_judgment": t_data.get("human_judgment") or t_data.get("human_feedback"),
+                            "notes": t_data.get("notes"),
+                            "state": t_data.get("state")
+                        })
+    return dataset
 
 
 # ==============================================================================
-# 6. Static Mounts
+# 5. Static Web UI & Image Assets Mount
 # ==============================================================================
 
-if os.path.exists(_DDRAGON_IMG_DIR):
-    app.mount("/img", StaticFiles(directory=_DDRAGON_IMG_DIR), name="img")
+if os.path.exists(_DDRAGON_CHAMPS_DIR):
+    app.mount("/img/champion", StaticFiles(directory=_DDRAGON_CHAMPS_DIR), name="champion_images")
 
 if os.path.exists(_FRONTEND_DIR):
     app.mount("/static", StaticFiles(directory=_FRONTEND_DIR), name="static")
 
-@app.get("/")
-def serve_index():
-    idx_path = os.path.join(_FRONTEND_DIR, "index.html")
-    if os.path.exists(idx_path):
-        return FileResponse(idx_path)
-    return {"message": "TFT Decision Assistant API is active."}
+    @app.get("/")
+    def serve_frontend_index():
+        return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))

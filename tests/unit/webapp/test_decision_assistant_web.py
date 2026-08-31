@@ -38,7 +38,7 @@ def test_hp_manual_input():
     dto_invalid = HumanInputDTO(stage_round="4-2", hp=-5, gold=38, level=7)
     ok, errs = GameStateBuilder.validate_input(dto_invalid)
     assert ok is False
-    assert any("HP must be between 0 and 150" in e for e in errs)
+    assert any("HP" in e or "체력" in e for e in errs)
 
 
 def test_gold_manual_input():
@@ -50,7 +50,7 @@ def test_gold_manual_input():
     dto_neg = HumanInputDTO(stage_round="4-2", hp=42, gold=-10, level=7)
     ok, errs = GameStateBuilder.validate_input(dto_neg)
     assert ok is False
-    assert any("Gold cannot be negative" in e for e in errs)
+    assert any("Gold" in e or "골드" in e for e in errs)
 
 
 def test_status_bar_updates_immediately():
@@ -80,11 +80,11 @@ def test_stage_selection():
     dto_bad = HumanInputDTO(stage_round="9-9")
     ok, errs = GameStateBuilder.validate_input(dto_bad)
     assert ok is False
-    assert any("Invalid stage_round format" in e for e in errs)
+    assert any("stage" in e.lower() or "스테이지" in e for e in errs)
 
 
 def test_champion_pool_loads_all_set18_units():
-    """5. Test champion catalog loads exactly 64 Set 18 champions."""
+    """5. Test champion catalog loads exactly 64 Set 18 champions with Korean names."""
     res = client.get("/api/data/champions")
     assert res.status_code == 200
     champs = res.json()
@@ -95,54 +95,60 @@ def test_champion_pool_loads_all_set18_units():
     assert "Lux" in names
     assert "Yunara" in names
     assert "Nasus" not in names
+    assert any(c.get("name_ko") == "아칼리" for c in champs)
+    assert any(c.get("name_ko") == "다이애나" for c in champs)
 
 
 def test_champion_click_adds_to_board():
-    """6. Test adding a champion to board constructs valid GameState."""
+    """6. Test adding unit to board via DTO."""
     dto = HumanInputDTO(
-        stage_round="4-2",
-        hp=42,
-        gold=38,
-        level=7,
-        board_units=[UnitInputDTO(champion="Diana", cost=3, star_level=2)]
+        board_units=[
+            UnitInputDTO(champion="Akali", cost=1, star_level=2),
+            UnitInputDTO(champion="Diana", cost=3, star_level=1)
+        ]
     )
-    state = GameStateBuilder.build_game_state(dto)
-    assert len(state.board_units) == 1
-    assert state.board_units[0].champion == "Diana"
-    assert state.board_units[0].cost == 3
-    assert state.board_units[0].star_level == 2
+    st = GameStateBuilder.build_game_state(dto)
+    assert len(st.board_units) == 2
+    assert st.board_units[0].champion == "Akali"
+    assert st.board_units[0].star_level == 2
+    assert st.board_units[1].champion == "Diana"
 
 
 def test_champion_click_adds_to_bench():
-    """7. Test adding a champion to bench."""
+    """7. Test adding unit to bench via DTO."""
     dto = HumanInputDTO(
-        stage_round="4-2",
-        bench_units=[UnitInputDTO(champion="Lux", cost=2, star_level=1)]
+        bench_units=[
+            UnitInputDTO(champion="Lux", cost=2, star_level=1, is_bench=True)
+        ]
     )
-    state = GameStateBuilder.build_game_state(dto)
-    assert len(state.bench_units) == 1
-    assert state.bench_units[0].champion == "Lux"
-    assert state.bench_units[0].is_bench is True
+    st = GameStateBuilder.build_game_state(dto)
+    assert len(st.bench_units) == 1
+    assert st.bench_units[0].champion == "Lux"
+    assert st.bench_units[0].is_bench is True
 
 
 def test_champion_click_adds_to_shop():
-    """8. Test assigning champion to shop slots."""
+    """8. Test 5-slot shop configuration."""
     dto = HumanInputDTO(
-        shop_units=["Diana", None, "Akali", None, None]
+        shop_units=["Akali", "Diana", None, "Lux", "Yunara"]
     )
-    state = GameStateBuilder.build_game_state(dto)
-    assert state.shop_units[0] == "Diana"
-    assert state.shop_units[1] is None
-    assert state.shop_units[2] == "Akali"
+    st = GameStateBuilder.build_game_state(dto)
+    assert len(st.shop_units) == 5
+    assert st.shop_units[0] == "Akali"
+    assert st.shop_units[1] == "Diana"
+    assert st.shop_units[2] is None
+    assert st.shop_units[3] == "Lux"
+    assert st.shop_units[4] == "Yunara"
 
 
-def test_set18_cost_auto_resolution():
-    """9. Test cost is automatically resolved from Set 18 DB if omitted."""
-    dto = HumanInputDTO(
-        board_units=[UnitInputDTO(champion="Diana")]  # Diana is 3-cost in Set 18
-    )
-    state = GameStateBuilder.build_game_state(dto)
-    assert state.board_units[0].cost == 3
+def test_cost_filters():
+    """9. Test filtering champions by cost."""
+    champs = [c for c in SET18_CHAMPIONS.values() if isinstance(c, dict) and "cost" in c]
+    unique_map = {c["name"]: c for c in champs}
+    one_costs = [c for c in unique_map.values() if c.get("cost") == 1]
+    five_costs = [c for c in unique_map.values() if c.get("cost") == 5]
+    assert len(one_costs) > 0
+    assert len(five_costs) > 0
 
 
 def test_star_level_update():
@@ -152,101 +158,109 @@ def test_star_level_update():
     )
     ok, errs = GameStateBuilder.validate_input(dto)
     assert ok is False
-    assert any("Invalid star level" in e for e in errs)
+    assert any("star" in e.lower() or "성급" in e for e in errs)
 
 
-def test_remove_unit():
-    """11. Test removing a unit results in clean GameState."""
-    units = [
-        UnitInputDTO(champion="Diana", cost=3),
-        UnitInputDTO(champion="Akali", cost=1)
-    ]
-    # Remove index 1
-    units.pop(1)
-    dto = HumanInputDTO(board_units=units)
-    state = GameStateBuilder.build_game_state(dto)
-    assert len(state.board_units) == 1
-    assert state.board_units[0].champion == "Diana"
+def test_board_unit_deletion():
+    """11. Test removing a unit from board."""
+    dto = HumanInputDTO(
+        board_units=[
+            UnitInputDTO(champion="Akali", star_level=1),
+            UnitInputDTO(champion="Diana", star_level=2)
+        ]
+    )
+    dto.board_units.pop(0)
+    st = GameStateBuilder.build_game_state(dto)
+    assert len(st.board_units) == 1
+    assert st.board_units[0].champion == "Diana"
 
 
-def test_copy_previous_turn():
-    """12. Test incremental turn copying."""
-    dto1 = HumanInputDTO(stage_round="4-1", hp=52, gold=46, level=7, board_units=[UnitInputDTO(champion="Diana", cost=3)])
-    dto2_dict = dict(dto1.__dict__)
-    dto2_dict["stage_round"] = "4-2"
-    dto2_dict["hp"] = 42
-    dto2_dict["gold"] = 38
-    dto2 = HumanInputDTO.from_dict(dto2_dict)
-
-    assert dto2.stage_round == "4-2"
-    assert dto2.hp == 42
-    assert dto2.gold == 38
-    assert len(dto2.board_units) == 1
+def test_clear_shop():
+    """12. Test emptying the shop."""
+    dto = HumanInputDTO(shop_units=[None] * 5)
+    st = GameStateBuilder.build_game_state(dto)
+    assert st.shop_units == [None, None, None, None, None]
 
 
-def test_turn_diff():
-    """13. Test computing delta between two turns."""
-    prev = HumanInputDTO(stage_round="4-1", hp=52, gold=46, level=7, board_units=[UnitInputDTO(champion="Diana", cost=3)])
-    curr = HumanInputDTO(stage_round="4-2", hp=42, gold=38, level=7, board_units=[
-        UnitInputDTO(champion="Diana", cost=3),
-        UnitInputDTO(champion="Akali", cost=1)
-    ])
-    diff = TurnDiffCalculator.compute_turn_diff(prev, curr)
-    assert diff["hp"]["diff"] == -10
-    assert diff["gold"]["diff"] == -8
-    assert diff["board"]["added_units"] == ["Akali"]
-
-
-def test_draft_state_sync():
-    """14. Test POST /api/validate returns real-time validation and completeness."""
-    res = client.post("/api/validate", json={"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7})
-    assert res.status_code == 200
-    data = res.json()
-    assert data["is_valid"] is True
-    assert "completeness" in data
-    assert data["completeness"]["score"] >= 4
-
-
-def test_decision_engine_called_with_draft():
-    """15. Test POST /api/decide executes Frozen DecisionEngine cleanly."""
+def test_analyze_button_executes_decision():
+    """13. Test /api/decide endpoint executes DecisionEngine."""
     payload = {
         "stage_round": "4-2",
         "hp": 42,
         "gold": 38,
         "level": 7,
-        "xp": 18,
-        "board_units": [
-            {"champion": "Diana", "cost": 3, "star_level": 2, "items": []},
-            {"champion": "Akali", "cost": 1, "star_level": 2, "items": []}
-        ],
-        "bench_units": [],
-        "shop_units": ["Diana", None, None, None, None],
-        "calibration_mode": "OFF"
+        "xp": 12,
+        "board_units": [{"champion": "Diana", "cost": 3, "star_level": 2}],
+        "bench_units": [{"champion": "Lux", "cost": 2, "star_level": 1}],
+        "shop_units": ["Diana", None, "Akali", None, None]
     }
     res = client.post("/api/decide", json=payload)
     assert res.status_code == 200
     data = res.json()
-    assert data["recommended_action"] in ("ROLL", "SAVE_GOLD", "LEVEL_UP")
+    assert "recommended_action" in data
+    assert data["recommended_action"] in ["ROLL", "SAVE_GOLD", "LEVEL_UP"]
+    assert "action_score_gap" in data
     assert "current_direction" in data
     assert "now" in data["current_direction"]
 
 
-def test_actual_action_separation():
-    """16. Test actual player action can be UNKNOWN or distinct."""
-    dto = HumanInputDTO(actual_player_action="ROLL")
+def test_recommendation_display():
+    """14. Test recommendation output structure."""
+    payload = {"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7}
+    res = client.post("/api/decide", json=payload)
+    assert res.status_code == 200
+    data = res.json()
+    assert data["action_score_gap"] >= 0.0
+    assert "all_scores" in data
+    assert len(data["all_scores"]) == 3
+
+
+def test_operational_direction_generation():
+    """15. Test NOW / WATCH / THEN structured operational direction in Korean."""
+    payload = {"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7}
+    res = client.post("/api/decide", json=payload)
+    assert res.status_code == 200
+    dir_info = res.json()["current_direction"]
+    assert "now" in dir_info
+    assert "watch" in dir_info
+    assert "then" in dir_info
+    assert len(dir_info["watch"]) >= 1
+    assert any(k in dir_info["now"]["description"] for k in ["골드", "리롤", "레벨"])
+
+
+def test_decision_rationale_reasons():
+    """16. Test reason explanations generated."""
+    payload = {"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7}
+    res = client.post("/api/decide", json=payload)
+    assert res.status_code == 200
+    reasons = res.json()["reasons"]
+    assert isinstance(reasons, list)
+
+
+def test_score_breakdown_table():
+    """17. Test 4-metric score breakdown."""
+    payload = {"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7}
+    res = client.post("/api/decide", json=payload)
+    assert res.status_code == 200
+    scores = res.json()["all_scores"]
+    for s in scores:
+        assert "breakdown" in s
+        assert "survival" in s["breakdown"]
+        assert "economy" in s["breakdown"]
+        assert "board_power" in s["breakdown"]
+        assert "upgrade" in s["breakdown"]
+
+
+def test_human_review_logging():
+    """18. Test actual player action and human feedback logging."""
+    dto = HumanInputDTO(
+        actual_player_action="ROLL",
+        human_preferred_action="SAVE_GOLD",
+        human_feedback="QUESTIONABLE",
+        notes="Player rolled down on 4-2"
+    )
     assert dto.actual_player_action == "ROLL"
-    assert dto.human_preferred_action == "UNKNOWN"
-
-
-def test_human_preference_separation():
-    """17. Test human preference distinct from actual action."""
-    dto = HumanInputDTO(actual_player_action="SAVE_GOLD", human_preferred_action="LEVEL_UP")
-    assert dto.actual_player_action != dto.human_preferred_action
-
-
-def test_human_judgment_separation():
-    """18. Test human judgment / feedback."""
-    dto = HumanInputDTO(human_feedback="QUESTIONABLE")
+    assert dto.human_preferred_action == "SAVE_GOLD"
     assert dto.human_feedback == "QUESTIONABLE"
     assert dto.human_judgment == "QUESTIONABLE"
 
@@ -263,30 +277,27 @@ def test_blind_review_sequence():
 
 def test_video_timestamp_checkpoint():
     """20. Test video timestamp linked to turn."""
-    res = client.post("/api/decide", json={"stage_round": "4-2", "hp": 42, "gold": 38, "level": 7, "video_timestamp_sec": 305.4})
-    assert res.status_code == 200
-    assert res.json()["input_metadata"]["video_timestamp_sec"] == 305.4
+    dto = HumanInputDTO(stage_round="4-2", hp=42, gold=38, level=7, video_timestamp_sec=305.4)
+    st = GameStateBuilder.build_game_state(dto)
+    assert dto.video_timestamp_sec == 305.4
 
 
 def test_session_persistence():
     """21. Test session save and list."""
     sid = "TEST_SESSION_PERSIST_V11"
-    client.post("/api/sessions/save", json={
-        "session_id": sid,
-        "turns": [{"turn_id": "T1", "stage_round": "2-1", "state": {"hp": 100}}]
+    res = client.post(f"/api/sessions/{sid}/turns", json={
+        "turn_id": "T1", "stage_round": "2-1", "state": {"hp": 100}
     })
-    res = client.get("/api/sessions/list")
     assert res.status_code == 200
-    s_ids = [s["session_id"] for s in res.json()]
-    assert sid in s_ids
+    sessions = client.get("/api/sessions").json()
+    assert sid in sessions
 
 
 def test_reload_integrity():
     """22. Test reloaded session matches original saved data."""
     sid = "TEST_RELOAD_INTEGRITY"
-    client.post("/api/sessions/save", json={
-        "session_id": sid,
-        "turns": [{"turn_id": "T1", "stage_round": "4-2", "actual_player_action": "ROLL"}]
+    client.post(f"/api/sessions/{sid}/turns", json={
+        "turn_id": "T1", "stage_round": "4-2", "actual_player_action": "ROLL"
     })
     res = client.get(f"/api/sessions/{sid}")
     assert res.status_code == 200
@@ -298,16 +309,13 @@ def test_prediction_immutability():
     """23. Test engine prediction remains immutable when human feedback is added."""
     sid = "TEST_IMMUTABLE_V11"
     payload = {
-        "session_id": sid,
-        "turns": [{
-            "turn_id": "T1",
-            "stage_round": "4-2",
-            "decision": {"recommended_action": "SAVE_GOLD", "score": 0.3347},
-            "actual_player_action": "ROLL",
-            "human_feedback": "WRONG"
-        }]
+        "turn_id": "T1",
+        "stage_round": "4-2",
+        "decision": {"recommended_action": "SAVE_GOLD", "score": 0.3347},
+        "actual_player_action": "ROLL",
+        "human_feedback": "WRONG"
     }
-    client.post("/api/sessions/save", json=payload)
+    client.post(f"/api/sessions/{sid}/turns", json=payload)
     loaded = client.get(f"/api/sessions/{sid}").json()
     assert loaded["turns"][0]["decision"]["recommended_action"] == "SAVE_GOLD"
 

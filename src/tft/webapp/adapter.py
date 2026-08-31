@@ -3,7 +3,7 @@
 Provides:
 - HumanInputDTO & validation rules against Set 18 domain.
 - GameStateBuilder: constructs canonical GameState from human input, with completeness calculation.
-- DecisionPresenter: formats Frozen DecisionEngine outputs, score breakdowns, explanations, and structured Direction.
+- DecisionPresenter: formats Frozen DecisionEngine outputs, score breakdowns, explanations, and structured Korean Direction.
 - TurnDiffCalculator: computes differences between consecutive game turns.
 """
 from __future__ import annotations
@@ -26,10 +26,43 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 _REPO = os.path.abspath(os.path.join(_HERE, "..", "..", ".."))
 _SET18_CHAMPIONS_PATH = os.path.join(_REPO, "data", "sets", "set18", "normalized", "champions.json")
 _SET18_ITEMS_PATH = os.path.join(_REPO, "data", "sets", "set18", "normalized", "items.json")
+_SET18_KOREAN_DATA_PATH = os.path.join(_REPO, "data", "sets", "set18", "raw", "communitydragon", "ko_kr.json")
+
+
+def load_korean_name_mapping() -> Dict[str, str]:
+    """Load English to Korean champion name mapping from CommunityDragon ko_kr.json."""
+    if not os.path.exists(_SET18_KOREAN_DATA_PATH):
+        return {}
+    try:
+        with open(_SET18_KOREAN_DATA_PATH, "r", encoding="utf-8") as f:
+            ko_data = json.load(f)
+        api_to_ko = {}
+        for s in ko_data.get("setData", []):
+            for c in s.get("champions", []):
+                api_name = c.get("apiName", "")
+                ko_name = c.get("name", "")
+                if api_name and ko_name:
+                    api_to_ko[api_name.lower()] = ko_name
+                    clean_name = api_name.split("_")[-1]
+                    api_to_ko[clean_name.lower()] = ko_name
+
+        for c in ko_data.get("sets", {}).get("18", {}).get("champions", []):
+            api_name = c.get("apiName", "")
+            ko_name = c.get("name", "")
+            if api_name and ko_name:
+                api_to_ko[api_name.lower()] = ko_name
+                clean_name = api_name.split("_")[-1]
+                api_to_ko[clean_name.lower()] = ko_name
+        return api_to_ko
+    except Exception:
+        return {}
+
+
+_KO_NAME_MAP = load_korean_name_mapping()
 
 
 def load_set18_champions_roster() -> Dict[str, Dict[str, Any]]:
-    """Load normalized Set 18 champions catalog."""
+    """Load normalized Set 18 champions catalog with Korean names."""
     if not os.path.exists(_SET18_CHAMPIONS_PATH):
         return {}
     with open(_SET18_CHAMPIONS_PATH, "r", encoding="utf-8") as f:
@@ -37,9 +70,16 @@ def load_set18_champions_roster() -> Dict[str, Dict[str, Any]]:
     roster = {}
     for c in data:
         name = c.get("name", "")
+        char_id = c.get("character_id", "").lower()
+        ko_name = _KO_NAME_MAP.get(char_id) or _KO_NAME_MAP.get(name.lower()) or name
+        c_copy = dict(c)
+        c_copy["name_ko"] = ko_name
+
         if name:
-            roster[name] = c
-            roster[name.lower()] = c
+            roster[name] = c_copy
+            roster[name.lower()] = c_copy
+            roster[ko_name] = c_copy
+            roster[ko_name.lower()] = c_copy
     return roster
 
 
@@ -181,40 +221,40 @@ class GameStateBuilder:
 
         # 1. Stage / Round validation
         if not re.match(r"^[1-8]-[1-7]$", dto.stage_round):
-            errors.append(f"Invalid stage_round format: '{dto.stage_round}'. Expected format like '2-1', '4-2'.")
+            errors.append(f"스테이지 형식 오류: '{dto.stage_round}'. '2-1', '4-2' 형식이어야 합니다.")
 
         # 2. Player State ranges
         if dto.hp < 0 or dto.hp > 150:
-            errors.append(f"HP must be between 0 and 150 (got {dto.hp}).")
+            errors.append(f"체력(HP)은 0~150 사이여야 합니다 (입력값: {dto.hp}).")
         if dto.gold < 0 or dto.gold > 250:
-            errors.append(f"Gold cannot be negative or exceed 250 (got {dto.gold}).")
+            errors.append(f"골드는 음수이거나 250을 초과할 수 없습니다 (입력값: {dto.gold}).")
         if dto.level < 1 or dto.level > 11:
-            errors.append(f"Level must be between 1 and 11 (got {dto.level}).")
+            errors.append(f"레벨은 1~11 사이여야 합니다 (입력값: {dto.level}).")
         if dto.xp < 0 or dto.xp > 200:
-            errors.append(f"XP cannot be negative (got {dto.xp}).")
+            errors.append(f"경험치(XP)는 음수일 수 없습니다 (입력값: {dto.xp}).")
 
         # 3. Board Capacity
         if len(dto.board_units) > dto.level + 2:
-            errors.append(f"Board units count ({len(dto.board_units)}) exceeds max allowed for Level {dto.level}.")
+            errors.append(f"필드 기물 수({len(dto.board_units)})가 레벨 {dto.level}의 최대 허용치를 초과했습니다.")
 
         # 4. Champion validation against Set 18
         for u in dto.board_units + dto.bench_units:
             champ_name = u.champion.strip() if hasattr(u, "champion") else u.get("champion", "").strip()
             if champ_name not in SET18_CHAMPIONS and champ_name.lower() not in SET18_CHAMPIONS:
-                errors.append(f"Champion '{champ_name}' is not in Set 18 roster.")
+                errors.append(f"챔피언 '{champ_name}'은(는) 세트 18 로스터에 존재하지 않습니다.")
             star = u.star_level if hasattr(u, "star_level") else u.get("star_level", 1)
             if star not in (1, 2, 3):
-                errors.append(f"Invalid star level {star} for {champ_name} (must be 1, 2, or 3).")
+                errors.append(f"챔피언 {champ_name}의 성급({star}성)이 올바르지 않습니다 (1, 2, 3성만 가능).")
             items = u.items if hasattr(u, "items") else u.get("items", [])
             if len(items) > 3:
-                errors.append(f"Champion {champ_name} has {len(items)} items (max 3 allowed).")
+                errors.append(f"챔피언 {champ_name}의 아이템 수({len(items)}개)가 3개를 초과했습니다.")
 
         # 5. Shop validation
         for s in dto.shop_units:
             if s is not None and str(s).strip() and str(s).upper() != "EMPTY":
                 s_name = str(s).strip()
                 if s_name not in SET18_CHAMPIONS and s_name.lower() not in SET18_CHAMPIONS:
-                    errors.append(f"Shop champion '{s_name}' is not in Set 18 roster.")
+                    errors.append(f"상점 챔피언 '{s_name}'은(는) 세트 18 로스터에 존재하지 않습니다.")
 
         return len(errors) == 0, errors
 
@@ -228,7 +268,7 @@ class GameStateBuilder:
             "level": dto.level >= 1,
             "xp": dto.xp >= 0,
             "board": len(dto.board_units) > 0,
-            "bench": True, # Bench can be empty
+            "bench": True,
             "shop": len(dto.shop_units) == 5
         }
         score = sum(1 for v in checklist.values() if v)
@@ -259,6 +299,7 @@ class GameStateBuilder:
         for u in dto.board_units:
             name = u.champion if hasattr(u, "champion") else u.get("champion", "")
             c_meta = SET18_CHAMPIONS.get(name) or SET18_CHAMPIONS.get(name.lower(), {})
+            canonical_name = c_meta.get("name", name)
             cost = getattr(u, "cost", None) or c_meta.get("cost", 1)
             star = getattr(u, "star_level", 1)
             items = list(getattr(u, "items", []))
@@ -266,7 +307,7 @@ class GameStateBuilder:
             if hasattr(u, "position_row") and u.position_row is not None:
                 pos = BoardPosition(row=u.position_row, col=u.position_col or 0)
             board_units.append(Unit(
-                champion=c_meta.get("name", name),
+                champion=canonical_name,
                 cost=cost,
                 star_level=star,
                 items=items,
@@ -278,11 +319,12 @@ class GameStateBuilder:
         for u in dto.bench_units:
             name = u.champion if hasattr(u, "champion") else u.get("champion", "")
             c_meta = SET18_CHAMPIONS.get(name) or SET18_CHAMPIONS.get(name.lower(), {})
+            canonical_name = c_meta.get("name", name)
             cost = getattr(u, "cost", None) or c_meta.get("cost", 1)
             star = getattr(u, "star_level", 1)
             items = list(getattr(u, "items", []))
             bench_units.append(Unit(
-                champion=c_meta.get("name", name),
+                champion=canonical_name,
                 cost=cost,
                 star_level=star,
                 items=items,
@@ -316,11 +358,11 @@ class GameStateBuilder:
 
 
 class DecisionPresenter:
-    """Formats DecisionEngine / CalibrationAdapter results for UI display."""
+    """Formats DecisionEngine / CalibrationAdapter results for UI display with Korean direction."""
 
     @staticmethod
     def derive_operational_direction(rec: Recommendation, state: GameState) -> Dict[str, Any]:
-        """Derives structured operational roadmap (NOW, WATCH, THEN) from Engine output."""
+        """Derives structured Korean operational roadmap (NOW, WATCH, THEN) from Engine output."""
         act = rec.recommended_action.action_type.value
         hp = state.player.hp
         gold = state.player.gold
@@ -331,26 +373,26 @@ class DecisionPresenter:
         then_desc = ""
 
         if act == "ROLL":
-            now_desc = f"Reroll shop aggressively (Budget: {gold}G) to stabilize board and hit key unit upgrades."
+            now_desc = f"골드를 사용하여 상점을 적극적으로 리롤(Reroll)하여 보드를 안정화하고 주요 2성/3성 업그레이드를 완성합니다. (보유 예산: {gold}G)"
             watch_list = [
-                "Stop rolling immediately if 2-star pairs hit or gold drops below 20G/30G interest threshold.",
-                "Check bench space for holding transition copies."
+                "2성 페어가 완성되거나 골드가 20G/30G 이자 구간 밑으로 떨어지면 리롤을 멈추세요.",
+                "전환용 기물 보관을 위해 대기석(벤치) 여유 공간을 확인하세요."
             ]
-            then_desc = "Preserve remaining economy for leveling once board power stabilizes."
+            then_desc = "보드 파워가 안정화되면 남은 골드를 아껴 다음 레벨업을 준비합니다."
         elif act == "SAVE_GOLD":
-            now_desc = f"Hold current gold ({gold}G) to maximize interest compound (+{min(5, gold // 10)}G/round)."
+            now_desc = f"현재 골드({gold}G)를 유지하여 이자 복리(+{min(5, gold // 10)}G/라운드)를 극대화하고 경제력을 비축합니다."
             watch_list = [
-                f"Watch HP ({hp}): If HP drops below 30, prepare immediate transition to ROLL.",
-                f"Watch Stage: Next key level breakpoint at Level {lvl + 1}."
+                f"체력(HP {hp}): 체력이 30 미만으로 떨어지면 즉시 리롤(ROLL) 모드로 전환하세요.",
+                f"스테이지: 다음 핵심 레벨업 타이밍({lvl + 1}레벨)을 주시하세요."
             ]
-            then_desc = "Fast-level to next breakpoint once compound gold exceeds upgrade cost."
+            then_desc = "비축된 골드로 레벨업 비용을 충당하여 상위 레벨로 빠르게 전환(Fast-Level)합니다."
         elif act == "LEVEL_UP":
-            now_desc = f"Invest gold to level up (Target: Level {min(10, lvl + 1)}) to field an extra unit and increase high-tier odds."
+            now_desc = f"골드를 투자하여 즉시 레벨업(목표: {min(10, lvl + 1)}레벨)하고 필드에 추가 기물을 배치하여 고코스트 유닛 확률을 높입니다."
             watch_list = [
-                "Ensure at least 10G~20G remains after leveling to preserve interest.",
-                "Immediately place strongest bench unit or high-cost synergy on the extra board slot."
+                "레벨업 후 최소 10G~20G의 기본 이자 골드가 남는지 확인하세요.",
+                "추가된 보드 슬롯에 가장 강력한 벤치 기물이나 시너지 유닛을 즉시 배치하세요."
             ]
-            then_desc = "Stabilize board on newly reached level before next economy phase."
+            then_desc = "새로 도달한 레벨에서 보드를 안정화한 뒤 다음 경제 구간으로 진입합니다."
 
         return {
             "now": {"action": act, "description": now_desc},
@@ -377,7 +419,6 @@ class DecisionPresenter:
         for asc in rec.all_scores:
             act_name = asc.action.action_type.value
             calib_score = calib_res.scores.get(act_name, asc.score) if calib_res else asc.score
-            metrics_dict = {}
             breakdown_dict = {}
             for k, v in asc.breakdown.items():
                 breakdown_dict[k] = {

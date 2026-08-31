@@ -3,141 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TFT Decision Assistant Web v1.1 - Fast Manual Input</title>
+  <title>TFT AI 의사결정 어시스턴트 - 실전 빠른 수기 입력</title>
   <link rel="stylesheet" href="/static/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
-  <!-- Pinned Top Status Bar -->
+  <!-- 상단 고정 상태 바 (Top Status Bar) -->
   <header class="top-status-bar" id="top-status-bar">
     <div class="status-brand">
       <span class="status-logo">⚡</span>
-      <span class="status-app-title">TFT ASSISTANT</span>
-      <span class="status-badge">Set 18 Frozen</span>
+      <span class="status-app-title">TFT AI 어시스턴트</span>
+      <span class="status-badge">세트 18 프로덕션 동결</span>
     </div>
 
-    <!-- Live Synced Status Indicators -->
+    <!-- 실시간 동기화 상태 칩 (Live Synced Status Indicators) -->
     <div class="status-indicators">
       <div class="status-chip status-stage">
-        <span class="chip-label">STAGE</span>
+        <span class="chip-label">스테이지</span>
         <span class="chip-val" id="top-bar-stage">2-1</span>
       </div>
       <div class="status-chip status-hp">
-        <span class="chip-label">HP</span>
+        <span class="chip-label">체력(HP)</span>
         <span class="chip-val" id="top-bar-hp">100</span>
       </div>
       <div class="status-chip status-gold">
-        <span class="chip-label">GOLD</span>
+        <span class="chip-label">골드(G)</span>
         <span class="chip-val" id="top-bar-gold">30</span>
       </div>
       <div class="status-chip status-lvl">
-        <span class="chip-label">LVL</span>
+        <span class="chip-label">레벨(LV)</span>
         <span class="chip-val" id="top-bar-level">4</span>
       </div>
       <div class="status-chip status-xp">
-        <span class="chip-label">XP</span>
+        <span class="chip-label">경험치(XP)</span>
         <span class="chip-val" id="top-bar-xp">0</span>
       </div>
       <div class="status-chip status-comp">
-        <span class="chip-label">COMPLETE</span>
+        <span class="chip-label">입력완성도</span>
         <span class="chip-val" id="top-bar-completeness">7/8 ✓</span>
       </div>
     </div>
 
-    <!-- Top Action Controls -->
+    <!-- 상단 컨트롤 버튼 (Top Action Controls) -->
     <div class="status-actions">
       <div class="session-ctrl">
-        <input type="text" id="session-id-input" class="session-input" value="SESSION_LIVE_001" title="Session ID">
-        <button class="btn btn-xs btn-ghost" id="btn-save-session" title="Save Session">💾 Save</button>
+        <input type="text" id="session-id-input" class="session-input" value="SESSION_LIVE_001" title="세션 ID">
+        <button class="btn btn-xs btn-ghost" id="btn-save-session" title="세션 저장">💾 세션 저장</button>
       </div>
-      <select id="calib-mode-select" class="form-select-xs" title="Calibration Mode">
-        <option value="OFF" selected>Calib: OFF</option>
-        <option value="SHADOW">Calib: SHADOW</option>
-        <option value="ON">Calib: ON</option>
+      <select id="calib-mode-select" class="form-select-xs" title="확률 보정 모드">
+        <option value="OFF" selected>보정: 꺼짐 (OFF)</option>
+        <option value="SHADOW">보정: 섀도우 (SHADOW)</option>
+        <option value="ON">보정: 켜짐 (ON)</option>
       </select>
-      <button class="btn btn-xs btn-outline" id="btn-toggle-video" title="Open Video Replay Assistant">🎬 Video</button>
-      <button class="btn btn-xs btn-ghost" id="btn-shortcuts-modal" title="View Shortcuts">⌨️</button>
+      <button class="btn btn-xs btn-outline" id="btn-toggle-video" title="경기 다시보기 영상 열기">🎬 경기 영상</button>
+      <button class="btn btn-xs btn-ghost" id="btn-shortcuts-modal" title="단축키 보기">⌨️ 단축키</button>
     </div>
   </header>
 
-  <!-- Main 2-Column Responsive Workspace -->
+  <!-- 메인 2단 반응형 워크스페이스 -->
   <main class="app-workspace">
     
-    <!-- LEFT PANEL: SET 18 CHAMPION POOL (Always Visible) -->
+    <!-- 좌측 패널: 세트 18 챔피언 도감 (Always Visible) -->
     <aside class="panel champion-pool-panel">
       <div class="pool-header">
         <div class="pool-title-row">
-          <h3>♟️ SET 18 CHAMPIONS</h3>
-          <span class="target-indicator-badge" id="active-target-badge">TARGET: BOARD</span>
+          <h3>♟️ 세트 18 챔피언 도감 (64종)</h3>
+          <span class="target-indicator-badge" id="active-target-badge">추가 대상: 필드(보드)</span>
         </div>
         
-        <!-- Target Selection Tabs -->
+        <!-- 배치 대상 선택 탭 -->
         <div class="target-selector-row">
-          <span class="target-label">ADD TO:</span>
-          <button class="target-tab active" data-target="board" id="tab-target-board">BOARD ✓</button>
-          <button class="target-tab" data-target="bench" id="tab-target-bench">BENCH</button>
-          <button class="target-tab" data-target="shop" id="tab-target-shop">SHOP</button>
+          <span class="target-label">배치 대상:</span>
+          <button class="target-tab active" data-target="board" id="tab-target-board">필드(보드) ✓</button>
+          <button class="target-tab" data-target="bench" id="tab-target-bench">대기석(벤치)</button>
+          <button class="target-tab" data-target="shop" id="tab-target-shop">상점(5슬롯)</button>
         </div>
 
-        <!-- Quick Cost Filters & Search -->
+        <!-- 코스트 필터 및 검색 -->
         <div class="pool-filter-row">
           <div class="cost-filter-group">
-            <button class="filter-pill active" data-cost="all">ALL</button>
-            <button class="filter-pill cost-1" data-cost="1">1G</button>
-            <button class="filter-pill cost-2" data-cost="2">2G</button>
-            <button class="filter-pill cost-3" data-cost="3">3G</button>
-            <button class="filter-pill cost-4" data-cost="4">4G</button>
-            <button class="filter-pill cost-5" data-cost="5">5G</button>
+            <button class="filter-pill active" data-cost="all">전체</button>
+            <button class="filter-pill cost-1" data-cost="1">1코</button>
+            <button class="filter-pill cost-2" data-cost="2">2코</button>
+            <button class="filter-pill cost-3" data-cost="3">3코</button>
+            <button class="filter-pill cost-4" data-cost="4">4코</button>
+            <button class="filter-pill cost-5" data-cost="5">5코</button>
           </div>
-          <input type="text" id="champ-quick-search" class="search-mini" placeholder="Quick filter...">
+          <input type="text" id="champ-quick-search" class="search-mini" placeholder="챔피언 검색 (한글/영문)...">
         </div>
 
-        <!-- Recent Champions Bar -->
+        <!-- 최근 선택 챔피언 -->
         <div class="recent-champs-row" id="recent-champs-container">
-          <span class="recent-label">RECENTS:</span>
+          <span class="recent-label">최근 선택:</span>
           <div class="recent-chips" id="recent-chips-list">
-            <span class="no-recents">None yet</span>
+            <span class="no-recents">선택 기록 없음</span>
           </div>
         </div>
       </div>
 
-      <!-- Full Champion Roster Grid (64 Champions) -->
+      <!-- 64종 챔피언 그리드 (스크롤) -->
       <div class="champion-grid-scroll" id="champion-pool-grid">
-        <!-- Dynamic Champion Cards -->
+        <!-- 동적 챔피언 카드 렌더링 -->
       </div>
     </aside>
 
-    <!-- RIGHT PANEL: CURRENT STATE & DECISION ASSISTANT -->
+    <!-- 우측 패널: 현재 상태 입력 및 의사결정 분석 -->
     <section class="panel state-decision-panel">
       
-      <!-- Quick State Controls -->
+      <!-- 상태 조작 카드 -->
       <div class="state-controls-card">
         <div class="state-controls-header">
-          <h2>⚙️ Turn State Input</h2>
+          <h2>⚙️ 턴 상태 수기 입력</h2>
           <div class="state-quick-actions">
-            <button class="btn btn-xs btn-outline" id="btn-undo-draft" title="Undo Last Draft Change">↩️ Undo</button>
-            <button class="btn btn-xs btn-outline" id="btn-copy-prev" title="Copy Previous Turn (P)">📋 Copy Prev [P]</button>
-            <button class="btn btn-xs btn-ghost" id="btn-new-turn" title="Reset Current Turn (N)">➕ Reset [N]</button>
+            <button class="btn btn-xs btn-outline" id="btn-undo-draft" title="마지막 조작 취소 (Ctrl+Z)">↩️ 실행 취소</button>
+            <button class="btn btn-xs btn-outline" id="btn-copy-prev" title="직전 턴 상태 복사 (P)">📋 이전 턴 복사 [P]</button>
+            <button class="btn btn-xs btn-ghost" id="btn-new-turn" title="현재 턴 초기화 (N)">➕ 초기화 [N]</button>
           </div>
         </div>
 
-        <!-- Steppers Grid -->
+        <!-- 스텝퍼 입력 그리드 -->
         <div class="steppers-bar">
-          <!-- Stage -->
+          <!-- 스테이지 -->
           <div class="stepper-box">
-            <span class="stepper-title">STAGE</span>
+            <span class="stepper-title">스테이지</span>
             <div class="stepper-inputs">
-              <button class="step-btn" id="btn-stage-prev">◀</button>
+              <button class="step-btn" id="btn-stage-prev" title="이전 라운드">◀</button>
               <input type="text" id="input-stage" class="stepper-num stage-num" value="2-1">
-              <button class="step-btn" id="btn-stage-next">▶</button>
+              <button class="step-btn" id="btn-stage-next" title="다음 라운드">▶</button>
             </div>
           </div>
 
-          <!-- HP -->
+          <!-- 체력(HP) -->
           <div class="stepper-box">
-            <span class="stepper-title">HP (0-100)</span>
+            <span class="stepper-title">체력 (0~100)</span>
             <div class="stepper-inputs">
               <button class="step-btn" id="btn-hp-m10">-10</button>
               <button class="step-btn" id="btn-hp-m1">-1</button>
@@ -147,9 +147,9 @@
             </div>
           </div>
 
-          <!-- Gold -->
+          <!-- 골드(Gold) -->
           <div class="stepper-box">
-            <span class="stepper-title">GOLD</span>
+            <span class="stepper-title">골드 (0~250)</span>
             <div class="stepper-inputs">
               <button class="step-btn" id="btn-gold-m10">-10</button>
               <button class="step-btn" id="btn-gold-m5">-5</button>
@@ -159,9 +159,9 @@
             </div>
           </div>
 
-          <!-- Level & XP -->
+          <!-- 레벨 및 경험치 -->
           <div class="stepper-box">
-            <span class="stepper-title">LVL / XP</span>
+            <span class="stepper-title">레벨 / 경험치</span>
             <div class="stepper-inputs">
               <button class="step-btn" id="btn-lvl-m1">-1</button>
               <input type="number" id="input-level" class="stepper-num lvl-num" value="4" min="1" max="11">
@@ -174,149 +174,149 @@
         </div>
       </div>
 
-      <!-- Board, Bench & Shop Quick Editor Rows -->
+      <!-- 보드, 벤치, 상점 유닛 에디터 -->
       <div class="units-editor-grid">
         
-        <!-- Board Units -->
+        <!-- 필드 배치 기물 (Board) -->
         <div class="unit-zone-card">
           <div class="zone-header">
-            <span class="zone-title">♟️ BOARD (<span id="board-count">0</span> / <span id="board-max">4</span>)</span>
-            <button class="btn btn-xs btn-primary" id="btn-select-target-board">+ Add To Board</button>
+            <span class="zone-title">♟️ 필드 배치 (<span id="board-count">0</span> / <span id="board-max">4</span>마리)</span>
+            <button class="btn btn-xs btn-primary" id="btn-select-target-board">+ 필드에 추가</button>
           </div>
           <div class="units-chip-container" id="board-units-chips">
-            <span class="empty-hint">Click champions in the pool on left to add to Board</span>
+            <span class="empty-hint">좌측 도감에서 챔피언을 클릭하면 필드에 즉시 배치됩니다</span>
           </div>
         </div>
 
-        <!-- Bench Units -->
+        <!-- 대기석 기물 (Bench) -->
         <div class="unit-zone-card">
           <div class="zone-header">
-            <span class="zone-title">🪑 BENCH (<span id="bench-count">0</span> / 9)</span>
-            <button class="btn btn-xs btn-outline" id="btn-select-target-bench">+ Add To Bench</button>
+            <span class="zone-title">🪑 대기석 (<span id="bench-count">0</span> / 9칸)</span>
+            <button class="btn btn-xs btn-outline" id="btn-select-target-bench">+ 대기석에 추가</button>
           </div>
           <div class="units-chip-container" id="bench-units-chips">
-            <span class="empty-hint">Bench empty</span>
+            <span class="empty-hint">대기석이 비어 있습니다</span>
           </div>
         </div>
 
-        <!-- Shop (5 Slots) -->
+        <!-- 상점 5개 슬롯 (Shop) -->
         <div class="unit-zone-card shop-zone-card">
           <div class="zone-header">
-            <span class="zone-title">🛒 SHOP (5 Slots)</span>
-            <button class="btn btn-xs btn-ghost" id="btn-clear-shop">Clear Shop</button>
+            <span class="zone-title">🛒 현재 상점 (5개 슬롯)</span>
+            <button class="btn btn-xs btn-ghost" id="btn-clear-shop">상점 비우기</button>
           </div>
           <div class="shop-slots-row" id="shop-slots-container">
-            <!-- 5 Slots -->
+            <!-- 5개 슬롯 동적 렌더링 -->
           </div>
         </div>
 
       </div>
 
-      <!-- Action & Analyze Button -->
+      <!-- 의사결정 분석 실행 바 -->
       <div class="analyze-action-bar">
         <button class="btn btn-lg btn-accent" id="btn-analyze">
-          🚀 ANALYZE TURN <span class="kbd-hint">[Enter]</span>
+          🚀 턴 의사결정 분석 <span class="kbd-hint">[Enter]</span>
         </button>
         <button class="btn btn-lg btn-outline" id="btn-toggle-blind">
-          👁️ Blind Mode <span class="kbd-hint">[B]</span>
+          👁️ 블라인드 모드 <span class="kbd-hint">[B]</span>
         </button>
       </div>
 
-      <!-- Validation Error Box -->
+      <!-- 유효성 검사 에러 배너 -->
       <div class="error-banner hidden" id="validation-error-box">
-        <div class="error-title">⚠️ Validation Error</div>
+        <div class="error-title">⚠️ 입력값 검증 오류</div>
         <ul id="validation-errors-list"></ul>
       </div>
 
-      <!-- Blind Mode Obscurity Card -->
+      <!-- 블라인드 검토 모드 배너 -->
       <div class="blind-card hidden" id="blind-mode-banner">
         <div class="blind-header">
           <span class="blind-icon">🔒</span>
-          <h3>Blind Review Mode Active</h3>
+          <h3>블라인드 검토 모드 활성화됨</h3>
         </div>
-        <p class="blind-desc">Engine recommendation is hidden. Select your preferred action and judgment before revealing.</p>
+        <p class="blind-desc">엔진 추천 결과가 가려져 있습니다. 본인이 생각하는 선호 행동을 먼저 선택한 후 추천을 확인하세요.</p>
         
         <div class="blind-controls">
           <div class="form-group">
-            <label>Your Preferred Action:</label>
+            <label>본인이 선호하는 행동 선택:</label>
             <div class="btn-group-row">
-              <button class="btn btn-sm btn-pref" data-pref="ROLL">ROLL [1]</button>
-              <button class="btn btn-sm btn-pref" data-pref="LEVEL_UP">LEVEL UP [2]</button>
-              <button class="btn btn-sm btn-pref" data-pref="SAVE_GOLD">SAVE GOLD [3]</button>
-              <button class="btn btn-sm btn-pref" data-pref="UNKNOWN">UNKNOWN [4]</button>
+              <button class="btn btn-sm btn-pref" data-pref="ROLL">리롤 (ROLL) [1]</button>
+              <button class="btn btn-sm btn-pref" data-pref="LEVEL_UP">레벨업 (LEVEL_UP) [2]</button>
+              <button class="btn btn-sm btn-pref" data-pref="SAVE_GOLD">골드 세이브 (SAVE_GOLD) [3]</button>
+              <button class="btn btn-sm btn-pref" data-pref="UNKNOWN">미정 (UNKNOWN) [4]</button>
             </div>
           </div>
-          <button class="btn btn-md btn-accent" id="btn-reveal-engine">🔓 Reveal Engine Recommendation</button>
+          <button class="btn btn-md btn-accent" id="btn-reveal-engine">🔓 엔진 추천 결과 공개하기</button>
         </div>
       </div>
 
-      <!-- Decision Engine Results View -->
+      <!-- AI 의사결정 엔진 분석 결과 뷰 -->
       <div class="decision-container" id="decision-results-view">
         <div class="empty-state-card" id="decision-empty-state">
           <span class="empty-state-icon">💡</span>
-          <h3>Ready for Analysis</h3>
-          <p>Click <strong>[ANALYZE TURN]</strong> or press <kbd>Enter</kbd> to execute Frozen DecisionEngine.</p>
+          <h3>의사결정 분석 준비 완료</h3>
+          <p><strong>[🚀 턴 의사결정 분석]</strong> 버튼을 누르거나 <kbd>Enter</kbd> 키를 눌러 최적 행동과 운영 방향을 확인하세요.</p>
         </div>
 
         <div class="decision-content hidden" id="decision-active-content">
           
-          <!-- Recommendation Banner -->
+          <!-- 추천 행동 하이라이트 배너 -->
           <div class="rec-banner" id="rec-banner">
             <div class="rec-header">
-              <span class="rec-tag">RECOMMENDED ACTION</span>
-              <span class="rec-margin-badge" id="rec-gap-badge">Gap: +0.0000</span>
+              <span class="rec-tag">AI 추천 행동</span>
+              <span class="rec-margin-badge" id="rec-gap-badge">점수 격차: +0.0000</span>
             </div>
-            <div class="rec-action-display" id="rec-action-name">SAVE_GOLD</div>
+            <div class="rec-action-display" id="rec-action-name">골드 세이브 (SAVE_GOLD)</div>
             <div class="rec-sub-row">
-              <span class="rec-score">Score: <strong id="rec-score-val">0.0000</strong></span>
-              <span class="rec-conf">Confidence: <strong id="rec-conf-val">0.50</strong></span>
-              <span class="rec-engine-tag" id="rec-engine-tag">Frozen Base Engine</span>
+              <span class="rec-score">점수: <strong id="rec-score-val">0.0000</strong></span>
+              <span class="rec-conf">신뢰도: <strong id="rec-conf-val">0.50</strong></span>
+              <span class="rec-engine-tag" id="rec-engine-tag">프로덕션 동결 코어 엔진</span>
             </div>
           </div>
 
-          <!-- Structured Operational Direction -->
+          <!-- 구조화된 운영 방향성 (Operational Direction) -->
           <div class="direction-card" id="direction-card">
             <div class="direction-header">
               <span class="dir-icon">🧭</span>
-              <h4>CURRENT OPERATIONAL DIRECTION</h4>
+              <h4>현재 턴 운영 방향성 (Direction)</h4>
             </div>
             <div class="direction-body">
               <div class="dir-block dir-now">
-                <span class="dir-label">NOW:</span>
-                <span class="dir-text" id="dir-now-text">Execute action.</span>
+                <span class="dir-label">현재 행동 (NOW):</span>
+                <span class="dir-text" id="dir-now-text">행동을 수행합니다.</span>
               </div>
               <div class="dir-block dir-watch">
-                <span class="dir-label">WATCH:</span>
+                <span class="dir-label">주시 사항 (WATCH):</span>
                 <ul class="dir-list" id="dir-watch-list">
-                  <li>Interest thresholds</li>
+                  <li>이자 구간 및 체력 확인</li>
                 </ul>
               </div>
               <div class="dir-block dir-then">
-                <span class="dir-label">THEN:</span>
-                <span class="dir-text" id="dir-then-text">Re-evaluate next turn.</span>
+                <span class="dir-label">다음 단계 (THEN):</span>
+                <span class="dir-text" id="dir-then-text">다음 턴 재평가합니다.</span>
               </div>
             </div>
           </div>
 
-          <!-- Decision Rationale ("Why?") -->
+          <!-- 의사결정 추천 사유 (Decision Rationale) -->
           <div class="reasons-card">
-            <div class="card-title">🔍 Decision Rationale ("Why?")</div>
+            <div class="card-title">🔍 의사결정 추천 상세 사유 ("Why?")</div>
             <div class="reasons-list" id="reasons-container"></div>
           </div>
 
-          <!-- Action Scores Breakdown Table -->
+          <!-- 행동별 세부 점수 기여도 분석 테이블 -->
           <div class="breakdown-card">
-            <div class="card-title">📊 Action Scores Breakdown</div>
+            <div class="card-title">📊 행동별 세부 점수 및 가중치 분석</div>
             <div class="scores-table-wrapper">
               <table class="scores-table" id="scores-table">
                 <thead>
                   <tr>
-                    <th>Action</th>
-                    <th>Score</th>
-                    <th>Survival (35%)</th>
-                    <th>Economy (25%)</th>
-                    <th>Board (25%)</th>
-                    <th>Upgrade (15%)</th>
+                    <th>행동 (Action)</th>
+                    <th>종합 점수</th>
+                    <th>생존 기여도 (35%)</th>
+                    <th>경제 기여도 (25%)</th>
+                    <th>보드 파워 (25%)</th>
+                    <th>업그레이드 (15%)</th>
                   </tr>
                 </thead>
                 <tbody id="scores-table-body"></tbody>
@@ -324,48 +324,48 @@
             </div>
           </div>
 
-          <!-- Turn Diff Card -->
+          <!-- 턴 상태 변화 비교 (Turn Diff) -->
           <div class="diff-card hidden" id="turn-diff-card">
-            <div class="card-title">📈 Turn Comparison (<span id="diff-stage-label">4-1 → 4-2</span>)</div>
+            <div class="card-title">📈 턴 상태 변화 비교 (<span id="diff-stage-label">4-1 → 4-2</span>)</div>
             <div class="diff-grid" id="diff-grid-content"></div>
           </div>
 
-          <!-- Human Review & Alignment Card -->
+          <!-- 사용자 검토 및 결과 피드백 기록 -->
           <div class="feedback-card">
-            <div class="card-title">📝 Human Review & Alignment</div>
+            <div class="card-title">📝 실전 플레이 검토 및 행동 결과 기록</div>
             <div class="alignment-grid">
               <div class="align-col">
-                <span class="align-title">ACTUAL ACTION</span>
+                <span class="align-title">플레이어 실제 행동</span>
                 <select id="select-actual-action" class="form-select-sm">
-                  <option value="UNKNOWN">UNKNOWN</option>
-                  <option value="ROLL">ROLL</option>
-                  <option value="BUY_UNIT">BUY_UNIT</option>
-                  <option value="LEVEL_UP">LEVEL_UP</option>
-                  <option value="SAVE_GOLD">SAVE_GOLD</option>
+                  <option value="UNKNOWN">미정 (UNKNOWN)</option>
+                  <option value="ROLL">상점 리롤 (ROLL)</option>
+                  <option value="BUY_UNIT">기물 구매 (BUY_UNIT)</option>
+                  <option value="LEVEL_UP">레벨업 (LEVEL_UP)</option>
+                  <option value="SAVE_GOLD">골드 세이브 (SAVE_GOLD)</option>
                 </select>
               </div>
               <div class="align-col">
-                <span class="align-title">HUMAN PREFERENCE</span>
+                <span class="align-title">검토자 선호 행동</span>
                 <select id="select-human-pref" class="form-select-sm">
-                  <option value="UNKNOWN">UNKNOWN</option>
-                  <option value="ROLL">ROLL</option>
-                  <option value="LEVEL_UP">LEVEL_UP</option>
-                  <option value="SAVE_GOLD">SAVE_GOLD</option>
+                  <option value="UNKNOWN">미정 (UNKNOWN)</option>
+                  <option value="ROLL">상점 리롤 (ROLL)</option>
+                  <option value="LEVEL_UP">레벨업 (LEVEL_UP)</option>
+                  <option value="SAVE_GOLD">골드 세이브 (SAVE_GOLD)</option>
                 </select>
               </div>
               <div class="align-col">
-                <span class="align-title">JUDGMENT</span>
+                <span class="align-title">의사결정 평가</span>
                 <div class="fb-buttons-row">
-                  <button class="btn btn-xs btn-fb" data-fb="GOOD">👍 Good</button>
-                  <button class="btn btn-xs btn-fb" data-fb="QUESTIONABLE">❓ Questionable</button>
-                  <button class="btn btn-xs btn-fb" data-fb="WRONG">👎 Wrong</button>
+                  <button class="btn btn-xs btn-fb" data-fb="GOOD">👍 적절함 (Good)</button>
+                  <button class="btn btn-xs btn-fb" data-fb="QUESTIONABLE">❓ 의문스러움 (Questionable)</button>
+                  <button class="btn btn-xs btn-fb" data-fb="WRONG">👎 부적절함 (Wrong)</button>
                 </div>
               </div>
             </div>
             <div class="feedback-notes-row">
-              <input type="text" id="input-turn-notes" class="form-input" placeholder="Add turn review notes...">
+              <input type="text" id="input-turn-notes" class="form-input" placeholder="턴 검토 메모나 특이사항을 입력하세요...">
               <button class="btn btn-md btn-success" id="btn-save-turn">
-                💾 Save Turn <span class="kbd-hint">[Ctrl+S]</span>
+                💾 턴 저장 <span class="kbd-hint">[Ctrl+S]</span>
               </button>
             </div>
           </div>
@@ -373,78 +373,79 @@
         </div>
       </div>
 
-      <!-- Turn History Drawer -->
+      <!-- 세션 턴 기록 내역 -->
       <div class="history-card">
         <div class="history-header">
-          <h4>📜 Session Turn History (<span id="history-count">0</span> turns)</h4>
-          <button class="btn btn-xs btn-ghost" id="btn-clear-history">Clear History</button>
+          <h4>📜 세션 턴 기록 내역 (<span id="history-count">0</span>개 턴)</h4>
+          <button class="btn btn-xs btn-ghost" id="btn-clear-history">기록 초기화</button>
         </div>
         <div class="history-list" id="history-timeline">
-          <div class="empty-history">No turns recorded yet.</div>
+          <div class="empty-history">아직 저장된 턴 기록이 없습니다.</div>
         </div>
       </div>
 
     </section>
   </main>
 
-  <!-- Video Assistant Modal -->
+  <!-- 경기 영상 다시보기 모달 -->
   <div class="modal-overlay hidden" id="video-assistant-modal">
     <div class="modal-card modal-lg">
       <div class="modal-header">
-        <h3>🎬 Video Replay Assistant</h3>
+        <h3>🎬 경기 녹화 영상 다시보기</h3>
         <button class="btn-close" id="btn-close-video-modal">✕</button>
       </div>
       <div class="modal-body">
         <div class="video-selector-row">
-          <label>Select Match Video:</label>
+          <label>경기 영상 선택:</label>
           <select id="video-select" class="form-select"></select>
-          <button class="btn btn-sm btn-primary" id="btn-load-video">Load Video</button>
+          <button class="btn btn-sm btn-primary" id="btn-load-video">영상 불러오기</button>
         </div>
         <div class="video-player-wrapper">
           <video id="replay-video" controls preload="metadata" class="video-element"></video>
         </div>
         <div class="video-controls-row">
           <div class="video-time-display">
-            Timestamp: <strong id="video-time-str">00:00.00</strong> (<span id="video-time-sec">0.0</span>s)
+            재생 시점: <strong id="video-time-str">00:00.00</strong> (<span id="video-time-sec">0.0</span>초)
           </div>
           <div class="video-seek-group">
-            <button class="btn btn-sm btn-ghost" id="btn-seek-m10">-10s</button>
-            <button class="btn btn-sm btn-ghost" id="btn-seek-m5">-5s</button>
-            <button class="btn btn-sm btn-ghost" id="btn-seek-p5">+5s</button>
-            <button class="btn btn-sm btn-ghost" id="btn-seek-p10">+10s</button>
+            <button class="btn btn-sm btn-ghost" id="btn-seek-m10">-10초</button>
+            <button class="btn btn-sm btn-ghost" id="btn-seek-m5">-5초</button>
+            <button class="btn btn-sm btn-ghost" id="btn-seek-p5">+5초</button>
+            <button class="btn btn-sm btn-ghost" id="btn-seek-p10">+10초</button>
             <select id="video-speed-select" class="form-select-sm">
-              <option value="0.5">0.5x</option>
-              <option value="1.0" selected>1.0x</option>
-              <option value="1.5">1.5x</option>
-              <option value="2.0">2.0x</option>
+              <option value="0.5">0.5배속</option>
+              <option value="1.0" selected>1.0배속</option>
+              <option value="1.5">1.5배속</option>
+              <option value="2.0">2.0배속</option>
             </select>
           </div>
           <button class="btn btn-md btn-accent" id="btn-capture-checkpoint">
-            ⏱️ Link Timestamp to Current Turn
+            ⏱️ 현재 영상 시간을 턴에 연결
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Keyboard Shortcuts Modal -->
+  <!-- 단축키 안내 모달 -->
   <div class="modal-overlay hidden" id="shortcuts-modal">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>⌨️ Keyboard Shortcuts</h3>
+        <h3>⌨️ 단축키 안내</h3>
         <button class="btn-close" id="btn-close-shortcuts">✕</button>
       </div>
       <div class="modal-body">
         <table class="shortcuts-table">
-          <tr><td><kbd>Enter</kbd></td><td>Analyze Current Turn</td></tr>
-          <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Save Turn to Session</td></tr>
-          <tr><td><kbd>P</kbd></td><td>Copy Previous Turn</td></tr>
-          <tr><td><kbd>N</kbd></td><td>Reset Current Turn</td></tr>
-          <tr><td><kbd>B</kbd></td><td>Toggle Blind Review Mode</td></tr>
-          <tr><td><kbd>1</kbd></td><td>Select Preference: ROLL</td></tr>
-          <tr><td><kbd>2</kbd></td><td>Select Preference: LEVEL_UP</td></tr>
-          <tr><td><kbd>3</kbd></td><td>Select Preference: SAVE_GOLD</td></tr>
-          <tr><td><kbd>4</kbd></td><td>Select Preference: UNKNOWN</td></tr>
+          <tr><td><kbd>Enter</kbd></td><td>현재 턴 의사결정 분석 실행</td></tr>
+          <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>현재 턴 세션에 저장</td></tr>
+          <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>마지막 수기 입력 조작 취소 (Undo)</td></tr>
+          <tr><td><kbd>P</kbd></td><td>이전 턴 상태 복사 (Copy Previous)</td></tr>
+          <tr><td><kbd>N</kbd></td><td>현재 턴 초기화 (Reset)</td></tr>
+          <tr><td><kbd>B</kbd></td><td>블라인드 검토 모드 전환 (Toggle Blind)</td></tr>
+          <tr><td><kbd>1</kbd></td><td>블라인드 선호 선택: 리롤 (ROLL)</td></tr>
+          <tr><td><kbd>2</kbd></td><td>블라인드 선호 선택: 레벨업 (LEVEL_UP)</td></tr>
+          <tr><td><kbd>3</kbd></td><td>블라인드 선호 선택: 골드 세이브 (SAVE_GOLD)</td></tr>
+          <tr><td><kbd>4</kbd></td><td>블라인드 선호 선택: 미정 (UNKNOWN)</td></tr>
         </table>
       </div>
     </div>
