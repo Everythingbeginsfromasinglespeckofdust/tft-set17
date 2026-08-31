@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP012",
+  "human_preferred_action": "LEVEL_UP",
+  "human_confidence": "HIGH",
+  "blind_review": true,
+  "human_judgment": "GOOD",
+  "notes": "Ready to level up to 8 on Stage 5-1.",
+  "source": "HUMAN_INPUT"
+}

@@ -1,0 +1,11 @@
+{
+  "recommended_action": "SAVE_GOLD",
+  "score": 0.3585,
+  "action_scores": {},
+  "action_score_gap": 0.0391,
+  "confidence": 0.58,
+  "reasons": [],
+  "direction_now": "Hold current gold (10G) to maximize interest compound (+1G/round).",
+  "direction_watch": [],
+  "direction_then": ""
+}

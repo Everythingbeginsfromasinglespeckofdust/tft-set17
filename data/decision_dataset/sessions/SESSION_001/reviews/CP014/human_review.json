@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP014",
+  "human_preferred_action": "ROLL",
+  "human_confidence": "HIGH",
+  "blind_review": true,
+  "human_judgment": "GOOD",
+  "notes": "HP crisis (24 HP), one loss away from danger.",
+  "source": "HUMAN_INPUT"
+}

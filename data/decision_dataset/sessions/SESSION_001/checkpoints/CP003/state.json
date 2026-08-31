@@ -1,0 +1,71 @@
+{
+  "checkpoint_id": "CP003",
+  "stage_round": "2-5",
+  "stage": 2,
+  "round_num": 5,
+  "hp": 88,
+  "gold": 28,
+  "level": 4,
+  "xp": 8,
+  "streak": 0,
+  "board_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Camille",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Leona",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Kobuko",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    }
+  ],
+  "bench_units": [
+    {
+      "name": "Diana",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": true
+    }
+  ],
+  "shop_units": [
+    "Diana",
+    "Zac",
+    "Lux",
+    null,
+    null
+  ],
+  "item_bench": [],
+  "augments": [],
+  "video_timestamp_sec": 195.0,
+  "frame_index": 11700
+}

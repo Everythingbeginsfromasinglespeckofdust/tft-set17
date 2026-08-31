@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP001",
+  "human_preferred_action": "SAVE_GOLD",
+  "human_confidence": "HIGH",
+  "blind_review": false,
+  "human_judgment": "GOOD",
+  "notes": "Early peaceful stage, level 3 economy start.",
+  "source": "HUMAN_INPUT"
+}

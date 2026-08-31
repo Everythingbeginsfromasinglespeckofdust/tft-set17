@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP005",
+  "human_preferred_action": "SAVE_GOLD",
+  "human_confidence": "HIGH",
+  "blind_review": false,
+  "human_judgment": "GOOD",
+  "notes": "Economy capped near 50G interest.",
+  "source": "HUMAN_INPUT"
+}

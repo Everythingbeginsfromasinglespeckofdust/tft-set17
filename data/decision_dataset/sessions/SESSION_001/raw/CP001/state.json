@@ -1,0 +1,43 @@
+{
+  "checkpoint_id": "CP001",
+  "stage_round": "2-1",
+  "stage": 2,
+  "round_num": 1,
+  "hp": 100,
+  "gold": 10,
+  "level": 3,
+  "xp": 2,
+  "streak": 0,
+  "board_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Camille",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    }
+  ],
+  "bench_units": [],
+  "shop_units": [
+    "Karma",
+    "Leona",
+    "Kobuko",
+    null,
+    null
+  ],
+  "item_bench": [],
+  "augments": [],
+  "video_timestamp_sec": 75.0,
+  "frame_index": 4500
+}

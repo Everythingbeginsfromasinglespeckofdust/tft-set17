@@ -1,0 +1,97 @@
+{
+  "checkpoint_id": "CP019",
+  "stage_round": "6-2",
+  "stage": 6,
+  "round_num": 2,
+  "hp": 8,
+  "gold": 12,
+  "level": 8,
+  "xp": 36,
+  "streak": 0,
+  "board_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 3,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Camille",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Leona",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Diana",
+      "cost": 1,
+      "star": 3,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Zac",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Lux",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Yunara",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Karma",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    }
+  ],
+  "bench_units": [],
+  "shop_units": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "item_bench": [],
+  "augments": [],
+  "video_timestamp_sec": 1360.0,
+  "frame_index": 81600
+}

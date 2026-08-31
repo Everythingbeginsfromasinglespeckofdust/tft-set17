@@ -1,0 +1,79 @@
+{
+  "checkpoint_id": "CP007",
+  "stage_round": "3-5",
+  "stage": 3,
+  "round_num": 5,
+  "hp": 68,
+  "gold": 54,
+  "level": 6,
+  "xp": 12,
+  "streak": 0,
+  "board_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Camille",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Leona",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Diana",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Zac",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Lux",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    }
+  ],
+  "bench_units": [],
+  "shop_units": [
+    "Yunara",
+    "Zac",
+    null,
+    null,
+    null
+  ],
+  "item_bench": [],
+  "augments": [],
+  "video_timestamp_sec": 455.0,
+  "frame_index": 27300
+}

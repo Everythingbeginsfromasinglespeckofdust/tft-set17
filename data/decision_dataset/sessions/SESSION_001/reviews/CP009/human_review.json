@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP009",
+  "human_preferred_action": "ROLL",
+  "human_confidence": "HIGH",
+  "blind_review": true,
+  "human_judgment": "QUESTIONABLE",
+  "notes": "HP dipping below 50, need to monitor transition.",
+  "source": "HUMAN_INPUT"
+}

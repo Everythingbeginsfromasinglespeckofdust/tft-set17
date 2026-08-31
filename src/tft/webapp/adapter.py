@@ -132,6 +132,9 @@ class HumanInputDTO:
     video_timestamp_sec: Optional[float] = None
     actual_player_action: Optional[str] = "UNKNOWN"
     human_preferred_action: Optional[str] = "UNKNOWN"
+    human_confidence: Optional[str] = "UNKNOWN"
+    blind_review: bool = False
+    frame_index: Optional[int] = None
     human_feedback: Optional[str] = "UNKNOWN"
     human_judgment: Optional[str] = "UNKNOWN"
     notes: str = ""
@@ -203,8 +206,11 @@ class HumanInputDTO:
             augments=list(data.get("augments", [])),
             calibration_mode=str(data.get("calibration_mode", "OFF")).upper(),
             video_timestamp_sec=float(data["video_timestamp_sec"]) if data.get("video_timestamp_sec") is not None else None,
+            frame_index=int(data["frame_index"]) if data.get("frame_index") is not None else None,
             actual_player_action=data.get("actual_player_action", "UNKNOWN"),
             human_preferred_action=data.get("human_preferred_action", "UNKNOWN"),
+            human_confidence=data.get("human_confidence", "UNKNOWN"),
+            blind_review=bool(data.get("blind_review", False)),
             human_feedback=fb,
             human_judgment=fb,
             notes=str(data.get("notes", ""))

@@ -1,0 +1,116 @@
+{
+  "checkpoint_id": "CP014",
+  "stage_round": "5-2",
+  "stage": 5,
+  "round_num": 2,
+  "hp": 24,
+  "gold": 28,
+  "level": 8,
+  "xp": 4,
+  "streak": 0,
+  "board_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Camille",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Leona",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Diana",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Zac",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Lux",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Yunara",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    },
+    {
+      "name": "Karma",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": false
+    }
+  ],
+  "bench_units": [
+    {
+      "name": "Akali",
+      "cost": 1,
+      "star": 2,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": true
+    },
+    {
+      "name": "Diana",
+      "cost": 1,
+      "star": 1,
+      "items": [],
+      "position_row": null,
+      "position_col": null,
+      "is_bench": true
+    }
+  ],
+  "shop_units": [
+    "Yunara",
+    "Diana",
+    null,
+    null,
+    null
+  ],
+  "item_bench": [],
+  "augments": [],
+  "video_timestamp_sec": 960.0,
+  "frame_index": 57600
+}

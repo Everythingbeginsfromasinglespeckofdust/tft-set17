@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP020",
+  "human_preferred_action": "SAVE_GOLD",
+  "human_confidence": "HIGH",
+  "blind_review": false,
+  "human_judgment": "GOOD",
+  "notes": "Final 1v1 showdown round, 4G left.",
+  "source": "HUMAN_INPUT"
+}

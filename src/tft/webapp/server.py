@@ -38,15 +38,34 @@ from tft.webapp.adapter import (
     _SET18_CHAMPIONS_PATH,
     _SET18_ITEMS_PATH
 )
+from tft.dataset_collection.models import (
+    RawState,
+    UnitState,
+    EnginePrediction,
+    ActualPlayerAction,
+    HumanReview,
+    InteractionLog
+)
+from tft.dataset_collection.session_manager import SessionManager
+from tft.dataset_collection.exporter import DatasetExporter
+from tft.dataset_collection.analyzer import DatasetAnalyzer
+from tft.dataset_collection.integrity_validator import IntegrityValidator
 
 # Paths
 _DATA_DIR = os.path.join(_REPO, "data", "decision_assistant")
 _SESSIONS_DIR = os.path.join(_DATA_DIR, "sessions")
+_DATASET_DIR = os.path.join(_REPO, "data", "decision_dataset")
 _RECORDINGS_DIR = r"C:\Users\mrjdh\AppData\Roaming\TFTAcademy\tft-recordings"
 _FRONTEND_DIR = os.path.join(_HERE, "frontend")
 _DDRAGON_CHAMPS_DIR = os.path.join(_REPO, "data", "sets", "set18", "raw", "ddragon", "champions")
 
 os.makedirs(_SESSIONS_DIR, exist_ok=True)
+os.makedirs(_DATASET_DIR, exist_ok=True)
+
+_dataset_mgr = SessionManager()
+_dataset_exporter = DatasetExporter()
+_dataset_analyzer = DatasetAnalyzer()
+_integrity_validator = IntegrityValidator()
 
 # FastAPI App
 app = FastAPI(
@@ -357,7 +376,186 @@ def export_dataset(session_id: Optional[str] = None) -> List[Dict[str, Any]]:
 
 
 # ==============================================================================
-# 5. Static Web UI & Image Assets Mount
+# 5. Dataset Collection REST Endpoints (DECISION_DATASET_V1)
+# ==============================================================================
+
+@app.post("/api/dataset/sessions")
+def create_dataset_session(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Create a new dataset collection session."""
+    s_id = payload.get("session_id")
+    if not s_id:
+        raise HTTPException(status_code=400, detail="session_id is required")
+    m = _dataset_mgr.create_session(
+        session_id=s_id,
+        match_id=payload.get("match_id"),
+        video_filename=payload.get("video_filename", ""),
+        video_path=payload.get("video_path"),
+        video_sha256=payload.get("video_sha256", ""),
+        resolution=payload.get("resolution", "1920x1080"),
+        fps=float(payload.get("fps", 60.0)),
+        total_frames=payload.get("total_frames"),
+        duration_sec=payload.get("duration_sec"),
+        patch=payload.get("patch", "14.x_18.1"),
+        set_num=int(payload.get("set_num", 18)),
+        notes=payload.get("notes", "")
+    )
+    return m.to_dict()
+
+
+@app.get("/api/dataset/sessions")
+def list_dataset_sessions() -> List[Dict[str, Any]]:
+    """List all dataset collection session manifests."""
+    s_ids = _dataset_mgr.list_sessions()
+    manifests = []
+    for s_id in s_ids:
+        m = _dataset_mgr.load_manifest(s_id)
+        if m:
+            manifests.append(m.to_dict())
+    return manifests
+
+
+@app.get("/api/dataset/sessions/{session_id}")
+def get_dataset_session(session_id: str) -> Dict[str, Any]:
+    """Get dataset collection session with all checkpoints."""
+    m = _dataset_mgr.load_manifest(session_id)
+    if not m:
+        raise HTTPException(status_code=404, detail=f"Session {session_id} not found")
+    rows = _dataset_mgr.load_all_session_rows(session_id)
+    return {
+        "manifest": m.to_dict(),
+        "total_checkpoints": len(rows),
+        "checkpoints": [r.to_dict() for r in rows]
+    }
+
+
+@app.post("/api/dataset/sessions/{session_id}/checkpoint")
+def save_dataset_checkpoint(session_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Save full multi-part checkpoint to dataset collection session."""
+    raw_dict = payload.get("raw_state", {})
+    cp_id = raw_dict.get("checkpoint_id") or f"CP{payload.get('turn_index', 1):03d}"
+    
+    sr = raw_dict.get("stage_round", "2-1")
+    stage = int(sr.split("-")[0]) if "-" in sr and sr.split("-")[0].isdigit() else 2
+    rnd = int(sr.split("-")[1]) if "-" in sr and sr.split("-")[1].isdigit() else 1
+
+    b_units = [
+        UnitState(name=u.get("name", ""), cost=u.get("cost", 1), star=u.get("star", 1), items=u.get("items", []))
+        for u in raw_dict.get("board_units", [])
+    ]
+    bench_u = [
+        UnitState(name=u.get("name", ""), cost=u.get("cost", 1), star=u.get("star", 1), items=u.get("items", []), is_bench=True)
+        for u in raw_dict.get("bench_units", [])
+    ]
+
+    raw_state = RawState(
+        checkpoint_id=cp_id,
+        stage_round=sr,
+        stage=stage,
+        round_num=rnd,
+        hp=raw_dict.get("hp", 100),
+        gold=raw_dict.get("gold", 0),
+        level=raw_dict.get("level", 1),
+        xp=raw_dict.get("xp", 0),
+        streak=raw_dict.get("streak", 0),
+        board_units=b_units,
+        bench_units=bench_u,
+        shop_units=raw_dict.get("shop_units", [None] * 5),
+        item_bench=raw_dict.get("item_bench", []),
+        augments=raw_dict.get("augments", []),
+        video_timestamp_sec=raw_dict.get("video_timestamp_sec"),
+        frame_index=raw_dict.get("frame_index")
+    )
+
+    pred_dict = payload.get("engine_prediction", {})
+    prediction = EnginePrediction(
+        recommended_action=pred_dict.get("recommended_action", "SAVE_GOLD"),
+        score=pred_dict.get("score", 0.35),
+        action_scores=pred_dict.get("action_scores", {}),
+        action_score_gap=pred_dict.get("action_score_gap", 0.0),
+        confidence=pred_dict.get("confidence", 0.5),
+        reasons=pred_dict.get("reasons", []),
+        direction_now=pred_dict.get("direction_now", "")
+    )
+
+    act_dict = payload.get("actual_action", {})
+    actual_action = ActualPlayerAction(
+        checkpoint_id=cp_id,
+        actual_player_action=act_dict.get("actual_player_action", "UNKNOWN"),
+        source=act_dict.get("source", "HUMAN_VIDEO_REVIEW"),
+        timestamp_sec=act_dict.get("timestamp_sec") or raw_dict.get("video_timestamp_sec")
+    )
+
+    rev_dict = payload.get("human_review", {})
+    human_review = HumanReview(
+        checkpoint_id=cp_id,
+        human_preferred_action=rev_dict.get("human_preferred_action", "UNKNOWN"),
+        human_confidence=rev_dict.get("human_confidence", "UNKNOWN"),
+        blind_review=bool(rev_dict.get("blind_review", False)),
+        human_judgment=rev_dict.get("human_judgment", "UNKNOWN"),
+        notes=rev_dict.get("notes", ""),
+        source="HUMAN_INPUT"
+    )
+
+    ilog_dict = payload.get("interaction_log")
+    ilog = None
+    if ilog_dict:
+        ilog = InteractionLog(
+            checkpoint_id=cp_id,
+            clicks_count=ilog_dict.get("clicks_count", 0),
+            manual_inputs_count=ilog_dict.get("manual_inputs_count", 0),
+            time_spent_sec=ilog_dict.get("time_spent_sec", 0.0),
+            events=ilog_dict.get("events", [])
+        )
+
+    saved_cp = _dataset_mgr.save_checkpoint(
+        session_id=session_id,
+        raw_state=raw_state,
+        prediction=prediction,
+        actual_action=actual_action,
+        human_review=human_review,
+        interaction_log=ilog
+    )
+    return {"status": "success", "checkpoint_id": saved_cp}
+
+
+@app.post("/api/dataset/sessions/{session_id}/finalize")
+def finalize_dataset_session(session_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Finalize dataset session with final placement post-game."""
+    placement = payload.get("final_placement")
+    if placement is None:
+        raise HTTPException(status_code=400, detail="final_placement is required")
+    m = _dataset_mgr.finalize_session(
+        session_id=session_id,
+        final_placement=int(placement),
+        notes=payload.get("notes", "")
+    )
+    # Auto re-export and re-analyze
+    _dataset_exporter.export_all()
+    _dataset_analyzer.analyze_and_report()
+    return m.to_dict()
+
+
+@app.get("/api/dataset/audit")
+def audit_dataset() -> Dict[str, Any]:
+    """Run live integrity validation and calibration readiness check."""
+    sessions = _dataset_mgr.list_sessions()
+    manifests = [_dataset_mgr.load_manifest(s) for s in sessions if _dataset_mgr.load_manifest(s)]
+    rows = []
+    for s_id in sessions:
+        rows.extend(_dataset_mgr.load_all_session_rows(s_id))
+    return _integrity_validator.evaluate_calibration_gate(manifests, rows)
+
+
+@app.get("/api/dataset/export")
+def export_dataset_files() -> Dict[str, Any]:
+    """Compile and export DECISION_DATASET_V1 JSONL and CSV."""
+    exp = _dataset_exporter.export_all()
+    _dataset_analyzer.analyze_and_report()
+    return exp
+
+
+# ==============================================================================
+# 6. Static Web UI & Image Assets Mount
 # ==============================================================================
 
 if os.path.exists(_DDRAGON_CHAMPS_DIR):
@@ -369,3 +567,4 @@ if os.path.exists(_FRONTEND_DIR):
     @app.get("/")
     def serve_frontend_index():
         return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))
+

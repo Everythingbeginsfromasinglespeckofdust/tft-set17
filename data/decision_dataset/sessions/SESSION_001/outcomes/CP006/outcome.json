@@ -1,0 +1,14 @@
+{
+  "checkpoint_id": "CP006",
+  "t1_checkpoint_id": "CP007",
+  "t1_stage_round": "3-5",
+  "t1_hp": 68,
+  "t1_gold": 54,
+  "t1_board_power": 13.31,
+  "hp_delta": -6,
+  "gold_delta": 2,
+  "t2_checkpoint_id": "CP008",
+  "t2_hp": 58,
+  "t2_hp_delta": -16,
+  "horizon_rounds": 1
+}

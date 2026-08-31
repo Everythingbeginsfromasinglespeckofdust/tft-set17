@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP011",
+  "human_preferred_action": "SAVE_GOLD",
+  "human_confidence": "HIGH",
+  "blind_review": true,
+  "human_judgment": "GOOD",
+  "notes": "Stabilized 2-star board, hold gold to push level 8.",
+  "source": "HUMAN_INPUT"
+}

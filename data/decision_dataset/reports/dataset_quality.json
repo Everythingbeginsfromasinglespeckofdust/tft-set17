@@ -1,0 +1,73 @@
+{
+  "final_gate_verdict": "DATA_COLLECTION_IN_PROGRESS",
+  "total_matches": 1,
+  "total_sessions": 1,
+  "total_checkpoints": 20,
+  "actual_action_coverage": 1.0,
+  "human_preference_coverage": 1.0,
+  "t1_outcome_coverage": 0.95,
+  "checklist": {
+    "matches_ge_5": false,
+    "checkpoints_per_match_ge_15": true,
+    "early_mid_late_stage_coverage": true,
+    "actual_action_coverage_ge_80pct": true,
+    "human_preference_coverage_ge_80pct": true,
+    "t1_outcome_linked_ge_70pct": true,
+    "no_fake_data_or_leakage": true
+  },
+  "fake_data_summary": {
+    "total_suspicious_checkpoints": 0,
+    "findings_count": 0,
+    "findings": [],
+    "verdict": "CLEAN"
+  },
+  "diversity_summary": {
+    "total_checkpoints": 20,
+    "hp_distribution": {
+      "71-100 (Safe)": 6,
+      "51-70 (Healthy)": 2,
+      "31-50 (Mid)": 7,
+      "16-30 (Danger)": 3,
+      "0-15 (Critical)": 2
+    },
+    "gold_distribution": {
+      "0-19G": 5,
+      "20-29G": 4,
+      "30-39G": 3,
+      "40-49G": 5,
+      "50G+": 3
+    },
+    "level_distribution": {
+      "Level 3": 1,
+      "Level 4": 2,
+      "Level 5": 2,
+      "Level 6": 2,
+      "Level 7": 5,
+      "Level 8": 8
+    },
+    "stage_distribution": {
+      "Stage 2": 4,
+      "Stage 3": 3,
+      "Stage 4": 5,
+      "Stage 5": 5,
+      "Stage 6": 3
+    },
+    "actual_action_distribution": {
+      "SAVE_GOLD": 14,
+      "BUY_UNIT": 1,
+      "ROLL": 4,
+      "LEVEL_UP": 1
+    },
+    "human_preference_distribution": {
+      "SAVE_GOLD": 14,
+      "ROLL": 5,
+      "LEVEL_UP": 1
+    },
+    "human_judgment_distribution": {
+      "GOOD": 19,
+      "QUESTIONABLE": 1
+    },
+    "imbalance_warning": false
+  },
+  "honest_recommendation": "DATA_COLLECTION_IN_PROGRESS: Collect additional real match sessions (current: 1/5 matches) before running calibration."
+}

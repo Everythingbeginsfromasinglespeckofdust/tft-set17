@@ -1,0 +1,10 @@
+{
+  "board_power": 25.0,
+  "pair_count": 1,
+  "immediate_shop_upgrades": 2,
+  "estimated_rounds_to_elim": 3.0,
+  "stage_benchmark_ratio": 1.0,
+  "gold_to_next_level": 0,
+  "spendable_roll_budget": 0,
+  "recent_hp_delta": null
+}

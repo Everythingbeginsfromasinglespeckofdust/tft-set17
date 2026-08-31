@@ -1,0 +1,11 @@
+{
+  "recommended_action": "ROLL",
+  "score": 0.0817,
+  "action_scores": {},
+  "action_score_gap": 0.0685,
+  "confidence": 0.64,
+  "reasons": [],
+  "direction_now": "Reroll shop aggressively (Budget: 32G) to stabilize board and hit key unit upgrades.",
+  "direction_watch": [],
+  "direction_then": ""
+}

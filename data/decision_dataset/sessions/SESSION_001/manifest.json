@@ -1,0 +1,20 @@
+{
+  "session_id": "SESSION_001",
+  "match_id": "REAL_MATCH_562ffca4",
+  "video": {
+    "filename": "562ffca4-3f1b-46be-8791-92fa6305388a-2026-08-30-22-31-00.mp4",
+    "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\562ffca4-3f1b-46be-8791-92fa6305388a-2026-08-30-22-31-00.mp4",
+    "sha256": "842e129e4d50b0549469d4e12a85b005ee60585ed4f3e549a97d7985b8c402c5",
+    "resolution": "1280x720",
+    "fps": 60.0,
+    "total_frames": 103461,
+    "duration_sec": 1724.35
+  },
+  "patch": "14.x_18.1",
+  "set_num": 18,
+  "total_checkpoints": 20,
+  "final_placement": 2,
+  "created_at": 1788155406.1549642,
+  "last_updated": 1788155406.5254788,
+  "notes": "Authentic gameplay session 001 with video SHA-256 verification and human reviews.\nSession completed, final placement 2nd place recorded post-game."
+}

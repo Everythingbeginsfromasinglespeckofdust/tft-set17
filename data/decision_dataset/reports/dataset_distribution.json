@@ -1,0 +1,48 @@
+{
+  "total_checkpoints": 20,
+  "hp_distribution": {
+    "71-100 (Safe)": 6,
+    "51-70 (Healthy)": 2,
+    "31-50 (Mid)": 7,
+    "16-30 (Danger)": 3,
+    "0-15 (Critical)": 2
+  },
+  "gold_distribution": {
+    "0-19G": 5,
+    "20-29G": 4,
+    "30-39G": 3,
+    "40-49G": 5,
+    "50G+": 3
+  },
+  "level_distribution": {
+    "Level 3": 1,
+    "Level 4": 2,
+    "Level 5": 2,
+    "Level 6": 2,
+    "Level 7": 5,
+    "Level 8": 8
+  },
+  "stage_distribution": {
+    "Stage 2": 4,
+    "Stage 3": 3,
+    "Stage 4": 5,
+    "Stage 5": 5,
+    "Stage 6": 3
+  },
+  "actual_action_distribution": {
+    "SAVE_GOLD": 14,
+    "BUY_UNIT": 1,
+    "ROLL": 4,
+    "LEVEL_UP": 1
+  },
+  "human_preference_distribution": {
+    "SAVE_GOLD": 14,
+    "ROLL": 5,
+    "LEVEL_UP": 1
+  },
+  "human_judgment_distribution": {
+    "GOOD": 19,
+    "QUESTIONABLE": 1
+  },
+  "imbalance_warning": false
+}

@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP016",
+  "human_preferred_action": "ROLL",
+  "human_confidence": "HIGH",
+  "blind_review": true,
+  "human_judgment": "GOOD",
+  "notes": "Lethal danger (16 HP), must roll all remaining gold to find 3-star upgrades.",
+  "source": "HUMAN_INPUT"
+}

@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP019",
+  "human_preferred_action": "ROLL",
+  "human_confidence": "HIGH",
+  "blind_review": false,
+  "human_judgment": "GOOD",
+  "notes": "1-hit lethal (8 HP), hit Diana 3★, all-in survival.",
+  "source": "HUMAN_INPUT"
+}
