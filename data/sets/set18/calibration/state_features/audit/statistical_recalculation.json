@@ -1,0 +1,20 @@
+{
+  "sample_count": 20,
+  "match_count": 1,
+  "session_count": 1,
+  "hp": {
+    "mean": 50.0,
+    "min": 8,
+    "max": 100
+  },
+  "gold": {
+    "mean": 32.3,
+    "min": 4,
+    "max": 56
+  },
+  "board_power": {
+    "mean": 6.45,
+    "min": 2.0,
+    "max": 8.0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "total_checkpoints": 20,
+  "reproduced_flips_count": 3,
+  "flip_rate": 0.15,
+  "reproduced_flip_cases": [
+    {
+      "checkpoint": "CP010",
+      "stage_round": "4-3",
+      "hp": 38,
+      "gold": 48,
+      "baseline_action": "SAVE_GOLD",
+      "candidate_action": "ROLL",
+      "rationale_code": "CANDIDATE_STAGE_4_STABILIZATION_ROLL",
+      "candidate_score": 0.865
+    },
+    {
+      "checkpoint": "CP018",
+      "stage_round": "6-1",
+      "hp": 45,
+      "gold": 40,
+      "baseline_action": "SAVE_GOLD",
+      "candidate_action": "ROLL",
+      "rationale_code": "CANDIDATE_STAGE_6_ENDGAME_PRESSURE",
+      "candidate_score": 0.88
+    },
+    {
+      "checkpoint": "CP020",
+      "stage_round": "6-3",
+      "hp": 8,
+      "gold": 4,
+      "baseline_action": "SAVE_GOLD",
+      "candidate_action": "ROLL",
+      "rationale_code": "CANDIDATE_LETHAL_EMERGENCY_ROLL",
+      "candidate_score": 0.925
+    }
+  ]
+}

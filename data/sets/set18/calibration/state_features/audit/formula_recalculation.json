@@ -1,0 +1,527 @@
+{
+  "total_checkpoints_recalculated": 20,
+  "max_discrepancy_delta": 0.0,
+  "all_exact_match": true,
+  "recalculation_details": [
+    {
+      "checkpoint": "CP001",
+      "stage_round": "2-1",
+      "hp": 100,
+      "gold": 10,
+      "recomputed_values": {
+        "board_power": 2.0,
+        "stage_benchmark_ratio": 0.111,
+        "pair_count": 1,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 8,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 20.0
+      },
+      "extractor_values": {
+        "board_power": 2.0,
+        "stage_benchmark_ratio": 0.111,
+        "pair_count": 1,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 8,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 20.0
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP002",
+      "stage_round": "2-3",
+      "hp": 96,
+      "gold": 18,
+      "recomputed_values": {
+        "board_power": 3.0,
+        "stage_benchmark_ratio": 0.167,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 16,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 19.2
+      },
+      "extractor_values": {
+        "board_power": 3.0,
+        "stage_benchmark_ratio": 0.167,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 16,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 19.2
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP003",
+      "stage_round": "2-5",
+      "hp": 88,
+      "gold": 28,
+      "recomputed_values": {
+        "board_power": 4.0,
+        "stage_benchmark_ratio": 0.222,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 12,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 17.6
+      },
+      "extractor_values": {
+        "board_power": 4.0,
+        "stage_benchmark_ratio": 0.222,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 12,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 17.6
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP004",
+      "stage_round": "2-7",
+      "hp": 82,
+      "gold": 38,
+      "recomputed_values": {
+        "board_power": 4.0,
+        "stage_benchmark_ratio": 0.222,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 36,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 16.4
+      },
+      "extractor_values": {
+        "board_power": 4.0,
+        "stage_benchmark_ratio": 0.222,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 36,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 16.4
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP005",
+      "stage_round": "3-1",
+      "hp": 82,
+      "gold": 48,
+      "recomputed_values": {
+        "board_power": 5.0,
+        "stage_benchmark_ratio": 0.143,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 32,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 9.11
+      },
+      "extractor_values": {
+        "board_power": 5.0,
+        "stage_benchmark_ratio": 0.143,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 32,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 9.11
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP006",
+      "stage_round": "3-2",
+      "hp": 74,
+      "gold": 52,
+      "recomputed_values": {
+        "board_power": 6.0,
+        "stage_benchmark_ratio": 0.171,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 2,
+        "rounds_to_elimination": 8.22
+      },
+      "extractor_values": {
+        "board_power": 6.0,
+        "stage_benchmark_ratio": 0.171,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 2,
+        "rounds_to_elimination": 8.22
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP007",
+      "stage_round": "3-5",
+      "hp": 68,
+      "gold": 54,
+      "recomputed_values": {
+        "board_power": 6.0,
+        "stage_benchmark_ratio": 0.171,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 48,
+        "spendable_roll_budget": 4,
+        "rounds_to_elimination": 7.56
+      },
+      "extractor_values": {
+        "board_power": 6.0,
+        "stage_benchmark_ratio": 0.171,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 48,
+        "spendable_roll_budget": 4,
+        "rounds_to_elimination": 7.56
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP008",
+      "stage_round": "4-1",
+      "hp": 58,
+      "gold": 56,
+      "recomputed_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 68,
+        "spendable_roll_budget": 6,
+        "rounds_to_elimination": 4.14
+      },
+      "extractor_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 68,
+        "spendable_roll_budget": 6,
+        "rounds_to_elimination": 4.14
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP009",
+      "stage_round": "4-2",
+      "hp": 48,
+      "gold": 44,
+      "recomputed_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 3.43
+      },
+      "extractor_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 3.43
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP010",
+      "stage_round": "4-3",
+      "hp": 38,
+      "gold": 48,
+      "recomputed_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 52,
+        "spendable_roll_budget": 18,
+        "rounds_to_elimination": 2.71
+      },
+      "extractor_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 52,
+        "spendable_roll_budget": 18,
+        "rounds_to_elimination": 2.71
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP011",
+      "stage_round": "4-5",
+      "hp": 32,
+      "gold": 32,
+      "recomputed_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 44,
+        "spendable_roll_budget": 2,
+        "rounds_to_elimination": 2.29
+      },
+      "extractor_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 44,
+        "spendable_roll_budget": 2,
+        "rounds_to_elimination": 2.29
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP012",
+      "stage_round": "4-6",
+      "hp": 32,
+      "gold": 40,
+      "recomputed_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 40,
+        "spendable_roll_budget": 10,
+        "rounds_to_elimination": 2.29
+      },
+      "extractor_values": {
+        "board_power": 7.0,
+        "stage_benchmark_ratio": 0.127,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 40,
+        "spendable_roll_budget": 10,
+        "rounds_to_elimination": 2.29
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP013",
+      "stage_round": "5-1",
+      "hp": 32,
+      "gold": 22,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 68,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 1.68
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 68,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 1.68
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP014",
+      "stage_round": "5-2",
+      "hp": 24,
+      "gold": 28,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 64,
+        "spendable_roll_budget": 28,
+        "rounds_to_elimination": 1.26
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 64,
+        "spendable_roll_budget": 28,
+        "rounds_to_elimination": 1.26
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP015",
+      "stage_round": "5-3",
+      "hp": 24,
+      "gold": 16,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 16,
+        "rounds_to_elimination": 1.26
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 60,
+        "spendable_roll_budget": 16,
+        "rounds_to_elimination": 1.26
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP016",
+      "stage_round": "5-5",
+      "hp": 16,
+      "gold": 26,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 52,
+        "spendable_roll_budget": 26,
+        "rounds_to_elimination": 0.84
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 52,
+        "spendable_roll_budget": 26,
+        "rounds_to_elimination": 0.84
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP017",
+      "stage_round": "5-7",
+      "hp": 45,
+      "gold": 30,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 44,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 2.37
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.107,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 44,
+        "spendable_roll_budget": 0,
+        "rounds_to_elimination": 2.37
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP018",
+      "stage_round": "6-1",
+      "hp": 45,
+      "gold": 40,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 36,
+        "spendable_roll_budget": 10,
+        "rounds_to_elimination": 1.88
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 36,
+        "spendable_roll_budget": 10,
+        "rounds_to_elimination": 1.88
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP019",
+      "stage_round": "6-2",
+      "hp": 8,
+      "gold": 12,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 32,
+        "spendable_roll_budget": 12,
+        "rounds_to_elimination": 0.33
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 32,
+        "spendable_roll_budget": 12,
+        "rounds_to_elimination": 0.33
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    },
+    {
+      "checkpoint": "CP020",
+      "stage_round": "6-3",
+      "hp": 8,
+      "gold": 4,
+      "recomputed_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 28,
+        "spendable_roll_budget": 4,
+        "rounds_to_elimination": 0.33
+      },
+      "extractor_values": {
+        "board_power": 8.0,
+        "stage_benchmark_ratio": 0.084,
+        "pair_count": 0,
+        "immediate_shop_upgrades": 0,
+        "gold_to_next_level": 28,
+        "spendable_roll_budget": 4,
+        "rounds_to_elimination": 0.33
+      },
+      "max_numeric_delta": 0.0,
+      "is_exact_match": true
+    }
+  ]
+}

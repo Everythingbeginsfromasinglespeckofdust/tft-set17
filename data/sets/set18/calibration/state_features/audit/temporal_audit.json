@@ -1,0 +1,6 @@
+{
+  "t0_checked_samples": 20,
+  "future_leakage_violations": 0,
+  "unobserved_opponents_handling": "STRICT_NULL (Zero fake interpolation)",
+  "status": "CLEAN_T0"
+}
