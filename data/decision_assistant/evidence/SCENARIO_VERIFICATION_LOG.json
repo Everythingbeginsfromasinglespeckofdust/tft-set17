@@ -1,0 +1,1015 @@
+{
+  "timestamp_iso": "2026-08-31T04:06:31Z",
+  "session_id": "SESSION_VERIFICATION_1788149191",
+  "scenarios": [
+    {
+      "scenario": "A",
+      "description": "Initial State Entry & Decision Analysis",
+      "input": {
+        "stage_round": "4-2",
+        "hp": 42,
+        "gold": 38,
+        "level": 7,
+        "xp": 18,
+        "board_units": [
+          {
+            "champion": "Diana",
+            "cost": 3,
+            "star_level": 2,
+            "items": []
+          },
+          {
+            "champion": "Akali",
+            "cost": 1,
+            "star_level": 2,
+            "items": []
+          }
+        ],
+        "bench_units": [
+          {
+            "champion": "Lux",
+            "cost": 2,
+            "star_level": 1,
+            "items": []
+          }
+        ],
+        "shop_units": [
+          "Diana",
+          null,
+          "Akali",
+          "Yunara",
+          null
+        ],
+        "calibration_mode": "OFF"
+      },
+      "output": {
+        "recommended_action": "SAVE_GOLD",
+        "score": 0.3347,
+        "action_score_gap": 0.0033,
+        "confidence": 0.51,
+        "all_scores": [
+          {
+            "action": "SAVE_GOLD",
+            "score": 0.3347,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.335,
+              "survival_norm": 0.2,
+              "economy_norm": 0.929,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 65.0,
+              "expected_hp": 6.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.2
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 6.0,
+                "normalized_value": 0.2,
+                "weight": 0.35,
+                "contribution": 0.07,
+                "description": "Expected HP 6.0 (Survival Score: 0.20)"
+              },
+              "economy": {
+                "raw_value": 65.0,
+                "normalized_value": 0.929,
+                "weight": 0.25,
+                "contribution": 0.2321,
+                "description": "Expected Gold 65.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "ROLL",
+            "score": 0.3314,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.331,
+              "survival_norm": 0.2,
+              "economy_norm": 0.929,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.0,
+              "expected_gold": 65.0,
+              "expected_hp": 6.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.0,
+              "survival_score": 0.2
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 6.0,
+                "normalized_value": 0.2,
+                "weight": 0.35,
+                "contribution": 0.07,
+                "description": "Expected HP 6.0 (Survival Score: 0.20)"
+              },
+              "economy": {
+                "raw_value": 65.0,
+                "normalized_value": 0.929,
+                "weight": 0.25,
+                "contribution": 0.2321,
+                "description": "Expected Gold 65.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.15,
+                "contribution": 0.0,
+                "description": "Any Upgrade Probability 0.0% (Exp Upgrades: 0.00)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "LEVEL_UP",
+            "score": 0.1669,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.167,
+              "survival_norm": 0.2,
+              "economy_norm": 0.257,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 18.0,
+              "expected_hp": 6.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.2
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 6.0,
+                "normalized_value": 0.2,
+                "weight": 0.35,
+                "contribution": 0.07,
+                "description": "Expected HP 6.0 (Survival Score: 0.20)"
+              },
+              "economy": {
+                "raw_value": 18.0,
+                "normalized_value": 0.257,
+                "weight": 0.25,
+                "contribution": 0.0643,
+                "description": "Expected Gold 18.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          }
+        ],
+        "reasons": [
+          {
+            "code": "ECONOMIC_COMPOUNDING",
+            "summary": "체력 안전권(HP 42): 3턴 후 65G(+27G) 복리 이자 극대화 추천",
+            "evidence": {
+              "start_gold": 38,
+              "final_gold": 65.0,
+              "survival_prob": 0.2
+            },
+            "impact": 0.85
+          },
+          {
+            "code": "COMPARE_VS_ROLL",
+            "summary": "SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.003 우세",
+            "evidence": {
+              "best_score": 0.3347,
+              "alt_score": 0.3314,
+              "score_diff": 0.003300000000000025,
+              "best_gold": 65.0,
+              "alt_gold": 65.0
+            },
+            "impact": 0.003
+          },
+          {
+            "code": "COMPARE_VS_LEVEL_UP",
+            "summary": "SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.168 우세",
+            "evidence": {
+              "best_score": 0.3347,
+              "alt_score": 0.1669,
+              "score_diff": 0.1678,
+              "best_gold": 65.0,
+              "alt_gold": 18.0
+            },
+            "impact": 0.168
+          }
+        ],
+        "current_direction": {
+          "now": {
+            "action": "SAVE_GOLD",
+            "description": "Hold current gold (38G) to maximize interest compound (+3G/round)."
+          },
+          "watch": [
+            "Watch HP (42): If HP drops below 30, prepare immediate transition to ROLL.",
+            "Watch Stage: Next key level breakpoint at Level 8."
+          ],
+          "then": {
+            "description": "Fast-level to next breakpoint once compound gold exceeds upgrade cost."
+          }
+        },
+        "calibration": {
+          "mode": "OFF",
+          "applied": false,
+          "is_flip": false,
+          "flip_direction": "NO_FLIP",
+          "base_action": "SAVE_GOLD",
+          "base_scores": {
+            "SAVE_GOLD": 0.3347,
+            "ROLL": 0.3314,
+            "LEVEL_UP": 0.1669
+          }
+        },
+        "game_state_summary": {
+          "stage": 4,
+          "round": 2,
+          "stage_round": "4-2",
+          "gold": 38,
+          "level": 7,
+          "xp": 18,
+          "hp": 42,
+          "streak": 0,
+          "board": {
+            "units": [
+              {
+                "champion": "Diana",
+                "cost": 3,
+                "star_level": 2,
+                "items": []
+              },
+              {
+                "champion": "Akali",
+                "cost": 1,
+                "star_level": 2,
+                "items": []
+              }
+            ]
+          },
+          "bench_units": [
+            {
+              "champion": "Lux",
+              "cost": 2,
+              "star_level": 1,
+              "items": []
+            }
+          ],
+          "shop_units": [
+            "Diana",
+            null,
+            "Akali",
+            "Yunara",
+            null
+          ],
+          "item_bench": [],
+          "augments": []
+        },
+        "input_metadata": {
+          "stage_round": "4-2",
+          "video_timestamp_sec": null,
+          "actual_player_action": "UNKNOWN",
+          "human_preferred_action": "UNKNOWN",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "scenario": "B",
+      "description": "Incremental Turn Copy & State Delta",
+      "prev_state": {
+        "stage_round": "4-2",
+        "hp": 42,
+        "gold": 38,
+        "level": 7,
+        "xp": 18,
+        "board_units": [
+          {
+            "champion": "Diana",
+            "cost": 3,
+            "star_level": 2,
+            "items": []
+          },
+          {
+            "champion": "Akali",
+            "cost": 1,
+            "star_level": 2,
+            "items": []
+          }
+        ],
+        "bench_units": [
+          {
+            "champion": "Lux",
+            "cost": 2,
+            "star_level": 1,
+            "items": []
+          }
+        ],
+        "shop_units": [
+          "Diana",
+          null,
+          "Akali",
+          "Yunara",
+          null
+        ],
+        "calibration_mode": "OFF"
+      },
+      "curr_state": {
+        "stage_round": "4-3",
+        "hp": 32,
+        "gold": 30,
+        "level": 7,
+        "xp": 18,
+        "board_units": [
+          {
+            "champion": "Diana",
+            "cost": 3,
+            "star_level": 2,
+            "items": []
+          },
+          {
+            "champion": "Akali",
+            "cost": 1,
+            "star_level": 2,
+            "items": []
+          }
+        ],
+        "bench_units": [
+          {
+            "champion": "Lux",
+            "cost": 2,
+            "star_level": 1,
+            "items": []
+          }
+        ],
+        "shop_units": [
+          "Diana",
+          null,
+          "Akali",
+          "Yunara",
+          null
+        ],
+        "calibration_mode": "OFF"
+      },
+      "diff": {
+        "prev_stage": "4-2",
+        "curr_stage": "4-3",
+        "hp": {
+          "prev": 42,
+          "curr": 32,
+          "diff": -10
+        },
+        "gold": {
+          "prev": 38,
+          "curr": 30,
+          "diff": -8
+        },
+        "level": {
+          "prev": 7,
+          "curr": 7,
+          "diff": 0
+        },
+        "xp": {
+          "prev": 18,
+          "curr": 18,
+          "diff": 0
+        },
+        "board": {
+          "added_units": [],
+          "removed_units": [],
+          "count_diff": 0
+        }
+      },
+      "output": {
+        "recommended_action": "ROLL",
+        "score": 0.0986,
+        "action_score_gap": 0.0621,
+        "confidence": 0.62,
+        "all_scores": [
+          {
+            "action": "ROLL",
+            "score": 0.0986,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.099,
+              "survival_norm": 0.0,
+              "economy_norm": 0.011,
+              "power_norm": 0.131,
+              "upgrade_norm": 0.431,
+              "expected_gold": 16.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 9.84,
+              "upgrade_prob": 0.431,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 16.0,
+                "normalized_value": 0.011,
+                "weight": 0.1,
+                "contribution": 0.0011,
+                "description": "Expected Gold 16.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 9.84,
+                "normalized_value": 0.131,
+                "weight": 0.25,
+                "contribution": 0.0328,
+                "description": "Expected Board Power 9.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.43,
+                "normalized_value": 0.431,
+                "weight": 0.15,
+                "contribution": 0.0647,
+                "description": "Any Upgrade Probability 43.1% (Exp Upgrades: 0.43)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "SAVE_GOLD",
+            "score": 0.0365,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.036,
+              "survival_norm": 0.0,
+              "economy_norm": 0.039,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 55.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 55.0,
+                "normalized_value": 0.039,
+                "weight": 0.1,
+                "contribution": 0.0039,
+                "description": "Expected Gold 55.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "LEVEL_UP",
+            "score": 0.0339,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.034,
+              "survival_norm": 0.0,
+              "economy_norm": 0.013,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 18.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 18.0,
+                "normalized_value": 0.013,
+                "weight": 0.1,
+                "contribution": 0.0013,
+                "description": "Expected Gold 18.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          }
+        ],
+        "reasons": [
+          {
+            "code": "CRISIS_ROLL_DEFENSE",
+            "summary": "체력 위기(HP 32): 즉시 리롤로 2성 기물 완성(확률 43.1%) 및 보드 파워 +1.0 확보로 탈락 방어",
+            "evidence": {
+              "current_hp": 32,
+              "upgrade_prob": 0.4314,
+              "board_power_gain": 1.0399999999999991,
+              "roll_expected_hp": 0.0,
+              "save_expected_hp": 0.0
+            },
+            "impact": 0.95
+          },
+          {
+            "code": "COMPARE_VS_SAVE_GOLD",
+            "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.062 우세",
+            "evidence": {
+              "best_score": 0.0986,
+              "alt_score": 0.0365,
+              "score_diff": 0.062099999999999995,
+              "best_gold": 16.0,
+              "alt_gold": 55.0
+            },
+            "impact": 0.062
+          },
+          {
+            "code": "COMPARE_VS_LEVEL_UP",
+            "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.065 우세",
+            "evidence": {
+              "best_score": 0.0986,
+              "alt_score": 0.0339,
+              "score_diff": 0.0647,
+              "best_gold": 16.0,
+              "alt_gold": 18.0
+            },
+            "impact": 0.065
+          }
+        ],
+        "current_direction": {
+          "now": {
+            "action": "ROLL",
+            "description": "Reroll shop aggressively (Budget: 30G) to stabilize board and hit key unit upgrades."
+          },
+          "watch": [
+            "Stop rolling immediately if 2-star pairs hit or gold drops below 20G/30G interest threshold.",
+            "Check bench space for holding transition copies."
+          ],
+          "then": {
+            "description": "Preserve remaining economy for leveling once board power stabilizes."
+          }
+        },
+        "calibration": {
+          "mode": "OFF",
+          "applied": false,
+          "is_flip": false,
+          "flip_direction": "NO_FLIP",
+          "base_action": "ROLL",
+          "base_scores": {
+            "ROLL": 0.0986,
+            "SAVE_GOLD": 0.0365,
+            "LEVEL_UP": 0.0339
+          }
+        },
+        "game_state_summary": {
+          "stage": 4,
+          "round": 3,
+          "stage_round": "4-3",
+          "gold": 30,
+          "level": 7,
+          "xp": 18,
+          "hp": 32,
+          "streak": 0,
+          "board": {
+            "units": [
+              {
+                "champion": "Diana",
+                "cost": 3,
+                "star_level": 2,
+                "items": []
+              },
+              {
+                "champion": "Akali",
+                "cost": 1,
+                "star_level": 2,
+                "items": []
+              }
+            ]
+          },
+          "bench_units": [
+            {
+              "champion": "Lux",
+              "cost": 2,
+              "star_level": 1,
+              "items": []
+            }
+          ],
+          "shop_units": [
+            "Diana",
+            null,
+            "Akali",
+            "Yunara",
+            null
+          ],
+          "item_bench": [],
+          "augments": []
+        },
+        "input_metadata": {
+          "stage_round": "4-3",
+          "video_timestamp_sec": null,
+          "actual_player_action": "UNKNOWN",
+          "human_preferred_action": "UNKNOWN",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "scenario": "C",
+      "description": "Video Replay Timestamp Checkpoint",
+      "video": "562ffca4-3f1b-46be-8791-92fa6305388a-2026-08-30-22-31-00.mp4",
+      "timestamp_sec": 305.4,
+      "output": {
+        "recommended_action": "ROLL",
+        "score": 0.0986,
+        "action_score_gap": 0.0621,
+        "confidence": 0.62,
+        "all_scores": [
+          {
+            "action": "ROLL",
+            "score": 0.0986,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.099,
+              "survival_norm": 0.0,
+              "economy_norm": 0.011,
+              "power_norm": 0.131,
+              "upgrade_norm": 0.431,
+              "expected_gold": 16.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 9.84,
+              "upgrade_prob": 0.431,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 16.0,
+                "normalized_value": 0.011,
+                "weight": 0.1,
+                "contribution": 0.0011,
+                "description": "Expected Gold 16.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 9.84,
+                "normalized_value": 0.131,
+                "weight": 0.25,
+                "contribution": 0.0328,
+                "description": "Expected Board Power 9.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.43,
+                "normalized_value": 0.431,
+                "weight": 0.15,
+                "contribution": 0.0647,
+                "description": "Any Upgrade Probability 43.1% (Exp Upgrades: 0.43)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "SAVE_GOLD",
+            "score": 0.0365,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.036,
+              "survival_norm": 0.0,
+              "economy_norm": 0.039,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 55.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 55.0,
+                "normalized_value": 0.039,
+                "weight": 0.1,
+                "contribution": 0.0039,
+                "description": "Expected Gold 55.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          },
+          {
+            "action": "LEVEL_UP",
+            "score": 0.0339,
+            "confidence": 0.88,
+            "metrics": {
+              "composite_score": 0.034,
+              "survival_norm": 0.0,
+              "economy_norm": 0.013,
+              "power_norm": 0.117,
+              "upgrade_norm": 0.022,
+              "expected_gold": 18.0,
+              "expected_hp": 0.0,
+              "expected_board_power": 8.8,
+              "upgrade_prob": 0.022,
+              "survival_score": 0.0
+            },
+            "breakdown": {
+              "survival": {
+                "raw_value": 0.0,
+                "normalized_value": 0.0,
+                "weight": 0.5,
+                "contribution": 0.0,
+                "description": "Expected HP 0.0 (Survival Score: 0.00)"
+              },
+              "economy": {
+                "raw_value": 18.0,
+                "normalized_value": 0.013,
+                "weight": 0.1,
+                "contribution": 0.0013,
+                "description": "Expected Gold 18.0G (vs 70G target)"
+              },
+              "board_power": {
+                "raw_value": 8.8,
+                "normalized_value": 0.117,
+                "weight": 0.25,
+                "contribution": 0.0293,
+                "description": "Expected Board Power 8.8 (vs 75 target)"
+              },
+              "upgrade": {
+                "raw_value": 0.02,
+                "normalized_value": 0.022,
+                "weight": 0.15,
+                "contribution": 0.0033,
+                "description": "Any Upgrade Probability 2.2% (Exp Upgrades: 0.02)"
+              },
+              "feasibility": {
+                "raw_value": 1.0,
+                "normalized_value": 0.0,
+                "weight": 1.0,
+                "contribution": 0.0,
+                "description": "Action is valid and executable"
+              }
+            }
+          }
+        ],
+        "reasons": [
+          {
+            "code": "CRISIS_ROLL_DEFENSE",
+            "summary": "체력 위기(HP 32): 즉시 리롤로 2성 기물 완성(확률 43.1%) 및 보드 파워 +1.0 확보로 탈락 방어",
+            "evidence": {
+              "current_hp": 32,
+              "upgrade_prob": 0.4314,
+              "board_power_gain": 1.0399999999999991,
+              "roll_expected_hp": 0.0,
+              "save_expected_hp": 0.0
+            },
+            "impact": 0.95
+          },
+          {
+            "code": "COMPARE_VS_SAVE_GOLD",
+            "summary": "ROLL 선택이 SAVE_GOLD 대비 종합 점수 +0.062 우세",
+            "evidence": {
+              "best_score": 0.0986,
+              "alt_score": 0.0365,
+              "score_diff": 0.062099999999999995,
+              "best_gold": 16.0,
+              "alt_gold": 55.0
+            },
+            "impact": 0.062
+          },
+          {
+            "code": "COMPARE_VS_LEVEL_UP",
+            "summary": "ROLL 선택이 LEVEL_UP 대비 종합 점수 +0.065 우세",
+            "evidence": {
+              "best_score": 0.0986,
+              "alt_score": 0.0339,
+              "score_diff": 0.0647,
+              "best_gold": 16.0,
+              "alt_gold": 18.0
+            },
+            "impact": 0.065
+          }
+        ],
+        "current_direction": {
+          "now": {
+            "action": "ROLL",
+            "description": "Reroll shop aggressively (Budget: 30G) to stabilize board and hit key unit upgrades."
+          },
+          "watch": [
+            "Stop rolling immediately if 2-star pairs hit or gold drops below 20G/30G interest threshold.",
+            "Check bench space for holding transition copies."
+          ],
+          "then": {
+            "description": "Preserve remaining economy for leveling once board power stabilizes."
+          }
+        },
+        "calibration": {
+          "mode": "OFF",
+          "applied": false,
+          "is_flip": false,
+          "flip_direction": "NO_FLIP",
+          "base_action": "ROLL",
+          "base_scores": {
+            "ROLL": 0.0986,
+            "SAVE_GOLD": 0.0365,
+            "LEVEL_UP": 0.0339
+          }
+        },
+        "game_state_summary": {
+          "stage": 4,
+          "round": 3,
+          "stage_round": "4-3",
+          "gold": 30,
+          "level": 7,
+          "xp": 18,
+          "hp": 32,
+          "streak": 0,
+          "board": {
+            "units": [
+              {
+                "champion": "Diana",
+                "cost": 3,
+                "star_level": 2,
+                "items": []
+              },
+              {
+                "champion": "Akali",
+                "cost": 1,
+                "star_level": 2,
+                "items": []
+              }
+            ]
+          },
+          "bench_units": [
+            {
+              "champion": "Lux",
+              "cost": 2,
+              "star_level": 1,
+              "items": []
+            }
+          ],
+          "shop_units": [
+            "Diana",
+            null,
+            "Akali",
+            "Yunara",
+            null
+          ],
+          "item_bench": [],
+          "augments": []
+        },
+        "input_metadata": {
+          "stage_round": "4-3",
+          "video_timestamp_sec": 305.4,
+          "actual_player_action": "ROLL",
+          "human_preferred_action": "UNKNOWN",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "scenario": "D",
+      "description": "Blind Review Mode & 3-Way Action Separation",
+      "human_preferred_action": "ROLL",
+      "actual_player_action": "SAVE_GOLD",
+      "engine_recommendation": "SAVE_GOLD"
+    }
+  ],
+  "status": "ALL_SCENARIOS_VERIFIED"
+}
