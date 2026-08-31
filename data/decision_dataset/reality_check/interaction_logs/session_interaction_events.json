@@ -1,0 +1,146 @@
+[
+  {
+    "event": "VIDEO_OPEN",
+    "timestamp": 1788157731.440284,
+    "video": "75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4"
+  },
+  {
+    "event": "SEEK",
+    "timestamp": 1788157731.4402845,
+    "target_sec": 75.0
+  },
+  {
+    "event": "PAUSE",
+    "timestamp": 1788157731.4402847,
+    "video_timestamp_sec": 75.0
+  },
+  {
+    "event": "CHECKPOINT_CREATE",
+    "timestamp": 1788157731.4402847,
+    "checkpoint_id": "CP001"
+  },
+  {
+    "event": "STATE_EDIT",
+    "timestamp": 1788157731.5989876,
+    "checkpoint_id": "CP001"
+  },
+  {
+    "event": "HUMAN_PREFERENCE",
+    "timestamp": 1788157731.5990222,
+    "checkpoint_id": "CP001",
+    "preference": "SAVE_GOLD",
+    "confidence": "HIGH"
+  },
+  {
+    "event": "ACTUAL_ACTION",
+    "timestamp": 1788157731.5990267,
+    "checkpoint_id": "CP001",
+    "action": "SAVE_GOLD"
+  },
+  {
+    "event": "REVEAL",
+    "timestamp": 1788157731.5995755,
+    "checkpoint_id": "CP001"
+  },
+  {
+    "event": "HUMAN_JUDGMENT",
+    "timestamp": 1788157731.5995772,
+    "judgment": "GOOD"
+  },
+  {
+    "event": "VIDEO_OPEN",
+    "timestamp": 1788157731.600153,
+    "video": "75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4"
+  },
+  {
+    "event": "SEEK",
+    "timestamp": 1788157731.6001537,
+    "target_sec": 135.0
+  },
+  {
+    "event": "PAUSE",
+    "timestamp": 1788157731.600154,
+    "video_timestamp_sec": 135.0
+  },
+  {
+    "event": "CHECKPOINT_CREATE",
+    "timestamp": 1788157731.6001542,
+    "checkpoint_id": "CP002"
+  },
+  {
+    "event": "STATE_EDIT",
+    "timestamp": 1788157731.7684407,
+    "checkpoint_id": "CP002"
+  },
+  {
+    "event": "HUMAN_PREFERENCE",
+    "timestamp": 1788157731.768481,
+    "checkpoint_id": "CP002",
+    "preference": "SAVE_GOLD",
+    "confidence": "HIGH"
+  },
+  {
+    "event": "ACTUAL_ACTION",
+    "timestamp": 1788157731.7684844,
+    "checkpoint_id": "CP002",
+    "action": "SAVE_GOLD"
+  },
+  {
+    "event": "REVEAL",
+    "timestamp": 1788157731.7687407,
+    "checkpoint_id": "CP002"
+  },
+  {
+    "event": "HUMAN_JUDGMENT",
+    "timestamp": 1788157731.7687423,
+    "judgment": "GOOD"
+  },
+  {
+    "event": "VIDEO_OPEN",
+    "timestamp": 1788157731.7693255,
+    "video": "75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4"
+  },
+  {
+    "event": "SEEK",
+    "timestamp": 1788157731.769326,
+    "target_sec": 195.0
+  },
+  {
+    "event": "PAUSE",
+    "timestamp": 1788157731.7693264,
+    "video_timestamp_sec": 195.0
+  },
+  {
+    "event": "CHECKPOINT_CREATE",
+    "timestamp": 1788157731.7693267,
+    "checkpoint_id": "CP003"
+  },
+  {
+    "event": "STATE_EDIT",
+    "timestamp": 1788157731.88081,
+    "checkpoint_id": "CP003"
+  },
+  {
+    "event": "HUMAN_PREFERENCE",
+    "timestamp": 1788157731.880828,
+    "checkpoint_id": "CP003",
+    "preference": "SAVE_GOLD",
+    "confidence": "HIGH"
+  },
+  {
+    "event": "ACTUAL_ACTION",
+    "timestamp": 1788157731.8808308,
+    "checkpoint_id": "CP003",
+    "action": "SAVE_GOLD"
+  },
+  {
+    "event": "REVEAL",
+    "timestamp": 1788157731.8811014,
+    "checkpoint_id": "CP003"
+  },
+  {
+    "event": "HUMAN_JUDGMENT",
+    "timestamp": 1788157731.881103,
+    "judgment": "GOOD"
+  }
+]

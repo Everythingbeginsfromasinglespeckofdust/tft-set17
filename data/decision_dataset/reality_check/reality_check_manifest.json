@@ -1,0 +1,22 @@
+{
+  "session_id": "SESSION_REALITY_CHECK_001",
+  "match_id": "REAL_MATCH_2f21bea8",
+  "video": {
+    "filename": "75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4",
+    "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4",
+    "sha256": "2f21bea8a032b5fe893051cb5567a28e45b5f11e8ebd8247b5d23741cf938e98",
+    "resolution": "1280x720",
+    "fps": 60.0,
+    "total_frames": 131392,
+    "duration_sec": 2189.87,
+    "is_original_source": true,
+    "burn_in_overlay": false
+  },
+  "patch": "14.x_18.1",
+  "set_num": 18,
+  "total_checkpoints": 3,
+  "final_placement": null,
+  "created_at": 1788157731.4402578,
+  "last_updated": 1788157731.4402578,
+  "notes": "REALITY_CHECK_TEST_ONLY: Isolated session for runtime workflow verification."
+}

@@ -86,14 +86,14 @@ class CollectionController:
 
         rec = self.engine.decide(state)
         act_scores = {
-            s.action_type.value: round(float(s.score), 4)
-            for s in rec.action_scores
+            s.action.action_type.value: round(float(s.score), 4)
+            for s in rec.all_scores
         }
-        reasons_list = [f"{r.factor}: {r.description}" for r in rec.reasons]
+        reasons_list = [f"{r.code}: {r.summary}" for r in rec.reasons]
 
         pred = EnginePrediction(
             recommended_action=rec.recommended_action.action_type.value,
-            score=round(float(rec.recommended_action.score), 4),
+            score=round(float(rec.score), 4),
             action_scores=act_scores,
             action_score_gap=round(float(rec.decision_margin), 4),
             confidence=round(float(rec.confidence), 4),

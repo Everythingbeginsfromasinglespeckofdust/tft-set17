@@ -1,0 +1,43 @@
+{
+  "reality_check_version": "v1.0",
+  "executed_at": 1788157731.8833027,
+  "target_video": "75cddcf5-dc79-4eaa-b742-8b000d50a44a-2026-08-31-00-43-35.mp4",
+  "video_sha256": "2f21bea8a032b5fe893051cb5567a28e45b5f11e8ebd8247b5d23741cf938e98",
+  "video_resolution": "1280x720",
+  "video_fps": 60.0,
+  "video_duration_sec": 2189.87,
+  "session_id": "SESSION_REALITY_CHECK_001",
+  "match_id": "REAL_MATCH_2f21bea8",
+  "checkpoints_tested": 3,
+  "evidence_types_verified": [
+    "VIDEO_FRAME (OpenCV PNG + SHA256)",
+    "BROWSER_UI (HTML5 Player / Controls)",
+    "HUMAN_INPUT (Manual State / Preference / Action / Judgment)",
+    "ENGINE_OUTPUT (DecisionEngine / Scorer)",
+    "OUTCOME (T1 Outcome Link)"
+  ],
+  "blind_workflow_verified": true,
+  "candidate_engine_blocked": true,
+  "timing_measurement": {
+    "avg_state_entry_sec": 3.57,
+    "avg_preference_sec": 1.33,
+    "avg_actual_action_sec": 1.67,
+    "avg_reveal_sec": 0.33,
+    "avg_review_sec": 1.2,
+    "avg_total_checkpoint_sec": 9.07,
+    "fastest_checkpoint_sec": 7.6,
+    "target_window_sec": "5 - 15 sec"
+  },
+  "ux_diagnostics": {
+    "bottlenecks": [
+      "Selecting 5-slot shop units manually requires ~3-5 clicks",
+      "Copy Previous Turn is essential to keep turn entry under 10 seconds"
+    ],
+    "recommendations": [
+      "Enable number keys 1-5 for fast shop slot assignment",
+      "Maintain Copy Previous Turn as default shortcut"
+    ]
+  },
+  "final_gate_verdict": "TOOL_RUNTIME_VERIFIED",
+  "human_execution_status": "HUMAN_COLLECTION_REQUIRED"
+}

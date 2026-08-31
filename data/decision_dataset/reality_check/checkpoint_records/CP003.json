@@ -1,0 +1,167 @@
+{
+  "schema_version": "DECISION_DATASET_V1_1",
+  "session_id": "SESSION_REALITY_CHECK_001",
+  "match_id": "REAL_MATCH_2f21bea8",
+  "checkpoint_id": "CP003",
+  "video_timestamp_sec": 195.0,
+  "frame_index": 11700,
+  "quality_flag": "VALID",
+  "raw_state": {
+    "checkpoint_id": "CP003",
+    "stage_round": "2-3",
+    "stage": 2,
+    "round_num": 3,
+    "hp": 94,
+    "gold": 21,
+    "level": 4,
+    "xp": 2,
+    "streak": 0,
+    "board_units": [
+      {
+        "name": "Jax",
+        "cost": 1,
+        "star": 2,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      },
+      {
+        "name": "KogMaw",
+        "cost": 1,
+        "star": 2,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      }
+    ],
+    "bench_units": [
+      {
+        "name": "Vander",
+        "cost": 2,
+        "star": 1,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      },
+      {
+        "name": "Draven",
+        "cost": 2,
+        "star": 1,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      }
+    ],
+    "shop_units": [
+      "Draven",
+      "Vander",
+      "Blitzcrank",
+      "Sett",
+      "Irelia"
+    ],
+    "item_bench": [],
+    "augments": [],
+    "video_timestamp_sec": 195.0,
+    "frame_index": 11700
+  },
+  "frame_evidence": {
+    "checkpoint_id": "CP003",
+    "frame_index": 11700,
+    "timestamp_sec": 195.0,
+    "frame_sha256": "40c41cccef9874ade1e4d178d8535f70e18449e85b689f4dca217d973cd11db5",
+    "screenshot_file": "SESSION_REALITY_CHECK_001_CP003_frame.png",
+    "is_valid": true
+  },
+  "derived_features": {
+    "board_power": 5.66,
+    "pair_count": 0,
+    "immediate_shop_upgrades": 2,
+    "estimated_rounds_to_elim": 47.0,
+    "stage_benchmark_ratio": 1.0,
+    "gold_to_next_level": 14,
+    "spendable_roll_budget": 0,
+    "recent_hp_delta": null
+  },
+  "engine_prediction": {
+    "recommended_action": "SAVE_GOLD",
+    "score": 0.416,
+    "action_scores": {
+      "SAVE_GOLD": 0.416,
+      "ROLL": 0.4074,
+      "LEVEL_UP": 0.2757
+    },
+    "action_score_gap": 0.0086,
+    "confidence": 0.52,
+    "reasons": [
+      "ECONOMIC_COMPOUNDING: 체력 안전권(HP 94): 3턴 후 43G(+22G) 복리 이자 극대화 추천",
+      "COMPARE_VS_ROLL: SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.009 우세",
+      "COMPARE_VS_LEVEL_UP: SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.140 우세"
+    ],
+    "direction_now": "",
+    "direction_watch": [],
+    "direction_then": ""
+  },
+  "actual_action": {
+    "checkpoint_id": "CP003",
+    "actual_player_action": "SAVE_GOLD",
+    "source": "HUMAN_VIDEO_REVIEW",
+    "reviewer_id": "REVIEWER_SMOKE",
+    "label_timestamp_sec": 1788157731.8808284,
+    "source_frame": 11700
+  },
+  "human_review": {
+    "checkpoint_id": "CP003",
+    "human_preferred_action": "SAVE_GOLD",
+    "human_confidence": "HIGH",
+    "blind_review": true,
+    "human_judgment": "GOOD",
+    "rationale_category": "UNKNOWN",
+    "notes": "Reality check smoke test entry",
+    "reviewer_id": "REVIEWER_SMOKE",
+    "review_timestamp_sec": 1788157731.8808253,
+    "source": "HUMAN_INPUT"
+  },
+  "dual_reviews": [],
+  "t1_outcome": {},
+  "interaction_log": {
+    "checkpoint_id": "CP003",
+    "clicks_count": 8,
+    "manual_inputs_count": 4,
+    "time_spent_sec": 7.6,
+    "events": [
+      {
+        "event": "CHECKPOINT_CREATE",
+        "timestamp": 1788157731.7693267,
+        "checkpoint_id": "CP003"
+      },
+      {
+        "event": "STATE_EDIT",
+        "timestamp": 1788157731.88081,
+        "checkpoint_id": "CP003"
+      },
+      {
+        "event": "HUMAN_PREFERENCE",
+        "timestamp": 1788157731.880828,
+        "checkpoint_id": "CP003",
+        "preference": "SAVE_GOLD",
+        "confidence": "HIGH"
+      },
+      {
+        "event": "ACTUAL_ACTION",
+        "timestamp": 1788157731.8808308,
+        "checkpoint_id": "CP003",
+        "action": "SAVE_GOLD"
+      },
+      {
+        "event": "REVEAL",
+        "timestamp": 1788157731.8811014,
+        "checkpoint_id": "CP003"
+      }
+    ],
+    "reviewer_id": "REVIEWER_A"
+  }
+}

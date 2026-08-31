@@ -1,0 +1,156 @@
+{
+  "schema_version": "DECISION_DATASET_V1_1",
+  "session_id": "SESSION_REALITY_CHECK_001",
+  "match_id": "REAL_MATCH_2f21bea8",
+  "checkpoint_id": "CP001",
+  "video_timestamp_sec": 75.0,
+  "frame_index": 4500,
+  "quality_flag": "VALID",
+  "raw_state": {
+    "checkpoint_id": "CP001",
+    "stage_round": "2-1",
+    "stage": 2,
+    "round_num": 1,
+    "hp": 100,
+    "gold": 4,
+    "level": 3,
+    "xp": 2,
+    "streak": 0,
+    "board_units": [
+      {
+        "name": "Jax",
+        "cost": 1,
+        "star": 1,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      },
+      {
+        "name": "Jax",
+        "cost": 1,
+        "star": 1,
+        "items": [],
+        "position_row": null,
+        "position_col": null,
+        "is_bench": false
+      }
+    ],
+    "bench_units": [],
+    "shop_units": [
+      "KogMaw",
+      "Jax",
+      "Powder",
+      "Vander",
+      "Singed"
+    ],
+    "item_bench": [],
+    "augments": [],
+    "video_timestamp_sec": 75.0,
+    "frame_index": 4500
+  },
+  "frame_evidence": {
+    "checkpoint_id": "CP001",
+    "frame_index": 4500,
+    "timestamp_sec": 75.0,
+    "frame_sha256": "161785da5d5c92190298fd0860715f6a221f5b594fc7a609e354dd890cae9be5",
+    "screenshot_file": "SESSION_REALITY_CHECK_001_CP001_frame.png",
+    "is_valid": true
+  },
+  "derived_features": {
+    "board_power": 2.0,
+    "pair_count": 1,
+    "immediate_shop_upgrades": 1,
+    "estimated_rounds_to_elim": 50.0,
+    "stage_benchmark_ratio": 1.0,
+    "gold_to_next_level": 10,
+    "spendable_roll_budget": 0,
+    "recent_hp_delta": null
+  },
+  "engine_prediction": {
+    "recommended_action": "SAVE_GOLD",
+    "score": 0.3757,
+    "action_scores": {
+      "SAVE_GOLD": 0.3757,
+      "LEVEL_UP": 0.3461,
+      "ROLL": 0.268
+    },
+    "action_score_gap": 0.0296,
+    "confidence": 0.56,
+    "reasons": [
+      "ECONOMIC_COMPOUNDING: 체력 안전권(HP 100): 3턴 후 20G(+16G) 복리 이자 극대화 추천",
+      "COMPARE_VS_LEVEL_UP: SAVE_GOLD 선택이 LEVEL_UP 대비 종합 점수 +0.030 우세",
+      "COMPARE_VS_ROLL: SAVE_GOLD 선택이 ROLL 대비 종합 점수 +0.108 우세"
+    ],
+    "direction_now": "",
+    "direction_watch": [],
+    "direction_then": ""
+  },
+  "actual_action": {
+    "checkpoint_id": "CP001",
+    "actual_player_action": "SAVE_GOLD",
+    "source": "HUMAN_VIDEO_REVIEW",
+    "reviewer_id": "REVIEWER_SMOKE",
+    "label_timestamp_sec": 1788157731.599023,
+    "source_frame": 4500
+  },
+  "human_review": {
+    "checkpoint_id": "CP001",
+    "human_preferred_action": "SAVE_GOLD",
+    "human_confidence": "HIGH",
+    "blind_review": true,
+    "human_judgment": "GOOD",
+    "rationale_category": "UNKNOWN",
+    "notes": "Reality check smoke test entry",
+    "reviewer_id": "REVIEWER_SMOKE",
+    "review_timestamp_sec": 1788157731.599017,
+    "source": "HUMAN_INPUT"
+  },
+  "dual_reviews": [],
+  "t1_outcome": {
+    "checkpoint_id": "CP001",
+    "t1_checkpoint_id": "CP002",
+    "t1_stage_round": "2-2",
+    "t1_hp": 98,
+    "t1_gold": 12,
+    "hp_delta": -2,
+    "gold_delta": 8
+  },
+  "interaction_log": {
+    "checkpoint_id": "CP001",
+    "clicks_count": 8,
+    "manual_inputs_count": 4,
+    "time_spent_sec": 11.5,
+    "events": [
+      {
+        "event": "CHECKPOINT_CREATE",
+        "timestamp": 1788157731.4402847,
+        "checkpoint_id": "CP001"
+      },
+      {
+        "event": "STATE_EDIT",
+        "timestamp": 1788157731.5989876,
+        "checkpoint_id": "CP001"
+      },
+      {
+        "event": "HUMAN_PREFERENCE",
+        "timestamp": 1788157731.5990222,
+        "checkpoint_id": "CP001",
+        "preference": "SAVE_GOLD",
+        "confidence": "HIGH"
+      },
+      {
+        "event": "ACTUAL_ACTION",
+        "timestamp": 1788157731.5990267,
+        "checkpoint_id": "CP001",
+        "action": "SAVE_GOLD"
+      },
+      {
+        "event": "REVEAL",
+        "timestamp": 1788157731.5995755,
+        "checkpoint_id": "CP001"
+      }
+    ],
+    "reviewer_id": "REVIEWER_A"
+  }
+}
