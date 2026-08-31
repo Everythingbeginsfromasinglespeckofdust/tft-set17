@@ -1,0 +1,40 @@
+{
+  "checkpoint_id": "CP003",
+  "stage_round": "2-5",
+  "hp": 88,
+  "gold": 28,
+  "level": 4,
+  "xp": 8,
+  "board_units": [
+    {
+      "name": "Akali",
+      "star": 2
+    },
+    {
+      "name": "Camille",
+      "star": 1
+    },
+    {
+      "name": "Leona",
+      "star": 1
+    },
+    {
+      "name": "Kobuko",
+      "star": 1
+    }
+  ],
+  "bench_units": [
+    {
+      "name": "Diana",
+      "star": 1
+    }
+  ],
+  "shop_units": [
+    "Diana",
+    "Zac",
+    "Lux",
+    null,
+    null
+  ],
+  "video_timestamp_sec": 195.0
+}

@@ -1,0 +1,8 @@
+{
+  "checkpoint_id": "CP001",
+  "screenshot_file": "screenshot.png",
+  "creation_time_sec": 0.77,
+  "clicks": 15,
+  "manual_inputs": 6,
+  "engine_version": "Frozen Base Engine"
+}

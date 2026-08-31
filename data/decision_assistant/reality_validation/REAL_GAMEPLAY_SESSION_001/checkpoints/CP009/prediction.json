@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "CP009",
+  "stage_round": "4-2",
+  "recommended_action": "SAVE_GOLD",
+  "score": 0.3291,
+  "action_score_gap": 0.0024,
+  "confidence": 0.5,
+  "direction_now": "Hold current gold (44G) to maximize interest compound (+4G/round)."
+}

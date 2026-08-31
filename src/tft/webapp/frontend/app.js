@@ -558,6 +558,7 @@ function initActionButtons() {
 
 async function analyzeTurn() {
   hideValidationErrors();
+  state.blindRevealed = false;
 
   const payload = {
     stage_round: state.stage,

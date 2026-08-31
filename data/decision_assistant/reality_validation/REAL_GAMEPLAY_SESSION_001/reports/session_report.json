@@ -1,0 +1,33 @@
+{
+  "session_id": "REAL_GAMEPLAY_SESSION_001",
+  "video": {
+    "filename": "562ffca4-3f1b-46be-8791-92fa6305388a-2026-08-30-22-31-00.mp4",
+    "video_path": "C:\\Users\\mrjdh\\AppData\\Roaming\\TFTAcademy\\tft-recordings\\562ffca4-3f1b-46be-8791-92fa6305388a-2026-08-30-22-31-00.mp4",
+    "sha256": "842e129e4d50b0549469d4e12a85b005ee60585ed4f3e549a97d7985b8c402c5",
+    "resolution": "1280x720",
+    "fps": 60.0,
+    "total_frames": 103461,
+    "duration_sec": 1724.35,
+    "final_placement": 2
+  },
+  "total_checkpoints": 20,
+  "blind_reviews_count": 11,
+  "copy_previous_count": 19,
+  "recommendation_transitions_count": 5,
+  "prediction_hash": "e760113a2a9862e0d4fda8ba037e9e0a27d0a4bdbb985aa8173b04b8619daa52",
+  "metrics": {
+    "engine_player_agreement": 0.55,
+    "engine_human_agreement": 0.55,
+    "player_human_agreement": 0.9,
+    "judgment_distribution": {
+      "GOOD": 19,
+      "QUESTIONABLE": 1,
+      "WRONG": 0,
+      "UNKNOWN": 0
+    },
+    "avg_time_per_checkpoint_sec": 0.5,
+    "avg_clicks_per_checkpoint": 6.2,
+    "avg_manual_inputs": 6.0,
+    "avg_analyze_latency_sec": 0.0336
+  }
+}

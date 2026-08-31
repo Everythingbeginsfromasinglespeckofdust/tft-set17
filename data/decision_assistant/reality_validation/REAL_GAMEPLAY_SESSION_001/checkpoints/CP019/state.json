@@ -1,0 +1,51 @@
+{
+  "checkpoint_id": "CP019",
+  "stage_round": "6-2",
+  "hp": 8,
+  "gold": 12,
+  "level": 8,
+  "xp": 36,
+  "board_units": [
+    {
+      "name": "Akali",
+      "star": 3
+    },
+    {
+      "name": "Camille",
+      "star": 2
+    },
+    {
+      "name": "Leona",
+      "star": 2
+    },
+    {
+      "name": "Diana",
+      "star": 3
+    },
+    {
+      "name": "Zac",
+      "star": 2
+    },
+    {
+      "name": "Lux",
+      "star": 2
+    },
+    {
+      "name": "Yunara",
+      "star": 2
+    },
+    {
+      "name": "Karma",
+      "star": 2
+    }
+  ],
+  "bench_units": [],
+  "shop_units": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "video_timestamp_sec": 1360.0
+}
