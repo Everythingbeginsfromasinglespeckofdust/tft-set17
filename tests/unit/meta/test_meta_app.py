@@ -68,9 +68,11 @@ def test_youtube_aggregator_videos(youtube_aggregator):
     assert any("김루트" in c for c in creators)
     assert any("정동글" in c for c in creators)
     assert any("두니주니" in c for c in creators)
-    assert any("승상싱" in c for c in creators)
-    assert any("쌍칼" in c for c in creators)
-    assert any("오박사" in c for c in creators)
+    assert any("빈틈" in c for c in creators)
+    assert any("카나타" in c for c in creators)
+    assert any("아우터" in c for c in creators)
+    # Ensure unverified/entertainment creators are strictly excluded
+    assert not any("승상싱" in c for c in creators)
 
     for v in videos:
         assert len(v.timestamps) > 0

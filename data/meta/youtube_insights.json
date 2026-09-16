@@ -206,14 +206,14 @@
     ]
   },
   {
-    "video_id": "seungsang_18_2_rebound",
-    "title": "연패 타고도 1등하는 법! 18.2 챌린저 큐 3-5 반등 템포업 운영 실전 강의",
-    "channel_name": "승상싱 (Seungsangsing)",
-    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vseungsang=s176-c-k-c0x00ffffff-no-rj",
+    "video_id": "beenteum_18_2_rebound",
+    "title": "[18.2b] 챌린저 1000점 큐 실전 강의: 5연패 후 3-5 템포업 반등과 4코스트 선점 공식",
+    "channel_name": "빈틈 (Beenteum)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vbeenteum=s176-c-k-c0x00ffffff-no-rj",
     "published_at": "2026-09-13",
-    "video_url": "https://www.youtube.com/watch?v=mock_seungsang_18_2",
-    "thumbnail_url": "https://i.ytimg.com/vi/mock_seungsang_18_2/hqdefault.jpg",
-    "view_count": "6.1만회",
+    "video_url": "https://www.youtube.com/watch?v=mock_beenteum_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_beenteum_18_2/hqdefault.jpg",
+    "view_count": "7.8만회",
     "region": "KR",
     "post_patch_verified": true,
     "season_tag": "세트 18",
@@ -221,97 +221,96 @@
       "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
       "악의 여단 르블랑 (Coven LeBlanc)"
     ],
-    "summary": "초반 패가 말려 5연패를 탔을 때 3-5 라운드에서 골드를 털어 7레벨을 찍고 필드를 안정화하는 챌린저의 위기 관리 비법. 피 40 이하에서 1등으로 반등하는 실전 리플레이.",
+    "summary": "ATS 우승자이자 세계대회 국가대표 빈틈이 18.2b 챌린저 1000점 큐에서 보여주는 위기 관리의 정석. 초반 5연패로 피가 40대까지 깎였을 때 3-5 라운드에 과감히 7레벨을 치고 4코 딜러와 2성 앞라인을 선점해 피 30대에서 1등으로 반등합니다.",
     "timestamps": [
       {
         "time": "01:20",
-        "title": "연패 시 골드 모으는 기준과 이자선"
+        "title": "연패 시 50골드 확보와 이자 보존 기준"
       },
       {
         "time": "05:40",
-        "title": "3-5 반등 롤다운 4코스트 선점"
+        "title": "3-5 라운드 7렙 반등 롤다운 및 앞라인 2성 선점"
       },
       {
         "time": "11:00",
-        "title": "피 30대에서 1등으로 올라가는 배치 팁"
+        "title": "피 30대에서 1등 캡 완성하는 5코스트 밸류 전환"
       }
     ],
     "creator_tips": [
-      "연패할 때는 절대 애매하게 한두 마리만 사지 말고 확실하게 이자를 봐서 3-5에 50골드를 만드세요.",
-      "3-5 라운드에 7렙을 찍고 30골드를 남긴 상태에서 2성 앞라인을 최소 2개 확보해야 연패가 끊깁니다."
+      "연패할 때는 절대 애매하게 페어를 사지 말고 확실하게 이자를 봐서 3-5에 50골드를 반드시 확보해야 합니다.",
+      "3-5 라운드에 7렙을 찍고 30골드를 남긴 상태에서 4코 메인 캐리 1장과 2성 앞라인 2개를 구축하면 피 손실이 즉시 멈춥니다."
     ]
   },
   {
-    "video_id": "ssangkal_18_2_reroll",
-    "title": "사냥꾼 너프되고 빈집 털이로 꿀빠는 '협곡야수 조약돌' 1코 3성 리롤 공략",
-    "channel_name": "쌍칼 (Ssangkal)",
-    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vssangkal=s176-c-k-c0x00ffffff-no-rj",
+    "video_id": "kanata_18_2_reroll",
+    "title": "대회 챌린저의 18.2b 메타 저격: '햇빛 아칼리 카밀' 2코 3성 리롤 템포 압박 공략",
+    "channel_name": "카나타 (Kanata)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vkanata=s176-c-k-c0x00ffffff-no-rj",
     "published_at": "2026-09-14",
-    "video_url": "https://www.youtube.com/watch?v=mock_ssangkal_18_2",
-    "thumbnail_url": "https://i.ytimg.com/vi/mock_ssangkal_18_2/hqdefault.jpg",
-    "view_count": "4.8만회",
+    "video_url": "https://www.youtube.com/watch?v=mock_kanata_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_kanata_18_2/hqdefault.jpg",
+    "view_count": "5.9만회",
     "region": "KR",
     "post_patch_verified": true,
     "season_tag": "세트 18",
     "key_comps_recommended": [
-      "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)",
-      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
+      "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)"
     ],
-    "summary": "모두가 9레벨 고밸류 덱이나 2코 리롤을 볼 때 4-1 라운드 전에 1코 3성을 찍어 로비 전체를 두들겨 패는 1코 리롤 덱. 템포가 빠른 한국 챌린저 큐에서 순방률 75%를 기록하는 날빌 운영.",
+    "summary": "TFT 프로 챌린저 카나타가 18.2 패치 이후 유행하는 탐욕스러운 패스트 9 빌드를 3~4스테이지에서 가차없이 무너뜨리는 2코 3성 리롤 템포 공략을 제시합니다. 빠른 3성 완성 후 8레벨 진입으로 1등까지 노리는 고효율 운영.",
     "timestamps": [
       {
         "time": "00:00",
-        "title": "왜 지금 1코 리롤인가?"
+        "title": "왜 대회권 챌린저가 2코 리롤을 기용하는가"
       },
       {
-        "time": "03:20",
-        "title": "3-1 4레벨 올인 롤다운 타이밍"
+        "time": "03:40",
+        "title": "3-2 6레벨 롤다운 및 아칼리/카밀 2성 타이밍"
       },
       {
-        "time": "07:50",
-        "title": "조약돌 3성 완성 후 레벨업 템포"
+        "time": "08:15",
+        "title": "4-1 라운드 전 3성 완성 후 8렙 템포 푸시"
       }
     ],
     "creator_tips": [
-      "3-1 라운드에 4레벨 8경험치 상태에서 30골드 남길 때까지 돌려 1코 기물 5마리 이상을 모으세요.",
-      "1코 3성이 완성되면 50원 이자를 보지 말고 6렙/7렙을 빠르게 쳐서 상대 피를 깎아야 합니다."
+      "2코 리롤 덱은 3-2 라운드에 6레벨 30골드까지 리롤해 최소 2성을 맞추고 3스테이지 전승을 강제해야 합니다.",
+      "카밀과 아칼리는 같은 열에 붙이지 말고, 카밀은 2열 외곽, 아칼리는 상대 딜러 대각선에 두어 스킬 타겟팅을 분산시키세요."
     ]
   },
   {
-    "video_id": "droh_18_2b_stats",
-    "title": "[18.2b 통계 분석] 승률 1위 덱은 따로 있다? 마스터+ 10만 판 빅데이터 분석",
-    "channel_name": "오박사 (Dr. Oh)",
-    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vdroh=s176-c-k-c0x00ffffff-no-rj",
+    "video_id": "outer_18_2_legendary",
+    "title": "[18.2b] 세계대회 준우승자의 고밸류 완성법: 68원 완화 활용 Fast 9 레전더리 캡",
+    "channel_name": "아우터 (Outer)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vouter=s176-c-k-c0x00ffffff-no-rj",
     "published_at": "2026-09-15",
-    "video_url": "https://www.youtube.com/watch?v=mock_droh_18_2b",
-    "thumbnail_url": "https://i.ytimg.com/vi/mock_droh_18_2b/hqdefault.jpg",
-    "view_count": "5.5만회",
+    "video_url": "https://www.youtube.com/watch?v=mock_outer_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_outer_18_2/hqdefault.jpg",
+    "view_count": "8.4만회",
     "region": "KR",
     "post_patch_verified": true,
     "season_tag": "세트 18",
     "key_comps_recommended": [
-      "나무정령 드레이븐 밸류 (Elderwood Draven)",
       "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
-      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+      "나무정령 드레이븐 밸류 (Elderwood Draven)"
     ],
-    "summary": "롤체지지와 메타TFT 마스터 이상 티어 10만 판 전적 데이터를 기반으로 한 통계 리포트. 순방률 1위는 나무정령 드레이븐(65.8%), 1등 확률 1위는 장로드래곤 드레이븐(28.4%)으로 나타났습니다.",
+    "summary": "TFT 세계대회 준우승자이자 한국 1위 챌린저 아우터가 18.2 패치의 8->9레벨 68 XP 완화 시스템을 가장 정밀하게 활용하는 고밸류 패스트 9 운영 공식을 심층 분석합니다. 4스테이지 60+ 피관리와 5-2 9레벨 올인 밸류 보드 완성.",
     "timestamps": [
       {
         "time": "00:40",
-        "title": "18.2b 패치 전후 승률 변동 그래프"
+        "title": "18.2 68 XP 완화가 바꾼 9레벨 도달 라운드 기준"
       },
       {
-        "time": "04:15",
-        "title": "평균 순위 TOP 3 조합 비교"
+        "time": "04:30",
+        "title": "Stage 4 체력 60+ 유지하며 50원 킵하는 빌드업"
       },
       {
-        "time": "08:50",
-        "title": "아이템 승률 통계 (구인수 vs 피바라기)"
+        "time": "09:10",
+        "title": "5-2 9레벨 달성 후 1턴 6기물 올전환 테크닉"
       }
     ],
     "creator_tips": [
-      "통계적으로 4-5 라운드에 체력 60 이상인 유저는 87% 확률로 순방(Top 4)에 진입합니다.",
-      "드레이븐에게 구인수가 들어갔을 때의 승률이 무한의 대검보다 4.2% 높게 집계됩니다."
+      "18.2 패치 이후 9레벨 비용이 68골드로 줄어들었으므로, 4-5 라운드에 50원이 유지된다면 무리하게 8렙 리롤을 치지 말고 5-2에 9렙을 직행해야 합니다.",
+      "9레벨 롤다운 시 5코스트 2성(드레이븐/세트 등)이 하나라도 완성되면 기존 4코 시너지를 과감하게 버리고 5코 밸류 위주로 재배치하세요."
     ]
   },
   {
