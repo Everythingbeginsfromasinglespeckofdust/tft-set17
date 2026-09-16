@@ -1,7 +1,7 @@
 # TFT Decision Engine Calibration Study v1 Report
 
 **Final Gate Verdict**: **CALIBRATION_CANDIDATES_READY**
-**Execution Date**: `2026-08-27 04:50:10 UTC`
+**Execution Date**: `2026-08-31 06:30:17 UTC`
 **Production DecisionEngine Impact**: **`0 changes` (Zero modification to DecisionEngine, Evaluators, or Weights)**
 
 ---

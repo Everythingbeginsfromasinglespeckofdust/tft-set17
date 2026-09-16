@@ -612,7 +612,8 @@ def export_dataset_files() -> Dict[str, Any]:
 
 # ==============================================================================
 # 6. Static Web UI & Image Assets Mount
-# ==============================================================================
+from tft.meta.server_routes import meta_router
+app.include_router(meta_router)
 
 if os.path.exists(_DDRAGON_CHAMPS_DIR):
     app.mount("/img/champion", StaticFiles(directory=_DDRAGON_CHAMPS_DIR), name="champion_images")
@@ -622,6 +623,17 @@ if os.path.exists(_FRONTEND_DIR):
 
     @app.get("/")
     def serve_frontend_index():
+        meta_path = os.path.join(_FRONTEND_DIR, "meta.html")
+        if os.path.exists(meta_path):
+            return FileResponse(meta_path)
+        return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))
+
+    @app.get("/meta")
+    def serve_meta_dashboard():
+        return FileResponse(os.path.join(_FRONTEND_DIR, "meta.html"))
+
+    @app.get("/assistant")
+    def serve_assistant_index():
         return FileResponse(os.path.join(_FRONTEND_DIR, "index.html"))
 
     @app.get("/collection")

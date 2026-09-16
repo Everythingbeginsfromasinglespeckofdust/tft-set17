@@ -1,153 +1,153 @@
 {
   "set_id": 18,
-  "patch": "18.1",
-  "retrieved_at": "2026-08-27T04:21:24Z",
+  "patch": "18.2",
+  "retrieved_at": "2026-09-16T04:31:44Z",
   "sources": [
     {
       "name": "TFT_DDragon",
       "type": "OFFICIAL_RIOT_DDRAGON_MIRROR",
       "repository": "https://github.com/noxelisdev/TFT_DDragon",
-      "revision": "v18.1",
-      "commit_sha": "b6398b1ff6cb5f36a724ded61638b74067b45301",
+      "revision": "v18.2",
+      "commit_sha": "a86f9dc433a6b2b8e30267d16c752a6143e96011",
       "files": [
         {
           "relative_path": "data/en_US/champion.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_champion.json",
           "size_bytes": 81557,
-          "sha256": "e81c7bae83bdc4460eb6ae56112b18090cbbf24a2d2dfc746393f06295b6c760",
+          "sha256": "b462e2a68b911b1bc919b7e96a34cd6fc05a4a00d49757c613c580f24abeca64",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/trait.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_trait.json",
           "size_bytes": 71552,
-          "sha256": "3d87b8ba062963a1604c473ac4663e16cd5313db7ba3ebda4d80b75087aada33",
+          "sha256": "efcd568d2f549287f7ae2450ec6244c25b8b4be7115c3b2d1454ae3e8e88c49f",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/item.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_item.json",
-          "size_bytes": 299177,
-          "sha256": "703523f10b3afb5a2f24538b68eabe2bb264288a4f63e4e75ce63a25c0082109",
+          "size_bytes": 298719,
+          "sha256": "bf0722bae14169f6154b82ee5410c959f3062b2c7f271ff80049e1ed21bee2da",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/augments.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_augments.json",
-          "size_bytes": 247211,
-          "sha256": "8f7c93efb55a8777cf2c7fe6d9a8fef4f29982312ea75884e1b729eae874b1be",
+          "size_bytes": 245881,
+          "sha256": "2fa6579bbd2894cc13d98ff74123a2fb9328d70903adf5195d3e56ae6a05b64c",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/shop-drop-rates-data.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_shop-drop-rates-data.json",
           "size_bytes": 1557,
-          "sha256": "d6a7b4aab7981018a80ccd644e345418c2ce30c7d4171abbd4964e4563129b05",
+          "sha256": "63cff05f9463c24f4762f6c5d23d85e37dda0777b2d5a74e10f98bb9b9e01733",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/stage-round-data.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_stage-round-data.json",
           "size_bytes": 12582,
-          "sha256": "267c48493b5d66552ea7d6fb458e1e06b1b5e4d69b20524a7258ce15b39f0f94",
+          "sha256": "a897ec1da1e5b4cd0e219ed35f486323c6f7d22208fdd61df9a4a31e53d92e1b",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/six-cost-drop-rates-data.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_six-cost-drop-rates-data.json",
           "size_bytes": 64,
-          "sha256": "ca826fd3e8dd20209f473dd982ca74299a0c400ae7e07f99cc0184179e906cc0",
+          "sha256": "65e3ea6a079a471b348ba1717ae24b8f51550a8a0b616eabdb26978aa90a24c8",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/anomalies.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_anomalies.json",
           "size_bytes": 52,
-          "sha256": "5fe47a6c100908150a1e137e313e7fcd9f9e5eb29951435d5fd5af251f00f2b3",
+          "sha256": "7b3cd09c13c8d6b2345487c692705e14d34d62ba878343115224b1afcad30ca7",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/charms.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_charms.json",
-          "size_bytes": 113873,
-          "sha256": "3e85d672faa0b67f444402215f8231dd7de30bfdbc7c51daf58ed501f3cce02f",
+          "size_bytes": 113890,
+          "sha256": "e47ea6f4cbf71092a9bc45a050a06a9ea17f9ec9d148412edde94c065a096d98",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/hero-augments.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_hero-augments.json",
           "size_bytes": 57,
-          "sha256": "4fb1ef6255fbcc78a5c21790a6599c299556a01319df8841b0ec346fe1fce548",
+          "sha256": "6b87c80148de9e75f5bea846d8b70adff4532540ca56911847230830dd8d84ac",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/queues.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_queues.json",
           "size_bytes": 2469,
-          "sha256": "da886206f22d0937319b423e14b6518eb14924f77636a8d22e9709ee140a3342",
+          "sha256": "dfcc1d1448b33c3eb18c8bb60881e66336f5da149aab129b4febc4afd9943f70",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/regalia.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_regalia.json",
           "size_bytes": 3758,
-          "sha256": "7d8d2d07757868ec382644f0a29de5fcfc4297b020bdd69ec952c6eb2000b3d5",
+          "sha256": "ae862c1cbda129d08f47e5a11052acccf515de487e7e0f1d70499f93d46a7bc0",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/region-portals.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_region-portals.json",
           "size_bytes": 15082,
-          "sha256": "0f9c93d9956aff61c11edc01835ef366ab59b5dd6b5786cf5c6021e1e92ec3f9",
+          "sha256": "25e4646203702f7a680dbe0ae9ed80bca2cde146c04112122f75746e382d4ef2",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/tactician.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_tactician.json",
-          "size_bytes": 414424,
-          "sha256": "e6427933f09bbbd9ea79c2d9214490863b7626b119200234487e65ee82f88684",
+          "size_bytes": 415177,
+          "sha256": "2f4d15b77fe2c37e51684d87a514ae049c4456dda23c6b35ef0c624a001a9fce",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/en_US/unlockable.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_en_US_unlockable.json",
           "size_bytes": 38317,
-          "sha256": "9e09b7933e7625ece02d571e4d9376755b88c47a13520ccf4150cb56100744af",
+          "sha256": "b3190935c505aa68029ab8452f8e557845a3ceaa14d7b3b56ffde03053c26fab",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/ko_KR/champion.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_ko_KR_champion.json",
           "size_bytes": 82636,
-          "sha256": "dd9e8bb52d9e7c2290d461ffaffc42fd2a72fb482578af930ae8df3ae3fdbce3",
+          "sha256": "0da09bba1da409b38d09a7582866d3eb63dc6aa4a8e970438715dfc54abe2f51",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/ko_KR/trait.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_ko_KR_trait.json",
           "size_bytes": 72309,
-          "sha256": "6bedfe7c6f4775c7717b7b576dca948843b39608d0a9f20e73ef7ff0ee1a7d25",
+          "sha256": "383327b21e4809fc1116fbad4d286c9ffb26ab8382400187ae9db81ace24eb84",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/ko_KR/item.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_ko_KR_item.json",
-          "size_bytes": 303697,
-          "sha256": "d6ded6eab4faeedcc2ff8e0b1b16d8bff0dd4ed19e51c6cb35528c29c4314885",
+          "size_bytes": 303235,
+          "sha256": "4c3065fddb51653f9ce05e49862464b7764a3388b309beabf55e0e88e546772b",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/ko_KR/augments.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_ko_KR_augments.json",
-          "size_bytes": 279423,
-          "sha256": "a9975f67fe98ffc889c05121971415ba17878d497ccc16a43bd034f72147adf3",
+          "size_bytes": 277919,
+          "sha256": "31368e50329805121e3ddc34fc6a5587cfd2b1d187f4a368f94ee663525ccb54",
           "status": "AVAILABLE"
         },
         {
           "relative_path": "data/ko_KR/shop-drop-rates-data.json",
           "local_raw_path": "data/sets/set18/raw/tft_ddragon/data_ko_KR_shop-drop-rates-data.json",
           "size_bytes": 1557,
-          "sha256": "d6a7b4aab7981018a80ccd644e345418c2ce30c7d4171abbd4964e4563129b05",
+          "sha256": "63cff05f9463c24f4762f6c5d23d85e37dda0777b2d5a74e10f98bb9b9e01733",
           "status": "AVAILABLE"
         }
       ]
@@ -161,16 +161,16 @@
           "filename": "en_us.json",
           "url": "https://raw.communitydragon.org/latest/cdragon/tft/en_us.json",
           "local_raw_path": "data/sets/set18/raw/communitydragon/en_us.json",
-          "size_bytes": 23599042,
-          "sha256": "7331be101d2399145c31336b688b95dd7715d51f94851401d5b5b2d8ed2466ec",
+          "size_bytes": 24177447,
+          "sha256": "8d936558344a5164ee8efc4a693b803cefa1dc08c59815426b153f8a16d5ddb5",
           "status": "AVAILABLE"
         },
         {
           "filename": "ko_kr.json",
           "url": "https://raw.communitydragon.org/latest/cdragon/tft/ko_kr.json",
           "local_raw_path": "data/sets/set18/raw/communitydragon/ko_kr.json",
-          "size_bytes": 24039676,
-          "sha256": "a34e6e8d7aeac96e4ea8837605a0210cc5939e405930d579bc0fa56d0c722425",
+          "size_bytes": 24634529,
+          "sha256": "4627a0e4ded9f884c351e74d929d5da5b5aa403296b4d75dea488973a3c2ebdb",
           "status": "AVAILABLE"
         }
       ]
@@ -189,13 +189,13 @@
     },
     "items.json": {
       "path": "data/sets/set18/normalized/items.json",
-      "sha256": "be9e654cb8648d6d7e9a110b3b92424f67b474c747ddf47fd14db6056aeb5ca6",
-      "record_count": 1189
+      "sha256": "5c443a01b9925120bc7fb727d2108ea454c1b5c7cf915ac7df245708b74f05fa",
+      "record_count": 1187
     },
     "augments.json": {
       "path": "data/sets/set18/normalized/augments.json",
-      "sha256": "5909e368599f518f7630669ad4ee7b73c0b6a4f9f01162bc5b549da94f85532b",
-      "record_count": 762
+      "sha256": "3eeb803bab258883790340a7ee98fa9140551f16eef908e1772daa81604b3d0a",
+      "record_count": 758
     },
     "shop_odds.json": {
       "path": "data/sets/set18/normalized/shop_odds.json",
@@ -204,7 +204,7 @@
     },
     "stage_rounds.json": {
       "path": "data/sets/set18/normalized/stage_rounds.json",
-      "sha256": "c971d445fbb272ace5d5c2e1d5170226a82104fb777d3307fa8c833598d76b7a",
+      "sha256": "870928612308d68837672581f3cc601ee05be61d806f3fb61301b7dfccad1d7b",
       "record_count": 3
     }
   },

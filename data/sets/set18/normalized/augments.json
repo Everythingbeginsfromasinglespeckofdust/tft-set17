@@ -4216,7 +4216,7 @@
     "name": "Shieldmaiden",
     "tier": 1,
     "description": "Gain a Leona. Your strongest Leona becomes an Attack Fighter that dashes through enemies to deal physical damage, stunning the first target hit.",
-    "image": "LeonaHero_I.TFT_Set17_PostLaunchAugments.png",
+    "image": "LeonaHero_I.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4228,7 +4228,7 @@
     "name": "Divine Amendment",
     "tier": 1,
     "description": "Arbiters add a second effect to their law.<br>Gain a Leona and a Zoe.",
-    "image": "DivineAmendment_II.TFT_Set17_PostLaunchAugments.png",
+    "image": "DivineAmendment_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4252,7 +4252,7 @@
     "name": "Heart of the Swarm",
     "tier": 1,
     "description": "All 3-star champions now count towards Swarmling power. At level 9, while fielding 6 unique 3-star champions, Primordians summon the Apex Primordian. Gain 3 Primordian Champions and 2 Tiny Duplicators.<br><br>Unique 3-Star Champions Fielded: <placeholder> / 6<br><br>Levels: <placeholder> / 9",
-    "image": "HeartoftheSwarm_III.TFT_Set17_PostLaunchAugments.png",
+    "image": "HeartoftheSwarm_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4276,7 +4276,7 @@
     "name": "Loot Singularity",
     "tier": 1,
     "description": "When the Black Hole consumes enemies, it turns them into space matter. After acquiring enough, the Black Hole turns it into loot! Gain a Cho'gath and a Lissandra.<br><br><ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive><rules>Space matter and loot quality increase each time. Gain 2/3/4 space matter depending on Dark Star breakpoint.</rules><br><br>Space Matter: <placeholder> / <placeholder></ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive>",
-    "image": "WhiteHole_II.TFT_17_3.png",
+    "image": "WhiteHole_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4288,7 +4288,7 @@
     "name": "Concentration",
     "tier": 1,
     "description": "Conduit Abilities last 25% to 50% longer, depending on the Ability. Gain a Zoe and a Mordekaiser.",
-    "image": "Concentration_II.TFT_17_3.png",
+    "image": "Concentration_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4300,7 +4300,7 @@
     "name": "Tour of the Galaxy",
     "tier": 1,
     "description": "Voyagers gain 130 Health, 13% Attack Damage, and 13% Ability Power, increased by 10% each time you fight a new player. You prefer to fight players you haven't fought recently. Gain a Pyke and a Meepsie.",
-    "image": "TourOfTheGalaxy_II.TFT_Set17_PostLaunchAugments.png",
+    "image": "TourOfTheGalaxy_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -4312,7 +4312,7 @@
     "name": "Timestream",
     "tier": 1,
     "description": "Your team gains 100 Health. Timebreakers gain 7 Health and 0.3% Attack Speed every time you reroll (including free rerolls). Gain an Ezreal and a Pantheon.<br><br>(Health: <placeholder>, Attack Speed: <placeholder>%)",
-    "image": "Timestream_II.TFT_Set17_PostLaunchAugments.png",
+    "image": "Timestream_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
@@ -6207,7 +6207,7 @@
     "id": "DA_BandOfThievesII",
     "name": "Band of Thieves II",
     "tier": 1,
-    "description": "Gain 2 Thief's Gloves. After 6 player combats, gain another.",
+    "description": "Gain 2 Thief's Gloves. After 5 player combats, gain another.",
     "image": "BandThieves3.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6243,7 +6243,7 @@
     "id": "DA_BaronsLair",
     "name": "Baron's Lair",
     "tier": 1,
-    "description": "Gain a random Tank item. After 8 seconds of combat, your team gains 5% bonus Attack Damage and Ability Power every second for the rest of combat.<br><br><rules>TFT Paris Open, 2025</rules>",
+    "description": "Gain a random Tank item. After 8 seconds of combat, your team gains 4% bonus Attack Damage and Ability Power every second for the rest of combat.<br><br><rules>TFT Paris Open, 2025</rules>",
     "image": "TheBaronsLair_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6303,7 +6303,7 @@
     "id": "DA_BlackthornTraitAugment",
     "name": "Item Extraction",
     "tier": 1,
-    "description": "The first 3 times you sacrifice a champion in the Blackthorn hex, gain a copy of a random component they're holding. Gain a Veigar and a Rek'Sai.",
+    "description": "The first 4 times you sacrifice a champion in the Blackthorn hex, gain a copy of a random component they're holding. Gain a Veigar and a Rek'Sai.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6339,7 +6339,7 @@
     "id": "DA_BonusGift",
     "name": "Bonus Gift",
     "tier": 1,
-    "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 2 gray loot orbs.",
+    "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 1 gray loot orbs.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6351,7 +6351,7 @@
     "id": "DA_BonusGiftPlus",
     "name": "Bonus Gift+",
     "tier": 1,
-    "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 3 gray loot orbs.",
+    "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 2 gray loot orbs.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6459,24 +6459,12 @@
     "id": "DA_BuriedTreasuresIII",
     "name": "Buried Treasures III",
     "tier": 1,
-    "description": "Gain a random item component now and at the start of the next 5 rounds.",
+    "description": "Gain a random item component now and at the start of the next 6 rounds.",
     "image": "Buried-Treasures-III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
       "raw_id": "DA_BuriedTreasuresIII"
-    }
-  },
-  {
-    "id": "DA_CalculatedLoss",
-    "name": "Calculated Loss",
-    "tier": 1,
-    "description": "After losing your combat, gain 2 gold and a free Shop reroll.",
-    "image": "CalculatedLoss2.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_CalculatedLoss"
     }
   },
   {
@@ -6519,7 +6507,7 @@
     "id": "DA_CapitalGainsII",
     "name": "Capital Gains II",
     "tier": 1,
-    "description": "Store gold equal to the interest you earn. On 3-3, gain gold equal to 125% of the stored gold. Gain 1 gold now.",
+    "description": "Store gold equal to the interest you earn. On 3-3, gain gold equal to 125% of the stored gold. Gain 3 gold now.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6711,7 +6699,7 @@
     "id": "DA_ComebackStory",
     "name": "Comeback Story",
     "tier": 1,
-    "description": "Your team gains 4 Health and 0.4% Attack Speed per missing player Health.",
+    "description": "Your team gains 4 Health and 0.3% Attack Speed per missing player Health.",
     "image": "ComebackStory_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6831,7 +6819,7 @@
     "id": "DA_CursedCrown",
     "name": "Cursed Crown",
     "tier": 1,
-    "description": "Gain +2 max team size and your team gains 4% Durability, but you take double player damage when you lose a player combat.",
+    "description": "Gain +2 max team size, but you take double player damage when you lose a player combat.",
     "image": "CursedCrown-III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -6852,22 +6840,10 @@
     }
   },
   {
-    "id": "DA_DoubleTrouble",
-    "name": "Double Trouble",
-    "tier": 1,
-    "description": "When you field exactly 2 copies of a champion, they both gain 25% Attack Damage and Ability Power and 25 Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
-    "image": "Double-Trouble-II.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_DoubleTrouble"
-    }
-  },
-  {
     "id": "DA_Dummify",
     "name": "Dummify",
     "tier": 1,
-    "description": "Lose all champions on your board and bench. Gain a Training Dummy with 60% of their combined health. The dummy gains 1000 Health per stage. Gain a random non-tank 2-star 2 cost champion.",
+    "description": "Lose all champions on your board and bench. Gain a Training Dummy with 60% of their combined health. The dummy gains 1150 Health per stage. Gain a random non-tank 2-star 2 cost champion.",
     "image": "Dummify_I.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7083,24 +7059,12 @@
     "id": "DA_18_FloraFatalisAugment",
     "name": "Consuming Flora",
     "tier": 1,
-    "description": "Gain a Flora Fatalis emblem. The champion holding the emblem gains double benefits from the Flora Fatalis trait. Gain 3 gold.",
+    "description": "Gain a Flora Fatalis emblem. The champion holding the emblem gains 50% increased benefits from Flora Fatalis. Gain 3 gold.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
       "raw_id": "DA_18_FloraFatalisAugment"
-    }
-  },
-  {
-    "id": "DA_18_FloraFatalisAugmentPlus",
-    "name": "Consuming Flora",
-    "tier": 1,
-    "description": "Gain a Flora Fatalis emblem. The champion holding the emblem gains double benefits from the Flora Fatalis trait. Gain 3 gold.",
-    "image": "Missing-T2.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_18_FloraFatalisAugmentPlus"
     }
   },
   {
@@ -7131,7 +7095,7 @@
     "id": "DA_ForgedInStrength",
     "name": "Forged In Strength",
     "tier": 1,
-    "description": "Gain 1 random Artifact. When you drop below 35 Health, gain 1 more random Artifact, 1 random completed item, and 2 random component.<br><br><rules>Remix Rumble Championship, 2023</rules>",
+    "description": "Gain 1 random Artifact. When you drop below 35 Health, gain 1 more random Artifact, 1 random completed item, and 2 random components.<br><br><rules>Remix Rumble Championship, 2023</rules>",
     "image": "ForgedInStrength_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7143,7 +7107,7 @@
     "id": "DA_18_FOURcing",
     "name": "FOURcing",
     "tier": 1,
-    "description": "Gain a random 4-cost champion. For each item equipped to that champion, your team gains 120 health.",
+    "description": "Gain a random 4-cost champion. For each item equipped to that champion, your team gains 100 health.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7239,7 +7203,7 @@
     "id": "DA_GoingLong",
     "name": "Going Long",
     "tier": 1,
-    "description": "You no longer gain interest. Gain 10 gold now. Round start: gain 4 XP.<br><br><rules>Interest is extra gold you gain per </rules>10<rules>g saved.</rules>",
+    "description": "You no longer gain interest. Gain 10 gold now. Gain 4 XP after every player combat.<br><br><rules>Interest is extra gold you gain per </rules>10<rules>g saved.</rules>",
     "image": "Going-Long-III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7443,7 +7407,7 @@
     "id": "DA_HoldTheLine",
     "name": "Hold the Line",
     "tier": 1,
-    "description": "Champions in your back 2 rows gain 9% Ability Power and 8% Attack Damage for each champion that starts combat in your front row.",
+    "description": "Champions in your back 2 rows gain 10% Ability Power and 9% Attack Damage for each champion that starts combat in your front row.",
     "image": "HoldTheLine_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7461,18 +7425,6 @@
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
       "raw_id": "DA_Hustler"
-    }
-  },
-  {
-    "id": "DA_18_InfernoTraitAugment",
-    "name": "Flame On",
-    "tier": 1,
-    "description": "The Inferno champion that dealt the most damage last combat is On Fire, gaining 55% Attack Speed. Gain a Varus and an Akali.",
-    "image": "Missing-T1.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_18_InfernoTraitAugment"
     }
   },
   {
@@ -7515,7 +7467,7 @@
     "id": "DA_InvestmentStrategy",
     "name": "Investment Strategy II",
     "tier": 1,
-    "description": "Your champions gain 8 permanent max health per interest you earn. Your max interest is increased by 2. Gain 8 gold now.",
+    "description": "Your champions gain 10 permanent max health per interest you earn. Your max interest is increased by 2. Gain 8 gold now.",
     "image": "InvestmentStrategy_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7671,7 +7623,7 @@
     "id": "DA_LivingForge",
     "name": "Living Forge",
     "tier": 1,
-    "description": "Gain an Artifact Anvil now and after every 9 player combats.",
+    "description": "Gain an Artifact Anvil now and after every 10 player combats.",
     "image": "Living-Forge-III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7803,7 +7755,7 @@
     "id": "DA_MoneyHungryPlus",
     "name": "Money Hungry+",
     "tier": 1,
-    "description": "Gain 10 gold now, then 7 gold at the start of every stage. Picking up gold makes your Tactician larger.",
+    "description": "Gain 13 gold now, then 7 gold at the start of every stage. Picking up gold makes your Tactician larger.",
     "image": "MoneyHungry2_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7827,7 +7779,7 @@
     "id": "DA_NestingAnvils",
     "name": "Nesting Anvils",
     "tier": 1,
-    "description": "Gain an Artifact Anvil. After you open it, gain a Component Anvil. After you open that, gain 8 gold.",
+    "description": "Gain an Artifact Anvil. After you open it, gain a Component Anvil. After you open that, gain 4 gold.",
     "image": "Missing-T3.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -7839,7 +7791,7 @@
     "id": "DA_NestingAnvilsPlus",
     "name": "Nesting Anvils+",
     "tier": 1,
-    "description": "Gain an Artifact Anvil. After you open it, gain a Component Anvil. After you open that, gain 12 gold.",
+    "description": "Gain an Artifact Anvil. After you open it, gain a Component Anvil. After you open that, gain 8 gold.",
     "image": "Missing-T3.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -8199,7 +8151,7 @@
     "id": "DA_ShimmerscaleEssence",
     "name": "Shimmerscale Essence",
     "tier": 1,
-    "description": "Gain a Mogul's Mail. After 7  player combats, gain a Gamblers Blade.",
+    "description": "Gain a Mogul's Mail. After 8  player combats, gain a Gamblers Blade.",
     "image": "ShimmerscaleEssence_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -8355,7 +8307,7 @@
     "id": "DA_SpreadingRoots",
     "name": "Spreading Roots",
     "tier": 1,
-    "description": "Gain 2 random Emblems and 1 gold.",
+    "description": "Gain a random Emblems. After 3 combats, gain another.",
     "image": "SpreadingRoots_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -8367,7 +8319,7 @@
     "id": "DA_SpreadingRootsPlus",
     "name": "Spreading Roots+",
     "tier": 1,
-    "description": "Gain 2 random Emblems, a Reforger, and 2 gold.",
+    "description": "Gain 2 random Emblems and 2 gold.",
     "image": "SpreadingRoots_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -8463,7 +8415,7 @@
     "id": "DA_TheGoldenDragon",
     "name": "The Golden Dragon",
     "tier": 1,
-    "description": "Gain a Mogul's Mail. Champions holding Mogul's Mail take up +1 team slot but gain 700 Health and 20% Durability.<br><br><rules>Mogul's Mail gives gold as well as combat power.</rules><br><rules>Dragonlands Championship, 2022</rules>",
+    "description": "Gain a Mogul's Mail. Champions holding Mogul's Mail take up +1 team slot but gain 600 Health and 15% Durability.<br><br><rules>Mogul's Mail gives gold as well as combat power.</rules><br><rules>Dragonlands Championship, 2022</rules>",
     "image": "TheGoldenDragon_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -8847,7 +8799,7 @@
     "id": "DA_18_SolarTraitAugment",
     "name": "Chosen of the Sun",
     "tier": 1,
-    "description": "Gain a Leona, a Kayle, and a Sejuani. Leona gains 60 permanent max Health each round, increased by 10 for each unique 3-star champion fielded.",
+    "description": "Gain a Leona, a Kayle, and a Sejuani. Leona gains 70 permanent max Health each round, increased by 10 for each unique 3-star champion fielded.",
     "image": "Missing-T2.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -9003,7 +8955,7 @@
     "id": "DA_GoldDestinyPlus",
     "name": "Gold Destiny+",
     "tier": 1,
-    "description": "Gain a random Gold Augment and 6 gold.",
+    "description": "Gain a random Gold Augment and 5 gold.",
     "image": "GoldenDestiny_II.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -9051,7 +9003,7 @@
     "id": "DA_PrismaticDestinyPlus",
     "name": "Prismatic Destiny+",
     "tier": 1,
-    "description": "Gain a random Prismatic Augment and 10 gold.",
+    "description": "Gain a random Prismatic Augment and 7 gold.",
     "image": "PrismaticDestiny_III.png",
     "_lineage": {
       "source": "TFT_DDragon:data/en_US/augments.json",
@@ -9108,30 +9060,6 @@
     }
   },
   {
-    "id": "DA_ConstructACompanion",
-    "name": "Construct a Companion",
-    "tier": 1,
-    "description": "The next 1-cost champion you buy is 3-star. Gain 2 gold.",
-    "image": "ConstructaCompanion_III.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_ConstructACompanion"
-    }
-  },
-  {
-    "id": "DA_ForgeAFriend",
-    "name": "Forge A Friend",
-    "tier": 1,
-    "description": "The next 1-cost champion you buy is 3-star. Gain 5 gold.",
-    "image": "ConstructaCompanion_III.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/augments.json",
-      "revision": "v18.1",
-      "raw_id": "DA_ForgeAFriend"
-    }
-  },
-  {
     "id": "DA_BuildABud",
     "name": "Build A Bud",
     "tier": 1,
@@ -9141,6 +9069,30 @@
       "source": "TFT_DDragon:data/en_US/augments.json",
       "revision": "v18.1",
       "raw_id": "DA_BuildABud"
+    }
+  },
+  {
+    "id": "DA_KnowYourEnemy",
+    "name": "Know Your Enemy",
+    "tier": 1,
+    "description": "You can see who you will fight next. Your team gains 8% Damage Amp, increased to 15% if you and your opponent have any of the same traits active.",
+    "image": "Know-Your-Enemy-II.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/augments.json",
+      "revision": "v18.1",
+      "raw_id": "DA_KnowYourEnemy"
+    }
+  },
+  {
+    "id": "DA_18_InfernoTraitAugment",
+    "name": "Flame On",
+    "tier": 1,
+    "description": "Your 1 and 2-cost Inferno champions gain 0.2 Attack Damage and Ability Power. The one who did the most damage last combat gains double. Gain a Varus and an Akali.",
+    "image": "Missing-T1.png",
+    "_lineage": {
+      "source": "TFT_DDragon:data/en_US/augments.json",
+      "revision": "v18.1",
+      "raw_id": "DA_18_InfernoTraitAugment"
     }
   }
 ]

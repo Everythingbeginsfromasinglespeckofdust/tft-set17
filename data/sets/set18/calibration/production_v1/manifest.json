@@ -27,8 +27,8 @@
       "LEVEL_UP->SAVE_GOLD": 0,
       "LEVEL_UP->ROLL": 0
     },
-    "mean_latency_ms": 0.155,
-    "p95_latency_ms": 0.202,
+    "mean_latency_ms": 0.118,
+    "p95_latency_ms": 0.135,
     "gate_reproduction_100_percent": true
   },
   "final_gate_verdict": "PRODUCTION_CALIBRATION_READY"

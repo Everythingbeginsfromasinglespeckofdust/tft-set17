@@ -1,10 +1,10 @@
 # TFT Production Calibration Integration v1 Report
 
 **Final Gate Verdict**: **PRODUCTION_CALIBRATION_READY**
-**Execution Date**: `2026-08-27 05:17:12 UTC`
+**Execution Date**: `2026-08-31 06:30:17 UTC`
 **Production DecisionEngine Code Impact**: **`0 changes` (Adapter Wrapped & SHA256 Checksum Verified)**
 **Default Configuration**: **`calibration_enabled = False` (Mode: OFF)**
-**Additional Latency**: **Mean `0.155ms` / P95 `0.202ms` (< 1.0ms Goal: PASS)**
+**Additional Latency**: **Mean `0.118ms` / P95 `0.135ms` (< 1.0ms Goal: PASS)**
 
 ---
 
@@ -22,7 +22,7 @@
      * `SHADOW`: 기존 추천을 화면에 유지하고 백그라운드 로깅만 수행.
      * `ON`: 자격을 갖춘 위기 상태에서만 명시적인 Calibration Adjustment 적용.
   3. **Gate v1 완벽 재현 (100%)**: 120개 실데이터 표본에서 Gate v1의 14개 Flip(11.7%) 및 방향(`SAVE_GOLD->ROLL`)이 완벽히 일치함을 확인.
-  4. **극도로 가벼운 연산 오버헤드**: 추가 지연 시간 평균 **`0.155ms`**, P95 **`0.202ms`**로 실시간 60FPS Overlay 파이프라인에 전혀 지장 없음.
+  4. **극도로 가벼운 연산 오버헤드**: 추가 지연 시간 평균 **`0.118ms`**, P95 **`0.135ms`**로 실시간 60FPS Overlay 파이프라인에 전혀 지장 없음.
   5. **자동 롤백 & 결함 격리 (Failure Isolation)**: 캘리브레이션 연산 중 예외, 소스 해시 불일치, 저품질 Vision 입력 발생 시 즉시 Base Production Recommendation으로 안전 폴백.
   6. **개인정보 보호 (PII Filter)**: PUUID, 소환사명 등 개인 식별 정보는 일체 로깅되지 않음.
 

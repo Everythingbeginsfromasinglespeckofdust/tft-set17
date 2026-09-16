@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFT 롤토체스 메타 & 유튜브 인사이트 (세트 18 패치 18.2b)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #0a0d14;
+      --bg-card: #121824;
+      --bg-card-hover: #182234;
+      --bg-panel: #0d121c;
+      --border-subtle: #1e293b;
+      --border-glow: #38bdf840;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --accent-s: #f59e0b;
+      --accent-s-plus: #ef4444;
+      --accent-a: #8b5cf6;
+      --accent-b: #3b82f6;
+      --buff-green: #10b981;
+      --nerf-red: #f43f5e;
+      --adjust-yellow: #eab308;
+      --gold-border: #fbbf24;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-base);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* Container */
+    .app-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0c182d 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-badges {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-patch { background: rgba(56, 189, 248, 0.2); color: var(--primary); border: 1px solid rgba(56, 189, 248, 0.4); }
+    .badge-hotfix { background: rgba(244, 63, 94, 0.2); color: var(--nerf-red); border: 1px solid rgba(244, 63, 94, 0.4); }
+    .badge-live { background: rgba(16, 185, 129, 0.2); color: var(--buff-green); border: 1px solid rgba(16, 185, 129, 0.4); }
+
+    .header-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .header-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 850px;
+      line-height: 1.6;
+    }
+
+    /* Search & Stats Bar */
+    .search-and-stats {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) {
+      .search-and-stats { grid-template-columns: 1fr; }
+    }
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px 20px 14px 44px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+    .quick-stats {
+      display: flex;
+      gap: 12px;
+    }
+    .stat-pill {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .stat-label { font-size: 0.72rem; color: var(--text-dim); font-weight: 600; }
+    .stat-value { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+
+    /* Tabs Navigation */
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      background: var(--bg-panel);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+    .nav-tab {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 12px 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .nav-tab:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .nav-tab.active {
+      color: #0f172a;
+      background: var(--primary);
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
+    }
+
+    /* Sections */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Deck Cards Grid */
+    .decks-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .deck-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .deck-card:hover {
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
+    }
+    .deck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .deck-title-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tier-badge {
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tier-S\+ { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+    .tier-S { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); }
+    .tier-A { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: #fff; }
+
+    .deck-name { font-size: 1.35rem; font-weight: 700; color: #fff; }
+    .deck-playstyle {
+      font-size: 0.8rem;
+      background: rgba(255,255,255,0.08);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    .deck-stats {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .deck-stat-item {
+      text-align: right;
+    }
+    .stat-micro-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; }
+    .stat-micro-val { font-size: 1rem; font-weight: 700; color: var(--text-main); }
+
+    .deck-summary {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      background: rgba(0,0,0,0.2);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+    }
+
+    /* Positioning Chessboard Grid */
+    .board-container {
+      background: #090e17;
+      border: 1px solid #1a2234;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .board-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hex-board {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .hex-row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+    .hex-row.offset {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .hex-cell {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      min-height: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      position: relative;
+      font-size: 0.75rem;
+      transition: all 0.2s ease;
+    }
+    .hex-cell.occupied {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--primary);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .hex-cell.carry {
+      border: 2px solid var(--accent-s-plus);
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+    }
+    .hex-cell.tank {
+      border: 2px solid var(--buff-green);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+    .unit-badge {
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .unit-stars { color: #f59e0b; font-size: 0.65rem; }
+    .unit-items-tags {
+      display: flex;
+      gap: 2px;
+      margin-top: 3px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .item-micro-tag {
+      font-size: 0.6rem;
+      background: #334155;
+      padding: 1px 4px;
+      border-radius: 3px;
+      color: #cbd5e1;
+      white-space: nowrap;
+    }
+
+    /* Deck Meta Breakdown (BIS, Level Up, Augments) */
+    .deck-meta-breakdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .breakdown-box {
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .breakdown-box-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .bis-row {
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+    .bis-champ { font-weight: 700; color: var(--primary); margin-right: 6px; }
+    .bis-list { color: var(--text-main); }
+    .curve-step {
+      font-size: 0.82rem;
+      margin-bottom: 4px;
+      display: flex;
+      gap: 8px;
+    }
+    .curve-stage { font-weight: 700; color: var(--accent-s); min-width: 42px; }
+    .tag-list {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .augment-pill {
+      font-size: 0.75rem;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .creator-pill {
+      font-size: 0.75rem;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* YouTube Cards */
+    .youtube-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 20px;
+    }
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+    .video-card:hover {
+      border-color: rgba(239, 68, 68, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .video-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      background: rgba(0,0,0,0.2);
+    }
+    .creator-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--nerf-red);
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+    .creator-info h4 { font-size: 1rem; font-weight: 700; color: #fff; }
+    .creator-info p { font-size: 0.78rem; color: var(--text-dim); }
+
+    .video-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .video-summary {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+      background: rgba(0,0,0,0.15);
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+    .timestamps-list {
+      margin-bottom: 16px;
+    }
+    .timestamp-item {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: flex;
+      gap: 8px;
+    }
+    .timestamp-time { color: var(--primary); font-family: monospace; font-weight: 700; }
+    .tips-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: auto;
+    }
+    .tips-title { font-size: 0.78rem; font-weight: 700; color: var(--buff-green); margin-bottom: 4px; }
+    .tip-bullet { font-size: 0.8rem; color: #e2e8f0; margin-bottom: 3px; }
+
+    /* Patch Notes Section */
+    .patch-overview-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .system-changes-list {
+      margin-top: 16px;
+      list-style-type: none;
+    }
+    .system-changes-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+    .system-changes-list li::before {
+      content: "⚡";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .patch-changes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+    .change-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .change-card.BUFF { border-left: 4px solid var(--buff-green); }
+    .change-card.NERF { border-left: 4px solid var(--nerf-red); }
+    .change-card.ADJUST { border-left: 4px solid var(--adjust-yellow); }
+
+    .change-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .change-name { font-size: 1.05rem; font-weight: 700; color: #fff; }
+    .change-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .change-tag.BUFF { background: rgba(16, 185, 129, 0.2); color: var(--buff-green); }
+    .change-tag.NERF { background: rgba(244, 63, 94, 0.2); color: var(--nerf-red); }
+    .change-tag.ADJUST { background: rgba(234, 179, 8, 0.2); color: var(--adjust-yellow); }
+
+    .change-summary { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+    .change-details {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      background: rgba(0,0,0,0.2);
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 4px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="header-badges">
+        <span class="badge badge-patch">TFT SET 18 · 신비의 숲</span>
+        <span class="badge badge-hotfix">PATCH 18.2 / 18.2b</span>
+        <span class="badge badge-live">LIVE META ACTIVE</span>
+      </div>
+      <h1 class="header-title">롤토체스 메타 & 유튜브 인텔리전스 대시보드</h1>
+      <p class="header-subtitle">
+        8~10레벨 68원 완화 패치 데이터와 최상위 랭커 유튜버(구루루, 쪼해피롱, 김루트, 정동글, Bebe 등)의 
+        실전 공략을 교차 분석하여 도출된 실시간 1티어 덱, 빌드업 타이밍 및 핵심 3신기 공략입니다.
+      </p>
+    </header>
+
+    <!-- Search & Quick Stats -->
+    <div class="search-and-stats">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="기물, 시너지, 아이템, 유튜버 검색 (예: 드레이븐, 카밀, 니달리, 나무정령, 구루루)...">
+      </div>
+      <div class="quick-stats">
+        <div class="stat-pill">
+          <div class="stat-label">S/S+ 1티어 덱</div>
+          <div class="stat-value" id="sTierCount">3개 덱</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-label">분석된 유튜버</div>
+          <div class="stat-value" id="creatorCount">5명</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-label">핵심 메타 키워드</div>
+          <div class="stat-value" style="font-size: 0.95rem; color: #f59e0b;">패스트 9 밸류</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="decksTab">🏆 1티어 메타 덱 공략</button>
+      <button class="nav-tab" data-tab="youtubeTab">📺 유튜브 크리에이터 분석</button>
+      <button class="nav-tab" data-tab="patchTab">⚖️ 패치 18.2 밸런스 변경점</button>
+      <button class="nav-tab" data-tab="searchTab" id="searchTabBtn" style="display: none;">🔍 검색 결과</button>
+    </nav>
+
+    <!-- TAB 1: 1티어 메타 덱 공략 -->
+    <section id="decksTab" class="tab-content active">
+      <div id="decksList" class="decks-grid">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- TAB 2: 유튜브 크리에이터 분석 -->
+    <section id="youtubeTab" class="tab-content">
+      <div id="youtubeList" class="youtube-grid">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- TAB 3: 패치 18.2 밸런스 변경점 -->
+    <section id="patchTab" class="tab-content">
+      <div class="patch-overview-card">
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px;">🚀 신비의 숲 18.2 / 18.2b 시스템 핵심 리워크</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;" id="patchSummaryText">
+          8레벨에서 9레벨, 9레벨에서 10레벨로 가는 경험치가 각각 68원으로 인하되어 5코스트 전설 고밸류 덱의 완성 템포가 대폭 빨라졌습니다.
+        </p>
+        <ul class="system-changes-list" id="systemChangesList">
+          <!-- Injected by JS -->
+        </ul>
+      </div>
+
+      <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; color: #fff;">📊 챔피언 및 특성 밸런스 상세 내역</h3>
+      <div id="patchChangesList" class="patch-changes-grid">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- TAB 4: 스마트 검색 결과 -->
+    <section id="searchTab" class="tab-content">
+      <div style="margin-bottom: 20px;">
+        <h3 style="font-size: 1.2rem; font-weight: 700;" id="searchResultHeading">검색 결과</h3>
+      </div>
+      <div id="searchResultsArea">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    let metaState = {
+      decks: [],
+      youtube: [],
+      patch: null,
+      activeTab: 'decksTab'
+    };
+
+    // Tab Switching
+    document.querySelectorAll('.nav-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+        switchTab(target);
+      });
+    });
+
+    function switchTab(targetId) {
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      const activeBtn = document.querySelector(`.nav-tab[data-tab="${targetId}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) targetContent.classList.add('active');
+      metaState.activeTab = targetId;
+    }
+
+    // Search Input Listener
+    const searchInput = document.getElementById('searchInput');
+    let searchDebounceTimer = null;
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchDebounceTimer);
+      const query = e.target.value.trim();
+      if (!query) {
+        document.getElementById('searchTabBtn').style.display = 'none';
+        if (metaState.activeTab === 'searchTab') switchTab('decksTab');
+        return;
+      }
+      searchDebounceTimer = setTimeout(() => {
+        executeSearch(query);
+      }, 200);
+    });
+
+    async function executeSearch(query) {
+      try {
+        const res = await fetch(`/api/meta/search?q=${encodeURIComponent(query)}`);
+        const data = await res.json();
+        renderSearchResults(query, data);
+      } catch (err) {
+        console.error('Search error:', err);
+      }
+    }
+
+    function renderSearchResults(query, data) {
+      const searchTabBtn = document.getElementById('searchTabBtn');
+      searchTabBtn.style.display = 'inline-flex';
+      searchTabBtn.innerText = `🔍 '${query}' (${data.matched_decks_count + data.matched_videos_count + data.matched_patch_changes_count})`;
+      switchTab('searchTab');
+
+      const container = document.getElementById('searchResultsArea');
+      document.getElementById('searchResultHeading').innerText = `'${query}' 검색 결과 (${data.matched_decks_count}개 덱, ${data.matched_videos_count}개 영상, ${data.matched_patch_changes_count}개 패치 변동)`;
+
+      let html = '';
+
+      // Decks matched
+      if (data.matched_decks && data.matched_decks.length > 0) {
+        html += `<h4 style="margin: 20px 0 12px; color: var(--primary);">🏆 관련 메타 덱 (${data.matched_decks.length})</h4><div class="decks-grid">`;
+        html += data.matched_decks.map(d => renderDeckCardHTML(d)).join('');
+        html += `</div>`;
+      }
+
+      // YouTube matched
+      if (data.matched_videos && data.matched_videos.length > 0) {
+        html += `<h4 style="margin: 30px 0 12px; color: var(--nerf-red);">📺 관련 유튜브 공략 영상 (${data.matched_videos.length})</h4><div class="youtube-grid">`;
+        html += data.matched_videos.map(v => renderYouTubeCardHTML(v)).join('');
+        html += `</div>`;
+      }
+
+      // Patch changes matched
+      if (data.matched_patch_changes && data.matched_patch_changes.length > 0) {
+        html += `<h4 style="margin: 30px 0 12px; color: var(--buff-green);">⚖️ 관련 18.2 패치 밸런스 변경점 (${data.matched_patch_changes.length})</h4><div class="patch-changes-grid">`;
+        html += data.matched_patch_changes.map(c => renderPatchChangeCardHTML(c)).join('');
+        html += `</div>`;
+      }
+
+      if (!html) {
+        html = `<div class="empty-state"><h4>'${query}'에 대한 검색 결과가 없습니다.</h4><p>챔피언 이름(예: 드레이븐), 특성(예: 나무정령), 유튜버(예: 구루루)를 입력해 보세요.</p></div>`;
+      }
+
+      container.innerHTML = html;
+    }
+
+    // Render Deck Card
+    function renderDeckCardHTML(deck) {
+      const tierClass = deck.tier.replace('+', '\\+');
+      
+      // 4x7 Chessboard Grid
+      const boardCells = [];
+      const placementMap = {};
+      deck.core_champions.forEach(u => {
+        placementMap[`${u.row}_${u.col}`] = u;
+      });
+
+      let boardHTML = '';
+      for (let r = 1; r <= 4; r++) {
+        boardHTML += `<div class="hex-row ${r % 2 === 0 ? 'offset' : ''}">`;
+        for (let c = 1; c <= 7; c++) {
+          const unit = placementMap[`${r}_${c}`];
+          if (unit) {
+            const roleClass = unit.is_main_carry ? 'carry' : (unit.is_main_tank ? 'tank' : '');
+            const starStr = '★'.repeat(unit.star);
+            const itemsHTML = unit.items.map(i => `<span class="item-micro-tag">${i.split(' ')[0]}</span>`).join('');
+            boardHTML += `
+              <div class="hex-cell occupied ${roleClass}">
+                <span class="unit-stars">${starStr}</span>
+                <span class="unit-badge">${unit.name}</span>
+                <div class="unit-items-tags">${itemsHTML}</div>
+              </div>
+            `;
+          } else {
+            boardHTML += `<div class="hex-cell"></div>`;
+          }
+        }
+        boardHTML += `</div>`;
+      }
+
+      // BIS Items List
+      const bisHTML = Object.entries(deck.bis_items).map(([champ, items]) => `
+        <div class="bis-row">
+          <span class="bis-champ">★ ${champ}:</span>
+          <span class="bis-list">${items.join(' · ')}</span>
+        </div>
+      `).join('');
+
+      // Level up steps
+      const curveHTML = Object.entries(deck.level_up_guide).map(([stage, desc]) => `
+        <div class="curve-step">
+          <span class="curve-stage">${stage}</span>
+          <span>${desc}</span>
+        </div>
+      `).join('');
+
+      // Augments
+      const augmentsHTML = deck.recommended_augments.map(a => `<span class="augment-pill">⚡ ${a}</span>`).join('');
+
+      // Creators
+      const creatorsHTML = deck.youtube_mentions.map(c => `<span class="creator-pill">📺 ${c}</span>`).join('');
+
+      return `
+        <div class="deck-card">
+          <div class="deck-header">
+            <div class="deck-title-area">
+              <span class="tier-badge tier-${deck.tier}">${deck.tier}</span>
+              <div>
+                <span class="deck-name">${deck.name}</span>
+                <span class="deck-playstyle">${deck.playstyle}</span>
+              </div>
+            </div>
+            <div class="deck-stats">
+              <div class="deck-stat-item">
+                <div class="stat-micro-label">TOP 4 확률</div>
+                <div class="stat-micro-val" style="color: var(--buff-green);">${deck.top4_rate}</div>
+              </div>
+              <div class="deck-stat-item">
+                <div class="stat-micro-label">승률</div>
+                <div class="stat-micro-val">${deck.win_rate}</div>
+              </div>
+              <div class="deck-stat-item">
+                <div class="stat-micro-label">평균 순위</div>
+                <div class="stat-micro-val" style="color: var(--primary);">${deck.avg_rank}등</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="deck-summary">${deck.summary}</div>
+
+          <!-- Board Placement -->
+          <div class="board-container">
+            <div class="board-title">♟️ 8~9레벨 표준 배치도 (앞라인 1열 탱커 / 뒷라인 4열 캐리)</div>
+            <div class="hex-board">${boardHTML}</div>
+          </div>
+
+          <!-- Meta Breakdown -->
+          <div class="deck-meta-breakdown">
+            <div class="breakdown-box">
+              <div class="breakdown-box-title">🗡️ 캐리 및 탱커 3신기 아이템</div>
+              ${bisHTML}
+            </div>
+            <div class="breakdown-box">
+              <div class="breakdown-box-title">📈 레벨업 & 리롤 타이밍</div>
+              ${curveHTML}
+            </div>
+            <div class="breakdown-box">
+              <div class="breakdown-box-title">✨ 추천 증강체 & 공략 크리에이터</div>
+              <div class="tag-list" style="margin-bottom: 8px;">${augmentsHTML}</div>
+              <div class="tag-list">${creatorsHTML}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Render YouTube Card
+    function renderYouTubeCardHTML(video) {
+      const timestampsHTML = video.timestamps.map(t => `
+        <div class="timestamp-item">
+          <span class="timestamp-time">${t.time}</span>
+          <span>${t.title}</span>
+        </div>
+      `).join('');
+
+      const tipsHTML = video.creator_tips.map(tip => `
+        <div class="tip-bullet">• ${tip}</div>
+      `).join('');
+
+      return `
+        <div class="video-card">
+          <div class="video-header">
+            <div class="creator-avatar">${video.channel_name.charAt(0)}</div>
+            <div class="creator-info">
+              <h4>${video.channel_name}</h4>
+              <p>${video.published_at} 업로드 · 조회수 ${video.view_count}</p>
+            </div>
+          </div>
+          <div class="video-body">
+            <div class="video-title">${video.title}</div>
+            <div class="video-summary">${video.summary}</div>
+            <div class="timestamps-list">
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-dim); margin-bottom: 6px; text-transform: uppercase;">⏱️ 핵심 타임라인</div>
+              ${timestampsHTML}
+            </div>
+            <div class="tips-box">
+              <div class="tips-title">💡 크리에이터 실전 꿀팁</div>
+              ${tipsHTML}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Render Patch Change Card
+    function renderPatchChangeCardHTML(change) {
+      const detailsHTML = change.details.map(d => `<div>• ${d}</div>`).join('');
+      return `
+        <div class="change-card ${change.change_type}">
+          <div class="change-header">
+            <span class="change-name">${change.name}</span>
+            <span class="change-tag ${change.change_type}">${change.change_type}</span>
+          </div>
+          <div class="change-summary">${change.summary}</div>
+          ${change.details && change.details.length > 0 ? `<div class="change-details">${detailsHTML}</div>` : ''}
+        </div>
+      `;
+    }
+
+    // Initial Load
+    async function initDashboard() {
+      try {
+        const [decksRes, ytRes, patchRes] = await Promise.all([
+          fetch('/api/meta/decks'),
+          fetch('/api/meta/youtube'),
+          fetch('/api/meta/patch')
+        ]);
+
+        metaState.decks = await decksRes.json();
+        const ytData = await ytRes.json();
+        metaState.youtube = ytData.videos;
+        metaState.patch = await patchRes.json();
+
+        // Render Decks
+        document.getElementById('decksList').innerHTML = metaState.decks.map(d => renderDeckCardHTML(d)).join('');
+
+        // Render YouTube
+        document.getElementById('youtubeList').innerHTML = metaState.youtube.map(v => renderYouTubeCardHTML(v)).join('');
+
+        // Render Patch
+        document.getElementById('patchSummaryText').innerText = metaState.patch.summary;
+        document.getElementById('systemChangesList').innerHTML = metaState.patch.system_changes.map(s => `<li>${s}</li>`).join('');
+        document.getElementById('patchChangesList').innerHTML = metaState.patch.changes.map(c => renderPatchChangeCardHTML(c)).join('');
+
+        // Update stats
+        const sCount = metaState.decks.filter(d => d.tier.includes('S')).length;
+        document.getElementById('sTierCount').innerText = `${sCount}개 덱`;
+        document.getElementById('creatorCount').innerText = `${metaState.youtube.length}명`;
+
+      } catch (err) {
+        console.error('Failed to load meta dashboard data:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>

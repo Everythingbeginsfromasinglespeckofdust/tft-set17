@@ -34,9 +34,11 @@ def compute_file_sha256(path: str) -> str:
 class Set18DataAcquisitionPipeline:
     """End-to-end Set 18 Data Acquisition, Validation, and Normalization Pipeline."""
 
-    def __init__(self, output_dir: str = _OUTPUT_BASE, tft_ddragon_dir: str = "TFT_DDragon"):
+    def __init__(self, output_dir: str = _OUTPUT_BASE, tft_ddragon_dir: str = "TFT_DDragon", rev: str = "v18.2", patch: str = "18.2"):
         self.output_dir = output_dir
         self.tft_ddragon_dir = tft_ddragon_dir
+        self.rev = rev
+        self.patch = patch
 
         self.raw_dir = os.path.join(self.output_dir, "raw")
         self.raw_ddragon_dir = os.path.join(self.raw_dir, "tft_ddragon")
@@ -58,7 +60,7 @@ class Set18DataAcquisitionPipeline:
 
         self.manifest = {
             "set_id": 18,
-            "patch": "18.1",
+            "patch": self.patch,
             "retrieved_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "sources": [],
             "files": {},
@@ -72,7 +74,7 @@ class Set18DataAcquisitionPipeline:
         print("📦 TFT SET 18 DATA ACQUISITION & RECONCILIATION PIPELINE")
         print("=" * 80)
         print(f"  • Output Directory : {self.output_dir}")
-        print(f"  • TFT_DDragon Ref  : tag v18.1 (Patch 18.1)")
+        print(f"  • TFT_DDragon Ref  : tag {self.rev} (Patch {self.patch})")
         print(f"  • CommunityDragon  : raw.communitydragon.org/latest")
         print("=" * 80)
 
@@ -131,15 +133,15 @@ class Set18DataAcquisitionPipeline:
         ]
 
         # Extract git commit info
-        rev = "v18.1"
+        rev = self.rev
         try:
-            commit_hash = subprocess.check_output(["git", "-C", self.tft_ddragon_dir, "rev-parse", "v18.1"]).decode().strip()
+            commit_hash = subprocess.check_output(["git", "-C", self.tft_ddragon_dir, "rev-parse", rev]).decode().strip()
         except Exception:
-            commit_hash = "b6398b1ff6cb5f36a724ded61638b74067b45301"
+            commit_hash = "a86f9dc433a6b2b8e30267d16c752a6143e96011"
 
         for rel_path in targets:
             try:
-                raw_bytes = subprocess.check_output(["git", "-C", self.tft_ddragon_dir, "show", f"v18.1:{rel_path}"])
+                raw_bytes = subprocess.check_output(["git", "-C", self.tft_ddragon_dir, "show", f"{rev}:{rel_path}"])
                 sha256 = compute_sha256(raw_bytes)
                 out_path = os.path.join(self.raw_ddragon_dir, rel_path.replace("/", "_"))
                 with open(out_path, "wb") as f:
@@ -554,10 +556,12 @@ class Set18DataAcquisitionPipeline:
 def main():
     parser = argparse.ArgumentParser(description="TFT Set 18 Data Acquisition CLI")
     parser.add_argument("--output", type=str, default=_OUTPUT_BASE, help="Output directory")
+    parser.add_argument("--rev", type=str, default="v18.2", help="Git revision tag in TFT_DDragon")
+    parser.add_argument("--patch", type=str, default="18.2", help="Patch version string")
     parser.add_argument("--verify", action="store_true", help="Verify integrity of acquired dataset")
     args = parser.parse_args()
 
-    pipeline = Set18DataAcquisitionPipeline(output_dir=args.output)
+    pipeline = Set18DataAcquisitionPipeline(output_dir=args.output, rev=args.rev, patch=args.patch)
     pipeline.run(verify_only=args.verify)
 
 

@@ -15945,21 +15945,6 @@
     }
   },
   {
-    "id": "TFTSet18/Set18_Items/DA_Artifact_DeathsDefiance",
-    "name": "Death's Defiance",
-    "name_ko": "죽음의 저항",
-    "description": "",
-    "is_component": false,
-    "is_unique": false,
-    "components": [],
-    "image": "DA_Artifact_DeathsDefiance.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/item.json",
-      "revision": "v18.1",
-      "raw_id": "TFTSet18/Set18_Items/DA_Artifact_DeathsDefiance"
-    }
-  },
-  {
     "id": "TFTSet18/Set18_Items/DA_Artifact_EternalPact",
     "name": "Eternal Pact",
     "name_ko": "영원한 서약",
@@ -16062,21 +16047,6 @@
       "source": "TFT_DDragon:data/en_US/item.json",
       "revision": "v18.1",
       "raw_id": "TFTSet18/Set18_Items/DA_Artifact_HorizonFocus"
-    }
-  },
-  {
-    "id": "TFTSet18/Set18_Items/DA_Artifact_Hullcrusher",
-    "name": "Hullcrusher",
-    "name_ko": "선체분쇄자",
-    "description": "",
-    "is_component": false,
-    "is_unique": false,
-    "components": [],
-    "image": "DA_Artifact_Hullcrusher.png",
-    "_lineage": {
-      "source": "TFT_DDragon:data/en_US/item.json",
-      "revision": "v18.1",
-      "raw_id": "TFTSet18/Set18_Items/DA_Artifact_Hullcrusher"
     }
   },
   {
