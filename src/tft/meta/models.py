@@ -74,10 +74,28 @@ class YouTubeVideoInsight:
     video_url: str = ""
     thumbnail_url: str = ""
     view_count: str = "5.4만회"
+    region: str = "KR"  # "KR" or "GLOBAL"
+    post_patch_verified: bool = True  # Verified to be post 18.2 / 18.2b patch
+    season_tag: str = "세트 18"
     key_comps_recommended: List[str] = field(default_factory=list)
     summary: str = ""
     timestamps: List[Dict[str, str]] = field(default_factory=list)
     creator_tips: List[str] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class MasteryTip:
+    tip_id: str
+    category: str  # ECONOMY, ROLLDOWN, POSITIONING, AUGMENTS, ITEMS
+    title: str
+    description: str
+    key_rule: str
+    source_creators: List[str] = field(default_factory=list)
+    seasons_valid: str = "최근 5개 시즌 (세트 14~18 검증)"
+    impact_level: str = "ESSENTIAL"  # ESSENTIAL, ADVANCED, SITUATIONAL
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)

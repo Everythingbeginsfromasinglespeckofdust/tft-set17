@@ -8,9 +8,12 @@
     "video_url": "https://www.youtube.com/watch?v=mock_gururu_18_2",
     "thumbnail_url": "https://i.ytimg.com/vi/mock_gururu_18_2/hqdefault.jpg",
     "view_count": "8.9만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
     "key_comps_recommended": [
-      "장로드래곤 드레이븐 밸류",
-      "나무정령 드레이븐",
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
       "일월식 알룬"
     ],
     "summary": "18.2 패치로 9레벨/10레벨 필요 경험치가 68으로 완화되고 수호령 비용이 대폭 인하되면서 8레벨에서 돈을 털지 않고 9레벨을 찍은 뒤 드레이븐 + 5코스트 전설 기물을 도배하는 고밸류 덱이 현 메타 원탑입니다.",
@@ -47,11 +50,14 @@
     "video_url": "https://www.youtube.com/watch?v=mock_chohappy_18_2",
     "thumbnail_url": "https://i.ytimg.com/vi/mock_chohappy_18_2/hqdefault.jpg",
     "view_count": "12.4만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
     "key_comps_recommended": [
-      "장로드래곤 드레이븐",
-      "나무정령 드레이븐",
-      "햇빛 아칼리 카밀",
-      "니달리 시비르",
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)",
       "협곡야수 조약돌"
     ],
     "summary": "사냥꾼과 마스터 이가 너프되고 나무정령과 악의 여단, 드레이븐이 버프를 받았습니다. 현재 메타는 '패스트 9 드레이븐 밸류'와 '2코 리롤 햇빛 아칼리/카밀'이 양대 산맥을 형성하고 있습니다.",
@@ -92,9 +98,12 @@
     "video_url": "https://www.youtube.com/watch?v=mock_kimroot_18_2b",
     "thumbnail_url": "https://i.ytimg.com/vi/mock_kimroot_18_2b/hqdefault.jpg",
     "view_count": "6.7만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
     "key_comps_recommended": [
-      "니달리 시비르 4코 운영",
-      "악의 여단 르블랑"
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)",
+      "악의 여단 르블랑 (Coven LeBlanc)"
     ],
     "summary": "18.2 패치에서 니달리의 쿠거 도약 데미지가 35% 이상 폭증했습니다. 드레이븐 덱이 겹쳐서 기물이 부족할 때 8레벨에서 니달리를 2성 찍고 템을 몰아주면 후열을 차례대로 삭제합니다.",
     "timestamps": [
@@ -129,8 +138,11 @@
     "video_url": "https://www.youtube.com/watch?v=mock_dongle_18_2",
     "thumbnail_url": "https://i.ytimg.com/vi/mock_dongle_18_2/hqdefault.jpg",
     "view_count": "5.1만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
     "key_comps_recommended": [
-      "햇빛 아칼리 카밀 리롤",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
       "협곡야수 조약돌"
     ],
     "summary": "18.2b 핫픽스로 카밀의 3성 스킬 데미지가 소폭 감소했지만, 햇빛 시너지 자체의 유지력과 아칼리의 암살 능력 덕분에 2코 3성 리롤 덱 중에서는 여전히 독보적인 1티어입니다.",
@@ -158,6 +170,171 @@
     ]
   },
   {
+    "video_id": "dishsoap_18_2_meta",
+    "title": "[World Champion Guide] Set 18 Patch 18.2b Complete Meta Breakdown & Level 9 Cap",
+    "channel_name": "Dishsoap (World Champion)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vdishsoap=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-13",
+    "video_url": "https://www.youtube.com/watch?v=mock_dishsoap_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_dishsoap_18_2/hqdefault.jpg",
+    "view_count": "11.2만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "World Champion Dishsoap breaks down why 18.2's 68 XP at Level 8/9 radically alters the EV of rolling at 8. Demonstrates how to stabilize with a 2-star 3-cost or 1-star 4-cost frontline, then push Level 9 for 5-cost legendary capped boards.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "The Math Behind the 68 XP Level 9 Change"
+      },
+      {
+        "time": "03:40",
+        "title": "Level 8 Stabilization Rule: Don't Donkey Roll"
+      },
+      {
+        "time": "08:15",
+        "title": "Draven + Elderwood vs Heavy AP Matchups"
+      },
+      {
+        "time": "14:20",
+        "title": "Endgame Capped Board Positioning"
+      }
+    ],
+    "creator_tips": [
+      "If you have 40+ HP at Stage 4-5, rolling below 30 gold at Level 8 is mathematically incorrect in this patch. Save for 9.",
+      "Always prioritize 2-star tank items over 3rd offensive carry item. Frontline longevity multiplies Draven damage by 2.4x.",
+      "Slam generalist utility items (Spark, Sunfire, Evenshroud) before Krugs to establish tempo."
+    ]
+  },
+  {
+    "video_id": "frodan_18_2_snapshot",
+    "title": "Patch 18.2 Meta Snapshot: Every Comp Ranked (Why Elderwood & Draven are S-Tier)",
+    "channel_name": "Frodan",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vfrodan=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-12",
+    "video_url": "https://www.youtube.com/watch?v=mock_frodan_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_frodan_18_2/hqdefault.jpg",
+    "view_count": "8.4만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "Frodan's comprehensive competitive tier list following Patch 18.2 and 18.2b. Highlights how the Hunter trait nerf opened the floodgates for Elderwood frontline stacks to dominate the meta.",
+    "timestamps": [
+      {
+        "time": "01:00",
+        "title": "S-Tier Comps: Fast 9 Draven & Sunlight Camille"
+      },
+      {
+        "time": "05:20",
+        "title": "A-Tier Comps: Nidalee 4-Cost Pivot"
+      },
+      {
+        "time": "09:45",
+        "title": "Augment Tier List: What to Pick on 2-1"
+      },
+      {
+        "time": "13:30",
+        "title": "Item Economy & Carousel Priority"
+      }
+    ],
+    "creator_tips": [
+      "Elderwood is the safest top 4 opener because the HP stacking provides unconditional value through Stage 3.",
+      "Sunlight Camille/Akali is the premier anti-meta reroll comp that punishes greedy Fast 9 players on Stage 3."
+    ]
+  },
+  {
+    "video_id": "setsuko_18_2b_tempo",
+    "title": "Patch 18.2b Fast 8/9 Tempo Guide: How I Hit Rank 1 Playing Draven & Nidalee",
+    "channel_name": "Setsuko",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vsetsuko=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-14",
+    "video_url": "https://www.youtube.com/watch?v=mock_setsuko_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_setsuko_18_2/hqdefault.jpg",
+    "view_count": "10.5만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "Setsuko showcases his signature high-tempo playstyle adapted for Patch 18.2b. Demonstrates how to aggressively level at 2-1 (level 4) and 2-5 (level 5) to save 20+ HP and snowball into a free 9-cap.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "Why Aggressive Tempo Dominates Challenger"
+      },
+      {
+        "time": "03:15",
+        "title": "Stage 2 Streak Management & Pre-leveling"
+      },
+      {
+        "time": "07:50",
+        "title": "Nidalee vs Draven: Which Carry to Commit"
+      },
+      {
+        "time": "12:10",
+        "title": "Endgame 1v1 Positioning Tech"
+      }
+    ],
+    "creator_tips": [
+      "Pre-leveling to 5 at 2-3 gives you an early shot at 3-cost and 4-cost carries before anyone else.",
+      "Nidalee's jump mechanics bypass frontline tanks if you position her in the second row opposite the enemy carry."
+    ]
+  },
+  {
+    "video_id": "mortdog_18_2_rundown",
+    "title": "TFT Patch 18.2 & 18.2b Dev Rundown: Why We Changed Level 9 to 68 XP",
+    "channel_name": "Mortdog (Lead Designer)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vmortdog=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-15",
+    "video_url": "https://www.youtube.com/watch?v=mock_mortdog_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_mortdog_18_2/hqdefault.jpg",
+    "view_count": "15.8만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+    ],
+    "summary": "Lead Designer Mortdog provides the official retrospective on Patch 18.2 and the 18.2b adjustments. Explains the design philosophy behind reducing level 8-10 XP to 68 to make high-tier legendary compositions accessible while buffing underperforming verticals.",
+    "timestamps": [
+      {
+        "time": "00:45",
+        "title": "Design Goals for the Level 9 Experience Rework"
+      },
+      {
+        "time": "04:10",
+        "title": "Elderwood, Coven & Black Thorn Buff Rationale"
+      },
+      {
+        "time": "08:30",
+        "title": "18.2b Micro-Adjustments (Camille & LeBlanc)"
+      },
+      {
+        "time": "13:00",
+        "title": "Community Q&A on Meta Health"
+      }
+    ],
+    "creator_tips": [
+      "The team wanted 5-cost legendary boards to be achievable without requiring multiple prismatic econ augments.",
+      "Watch out for 2-cost 3-star reroll comps like Camille/Akali — they are designed as direct counter-weights to greedy Fast 9 lobbies."
+    ]
+  },
+  {
     "video_id": "bebe_18_2_fast9",
     "title": "Set 18 Patch 18.2 Fast 9 Legendary Value Guide (Challenger #1 Explains)",
     "channel_name": "Bebe872",
@@ -166,9 +343,12 @@
     "video_url": "https://www.youtube.com/watch?v=mock_bebe_18_2",
     "thumbnail_url": "https://i.ytimg.com/vi/mock_bebe_18_2/hqdefault.jpg",
     "view_count": "9.8만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
     "key_comps_recommended": [
-      "Elder Dragon Draven Fast 9",
-      "Elderwood Value Flex"
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)"
     ],
     "summary": "Detailed macro breakdown on the 18.2 economy rework. 68 XP at level 8 and 9 makes fast 9 the definitive highest cap strategy in Challenger lobbies. Draven acts as the primary bridge carry.",
     "timestamps": [

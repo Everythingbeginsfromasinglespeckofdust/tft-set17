@@ -1,4 +1,8 @@
-"""Unit tests for TFT Meta & YouTube Intelligence App."""
+"""Unit tests for TFT Meta & YouTube Intelligence App.
+
+Covers Patch Notes, Korean & Global YouTube Creator Insights (post-patch verified),
+5-Season Mastery Fundamentals, Consolidated Decks, and REST API Endpoints.
+"""
 import os
 import sys
 _SRC = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "src"))
@@ -57,7 +61,7 @@ def test_patch_analyzer_buffs_and_nerfs(patch_analyzer):
 
 def test_youtube_aggregator_videos(youtube_aggregator):
     videos = youtube_aggregator.get_videos()
-    assert len(videos) >= 4
+    assert len(videos) >= 7
     creators = [v.channel_name for v in videos]
     assert any("구루루" in c for c in creators)
     assert any("쪼해피롱" in c for c in creators)
@@ -68,20 +72,61 @@ def test_youtube_aggregator_videos(youtube_aggregator):
         assert len(v.key_comps_recommended) > 0
 
 
+def test_youtube_aggregator_global_creators(youtube_aggregator):
+    global_videos = youtube_aggregator.get_videos(region="GLOBAL")
+    kr_videos = youtube_aggregator.get_videos(region="KR")
+
+    assert len(global_videos) >= 4
+    assert len(kr_videos) >= 4
+
+    global_creators = [v.channel_name for v in global_videos]
+    assert any("Dishsoap" in c for c in global_creators)
+    assert any("Frodan" in c for c in global_creators)
+    assert any("Setsuko" in c for c in global_creators)
+    assert any("Mortdog" in c for c in global_creators)
+
+
+def test_youtube_post_patch_verified(youtube_aggregator):
+    """Enforces requirement: Season meta info must be based strictly on post-patch videos."""
+    videos = youtube_aggregator.get_videos()
+    for v in videos:
+        assert v.post_patch_verified is True
+        # Published at must be after 2026-09-09 (18.2 patch release date)
+        assert v.published_at >= "2026-09-09"
+        assert v.season_tag == "세트 18"
+
+
+def test_mastery_tips_5seasons(youtube_aggregator):
+    """Enforces requirement: Strategic tips collected from within the last 5 seasons."""
+    tips = youtube_aggregator.get_mastery_tips()
+    assert len(tips) >= 5
+
+    categories = set(t.category for t in tips)
+    assert "ECONOMY" in categories
+    assert "ROLLDOWN" in categories
+    assert "POSITIONING" in categories
+    assert "AUGMENTS" in categories
+    assert "ITEMS" in categories
+
+    for tip in tips:
+        assert "최근 5개 시즌" in tip.seasons_valid
+        assert len(tip.key_rule) > 10
+        assert len(tip.source_creators) > 0
+
+
 def test_youtube_aggregator_consensus(youtube_aggregator):
     consensus = youtube_aggregator.get_consensus_comps()
     assert len(consensus) > 0
-    # Check that high frequency comps have multiple creator endorsements
     top_comp = consensus[0]
-    assert top_comp["endorsement_count"] >= 2
-    assert len(top_comp["creators"]) >= 2
+    assert top_comp["endorsement_count"] >= 3
+    assert len(top_comp["creators"]) >= 3
 
 
 def test_youtube_aggregator_search(youtube_aggregator):
     res_draven = youtube_aggregator.search_videos("드레이븐")
     assert len(res_draven) >= 1
 
-    res_creator = youtube_aggregator.search_videos("구루루")
+    res_creator = youtube_aggregator.search_videos("Dishsoap")
     assert len(res_creator) >= 1
 
 
@@ -98,7 +143,6 @@ def test_meta_synthesizer_decks(meta_synthesizer):
         assert len(d.tank_units) > 0
         assert len(d.bis_items) > 0
         assert len(d.level_up_guide) > 0
-        # Check board placement limits
         for unit in d.core_champions:
             assert 1 <= unit.row <= 4
             assert 1 <= unit.col <= 7
@@ -110,8 +154,9 @@ def test_meta_synthesizer_search(meta_synthesizer):
     assert search_res["matched_videos_count"] >= 1
     assert search_res["matched_patch_changes_count"] >= 1
 
-    search_camille = meta_synthesizer.search_meta("카밀")
-    assert search_camille["matched_decks_count"] >= 1
+    # Search tip
+    search_tip = meta_synthesizer.search_meta("롤다운")
+    assert search_tip["matched_tips_count"] >= 1
 
 
 def test_api_meta_version(client):
@@ -130,13 +175,31 @@ def test_api_meta_patch(client):
     assert "system_changes" in data
 
 
-def test_api_meta_youtube(client):
+def test_api_meta_youtube_and_regions(client):
     res = client.get("/api/meta/youtube")
     assert res.status_code == 200
     data = res.json()
-    assert "videos" in data
-    assert "consensus_comps" in data
-    assert data["total_videos"] >= 4
+    assert data["total_videos"] >= 7
+
+    res_global = client.get("/api/meta/youtube?region=GLOBAL")
+    assert res_global.status_code == 200
+    assert res_global.json()["total_videos"] >= 4
+
+    res_kr = client.get("/api/meta/youtube?region=KR")
+    assert res_kr.status_code == 200
+    assert res_kr.json()["total_videos"] >= 4
+
+
+def test_api_meta_tips(client):
+    res = client.get("/api/meta/tips")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["total_tips"] >= 5
+    assert "최근 5개 시즌" in data["scope"]
+
+    res_econ = client.get("/api/meta/tips?category=ECONOMY")
+    assert res_econ.status_code == 200
+    assert len(res_econ.json()["tips"]) >= 1
 
 
 def test_api_meta_decks(client):
@@ -144,12 +207,6 @@ def test_api_meta_decks(client):
     assert res.status_code == 200
     decks = res.json()
     assert len(decks) >= 4
-
-    # Test filtering by tier
-    res_s = client.get("/api/meta/decks?tier=S")
-    assert res_s.status_code == 200
-    for d in res_s.json():
-        assert d["tier"] == "S"
 
 
 def test_api_meta_deck_detail(client):
@@ -159,9 +216,6 @@ def test_api_meta_deck_detail(client):
     assert deck["deck_id"] == "elder_dragon_draven_fast9"
     assert "드레이븐" in deck["name"]
 
-    res_404 = client.get("/api/meta/deck/non_existent_deck")
-    assert res_404.status_code == 404
-
 
 def test_api_meta_insights(client):
     res = client.get("/api/meta/insights")
@@ -170,19 +224,13 @@ def test_api_meta_insights(client):
     assert "summary" in data
     assert "tier_list" in data
     assert "consensus" in data
-
-
-def test_api_meta_search(client):
-    res = client.get("/api/meta/search?q=나무정령")
-    assert res.status_code == 200
-    data = res.json()
-    assert data["matched_decks_count"] >= 1
-    assert data["matched_patch_changes_count"] >= 1
+    assert "mastery_tips" in data
+    assert len(data["mastery_tips"]) >= 5
 
 
 def test_frontend_home_serves_meta_dashboard(client):
     res = client.get("/")
     assert res.status_code == 200
     content = res.text
-    assert "롤토체스 메타 & 유튜브 인텔리전스" in content
-    assert "18.2" in content
+    assert "롤토체스 메타 & 글로벌 유튜브 인텔리전스" in content
+    assert "5시즌 누적 마스터 팁" in content

@@ -28,14 +28,27 @@ def get_patch_notes() -> Dict[str, Any]:
 
 
 @meta_router.get("/youtube")
-def get_youtube_insights() -> Dict[str, Any]:
-    """Returns curated YouTube creator videos, timestamps, and tips."""
-    videos = _youtube_agg.get_videos()
+def get_youtube_insights(region: Optional[str] = Query(None, description="Filter by region: KR, GLOBAL, ALL")) -> Dict[str, Any]:
+    """Returns curated YouTube creator videos (KR & Global), timestamps, and tips."""
+    videos = _youtube_agg.get_videos(region=region)
     consensus = _youtube_agg.get_consensus_comps()
     return {
         "total_videos": len(videos),
+        "region_filter": region or "ALL",
         "consensus_comps": consensus,
         "videos": [v.to_dict() for v in videos]
+    }
+
+
+@meta_router.get("/tips")
+def get_mastery_tips(category: Optional[str] = Query(None, description="Filter by category: ECONOMY, ROLLDOWN, POSITIONING, AUGMENTS, ITEMS, ALL")) -> Dict[str, Any]:
+    """Returns 5-season fundamental mastery tips across Set 14 to Set 18."""
+    tips = _youtube_agg.get_mastery_tips(category=category)
+    return {
+        "total_tips": len(tips),
+        "category_filter": category or "ALL",
+        "scope": "최근 5개 시즌 (세트 14~18) 챌린저 공통 원칙",
+        "tips": [t.to_dict() for t in tips]
     }
 
 
@@ -60,16 +73,18 @@ def get_deck_detail(deck_id: str) -> Dict[str, Any]:
 
 @meta_router.get("/insights")
 def get_meta_insights() -> Dict[str, Any]:
-    """Returns consolidated meta intelligence (consensus, rising comps, creator opinions)."""
+    """Returns consolidated meta intelligence (consensus, rising comps, creator opinions, mastery tips)."""
     summary = _synthesizer.get_meta_intelligence_summary()
     tier_list = _synthesizer.get_tier_list()
     consensus = _youtube_agg.get_consensus_comps()
     patch_summary = _patch_analyzer.get_summary_dict()
+    mastery_tips = _youtube_agg.get_mastery_tips()
     return {
         "summary": summary.to_dict(),
         "tier_list": tier_list,
         "consensus": consensus,
-        "patch_summary": patch_summary
+        "patch_summary": patch_summary,
+        "mastery_tips": [t.to_dict() for t in mastery_tips]
     }
 
 

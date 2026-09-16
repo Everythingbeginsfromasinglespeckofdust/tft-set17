@@ -125,7 +125,7 @@ class MetaSynthesizer:
                 recommended_augments=["헤지펀드", "작은 거인들", "경험치 부스터", "드레이븐 전용 증강체", "사이버네틱 흡혈"],
                 counters=["암살자 침투 조합", "극딜 르블랑 원콤"],
                 strong_against=["단단한 탱커 위주 덱", "슬로우 템포 리롤 덱"],
-                youtube_mentions=["구루루 (Gururu)", "쪼해피롱 (ChoHappyRong)", "Bebe872"],
+                youtube_mentions=["구루루 (Gururu)", "쪼해피롱 (ChoHappyRong)", "Dishsoap (World Champion)", "Setsuko", "Bebe872"],
                 patch_status="BUFF_BENEFICIARY"
             ),
 
@@ -172,7 +172,7 @@ class MetaSynthesizer:
                 recommended_augments=["햇빛의 축복", "살인 전차", "판도라의 아이템", "2코스트 영웅 증강"],
                 counters=["침묵 및 광역 하드 CC 조합"],
                 strong_against=["후열 물몸 원거리 캐리 덱", "성장 전 고밸류 덱"],
-                youtube_mentions=["정동글 (JungDongle)", "쪼해피롱 (ChoHappyRong)"],
+                youtube_mentions=["정동글 (JungDongle)", "쪼해피롱 (ChoHappyRong)", "Frodan", "Mortdog"],
                 patch_status="STABLE"
             ),
 
@@ -222,7 +222,7 @@ class MetaSynthesizer:
                 recommended_augments=["나무정령 문장", "성장기", "초월", "사이버네틱 외골격"],
                 counters=["퍼센트 고정 피해 덱"],
                 strong_against=["지속 딜 중심의 사냥꾼 덱", "단발성 버스트 덱"],
-                youtube_mentions=["구루루 (Gururu)", "쪼해피롱 (ChoHappyRong)", "Bebe872"],
+                youtube_mentions=["구루루 (Gururu)", "쪼해피롱 (ChoHappyRong)", "Dishsoap (World Champion)", "Frodan", "Bebe872"],
                 patch_status="BUFF_BENEFICIARY"
             ),
 
@@ -269,7 +269,7 @@ class MetaSynthesizer:
                 recommended_augments=["야생의 분노", "사이버네틱 이식", "살인 전차", "보석 연꽃"],
                 counters=["강력한 단일 제압 CC 유닛"],
                 strong_against=["드레이븐 후열 캐리 덱 (도약으로 후열 암살)"],
-                youtube_mentions=["김루트 (KimRoot)", "쪼해피롱 (ChoHappyRong)"],
+                youtube_mentions=["김루트 (KimRoot)", "쪼해피롱 (ChoHappyRong)", "Setsuko", "Frodan"],
                 patch_status="BUFF_BENEFICIARY"
             ),
 
@@ -339,14 +339,18 @@ class MetaSynthesizer:
                 return d
         return None
 
+    def get_mastery_tips(self, category: Optional[str] = None) -> List[Dict[str, Any]]:
+        return [t.to_dict() for t in self.youtube_agg.get_mastery_tips(category)]
+
     def search_meta(self, query: str) -> Dict[str, Any]:
-        """Searches decks, champions, traits, and YouTube videos matching the query."""
+        """Searches decks, champions, traits, YouTube videos, and 5-season mastery tips."""
         q = query.lower().strip()
         if not q:
             return {
                 "query": query,
                 "matched_decks": [d.to_dict() for d in self._decks],
                 "matched_videos": [v.to_dict() for v in self.youtube_agg.get_videos()],
+                "matched_tips": [t.to_dict() for t in self.youtube_agg.get_mastery_tips()],
                 "matched_patch_changes": [c.to_dict() for c in self.patch_analyzer.get_patch_notes().changes[:5]]
             }
 
@@ -355,11 +359,13 @@ class MetaSynthesizer:
             champs = " ".join(u.name.lower() for u in d.core_champions)
             traits = " ".join(t["name"].lower() for t in d.active_traits)
             items = " ".join(item.lower() for item_list in d.bis_items.values() for item in item_list)
-            haystack = f"{d.name.lower()} {d.name_en.lower()} {d.summary.lower()} {champs} {traits} {items}"
+            mentions = " ".join(m.lower() for m in d.youtube_mentions)
+            haystack = f"{d.name.lower()} {d.name_en.lower()} {d.summary.lower()} {champs} {traits} {items} {mentions}"
             if q in haystack:
                 matched_decks.append(d.to_dict())
 
         matched_videos = [v.to_dict() for v in self.youtube_agg.search_videos(q)]
+        matched_tips = [t.to_dict() for t in self.youtube_agg.search_tips(q)]
         matched_changes = [
             c.to_dict() for c in self.patch_analyzer.get_patch_notes().changes
             if q in c.name.lower() or q in c.summary.lower()
@@ -371,6 +377,8 @@ class MetaSynthesizer:
             "matched_decks": matched_decks,
             "matched_videos_count": len(matched_videos),
             "matched_videos": matched_videos,
+            "matched_tips_count": len(matched_tips),
+            "matched_tips": matched_tips,
             "matched_patch_changes_count": len(matched_changes),
             "matched_patch_changes": matched_changes
         }
