@@ -36,7 +36,8 @@
     "source_creators": [
       "Frodan",
       "쪼해피롱",
-      "Bebe872"
+      "Bebe872",
+      "두니주니"
     ],
     "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
     "impact_level": "ESSENTIAL"
@@ -50,7 +51,8 @@
     "source_creators": [
       "정동글",
       "Setsuko",
-      "구루루"
+      "구루루",
+      "Deisik"
     ],
     "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
     "impact_level": "ADVANCED"
@@ -64,7 +66,8 @@
     "source_creators": [
       "Dishsoap",
       "Mortdog",
-      "Bebe872"
+      "Bebe872",
+      "Sologesang"
     ],
     "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
     "impact_level": "ESSENTIAL"
@@ -72,15 +75,58 @@
   {
     "tip_id": "tip_scouting_last_10s",
     "category": "POSITIONING",
-    "title": "마지막 10초 정찰 및 메인 딜러 반대편 대각선 저격",
+    "title": "마지막 10초 정찰 및 메인 딜러 반대편 대각선 저격 (페이크 배치)",
     "description": "후반 1대1 혹은 3파전 구도에서는 덱 파워보다 배치 싸움이 승패의 80%를 결정합니다. 상대 메인 캐리의 위치(왼쪽 구석 vs 오른쪽 구석)를 확인하고 내 메인 브루저나 암살 유닛을 대각선 반대편으로 스왑하여 침투 경로를 만드세요.",
     "key_rule": "준비 시간 5초 남았을 때 1번과 7번 열을 반대로 스왑하는 '페이크 배치'로 상대 배치를 무력화하라.",
     "source_creators": [
       "Setsuko",
       "김루트",
-      "쪼해피롱"
+      "쪼해피롱",
+      "Subzeroark"
     ],
     "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
     "impact_level": "ADVANCED"
+  },
+  {
+    "tip_id": "tip_loss_streak_rebound",
+    "category": "ECONOMY",
+    "title": "연패 운영 시 3-5 템포업 올인 반등 프로토콜",
+    "description": "초반 기물이 안 붙어 연패를 탔을 때 4-1까지 버티다가 피가 30 이하로 떨어져 죽는 경우가 허다합니다. 연패 시 3-5 라운드에 과감하게 7레벨을 치고 30골드 선까지 리롤하여 4코 1장과 2성 앞라인을 선점해 피 손실을 즉시 차단해야 합니다.",
+    "key_rule": "연패는 3-5 라운드가 전환점이다. 3-5에 레벨업과 리롤을 단행해 연패를 끊고 순방권으로 복귀하라.",
+    "source_creators": [
+      "승상싱",
+      "RobinSongz",
+      "k3soju"
+    ],
+    "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
+    "impact_level": "ADVANCED"
+  },
+  {
+    "tip_id": "tip_top4_vs_first_mindset",
+    "category": "ROLLDOWN",
+    "title": "1등 노리기(고밸류 9렙) vs 4등 순방 분기점 판단법",
+    "description": "로비에 트럭(압도적 1등)이 2명 이상 있고 내 체력이 40 이하일 때 고밸류 9레벨을 억지로 가려 하면 7~8등으로 추락합니다. 이때는 8레벨에서 4코 2성 3마리를 완성하고 돈을 다 털어 3~4등을 확정 짓는 '순방 모드'로 빠르게 전환해야 합니다.",
+    "key_rule": "체력 40 이하 & 골드 부족 시 9렙 꿈을 버리고 8렙 올인으로 3~4등 순방을 확보하라.",
+    "source_creators": [
+      "RobinSongz",
+      "두니주니",
+      "Dishsoap"
+    ],
+    "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
+    "impact_level": "ESSENTIAL"
+  },
+  {
+    "tip_id": "tip_carousel_component_priority",
+    "category": "ITEMS",
+    "title": "초밥집 아이템 선택 시 범용 방어/유틸 부품의 절대 가치",
+    "description": "초밥집에서 딜러 3신기를 맞추겠다고 무리하게 공격 부품만 고집하다가 탱커 방템이 0개가 되면 전투가 성립하지 않습니다. 쇠사슬조끼, 음전자망토, 거인의허리띠 같은 범용 탱킹 부품은 어떤 덱에서도 100% 밥값을 합니다.",
+    "key_rule": "초반 2~3스테이지 초밥집에서는 딜러 부품보다 앞라인을 지킬 쇠사슬조끼나 허리띠의 가치가 더 높다.",
+    "source_creators": [
+      "Sologesang",
+      "오박사",
+      "Frodan"
+    ],
+    "seasons_valid": "최근 5개 시즌 (세트 14~18 검증)",
+    "impact_level": "ESSENTIAL"
   }
 ]

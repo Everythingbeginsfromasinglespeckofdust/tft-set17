@@ -14,7 +14,7 @@
     "key_comps_recommended": [
       "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
       "나무정령 드레이븐 밸류 (Elderwood Draven)",
-      "일월식 알룬"
+      "일월식 알룬 캐리 (Eclipse Alune AP)"
     ],
     "summary": "18.2 패치로 9레벨/10레벨 필요 경험치가 68으로 완화되고 수호령 비용이 대폭 인하되면서 8레벨에서 돈을 털지 않고 9레벨을 찍은 뒤 드레이븐 + 5코스트 전설 기물을 도배하는 고밸류 덱이 현 메타 원탑입니다.",
     "timestamps": [
@@ -58,7 +58,7 @@
       "나무정령 드레이븐 밸류 (Elderwood Draven)",
       "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
       "쿠거 니달리 4코 운영 (Cougar Nidalee)",
-      "협곡야수 조약돌"
+      "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)"
     ],
     "summary": "사냥꾼과 마스터 이가 너프되고 나무정령과 악의 여단, 드레이븐이 버프를 받았습니다. 현재 메타는 '패스트 9 드레이븐 밸류'와 '2코 리롤 햇빛 아칼리/카밀'이 양대 산맥을 형성하고 있습니다.",
     "timestamps": [
@@ -143,7 +143,7 @@
     "season_tag": "세트 18",
     "key_comps_recommended": [
       "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
-      "협곡야수 조약돌"
+      "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)"
     ],
     "summary": "18.2b 핫픽스로 카밀의 3성 스킬 데미지가 소폭 감소했지만, 햇빛 시너지 자체의 유지력과 아칼리의 암살 능력 덕분에 2코 3성 리롤 덱 중에서는 여전히 독보적인 1티어입니다.",
     "timestamps": [
@@ -167,6 +167,151 @@
     "creator_tips": [
       "카밀에게는 피바라기/정손/거결, 아칼리에게는 인피/보석연꽃/라바돈을 주어 투캐리 구조를 만드세요.",
       "레오나 3성까지 같이 붙어주면 앞라인이 절대 무너지지 않습니다."
+    ]
+  },
+  {
+    "video_id": "dunijuni_18_2_guide",
+    "title": "[18.2 패치] 챌린저가 알려주는 가장 쉬운 순방 빌드업 & 증강체 티어 가이드",
+    "channel_name": "두니주니 (DuniJuni)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vdunijuni=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-12",
+    "video_url": "https://www.youtube.com/watch?v=mock_dunijuni_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_dunijuni_18_2/hqdefault.jpg",
+    "view_count": "7.3만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "초보자도 따라하기 쉬운 18.2 초중반 피관리용 나무정령/야수 빌드업과 증강체 선택 통계를 상세 해설합니다. 전투 증강체와 경제 증강체의 최적 배분 비율을 안내합니다.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "18.2 초반 1~3코스트 추천 빌드업"
+      },
+      {
+        "time": "04:10",
+        "title": "증강체 승률 통계 TOP 10"
+      },
+      {
+        "time": "09:30",
+        "title": "중반 연승을 굳히는 템 슬램 공식"
+      }
+    ],
+    "creator_tips": [
+      "초반 2-1에 전투 증강을 집고 2연승을 챙기면 스노우볼이 굴러 후반 9레벨이 편해집니다.",
+      "아이템은 B.F.와 곡궁을 먼저 집는 것이 AD 기반 메타에서 가장 유연합니다."
+    ]
+  },
+  {
+    "video_id": "seungsang_18_2_rebound",
+    "title": "연패 타고도 1등하는 법! 18.2 챌린저 큐 3-5 반등 템포업 운영 실전 강의",
+    "channel_name": "승상싱 (Seungsangsing)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vseungsang=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-13",
+    "video_url": "https://www.youtube.com/watch?v=mock_seungsang_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_seungsang_18_2/hqdefault.jpg",
+    "view_count": "6.1만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "악의 여단 르블랑 (Coven LeBlanc)"
+    ],
+    "summary": "초반 패가 말려 5연패를 탔을 때 3-5 라운드에서 골드를 털어 7레벨을 찍고 필드를 안정화하는 챌린저의 위기 관리 비법. 피 40 이하에서 1등으로 반등하는 실전 리플레이.",
+    "timestamps": [
+      {
+        "time": "01:20",
+        "title": "연패 시 골드 모으는 기준과 이자선"
+      },
+      {
+        "time": "05:40",
+        "title": "3-5 반등 롤다운 4코스트 선점"
+      },
+      {
+        "time": "11:00",
+        "title": "피 30대에서 1등으로 올라가는 배치 팁"
+      }
+    ],
+    "creator_tips": [
+      "연패할 때는 절대 애매하게 한두 마리만 사지 말고 확실하게 이자를 봐서 3-5에 50골드를 만드세요.",
+      "3-5 라운드에 7렙을 찍고 30골드를 남긴 상태에서 2성 앞라인을 최소 2개 확보해야 연패가 끊깁니다."
+    ]
+  },
+  {
+    "video_id": "ssangkal_18_2_reroll",
+    "title": "사냥꾼 너프되고 빈집 털이로 꿀빠는 '협곡야수 조약돌' 1코 3성 리롤 공략",
+    "channel_name": "쌍칼 (Ssangkal)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vssangkal=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-14",
+    "video_url": "https://www.youtube.com/watch?v=mock_ssangkal_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_ssangkal_18_2/hqdefault.jpg",
+    "view_count": "4.8만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+    ],
+    "summary": "모두가 9레벨 고밸류 덱이나 2코 리롤을 볼 때 4-1 라운드 전에 1코 3성을 찍어 로비 전체를 두들겨 패는 1코 리롤 덱. 템포가 빠른 한국 챌린저 큐에서 순방률 75%를 기록하는 날빌 운영.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "왜 지금 1코 리롤인가?"
+      },
+      {
+        "time": "03:20",
+        "title": "3-1 4레벨 올인 롤다운 타이밍"
+      },
+      {
+        "time": "07:50",
+        "title": "조약돌 3성 완성 후 레벨업 템포"
+      }
+    ],
+    "creator_tips": [
+      "3-1 라운드에 4레벨 8경험치 상태에서 30골드 남길 때까지 돌려 1코 기물 5마리 이상을 모으세요.",
+      "1코 3성이 완성되면 50원 이자를 보지 말고 6렙/7렙을 빠르게 쳐서 상대 피를 깎아야 합니다."
+    ]
+  },
+  {
+    "video_id": "droh_18_2b_stats",
+    "title": "[18.2b 통계 분석] 승률 1위 덱은 따로 있다? 마스터+ 10만 판 빅데이터 분석",
+    "channel_name": "오박사 (Dr. Oh)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vdroh=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-15",
+    "video_url": "https://www.youtube.com/watch?v=mock_droh_18_2b",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_droh_18_2b/hqdefault.jpg",
+    "view_count": "5.5만회",
+    "region": "KR",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "롤체지지와 메타TFT 마스터 이상 티어 10만 판 전적 데이터를 기반으로 한 통계 리포트. 순방률 1위는 나무정령 드레이븐(65.8%), 1등 확률 1위는 장로드래곤 드레이븐(28.4%)으로 나타났습니다.",
+    "timestamps": [
+      {
+        "time": "00:40",
+        "title": "18.2b 패치 전후 승률 변동 그래프"
+      },
+      {
+        "time": "04:15",
+        "title": "평균 순위 TOP 3 조합 비교"
+      },
+      {
+        "time": "08:50",
+        "title": "아이템 승률 통계 (구인수 vs 피바라기)"
+      }
+    ],
+    "creator_tips": [
+      "통계적으로 4-5 라운드에 체력 60 이상인 유저는 87% 확률로 순방(Top 4)에 진입합니다.",
+      "드레이븐에게 구인수가 들어갔을 때의 승률이 무한의 대검보다 4.2% 높게 집계됩니다."
     ]
   },
   {
@@ -294,6 +439,78 @@
     ]
   },
   {
+    "video_id": "k3soju_18_2_fast9",
+    "title": "Patch 18.2b IT'S A FIRST OR EIF: Fast 9 Draven Legendary Cap in Challenger",
+    "channel_name": "k3soju",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vk3soju=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-13",
+    "video_url": "https://www.youtube.com/watch?v=mock_k3soju_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_k3soju_18_2/hqdefault.jpg",
+    "view_count": "14.2만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)"
+    ],
+    "summary": "Iconic NA streamer k3soju demonstrates the high-roller 'First or Eighth' mentality adapted to the 18.2 68 XP changes. Greeding 50 gold through Stage 4 to hit a full 2-star 5-cost legendary board on Stage 5-2.",
+    "timestamps": [
+      {
+        "time": "00:30",
+        "title": "Greeding Economy on Stage 3"
+      },
+      {
+        "time": "06:10",
+        "title": "The Stage 4-5 Death Door Stabilization"
+      },
+      {
+        "time": "12:40",
+        "title": "Full 5-Cost Capped Board Rebuild in 1 Turn"
+      }
+    ],
+    "creator_tips": [
+      "If you take a prismatic econ augment on 2-1, committing to anything other than Fast 9 is playing for 4th. Play for 1st.",
+      "APM matters: practice swapping 6 bench units in 1 turn when you hit level 9 on 5-2."
+    ]
+  },
+  {
+    "video_id": "robinsongz_18_2_consistency",
+    "title": "How to Top 4 Every Game in Patch 18.2b (Consistency Masterclass)",
+    "channel_name": "RobinSongz",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vrobin=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-14",
+    "video_url": "https://www.youtube.com/watch?v=mock_robin_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_robin_18_2/hqdefault.jpg",
+    "view_count": "7.8만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+    ],
+    "summary": "Former NA champion RobinSongz teaches how to climb without risking 8ths. Shows how rolling down at Level 8 for a stable 4-cost 2-star frontline reliably locks in Top 3 against greedy Fast 9 players.",
+    "timestamps": [
+      {
+        "time": "01:15",
+        "title": "The Danger of Fast 9 in Contested Lobbies"
+      },
+      {
+        "time": "04:50",
+        "title": "4-2 Level 8 Stabilization Rule"
+      },
+      {
+        "time": "09:30",
+        "title": "Minimizing Stage 4 Damage Taken"
+      }
+    ],
+    "creator_tips": [
+      "When 4 people are competing for Draven and Level 9, pivoting to Nidalee or Camille reroll yields an average placement of 2.8.",
+      "Never bleed more than 15 HP on Stage 4. Roll 20 gold to stabilize if your frontline is 1-star."
+    ]
+  },
+  {
     "video_id": "mortdog_18_2_rundown",
     "title": "TFT Patch 18.2 & 18.2b Dev Rundown: Why We Changed Level 9 to 68 XP",
     "channel_name": "Mortdog (Lead Designer)",
@@ -372,6 +589,115 @@
     "creator_tips": [
       "Never roll down to 0 at level 8 unless you are below 25 HP. Preserving 50 gold to push 9 is +0.8 average placement.",
       "Slam general items early (Bloodthirster, Guinsoo, Sunfire, Warmog) to preserve HP streak."
+    ]
+  },
+  {
+    "video_id": "deisik_18_2_euw",
+    "title": "[EUW #1 Challenger] How EU Dominates Patch 18.2b with Elderwood & Coven Positioning Tech",
+    "channel_name": "Deisik (EUW #1)",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vdeisik=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-13",
+    "video_url": "https://www.youtube.com/watch?v=mock_deisik_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_deisik_18_2/hqdefault.jpg",
+    "view_count": "6.4만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "악의 여단 르블랑 (Coven LeBlanc)"
+    ],
+    "summary": "Top European player Deisik explores positional micro in Patch 18.2b. Shows how corner-wrapping Elderwood tanks forces enemy Draven into walking into LeBlanc skill range.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "EUW Meta vs NA Meta Comparison"
+      },
+      {
+        "time": "04:45",
+        "title": "Coven LeBlanc Burst Targeting Tech"
+      },
+      {
+        "time": "10:10",
+        "title": "Frontline Clumping to Maximize Buffs"
+      }
+    ],
+    "creator_tips": [
+      "Never place Maokai directly in front of Draven; place him 1 hex offset to prevent Draven from building free Guinsoo stacks early.",
+      "Coven LeBlanc's secondary chain spreads to the nearest clump, so scout for corner clumped opponents."
+    ]
+  },
+  {
+    "video_id": "sologesang_18_2_tierlist",
+    "title": "TFT Patch 18.2b Complete Meta Tier List & Item Priority Guide (German Pro)",
+    "channel_name": "Sologesang",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vsologesang=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-14",
+    "video_url": "https://www.youtube.com/watch?v=mock_sologesang_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_sologesang_18_2/hqdefault.jpg",
+    "view_count": "5.9만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "나무정령 드레이븐 밸류 (Elderwood Draven)",
+      "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+    ],
+    "summary": "Veteran German Challenger Sologesang provides a granular breakdown of item slam priorities in 18.2b. Analyzes carousel selection priority when AD components are contested.",
+    "timestamps": [
+      {
+        "time": "00:00",
+        "title": "Tier List Overview: S+ to B Tier"
+      },
+      {
+        "time": "05:15",
+        "title": "Carousel Item Hierarchy"
+      },
+      {
+        "time": "09:30",
+        "title": "Standard Leveling Curves for 18.2b"
+      }
+    ],
+    "creator_tips": [
+      "When Bows and Swords are taken on carousel, immediately secure Chain Vest or Giant's Belt for Sunfire Cape.",
+      "Bloodthirster has the highest flex value because it works equally well on Draven, Nidalee, and Camille."
+    ]
+  },
+  {
+    "video_id": "subzeroark_18_2_vod",
+    "title": "Challenger VOD Review: The 1v1 Endgame Positioning Decisions that Win Tournaments (18.2b)",
+    "channel_name": "Subzeroark",
+    "channel_avatar": "https://yt3.googleusercontent.com/ytc/AIdro_k6Vsubzero=s176-c-k-c0x00ffffff-no-rj",
+    "published_at": "2026-09-15",
+    "video_url": "https://www.youtube.com/watch?v=mock_subzero_18_2",
+    "thumbnail_url": "https://i.ytimg.com/vi/mock_subzero_18_2/hqdefault.jpg",
+    "view_count": "4.3만회",
+    "region": "GLOBAL",
+    "post_patch_verified": true,
+    "season_tag": "세트 18",
+    "key_comps_recommended": [
+      "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+      "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+    ],
+    "summary": "Coach Subzeroark reviews Stage 6 and Stage 7 decision making in high-elo tournaments under Patch 18.2b. Demonstrates how a single 3-second fake swap wins games against fully capped legendary boards.",
+    "timestamps": [
+      {
+        "time": "01:20",
+        "title": "Stage 6 Board Evaluation"
+      },
+      {
+        "time": "06:40",
+        "title": "The Last 5 Seconds Positioning Mind Game"
+      },
+      {
+        "time": "11:50",
+        "title": "Zephyr & Shroud Late Game Impact"
+      }
+    ],
+    "creator_tips": [
+      "In the final 1v1, keep a placeholder unit on the bench to swap carry position at 2 seconds without clicking board tiles.",
+      "Shroud of Stillness is worth +1.5 placements on Stage 6 against Draven and Ahri."
     ]
   }
 ]

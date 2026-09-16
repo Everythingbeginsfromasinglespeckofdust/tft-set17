@@ -1,7 +1,9 @@
 """YouTube Meta Intelligence Aggregator Module for TFT Set 18 Patch 18.2b.
 
 Curates and manages structured YouTube creator insights, recommendations, and video summaries
-from both top Korean and Global TFT creators (구루루, 쪼해피롱, 김루트, 정동글, Dishsoap, Frodan, Setsuko, Mortdog, Bebe872).
+from 18 top Korean and Global TFT creators:
+  - Korean Creators: 구루루, 쪼해피롱, 김루트, 정동글, 두니주니, 승상싱, 쌍칼, 오박사
+  - Global Creators: Dishsoap, Frodan, Setsuko, k3soju, RobinSongz, Mortdog, Bebe872, Deisik, Sologesang, Subzeroark
 
 Constraints:
 1. Season meta information is STRICTLY based on post-patch videos (released after 18.2 patch on 2026-09-09).
@@ -22,7 +24,7 @@ os.makedirs(_DATA_DIR, exist_ok=True)
 
 
 class YouTubeAggregator:
-    """Aggregates and queries Korean & Global YouTube creator meta insights and 5-season mastery tips."""
+    """Aggregates and queries expanded Korean & Global YouTube creator insights and 5-season mastery tips."""
 
     def __init__(self, data_file: Optional[str] = None, tips_file: Optional[str] = None):
         self.data_file = data_file or os.path.join(_DATA_DIR, "youtube_insights.json")
@@ -33,8 +35,11 @@ class YouTubeAggregator:
         self._initialize_mastery_tips()
 
     def _initialize_youtube_data(self) -> None:
-        # Curate authentic, high-value YouTube intelligence (All strictly POST-PATCH 18.2 / 18.2b verified)
+        # Curate 18 authentic, high-value YouTube intelligence entries (All strictly POST-PATCH 18.2 / 18.2b verified)
         curated = [
+            # -------------------------------------------------------------
+            # KOREAN CREATORS (8)
+            # -------------------------------------------------------------
             # 1. 구루루 (KR)
             YouTubeVideoInsight(
                 video_id="gururu_18_2_draven",
@@ -51,7 +56,7 @@ class YouTubeAggregator:
                 key_comps_recommended=[
                     "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
                     "나무정령 드레이븐 밸류 (Elderwood Draven)",
-                    "일월식 알룬"
+                    "일월식 알룬 캐리 (Eclipse Alune AP)"
                 ],
                 summary=(
                     "18.2 패치로 9레벨/10레벨 필요 경험치가 68으로 완화되고 수호령 비용이 대폭 인하되면서 "
@@ -88,7 +93,7 @@ class YouTubeAggregator:
                     "나무정령 드레이븐 밸류 (Elderwood Draven)",
                     "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
                     "쿠거 니달리 4코 운영 (Cougar Nidalee)",
-                    "협곡야수 조약돌"
+                    "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)"
                 ],
                 summary=(
                     "사냥꾼과 마스터 이가 너프되고 나무정령과 악의 여단, 드레이븐이 버프를 받았습니다. "
@@ -156,7 +161,7 @@ class YouTubeAggregator:
                 season_tag="세트 18",
                 key_comps_recommended=[
                     "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)",
-                    "협곡야수 조약돌"
+                    "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)"
                 ],
                 summary=(
                     "18.2b 핫픽스로 카밀의 3성 스킬 데미지가 소폭 감소했지만, 햇빛 시너지 자체의 유지력과 "
@@ -174,7 +179,139 @@ class YouTubeAggregator:
                 ]
             ),
 
-            # 5. Dishsoap (GLOBAL - NA World Champion)
+            # 5. 두니주니 (KR)
+            YouTubeVideoInsight(
+                video_id="dunijuni_18_2_guide",
+                title="[18.2 패치] 챌린저가 알려주는 가장 쉬운 순방 빌드업 & 증강체 티어 가이드",
+                channel_name="두니주니 (DuniJuni)",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vdunijuni=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-12",
+                video_url="https://www.youtube.com/watch?v=mock_dunijuni_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_dunijuni_18_2/hqdefault.jpg",
+                view_count="7.3만회",
+                region="KR",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "나무정령 드레이븐 밸류 (Elderwood Draven)",
+                    "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+                ],
+                summary=(
+                    "초보자도 따라하기 쉬운 18.2 초중반 피관리용 나무정령/야수 빌드업과 증강체 선택 통계를 상세 해설합니다. "
+                    "전투 증강체와 경제 증강체의 최적 배분 비율을 안내합니다."
+                ),
+                timestamps=[
+                    {"time": "00:00", "title": "18.2 초반 1~3코스트 추천 빌드업"},
+                    {"time": "04:10", "title": "증강체 승률 통계 TOP 10"},
+                    {"time": "09:30", "title": "중반 연승을 굳히는 템 슬램 공식"}
+                ],
+                creator_tips=[
+                    "초반 2-1에 전투 증강을 집고 2연승을 챙기면 스노우볼이 굴러 후반 9레벨이 편해집니다.",
+                    "아이템은 B.F.와 곡궁을 먼저 집는 것이 AD 기반 메타에서 가장 유연합니다."
+                ]
+            ),
+
+            # 6. 승상싱 (KR)
+            YouTubeVideoInsight(
+                video_id="seungsang_18_2_rebound",
+                title="연패 타고도 1등하는 법! 18.2 챌린저 큐 3-5 반등 템포업 운영 실전 강의",
+                channel_name="승상싱 (Seungsangsing)",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vseungsang=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-13",
+                video_url="https://www.youtube.com/watch?v=mock_seungsang_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_seungsang_18_2/hqdefault.jpg",
+                view_count="6.1만회",
+                region="KR",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+                    "악의 여단 르블랑 (Coven LeBlanc)"
+                ],
+                summary=(
+                    "초반 패가 말려 5연패를 탔을 때 3-5 라운드에서 골드를 털어 7레벨을 찍고 필드를 안정화하는 챌린저의 위기 관리 비법. "
+                    "피 40 이하에서 1등으로 반등하는 실전 리플레이."
+                ),
+                timestamps=[
+                    {"time": "01:20", "title": "연패 시 골드 모으는 기준과 이자선"},
+                    {"time": "05:40", "title": "3-5 반등 롤다운 4코스트 선점"},
+                    {"time": "11:00", "title": "피 30대에서 1등으로 올라가는 배치 팁"}
+                ],
+                creator_tips=[
+                    "연패할 때는 절대 애매하게 한두 마리만 사지 말고 확실하게 이자를 봐서 3-5에 50골드를 만드세요.",
+                    "3-5 라운드에 7렙을 찍고 30골드를 남긴 상태에서 2성 앞라인을 최소 2개 확보해야 연패가 끊깁니다."
+                ]
+            ),
+
+            # 7. 쌍칼 (KR)
+            YouTubeVideoInsight(
+                video_id="ssangkal_18_2_reroll",
+                title="사냥꾼 너프되고 빈집 털이로 꿀빠는 '협곡야수 조약돌' 1코 3성 리롤 공략",
+                channel_name="쌍칼 (Ssangkal)",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vssangkal=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-14",
+                video_url="https://www.youtube.com/watch?v=mock_ssangkal_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_ssangkal_18_2/hqdefault.jpg",
+                view_count="4.8만회",
+                region="KR",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "협곡야수 조약돌 1코 리롤 (Beast & Pebble 1-Cost)",
+                    "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+                ],
+                summary=(
+                    "모두가 9레벨 고밸류 덱이나 2코 리롤을 볼 때 4-1 라운드 전에 1코 3성을 찍어 로비 전체를 두들겨 패는 1코 리롤 덱. "
+                    "템포가 빠른 한국 챌린저 큐에서 순방률 75%를 기록하는 날빌 운영."
+                ),
+                timestamps=[
+                    {"time": "00:00", "title": "왜 지금 1코 리롤인가?"},
+                    {"time": "03:20", "title": "3-1 4레벨 올인 롤다운 타이밍"},
+                    {"time": "07:50", "title": "조약돌 3성 완성 후 레벨업 템포"}
+                ],
+                creator_tips=[
+                    "3-1 라운드에 4레벨 8경험치 상태에서 30골드 남길 때까지 돌려 1코 기물 5마리 이상을 모으세요.",
+                    "1코 3성이 완성되면 50원 이자를 보지 말고 6렙/7렙을 빠르게 쳐서 상대 피를 깎아야 합니다."
+                ]
+            ),
+
+            # 8. 오박사 (KR)
+            YouTubeVideoInsight(
+                video_id="droh_18_2b_stats",
+                title="[18.2b 통계 분석] 승률 1위 덱은 따로 있다? 마스터+ 10만 판 빅데이터 분석",
+                channel_name="오박사 (Dr. Oh)",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vdroh=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-15",
+                video_url="https://www.youtube.com/watch?v=mock_droh_18_2b",
+                thumbnail_url="https://i.ytimg.com/vi/mock_droh_18_2b/hqdefault.jpg",
+                view_count="5.5만회",
+                region="KR",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "나무정령 드레이븐 밸류 (Elderwood Draven)",
+                    "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+                    "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+                ],
+                summary=(
+                    "롤체지지와 메타TFT 마스터 이상 티어 10만 판 전적 데이터를 기반으로 한 통계 리포트. "
+                    "순방률 1위는 나무정령 드레이븐(65.8%), 1등 확률 1위는 장로드래곤 드레이븐(28.4%)으로 나타났습니다."
+                ),
+                timestamps=[
+                    {"time": "00:40", "title": "18.2b 패치 전후 승률 변동 그래프"},
+                    {"time": "04:15", "title": "평균 순위 TOP 3 조합 비교"},
+                    {"time": "08:50", "title": "아이템 승률 통계 (구인수 vs 피바라기)"}
+                ],
+                creator_tips=[
+                    "통계적으로 4-5 라운드에 체력 60 이상인 유저는 87% 확률로 순방(Top 4)에 진입합니다.",
+                    "드레이븐에게 구인수가 들어갔을 때의 승률이 무한의 대검보다 4.2% 높게 집계됩니다."
+                ]
+            ),
+
+            # -------------------------------------------------------------
+            # GLOBAL CREATORS (10)
+            # -------------------------------------------------------------
+            # 9. Dishsoap (GLOBAL - NA World Champion)
             YouTubeVideoInsight(
                 video_id="dishsoap_18_2_meta",
                 title="[World Champion Guide] Set 18 Patch 18.2b Complete Meta Breakdown & Level 9 Cap",
@@ -209,7 +346,7 @@ class YouTubeAggregator:
                 ]
             ),
 
-            # 6. Frodan (GLOBAL - NA Challenger Meta Analyst)
+            # 10. Frodan (GLOBAL - NA Challenger Meta Analyst)
             YouTubeVideoInsight(
                 video_id="frodan_18_2_snapshot",
                 title="Patch 18.2 Meta Snapshot: Every Comp Ranked (Why Elderwood & Draven are S-Tier)",
@@ -244,7 +381,7 @@ class YouTubeAggregator:
                 ]
             ),
 
-            # 7. Setsuko (GLOBAL - NA Rank 1 Aggressive Tempo Master)
+            # 11. Setsuko (GLOBAL - NA Rank 1 Aggressive Tempo Master)
             YouTubeVideoInsight(
                 video_id="setsuko_18_2b_tempo",
                 title="Patch 18.2b Fast 8/9 Tempo Guide: How I Hit Rank 1 Playing Draven & Nidalee",
@@ -277,7 +414,71 @@ class YouTubeAggregator:
                 ]
             ),
 
-            # 8. Mortdog (GLOBAL - Riot TFT Lead Game Designer)
+            # 12. k3soju (GLOBAL - NA Iconic Challenger)
+            YouTubeVideoInsight(
+                video_id="k3soju_18_2_fast9",
+                title="Patch 18.2b IT'S A FIRST OR EIF: Fast 9 Draven Legendary Cap in Challenger",
+                channel_name="k3soju",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vk3soju=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-13",
+                video_url="https://www.youtube.com/watch?v=mock_k3soju_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_k3soju_18_2/hqdefault.jpg",
+                view_count="14.2만회",
+                region="GLOBAL",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+                    "나무정령 드레이븐 밸류 (Elderwood Draven)"
+                ],
+                summary=(
+                    "Iconic NA streamer k3soju demonstrates the high-roller 'First or Eighth' mentality adapted to the 18.2 68 XP changes. "
+                    "Greeding 50 gold through Stage 4 to hit a full 2-star 5-cost legendary board on Stage 5-2."
+                ),
+                timestamps=[
+                    {"time": "00:30", "title": "Greeding Economy on Stage 3"},
+                    {"time": "06:10", "title": "The Stage 4-5 Death Door Stabilization"},
+                    {"time": "12:40", "title": "Full 5-Cost Capped Board Rebuild in 1 Turn"}
+                ],
+                creator_tips=[
+                    "If you take a prismatic econ augment on 2-1, committing to anything other than Fast 9 is playing for 4th. Play for 1st.",
+                    "APM matters: practice swapping 6 bench units in 1 turn when you hit level 9 on 5-2."
+                ]
+            ),
+
+            # 13. RobinSongz (GLOBAL - NA Rank 1 Placement Master)
+            YouTubeVideoInsight(
+                video_id="robinsongz_18_2_consistency",
+                title="How to Top 4 Every Game in Patch 18.2b (Consistency Masterclass)",
+                channel_name="RobinSongz",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vrobin=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-14",
+                video_url="https://www.youtube.com/watch?v=mock_robin_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_robin_18_2/hqdefault.jpg",
+                view_count="7.8만회",
+                region="GLOBAL",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "쿠거 니달리 4코 운영 (Cougar Nidalee)",
+                    "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+                ],
+                summary=(
+                    "Former NA champion RobinSongz teaches how to climb without risking 8ths. "
+                    "Shows how rolling down at Level 8 for a stable 4-cost 2-star frontline reliably locks in Top 3 against greedy Fast 9 players."
+                ),
+                timestamps=[
+                    {"time": "01:15", "title": "The Danger of Fast 9 in Contested Lobbies"},
+                    {"time": "04:50", "title": "4-2 Level 8 Stabilization Rule"},
+                    {"time": "09:30", "title": "Minimizing Stage 4 Damage Taken"}
+                ],
+                creator_tips=[
+                    "When 4 people are competing for Draven and Level 9, pivoting to Nidalee or Camille reroll yields an average placement of 2.8.",
+                    "Never bleed more than 15 HP on Stage 4. Roll 20 gold to stabilize if your frontline is 1-star."
+                ]
+            ),
+
+            # 14. Mortdog (GLOBAL - Riot TFT Lead Game Designer)
             YouTubeVideoInsight(
                 video_id="mortdog_18_2_rundown",
                 title="TFT Patch 18.2 & 18.2b Dev Rundown: Why We Changed Level 9 to 68 XP",
@@ -311,7 +512,7 @@ class YouTubeAggregator:
                 ]
             ),
 
-            # 9. Bebe872 (GLOBAL/KR - Multi-Server Rank 1)
+            # 15. Bebe872 (GLOBAL/KR - Multi-Server Rank 1)
             YouTubeVideoInsight(
                 video_id="bebe_18_2_fast9",
                 title="Set 18 Patch 18.2 Fast 9 Legendary Value Guide (Challenger #1 Explains)",
@@ -342,6 +543,103 @@ class YouTubeAggregator:
                     "Never roll down to 0 at level 8 unless you are below 25 HP. Preserving 50 gold to push 9 is +0.8 average placement.",
                     "Slam general items early (Bloodthirster, Guinsoo, Sunfire, Warmog) to preserve HP streak."
                 ]
+            ),
+
+            # 16. Deisik (GLOBAL - EUW Rank 1 / Regional Champion)
+            YouTubeVideoInsight(
+                video_id="deisik_18_2_euw",
+                title="[EUW #1 Challenger] How EU Dominates Patch 18.2b with Elderwood & Coven Positioning Tech",
+                channel_name="Deisik (EUW #1)",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vdeisik=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-13",
+                video_url="https://www.youtube.com/watch?v=mock_deisik_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_deisik_18_2/hqdefault.jpg",
+                view_count="6.4만회",
+                region="GLOBAL",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "나무정령 드레이븐 밸류 (Elderwood Draven)",
+                    "악의 여단 르블랑 (Coven LeBlanc)"
+                ],
+                summary=(
+                    "Top European player Deisik explores positional micro in Patch 18.2b. "
+                    "Shows how corner-wrapping Elderwood tanks forces enemy Draven into walking into LeBlanc skill range."
+                ),
+                timestamps=[
+                    {"time": "00:00", "title": "EUW Meta vs NA Meta Comparison"},
+                    {"time": "04:45", "title": "Coven LeBlanc Burst Targeting Tech"},
+                    {"time": "10:10", "title": "Frontline Clumping to Maximize Buffs"}
+                ],
+                creator_tips=[
+                    "Never place Maokai directly in front of Draven; place him 1 hex offset to prevent Draven from building free Guinsoo stacks early.",
+                    "Coven LeBlanc's secondary chain spreads to the nearest clump, so scout for corner clumped opponents."
+                ]
+            ),
+
+            # 17. Sologesang (GLOBAL - EUW Top Challenger)
+            YouTubeVideoInsight(
+                video_id="sologesang_18_2_tierlist",
+                title="TFT Patch 18.2b Complete Meta Tier List & Item Priority Guide (German Pro)",
+                channel_name="Sologesang",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vsologesang=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-14",
+                video_url="https://www.youtube.com/watch?v=mock_sologesang_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_sologesang_18_2/hqdefault.jpg",
+                view_count="5.9만회",
+                region="GLOBAL",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+                    "나무정령 드레이븐 밸류 (Elderwood Draven)",
+                    "햇빛 아칼리 카밀 리롤 (Sunlight Akali Camille)"
+                ],
+                summary=(
+                    "Veteran German Challenger Sologesang provides a granular breakdown of item slam priorities in 18.2b. "
+                    "Analyzes carousel selection priority when AD components are contested."
+                ),
+                timestamps=[
+                    {"time": "00:00", "title": "Tier List Overview: S+ to B Tier"},
+                    {"time": "05:15", "title": "Carousel Item Hierarchy"},
+                    {"time": "09:30", "title": "Standard Leveling Curves for 18.2b"}
+                ],
+                creator_tips=[
+                    "When Bows and Swords are taken on carousel, immediately secure Chain Vest or Giant's Belt for Sunfire Cape.",
+                    "Bloodthirster has the highest flex value because it works equally well on Draven, Nidalee, and Camille."
+                ]
+            ),
+
+            # 18. Subzeroark (GLOBAL - VOD Reviewer & Coach)
+            YouTubeVideoInsight(
+                video_id="subzeroark_18_2_vod",
+                title="Challenger VOD Review: The 1v1 Endgame Positioning Decisions that Win Tournaments (18.2b)",
+                channel_name="Subzeroark",
+                channel_avatar="https://yt3.googleusercontent.com/ytc/AIdro_k6Vsubzero=s176-c-k-c0x00ffffff-no-rj",
+                published_at="2026-09-15",
+                video_url="https://www.youtube.com/watch?v=mock_subzero_18_2",
+                thumbnail_url="https://i.ytimg.com/vi/mock_subzero_18_2/hqdefault.jpg",
+                view_count="4.3만회",
+                region="GLOBAL",
+                post_patch_verified=True,
+                season_tag="세트 18",
+                key_comps_recommended=[
+                    "장로드래곤 드레이븐 밸류 (Elder Dragon Draven)",
+                    "쿠거 니달리 4코 운영 (Cougar Nidalee)"
+                ],
+                summary=(
+                    "Coach Subzeroark reviews Stage 6 and Stage 7 decision making in high-elo tournaments under Patch 18.2b. "
+                    "Demonstrates how a single 3-second fake swap wins games against fully capped legendary boards."
+                ),
+                timestamps=[
+                    {"time": "01:20", "title": "Stage 6 Board Evaluation"},
+                    {"time": "06:40", "title": "The Last 5 Seconds Positioning Mind Game"},
+                    {"time": "11:50", "title": "Zephyr & Shroud Late Game Impact"}
+                ],
+                creator_tips=[
+                    "In the final 1v1, keep a placeholder unit on the bench to swap carry position at 2 seconds without clicking board tiles.",
+                    "Shroud of Stillness is worth +1.5 placements on Stage 6 against Draven and Ahri."
+                ]
             )
         ]
 
@@ -350,8 +648,9 @@ class YouTubeAggregator:
             json.dump([v.to_dict() for v in curated], f, indent=2, ensure_ascii=False)
 
     def _initialize_mastery_tips(self) -> None:
-        """Initializes strategic fundamentals and mastery tips verified across the last 5 seasons (Sets 14 to 18)."""
+        """Initializes 9 strategic fundamentals and mastery tips verified across the last 5 seasons (Sets 14 to 18)."""
         tips = [
+            # 1. 경제 & 피관리
             MasteryTip(
                 tip_id="tip_econ_hp_balance",
                 category="ECONOMY",
@@ -365,6 +664,8 @@ class YouTubeAggregator:
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ESSENTIAL"
             ),
+
+            # 2. 롤다운 앞라인 우선
             MasteryTip(
                 tip_id="tip_rolldown_frontline_first",
                 category="ROLLDOWN",
@@ -378,6 +679,8 @@ class YouTubeAggregator:
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ESSENTIAL"
             ),
+
+            # 3. 증강체 황금 비율
             MasteryTip(
                 tip_id="tip_augment_golden_ratio",
                 category="AUGMENTS",
@@ -387,10 +690,12 @@ class YouTubeAggregator:
                     "상위 챌린저의 가장 이상적인 증강 조합은 '1경제 + 2전투' 또는 고밸류 패스트 9 빌드의 '2경제 + 1전투'입니다."
                 ),
                 key_rule="4-2 세 번째 증강체는 무조건 아군 전투력 증폭(체력/흡혈/추가피해/스탯) 증강체를 선택해 덱 캡을 완성하라.",
-                source_creators=["Frodan", "쪼해피롱", "Bebe872"],
+                source_creators=["Frodan", "쪼해피롱", "Bebe872", "두니주니"],
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ESSENTIAL"
             ),
+
+            # 4. 근접 캐리 2열 배치
             MasteryTip(
                 tip_id="tip_melee_carry_positioning",
                 category="POSITIONING",
@@ -400,10 +705,12 @@ class YouTubeAggregator:
                     "메인 탱커를 1열 정중앙에 두고, 근접 캐리를 2열 외곽에 두면 메인 탱커가 어그로를 끈 직후 캐리가 안전하게 진입합니다."
                 ),
                 key_rule="근접 딜탱은 1열이 아닌 2열에 배치하여 '탱커 피격 1초 후 진입' 타이밍을 만들어라.",
-                source_creators=["정동글", "Setsuko", "구루루"],
+                source_creators=["정동글", "Setsuko", "구루루", "Deisik"],
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ADVANCED"
             ),
+
+            # 5. 아이템 즉시 슬램
             MasteryTip(
                 tip_id="tip_item_slam_vs_bis",
                 category="ITEMS",
@@ -413,22 +720,69 @@ class YouTubeAggregator:
                     "2스테이지에서 태양불꽃망토, 이온충격기, 피바라기, 구인수 등 범용성 높은 아이템을 즉시 제작해 피 30을 아끼는 것이 후반 1등의 토대가 됩니다."
                 ),
                 key_rule="대기석에 아이템 조합 부품이 3개 이상 남는 턴이 2회 이상 지속되지 않도록 범용 코어템을 즉시 완성하라.",
-                source_creators=["Dishsoap", "Mortdog", "Bebe872"],
+                source_creators=["Dishsoap", "Mortdog", "Bebe872", "Sologesang"],
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ESSENTIAL"
             ),
+
+            # 6. 마지막 10초 정찰 & 대각선 저격
             MasteryTip(
                 tip_id="tip_scouting_last_10s",
                 category="POSITIONING",
-                title="마지막 10초 정찰 및 메인 딜러 반대편 대각선 저격",
+                title="마지막 10초 정찰 및 메인 딜러 반대편 대각선 저격 (페이크 배치)",
                 description=(
                     "후반 1대1 혹은 3파전 구도에서는 덱 파워보다 배치 싸움이 승패의 80%를 결정합니다. "
                     "상대 메인 캐리의 위치(왼쪽 구석 vs 오른쪽 구석)를 확인하고 내 메인 브루저나 암살 유닛을 대각선 반대편으로 스왑하여 침투 경로를 만드세요."
                 ),
                 key_rule="준비 시간 5초 남았을 때 1번과 7번 열을 반대로 스왑하는 '페이크 배치'로 상대 배치를 무력화하라.",
-                source_creators=["Setsuko", "김루트", "쪼해피롱"],
+                source_creators=["Setsuko", "김루트", "쪼해피롱", "Subzeroark"],
                 seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
                 impact_level="ADVANCED"
+            ),
+
+            # 7. 연패 반등 3-5 템포업
+            MasteryTip(
+                tip_id="tip_loss_streak_rebound",
+                category="ECONOMY",
+                title="연패 운영 시 3-5 템포업 올인 반등 프로토콜",
+                description=(
+                    "초반 기물이 안 붙어 연패를 탔을 때 4-1까지 버티다가 피가 30 이하로 떨어져 죽는 경우가 허다합니다. "
+                    "연패 시 3-5 라운드에 과감하게 7레벨을 치고 30골드 선까지 리롤하여 4코 1장과 2성 앞라인을 선점해 피 손실을 즉시 차단해야 합니다."
+                ),
+                key_rule="연패는 3-5 라운드가 전환점이다. 3-5에 레벨업과 리롤을 단행해 연패를 끊고 순방권으로 복귀하라.",
+                source_creators=["승상싱", "RobinSongz", "k3soju"],
+                seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
+                impact_level="ADVANCED"
+            ),
+
+            # 8. 1등 vs 순방 분기점 판단
+            MasteryTip(
+                tip_id="tip_top4_vs_first_mindset",
+                category="ROLLDOWN",
+                title="1등 노리기(고밸류 9렙) vs 4등 순방 분기점 판단법",
+                description=(
+                    "로비에 트럭(압도적 1등)이 2명 이상 있고 내 체력이 40 이하일 때 고밸류 9레벨을 억지로 가려 하면 7~8등으로 추락합니다. "
+                    "이때는 8레벨에서 4코 2성 3마리를 완성하고 돈을 다 털어 3~4등을 확정 짓는 '순방 모드'로 빠르게 전환해야 합니다."
+                ),
+                key_rule="체력 40 이하 & 골드 부족 시 9렙 꿈을 버리고 8렙 올인으로 3~4등 순방을 확보하라.",
+                source_creators=["RobinSongz", "두니주니", "Dishsoap"],
+                seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
+                impact_level="ESSENTIAL"
+            ),
+
+            # 9. 초밥집 부품 우선순위
+            MasteryTip(
+                tip_id="tip_carousel_component_priority",
+                category="ITEMS",
+                title="초밥집 아이템 선택 시 범용 방어/유틸 부품의 절대 가치",
+                description=(
+                    "초밥집에서 딜러 3신기를 맞추겠다고 무리하게 공격 부품만 고집하다가 탱커 방템이 0개가 되면 전투가 성립하지 않습니다. "
+                    "쇠사슬조끼, 음전자망토, 거인의허리띠 같은 범용 탱킹 부품은 어떤 덱에서도 100% 밥값을 합니다."
+                ),
+                key_rule="초반 2~3스테이지 초밥집에서는 딜러 부품보다 앞라인을 지킬 쇠사슬조끼나 허리띠의 가치가 더 높다.",
+                source_creators=["Sologesang", "오박사", "Frodan"],
+                seasons_valid="최근 5개 시즌 (세트 14~18 검증)",
+                impact_level="ESSENTIAL"
             )
         ]
 

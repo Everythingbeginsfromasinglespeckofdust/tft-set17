@@ -700,11 +700,11 @@
         </div>
         <div class="stat-pill">
           <div class="stat-label">국내/해외 챌린저</div>
-          <div class="stat-value" id="creatorCount">9명</div>
+          <div class="stat-value" id="creatorCount">18명</div>
         </div>
         <div class="stat-pill">
           <div class="stat-label">5시즌 검증 팁</div>
-          <div class="stat-value" id="tipsCount" style="color: var(--accent-s);">6개 핵심</div>
+          <div class="stat-value" id="tipsCount" style="color: var(--accent-s);">9개 핵심</div>
         </div>
       </div>
     </div>
@@ -729,9 +729,9 @@
     <section id="youtubeTab" class="tab-content">
       <div class="filter-bar">
         <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-dim); margin-right: 6px;">🌐 리전 필터:</span>
-        <button class="filter-btn active" data-region="ALL" onclick="filterYouTube('ALL')">전체 보기 (9)</button>
-        <button class="filter-btn" data-region="KR" onclick="filterYouTube('KR')">🇰🇷 국내 탑 크리에이터 (4)</button>
-        <button class="filter-btn" data-region="GLOBAL" onclick="filterYouTube('GLOBAL')">🌐 해외 챔피언 & 글로벌 (5)</button>
+        <button class="filter-btn active" data-region="ALL" onclick="filterYouTube('ALL')">전체 보기 (18)</button>
+        <button class="filter-btn" data-region="KR" onclick="filterYouTube('KR')">🇰🇷 국내 탑 크리에이터 (8)</button>
+        <button class="filter-btn" data-region="GLOBAL" onclick="filterYouTube('GLOBAL')">🌐 해외 챔피언 & 글로벌 (10)</button>
         <span style="margin-left: auto; font-size: 0.78rem; color: var(--buff-green);">✔ 모든 영상은 18.2 패치(2026-09-09) 적용 이후 업로드된 최신 영상입니다.</span>
       </div>
       <div id="youtubeList" class="youtube-grid">
@@ -750,7 +750,7 @@
       </div>
       <div class="filter-bar">
         <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-dim); margin-right: 6px;">카테고리:</span>
-        <button class="filter-btn active" data-cat="ALL" onclick="filterTips('ALL')">전체 (6)</button>
+        <button class="filter-btn active" data-cat="ALL" onclick="filterTips('ALL')">전체 (9)</button>
         <button class="filter-btn" data-cat="ECONOMY" onclick="filterTips('ECONOMY')">💰 경제 & 피관리</button>
         <button class="filter-btn" data-cat="ROLLDOWN" onclick="filterTips('ROLLDOWN')">🎲 롤다운 원칙</button>
         <button class="filter-btn" data-cat="AUGMENTS" onclick="filterTips('AUGMENTS')">⚡ 증강체 밸런스</button>
@@ -1131,6 +1131,18 @@
         document.getElementById('sTierCount').innerText = `${sCount}개 덱`;
         document.getElementById('creatorCount').innerText = `${metaState.youtube.length}명`;
         document.getElementById('tipsCount').innerText = `${metaState.tips.length}개 핵심`;
+
+        // Update filter buttons dynamically
+        const krCount = metaState.youtube.filter(v => v.region === 'KR').length;
+        const globalCount = metaState.youtube.filter(v => v.region === 'GLOBAL').length;
+        const allBtn = document.querySelector('#youtubeTab .filter-btn[data-region="ALL"]');
+        const krBtn = document.querySelector('#youtubeTab .filter-btn[data-region="KR"]');
+        const globalBtn = document.querySelector('#youtubeTab .filter-btn[data-region="GLOBAL"]');
+        if (allBtn) allBtn.innerText = `전체 보기 (${metaState.youtube.length})`;
+        if (krBtn) krBtn.innerText = `🇰🇷 국내 탑 크리에이터 (${krCount})`;
+        if (globalBtn) globalBtn.innerText = `🌐 해외 챔피언 & 글로벌 (${globalCount})`;
+        const tipsAllBtn = document.querySelector('#masteryTab .filter-btn[data-cat="ALL"]');
+        if (tipsAllBtn) tipsAllBtn.innerText = `전체 (${metaState.tips.length})`;
 
       } catch (err) {
         console.error('Failed to load meta dashboard data:', err);

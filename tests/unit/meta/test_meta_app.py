@@ -61,10 +61,16 @@ def test_patch_analyzer_buffs_and_nerfs(patch_analyzer):
 
 def test_youtube_aggregator_videos(youtube_aggregator):
     videos = youtube_aggregator.get_videos()
-    assert len(videos) >= 7
+    assert len(videos) >= 18
     creators = [v.channel_name for v in videos]
     assert any("구루루" in c for c in creators)
     assert any("쪼해피롱" in c for c in creators)
+    assert any("김루트" in c for c in creators)
+    assert any("정동글" in c for c in creators)
+    assert any("두니주니" in c for c in creators)
+    assert any("승상싱" in c for c in creators)
+    assert any("쌍칼" in c for c in creators)
+    assert any("오박사" in c for c in creators)
 
     for v in videos:
         assert len(v.timestamps) > 0
@@ -76,14 +82,20 @@ def test_youtube_aggregator_global_creators(youtube_aggregator):
     global_videos = youtube_aggregator.get_videos(region="GLOBAL")
     kr_videos = youtube_aggregator.get_videos(region="KR")
 
-    assert len(global_videos) >= 4
-    assert len(kr_videos) >= 4
+    assert len(global_videos) >= 10
+    assert len(kr_videos) >= 8
 
     global_creators = [v.channel_name for v in global_videos]
     assert any("Dishsoap" in c for c in global_creators)
     assert any("Frodan" in c for c in global_creators)
     assert any("Setsuko" in c for c in global_creators)
+    assert any("k3soju" in c for c in global_creators)
+    assert any("RobinSongz" in c for c in global_creators)
     assert any("Mortdog" in c for c in global_creators)
+    assert any("Bebe872" in c for c in global_creators)
+    assert any("Deisik" in c for c in global_creators)
+    assert any("Sologesang" in c for c in global_creators)
+    assert any("Subzeroark" in c for c in global_creators)
 
 
 def test_youtube_post_patch_verified(youtube_aggregator):
@@ -99,7 +111,7 @@ def test_youtube_post_patch_verified(youtube_aggregator):
 def test_mastery_tips_5seasons(youtube_aggregator):
     """Enforces requirement: Strategic tips collected from within the last 5 seasons."""
     tips = youtube_aggregator.get_mastery_tips()
-    assert len(tips) >= 5
+    assert len(tips) >= 9
 
     categories = set(t.category for t in tips)
     assert "ECONOMY" in categories
@@ -107,6 +119,18 @@ def test_mastery_tips_5seasons(youtube_aggregator):
     assert "POSITIONING" in categories
     assert "AUGMENTS" in categories
     assert "ITEMS" in categories
+
+    # Verify strategic breadth across the 9 tips
+    tip_ids = [t.tip_id for t in tips]
+    assert "tip_econ_hp_balance" in tip_ids
+    assert "tip_rolldown_frontline_first" in tip_ids
+    assert "tip_augment_golden_ratio" in tip_ids
+    assert "tip_melee_carry_positioning" in tip_ids
+    assert "tip_item_slam_vs_bis" in tip_ids
+    assert "tip_scouting_last_10s" in tip_ids
+    assert "tip_loss_streak_rebound" in tip_ids
+    assert "tip_top4_vs_first_mindset" in tip_ids
+    assert "tip_carousel_component_priority" in tip_ids
 
     for tip in tips:
         assert "최근 5개 시즌" in tip.seasons_valid
@@ -179,22 +203,22 @@ def test_api_meta_youtube_and_regions(client):
     res = client.get("/api/meta/youtube")
     assert res.status_code == 200
     data = res.json()
-    assert data["total_videos"] >= 7
+    assert data["total_videos"] >= 18
 
     res_global = client.get("/api/meta/youtube?region=GLOBAL")
     assert res_global.status_code == 200
-    assert res_global.json()["total_videos"] >= 4
+    assert res_global.json()["total_videos"] >= 10
 
     res_kr = client.get("/api/meta/youtube?region=KR")
     assert res_kr.status_code == 200
-    assert res_kr.json()["total_videos"] >= 4
+    assert res_kr.json()["total_videos"] >= 8
 
 
 def test_api_meta_tips(client):
     res = client.get("/api/meta/tips")
     assert res.status_code == 200
     data = res.json()
-    assert data["total_tips"] >= 5
+    assert data["total_tips"] >= 9
     assert "최근 5개 시즌" in data["scope"]
 
     res_econ = client.get("/api/meta/tips?category=ECONOMY")
